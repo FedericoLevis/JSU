@@ -6,7 +6,7 @@ Description:        API for JSU about
 REQUIRE:            JSU
 
 DISCLAIMER
-Copyright by Federico Levis - JSU https://github.com/JSUtility/JSU 
+Copyright by Federico Levis - JSU https://github.com/FedericoLevis/JSU 
 This file may be freely distributed under the MIT license.
 ========================================================================================= */
 
@@ -21,7 +21,7 @@ This file may be freely distributed under the MIT license.
 var JSU_LINKEDIN = "https://www.linkedin.com/in/federicolevis";  
 var JSU_EMAIL = "federico.levis@virgilio.it";  
 var JSU_COGNOS = "http://federicolevis.wix.com/cognos";
-var JSU_GITHUB = "https://github.com/JSUtility/JSU";
+var JSU_GITHUB = "https://github.com/FedericoLevis/JSU";
 var JSU_PLSQL = "https://github.com/PLSqlUtility/PkgLog";
 // DAFARE PLSQL
 
@@ -29,7 +29,7 @@ var JSU_SORT_CODE_H = 220;
 
 var JSU_DISABLED = 'javascript:function() { return false; }';
 
-var JSU_GITHUB_DOWNLOAD = "https://github.com/JSUtility/JSU/archive/master.zip";
+var JSU_GITHUB_DOWNLOAD = "https://github.com/FedericoLevis/JSU/archive/master.zip";
 var JSU_BUY = JSU_DISABLED; // DAFARE
 
 var JSU_SITE = JSU_DISABLED; // DAFARE
@@ -44,23 +44,23 @@ var JSU_VIDEO_BLOCKPOPUP  =	'<iframe width="600" height="500" src="https://www.y
 var JSU_VIDEO_JSPOPUP  =	'<iframe width="600" height="500" src="https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1" frameborder="0" allowfullscreen></iframe>'; 
 
 // Samples
-var JSU_URL_SAMPLE_ALL  =	"https://rawgit.com/JSUtility/JSU/master/samples/AllSamples.html";
-var JSU_URL_SAMPLE_SORT  =	"https://rawgit.com/JSUtility/JSU/master/samples/Sort/SortSample.html";
-var JSU_URL_SAMPLE_VALIDATE =	"https://rawgit.com/JSUtility/JSU/master/samples/Validate/ValidateSample.html";
-var JSU_URL_SAMPLE_TIP  =	"https://rawgit.com/JSUtility/JSU/master/samples/Tip/TipSample.html";
-var JSU_URL_SAMPLE_LOADING  =	"https://rawgit.com/JSUtility/JSU/master/samples/Loading/LoadingSample.html";
-var JSU_URL_SAMPLE_JSLOG  =	"https://rawgit.com/JSUtility/JSU/master/samples/jslog/jslogSample.html";
-var JSU_URL_SAMPLE_BLOCKPOPUP  =	"https://rawgit.com/JSUtility/JSU/master/samples/BlockPopup/PopupSample.html";
-var JSU_URL_SAMPLE_JSPOPUP  =	"https://rawgit.com/JSUtility/JSU/master/samples/JSPopup/PopupSample.html";
+var JSU_URL_SAMPLE_ALL  =	"https://rawgit.com/FedericoLevis/JSU/master/samples/AllSamples.html";
+var JSU_URL_SAMPLE_SORT  =	"https://rawgit.com/FedericoLevis/JSU/master/samples/Sort/SortSample.html";
+var JSU_URL_SAMPLE_VALIDATE =	"https://rawgit.com/FedericoLevis/JSU/master/samples/Validate/ValidateSample.html";
+var JSU_URL_SAMPLE_TIP  =	"https://rawgit.com/FedericoLevis/JSU/master/samples/Tip/TipSample.html";
+var JSU_URL_SAMPLE_LOADING  =	"https://rawgit.com/FedericoLevis/JSU/master/samples/Loading/LoadingSample.html";
+var JSU_URL_SAMPLE_JSLOG  =	"https://rawgit.com/FedericoLevis/JSU/master/samples/jslog/jslogSample.html";
+var JSU_URL_SAMPLE_BLOCKPOPUP  =	"https://rawgit.com/FedericoLevis/JSU/master/samples/BlockPopup/PopupSample.html";
+var JSU_URL_SAMPLE_JSPOPUP  =	"https://rawgit.com/FedericoLevis/JSU/master/samples/JSPopup/PopupSample.html";
 
 //DOC
-var JSU_URL_DOC_SORT  =	"https://rawgit.com/JSUtility/JSUDoc/master/cSortTable.js/index.html";
-var JSU_URL_DOC_VALIDATE  =	"https://rawgit.com/JSUtility/JSUDoc/master/cValidate.js/index.html";
-var JSU_URL_DOC_TIP  =	"https://rawgit.com/JSUtility/JSUDoc/master/tooltip.js/index.html";
-var JSU_URL_DOC_LOADING  =	"https://rawgit.com/JSUtility/JSUDoc/master/util.js/index.html";
-var JSU_URL_DOC_JSLOG  =	"https://rawgit.com/JSUtility/JSUDoc/master/jslog.js/index.html";
-var JSU_URL_DOC_BLOCKPOPUP  =	"https://rawgit.com/JSUtility/JSUDoc/master/BlockPopup.js/index.html";
-var JSU_URL_DOC_JSPOPUP  =	"https://rawgit.com/JSUtility/JSUDoc/master/JSPopup.js/index.html";
+var JSU_URL_DOC_SORT  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/cSortTable.js/index.html";
+var JSU_URL_DOC_VALIDATE  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/cValidate.js/index.html";
+var JSU_URL_DOC_TIP  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/tooltip.js/index.html";
+var JSU_URL_DOC_LOADING  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/util.js/index.html";
+var JSU_URL_DOC_JSLOG  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/jslog.js/index.html";
+var JSU_URL_DOC_BLOCKPOPUP  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/BlockPopup.js/index.html";
+var JSU_URL_DOC_JSPOPUP  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/JSPopup.js/index.html";
 
 	
 var JSU_AR_VALIDATE_SAMPLE_URL = [ {title:"Validate Sample", href:JSU_URL_SAMPLE_VALIDATE}];
@@ -618,7 +618,7 @@ function downloadTip(event,bFloating){
 	'	  </tr>' +
 	'	  <tr>' +
 	'		  <td class="tiptitle"><input type="button" class="downloadFree"  ' +
-	'         onclick="location.href=\'https://github.com/JSUtility/JSU/archive/master.zip\';" /></td>' +
+	'         onclick="location.href=\'https://github.com/FedericoLevis/JSU/archive/master.zip\';" /></td>' +
 	'		  <td class="tipErr">JS Obfuscated, with no comments</td>' +
 	'		  <td>JSDoc HTML available, but <label class="tipErr">NO reference to code</label></td>' +
 	'		  <td class="tipGood">Full access</td>' +

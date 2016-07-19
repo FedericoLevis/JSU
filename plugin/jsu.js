@@ -1,8 +1,101 @@
-/***************************************************************************/
-/*                                                                         */
-/*  This obfuscated code was created by Javascript Obfuscator Free Version.*/
-/*  Javascript Obfuscator Free Version can be downloaded here              */
-/*  http://javascriptobfuscator.com                                        */
-/*                                                                         */
-/***************************************************************************/
-var _$_3f54=["undefined","../..","/Obfuscated","/Minify","/images/","about/","/core/Popup/","core","locale/EN","core/Popup","core/dom-drag","core/date","config","lan/locale-core","core/jslog","core/util","core/tooltip","core/cSortTable","popup/Popup","core/cValidate","function"];if( typeof (JSU_PATH_BASE)==_$_3f54[0]){var JSU_PATH_BASE=_$_3f54[1]};var jsuVersion=_$_3f54[2];var externalPluginVersion=_$_3f54[3];var JSU_PATH_IMG=JSU_PATH_BASE+_$_3f54[4];var JSU_PATH_ABOUT_IMG=JSU_PATH_IMG+_$_3f54[5];var JSU_PATH_POPUP_HTML=JSU_PATH_BASE+_$_3f54[6];requirejs[_$_3f54[12]]({baseUrl:JSU_PATH_BASE,paths:{"core":_$_3f54[7]+jsuVersion,"lan":_$_3f54[8],"popup":_$_3f54[9]+jsuVersion},shim:{"core/jslog":[_$_3f54[10]],"core/cSortTable":[_$_3f54[11]]}});require([_$_3f54[13],_$_3f54[14],_$_3f54[15],_$_3f54[16],_$_3f54[17],_$_3f54[18],_$_3f54[19]],function(){if( typeof (jslog_init)==_$_3f54[20]){jslog_init(JSLOG_LEV_URL)};jsu_loaded_1()});var jsuLoadedTmo=null;function jsu_loaded_1(){if( typeof (JSU_LOADED_TMO_MS)==_$_3f54[0]){return jsu_loaded()};jsuLoadedTmo=setTimeout(jsu_loaded_2,JSU_LOADED_TMO_MS)}function jsu_loaded_2(){clearTimeout(jsuLoadedTmo);return jsu_loaded()}
+/* =========================================================================================
+@File:     				jsu.js
+@Author:   				Federico Levis
+@Since:  					Apr 2016   
+Description: 			require.js Definition for jsu with ModalPopup
+Option:					  - JSU_PATH_BASE can be defined in the html that include this file:
+									  EXAMPLE:
+										  var JSU_BASE_URL = "/ibmcognos/jsu";  // FOR COGNOS
+										  var JSU_PATH_BASE = '../..';   // FOR samples
+									- If JSU_PATH_BASE is not already  defined, it is defined here
+						  - JSU_LOADED_TMO_MS
+						    In very rare case we need to wait a little before accessing the DOM in jsu_loaded. 
+                In these case you can define JSU_LOADED_TMO_MS to be called after this TMO, instead of be calling immediatly after loading all JS						  
+DISCLAIMER
+Copyright by Federico Levis - JSUtily http://federicolevis.wix.com/jsu
+This file may be freely distributed/modified under the MIT license. 
+========================================================================================= */
+
+/* the BASE Path: Path of ..../jsu folder. 
+ a) Fixed 
+ b) relative Path (relative to HTML including this file)
+*/  
+
+if (typeof (JSU_PATH_BASE) == "undefined"){
+	var JSU_PATH_BASE = '../..';  // DEfault: it is the setting for the JSU sample
+}
+
+// ===================================== OPTION: CodeVersion to Use:   
+//  ""       Version with Comment
+//  "/Minify"       Version Minified
+//  "/Obfuscated"     Version Obscured
+var jsuVersion = "/Obfuscated";
+var externalPluginVersion = "/Minify";
+
+//----------------------------------- FIXED, depending on JSU_PATH_BASE
+var JSU_PATH_IMG =   JSU_PATH_BASE + "/images/";
+var JSU_PATH_POPUP_HTML = JSU_PATH_BASE +  "/core/Popup/";
+//----------------------------------- FIXED 
+var JSU_PATH_ABOUT_IMG = "https://rawgit.com/FedericoLevis/images/master/jsuAbout/";
+var JSU_PATH_DOC = "https://rawgit.com/FedericoLevis/JSUDoc/master/";
+
+
+//DAFARE Only for TEST during development
+//var JSU_PATH_ABOUT_IMG = JSU_PATH_IMG +"about/";
+
+
+
+//----------------------------------- MODULE CONFIGURATION
+requirejs.config({
+    baseUrl: JSU_PATH_BASE,
+	// Path relative to baseUrl
+    paths: {
+        'core': 'core' + jsuVersion,
+        'lan': 'locale/EN',
+//      'lan': 'locale/ITA',     // For Italian Language
+        'popup': 'core/Popup' + jsuVersion
+    },
+    shim: {
+      'core/jslog': ['core/dom-drag'],
+      'core/cSortTable': ['core/date']
+    }    
+});
+
+
+
+require([ // First 3 always present
+         'lan/locale-core', 
+         'core/jslog',            
+         'core/util',							
+         'core/tooltip',
+         'core/cSortTable',       /* require date */
+         'popup/Popup',
+         'core/cValidate'        /* require date, Popup */
+		   ],
+    	   function()	{	
+							if (typeof (jslog_init) == "function"){
+								jslog_init(JSLOG_LEV_URL);
+							}
+							jsu_loaded_1();
+						} 
+   );
+
+
+var jsuLoadedTmo = null;   
+
+function jsu_loaded_1(){
+  if (typeof (JSU_LOADED_TMO_MS) == "undefined"){
+     return jsu_loaded();
+  }
+  jsuLoadedTmo = setTimeout(jsu_loaded_2, JSU_LOADED_TMO_MS); 
+}
+
+
+function jsu_loaded_2(){
+   clearTimeout (jsuLoadedTmo);
+   return jsu_loaded();
+}
+
+
+
+   
