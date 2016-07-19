@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
+  <title>JSU (JS Utility) - Tooltip Sample (by F. Levis)</title>
+	<!-- This sample -->
+	<link rel="stylesheet" type="text/css" href="../Sample.css">
+	<script type="text/javascript" src="./TipSample.js" ></script>
+
+	<!--  JSU -->
+	<link rel="stylesheet" href="../../core/core.css" type="text/css">
+	<link rel="stylesheet" href="../../core/Popup/Popup.css" type="text/css">
+    <!--
+	<script>
+	var JSU_LOADED_TMO_MS=1;
+	</script>
+    -->
+	<script  data-main="../../plugin/jsu.js" src="../../core/require.js"></script>
+
+  <!-- ONLY FOR Rainbow (used for JS code highlighted in this sample)-->
+  <link rel="stylesheet" href="../../core/rainbow/jsu-github.css" type="text/css">
+  <script type="text/javascript" src="../../core/rainbow/rainbow.js" ></script>
+  <script type="text/javascript" src="../../core/rainbow/generic.js" ></script>
+  <script type="text/javascript" src="../../core/rainbow/html.js" ></script>
+  <script type="text/javascript" src="../../core/rainbow/jsu-javascript.js" ></script>
+  
+  <!-- ONLY FOR About -->
+  <link rel="stylesheet" href="../../core/about/about.css" type="text/css">
+  <script type="text/javascript" src="../../core/about/about.js" ></script>
+
+</head>
+<body>
+
+<!--  Table to download JSU.ZIP (common for all the sample) -->
+<table  width="100%">
+  <tr>
+  <td class="tipr">
+  <b>Download Options:</b> 
+  <input type="button"  class="tipFixed" id="tipFixedSample"  onclick="downloadTip(event)" /> 
+  <input type="button" class="downloadPay"     onclick="downloadPay()" />
+  <input type="button" class="downloadFree"    onclick="downloadFree();" />
+  </td></tr>
+</table>   
+
+<table class="tip" BORDER="2" cellspacing="0" cellpadding="2" width="100%">
+    <tr class="tiptitleBig">
+      <th class="tiptitleBig" colspan="4">JSU<input type="button" class="tipFixed" id="tipJSUTitle" onclick="aboutTipJSU(event);" />
+	  
+        <label class="aboutAuthor">by Federico Levis</label>
+            <input type="button" class="tipFixed" id="tipJSUAuthor" onclick="aboutTipAuthor(event);" />
+      </th>
+    </tr>
+    <tr class="tiptitleBg2">
+      <th class="tiptitleBig2" colspan="4">Tip Sample - JSU <label class="jsuAPI">tooltip.js API</label>
+        <input type="button" class="jsuHelp" onclick="jsuDocTip()" 
+             onmouseover="Tip(JSU_TIP_CUR_FEATURE);" onmouseout="UnTip(event)" />
+      </th>
+      
+    </tr>
+    <tr class="tiptitleBig3">
+      <td width="50%" class="tipc">SAMPLE</td>
+      <td width="50%" class="tipc">DESCRIPTION</td>
+    </tr>
+
+    <!--   ===================================== SAMPLE_1 ==============================================  -->
+    <tr valign="top">
+      <td class="sample" >
+         <label class="sampleTitle">SAMPLE_1 - Floating Tip:</label>
+         <table class="sampleNoBorder">
+              <tr>
+                  <td width="25%">
+                     <input type="button" value="Text Tip"
+                        onmouseover="Tip('Simple Tooltip without HTML tags.\nNewline is working')"
+                         onmouseout="UnTip(event)" />
+                   </td>
+                  <td width="25%">
+                      <input type="text" value="HTML Tip" style="width:60px;"
+                        onmouseover="Tip(JSU_TIP_HTML);" onmouseout="UnTip(event)" /> 
+                  </td>
+                  <td width="25%">       
+                  <img type="image" src="../../images/Readme.jpg" align="bottom"
+                        onmouseover="Tip(JSU_TIP_README)"    onmouseout="UnTip(event)"/></td>
+                  <td width="25%"> 
+                  Tip image <b>jsuInfo</b>      
+                  <img type="image" class="jsuInfo"
+                        onmouseover="Tip(JSU_TIP_INFO)"    onmouseout="UnTip(event)"/></td>                        
+              </tr>           
+          </table>
+      </td>
+      <!--   SAMPLE DESCRIPTION -->
+      <td class="sampleDesc">
+         <table >
+           <tr valign="top"><td>
+              To add to an HTML Item the <b>Floating Tip</b> you have to call the <b>JSU Tip API</b> <label class="jsuAPI">Tip UnTip</label> in the following events:
+               <ul> 
+               <li><b>onmouseover=</b>"<label class="jsuAPI">Tip</label>(<b><i>msg</i></b>);" </li>   
+               <li><b>onmouseout=</b>"<label class="jsuAPI">UnTip</label>(event);"  </li>
+               </ul>
+               JS Code of the 4 Sample 1 cases:
+               <table class="sampleNoBorder" width="100%">
+               <tr style="font-size: 8pt">
+                 <td > <b>Text Tip </b> Sample: <input type="button" class="tipJSFixed" id="tipJSSimpleTip" onclick="TipJSFixedClicked (JS_CODE_TEXT_TIP,event);" /></td>
+                 <td style="padding-left:15px"><b>HTML Tip </b> Sample: <input type="button" class="tipJSFixed" id="tipJSHTMLTip" onclick="TipJSFixedClicked (JS_CODE_HTML_TIP,event);" /></td>
+                 <td style="padding-left:15px"> <b>Readme Tip </b> Sample: <input type="button" class="tipJSFixed" id="tipJSReadmeTip" onclick="TipJSFixedClicked (JS_CODE_README_TIP,event);" /></td>
+                 <td style="padding-left:15px"> <b>Info Tip </b> Sample: <input type="button" class="tipJSFixed" id="tipJSReadmeTip" onclick="TipJSFixedClicked (JS_CODE_INFO_TIP,event);" /></td>
+               </tr>               
+               </table>  
+           </td></tr>
+         </table>
+      </td>
+    </tr>
+
+    <!--   ===================================== SAMPLE_2 ==============================================  -->
+    <tr valign="top">
+      <td class="sample" >
+         <label class="sampleTitle">SAMPLE_2 - Fixed Tip</label>
+         <ul>
+           <li><b>case a)</b> input type="button" class="<label class="jsuAPI">tipFixed</label>":  
+               <input type="button"  class="tipFixed" id="tipFixedSample"  onclick="TipFixedClicked(TIP_FIXED_SAMPLE,event,{szTitle:'Fixed Tip Sample'});" />
+           </li>    
+           <li><b>case b) </b> input class="<label class="jsuAPI">tipArrowFixed</label>" with Optional VerticalScrollbar and without Close Button:   
+                   <input type="button" class="tipArrowFixed" value="Try Me" id="tipFixedBtnSample"  onclick="TipFixedClicked(TIP_FIXED_SAMPLE,event,{szTitle:'Fixed Tip Sample',iMaxHeight:300,bCloseBtn:false});" />
+           </li>    
+           <li><b>case c) </b> input class="<label class="jsuAPI">tipArrowFixed</label>" with a Video:
+                  <input type="button" class="tipArrowFixed" value="Show Video" id="tipFixedBtnVideo"  onclick="TipFixedClicked(TIP_VIDEO_SAMPLE,event,{szTitle:'Fixed Tip with a Video'});" />
+           </li>    
+         </ul>
+      </td>
+      <!--   SAMPLE2 DESCRIPTION -->
+      <td class="sampleDesc">
+         <table >
+           <tr valign="top"><td>
+               To implement a <b>FixedTip</b> feature:  
+               <ul> 
+               <li>Set an <b>input</b> with JSU <label class="jsuAPI">core.css</label> class like <label class="jsuAPI">tipFixed, tipArrowFixed</label> </li>
+               <li>In the <b>onclick</b> call the <b>JSU Tip API</b>   <label class="jsuAPI">TipFixedClick</label>(<b><i>msg</i></b>,event,objOpt)</li>
+               </ul>
+               JS Code of the First 2 cases of Sample2:
+			         <ul>
+			           <li><b>case a)</b> input.tipFixed</b> Sample: <input type="button" class="tipJSFixed" id="imgTipFixed" onclick="TipJSFixedClicked (JS_CODE_IMG_TIP_FIXED,event);" /> 
+			           </li>    
+			           <li><b>case b) </b> input.tipFixed</b> <i>"Try Me"</i> Sample: <input type="button" class="tipJSFixed" id="inputTipFixed" onclick="TipJSFixedClicked (JS_CODE_INPUT_TIP_FIXED,event);" /> 
+			           </li>    
+			         </ul>
+           </td></tr>
+         </table>
+      </td>
+    </tr>
+
+    <!--   ===================================== SAMPLE_3 ==============================================  -->
+    <tr valign="top">
+      <td class="sample" >
+         <label class="sampleTitle">SAMPLE_3 - FixedTip with JS Code Highlighted</label>
+         <ul>
+           <li><b>case a)</b> input type="button" class="<label class="jsuAPI">tipJSFixed</label>":   
+                   <input type="button" class="tipJSFixed" id="tipInputJSFixedSample"  onclick="TipJSFixedClicked(TIP_JS_CODE_SAMPLE_1,event);" />
+               </li>    
+           <li><b>case b) </b> input  type="button" class="<label class="jsuAPI">tipArrowFixed</label>" (with Vertical Scrollbar):   
+                   <input type="button" class="tipArrowFixed" style="color:blue;" value="JS Source Code" id="tipBtnJSFixedSample"  onclick="TipJSFixedClicked(JS_CODE_VALIDATE,event,{iJSMaxHeight:200});" />
+           </li>    
+         </ul>
+      </td>
+      <!--   SAMPLE DESCRIPTION -->
+      <td class="sampleDesc">
+         <table >
+           <tr valign="top"><td>
+               To show a <b>FixedTip</b> with <b>JS Code Highlighted</b> (in Rainbow style):  
+               <ul> 
+	               <li>Set an <b>input</b> with JSU <label class="jsuAPI">core.css</label> class like <label class="jsuAPI">tipJSFixed, tipArrowFixed</label> </li>
+	               <li>In the <b>onclick</b> call the <b>JSU Tip API</b>   <label class="jsuAPI">TipJSFixedClick</label>(<b><i>JScodeMsg</i></b>,event,objOpt)</li>
+               </ul>
+               JS Code of Sample3:
+               <ul>
+                 <li><b>case a)</b>input.tipJSFixed</b> Sample: <input type="button" class="tipJSFixed" id="imgTipJSFixed" onclick="TipJSFixedClicked (JS_CODE_IMG_JS_FIXED,event);" />
+                 </li>    
+                 <li><b>case b) </b> input.tipArrowFixed</b> Sample with JSSourceCode"" Button: <input type="button" class="tipJSFixed" id="inputTipJSFixed" onclick="TipJSFixedClicked (JS_CODE_INPUT_JS_FIXED,event,{iJSMaxWidth:600});" />     
+                 </li>    
+               </ul>
+           </td></tr>
+         </table>
+      </td>
+    </tr>
+
+</table>
+
+<br>
+
+
+</body>
+</html>

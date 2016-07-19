@@ -1,0 +1,488 @@
+
+/*
+File:               core.css
+Author:             Federico Levis
+Last Modification:  Mar 2016   
+Description:        CSS for JSU core JS
+
+DISCLAIMER
+Copyright by Federico Levis http://federicolevis.wix.com/cognos Cognos Tips & Solutions
+All rights reserved: UNAUTHORIZED COPYING, REPRODUCTION, REPUBLISHING, UPLOADING, POSTING, TRANSMITTING OR DUPLICATING IS PROHIBITED
+*/
+
+
+
+/* For alarmShowIn1El - for input it works, for select it does nothing */
+.jsuAlarmingEl {
+  background:url('../images/alarming.gif') no-repeat right center;
+  background-size: contain;
+  z-index: 1000;
+}
+
+/* used for select (added on the right and show/hide)  */
+img.jsuAlarmingImg {
+  background:url('../images/alarming.gif') no-repeat;
+  background-size: contain;
+  height: 26px;
+  vertical-align: text-top;
+}
+
+	
+/* For loadingShowIn1El API */
+.jsuLoadingEl {
+  background:url('../images/loading/FillingRing.gif') no-repeat right center;
+	background-size: contain;
+  z-index: 1000;
+}
+
+/* For loadingShow API */
+div.jsuLoading {
+  background:url('../images/loading/FillingRing.gif') no-repeat center center;
+  /* background-size: contain; */
+  height: 80px;
+  z-index: 1000;
+}
+
+
+/* Info img  */
+img.jsuInfo{
+  background:url('../images/info.jpg') no-repeat center bottom;
+  height: 15px;
+  marging-left: 5px;
+}
+
+/* Tip img  */
+img.jsuTip{
+  background:url('../images/tip.png') no-repeat center center;
+  height: 20x;
+  width: 20x;
+  marging-left: 5px;
+}
+
+
+
+/* tip JS Fixed img with Button Down */
+img.tipJSFixed{
+  background:url('../images/tipJSFixed.png') center top;
+  /* background-size: contain; */
+  height: 23px;
+  width: 16px;
+  margin-left: 5px;
+}
+/* tip JS Fixed img with Button Up */
+img.tipJSFixedUp{
+  background:url('../images/tipJSFixedUp.png') center top;
+  /* background-size: contain; */ 
+  height: 24px;
+  width: 17px;
+  margin-left: 5px;
+}
+
+/* tip Arrow Fixed img with Button Down */
+img.tipArrowFixed{
+  background:url('../images/tipArrowFixed.png') center bottom;
+  height: 17px;
+  width: 18px;
+  margin-left: 5px;
+}
+/* tip JS Fixed img with Button Up */
+img.tipArrowFixedUp{
+  background:url('../images/tipArrowFixedUp.png') center bottom;
+  height: 17px;
+  width: 18px;
+  margin-left: 5px;
+}
+
+
+input.tipFixed, input.tipFixedUp {
+    height: 20px;
+    padding-right: 30px;
+    border: 1px solid #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input.tipFixed{
+    background: #E0E0E0 url(../images/tipArrowFixed.png) no-repeat right center;
+}
+
+input.tipFixedUp{
+    background: #E0E0E0 url(../images/tipArrowFixedUp.png) no-repeat right center;
+}
+
+input.tipArrowFixedUp {
+    height: 20px;
+    padding-right: 30px;
+    border: 1px solid #C9C9C9 url(../images/tipArrowFixedUp.png) no-repeat right center;
+    cursor: pointer;
+}
+
+/* Fixed img with Button Down */
+img.tipFixed{
+  background:url('../images/tipFixed.jpg') center top;
+  background-size: contain; 
+  height: 20px;
+  width: 15px;
+  margin-left: 5px;
+}
+
+/* Fixed, Both after click: img with Button Up */
+img.tipFixedUp{
+  background:url('../images/tipFixedUp.jpg') center top;
+  background-size: contain;
+  height: 20px;
+  width: 15px;
+  margin-left: 5px;
+}
+
+/* Big */
+img.tipFixedBig{
+  background:url('../images/tipFixedBig.jpg') no-repeat center bottom;
+  height: 30px;
+  width: 20px;
+  margin-left: 5px;
+}
+
+
+/*  after click : img with Button Up */
+img.tipFixedBigUp{
+  background:url('../images/tipFixedBigUp.jpg') no-repeat center bottom;
+  height: 30px;
+  width: 20px;
+  margin-left: 5px;
+}
+
+
+
+/* Sample img  */
+img.jsuSample{
+  background:url('../images/sample.jpg') no-repeat center bottom;
+  align: bottom;
+  width: 100px;  
+  height: 20px;  
+}
+
+
+/* ======================================================================================================================================
+                  VALIDATE
+======================================================================================================================================= */
+
+
+/* div Section with all the ERRORS  */
+.validateErrSect{
+  border: 5px solid red;
+  border-style: ridge; 
+  color: red;
+  display: none; /* default */
+  text-align: left;
+}	
+
+
+/* item in error State  */
+label.validateErr{
+  border: 2px solid red;
+  color: red;
+}	
+
+/* Info img  */
+img.validateInfo{
+  background:url('../images/info.png') no-repeat center center;
+  height: 18px;
+  margin-left: 2px; 
+}
+
+/* Item to validate: Mandatory */
+.validateItemMandatory{
+  border: 2px solid black;
+}	
+
+
+/* Item to validate: in Error State */
+.validateItemErr{
+  border: 2px solid;
+  border-color: red !important
+} 
+
+
+/* Error Label displayed on the Right of Item in case of ERROR   */
+.validateErrLabel{
+   color: red;
+   font-style: italic;   
+   font-weight: normal;
+   margin-left: 5px;   
+   display: none;  // Default: not Visible
+}
+
+
+/* Error Label in Popup */
+.validateErrPopup{
+  font-weight: normal;
+  color: red; /* */
+}
+
+
+/* ======================================================================================================================================
+									TOOLTIP
+======================================================================================================================================= */
+
+table.tip {
+	text-align: center;
+	font-family: Verdana;
+	font-weight: normal;
+	font-size: 11px;
+	color: black; 
+	background-color: #fafafa;
+	/* White Gray: default backgound, used for Td */
+	border: 3px solid #858585; /* Dark Gray */
+	border-spacing: 0px;
+  border-collapse: separate;
+  border-spacing: 2px; 	
+}
+
+table.tipNoBorder {
+	text-align: center;
+	font-family: Verdana;
+	font-weight: normal;
+	font-size: 11px;
+	color: black; /* Black */
+	background-color: #fafafa;
+	/* White Gray: default backgound, used for Td */
+	border: 0px; /* Dark Gray */
+  border-collapse: separate;
+  border-spacing: 5px; 	
+}
+
+
+tr.tiptitle,th.tiptitle, tr.tiptitleBig,th.tiptitleBig {
+  background-color: #0033FF; /* Blue */
+  color: #FFFFFF; /* White */
+  text-align: center;
+  border: 0px;
+  font-family: Verdana;
+  font-weight: bold;
+}
+
+tr.tiptitle,th.tiptitle{
+  font-size: 9pt;
+  padding: 2px;
+}
+tr.tiptitleBig,th.tiptitleBig{
+  font-size: 13pt;
+}
+
+
+tr.tiptitle2,th.tiptitle2, tr.tiptitleBig2,th.tiptitleBig2 {
+  background-color: #66B2FF; 
+  color: black; 
+  text-align: center;
+  padding: 2px;
+  border: 1px solid black;
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 9pt;
+}
+
+tr.tiptitle3,th.tiptitle3, tr.tiptitleBig3,th.tiptitleBig3 {
+  background-color: #A9C6FC; 
+  color: black; 
+  text-align: center;
+  padding: 2px;
+  border: 1px solid black;
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 9pt;
+}
+
+tr.tiptitleBig2,th.tiptitleBig2,tr.tiptitleBig3,th.tiptitleBig3 {
+  font-size: 11pt !important;
+}
+
+
+th.tip,td.tip {
+	text-align: center;
+	padding: .5em;
+	color: #00;
+	border: 1px solid #404040; /* Black */
+	background-color: #fcfcfc;
+}
+
+/* for alternate Row BackGround in Rows */
+th.tip2,td.tip2 {
+	text-align: center;
+	padding: .5em;
+	color: #00;
+	border: 1px solid #404040; /* Black */
+	background-color: #f1f1f1;
+}
+
+/* Header */
+th.tip {
+	background: #B8B8B8; /* Gray */
+}
+
+/* Row separator between SubTables*/
+th.tipsep {
+	background: #FFFFCC; /* Yellow*/
+	height: 8pt;
+	border-style: none;
+	text-align: left;
+	font-weight: normal;
+	font-size: 8pt;
+	color: #404040;
+}
+
+td.tipr, td.tipl, td.tipc, td.tipcBold, td.tiprBold,   td.tipalr, td.tipok, , td.tipGood, , td.tipErr{
+	padding-right: 5px;
+	border: 1px solid #404040; /* Black */
+}
+
+
+td.tipc,td.tipcBold {
+  text-align: center!important;
+}
+
+td.tipcBold,td.tiprBold {
+  font-weight: bold!important;
+}
+
+td.tipr,td.tiprBold {
+	text-align: right !important;
+}
+
+
+td.tipl {
+	text-align: left !important;
+}
+
+td.tiplNoPad {
+	border: 1px solid #404040; /* Black */
+	text-align: left;
+}
+
+td.tipalr,label.tipalr {
+	color: #CD3333; /* Red */
+	font-weight: bold;
+}
+
+td.tipok,label.tipok {
+	color: #009900; /* Green */
+	font-weight: bold;
+}
+
+td.tipwarn,label.tipwarn {
+	background: yellow; /* Yellow */
+	font-weight: bold;
+	color: red;
+}
+
+td.tipfooter {
+	text-align: left;
+	font-family: Verdana;
+	font-weight: normal;
+	font-size: 8pt;
+	color: #404040;
+	background-color: #E8E8E8;
+	border: 1px solid #858585;
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+
+
+label.tipTitle, td.tipTitle{
+  font-weight: bold;
+  color: black; 
+  text-align: center;
+  font-size: 12px;
+}
+
+
+/* Brown Bold */
+label.tipBrown{
+  font-family: Verdana;
+  font-weight: bold;
+  color: #8B4513;
+  /* background-color: #CCFFFF; */   
+}
+
+
+/* Good: Green and Boold */
+label.tipGood {
+	font-weight: bold;
+	color: #008B45; /* Dark Green */
+}
+
+
+
+td.tipErr,label.tipErr  {
+	color: #CD3333; /* Red */
+	font-weight: bold;
+}
+
+/*   
+*/
+a.tipLink{
+ font-weight: bold;
+  text-decoration: underline; 
+ color: blue; // 
+}
+
+a.tipLink:hover {
+ cursor: pointer;
+ color: #1E90FF; // dodgerblue
+}
+
+/* ======================================================================================================================================
+									jslog
+======================================================================================================================================= */
+
+/* Header with Btn */
+h3.jslog{
+  background:  #ccc;
+  color : #000;
+  cursor:  pointer;
+  font-size:  14px;
+  font-weight:  bold;
+  margin:   0 0 2px;
+  lineHeight: 14px;
+}	
+
+
+/* Footer with Btn */
+div.jslogFooter{
+  font-size:  12px;
+  /* textTransform = uppercase; */
+  font-weight:  bold;
+  margin:   0 0 2px;
+  lineHeight: 14px;
+  position: absolute;
+  bottom: 1px;
+  left: 1px;
+} 
+
+.jslogButton{
+  cursor: pointer;
+  font-size:  12px;
+  font-weight:  bold;
+  padding: 0 5px;     		
+}	
+
+label.jslogHeader {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+label.jslogFooter{
+  font-weight: bold;
+  margin-left: 20px;
+  color: white;
+}
+
+
+select.jslog {
+	font-family: Verdana;
+	font-weight: bold;
+	font-size: 12px;
+	margin-left: 10px;
+}
+
+

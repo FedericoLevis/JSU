@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
+  <title>JSU (JS Utility) - loadingDiv API Sample (by F. Levis)</title>
+	<!-- This sample -->
+	<link rel="stylesheet" type="text/css" href="../Sample.css">
+	<script type="text/javascript" src="./LoadingSample.js" ></script>
+	
+	<!--  JSU -->
+	<link rel="stylesheet" href="../../core/core.css" type="text/css">
+	<link rel="stylesheet" href="../../core/Popup/Popup.css" type="text/css">
+	<script  data-main="../../plugin/jsu.js" src="../../core/require.js"></script>
+
+  <!-- ONLY FOR Rainbow (used for JS code highlighted in this sample)-->
+  <link rel="stylesheet" href="../../core/rainbow/jsu-github.css" type="text/css">
+  <script type="text/javascript" src="../../core/rainbow/rainbow.js" ></script>
+  <script type="text/javascript" src="../../core/rainbow/generic.js" ></script>
+  <script type="text/javascript" src="../../core/rainbow/html.js" ></script>
+  <script type="text/javascript" src="../../core/rainbow/jsu-javascript.js" ></script>
+  
+  <!-- ONLY FOR About -->
+  <link rel="stylesheet" href="../../core/about/about.css" type="text/css">
+  <script type="text/javascript" src="../../core/about/about.js" ></script>
+</head>
+
+<body>
+
+<!--  Table to download JSU.ZIP (common for all the sample) -->
+<table  width="100%">
+  <tr>
+  <td class="tipr">
+  <b>Download Options:</b> 
+  <input type="button"  class="tipFixed" id="tipFixedSample"  onclick="downloadTip(event)" /> 
+  <input type="button" class="downloadPay"     onclick="downloadPay()" />
+  <input type="button" class="downloadFree"    onclick="downloadFree();" />
+  </td></tr>
+</table>   
+
+<table class="tip" BORDER="2" cellspacing="0" cellpadding="2" width="100%">
+    <tr class="tiptitleBig">
+      <th class="tiptitleBig" colspan="4">JSU<input type="button" class="tipFixed" id="tipJSUTitle" onclick="aboutTipJSU(event);" />
+        <label class="aboutAuthor">by Federico Levis</label>
+            <input type="button" class="tipFixed" id="tipJSUAuthor" onclick="aboutTipAuthor(event);" />
+      </th>
+    </tr>
+    <tr class="tiptitleBg2">
+      <th class="tiptitleBig2" colspan="4">loadingDiv API Sample - JSU <label class="jsuAPI">loadingDiv API</label>
+              <input type="button" class="jsuHelp" onclick="jsuDocLoading()" 
+             onmouseover="Tip(JSU_TIP_CUR_FEATURE);" onmouseout="UnTip(event)" />
+      </th>
+      </tr>
+    <tr class="tiptitleBig3">
+      <td width="65%" class="tipc">SAMPLE</td>
+      <td width="35%" class="tipc">DESCRIPTION</td>
+    </tr>
+
+    <!--   ===================================== SAMPLE_1 ==============================================  -->
+    <tr>
+      <td class="sample" valign="top" >
+        <label class="sampleTitle">SAMPLE_1 - DEFAULT loadingDiv API </label>
+        <!--   ==================================     DIV with the SAMPLE_1  -->
+        <div>
+	         <table class="sampleNoBorder">
+              <tr> 
+                <td align="left">Loading Duration: </td>
+                <td align="left"> <select id="selectDur1" style="marging-left:5px"></select>  </td> 
+                <td align="left"> <input type="button" style="marging-left:10px" onclick="onclickLoading1();" value="Start LoadingDiv"/>  </td> 
+                <td id="loadedSample1" align="left" class="tipGood" style="display:none;padding-left:10px;">Loaded</td> 
+              </tr>
+            </table>
+        </div>
+      </td>
+      
+      <td class="sampleDesc" valign="top">
+         <table >
+           <tr valign="top"><td>
+               <label style="color:blue;font-weight:bold">JS Source Code</label> of Sample_1: 
+               <input type="button" class="tipJSFixed" id="tipJSLoading1" 
+               onclick="TipJSFixedClicked (JS_LOADING1,event,{szTitle:'JS Source Code of SAMPLE_1: DEFAULT loadingDiv API'});" /><BR/><BR/>
+           </td></tr>
+         </table>
+      </td>      
+    </tr>
+    <!--   ===================================== SAMPLE_2 ==============================================  -->
+    <tr>
+
+      <td class="sample" >
+         <label class="sampleTitle">SAMPLE_2 - loadingDiv API OPTIONS </label>
+        <!--   ==================================     DIV with the SAMPLE_2  -->
+        <div>
+           <table class="sampleNoBorder">
+              <tr>
+                <td colspan="2">
+		              <div id="optLoading" >
+		                <table class="tip" BORDER="2" width="100%" cellspacing="0" cellpadding="3">
+		                   <tr class="tiptitle">
+		                    <td colspan="4">Main LoadingDiv OPTIONS</td>
+		                  </tr>
+		                   <tr class="tiptitle2">
+		                    <td>OPTION</td>
+		                    <td>Default</td>
+		                    <td>Value</td>
+		                    <td>Description</td>
+		                  </tr>
+                      <tr>
+                        <td class="tipcBold">szTitleHtml</td>
+                        <td class="tipr"></td>
+                        <td class="tipcBold">
+                          <input id="szTitleHtml" style="width:300px;" />
+                        </td>
+                        <td class="tipl">Set an <b>HTML Title</b> different from default that is Title Empty (that means Title absent)</td>
+                      </tr>
+                      <tr>
+                        <td class="tipcBold">szDiffUrlGif</td>
+                        <td class="tipc"></td>
+                        <td class="tipcBold">
+                          <select id="szDiffUrlGif" style="font-weight:bold;width:100px;margin-left:10px" >  
+                         </select>                
+                        </td>
+                        <td class="tipl">if Set it is the <b>Url Path of a Different GIF</b> to use instead of CSS Default</td>
+                      </tr>
+                      <tr>
+                        <td class="tipcBold">szDiffMsgHtml</td>
+                        <td class="tipr"></td>
+                        <td class="tipcBold">
+                          <input id="szDiffMsgHtml" style="width:300px;"/>
+                        </td>
+                        <td class="tipl">Set an <b>HTML Msg</b> different from default (<i>"Working. Please Wait"</i>) that is used when szDiffMsgHtml=""</td>
+                      </tr>
+                      <tr>
+                        <td class="tipcBold">iDivWidth</td>
+                        <td class="tipc">300</td>
+                        <td class="tipcBold">
+                          <select id="iDivWidth" style="font-weight:bold;width:60px;margin-left:10px" >  
+                              <option value="300" >300</option> 
+                              <option value="400" selected >400</option>
+                              <option value="600">600</option>
+                         </select>                
+                        </td>
+                        <td class="tipl"><b>Width (px)</b> of loadingDiv</td>
+                      </tr>
+                      <tr>
+                        <td class="tipcBold">bShowCancel</td>
+                        <td class="tipc">false</td>
+                        <td class="tipcBold">
+                          <select id="bShowCancel" style="font-weight:bold;width:60px;margin-left:10px" >  
+                              <option value="FALSE" >false</option> 
+                              <option value="TRUE" selected >true</option>
+                         </select>                
+                        </td>
+                        <td class="tipl"><b>true:</b> show a Cancel Button to stop Loading - fnCancelCallback is called if click Cancel</td>
+                      </tr>
+		                  <tr>
+		                    <td class="tipcBold">bShowElapsedSec</td>
+		                    <td class="tipc">false</td>
+		                    <td class="tipcBold">
+		                      <select id="bShowElapsedSec" style="font-weight:bold;width:60px;margin-left:10px">  
+		                          <option value="FALSE" >false</option> 
+		                          <option value="TRUE" selected >true</option>
+		                     </select>                
+		                    </td>
+		                    <td class="tipl"><b>true:</b> there is also a Footer with Elapsed Sec</td>
+		                  </tr>
+		                </table>
+		              </div> 
+                </td>
+              </tr>
+              <tr> 
+                <td style="padding-top:15px;" align="left">Loading Duration:&nbsp;  
+                 <select id="selectDur2"> </select>
+                 <input type="button" style="margin-left:10px;" onclick="onclickLoading2();" value="Start LoadingDiv"/>
+                 <label id="loadedSample2" align="left" class="tipGood" style="display:none;padding-left:10px;">Loaded</label> 
+                </td>    
+              </tr>
+            </table>
+            <BR/>
+        </div>
+      </td>
+   
+      <td class="sampleDesc" valign="top">
+         <table >
+           <tr valign="top"><td>
+               <label style="color:blue;font-weight:bold">JS Source Code</label> of Sample_2: 
+               <input type="button" class="tipJSFixed" id="tipJSLoading2" onclick="TipJSFixedClicked (JS_LOADING2,event,{szTitle:'JS Source Code of SAMPLE_2: loadingDiv API with OPTIONS'});" /><BR/><BR/>
+           </td></tr>
+           <tr valign="top"><td>
+               <input type="button" class="tipArrowFixed" id="tipJSLoadingOpt" style="color:Blue;" value="JS Source: loadingDiv API OPTIONS" onclick="TipJSFixedClicked (JS_LOADING_OPT,event,{szTitle:'loadingDiv API OPTIONS'});");" /><BR/><BR/>
+           </td></tr>
+         </table>
+      </td>
+    </tr>
+    
+    <!--   ===================================== SAMPLE_3 ==============================================  -->
+    <tr>
+
+      <td class="sample" >
+      <label class="sampleTitle">SAMPLE_3 - CUSTOM loadingDiv API Samples </label>
+      
+        <!--   ==================================     DIV with the SAMPLE_3  -->
+        <div>
+           <table class="sampleNoBorder">
+              
+		         <tr>
+		            <td><b>Custom LoadingDiv API Samples: </b></td>
+		            <td>
+		                <select id="loadingType3" style="width:200px" >
+		                       <option value="CustomLayout" >Custom Layout</option> 
+		                       <option value="3States" selected >3 States with different Layout</option>
+		                </select>  
+		            </td>
+		            <td style="padding-left:20px">
+                    <input type="button"  onclick="onclickLoading3();" value="Start LoadingDiv"  />
+		            </td>
+                <td id="loadedSample3" align="left" class="tipGood" style="display:none;padding-left: 10px;">Loaded</td> 
+              </tr>
+              
+            </table>
+        </div>
+      </td>
+       <td class="sampleDesc" valign="top">
+         <table >
+           <tr valign="top"><td>
+               <label style="color:blue;font-weight:bold">JS Source Code</label> of Sample_3: 
+               <input type="button" class="tipJSFixed" id="tipJSLoading3" onclick="sample3JS (event);" /><BR/><BR/>
+           </td></tr>
+         </table>
+      </td>     
+      
+    </tr>
+</table>
+<div class="jsuLoading" id="jsuLoading"></div> 
+
+
+</body>
+</html>
