@@ -20,7 +20,6 @@ var TIP_SORT_FEATURE="<b>Sort Feature: DAFARE</b>";
 function jsu_loaded(){
   // [Optional] Init jslog
   // jslog_init(JSLOG_LEV);
-  loadingShow (false); // Hide Loading Gif
 };
 
 
