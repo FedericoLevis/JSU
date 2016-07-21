@@ -22,8 +22,8 @@ var JSU_LINKEDIN = "https://www.linkedin.com/in/federicolevis";
 var JSU_EMAIL = "federico.levis@virgilio.it";  
 var JSU_COGNOS = "http://federicolevis.wix.com/cognos";
 var JSU_GITHUB = "https://github.com/FedericoLevis/JSU";
-var JSU_PLSQL = "https://github.com/PLSqlUtility/PkgLog";
-// DAFARE PLSQL
+var JSU_PLSQL = "https://github.com/FedericoLevis/PLSQLUtility";
+
 
 var JSU_SORT_CODE_H = 220;
 
@@ -54,6 +54,7 @@ var JSU_URL_SAMPLE_BLOCKPOPUP  =	"https://rawgit.com/FedericoLevis/JSU/master/sa
 var JSU_URL_SAMPLE_JSPOPUP  =	"https://rawgit.com/FedericoLevis/JSU/master/samples/JSPopup/PopupSample.html";
 
 //DOC
+var JSU_URL_DOC  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/REAME.md.html";
 var JSU_URL_DOC_SORT  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/cSortTable.js/index.html";
 var JSU_URL_DOC_VALIDATE  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/cValidate.js/index.html";
 var JSU_URL_DOC_TIP  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/tooltip.js/index.html";
@@ -211,6 +212,7 @@ function aboutTipJSU(event,bShowAllSample){
   '          <td  align="left" class="jsuAboutTitle" width="40%"> <img class="jsuAboutTitle" src="'  + JSU_PATH_ABOUT_IMG + 'jsuAboutTitle.png"/></td> ' +
   '          <td  align="left" class="jsuAboutTitle" width="27%">' +
   '            <table class="tipNoBorder" width="100%">' +
+  '		           <tr><td class="tipl"><a class="tipLink" href="'+ JSU_URL_DOC +'" target="_blank">JSU documentation</a> </td></tr>';
   '		           <tr><td class="tipl"><a class="tipLink" href="'+ JSU_GITHUB +'" target="_blank">JSU GitHub project</a> </td></tr>';
 	if (bShowAllSample){
 		szMsg = szMsg +	

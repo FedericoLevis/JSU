@@ -4,17 +4,16 @@
 
 **Try JSU:** [All Samples]
 
-# JSU CORE Features (Pure JS code, No Requirement)
+# JSU CORE Features (Pure JS Plugin, No Requirement)
 **JSU** is a Lightweight JavaScript Utility library with the main goal of simplifing developer design. JSU provides following flexible and powerful API in PURE JS code (No other plugin are required):
-  - [Validate]:  [Try Validate Sample]  
-  - [Tip]:  [Try Validate Sample]  
-  - [SortTable]:  [Try SortTable Sample]  
-  - [JSLog]:  [Try JSLog Sample]  
-  - [LoadingDiv]:  [Try LoadingDiv Sample]  
-  - [Blocking Popup]:  [Try Blocking Popup Sample]  
+  - [Validate]: **Validate Items** with many constraints/options. Show Validate Errors in Red Items or Section, Popup ...  [Try Validate Sample]  
+  - [Tip]: Many **HTML Tooltips** options: Floating/Fixed Tips with HTML, GIF, Video, JS Hightlighted Code, ... [Try Validate Sample]  
+  - [SortTable]:  **Sort HTML Table** by clicking column header [Try SortTable Sample]  
+  - [LoadingDiv]:  <b>Loading Div</b> to be displayed during Long Operation. Many Options provided: Loading Gif, Title, Message, ElapsedSec... [Try LoadingDiv Sample]  
+  - [JSLog]: **Log** from JS Code into an optional Window: log Text, Object, JSON, Time Elapsed ... [Try JSLog Sample]  
+  - [Blocking Popup]: **HTML Modal Blocking Popup** designed specially for **IE** : based on *ShowModalDialog API* that is fully supported only by IE. For Browser not supporting *ShowModalDialog* Popup will siply display an Alert instead of an HTML Popup  [Try Blocking Popup Sample]  
   
-<b>JSU</b> features are configured and loaded using **require.js**.  
-Previous samples loads all JSU CORE features together with following code that uses **jsu-jq.js** as data-main file for require.js:
+**JSU CONFIGURATION:** JSU features are configured and loaded using **require.js**. Previous samples loads all JSU CORE features together with following code that uses **jsu-jq.js** as data-main file for require.js:
 
 ```javascript
 <!--  JSU css -->
@@ -22,15 +21,15 @@ Previous samples loads all JSU CORE features together with following code that u
 <link rel="stylesheet" href="../../core/Popup/Popup.css" type="text/css">
 <!--  JSU js -->
 <script  data-main="../../plugin/jsu.js" src="../../core/require.js"></script>
-```
-*Code used in the samples to include all the CORE JSU features, with BLocking Popup*
+``` 
+*Code used in the JSU CORE Samples to include all the JSU CORE Feature with JS Popup and Jquery instead of Blocking Popup*
+
 
 # JSU JQUERY Features: JS Popup (required: jquery, jquery-ui)
+JSU JQUERY Features are not *Pure JS plugin* like previous one, but they require **jquery and jquery-ui** (provided in the JSU.ZIP):
+  - [JS Popup]: **HTML Modal Popup API working in all Browser**, to be used instead of JSU [Blocking Popup]  [Try JS Popup Sample]  
 
-  - [JS Popup]:  [Try JS Popup Sample]  
-
-Previous samples loads JSU CORE Files without BlockingPopup, JSPopup and the External jquery plugin (jquery and jquery-ui.js) with following code (**jsu-jq.js** is used as data-main file for require.js):
-  
+**JSU CONFIGURATION**: use **jsu-jq.js** that loads All JSU CORE Files **without BlockingPopup**, and with additional **JSPopup** and the External required plugin (**jquery and jquery-ui.js**):
   
 ```javascript
 <!--  JSU css -->
@@ -39,13 +38,23 @@ Previous samples loads JSU CORE Files without BlockingPopup, JSPopup and the Ext
 <!--  JSU js -->
 <script  data-main="../../plugin/jsu-jq.js" src="../../core/require.js"></script>
 ```
-*Code used in the sample to include all the JSU CORE Feature with JS Popup and Jquery instead of Blocking Popup*
+*Code used in the [JS Popup Sample] to include all the JSU CORE Feature with JS Popup and Jquery instead of Blocking Popup*
 
   
 
-### JSU Feature DESCRIPTION
+# JSU Feature DESCRIPTION
   - **Very Easy to Install**: [Download JSU Obscured ZIP]
-  - ** Very Simple to include in your project** with only one JS file: as displayed in the various JSU samples, the desired JSU modules are loaded with **require.js** using the proper plugin/jsu.js file 
+  - <b>Very Simple to include in your project</b> with only one JS file: as displayed in the various JSU samples, the desired JSU modules are loaded with **require.js** using the proper data file already provided in jsu plugin directory (e.g plugin/jsu.js)
+  	```javascript
+	<!--  JSU css -->
+	<link rel="stylesheet" href="../../core/core.css" type="text/css">
+	<link rel="stylesheet" href="../../core/Popup/Popup.css" type="text/css">
+	<!--  JSU js -->
+	<script  data-main="../../plugin/jsu.js" src="../../core/require.js"></script>
+	``` 
+    
+	If you prefer **you can also include directly the desired JSU js files** instead of using require.js
+  
   - **No dependencies** for most of the JSU Features (Pure JS features): only if you include JS Popup, it is required jquery and jquery-ui
   - **All modern browsers are supported**: IE9+, Firefox 3+, Chrome,... 
   - **Examples provided for each JSU feature**, with all the JSU calls explained and Hightlighted Code Tips
@@ -54,17 +63,17 @@ Previous samples loads JSU CORE Files without BlockingPopup, JSPopup and the Ext
   - **CSS support** (core.css, Popup.css ): if required you can easily customize presentation
 
 
-### Installation
+# Installation
 You can choose between 2 options:
   - [Download JSU Obscured ZIP] JSU code *Obscured*, Sample code Clear with comment
   - ***[Download Complete JSU ZIP]*** JSU Code and Sample: **All Clear with comment**   **[UNDER WORK, CURRENTLY NOT AVAILABLE]**
 
 
-### Version
-3.3
+# Version
+3.3  July 2016
 
 
-### License
+# License
 MIT
 
 ![JSUDancing]  | Try JSU Samples: [All Samples]
@@ -85,6 +94,7 @@ MIT
    [Try JSLog Sample]: <https://rawgit.com/FedericoLevis/JSU/master/samples/jslog/jslogSample.html>  
    [Try Blocking Popup Sample]: <https://rawgit.com/FedericoLevis/JSU/master/samples/BlockPopup/PopupSample.html>  
    [Try JS Popup Sample]: <https://rawgit.com/FedericoLevis/JSU/master/samples/JSPopup/PopupSample.html>  
+   [JS Popup Sample]: <https://rawgit.com/FedericoLevis/JSU/master/samples/JSPopup/PopupSample.html>  
    [Validate]: <https://rawgit.com/FedericoLevis/JSUDoc/master/cValidate.js/index.html>
    [SortTable]: <https://rawgit.com/FedericoLevis/JSUDoc/master/cSortTable.js/index.html>
    [Tip]: <https://rawgit.com/FedericoLevis/JSUDoc/master/tooltip.js/index.html>
