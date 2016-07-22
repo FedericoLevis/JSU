@@ -17,7 +17,6 @@ This file may be freely distributed under the MIT license.
 
 
 
-
 var JSU_LINKEDIN = "https://www.linkedin.com/in/federicolevis";  
 var JSU_EMAIL = "federico.levis@virgilio.it";  
 var JSU_COGNOS = "http://federicolevis.wix.com/cognos";
@@ -243,7 +242,7 @@ function aboutTipJSU(event,bShowAllSample){
  * Tip for Author(title)
  */
 function aboutTipAuthor(event){
-	var szTip = '<table class="tip" BORDER="1" cellspacing="0" cellpadding="2" width="800px">' +
+	var szTip = '<table class="tip" BORDER="1" cellspacing="0" cellpadding="2" width="850px">' +
   '  <tr>' +
   '    <td width="250px" align="left"> <img width="290px" src="'  + JSU_PATH_ABOUT_IMG + 'FedericoLevis.jpg"/></td> ' +
   '    <td ><table class="tipNoBorder" width="100%">' +
@@ -253,7 +252,7 @@ function aboutTipAuthor(event){
   '      <tr><td ><table class="tipNoBorder" width="100%">' +
   '        <tr>' +
   '          <td width="180px" class="tipl"><label class="tiptitle">Linkedin CV: </label></td>'+
-  '          <td class="tipl"><a class="tipLink" href="mailto:' +  JSU_LINKEDIN  + '" target="_blank">' + JSU_LINKEDIN +  '</a> </td>'+
+  '          <td class="tipl"><a class="tipLink" href="' +  JSU_LINKEDIN  + '" target="_blank">' + JSU_LINKEDIN +  '</a> </td>'+
   '        <tr/>' +
   '        <tr>' +
   '          <td class="tipl"><label class="tiptitle">Email: </label></td>'+

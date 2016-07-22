@@ -85,12 +85,11 @@ var jsuLoadedTmo = null;
 
 function jsu_loaded_1(){
   if (typeof (JSU_LOADED_TMO_MS) == "undefined"){
-    if (typeof (jsu_loaded) != "undefined"){
      return jsu_loaded();
-    }
   }
   jsuLoadedTmo = setTimeout(jsu_loaded_2, JSU_LOADED_TMO_MS); 
 }
+
 
 function jsu_loaded_2(){
    clearTimeout (jsuLoadedTmo);
