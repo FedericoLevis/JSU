@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>tooltip.js.md</title><style></style></head><body id="preview">
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>README.md</title><style></style></head><body id="preview">
 <table class="table table-striped table-bordered">
 <thead>
 <tr>
@@ -42,11 +42,11 @@
 <p><em>Code used in the <a href="https://rawgit.com/FedericoLevis/JSU/master/samples/JSPopup/PopupSample.html">JS Popup Sample</a> to include all the JSU CORE Feature with JS Popup and Jquery instead of Blocking Popup</em></p>
 <h1><a id="Installation_42"></a>Installation</h1>
 <p>You can choose between 2 options:</p>
-<ol>
+<ul>
 <li><a href="https://github.com/FedericoLevis/JSU/archive/master.zip">Download JSU Obfuscated ZIP</a> JSU code <em>Obfuscated</em>, Sample code Clear with comment</li>
 <li><strong><em>[Download Complete JSU ZIP]</em></strong> JSU Code and Sample: <strong>All Clear with comment</strong>   <strong>[UNDER WORK, CURRENTLY NOT AVAILABLE]</strong>
 Then unzip it and everything is ready to be used: you can immediately try the JSU sample in your unzipped <em>jsu/samples</em> directory</li>
-</ol>
+</ul>
 <h1><a id="JSU_Feature_DESCRIPTION_49"></a>JSU Feature DESCRIPTION</h1>
 <ul>
 <li>
@@ -90,31 +90,24 @@ Then unzip it and everything is ready to be used: you can immediately try the JS
     ....
 </code></pre>
 <ol start="3">
-<li>You can also <strong>include directly the required JSU js files</strong> instead of using require.js:</li>
+<li>You can also <strong>include directly the required JSU js files</strong> instead of using require.js. For example to <em>manually</em> include only JSU Tip feature:</li>
 </ol>
 <pre><code class="language-javascript">&lt;link rel=<span class="hljs-string">"stylesheet"</span> href=<span class="hljs-string">"../../core/core.css"</span> type=<span class="hljs-string">"text/css"</span>&gt;
 <span class="xml"><span class="hljs-comment">&lt;!--  JSU tip features--&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"../../core/tooltip.js"</span> &gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
 </span></code></pre>
-<p><em>Example if you require only JSU Tip features</em></p>
 </li>
+</ul>
+<ul>
 <li>
-<p><strong>Flexible switch between Comment/Minified JSU</strong>. You can easily modify jsu.js to include JSU code with comment or minified:</p>
-<ol>
-<li>jsu.js version to include JSU with comment:</li>
-</ol>
+<p><strong>Flexible switch between Comment/Minified JSU</strong>. You can easily modify jsu.js to include JSU code with comment, minified or obfuscated:</p>
 <pre><code class="language-javascript"><span class="hljs-keyword">var</span> jsuVersion =<span class="hljs-string">""</span>;       <span class="hljs-comment">// JSU with Comment</span>
 <span class="hljs-comment">// var jsuVersion = "/Minify"      // JSU Minified</span>
 <span class="hljs-comment">// var jsuVersion = "/Obfuscated"   //  JSU Obfuscated</span>
 </code></pre>
-<ol start="2">
-<li>jsu.js version to include JSU minified:</li>
-</ol>
-<pre><code class="language-javascript"><span class="hljs-comment">// var jsuVersion ="";       // JSU with Comment</span>
-<span class="hljs-keyword">var</span> jsuVersion = <span class="hljs-string">"/Minify"</span>      <span class="hljs-comment">// JSU Minified</span>
-<span class="hljs-comment">// var jsuVersion = "/Obfuscated"   //  JSU Obfuscated</span>
-</code></pre>
 </li>
+</ul>
+<ul>
 <li>
 <p><strong>Localization support</strong>: all the displayed messages are isolated in local/LAN/locale-core.js. So you can easily select the desired language simply including the proper locale file. JSU provides locale/EN/locale-core.js (English=default) and locale/ITA/locale-core.js (Italian)You can also add and include your personal local/LAN/locale-core.js</p>
 <pre><code class="language-javascript"> paths: {
@@ -128,9 +121,9 @@ Then unzip it and everything is ready to be used: you can immediately try the JS
 <p><strong>CSS support</strong> : if required you can easily customize presentation modifying JSU CSS files (core.css, Popup.css)</p>
 </li>
 </ul>
-<h1><a id="Version_117"></a>Version</h1>
+<h1><a id="Version_113"></a>Version</h1>
 <p>3.3  July 2016</p>
-<h1><a id="License_121"></a>License</h1>
+<h1><a id="License_117"></a>License</h1>
 <p>MIT</p>
 <table class="table table-striped table-bordered">
 <thead>

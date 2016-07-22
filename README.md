@@ -81,31 +81,24 @@ Then unzip it and everything is ready to be used: you can immediately try the JS
 	    ....
 	``` 	
      
-	 3) You can also **include directly the required JSU js files** instead of using require.js:
+	 3) You can also **include directly the required JSU js files** instead of using require.js. For example to *manually* include only JSU Tip feature:
+     
   	```javascript	
 	<link rel="stylesheet" href="../../core/core.css" type="text/css">
 	<!--  JSU tip features-->
     <script type="text/javascript" src="../../core/tooltip.js" ></script>
 	``` 
-    *Example if you require only JSU Tip features*
-	
- - **Flexible switch between Comment/Minified JSU**. You can easily modify jsu.js to include JSU code with comment or minified:
-    - jsu.js version to include JSU with comment:  
     
- ```javascript	
+	
+  - **Flexible switch between Comment/Minified JSU**. You can easily modify jsu.js to include JSU code with comment, minified or obfuscated:
+    
+    ```javascript	
     var jsuVersion ="";       // JSU with Comment
     // var jsuVersion = "/Minify"      // JSU Minified
     // var jsuVersion = "/Obfuscated"   //  JSU Obfuscated
 	``` 
     
-    - jsu.js version to include JSU minified:   
-
-```javascript
-    // var jsuVersion ="";       // JSU with Comment
-    var jsuVersion = "/Minify"      // JSU Minified
-    // var jsuVersion = "/Obfuscated"   //  JSU Obfuscated
-	``` 
- 
+    
   - **Localization support**: all the displayed messages are isolated in local/LAN/locale-core.js. So you can easily select the desired language simply including the proper locale file. JSU provides locale/EN/locale-core.js (English=default) and locale/ITA/locale-core.js (Italian)You can also add and include your personal local/LAN/locale-core.js 
    	```javascript	
      paths: {
