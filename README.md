@@ -90,13 +90,13 @@ Then unzip it and everything is ready to be used: you can immediately try the JS
     *Example if you require only JSU Tip features*
 	
  - **Flexible switch between Comment/Minified JSU**. You can easily modify jsu.js to include JSU code with comment or minified:
-    1) jsu.js version to include JSU with comment:   
+    - 1) jsu.js version to include JSU with comment:   
   	```javascript	
     var jsuVersion ="";       // JSU with Comment
     // var jsuVersion = "/Minify"      // JSU Minified
     // var jsuVersion = "/Obfuscated"   //  JSU Obfuscated
 	``` 
-    2) jsu.js version to include JSU minified:   
+    - 2) jsu.js version to include JSU minified:   
   	```javascript	
     // var jsuVersion ="";       // JSU with Comment
     var jsuVersion = "/Minify"      // JSU Minified
