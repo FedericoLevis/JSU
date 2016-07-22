@@ -42,8 +42,8 @@ JSU JQUERY Features are not *Pure JS plugin* like previous one, but they require
 
 # Installation
 You can choose between 2 options:
-  1) [Download JSU Obfuscated ZIP] JSU code *Obfuscated*, Sample code Clear with comment
-  2) ***[Download Complete JSU ZIP]*** JSU Code and Sample: **All Clear with comment**   **[UNDER WORK, CURRENTLY NOT AVAILABLE]**
+  - [Download JSU Obfuscated ZIP] JSU code *Obfuscated*, Sample code Clear with comment
+  - ***[Download Complete JSU ZIP]*** JSU Code and Sample: **All Clear with comment**   **[UNDER WORK, CURRENTLY NOT AVAILABLE]**
 Then unzip it and everything is ready to be used: you can immediately try the JSU sample in your unzipped *jsu/samples* directory
   
 
