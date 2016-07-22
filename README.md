@@ -22,7 +22,7 @@
 <!--  JSU js -->
 <script  data-main="../../plugin/jsu.js" src="../../core/require.js"></script>
 ``` 
-*Code used in the JSU CORE Samples to include all the JSU CORE Feature with JS Popup and Jquery instead of Blocking Popup*
+*Code used in the JSU CORE Samples to include all the JSU CORE Feature (with Blocking Popup)*
 
 
 # JSU JQUERY Features: JS Popup (required: jquery, jquery-ui)
@@ -40,33 +40,79 @@ JSU JQUERY Features are not *Pure JS plugin* like previous one, but they require
 ```
 *Code used in the [JS Popup Sample] to include all the JSU CORE Feature with JS Popup and Jquery instead of Blocking Popup*
 
+# Installation
+You can choose between 2 options:
+  1) [Download JSU Obfuscated ZIP] JSU code *Obfuscated*, Sample code Clear with comment
+  2) ***[Download Complete JSU ZIP]*** JSU Code and Sample: **All Clear with comment**   **[UNDER WORK, CURRENTLY NOT AVAILABLE]**
+Then unzip it and everything is ready to be used: you can immediately try the JSU sample in your unzipped *jsu/samples* directory
   
 
 # JSU Feature DESCRIPTION
-  - **Very Easy to Install**: [Download JSU Obscured ZIP]
-  - <b>Very Simple to include in your project</b> with only one JS file: as displayed in the various JSU samples, the desired JSU modules are loaded with **require.js** using the proper data file already provided in jsu plugin directory (e.g plugin/jsu.js)
-  	```javascript
-	<!--  JSU css -->
+  - **All modern browsers are supported**: IE9+, Firefox 3+, Chrome,... 
+  - **Examples provided for each JSU feature**, with all the JSU calls explained and Hightlighted Code Tips. From [All Samples] you can reach all the other samples and JSU Feature documentation
+  - **Very Powerful and Simple to use**: only 1 or 2 JS instructions to get all the power and flexibilty of the JSU feature 
+  - **Very Simple and flexible JSU configuration**. You can choose 3 options to include JSU in your project:
+     1) Like in JSU samples, you can use require.js with **plugin/jsu.js** for JSU CORE Features, **plugin/jsu-jq.js** for JSU JQUERY Features:
+  	```javascript	
 	<link rel="stylesheet" href="../../core/core.css" type="text/css">
 	<link rel="stylesheet" href="../../core/Popup/Popup.css" type="text/css">
 	<!--  JSU js -->
 	<script  data-main="../../plugin/jsu.js" src="../../core/require.js"></script>
+	
+	<script>
+    // Called when jsu is loaded 
+    function jsu_loaded(){     
+	   //.. you can call here program initialization 
+	}	
+	</script>
+	``` 	
+     2) You can customize jsu.js to include only the JSU features required by your program. For example follow the jsu.js customized file to include only jslog and SortTable features:
+	 
+  	```javascript	
+       require([ 
+         'lan/locale-core', 
+         'core/jslog',            
+         'core/util',							
+         // 'core/tooltip',
+         'core/cSortTable',       /* require date */
+         // 'popup/Popup',
+         // 'core/cValidate'        /* require date, Popup */
+		   ],
+	    ....
+	``` 	
+     
+	 3) You can also **include directly the required JSU js files** instead of using require.js:
+  	```javascript	
+	<link rel="stylesheet" href="../../core/core.css" type="text/css">
+	<!--  JSU tip features-->
+    <script type="text/javascript" src="../../core/tooltip.js" ></script>
 	``` 
-    
-	If you prefer **you can also include directly the desired JSU js files** instead of using require.js
-  
-  - **No dependencies** for most of the JSU Features (Pure JS features): only if you include JS Popup, it is required jquery and jquery-ui
-  - **All modern browsers are supported**: IE9+, Firefox 3+, Chrome,... 
-  - **Examples provided for each JSU feature**, with all the JSU calls explained and Hightlighted Code Tips
-  - **Very Powerful and Simple to use**: only 1 or 2 JS instructions to get all the power and flexibilty of the JSU feature 
+    *Example if you require only JSU Tip features*
+	
+ - **Flexible switch between Comment/Minified JSU**. You can easily modify jsu.js to include JSU code with comment or minified:
+    1) jsu.js version to include JSU with comment:   
+  	```javascript	
+    var jsuVersion ="";       // JSU with Comment
+    // var jsuVersion = "/Minify"      // JSU Minified
+    // var jsuVersion = "/Obfuscated"   //  JSU Obfuscated
+	``` 
+    2) jsu.js version to include JSU minified:   
+  	```javascript	
+    // var jsuVersion ="";       // JSU with Comment
+    var jsuVersion = "/Minify"      // JSU Minified
+    // var jsuVersion = "/Obfuscated"   //  JSU Obfuscated
+	``` 
+ 
   - **Localization support**: all the displayed messages are isolated in local/LAN/locale-core.js. So you can easily select the desired language simply including the proper locale file. JSU provides locale/EN/locale-core.js (English=default) and locale/ITA/locale-core.js (Italian)You can also add and include your personal local/LAN/locale-core.js 
-  - **CSS support** (core.css, Popup.css ): if required you can easily customize presentation
+   	```javascript	
+     paths: {
+        'core': 'core' + jsuVersion,
+     //   'lan': 'locale/EN',
+          'lan': 'locale/ITA',     // For Italian Language
+	``` 
+    *Example of jsu.js modification to use Italian Languag instead of default English language*
 
-
-# Installation
-You can choose between 2 options:
-  - [Download JSU Obscured ZIP] JSU code *Obscured*, Sample code Clear with comment
-  - ***[Download Complete JSU ZIP]*** JSU Code and Sample: **All Clear with comment**   **[UNDER WORK, CURRENTLY NOT AVAILABLE]**
+  - **CSS support** : if required you can easily customize presentation modifying JSU CSS files (core.css, Popup.css)
 
 
 # Version
@@ -81,7 +127,7 @@ MIT
 
  
    [rainbow]: <https://craig.is/making/rainbows>
-   [Download JSU Obscured ZIP]: <https://github.com/FedericoLevis/JSU/archive/master.zip>
+   [Download JSU Obfuscated ZIP]: <https://github.com/FedericoLevis/JSU/archive/master.zip>
    [Tip documentation]: <https://rawgit.com/FedericoLevis/JSU/master/JSDoc/tooltip.js/index.html> 
    [about]: <https://rawgit.com/FedericoLevis/images/master/jsuAbout/jsuAboutTitle.png>
    [Federico Levis]: <https://www.linkedin.com/in/federicolevis> 
