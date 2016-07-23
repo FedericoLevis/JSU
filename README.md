@@ -1,6 +1,58 @@
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-i71b{font-weight:bold;background-color:#00009b;color:#ffffff;text-align:center}
+.tg .tg-odnr{font-weight:bold;color:#009901;vertical-align:top}
+.tg .tg-7cve{font-weight:bold;background-color:#e0e0e0;vertical-align:top}
+.tg .tg-yw4l{vertical-align:top}
 
-![about] | By [Federico Levis]
----------|-----------
+table.tip {	text-align: center;	font-family: Verdana;	font-weight: normal;	font-size: 11px;	color: black; 	background-color: #fafafa;	/* White Gray: default backgound, used for Td */	border: 3px solid #858585; /* Dark Gray */	border-spacing: 0px;  border-collapse: separate;  border-spacing: 0px; 	}
+table.tipNoBorder {	text-align: center;	font-family: Verdana;	font-weight: normal;	font-size: 11px;	color: black; /* Black */	background-color: #fafafa;	/* White Gray: default backgound, used for Td */	border: 0px; /* Dark Gray */  border-collapse: separate;  border-spacing: 1px; 	}
+tr.tiptitle,th.tiptitle, tr.tiptitleBig,th.tiptitleBig {  background-color: #0033FF; /* Blue */  color: #FFFFFF; /* White */  text-align: center;  border: 0px;  font-family: Verdana;  font-weight: bold;}
+tr.tiptitle,th.tiptitle{  font-size: 9pt;  padding: 2px;}
+tr.tiptitleBig,th.tiptitleBig{  font-size: 13pt;}
+label.tiptitle {  font-family: Verdana;  font-weight: bold;		font-size: 10pt;}
+label.tiptitleBig {  font-family: Verdana;  font-weight: bold;		font-size: 16pt;}
+tr.tiptitle2,th.tiptitle2, tr.tiptitleBig2,th.tiptitleBig2 {  background-color: #66B2FF;   color: black;   text-align: center;  padding: 2px;  border: 1px solid black;  font-family: Verdana;  font-weight: bold;  font-size: 9pt;}
+td.tipr, td.tipl, td.tipc, td.tipcBold, td.tiprBold,   td.tipalr, td.tipok, , td.tipGood, , td.tipErr{	padding-right: 5px;	border: 1px solid #404040; /* Black */}
+td.tipc,td.tipcBold {  text-align: center!important;}
+td.tipcBold,td.tiprBold {  font-weight: bold!important;}
+td.tipr,td.tiprBold {	text-align: right !important;}
+td.tipl {	text-align: left !important;}
+
+</style>
+
+<!-- JSU HEADER -->
+<table class="tip" BORDER="1" cellspacing="0" cellpadding="2" width="850px">
+    <tr>
+      <td width="250px" align="center"> <img width="290px" src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/jsuAboutTitle.png"/></td> 
+      <td ><table class="tipNoBorder" width="100%">
+        <tr><td ><table class="tipNoBorder" width="100%">
+          <tr>
+            <td class="tipl"><label class="tiptitle">JSU Samples: </label></td>
+            <td class="tipl"><a class="tipLink" href="https://rawgit.com/FedericoLevis/JSU/master/samples/AllSamples.html" target="_blank">Try JSU Samples</a> </td>
+          <tr/>
+          <tr>
+            <td class="tipl"><label class="tiptitle">JSU Doc: </label></td>
+            <td class="tipl"><a class="tipLink" href="https://rawgit.com/FedericoLevis/JSU/master/README.md.html" target="_blank">https://rawgit.com/FedericoLevis/JSU/master/README.md.html</a> </td>
+          <tr/>
+          <tr>
+            <td class="tipl" width="180px"><label class="tiptitle">JSU GitHub: </label></td>
+            <td class="tipl"><a class="tipLink" href="https://github.com/FedericoLevis/JSU" target="_blank">https://github.com/FedericoLevis/JSU</a> </td>
+          <tr/>
+          <tr>
+            <td  class="tipl"><label class="tiptitle">Author: </label></td>
+            <td class="tipl"><a class="tipLink" href="https://www.linkedin.com/in/federicolevis" target="_blank">Federico Levis</a> </td>
+          <tr/>
+          <tr>
+            <td class="tipl"><label class="tiptitle">Email:</label></td>
+            <td class="tipl"><a class="tipLink" href="mailto:federico.levis@virgilio.it" target="_blank">federico.levis@virgilio.it</a> </td>
+          <tr/>
+        </table></td></tr>
+      </table></td> 
+    </tr>
+</table> 
 
 **Try JSU:** [All Samples]
 
