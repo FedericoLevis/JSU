@@ -1,36 +1,8 @@
 
-<!-- JSU HEADER -->
-<table style="font-size: 11px;	color: black; 	background-color: #fafafa;	border: 3px solid #858585; border-spacing: 0px;  border-collapse: separate;  border-spacing: 0px; " 
-   BORDER="1" cellspacing="0" cellpadding="2" width="850px">
-    <tr>
-      <td width="300px" align="center"> <img width="290px" src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/jsuAboutTitle.png"/></td> 
-      <td ><table style="border: 0px;border-collapse: separate;  border-spacing: 1px" width="100%">
-        <tr><td ><table style="border: 0px;border-collapse: separate;  border-spacing: 1px" width="100%">
-          <tr>
-            <td align="left" width="25%"><label style="font-weight: bold;">JSU Samples: </label></td>
-            <td align="left"><a  href="https://rawgit.com/FedericoLevis/JSU/master/samples/AllSamples.html" target="_blank">Try JSU Samples</a> </td>
-          <tr/>
-          <tr>
-            <td align="left" style="font-weight: bold;">JSU Version: </label></td>
-            <td align="left" style="font-weight: bold;">3.3 - July 2016</td>
-          <tr/>
-          <tr>
-            <td align="left" width="180px"><label style="font-weight: bold;">JSU GitHub: </label></td>
-            <td align="left"><a  href="https://github.com/FedericoLevis/JSU" target="_blank">https://github.com/FedericoLevis/JSU</a> </td>
-          <tr/>
-          <tr>
-            <td  align="left"><label style="font-weight: bold;">Author: </label></td>
-            <td align="left"><a  href="https://www.linkedin.com/in/federicolevis" target="_blank">Federico Levis</a> </td>
-          <tr/>
-          <tr>
-            <td align="left"><label style="font-weight: bold;">Email:</label></td>
-            <td align="left"><a  href="mailto:federico.levis@virgilio.it" target="_blank">federico.levis@virgilio.it</a> </td>
-          <tr/>
-        </table></td></tr>
-      </table></td> 
-    </tr>
-</table> 
+![about] | By [Federico Levis]
+---------|-----------
 
+**Try JSU:** [All Samples]
 
 # JSU CORE Features (Pure JS Plugin, No Requirement)
 **JSU** is a Lightweight JavaScript Utility library with the main goal of simplifing developer design. JSU provides following flexible and powerful API in PURE JS code (No other plugin are required):
@@ -146,39 +118,8 @@ Then unzip it and everything is ready to be used: you can immediately try the JS
 # License
 MIT
 
-
-<!-- JSU FOOTER -->
-<table style="font-size: 11px;	color: black; 	background-color: #fafafa;	border: 3px solid #858585; border-spacing: 0px;  border-collapse: separate;  border-spacing: 0px; " 
-   BORDER="1" cellspacing="0" cellpadding="2" width="850px">
-    <tr>
-      <td width="300px" align="center"> <img width="210px" src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/JSUDancing.gif"/></td> 
-      <td ><table style="border: 0px;border-collapse: separate;  border-spacing: 1px" width="100%">
-        <tr><td ><table style="border: 0px;border-collapse: separate;  border-spacing: 1px" width="100%">
-          <tr>
-            <td align="left" width="25%"><label style="font-weight: bold;">JSU Samples: </label></td>
-            <td align="left"><a  href="https://rawgit.com/FedericoLevis/JSU/master/samples/AllSamples.html" target="_blank">Try JSU Samples</a> </td>
-          <tr/>
-          <tr>
-            <td align="left" style="font-weight: bold;">JSU Version: </label></td>
-            <td align="left" style="font-weight: bold;">3.3 - July 2016</td>
-          <tr/>
-          <tr>
-            <td align="left" width="180px"><label style="font-weight: bold;">JSU GitHub: </label></td>
-            <td align="left"><a  href="https://github.com/FedericoLevis/JSU" target="_blank">https://github.com/FedericoLevis/JSU</a> </td>
-          <tr/>
-          <tr>
-            <td  align="left"><label style="font-weight: bold;">Author: </label></td>
-            <td align="left"><a  href="https://www.linkedin.com/in/federicolevis" target="_blank">Federico Levis</a> </td>
-          <tr/>
-          <tr>
-            <td align="left"><label style="font-weight: bold;">Email:</label></td>
-            <td align="left"><a  href="mailto:federico.levis@virgilio.it" target="_blank">federico.levis@virgilio.it</a> </td>
-          <tr/>
-        </table></td></tr>
-      </table></td> 
-    </tr>
-</table> 
-
+![JSUDancing]  | Try JSU Samples: [All Samples]
+---------------|-----------
 
  
    [rainbow]: <https://craig.is/making/rainbows>
