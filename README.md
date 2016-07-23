@@ -90,14 +90,14 @@ Then unzip it and everything is ready to be used: you can immediately try the JS
 	``` 
     
 	
-  - **Flexible switch between Comment/Minified JSU**. You can easily modify jsu.js to include JSU code with comment, minified or obfuscated:
+  - **Flexible switch between Comment/Minified JSU** with a single code line modification in jsu.js:
     
     ```javascript	
-    var jsuVersion ="";       // JSU with Comment
+    var jsuVersion ="";       // JSU with Comment (or Obfuscated in the Free version)
     // var jsuVersion = "/Minify"      // JSU Minified
-    // var jsuVersion = "/Obfuscated"   //  JSU Obfuscated
+ 
 	``` 
-    
+    *decommment in jsu.js only the JSU version to include, to automatically select all the relative .js*
     
   - **Localization support**: all the displayed messages are isolated in local/LAN/locale-core.js. So you can easily select the desired language simply including the proper locale file. JSU provides locale/EN/locale-core.js (English=default) and locale/ITA/locale-core.js (Italian)You can also add and include your personal local/LAN/locale-core.js 
    	```javascript	
