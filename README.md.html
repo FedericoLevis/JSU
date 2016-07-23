@@ -100,14 +100,13 @@ Then unzip it and everything is ready to be used: you can immediately try the JS
 </ul>
 <ul>
 <li>
-<p><strong>Flexible switch between Comment/Minified JSU</strong>. You can easily modify jsu.js to include JSU code with comment, minified or obfuscated:</p>
-<pre><code class="language-javascript"><span class="hljs-keyword">var</span> jsuVersion =<span class="hljs-string">""</span>;       <span class="hljs-comment">// JSU with Comment</span>
+<p><strong>Flexible switch between Comment/Minified JSU</strong> with a single code line modification in jsu.js:</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">var</span> jsuVersion =<span class="hljs-string">""</span>;       <span class="hljs-comment">// JSU with Comment (or Obfuscated in the Free version)</span>
 <span class="hljs-comment">// var jsuVersion = "/Minify"      // JSU Minified</span>
-<span class="hljs-comment">// var jsuVersion = "/Obfuscated"   //  JSU Obfuscated</span>
+
 </code></pre>
+<p><em>decommment in jsu.js only the JSU version to include, to automatically select all the relative .js</em></p>
 </li>
-</ul>
-<ul>
 <li>
 <p><strong>Localization support</strong>: all the displayed messages are isolated in local/LAN/locale-core.js. So you can easily select the desired language simply including the proper locale file. JSU provides locale/EN/locale-core.js (English=default) and locale/ITA/locale-core.js (Italian)You can also add and include your personal local/LAN/locale-core.js</p>
 <pre><code class="language-javascript"> paths: {
