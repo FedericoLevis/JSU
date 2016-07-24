@@ -5,7 +5,7 @@
 
 <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
-  <title>JSU (JS Utility) - Tooltip Sample (by F. Levis)</title>
+  <title>JSU - Tooltip Sample (by F. Levis)</title>
 	<!-- This sample -->
 	<link rel="stylesheet" type="text/css" href="../Sample.css">
 	<script type="text/javascript" src="./TipSample.js" ></script>
@@ -49,18 +49,32 @@
     <tr class="tiptitleBg2">
       <th class="tiptitleBig2" colspan="4">Tip Sample - JSU <label class="jsuAPI">tooltip.js API</label>
         <input type="button" class="jsuHelp" onclick="jsuDocTip()" 
-             onmouseover="Tip(JSU_TIP_CUR_FEATURE);" onmouseout="UnTip(event)" />
+             onmouseover="Tip(JSU_TIP_CUR_FEATURE);" onmouseout="UnTip(event)" /> 
+        <!--  display for developers if  URL PAR opt=1 -->     
+        <select id="selectShowCol" style="display:none; margin-left:15px" onchange="onchangeShowCol()">
+            <option value="1">Show SAMPLE</option>
+            <option value="2">Show DESCRIPTION</option>
+            <option value="ALL" selected>Show ALL</option>
+        </select> 
       </th>
+      
       
     </tr>
     <tr class="tiptitleBig3">
-      <td width="50%" class="tipc">SAMPLE</td>
-      <td width="50%" class="tipc">DESCRIPTION</td>
+      <td width="50%" class="tipc" id="col_0_1">SAMPLE
+        <select id="selectSample" style="margin-left:15px" onchange="onchange_sample()">
+            <option value="1">Show Sample_1: Floating Tip</option>
+            <option value="2">Show Sample_2: Fixed Tip</option>
+            <option value="3">Show Sample_3: Fixed Tip with JS Code</option>
+            <option value="ALL" selected>Show ALL Samples</option>
+        </select> 
+      </td>
+      <td width="50%" class="tipc" id="col_0_2">DESCRIPTION</td>
     </tr>
 
     <!--   ===================================== SAMPLE_1 ==============================================  -->
-    <tr valign="top">
-      <td class="sample" >
+    <tr id="tr_sample_1" valign="top">
+      <td class="sample" id="col_1_1">
          <label class="sampleTitle">SAMPLE_1 - Floating Tip:</label>
          <table class="sampleNoBorder">
               <tr>
@@ -84,7 +98,7 @@
           </table>
       </td>
       <!--   SAMPLE DESCRIPTION -->
-      <td class="sampleDesc">
+      <td class="sampleDesc" id="col_1_2">
          <table >
            <tr valign="top"><td>
               To add to an HTML Item the <b>Floating Tip</b> you have to call the <b>JSU Tip API</b> <label class="jsuAPI">Tip UnTip</label> in the following events:
@@ -107,8 +121,8 @@
     </tr>
 
     <!--   ===================================== SAMPLE_2 ==============================================  -->
-    <tr valign="top">
-      <td class="sample" >
+    <tr id="tr_sample_2" valign="top">
+      <td class="sample" id="col_2_1" >
          <label class="sampleTitle">SAMPLE_2 - Fixed Tip</label>
          <ul>
            <li><b>case a)</b> input type="button" class="<label class="jsuAPI">tipFixed</label>":  
@@ -123,7 +137,7 @@
          </ul>
       </td>
       <!--   SAMPLE2 DESCRIPTION -->
-      <td class="sampleDesc">
+      <td class="sampleDesc" id="col_2_2">
          <table >
            <tr valign="top"><td>
                To implement a <b>FixedTip</b> feature:  
@@ -144,8 +158,8 @@
     </tr>
 
     <!--   ===================================== SAMPLE_3 ==============================================  -->
-    <tr valign="top">
-      <td class="sample" >
+    <tr id="tr_sample_3" valign="top">
+      <td class="sample" id="col_3_1" >
          <label class="sampleTitle">SAMPLE_3 - FixedTip with JS Code</label>
          <ul>
            <li><b>case a)</b> input type="button" class="<label class="jsuAPI">tipJSFixed</label>":   
@@ -157,7 +171,7 @@
          </ul>
       </td>
       <!--   SAMPLE DESCRIPTION -->
-      <td class="sampleDesc">
+      <td class="sampleDesc" id="col_3_2">
          <table >
            <tr valign="top"><td>
                To show a <b>FixedTip</b> with <b>JS Code</b>:  

@@ -63,9 +63,9 @@ table.sample{
 
 td.sample{
   text-align: left;
-  font-family: Verdana;
+  font-family: Calibri;
   font-weight: normal;
-  font-size: 11px;
+  font-size: 16px;
   color: black;    
   background-color: white;  
   padding-top:5px;
@@ -79,7 +79,7 @@ label.sampleTitle{
 	font-family: Verdana;
   font-weight: bold;
   /*text-decoration: underline; */
-  font-size: 13px;
+  font-size: 14px;
   color: white;    
   background-color: black;
 }	
@@ -93,7 +93,7 @@ td.sampleDesc{
   text-align: left;
   font-family: Calibri;
   font-weight: normal;
-  font-size: 13px;
+  font-size: 16px;
   color: black;    
   background-color: white;  
   padding-top:5px;
