@@ -7,7 +7,7 @@
 # JSU CORE Features (Pure JS Plugin, No Requirement)
 **JSU** is a Lightweight JavaScript Utility library with the main goal of simplifing developer design. JSU provides following flexible and powerful API in PURE JS code (No other plugin are required):
   - [Validate]: **Validate Items** with many constraints/options. Show Validate Errors in Red Items or Section, Popup ...  [Try Validate Sample]  
-  - [Tip]: Many **HTML Tooltips** options: Floating/Fixed Tips with HTML, GIF, Video, JS Hightlighted Code, ... [Try Validate Sample]  
+  - [Tip]: Many **HTML Tooltips** options: Floating/Fixed Tips with HTML, GIF, Video, JS Code, ... [Try Validate Sample]  
   - [SortTable]:  **Sort HTML Table** by clicking column header [Try SortTable Sample]  
   - [LoadingDiv]:  <b>Loading Div</b> to be displayed during Long Operation. Many Options provided: Loading Gif, Title, Message, ElapsedSec... [Try LoadingDiv Sample]  
   - [JSLog]: **Log** from JS Code into an optional Window: log Text, Object, JSON, Time Elapsed ... [Try JSLog Sample]  
@@ -49,7 +49,7 @@ Then unzip it and everything is ready to be used: you can immediately try the JS
 
 # JSU Feature DESCRIPTION
   - **All modern browsers are supported**: IE9+, Firefox 3+, Chrome,... 
-  - **Examples provided for each JSU feature**, with all the JSU calls explained and Hightlighted Code Tips. From [All Samples] you can reach all the other samples and JSU Feature documentation
+  - **Examples provided for each JSU feature**, showing in Fixed Tips the JS code required to implement the JSU features. From [All Samples] you can reach all the other samples and JSU Feature documentation
   - **Very Powerful and Simple to use**: only 1 or 2 JS instructions to get all the power and flexibilty of the JSU feature 
   - **Very Simple and flexible JSU configuration**. You can choose 3 options to include JSU in your project:
      1) Like in JSU samples, you can use require.js with **plugin/jsu.js** for JSU CORE Features, **plugin/jsu-jq.js** for JSU JQUERY Features:
@@ -122,7 +122,6 @@ MIT
 ---------------|-----------
 
  
-   [rainbow]: <https://craig.is/making/rainbows>
    [Download JSU Obfuscated ZIP]: <https://github.com/FedericoLevis/JSU/archive/master.zip>
    [Tip documentation]: <https://rawgit.com/FedericoLevis/JSU/master/JSDoc/tooltip.js/index.html> 
    [about]: <https://rawgit.com/FedericoLevis/images/master/jsuAbout/jsuAboutTitle.png>
