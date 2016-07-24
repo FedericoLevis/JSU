@@ -19,13 +19,6 @@
 	</script>
     -->
 	<script  data-main="../../plugin/jsu.js" src="../../core/require.js"></script>
-
-  <!-- ONLY FOR Rainbow (used for JS code highlighted in this sample)-->
-  <link rel="stylesheet" href="../../core/rainbow/jsu-github.css" type="text/css">
-  <script type="text/javascript" src="../../core/rainbow/rainbow.js" ></script>
-  <script type="text/javascript" src="../../core/rainbow/generic.js" ></script>
-  <script type="text/javascript" src="../../core/rainbow/html.js" ></script>
-  <script type="text/javascript" src="../../core/rainbow/jsu-javascript.js" ></script>
   
   <!-- ONLY FOR About -->
   <link rel="stylesheet" href="../../core/about/about.css" type="text/css">
@@ -103,9 +96,9 @@
                <table class="sampleNoBorder" width="100%">
                <tr style="font-size: 8pt">
                  <td > <b>Text Tip </b> Sample: <input type="button" class="tipJSFixed" id="tipJSSimpleTip" onclick="TipJSFixedClicked (JS_CODE_TEXT_TIP,event);" /></td>
-                 <td style="padding-left:15px"><b>HTML Tip </b> Sample: <input type="button" class="tipJSFixed" id="tipJSHTMLTip" onclick="TipJSFixedClicked (JS_CODE_HTML_TIP,event);" /></td>
+                 <td style="padding-left:15px"><b>HTML Tip </b> Sample: <input type="button" class="tipJSFixed" id="tipJSHTMLTip" onclick="TipJSFixedClicked (JS_CODE_HTML_TIP,event,{iJSColNum:130});" /></td>
                  <td style="padding-left:15px"> <b>Readme Tip </b> Sample: <input type="button" class="tipJSFixed" id="tipJSReadmeTip" onclick="TipJSFixedClicked (JS_CODE_README_TIP,event);" /></td>
-                 <td style="padding-left:15px"> <b>Info Tip </b> Sample: <input type="button" class="tipJSFixed" id="tipJSReadmeTip" onclick="TipJSFixedClicked (JS_CODE_INFO_TIP,event);" /></td>
+                 <td style="padding-left:15px"> <b>Info Tip </b> Sample: <input type="button" class="tipJSFixed" id="tipJSReadmeTip" onclick="TipJSFixedClicked (JS_CODE_INFO_TIP,event,{iJSColNum:130});" /></td>
                </tr>               
                </table>  
            </td></tr>
@@ -142,7 +135,7 @@
 			         <ul>
 			           <li><b>case a)</b> input.tipFixed</b> Sample: <input type="button" class="tipJSFixed" id="imgTipFixed" onclick="TipJSFixedClicked (JS_CODE_IMG_TIP_FIXED,event);" /> 
 			           </li>    
-			           <li><b>case b) </b> input.tipFixed</b> <i>"Try Me"</i> Sample: <input type="button" class="tipJSFixed" id="inputTipFixed" onclick="TipJSFixedClicked (JS_CODE_INPUT_TIP_FIXED,event);" /> 
+			           <li><b>case b) </b> input.tipFixed</b> <i>"Try Me"</i> Sample: <input type="button" class="tipJSFixed" id="inputTipFixed" onclick="TipJSFixedClicked (JS_CODE_INPUT_TIP_FIXED,event,{iJSColNum:140});" /> 
 			           </li>    
 			         </ul>
            </td></tr>
@@ -153,7 +146,7 @@
     <!--   ===================================== SAMPLE_3 ==============================================  -->
     <tr valign="top">
       <td class="sample" >
-         <label class="sampleTitle">SAMPLE_3 - FixedTip with JS Code Highlighted</label>
+         <label class="sampleTitle">SAMPLE_3 - FixedTip with JS Code</label>
          <ul>
            <li><b>case a)</b> input type="button" class="<label class="jsuAPI">tipJSFixed</label>":   
                    <input type="button" class="tipJSFixed" id="tipInputJSFixedSample"  onclick="TipJSFixedClicked(TIP_JS_CODE_SAMPLE_1,event);" />
@@ -167,7 +160,7 @@
       <td class="sampleDesc">
          <table >
            <tr valign="top"><td>
-               To show a <b>FixedTip</b> with <b>JS Code Highlighted</b> (in Rainbow style):  
+               To show a <b>FixedTip</b> with <b>JS Code</b>:  
                <ul> 
 	               <li>Set an <b>input</b> with JSU <label class="jsuAPI">core.css</label> class like <label class="jsuAPI">tipJSFixed, tipArrowFixed</label> </li>
 	               <li>In the <b>onclick</b> call the <b>JSU Tip API</b>   <label class="jsuAPI">TipJSFixedClick</label>(<b><i>JScodeMsg</i></b>,event,objOpt)</li>
