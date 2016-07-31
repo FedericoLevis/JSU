@@ -780,8 +780,9 @@ function showSampleWindow(szUrl){
  * Only for samples that are not FREE we have to setup location 
  */
 function setupState(){
-	alert (window.location);
-	var iPos = window.location.indexOf ("FedericoLevis");
+	var szLocation = window.location + ""; 
+	alert (szLocation);
+	var iPos = szLocation.indexOf ("FedericoLevis");
 	alert (iPos);
 	var bRawGit = iPos > 0;
   window.moveTo(10, 10);
