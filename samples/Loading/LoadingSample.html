@@ -44,16 +44,30 @@
       <th class="tiptitleBig2" colspan="4">loadingDiv API Sample - JSU <label class="jsuAPI">loadingDiv API</label>
               <input type="button" class="jsuHelp" onclick="jsuDocLoading()" 
              onmouseover="Tip(JSU_TIP_CUR_FEATURE);" onmouseout="UnTip(event)" />
+        <!--  ONLY for developers: displayed when URL PAR opt=1 -->     
+        <select id="selectShowCol" style="display:none; margin-left:15px" onchange="onchangeShowCol()">
+            <option value="1">Show SAMPLE</option>
+            <option value="2">Show DESCRIPTION</option>
+            <option value="ALL" selected>Show ALL</option>
+        </select> 
       </th>
       </tr>
     <tr class="tiptitleBig3">
-      <td width="65%" class="tipc">SAMPLE</td>
+      <td width="65%" class="tipc">SAMPLE
+        <!--  To show all sample or only ONE   -->
+        <select id="selectSample" style="margin-left:15px" onchange="onchange_sample()">
+            <option value="1">Show Sample_1: DEFAULT loadingDiv API</option>
+            <option value="2">Show Sample_2: loadingDiv API OPTIONS</option>
+            <option value="3">Show Sample_3: CUSTOM loadingDiv API</option>
+            <option value="ALL" selected>Show ALL Samples</option>
+      
+      </td>
       <td width="35%" class="tipc">DESCRIPTION</td>
     </tr>
 
     <!--   ===================================== SAMPLE_1 ==============================================  -->
-    <tr>
-      <td class="sample" valign="top" >
+    <tr id="tr_sample_1">
+      <td class="sample"  id="col_1_1" valign="top" >
         <label class="sampleTitle">SAMPLE_1 - DEFAULT loadingDiv API </label>
         <!--   ==================================     DIV with the SAMPLE_1  -->
         <div>
@@ -68,7 +82,7 @@
         </div>
       </td>
       
-      <td class="sampleDesc" valign="top">
+      <td class="sampleDesc"  id="col_1_2" valign="top">
          <table >
            <tr valign="top"><td>
                <label style="color:blue;font-weight:bold">JS Source Code</label> of Sample_1: 
@@ -79,9 +93,9 @@
       </td>      
     </tr>
     <!--   ===================================== SAMPLE_2 ==============================================  -->
-    <tr>
+    <tr id="tr_sample_2">
 
-      <td class="sample" >
+      <td class="sample"  id="col_2_1" >
          <label class="sampleTitle">SAMPLE_2 - loadingDiv API OPTIONS </label>
         <!--   ==================================     DIV with the SAMPLE_2  -->
         <div>
@@ -174,7 +188,7 @@
         </div>
       </td>
    
-      <td class="sampleDesc" valign="top">
+      <td class="sampleDesc"  id="col_2_2" valign="top">
          <table >
            <tr valign="top"><td>
                <label style="color:blue;font-weight:bold">JS Source Code</label> of Sample_2: 
@@ -188,9 +202,9 @@
     </tr>
     
     <!--   ===================================== SAMPLE_3 ==============================================  -->
-    <tr>
+    <tr  id="tr_sample_3">
 
-      <td class="sample" >
+      <td class="sample"  id="col_3_1">
       <label class="sampleTitle">SAMPLE_3 - CUSTOM loadingDiv API Samples </label>
       
         <!--   ==================================     DIV with the SAMPLE_3  -->
@@ -214,7 +228,7 @@
             </table>
         </div>
       </td>
-       <td class="sampleDesc" valign="top">
+       <td class="sampleDesc"  id="col_3_2" valign="top">
          <table >
            <tr valign="top"><td>
                <label style="color:blue;font-weight:bold">JS Source Code</label> of Sample_3: 

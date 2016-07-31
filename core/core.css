@@ -1,25 +1,49 @@
 
-/*
-File:               core.css
-Author:             Federico Levis
-Last Modification:  Mar 2016   
-Description:        CSS for JSU core JS
-
-DISCLAIMER
-Copyright by Federico Levis http://federicolevis.wix.com/cognos Cognos Tips & Solutions
-All rights reserved: UNAUTHORIZED COPYING, REPRODUCTION, REPUBLISHING, UPLOADING, POSTING, TRANSMITTING OR DUPLICATING IS PROHIBITED
+/* 
+========================================================================================= <BR/> 
+<b>File:</b>      core/core.css <BR/>
+<b>Author:</b>        <a href="https://www.linkedin.com/in/federicolevis" target="_blank">Federico Levis</a> <BR/>
+<b>JSU API Doc:</b> <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/JSUAPI.html" target="_blank">JSU API Documentation</a> <BR/>
+<b>Description:</b>     CSS for JSU CORE Features <BR/>   
+<b>First Version:</b>     ver 1.0 - Feb 2014  <BR/>
+<b>Current Version:</b>   ver 3.3 - Jul 2016  <BR/>
+<BR/>-----------------------------------------------------------------------------------<BR/>
+<b>DISCLAIMER</b>  <BR/>
+Copyright by Federico Levis - <a href="https://github.com/FedericoLevis/JSU" target="_blank">JSU</a> <BR/> 
+This file may be freely distributed under the MIT license.   <BR/>
+========================================================================================= <BR/> 
 */
 
-
-
-/* For alarmShowIn1El - for input it works, for select it does nothing */
+/*---
+.jsuAlarmingEl alarm for el   
+---
+<b>CSS:</b> ``input.jsuAlarmingEl``   see API see alarmShowIn1El
+<BR/><b>Examples:</b>
+```javascript
+<input class="jsuAlarmingEl" width="100px" value="Example of value" />
+```
+```html
+<input class="jsuAlarmingEl" style="background:url('https://raw.github.com/FedericoLevis/JSU/master/images/alarming.gif') no-repeat right center;background-size: contain;" width="100px" value="Example of value" />
+```
+*/
 .jsuAlarmingEl {
   background:url('../images/alarming.gif') no-repeat right center;
   background-size: contain;
   z-index: 1000;
 }
 
-/* used for select (added on the right and show/hide)  */
+/*---
+.jsuAlarmingEl  alarm img near a select   
+---
+<b>CSS:</b> ``img.jsuAlarmingImg``  used for select (added on the right and show/hide) 
+<BR/><b>Examples:</b>
+```javascript
+<img class="jsuAlarmingImg"/>
+```
+```html
+<img class="jsuAlarmingImg" style="background:url('https://raw.github.com/FedericoLevis/JSU/master/images/alarming.gif') no-repeat;background-size: contain; height: 26px;"/>
+```
+*/
 img.jsuAlarmingImg {
   background:url('../images/alarming.gif') no-repeat;
   background-size: contain;
@@ -28,19 +52,40 @@ img.jsuAlarmingImg {
 }
 
 	
-/* For loadingShowIn1El API */
+/*---
+.jsuLoadingEl Loading for el   
+---
+<b>CSS:</b> ``input.jsuLoadingEl``   see API see loadingShowIn1El
+<BR/><b>Examples:</b>
+```javascript
+<input class="jsuLoadingEl" width="100px" value="Example of value" />
+```
+```html
+<input class="jsuLoadingEl" style="background:url('https://raw.github.com/FedericoLevis/JSU/master/images/FillingRing.gif') no-repeat right center;background-size: contain;" width="100px" value="Example of value" />
+```
+*/
 .jsuLoadingEl {
   background:url('../images/FillingRing.gif') no-repeat right center;
-	background-size: contain;
+  background-size: contain;
   z-index: 1000;
 }
 
-/* For loadingShow API: only FillingRing GIF */
+/*---
+div.jsuLoadingEl Div with Loading Gif   
+---
+<b>CSS:</b> ``div.jsuLoadingEl``   see API see loadingShow
+<BR/><b>Examples:</b>
+```javascript
+<div class="jsuLoadingEl" height="100px" />
+```
+```html
+<div class="jsuLoadingEl" style="background:url('https://raw.github.com/FedericoLevis/JSU/master/images/FillingRing.gif') no-repeat center center;height:100px"/>
+```
+*/
 div.jsuLoading {
   background:url('../images/FillingRing.gif') no-repeat center center;
   /* background-size: contain; */
-   height: 80px; 
-/*  
+   height: 80px;  /*  
   progid:DXImageTransform.Microsoft.Alpha(opacity=70); 
   height: 100%; 
   width: 100%; 
@@ -53,11 +98,58 @@ div.jsuLoading {
 }
 
 
-/* ----------------------------------------------------------------------------------------
-      For loadingDivXXX API (loadingDivStart loadingDivUpdate loadingDivEnd)
- ---------------------------------------------------------------------------------------- */
-/* The Main DivContainer */
-div.loadingDivContainer {
+/*---
+loadingDivXXX API
+---
+<b>API: loadingDivStart loadingDivUpdate loadingDivEnd </b>
+<b>CSS:</b> <ul>
+ <li>``div.loadingDivContainer``   The Main DivContainer </li>
+ <li>``div.loadingDiv``   The loadingDiv in The Middle of the Page, with the Border </li>
+ <li>``div.loadingDivContainer``   The Main DivContainer </li>
+ <li>``table.loadingDiv``   The Main loadingDiv Table </li>
+ <li>``div.loadingDivGif`` /The Loading Gif on the Left in the Box </li>
+ <li>...
+</ul> 
+
+<BR/><b>Examples:</b>
+```html
+<div id="loadingDivContainer" class="loadingDivContainer" >  
+  <table width="100%" height="100%">  
+    <tr> <td align="center">  
+      <div  id="loadingDiv" class="loadingDiv">  
+         <table id="loadingDivTable" class="loadingDiv" width="100%"  style="z-index: 110;">  
+            <tr class="loadingDivTitle">  
+              <td colspan="2" id="loadingDivTitle" class="loadingDivTitle" >Title Test</td>  
+            </tr>  
+            <tr>   
+              <td id="loadingDivTdGif" align="left" width="80px">  
+                <div id="loadingDivGif" class="loadingDivGif" style="background:url('https://raw.github.com/FedericoLevis/JSU/master/images/Disk.gif') no-repeat center center;height:100px"> </div>  
+              </td>   
+              <td id="loadingDivMsg" class="loadingDivMsg" align="left" style="padding-left:0px">  
+                 <b>Working</b></BR>Please Wait...  
+              </td>  
+            </tr>  
+            <tr>  
+               <td colspan="2" align="center" class="loadingDivBtn" id="loadingDivBtnTd"  >  
+                 <input type="button" class="loadingDivBtn" id="loadingDivBtn" value="Stop" onclick="loadingDivCancel();" />  
+               </td>  
+            </tr>  
+            <tr>  
+               <td colspan="2" id="loadingDivFooter" class="loadingDivFooter">  
+                 Elapsed Time: 10 sec  
+               </td>  
+            </tr>  
+        </table>  
+      </div>  
+    </td> </tr>  
+  </table>  
+</div> 
+```
+
+*/
+
+
+div.loadingDivContainer { /* The Main DivContainer */
   progid:DXImageTransform.Microsoft.Alpha(opacity=70); 
   height: 100%; 
   width: 100%; 
@@ -68,8 +160,8 @@ div.loadingDivContainer {
   left: 0px;  
 }
 
-/* The loadingDiv in The Middle of the Page, with the Border  */
-div.loadingDiv{
+
+div.loadingDiv{ /* The loadingDiv in The Middle of the Page, with the Border  */
   z-index: 101;
   width: 300px; 
   border-style:groove;
@@ -77,7 +169,7 @@ div.loadingDiv{
   background-color: #EBEBEB; 
 }
 
-table.loadingDiv{
+table.loadingDiv{ /* The Main loadingDiv Table  */
   text-align: left;
   font-family: Verdana;
   font-weight: normal;
@@ -113,25 +205,21 @@ td.loadingDivBtn {
   padding-bottom: 10px; 
 }
 
-/* Footer with Elapsed sec */
-td.loadingDivFooter {
+
+td.loadingDivFooter { /* Footer with Elapsed sec */
 	padding-left: 5px;
 	border-top: 1px solid black;  
   background-color: #BABABA; 
   color: black; /* Black */
 }
 
-
-/* The Loading Gif on the Left in the Box */
-div.loadingDivGif{
+div.loadingDivGif{ /* The Loading Gif on the Left in the Box */
   width: 110px;
 	height: 110px;
 	background: url('../images/Disk.gif') no-repeat center center;
 	z-index: 110;  
 }
 
-/* ----------------------------------------------------------------------------------------
- ---------------------------------------------------------------------------------------- */
 
 
 /* Tip img with 'i' */
@@ -151,16 +239,111 @@ img.jsuTip{
 
 
 
-/* tip JS Fixed img with Button Down */
-img.tipJSFixed{
+/*---
+Validate API 
+---
+<b>CSS:</b> <ul>
+ <li>``validateItemMandatory``     Item to validate: Mandatory </li>
+ <li>``validateItemErr``     Item to validate: in Error State </li>
+ <li>``validateErrLabel``     Error Label displayed on the Right of Item in case of ERROR  </li>
+ <li>``div.validateErrSect``     div Section with all the ERRORS </li>
+ <li>``label.validateErr``   label in Error State </li>
+
+ <li>...
+</ul> 
+<BR/><b>Examples:</b>
+```html
+<input class="validateItemMandatory"  width="300px" value="Example of item.validateItemMandatory"><BR/><BR/>
+<input class="validateItemErr"  width="300px" value="Example of item.validateItemErr">
+<label class="validateErrLabel" style="display:inline;" width="300px">Example of label.validateErrLabel</label>
+```
+*/
+
+
+.validateErrSect{ /* div Section with all the ERRORS  */
+  border: 5px solid red;
+  border-style: ridge; 
+  color: red;
+  display: none; /* default */
+  text-align: left;
+}	
+
+
+
+label.validateErr{ /* item in error State  */
+  border: 2px solid red;
+  color: red;
+}	
+
+input.validateInfo{ /* Info img  */
+  background:url('../images/info.png') no-repeat center center;
+  background-color: #19E4DD;
+  height: 14px;
+  width: 5px;
+  margin-left: 2px; 
+  cursor: pointer;
+  border: 1px solid #000;
+  
+}
+
+
+.validateItemMandatory{ /* Item to validate: Mandatory */
+  border: 2px solid black;
+}	
+
+
+.validateItemErr{ /* Item to validate: in Error State */
+  border: 2px solid;
+  border-color: red !important
+} 
+
+
+.validateErrLabel{ /* Error Label displayed on the Right of Item in case of ERROR   */
+   color: red;
+   font-style: italic;   
+   font-weight: normal;
+   margin-left: 5px;   
+   display: none;  // Default: not Visible
+}
+
+
+/* Error Label in Popup */
+.validateErrPopup{
+  font-weight: normal;
+  color: red; /* */
+}
+
+
+/*---
+Tip API and JSU Button
+---
+<b>CSS:</b> (For Browser compatibility we recommend using input instead of img when both are present)<ul>
+ <li>``img.tipJSFixed`` ``input.tipJSFixed``    tip JS Fixed img with Button Down </li>
+ <li>``img.tipJSFixedUp`` ``input.tipJSFixedUp``  tip JS Fixed img with Button Up </li>
+ <li>``input.jsuHelp``  JSU help Button </li>
+ <li>...
+</ul> 
+<BR/><b>Examples:</b>
+```javascript
+<input type="button" class="tipJSFixed" />
+<input type="button" class="tipJSUp" />
+<input type="button" class="jsuHelp" />
+```
+```html
+<input type="button" class="tipJSFixed"  style="background:url('https://raw.github.com/FedericoLevis/JSU/master/images/tipJSFixed.png') center top;" />
+<input type="button" class="tipJSFixedUp"  style="background:url('https://raw.github.com/FedericoLevis/JSU/master/images/tipJSFixedUp.png') center top;" />
+<input type="button" class="jsuHelp"  style="background:url('https://raw.github.com/FedericoLevis/JSU/master/images/help.png') no-repeat center center;height:18px:width:18px;" />
+```
+*/
+img.tipJSFixed{ /* tip JS Fixed img with Button Down */
   background:url('../images/tipJSFixed.png') center top;
   /* background-size: contain; */
   height: 23px;
   width: 16px;
   margin-left: 5px;
 }
-/* tip JS Fixed img with Button Up */
-img.tipJSFixedUp{
+
+img.tipJSFixedUp{ /* tip JS Fixed img with Button Up */
   background:url('../images/tipJSFixedUp.png') center top;
   /* background-size: contain; */ 
   height: 24px;
@@ -168,15 +351,14 @@ img.tipJSFixedUp{
   margin-left: 5px;
 }
 
-/* tip Arrow Fixed img with Button Down */
-img.tipArrowFixed{
+img.tipArrowFixed{ /* tip Arrow Fixed img with Button Down */
   background:url('../images/tipArrowFixed.png') center bottom;
   height: 17px;
   width: 18px;
   margin-left: 5px;
 }
-/* tip JS Fixed img with Button Up */
-img.tipArrowFixedUp{
+
+img.tipArrowFixedUp{ /* tip JS Fixed img with Button Up */
   background:url('../images/tipArrowFixedUp.png') center bottom;
   height: 17px;
   width: 18px;
@@ -233,8 +415,7 @@ input.tipArrowFixedUp {
     background: #E0E0E0 url(../images/tipArrowFixedUp.png) no-repeat right center;
 }
 
-/* Help Button */
-input.jsuHelp{	  
+input.jsuHelp{	/* Help Button */  
     height: 18px;
     width: 18px;
     border: 1px solid #000;
@@ -269,8 +450,7 @@ input.downloadPay {
 
 
 
-/* Fixed, Both after click: img with Button Up */
-img.tipFixedUp{
+img.tipFixedUp{ /* Fixed, Both after click: img with Button Up */
   background:url('../images/tipFixedUp.jpg') center top;
   background-size: contain;
   height: 20px;
@@ -278,8 +458,7 @@ img.tipFixedUp{
   margin-left: 5px;
 }
 
-/* Big */
-img.tipFixedBig{
+img.tipFixedBig{ /* Big */
   background:url('../images/tipFixedBig.jpg') no-repeat center bottom;
   height: 30px;
   width: 20px;
@@ -287,8 +466,7 @@ img.tipFixedBig{
 }
 
 
-/*  after click : img with Button Up */
-img.tipFixedBigUp{
+img.tipFixedBigUp{ /*  after click : img with Button Up */
   background:url('../images/tipFixedBigUp.jpg') no-repeat center bottom;
   height: 30px;
   width: 20px;
@@ -296,84 +474,13 @@ img.tipFixedBigUp{
 }
 
 
-
-/* Sample img  */
-img.jsuSample{
+img.jsuSample{ /* Sample img  */
   background:url('../images/sample.jpg') no-repeat center bottom;
   align: bottom;
   width: 100px;  
   height: 20px;  
 }
 
-
-/* ======================================================================================================================================
-                  VALIDATE
-======================================================================================================================================= */
-
-
-/* div Section with all the ERRORS  */
-.validateErrSect{
-  border: 5px solid red;
-  border-style: ridge; 
-  color: red;
-  display: none; /* default */
-  text-align: left;
-}	
-
-
-/* item in error State  */
-label.validateErr{
-  border: 2px solid red;
-  color: red;
-}	
-
-/* Info img  */
-input.validateInfo{
-  background:url('../images/info.png') no-repeat center center;
-  background-color: #19E4DD;
-  height: 14px;
-  width: 5px;
-  margin-left: 2px; 
-  cursor: pointer;
-  border: 1px solid #000;
-  
-}
-
-
-
-/* Item to validate: Mandatory */
-.validateItemMandatory{
-  border: 2px solid black;
-}	
-
-
-/* Item to validate: in Error State */
-.validateItemErr{
-  border: 2px solid;
-  border-color: red !important
-} 
-
-
-/* Error Label displayed on the Right of Item in case of ERROR   */
-.validateErrLabel{
-   color: red;
-   font-style: italic;   
-   font-weight: normal;
-   margin-left: 5px;   
-   display: none;  // Default: not Visible
-}
-
-
-/* Error Label in Popup */
-.validateErrPopup{
-  font-weight: normal;
-  color: red; /* */
-}
-
-
-/* ======================================================================================================================================
-									TOOLTIP
-======================================================================================================================================= */
 
 table.tip {
 	text-align: center;
@@ -468,8 +575,8 @@ th.tip,td.tip {
 	background-color: #fcfcfc;
 }
 
-/* for alternate Row BackGround in Rows */
-th.tip2,td.tip2 {
+
+th.tip2,td.tip2 { /* for alternate Row BackGround in Rows */
 	text-align: center;
 	padding: .5em;
 	color: #00;
@@ -477,13 +584,13 @@ th.tip2,td.tip2 {
 	background-color: #f1f1f1;
 }
 
-/* Header */
-th.tip {
+
+th.tip { /* Header */
 	background: #B8B8B8; /* Gray */
 }
 
-/* Row separator between SubTables*/
-th.tipsep {
+
+th.tipsep { /* Row separator between SubTables*/
 	background: #FFFFCC; /* Yellow*/
 	height: 8pt;
 	border-style: none;
@@ -537,6 +644,13 @@ td.tipwarn,label.tipwarn {
 	color: red;
 }
 
+td.tipNotPresent,label.tipNotPresent{ /* e.g for JSU Feature not present */
+  background: black; /
+  font-weight: bold;
+  color: yellow;
+}
+
+
 td.tipfooter {
 	text-align: left;
 	font-family: Verdana;
@@ -557,16 +671,16 @@ label.tipTitle, td.tipTitle{
   font-size: 12px;
 }
 
-/* Brown Blue */
+
+label.tipBlue{ /* Brown Blue */
   font-family: Verdana;
-label.tipBlue{
   font-weight: bold;
   color: blue; 
 }
 
 
-/* Brown Bold */
-label.tipBrown{
+
+label.tipBrown{ /* Brown Bold */
   font-family: Verdana;
   font-weight: bold;
   color: #8B4513;
@@ -574,8 +688,8 @@ label.tipBrown{
 }
 
 
-/* Good: Green and Boold */
-td.tipGood,label.tipGood {
+
+td.tipGood,label.tipGood { /* Good: Green and Boold */
 	font-weight: bold;
 	color: #008B45; /* Dark Green */
 }
@@ -585,8 +699,6 @@ td.tipErr,label.tipErr   {
 	font-weight: bold;
 }
 
-/*   
-*/
 a.tipLink{
  font-weight: bold;
  text-decoration: underline; 
@@ -610,12 +722,18 @@ a.tipLinkDisabled{
 
 
 
-/* ======================================================================================================================================
-									jslog
-======================================================================================================================================= */
+/*---
+jslog API 
+---
+<b>CSS:</b> <ul>
+ <li>``h3.jslog`` `Header with Btn </li>
+ <li>``div.jslogFooter``  Footer with Btn </li>
+ <li>...
+</ul> 
+*/
 
-/* Header with Btn */
-h3.jslog{
+
+h3.jslog{ /* Header with Btn */
   background:  #ccc;
   color : #000;
   cursor:  pointer;
@@ -626,8 +744,8 @@ h3.jslog{
 }	
 
 
-/* Footer with Btn */
-div.jslogFooter{
+
+div.jslogFooter{ /* Footer with Btn */
   font-size:  12px;
   /* textTransform = uppercase; */
   font-weight:  bold;

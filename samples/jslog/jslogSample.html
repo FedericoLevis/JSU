@@ -42,16 +42,29 @@
       <th class="tiptitleBig2" colspan="4">JS Log - JSU <label class="jsuAPI">jslog.js API</label>
               <input type="button" class="jsuHelp" onclick="jsuDocJSLog()" 
              onmouseover="Tip(JSU_TIP_CUR_FEATURE);" onmouseout="UnTip(event)" />
+        <!--  ONLY for developers: displayed when URL PAR opt=1 -->     
+        <select id="selectShowCol" style="display:none; margin-left:15px" onchange="onchangeShowCol()">
+            <option value="1">Show SAMPLE</option>
+            <option value="2">Show DESCRIPTION</option>
+            <option value="ALL" selected>Show ALL</option>
+        </select> 
       </th>
      </tr>
     <tr class="tiptitleBig3">
-      <td width="50%" class="tipc">SAMPLE</td>
+      <td width="50%" class="tipc">SAMPLE
+        <!--  To show all sample or only ONE   -->
+        <select id="selectSample" style="margin-left:15px" onchange="onchange_sample()">
+            <option value="1">Show Sample_1: jslog API</option>
+            <option value="2">Show Sample_2: jslog as URL PARAMETER</option>
+            <option value="ALL" selected>Show ALL Samples</option>
+      
+      </td>
       <td width="50%" class="tipc">DESCRIPTION</td>
     </tr>
 
     <!--   ===================================== SAMPLE_1 ==============================================  -->
-    <tr>
-       <td class="sample" >
+    <tr  id="tr_sample_1">
+       <td class="sample"  id="col_1_1">
          <label class="sampleTitle">SAMPLE_1 - jslog API </label>
          <table style="margin-top:5px" class="tipNoBorder" width="100%">
            <tr>
@@ -142,7 +155,7 @@
       </td>
   
       <!--    SAMPLE_1 DESCRIPTION -->
-      <td class="sampleDesc" valign="top">
+      <td class="sampleDesc"  id="col_1_2" valign="top">
         <label style="color:blue;font-weight:bold">JS Source Code</label> of Sample_1: 
        
          <table >
@@ -162,9 +175,9 @@
     </tr>
 
     <!--   ===================================== SAMPLE_2 ==============================================  -->
-    <tr>
-       <td class="sample" >
-         <label class="sampleTitle">SAMPLE_2 -  jslog=level as URL PARAMETER</label>
+    <tr  id="tr_sample_2">
+       <td class="sample" id="col_2_1" >
+         <label class="sampleTitle">SAMPLE_2 -  jslog as URL PARAMETER</label>
          <table style="margin-top:5px" class="tipNoBorder" width="100%">
 							<tr> 
 								<td align="left">Click the 2 Links below to see the difference of passing different jslog (e.g jslog=7 and jslog=0)<BR/> 
@@ -192,7 +205,7 @@
       </td>
   
       <!--    SAMPLE_2 DESCRIPTION -->
-      <td class="sampleDesc" valign="top">
+      <td class="sampleDesc"  id="col_2_2" valign="top">
         <label style="color:blue;font-weight:bold">JS Source Code</label> of Sample_2: 
          <input type="button" class="tipJSFixed" id="tipJS2Start" onclick="TipJSFixedClicked (JS2_START,event);" />
  

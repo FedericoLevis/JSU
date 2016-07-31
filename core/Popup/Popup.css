@@ -1,4 +1,4 @@
-/** 
+/* 
 ========================================================================================= <BR/> 
 <b>File:</b> 			core/Popup/Popup.css <BR/>
 <b>Author:</b>     		<a href="https://www.linkedin.com/in/federicolevis" target="_blank">Federico Levis</a> <BR/>
@@ -231,7 +231,7 @@ input.PopupPromptError: Prompt Input Error
 <input class="PopupPromptError" width="20px" />
 ```
 ```html
-<input class="PopupPromptError" style="background-size: contain; background: url('https://raw.githubusercontent.com/FedericoLevis/JSU/master/images/PopupValidationError.gif') no-repeat right center;" width="20px" />
+<input class="PopupPromptError" style="background-size: contain; background: url('https://raw.githubusercontent.com/FedericoLevis/JSU/master/images/PopupValidationError.gif') no-repeat right center;background-size: contain;" width="20px" />
 ```
 */
 input.PopupPromptError

@@ -5,4 +5,4 @@
 /*  http://javascriptobfuscator.com                                        */
 /*                                                                         */
 /***************************************************************************/
-var _$_2476=["<b>Sort Feature: DAFARE</b>"];var JSLOG_LEV=0;var TIP_SORT_FEATURE=_$_2476[0];function jsu_loaded(){}function onclickSortFeature(L){TipFixedClicked(TIP_SORT_FEATURE,L)}
+var _$_742d=["<b>Sort Feature: DAFARE</b>"];var JSLOG_LEV=0;var TIP_SORT_FEATURE=_$_742d[0];function jsu_loaded(){}function onclickSortFeature(H){TipFixedClicked(TIP_SORT_FEATURE,H)}

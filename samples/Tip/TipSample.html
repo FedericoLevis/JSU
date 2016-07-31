@@ -50,7 +50,7 @@
       <th class="tiptitleBig2" colspan="4">Tip Sample - JSU <label class="jsuAPI">tooltip.js API</label>
         <input type="button" class="jsuHelp" onclick="jsuDocTip()" 
              onmouseover="Tip(JSU_TIP_CUR_FEATURE);" onmouseout="UnTip(event)" /> 
-        <!--  display for developers if  URL PAR opt=1 -->     
+        <!--  ONLY for developers: displayed when URL PAR opt=1 -->     
         <select id="selectShowCol" style="display:none; margin-left:15px" onchange="onchangeShowCol()">
             <option value="1">Show SAMPLE</option>
             <option value="2">Show DESCRIPTION</option>
@@ -62,6 +62,7 @@
     </tr>
     <tr class="tiptitleBig3">
       <td width="50%" class="tipc" id="col_0_1">SAMPLE
+        <!--  To show all sample or only ONE   -->
         <select id="selectSample" style="margin-left:15px" onchange="onchange_sample()">
             <option value="1">Show Sample_1: Floating Tip</option>
             <option value="2">Show Sample_2: Fixed Tip</option>

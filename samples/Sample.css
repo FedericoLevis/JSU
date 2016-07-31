@@ -7,8 +7,11 @@ Description:        Common CSS for alla The JSU  Samples
 DISCLAIMER
 */
 
-div.sampleTblContainer{
-  float:left;
+div.sampleSort, table.sampleSort{
+  font-family: Verdana;
+  font-weight: normal;
+  font-size: 11px;
+	float:left;
   width:500px;
   overflow: auto;
   max-height: 250px;
@@ -16,6 +19,9 @@ div.sampleTblContainer{
   margin-top: 5px;
   margin-bottom: 5px;
   border: 2px solid black;  
+}
+td.sampleSort{
+  font-size: 11px;
 }	
 
 fieldset{
