@@ -73,7 +73,7 @@
          <tr>
 				    <td>
 				        <b>POPUP_TYPE:</b>
-				        <select id="popupType1" style="width:120px;margin-left:5px" ></select>  
+				        <select id="popupType1" style="width:120px;margin-left:5px" onchange="onchange_sampleType1()"></select>  
                 <input type="button" value="Show TEXT Popup" onclick="sample1()" />
 				    </td>
 				  </tr>  
@@ -83,7 +83,8 @@
       <td class="sampleDesc"  id="col_1_2">
          <table >
            <tr valign="top"><td>
-               <label style="color:blue;font-weight:bold">JS Source Code</label> of Sample_1: 
+               <label style="color:blue;font-weight:bold">JS Source Code</label> of Sample_1 - 
+               <label id="labelSample1" style="font-weight:bold">POPUP_TYPE=Info</label>  
                <input type="button" class="tipJSFixed" id="imgTipJSFixed" onclick="sample1JS(event);" />
            </td></tr>
          </table>
@@ -336,7 +337,7 @@
          <tr>
             <td><b>Advanced Popup Samples: </b></td>
             <td>
-                <select id="type4" style="width:160px" >
+                <select id="type4" style="width:160px" onchange="onchange_sampleType4()">
                        <option value="VIDEO" >Popup with Video</option> 
                        <option value="ABOUT" selected >About Popup</option>
                 </select>  
@@ -349,7 +350,9 @@
       <td class="sampleDesc">
          <table >
            <tr valign="top"><td>
-               <label style="color:blue;font-weight:bold">JS Source Code</label> of SAMPLE_4: </label>
+               <label style="color:blue;font-weight:bold">JS Source Code</label> of SAMPLE_4 - </label>
+               <label id="labelSample4" style="font-weight:bold">About Popup</label>  
+               
                <input type="button" class="tipJSFixed" id="sample4JS" onclick="sample4JS(event);" />
            </td></tr>
          </table>
