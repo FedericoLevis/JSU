@@ -9,9 +9,14 @@ var JSLOG_LEV = 0;
 * Called when jsu is loaded
 */
 function jsu_loaded(){
+	/* For sample that are NOT FREE like this one, we have to setup the State
+	 */
+	setupState(); 
   // [Optional] Init jslog with JSLOG_LEV 
   // jslog_init(JSLOG_LEV);
   sampleInit();  
+	loadingShow(false);
+  
 }
 
 function sampleInit(){
@@ -40,33 +45,29 @@ function sampleInit(){
  * Text Popup: Choice
  */
 function sample1Choice(){
-  // 1) Show Popup 
-  var objRet = PopupChoice (//Messages
+  PopupChoice (//Messages
       "Please Choose a Vote for Popup API\n",  "Popup VOTE: ",
       // arChoice: "Very Good" is pre-selected
       [{value:1, szText:"1 - Not Good", bSel:false},
        {value:2, szText:"2 - Good", bSel:false},
        {value:3, szText:"3 - Very Good", bSel:true},
        {value:4, szText:"4 - Excellent", bSel:false},
-      ]);
-  // 2) Show The answer to choice: item chosen and Button clicked 
-  showAnswerChoice (objRet);
+      ],
+      // callback, called when user close the Popup
+      {fnCallback: callbackChoice});
 }
 
 /**
  * Text Popup: Prompt
  */
 function sample1Prompt(){
-  // 1) Show Popup 
-  var objRet = Popup (POPUP_TYPE.PROMPT,
+  Popup (POPUP_TYPE.PROMPT,
       "Insert a VOTE [1..10] in the field below\n(You can insert a  Value out of Range [1..10] to see Validation Features)\n\n",
-      // objOpt Option: PromptLabel, validate
+      // objOpt Option: PromptLabel, validate, Callback
      { szPromptLabel: "VOTE [1..10]: ",
        // Validate Option: NUMBER must be in range [1..10]
-       szPromptType: PROMPT_TYPE.NUMBER,  iPromptMin:1,  iPromptMax: 10,iPromptWidth:50}
-      );
-  // 2) Show The answer to question (Prompt inserted and Button clicked by the user) 
-  showAnswerPrompt(objRet); 
+       szPromptType: PROMPT_TYPE.NUMBER,  iPromptMin:1,  iPromptMax: 10,iPromptWidth:50,
+       fnCallback: callbackPrompt});
 }
 
 /**
@@ -74,16 +75,11 @@ function sample1Prompt(){
  * @param PopupType POPUP_TYPE.QUESTION or POPUP_TYPE.QUESTION_3
  */
 function sample1Question(PopupType){
-  // 1) Show Popup 
   // PopupType = POPUP_TYPE.QUESTION (2 Buttons) or POPUP_TYPE.QUESTION_3 (3 Buttons)
-  var objRet = Popup (PopupType,"Do you like this sample?");
-  // 2) Show The answer to question (the Button clicked by the user) 
-  showAnswerQuestion (objRet); 
-
+  Popup (PopupType,"Do you like this sample?",
+      // objOpt: callback called when Popup is closed
+     {  fnCallback: callbackQuestion});
 }
-
-
-
 
 /**
  * Text Popup: Notify
@@ -124,36 +120,42 @@ function onchange_sampleType1(){
   label.innerHTML = "POPUP_TYPE=" + szAlertType;
 }
 
+
 /* ============================================================================
- *             Show answer question (used by SAMPLE_1, SAMPLE_2)
+ *             CALLBACK (used by SAMPLE_1, SAMPLE_2)
  ============================================================================ */
 
 /**
- * Show the answer to Popup Question
+ * Callback for Question with 2 or 3 Buttons
+ * Show the answer to Question
  * @param objRet
  */
-function showAnswerQuestion(objRet){
-  var retBtn   = objRet.retBtn; 
+function callbackQuestion(objRet){
+  var Fn = "[PopupSample.js callbackQuestion] ";
+  jslogObj (JSLOG_TEST,Fn + "objRet",objRet);
+  
+  var retBtn   = objRet.retBtn  ; 
   if (retBtn   == POPUP_BTN.CONFIRM){
     Popup(POPUP_TYPE.CONFIRM,'<label class="PopupGood">Your answer was YES</label>',  {szTitle: "GOOD ANSWER!"});
   }else if (retBtn   == POPUP_BTN.NO){
-    Popup(POPUP_TYPE.ERR,'<label class="PopupErr">Your answer was NO</label>',  {szTitle: "WHY DON'T WOUT LIKE IT?"});
+    Popup(POPUP_TYPE.ERR,'<label class="PopupError">Your answer was NO</label>',  {szTitle: "WHY DON'T WOUT LIKE IT?"});
   }else if (retBtn   == POPUP_BTN.CANCEL){
-    Popup(POPUP_TYPE.INFO,'<label class="PopupWarn">You have clicked CANCEL Button</label>');
+    Popup(POPUP_TYPE.INFO,'<label class="PopupWarning">You have clicked CANCEL Button</label>');
   }else if (retBtn   == POPUP_BTN.CLOSE){
-    Popup(POPUP_TYPE.INFO,'You have close the Popup without any Choice');
+    Popup(POPUP_TYPE.INFO,'You have close the Window without any Choice');
   }
 }
 
 
 /**
- * Show the answer to Popup Prompt
+ * Callback for Choice
+ * Show the answer to Choice
  * @param objRet
  */
-function showAnswerPrompt (objRet){
-  var Fn = "[PopupSample.js showAnswerPrompt] ";
+function callbackPrompt(objRet){
+  var Fn = "[PopupSample.js callbackPrompt] ";
   jslogObj (JSLOG_DEBUG,Fn + "objRet",objRet);
-  var retBtn   = objRet.retBtn; 
+  var retBtn   = objRet.retBtn  ; 
   if (retBtn   == POPUP_BTN.CONFIRM){
     Popup(POPUP_TYPE.CONFIRM,'You have inserted: <b>' + objRet.promptValue + ' </b>'); 
   }else if (retBtn   == POPUP_BTN.CANCEL){
@@ -163,7 +165,9 @@ function showAnswerPrompt (objRet){
       '  <li>Clicking the <b>X</b> on the Top Left Corner of the Window</li>' +
       '  <li>Clicking <b>ESC</b></li>' +
       '</ul><BR/>');
-  }
+}
+  
+  
 }  
 
 /**
@@ -171,25 +175,25 @@ function showAnswerPrompt (objRet){
  * Show the answer to Choice
  * @param objRet
  */
-function showAnswerChoice(objRet){
-  var Fn = "[PopupSample.js showAnswerChoice] ";
+function callbackChoice(objRet){
+  var Fn = "[PopupSample.js callbackChoice] ";
   jslogObj (JSLOG_TEST,Fn + "objRet",objRet);
   jslogObj (JSLOG_DEBUG,"objRet", objRet,true);
   // Example of objRet, if user select 2=Good and click OK
   // objRet: {
-  //   "retBtn":1,
+  //   "retBtn":"CONFIRM",
   //   "choiceValue":"2",
   //   "choiceText":"2 - Good",
   //   "arChoice":[{"value":"1","szText":"1 - Not Good","bSel":false},
   //               {"value":"2","szText":"2 - Good","bSel":true},
   //               {"value":"3","szText":"3 - Very Good","bSel":false},
   //               {"value":"4","szText":"4 - Excellent","bSel":false}]}  
-  var retBtn   = objRet.retBtn; 
+  var retBtn   = objRet.retBtn  ; 
   if (retBtn   == POPUP_BTN.CONFIRM){
     var szMsgHtml = 'You have clicked the <b>OK</b> Button and you have selected the following items:<ul type="square">' + 
       '  <li><b>ChoiceValue:</b> ' +  objRet.choiceValue+ '</li>' +
       '  <li><b>ChoiceText:</b> ' +  objRet.choiceText + '</li>' +
-      '</ul>';
+      '</ul><BR/>';
     // add the table with the detail
     szMsgHtml += '<table class="Popup" width="100%">' +
     '  <th class="PopupTitle" colspan="3">DETAILS OF YOUR SELECTION</th>' +   
@@ -221,6 +225,7 @@ function showAnswerChoice(objRet){
         '  <li>Clicking <b>ESC</b></li>' +
         '</ul><BR/>');
   }
+  
 }
 
 
@@ -303,7 +308,8 @@ function sample2Err(){
 
 function sample2Alarm(){
   var szMsg =  '<label class="PopupError">The CPU temperature is critically hight!!!</label>' +  
-        '<img src="' +  JSU_PATH_ABOUT_IMG +  'ComputerFire.gif" width="70" height="70"  />';
+        '<img src="' +  JSU_PATH_ABOUT_IMG +  'ComputerFire.gif" width="70" height="70"  />' + 
+       '<BR/>But dont worrie, it is only an example.' ;
   Popup(POPUP_TYPE.ALARM,szMsg );
 }
 
@@ -313,11 +319,7 @@ function sample2Alarm(){
  * Question with 2 or 3 Buttons
  */
 function sample2Question(szPopupType){
-  //1) Show Popup
-  var objRet = Popup(szPopupType,'Do you like <b>Popup API</b>?');
-  // 2) show answer to question
-  showAnswerQuestion (objRet);
-  
+  Popup(szPopupType,'Do you like <b>Popup API</b>?',{fnCallback: callbackQuestion});
 }
 
 
@@ -368,7 +370,6 @@ function sample2Choice(){
   var Fn="[sample2Choice] ";
   var CHOICE_NUM = 20;
   
-  // Prepare szMsgHtml
   var szSel =  selectGetSelVal(getElementById2('selectChoiceMultiSel'));
   jslog (JSLOG_DEBUG, Fn + "szSel=" + szSel);
   var bChoiceMultiSel = selectGetSelVal(getElementById2('selectChoiceMultiSel')) == "TRUE";
@@ -398,17 +399,15 @@ function sample2Choice(){
     szMsgHtml = 'Example of <b>Multi Selection Choice</b> with:<ul>' + 
         '<li>' + CHOICE_NUM + ' items </li>' + 
         '<li>First 5 Items pre-selected</li>' +
-        '<li>Visible Items=' + iChoiceMultiSize +'</li></ul><BR/>';
+        '<li>Visible Items=' + iChoiceMultiSize +'</li></ul>';
   }else{
     szMsgHtml = "Example of <b>Single Selection Choice</b> with Item 10 pre-selected.<BR/><BR/>"; 
   }
-  // 1) Show Popup
   var objRet = PopupChoice (szMsgHtml,szChoiceLabel,arChoice,
-      { bChoiceMultiSel: bChoiceMultiSel,
+      {fnCallback:callbackChoice,
+       bChoiceMultiSel: bChoiceMultiSel,
        iChoiceMultiSize: iChoiceMultiSize
       });
-  // 2) Show The answer to choice: item chosen and Button clicked
-  showAnswerChoice(objRet);
 }
 
 
@@ -502,11 +501,11 @@ function sample2Prompt(){
     szPromptValue: getElementById2 ("szPromptValue").value,
     iPromptMin:  parseInt (getElementById2("iPromptMin").value),
     iPromptMax: parseInt (getElementById2 ("iPromptMax").value),
-    iPromptWidth: parseInt(getElementById2  ("iPromptWidth").value)
+    iPromptWidth: parseInt(getElementById2  ("iPromptWidth").value),
+    fnCallback:callbackPrompt
   };  
   jslogObj (JSLOG_DEBUG,Fn + "objOpt", objOpt );
-  var objRet = Popup (POPUP_TYPE.PROMPT,szMsg,objOpt);
-  showAnswerPrompt (objRet);
+  Popup (POPUP_TYPE.PROMPT,szMsg,objOpt);
 
 }
 
@@ -531,6 +530,7 @@ function sample3Layout(){
   var objOpt ={
       bShowImg: selectGetSelVal (getElementById2("bShowImg")) == "TRUE",
       bResize: selectGetSelVal (getElementById2("bResize")) == "TRUE",
+      bModal: selectGetSelVal (getElementById2("bModal")) == "TRUE",
       szTitle: getElementById2("szTitle").value,
       iWidth: selectGetSelVal (getElementById2("iWidth")) 
     };  
@@ -539,6 +539,7 @@ function sample3Layout(){
     '  <ul type="square">' +
     '   <li><b>bShowImg: </b>' +  objOpt.bShowImg +  '</li>' +
     '   <li><b>bResize: </b>' +  objOpt.bResize +  '</li>' +
+    '   <li><b>bModal: </b>' +  objOpt.bModal+  '</li>' +
     '   <li><b>iWidth: </b>' +  objOpt.iWidth+  '</li>' +
     '  </ul>';
   Popup(POPUP_TYPE.INFO,szMsg, objOpt);
@@ -584,11 +585,11 @@ function sample3CustomBtn2(){
    '<li><b>iNoWidth</b>: 200</li>' +
    '</ul></BR>' +
    'Do you like <b>Popup API</b>?';
-  var objRet = Popup(POPUP_TYPE.QUESTION,szMsg,
-      {szConfirmLabel: "YES I Like it!",iConfirmWidth:200,
+  Popup(POPUP_TYPE.QUESTION,szMsg,
+      {fnCallback: callbackQuestion,
+       szConfirmLabel: "YES I Like it!",iConfirmWidth:200,
        szNoLabel: "NO I don't LIKE IT",iNoWidth:200 }
         );
-  showAnswerQuestion (objRet);
 }
 
 /*
@@ -604,13 +605,12 @@ function sample3CustomBtn3(){
   '<li><b>iCancelWidth</b>: 130</li>' +
   '</ul></BR>' +
   'Do you like <b>Popup API</b>?';
-  var objRet = Popup(POPUP_TYPE.QUESTION_3, szMsg,
-      {szConfirmLabel: "YES It is Very Interesting",iConfirmWidth:200,
+  Popup(POPUP_TYPE.QUESTION_3, szMsg,
+      {fnCallback: callbackQuestion,
+       szConfirmLabel: "YES It is Very Interesting",iConfirmWidth:200,
         szNoLabel: "NOT Very Much",iNoWidth:130, 
         szCancelLabel: "INDIFFERENT",iCancelWidth:130}
   );
-  showAnswerQuestion (objRet);
-  
 }
 
 
@@ -623,15 +623,12 @@ function sample3CustomBtn3(){
  * Popup with a Video  
  */
 function sample4Video(){
+  // Show Popup with Video
 	var szMsg = '<iframe width="600" height="500" src="https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1" frameborder="0" allowfullscreen></iframe>'; 
-  // Show Popup with Video   
   Popup(POPUP_TYPE.INFO, szMsg,
       // objOpt
-      {bShowImg:false,iWidth:620,position:{at: "top"}, szTitle: "Video Example"});
-  
+      {bShowImg:false,iWidth:650,position:{at: "top"}, szTitle: "Video Example"});
 }
-
-
 
 
 /**
@@ -661,6 +658,7 @@ function onchange_sampleType4(){
 
 
 
+
 //===================================================================================================
 //  BELOW CODE is not strictly related to the Sort feature, but it is ONLY Related to JS Code 
 //===========================================================================================
@@ -673,9 +671,15 @@ var JS1_NOTIFY= '// 1) Show Popup \n' +
 
 var JS1_QUESTION= '// 1) Show Popup \n' +
 '// PopupType = POPUP_TYPE.QUESTION (2 Buttons) or POPUP_TYPE.QUESTION_3 (3 Buttons) \n'+
-'var objRet = Popup (PopupType,"Do you like this sample?") \n'+
-'// 2) manage the Popup answer, returned into objRet - example: objRet= {"retBtn": "NO"}\n' + 
-'  var retBtn   = objRet.retBtn; \n' +
+'Popup (PopupType,"Do you like this sample?", \n'+
+'  // objOpt: callback called when Popup is closed \n'+
+'  { fnCallback: callbackQuestion}); \n\n'+
+'// 2) CALLBACK, invoked when Popup is closed \n' + 
+'function callbackQuestion(objRet){ \n' +
+'  // Example of objRet, if user click NO \n' +
+'  //   objRet= {"retBtn": "NO"} \n' +
+'  // ---- Check How user has closed the Popup: \n' +
+'  var retBtn   = objRet.retBtn  ; \n' +
 '  if (retBtn   == POPUP_BTN.CONFIRM){  // Popup Closed clicking OK \n' + 
 '  }else if (retBtn   == POPUP_BTN.NO){ // Popup Closed clicking NO \n' + 
 '  }else if (retBtn   == POPUP_BTN.CANCEL){  // Popup Closed clicking CANCEL \n' + 
@@ -686,13 +690,17 @@ var JS1_QUESTION= '// 1) Show Popup \n' +
 var JS1_PROMPT= '// 1) Show Popup \n' +
 'Popup (POPUP_TYPE.PROMPT, \n' +
 '  "Insert a VOTE [1..10] in the field below\\n(You can insert a  Value out of Range [1..10] to see Validation Features)\\n\\n", \n' +
-'  // objOpt Option: PromptLabel, validate \n' +
+'  // objOpt Option: PromptLabel, validate, Callback \n' +
 '  { szPromptLabel: "VOTE [1..10]: ", \n' +
 '     // Validate Option: NUMBER must be in range [1..10] \n' +
 '     szPromptType: PROMPT_TYPE.NUMBER,  iPromptMin:1,  iPromptMax: 10,iPromptWidth:50, \n' +
-'   }); \n' +
-'  // Example of objRet, if user insert 9 and click OK: objRet= {"retBtn": "CONFIRM", "promptValue": "9"} \n' +
-'  var retBtn   = objRet.retBtn; \n' +
+'     fnCallback: callbackPrompt}); \n\n' +
+'// 2) CALLBACK, invoked when Popup is closed \n' + 
+'function callbackPrompt(objRet){ \n' +
+'  // Example of objRet, if user insert 9 and click OK \n' +
+'  //   objRet= {"retBtn": "CONFIRM", "promptValue": "9"} \n' +
+'  // ---- Check How user has closed the Popup: \n' +
+'  var retBtn   = objRet.retBtn  ; \n' +
 '  if (retBtn   == POPUP_BTN.CONFIRM){  // Popup Closed clicking OK \n' + 
 '  }else if (retBtn   == POPUP_BTN.CANCEL){  // Popup Closed clicking CANCEL \n' + 
 '  }else if (retBtn   == POPUP_BTN.CLOSE){  // Popup Closed clicking X or ESC \n' +
@@ -700,15 +708,19 @@ var JS1_PROMPT= '// 1) Show Popup \n' +
 
 
 var JS1_CHOICE= '// 1) Show Popup \n' +
-'var objRet = PopupChoice ( //Messages \n' +
+'PopupChoice ( //Messages \n' +
 '  "Please Choose a Vote for Popup API",  "Popup VOTE: ", \n' +
 '  // arChoice: "Very Good" is pre-selected  \n' +
 '  [{value:1, szText:"1 - Not Good", bSel:false},  \n' +
 '     {value:2, szText:"2 - Good", bSel:false}, \n' +
 '     {value:3, szText:"3 - Very Good", bSel:true}, \n' +
 '     {value:4, szText:"4 - Excellent", bSel:false}, \n' +
-'  ]); \n' +
-'  // Example of objRet, if user select 2=Good and click OK: \n' +
+'  ], \n' +
+'  // callback, called when Popup is closed \n' +
+'  {fnCallback: callbackChoice}); \n\n' +
+'// 2) CALLBACK, invoked when Popup is closed \n' + 
+'function callbackChoice(objRet){ \n' +
+'  // Example of objRet, if user select 2=Good and click OK \n' +
 '  // objRet={\n' +
 '  //   "retBtn":"CONFIRM",\n' +
 '  //   "choiceValue":"2",\n' +
@@ -717,8 +729,8 @@ var JS1_CHOICE= '// 1) Show Popup \n' +
 '  //               {"value":"2","szText":"2 - Good","bSel":true},\n' +
 '  //               {"value":"3","szText":"3 - Very Good","bSel":false}\n' +
 '  //               {"value":"4","szText":"4 - Excellent","bSel":false}]}\n' +  
-'// 2) manage the Popup answer, returned into objRet \n' + 
-'  var retBtn   = objRet.retBtn; \n' +
+'  // ---- Check How user has closed the Popup: \n' +
+'  var retBtn   = objRet.retBtn  ; \n' +
 '  if (retBtn   == POPUP_BTN.CONFIRM){  // Popup Closed clicking OK \n' + 
 '  }else if (retBtn   == POPUP_BTN.CANCEL){  // Popup Closed clicking CANCEL \n' + 
 '  }else if (retBtn   == POPUP_BTN.CLOSE){  // Popup Closed clicking X or ESC \n' +
@@ -731,16 +743,20 @@ var JS3_OPT =
 '} \n' +
 '// objOpt can be used to set OptionalParameter: \n' +
 ' /* @param objOpt    [Object]}    Optional Object to change default Option:\n' +
+' *    fnCallback:  {function}  callback function, called when Popup is closed \n' +
 ' *    szTitle:    {String}      change default Title\n' +
+' *    position: {Object}    jQuery ui position. Default {my: "center"}\n' + 
 ' *    iWidth:  {Number}      Optional PopupWidth: if it passed it is used - Else DEfault is used\n' +
+' *    iHeight:  {Number}     Optional PopupHeight: if it passed it is Set- Else is automarically calculated\n' +
 ' *    szConfirmLabel:  {String} Label of Confirm Button \n' +
 ' *    iConfirmWidth:   {Number}  Width of Confirm Button \n' +
 ' *    szNoLabel:  {String}      Label of No Button \n' +
 ' *    iNoWidth:   {Number}      Width of No Button \n' +
 ' *    szNoLabel:  {String}      Label of No Button \n' +
 ' *    iNoWidth:   {Number}      Width of No Button \n' +
-' *    bShowImg:    {Boolean}     true to show Image  (Default=false)\n' +
+' *    bShowImg:    {Boolean}     true to show Image  (Default=true)\n' +
 ' *    bResize:    {Boolean}     true to allow Resize Dialog  (Default=true)\n' +
+' *    bModal:    {Boolean}     true=modal (default)\n' +
 ' *    bCloseOnEscape: {Boolean}  Default true   \n' +
 ' *    ------------------------------------------ ONLY For POPUP_TYPE.CHOICE:\n' + 
 ' *    bChoiceMultiSel: {Boolean}  true if MultiSelect,else single select. Default false\n' +
@@ -753,20 +769,22 @@ var JS3_OPT =
 ' *    iPromptMin: {Number}   Min (MinValue for PROMPT_TYPE.NUMBER, MinLen for PROMPT_TYPE.STRING)\n' +          
 ' *    iPromptMax: {Number}   Max (MaxValue for PROMPT_TYPE.NUMBER, MaxLen for PROMPT_TYPE.STRING)';          
 
+
 var JS4_VIDEO= '// 1) Show Popup with Video \n' +
 'Popup(POPUP_TYPE.INFO, \n' +
 '   // szMsg = iframe with Video URL \n' + 
 '   //    Example: <iframe width="600" height="500" src="https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1" frameborder="0" allowfullscreen></iframe> \n' + 
 '   szMsg,\n' +
 '   // objOpt \n' +
-'   {bShowImg:false,iWidth:620, szTitle: "Video Example"}); \n';
+'   {bShowImg:false,iWidth:650,position:{at: "top"}, szTitle: "Video Example"}); \n';
+
 
 
 var JS4_ABOUT= '// 1) Show Popup with About\n' +
 'Popup(POPUP_TYPE.INFO, \n' +
 '   szMsg, // szMsg = HTML with About (see about.js for details) \n' + 
 '   // objOpt \n' +
-'   {bShowImg:false,iWidth:1100, szTitle: "JSU ABOUT"}); \n';
+'   {bShowImg:false,iWidth:1100,position:{at: "top"}, szTitle: "JSU ABOUT"}); \n';
 
 
 /**
@@ -799,7 +817,7 @@ function sample1JS(event){
  * @returns
  */
 function sample3JS(event){
-  TipJSFixedClicked(JS3_OPT,event,{iJSColNum:120, iMaxHeight:300,szTitle:"JS Source Code - Popup Option" });
+  TipJSFixedClicked(JS3_OPT,event,{iJSColNum:120,iMaxHeight:300,szTitle:"JS Source Code - Popup Option" });
 }
 
 
@@ -822,3 +840,6 @@ function sample4JS(event){
   TipJSFixedClicked(szTip,event,{szTitle:"JS Source Code - Advanced Sample=" + szTypeText});
   
 }
+
+
+
