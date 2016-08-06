@@ -1,8 +1,31 @@
-/***************************************************************************/
-/*                                                                         */
-/*  This obfuscated code was created by Javascript Obfuscator Free Version.*/
-/*  Javascript Obfuscator Free Version can be downloaded here              */
-/*  http://javascriptobfuscator.com                                        */
-/*                                                                         */
-/***************************************************************************/
-var _$_8583=["<b>Sort Feature: DAFARE</b>"];var JSLOG_LEV=0;var TIP_SORT_FEATURE=_$_8583[0];function jsu_loaded(){}function onclickSortFeature(K){TipFixedClicked(TIP_SORT_FEATURE,K)}
+
+/* =============================================================================================
+   						CONSTANT
+============================================================================================= */
+
+var JSLOG_LEV = 0;
+
+
+var TIP_SORT_FEATURE="<b>Sort Feature: DAFARE</b>";
+
+
+
+/* =============================================================================================
+									FUNCTION
+============================================================================================= */
+
+/**
+* Called when jsu is loaded
+*/
+function jsu_loaded(){
+  // [Optional] Init jslog
+  // jslog_init(JSLOG_LEV);
+};
+
+
+function onclickSortFeature(event){
+	TipFixedClicked (TIP_SORT_FEATURE,event);
+}
+
+
+

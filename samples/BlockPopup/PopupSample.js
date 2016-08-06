@@ -1,8 +1,824 @@
-/***************************************************************************/
-/*                                                                         */
-/*  This obfuscated code was created by Javascript Obfuscator Free Version.*/
-/*  Javascript Obfuscator Free Version can be downloaded here              */
-/*  http://javascriptobfuscator.com                                        */
-/*                                                                         */
-/***************************************************************************/
-var _$_5582=["popupType1","popupType2","INFO","WARN","ERR","ALARM","CONFIRM","QUESTION","QUESTION_3","CHOICE","PROMPT","length","Please Choose a Vote for Popup API\x0A","Popup VOTE: ","1 - Not Good","2 - Good","3 - Very Good","4 - Excellent","Insert a VOTE [1..10] in the field below\x0A(You can insert a  Value out of Range [1..10] to see Validation Features)\x0A\x0A","VOTE [1..10]: ","NUMBER","Do you like this sample?","This is an example of Message\x0AThis is the second Line","[onchange_sampleType1()] ","szAlertType=","labelSample1","innerHTML","POPUP_TYPE=","retBtn","<label class=\"PopupGood\">Your answer was YES</label>","GOOD ANSWER!","NO","<label class=\"PopupErr\">Your answer was NO</label>","WHY DON'T WOUT LIKE IT?","CANCEL","<label class=\"PopupWarn\">You have clicked CANCEL Button</label>","CLOSE","You have close the Popup without any Choice","[PopupSample.js showAnswerPrompt] ","objRet","You have inserted: <b>","promptValue"," </b>","You have clicked the <b>Cancel</b> Button","You have close the Window <label class=\"PopupWarning\">without any Choice</label> with one of the following cases:<ul type=\"square\">","  <li>Clicking the <b>X</b> on the Top Left Corner of the Window</li>","  <li>Clicking <b>ESC</b></li>","</ul><BR/>","[PopupSample.js showAnswerChoice] ","You have clicked the <b>OK</b> Button and you have selected the following items:<ul type=\"square\">","  <li><b>ChoiceValue:</b> ","choiceValue","</li>","  <li><b>ChoiceText:</b> ","choiceText","</ul>","<table class=\"Popup\" width=\"100%\">","  <th class=\"PopupTitle\" colspan=\"3\">DETAILS OF YOUR SELECTION</th>","  <tr class=\"Popup\">","    <td class=\"PopupHea\" width=\"20%\">VALUE</th>","    <td class=\"PopupHea\" width=\"60%\">TEXT</th>","    <td class=\"PopupHea\" width=\"20%\">SELECTED</th>","  </tr>","arChoice","bSel","PopupGood","","<img src=\"","PopupConfirm.png\" width=\"14\" height=\"14\">","    <td class=\"PopupCenter\"><b>","value","</b></td>","    <td class=\""," PopupCenter\">","szText","</td>","    <td class=\"PopupCenter\">","</table><BR/>","CHOICE DETAILS","[onchangeSample2] ","optChoice","block","optPrompt","This is an Information with <b>some part bold</b>, <i>some part Italic</i>,...<BR/><u>This is the Line 2 that is underlined</u><BR/>","<label class=\"PopupGood\">This is the  line 3 in bold green (to enphasize <i>Good Msg</i>)</label><BR/>","<label class=\"PopupWarning\">This is the  line 4 with Yellow Background (to enphasize <i>Warning Msg</i>)</label><BR/>","<label class=\"PopupError\">This is the  line 5 in Bold Red (to enphasize <i>Error Msg</i>)</label><BR/><BR/>","You can try different Type of POPUP. The <b><u><i>Standard</i> POPUP</u></b> are:","<ul type=\"square\">","<li><b>POPUP_TYPE.INFO</b> for Info</li>","<li><b>POPUP_TYPE.WARN</b> for Warning</li>","<li><b>POPUP_TYPE.ERR</b> for Error</li>","<li><b>POPUP_TYPE.ALARM</b> for Alarm</li>","<li><b>POPUP_TYPE.CONFIRM</b> for Confirmation</li>","<li><b>POPUP_TYPE.QUESTION</b> to ask a Question with 2 Buttons</li>","<li><b>POPUP_TYPE.QUESTION_3</b> to ask a Question with 3 Buttons</li>","<li><b>POPUP_TYPE.PROMPT</b> to Prompt for a value</li>","There were 2 Warnings and we can enphasize them using Popup.css class <b>PopupWarning</b><BR/><BR/>","<b>WARNING LIST:</b>","<li><label class=\"PopupWarning\">WARNING CODE 001234:</label> This an Example of a long phrase that describe this Warning. This phrase will be automatically splitted by Popup into more lines: we do not have to worrie about inserting newline into the description.</li> ","<li><label class=\"PopupWarning\">WARNING CODE 1234568:</label> This an Example of this Warning Description</li>","<label class=\"PopupError\">This is an ERROR!</label><BR/>But dont worrie it is only an example<BR/><label class=\"PopupGood\">Everything is still working properly :o)</label>","<label class=\"PopupError\">The CPU temperature is critically hight!!!</label>","ComputerFire.gif\" width=\"70\" height=\"70\"  />","Do you like <b>Popup API</b>?","Example of Confirmation: <label class=\"PopupGood\">All the Test have been Completed.</label><BR/><BR/>","Follow an Example of TABLE that can be used to display the Abstract of some TESTS:<BR/><BR/>","<table class=\"Popup\" width=\"95%\">","  <th class=\"PopupTitle\" colspan=\"3\">EXAMPLE OF TEST RESULTS</th>","    <td class=\"PopupHea\" width=\"30%\">TEST</th>","    <td class=\"PopupHea\" width=\"30%\">RESULT</th>","    <td class=\"PopupHea\" width=\"40%\">STATE</th>","    <td class=\"PopupLeft\"><b>Test 1</b></td>","    <td class=\"PopupGood PopupCenter\">OK</td>","    <td class=\"PopupCenter\"><img src=\"","PopupOk.jpg\" width=\"20\" height=\"20\"></td>","    <td class=\"PopupLeft\"><b>Test 2</b></td>","    <td class=\"PopupLeft\"><b>Test 3</b></td>","    <td class=\"PopupWarning PopupCenter\">WARNING</td>","PopupWarning.png\" width=\"20\" height=\"20\"></td>","    <td class=\"PopupLeft\"><b>Test 4</b></td>","    <td class=\"PopupError PopupCenter\">ERROR</td>","PopupError.png\" width=\"20\" height=\"20\"></td>","<table><BR/>","[sample2Choice] ","selectChoiceMultiSel","szSel=","TRUE","<b>Select 0..N FIELDS</b><BR/>","<b>Select only One FIELD</b>","This is an Example of the Item ","push","selectChoiceSize","selectedIndex","Example of <b>Multi Selection Choice</b> with:<ul>","<li>"," items </li>","<li>First 5 Items pre-selected</li>","<li>Visible Items=","</li></ul><BR/>","Example of <b>Single Selection Choice</b> with Item 10 pre-selected.<BR/><BR/>","divChoiceSize","inline","selectChoiceType","SINGLE","Example of <b>Multi Selection Choice</b> with First 5 Items pre-selected.","Example of <b>Single Selection Choice</b> with Item 10 pre-selected.","[sample2Prompt] ","szPromptType","Please Insert a <B>Number</b>","Please Insert a <B>Text</b>","szPromptLabel","szPromptValue","iPromptMin","iPromptMax","iPromptWidth","objOpt","[onchangeSample3] ","type3","optLayout","LAYOUT","bShowImg","bResize","szTitle","iWidth","Popup with a <b>CUSTOM LAYOUT</b>","  <ul type=\"square\">","   <li><b>bShowImg: </b>","   <li><b>bResize: </b>","   <li><b>iWidth: </b>","  </ul>","1BTN","2BTN","3BTN","<b>1 Custom Button</b><BR/><BR/>Popup Option:<ul><li><b>szConfirmLabel</b>: \"CONTINUE\"</li></ul>","CONTINUE","<b>2 Custom Button</b><BR/><BR/>Popup Option:<ul>","<li><b>szConfirmLabel</b>: \"YES I Like it!\"</li>","<li><b>iConfirmWidth</b>: 200</li>","<li><b>szNoLabel</b>: \"NO I don't LIKE IT\"</li>","<li><b>iNoWidth</b>: 200</li>","</ul></BR>","YES I Like it!","NO I don't LIKE IT","<b>3 Custom Button</b><BR/><BR/>Popup Option:<ul>","<li><b>szConfirmLabel</b>: \"YES It is Very Interesting\"</li>","<li><b>szNoLabel</b>: \"NOT Very Much\"</li>","<li><b>iNoWidth</b>: 130</li>","<li><b>szCancelLabel</b>: \"INDIFFERENT\"</li>","<li><b>iCancelWidth</b>: 130</li>","YES It is Very Interesting","NOT Very Much","INDIFFERENT","<iframe width=\"600\" height=\"500\" src=\"https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>","top","Video Example","type4","VIDEO","ABOUT","[onchange_sampleType4()] ","szType=","labelSample4","// 1) Show Popup \x0A","//PopupType:   POPUP_TYPE.INFO, .CONFIRM, .WARN, .ERR, .ALARM] \x0A","Popup (PopupType,\"This is an example of Message\\nThis is the second Line\"); ","// PopupType = POPUP_TYPE.QUESTION (2 Buttons) or POPUP_TYPE.QUESTION_3 (3 Buttons) \x0A","var objRet = Popup (PopupType,\"Do you like this sample?\") \x0A","// 2) manage the Popup answer, returned into objRet - example: objRet= {\"retBtn\": \"NO\"}\x0A","  var retBtn   = objRet.retBtn; \x0A","  if (retBtn   == POPUP_BTN.CONFIRM){  // Popup Closed clicking OK \x0A","  }else if (retBtn   == POPUP_BTN.NO){ // Popup Closed clicking NO \x0A","  }else if (retBtn   == POPUP_BTN.CANCEL){  // Popup Closed clicking CANCEL \x0A","  }else if (retBtn   == POPUP_BTN.CLOSE){  // Popup Closed clicking X or ESC \x0A","  ...","Popup (POPUP_TYPE.PROMPT, \x0A","  \"Insert a VOTE [1..10] in the field below\\n(You can insert a  Value out of Range [1..10] to see Validation Features)\\n\\n\", \x0A","  // objOpt Option: PromptLabel, validate \x0A","  { szPromptLabel: \"VOTE [1..10]: \", \x0A","     // Validate Option: NUMBER must be in range [1..10] \x0A","     szPromptType: PROMPT_TYPE.NUMBER,  iPromptMin:1,  iPromptMax: 10,iPromptWidth:50, \x0A","   }); \x0A","  // Example of objRet, if user insert 9 and click OK: objRet= {\"retBtn\": \"CONFIRM\", \"promptValue\": \"9\"} \x0A","var objRet = PopupChoice ( //Messages \x0A","  \"Please Choose a Vote for Popup API\",  \"Popup VOTE: \", \x0A","  // arChoice: \"Very Good\" is pre-selected  \x0A","  [{value:1, szText:\"1 - Not Good\", bSel:false},  \x0A","     {value:2, szText:\"2 - Good\", bSel:false}, \x0A","     {value:3, szText:\"3 - Very Good\", bSel:true}, \x0A","     {value:4, szText:\"4 - Excellent\", bSel:false}, \x0A","  ]); \x0A","  // Example of objRet, if user select 2=Good and click OK: \x0A","  // objRet={\x0A","  //   \"retBtn\":\"CONFIRM\",\x0A","  //   \"choiceValue\":\"2\",\x0A","  //   \"choiceText\":\"2 - Good\",\x0A","  //   \"arChoice\":[{\"value\":\"1\",\"szText\":\"1 - Not Good\",\"bSel\":false},\x0A","  //               {\"value\":\"2\",\"szText\":\"2 - Good\",\"bSel\":true},\x0A","  //               {\"value\":\"3\",\"szText\":\"3 - Very Good\",\"bSel\":false}\x0A","  //               {\"value\":\"4\",\"szText\":\"4 - Excellent\",\"bSel\":false}]}\x0A","// 2) manage the Popup answer, returned into objRet \x0A","function Popup(szPopupType, szMsgHtml,objOpt){ \x0A"," ........\x0A","} \x0A","// objOpt can be used to set OptionalParameter: \x0A"," /* @param objOpt    [Object]}    Optional Object to change default Option:\x0A"," *    szTitle:    {String}      change default Title\x0A"," *    iWidth:  {Number}      Optional PopupWidth: if it passed it is used - Else DEfault is used\x0A"," *    szConfirmLabel:  {String} Label of Confirm Button \x0A"," *    iConfirmWidth:   {Number}  Width of Confirm Button \x0A"," *    szNoLabel:  {String}      Label of No Button \x0A"," *    iNoWidth:   {Number}      Width of No Button \x0A"," *    bShowImg:    {Boolean}     true to show Image  (Default=false)\x0A"," *    bResize:    {Boolean}     true to allow Resize Dialog  (Default=true)\x0A"," *    bCloseOnEscape: {Boolean}  Default true   \x0A"," *    ------------------------------------------ ONLY For POPUP_TYPE.CHOICE:\x0A"," *    bChoiceMultiSel: {Boolean}  true if MultiSelect,else single select. Default false\x0A"," *    iChoiceMultiSize: {Number}  if bChoiceMultiSel=true:  size (Num item) to display without Scrollbar\x0A"," *    ------------------------------------------ ONLY For POPUP_TYPE.PROMPT: \x0A"," *    szPromptType: {String}  PROMPT_TYPE.NUMBER  PROMPT_TYPE.STRING default=PROMPT_TYPE.STRING\x0A"," *    szPromptLabel: {String}  Label in Front of Prompt  \x0A"," *    szPromptValue: {String}  Default Value to set       \x0A"," *    iPromptWidth: {Number}  Width (px) of the Prompt Item       \x0A"," *    iPromptMin: {Number}   Min (MinValue for PROMPT_TYPE.NUMBER, MinLen for PROMPT_TYPE.STRING)\x0A"," *    iPromptMax: {Number}   Max (MaxValue for PROMPT_TYPE.NUMBER, MaxLen for PROMPT_TYPE.STRING)","// 1) Show Popup with Video \x0A","Popup(POPUP_TYPE.INFO, \x0A","   // szMsg = iframe with Video URL \x0A","   //    Example: <iframe width=\"600\" height=\"500\" src=\"https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1\" frameborder=\"0\" allowfullscreen></iframe> \x0A","   szMsg,\x0A","   // objOpt \x0A","   {bShowImg:false,iWidth:620, szTitle: \"Video Example\"}); \x0A","// 1) Show Popup with About\x0A","   szMsg, // szMsg = HTML with About (see about.js for details) \x0A","   {bShowImg:false,iWidth:1100, szTitle: \"JSU ABOUT\"}); \x0A","JS Source Code - POPUP_TYPE=","JS Source Code - Popup Option","JS Source Code - Advanced Sample="];var JSLOG_LEV=0;function jsu_loaded(){sampleInit()}function sampleInit(){var bu=[_$_5582[0],_$_5582[1]];var bt=[POPUP_TYPE[_$_5582[2]],POPUP_TYPE[_$_5582[3]],POPUP_TYPE[_$_5582[4]],POPUP_TYPE[_$_5582[5]],POPUP_TYPE[_$_5582[6]],POPUP_TYPE[_$_5582[7]],POPUP_TYPE[_$_5582[8]],POPUP_TYPE[_$_5582[9]],POPUP_TYPE[_$_5582[10]]];for(var f=0;f< bu[_$_5582[11]];f++){var bv=bu[f];var bx=getElementById2(bv,true);for(var O=0;O< bt[_$_5582[11]];O++){var bw=bt[O];appendOptionLast(bx,bw,bw)}};onchangeSample2();onchangeSample3()}function sample1Choice(){var g=PopupChoice(_$_5582[12],_$_5582[13],[{value:1,szText:_$_5582[14],bSel:false},{value:2,szText:_$_5582[15],bSel:false},{value:3,szText:_$_5582[16],bSel:true},{value:4,szText:_$_5582[17],bSel:false}]);showAnswerChoice(g)}function sample1Prompt(){var g=Popup(POPUP_TYPE[_$_5582[10]],_$_5582[18],{szPromptLabel:_$_5582[19],szPromptType:PROMPT_TYPE[_$_5582[20]],iPromptMin:1,iPromptMax:10,iPromptWidth:50});showAnswerPrompt(g)}function sample1Question(bf){var g=Popup(bf,_$_5582[21]);showAnswerQuestion(g)}function sample1Notify(bf){Popup(bf,_$_5582[22])}function sample1(){var C=selectGetSelVal(getElementById2(_$_5582[0]));if(C== POPUP_TYPE[_$_5582[9]]){return sample1Choice()}else {if(C== POPUP_TYPE[_$_5582[10]]){return sample1Prompt()}else {if(C== POPUP_TYPE[_$_5582[7]]|| C== POPUP_TYPE[_$_5582[8]]){return sample1Question(C)}else {return sample1Notify(C)}}}}function onchange_sampleType1(){var e=_$_5582[23];var C=selectGetSelText(getElementById2(_$_5582[0]));jslog(JSLOG_DEBUG,e+ _$_5582[24]+ C);var B=getElementById2(_$_5582[25]);B[_$_5582[26]]= _$_5582[27]+ C}function showAnswerQuestion(g){var h=g[_$_5582[28]];if(h== POPUP_BTN[_$_5582[6]]){Popup(POPUP_TYPE[_$_5582[6]],_$_5582[29],{szTitle:_$_5582[30]})}else {if(h== POPUP_BTN[_$_5582[31]]){Popup(POPUP_TYPE[_$_5582[4]],_$_5582[32],{szTitle:_$_5582[33]})}else {if(h== POPUP_BTN[_$_5582[34]]){Popup(POPUP_TYPE[_$_5582[2]],_$_5582[35])}else {if(h== POPUP_BTN[_$_5582[36]]){Popup(POPUP_TYPE[_$_5582[2]],_$_5582[37])}}}}}function showAnswerPrompt(g){var e=_$_5582[38];jslogObj(JSLOG_DEBUG,e+ _$_5582[39],g);var h=g[_$_5582[28]];if(h== POPUP_BTN[_$_5582[6]]){Popup(POPUP_TYPE[_$_5582[6]],_$_5582[40]+ g[_$_5582[41]]+ _$_5582[42])}else {if(h== POPUP_BTN[_$_5582[34]]){Popup(POPUP_TYPE[_$_5582[2]],_$_5582[43])}else {if(h== POPUP_BTN[_$_5582[36]]){Popup(POPUP_TYPE[_$_5582[2]],_$_5582[44]+ _$_5582[45]+ _$_5582[46]+ _$_5582[47])}}}}function showAnswerChoice(g){var e=_$_5582[48];jslogObj(JSLOG_TEST,e+ _$_5582[39],g);jslogObj(JSLOG_DEBUG,_$_5582[39],g,true);var h=g[_$_5582[28]];if(h== POPUP_BTN[_$_5582[6]]){var k=_$_5582[49]+ _$_5582[50]+ g[_$_5582[51]]+ _$_5582[52]+ _$_5582[53]+ g[_$_5582[54]]+ _$_5582[52]+ _$_5582[55];k+= _$_5582[56]+ _$_5582[57]+ _$_5582[58]+ _$_5582[59]+ _$_5582[60]+ _$_5582[61]+ _$_5582[62];var c=g[_$_5582[63]];for(var f=0;f< c[_$_5582[11]];f++){var d=c[f];var j=d[_$_5582[64]]?_$_5582[65]:_$_5582[66];var l=d[_$_5582[64]]?_$_5582[67]+ JSU_PATH_IMG+ _$_5582[68]:_$_5582[66];var m=_$_5582[58]+ _$_5582[69]+ d[_$_5582[70]]+ _$_5582[71]+ _$_5582[72]+ j+ _$_5582[73]+ d[_$_5582[74]]+ _$_5582[75]+ _$_5582[76]+ l+ _$_5582[75]+ _$_5582[62];k+= m};k+= _$_5582[77];Popup(POPUP_TYPE[_$_5582[2]],k,{szTitle:_$_5582[78],iWidth:600,iHeight:600,bShowImg:false})}else {if(h== POPUP_BTN[_$_5582[34]]){Popup(POPUP_TYPE[_$_5582[2]],_$_5582[43])}else {if(h== POPUP_BTN[_$_5582[36]]){Popup(POPUP_TYPE[_$_5582[2]],_$_5582[44]+ _$_5582[45]+ _$_5582[46]+ _$_5582[47])}}}}function onchangeSample2(){var e=_$_5582[79];var C=selectGetSelVal(getElementById2(_$_5582[1]));jslog(JSLOG_DEBUG,_$_5582[24]+ C);elementShow(getElementById2(_$_5582[80]),C== POPUP_TYPE[_$_5582[9]],_$_5582[81]);elementShow(getElementById2(_$_5582[82]),C== POPUP_TYPE[_$_5582[10]],_$_5582[81])}function sample2(){var C=selectGetSelVal(getElementById2(_$_5582[1]));if(C== POPUP_TYPE[_$_5582[2]]){return sample2Info()}else {if(C== POPUP_TYPE[_$_5582[3]]){return sample2Warn(_$_5582[66])}else {if(C== POPUP_TYPE[_$_5582[4]]){return sample2Err()}else {if(C== POPUP_TYPE[_$_5582[6]]){return sample2Confirm()}else {if(C== POPUP_TYPE[_$_5582[5]]){return sample2Alarm()}else {if(C== POPUP_TYPE[_$_5582[9]]){return sample2Choice()}else {if(C== POPUP_TYPE[_$_5582[10]]){return sample2Prompt()}else {if(C== POPUP_TYPE[_$_5582[7]]|| C== POPUP_TYPE[_$_5582[8]]){return sample2Question(C)}}}}}}}}}function sample2Info(){var bg=_$_5582[83]+ _$_5582[84]+ _$_5582[85]+ _$_5582[86]+ _$_5582[87]+ _$_5582[88]+ _$_5582[89]+ _$_5582[90]+ _$_5582[91]+ _$_5582[92]+ _$_5582[93]+ _$_5582[94]+ _$_5582[95]+ _$_5582[96]+ _$_5582[55];Popup(POPUP_TYPE[_$_5582[2]],bg)}function sample2Warn(br){var bg=_$_5582[97]+ _$_5582[98]+ _$_5582[88]+ _$_5582[99]+ _$_5582[100]+ _$_5582[55];Popup(POPUP_TYPE[_$_5582[3]],bg,{szTitle:br})}function sample2Err(){Popup(POPUP_TYPE[_$_5582[4]],_$_5582[101])}function sample2Alarm(){var bg=_$_5582[102]+ _$_5582[67]+ JSU_PATH_ABOUT_IMG+ _$_5582[103];Popup(POPUP_TYPE[_$_5582[5]],bg)}function sample2Question(bq){var g=Popup(bq,_$_5582[104]);showAnswerQuestion(g)}function sample2Confirm(){var bg=_$_5582[105]+ _$_5582[106]+ _$_5582[107]+ _$_5582[108]+ _$_5582[58]+ _$_5582[109]+ _$_5582[110]+ _$_5582[111]+ _$_5582[62]+ _$_5582[58]+ _$_5582[112]+ _$_5582[113]+ _$_5582[114]+ JSU_PATH_IMG+ _$_5582[115]+ _$_5582[62]+ _$_5582[58]+ _$_5582[116]+ _$_5582[113]+ _$_5582[114]+ JSU_PATH_IMG+ _$_5582[115]+ _$_5582[62]+ _$_5582[58]+ _$_5582[117]+ _$_5582[118]+ _$_5582[114]+ JSU_PATH_IMG+ _$_5582[119]+ _$_5582[62]+ _$_5582[58]+ _$_5582[120]+ _$_5582[121]+ _$_5582[114]+ JSU_PATH_IMG+ _$_5582[122]+ _$_5582[62]+ _$_5582[123];Popup(POPUP_TYPE[_$_5582[6]],bg)}function sample2Choice(){var e=_$_5582[124];var bh=20;var bl=selectGetSelVal(getElementById2(_$_5582[125]));jslog(JSLOG_DEBUG,e+ _$_5582[126]+ bl);var E=selectGetSelVal(getElementById2(_$_5582[125]))== _$_5582[127];var bk=E?_$_5582[128]:_$_5582[129];var c= new Array();for(var f=1;f<= bh;f++){var d={value:f,szText:_$_5582[130]+ f,bSel:false};if(!E&& f== 10){d[_$_5582[64]]= true};if(E&& f<= 5){d[_$_5582[64]]= true};c[_$_5582[131]](d)};var bi=null;var k=_$_5582[66];if(E){var bj=getElementById2(_$_5582[132]);var bi=parseInt(bj[bj[_$_5582[133]]][_$_5582[70]]);k= _$_5582[134]+ _$_5582[135]+ bh+ _$_5582[136]+ _$_5582[137]+ _$_5582[138]+ bi+ _$_5582[139]}else {k= _$_5582[140]};var g=PopupChoice(k,bk,c,{bChoiceMultiSel:E,iChoiceMultiSize:bi});showAnswerChoice(g)}function onchangeChoiceMultiSel(){var E=selectGetSelVal(getElementById2(_$_5582[125]))== _$_5582[127];elementShow(getElementById2(_$_5582[141]),E,_$_5582[142])}function showSampleAbout(){showJsuAbout({szPathAboutImg:JSU_PATH_ABOUT_IMG})}function showSampleChoice(){var bh=40;var bC=getElementById2(_$_5582[143]);var E=(bC[bC[_$_5582[133]]][_$_5582[70]]== _$_5582[144])?false:true;var bk=E?_$_5582[128]:_$_5582[129];var c= new Array();for(var f=1;f<= bh;f++){var d={value:f,szText:_$_5582[130]+ f,bSel:false};if(!E&& f== 10){d[_$_5582[64]]= true};if(E&& f<= 5){d[_$_5582[64]]= true};c[_$_5582[131]](d)};var bi=null;if(E){var bj=getElementById2(_$_5582[132]);var bi=parseInt(bj[bj[_$_5582[133]]][_$_5582[70]])};var k=E?_$_5582[145]:_$_5582[146];var g=PopupChoice(k,bk,c,{fnCallback:callbackChoice,bChoiceMultiSel:E,iChoiceMultiSize:bi})}function sample2Prompt(){var e=_$_5582[147];var bp=selectGetSelVal(getElementById2(_$_5582[148]));var bg=(bp== PROMPT_TYPE[_$_5582[20]])?_$_5582[149]:_$_5582[150];var bo={szPromptType:bp,szPromptLabel:getElementById2(_$_5582[151])[_$_5582[70]],szPromptValue:getElementById2(_$_5582[152])[_$_5582[70]],iPromptMin:parseInt(getElementById2(_$_5582[153])[_$_5582[70]]),iPromptMax:parseInt(getElementById2(_$_5582[154])[_$_5582[70]]),iPromptWidth:parseInt(getElementById2(_$_5582[155])[_$_5582[70]])};jslogObj(JSLOG_DEBUG,e+ _$_5582[156],bo);var g=Popup(POPUP_TYPE[_$_5582[10]],bg,bo);showAnswerPrompt(g)}function onchangeSample3(){var e=_$_5582[157];var D=selectGetSelVal(getElementById2(_$_5582[158]));elementShow(getElementById2(_$_5582[159]),D== _$_5582[160],_$_5582[81])}function sample3Layout(){var bo={bShowImg:selectGetSelVal(getElementById2(_$_5582[161]))== _$_5582[127],bResize:selectGetSelVal(getElementById2(_$_5582[162]))== _$_5582[127],szTitle:getElementById2(_$_5582[163])[_$_5582[70]],iWidth:selectGetSelVal(getElementById2(_$_5582[164]))};var bg=_$_5582[165]+ _$_5582[166]+ _$_5582[167]+ bo[_$_5582[161]]+ _$_5582[52]+ _$_5582[168]+ bo[_$_5582[162]]+ _$_5582[52]+ _$_5582[169]+ bo[_$_5582[164]]+ _$_5582[52]+ _$_5582[170];Popup(POPUP_TYPE[_$_5582[2]],bg,bo)}function sample3(){var D=selectGetSelVal(getElementById2(_$_5582[158]));if(D== _$_5582[160]){return sample3Layout()}else {if(D== _$_5582[171]){return sample3CustomBtn1()}else {if(D== _$_5582[172]){return sample3CustomBtn2()}else {if(D== _$_5582[173]){return sample3CustomBtn3()}}}}}function sample3CustomBtn1(){var bg=_$_5582[174];Popup(POPUP_TYPE[_$_5582[4]],bg,{szConfirmLabel:_$_5582[175]})}function sample3CustomBtn2(){var bg=_$_5582[176]+ _$_5582[177]+ _$_5582[178]+ _$_5582[179]+ _$_5582[180]+ _$_5582[181]+ _$_5582[104];var g=Popup(POPUP_TYPE[_$_5582[7]],bg,{szConfirmLabel:_$_5582[182],iConfirmWidth:200,szNoLabel:_$_5582[183],iNoWidth:200});showAnswerQuestion(g)}function sample3CustomBtn3(){var bg=_$_5582[184]+ _$_5582[185]+ _$_5582[178]+ _$_5582[186]+ _$_5582[187]+ _$_5582[188]+ _$_5582[189]+ _$_5582[181]+ _$_5582[104];var g=Popup(POPUP_TYPE[_$_5582[8]],bg,{szConfirmLabel:_$_5582[190],iConfirmWidth:200,szNoLabel:_$_5582[191],iNoWidth:130,szCancelLabel:_$_5582[192],iCancelWidth:130});showAnswerQuestion(g)}function sample4Video(){var bg=_$_5582[193];Popup(POPUP_TYPE[_$_5582[2]],bg,{bShowImg:false,iWidth:620,position:{at:_$_5582[194]},szTitle:_$_5582[195]})}function sample4(){var D=selectGetSelVal(getElementById2(_$_5582[196]));if(D== _$_5582[197]){return sample4Video()}else {if(D== _$_5582[198]){return showJsuPopupAbout()}}}function onchange_sampleType4(){var e=_$_5582[199];var D=selectGetSelText(getElementById2(_$_5582[196]));jslog(JSLOG_DEBUG,e+ _$_5582[200]+ D);var B=getElementById2(_$_5582[201]);B[_$_5582[26]]= D}var JS1_NOTIFY=_$_5582[202]+ _$_5582[203]+ _$_5582[204];var JS1_QUESTION=_$_5582[202]+ _$_5582[205]+ _$_5582[206]+ _$_5582[207]+ _$_5582[208]+ _$_5582[209]+ _$_5582[210]+ _$_5582[211]+ _$_5582[212]+ _$_5582[213];var JS1_PROMPT=_$_5582[202]+ _$_5582[214]+ _$_5582[215]+ _$_5582[216]+ _$_5582[217]+ _$_5582[218]+ _$_5582[219]+ _$_5582[220]+ _$_5582[221]+ _$_5582[208]+ _$_5582[209]+ _$_5582[211]+ _$_5582[212]+ _$_5582[213];var JS1_CHOICE=_$_5582[202]+ _$_5582[222]+ _$_5582[223]+ _$_5582[224]+ _$_5582[225]+ _$_5582[226]+ _$_5582[227]+ _$_5582[228]+ _$_5582[229]+ _$_5582[230]+ _$_5582[231]+ _$_5582[232]+ _$_5582[233]+ _$_5582[234]+ _$_5582[235]+ _$_5582[236]+ _$_5582[237]+ _$_5582[238]+ _$_5582[239]+ _$_5582[208]+ _$_5582[209]+ _$_5582[211]+ _$_5582[212]+ _$_5582[213];var JS3_OPT=_$_5582[240]+ _$_5582[241]+ _$_5582[242]+ _$_5582[243]+ _$_5582[244]+ _$_5582[245]+ _$_5582[246]+ _$_5582[247]+ _$_5582[248]+ _$_5582[249]+ _$_5582[250]+ _$_5582[249]+ _$_5582[250]+ _$_5582[251]+ _$_5582[252]+ _$_5582[253]+ _$_5582[254]+ _$_5582[255]+ _$_5582[256]+ _$_5582[257]+ _$_5582[258]+ _$_5582[259]+ _$_5582[260]+ _$_5582[261]+ _$_5582[262]+ _$_5582[263];var JS4_VIDEO=_$_5582[264]+ _$_5582[265]+ _$_5582[266]+ _$_5582[267]+ _$_5582[268]+ _$_5582[269]+ _$_5582[270];var JS4_ABOUT=_$_5582[271]+ _$_5582[265]+ _$_5582[272]+ _$_5582[269]+ _$_5582[273];function sample1JS(K){var C=selectGetSelVal(getElementById2(_$_5582[0]));var be=_$_5582[66];if(C== POPUP_TYPE[_$_5582[9]]){be= JS1_CHOICE}else {if(C== POPUP_TYPE[_$_5582[10]]){be= JS1_PROMPT}else {if(C== POPUP_TYPE[_$_5582[7]]|| C== POPUP_TYPE[_$_5582[8]]){be= JS1_QUESTION}else {be= JS1_NOTIFY}}};TipJSFixedClicked(be,K,{szTitle:_$_5582[274]+ C})}function sample3JS(K){TipJSFixedClicked(JS3_OPT,K,{iJSColNum:120,iMaxHeight:300,szTitle:_$_5582[275]})}function sample4JS(K){var D=selectGetSelVal(getElementById2(_$_5582[196]));var bs=selectGetSelText(getElementById2(_$_5582[196]));var be=_$_5582[66];if(D== _$_5582[197]){be= JS4_VIDEO}else {if(D== _$_5582[198]){be= JS4_ABOUT}};TipJSFixedClicked(be,K,{szTitle:_$_5582[276]+ bs})}
+// ==================================================================== CONSTANT
+//var JSLOG_LEV = 31;
+var JSLOG_LEV = 0;
+//var JSLOG_LEV = 3;
+
+
+
+/**
+* Called when jsu is loaded
+*/
+function jsu_loaded(){
+  // [Optional] Init jslog with JSLOG_LEV 
+  // jslog_init(JSLOG_LEV);
+  sampleInit();  
+}
+
+function sampleInit(){
+  // Populate popupType select
+  var arSelectId = ["popupType1","popupType2"];
+  var arPopupType = [POPUP_TYPE.INFO , POPUP_TYPE.WARN , POPUP_TYPE.ERR , POPUP_TYPE.ALARM ,POPUP_TYPE.CONFIRM, 
+                     POPUP_TYPE.QUESTION , POPUP_TYPE.QUESTION_3 , POPUP_TYPE.CHOICE , POPUP_TYPE.PROMPT ];
+  for (var i=0; i< arSelectId.length; i++){
+    var id = arSelectId[i];
+    var select = getElementById2 (id,true);
+    for (var k=0; k< arPopupType.length; k++){
+      var popupType = arPopupType[k];
+      appendOptionLast (select,popupType,popupType);
+    }  
+  }
+  onchangeSample2(); // simulate to init
+  onchangeSample3(); // simulate to init
+}
+
+/* ============================================================================
+ *             SAMPLE_1
+ ============================================================================ */
+
+
+/**
+ * Text Popup: Choice
+ */
+function sample1Choice(){
+  // 1) Show Popup 
+  var objRet = PopupChoice (//Messages
+      "Please Choose a Vote for Popup API\n",  "Popup VOTE: ",
+      // arChoice: "Very Good" is pre-selected
+      [{value:1, szText:"1 - Not Good", bSel:false},
+       {value:2, szText:"2 - Good", bSel:false},
+       {value:3, szText:"3 - Very Good", bSel:true},
+       {value:4, szText:"4 - Excellent", bSel:false},
+      ]);
+  // 2) Show The answer to choice: item chosen and Button clicked 
+  showAnswerChoice (objRet);
+}
+
+/**
+ * Text Popup: Prompt
+ */
+function sample1Prompt(){
+  // 1) Show Popup 
+  var objRet = Popup (POPUP_TYPE.PROMPT,
+      "Insert a VOTE [1..10] in the field below\n(You can insert a  Value out of Range [1..10] to see Validation Features)\n\n",
+      // objOpt Option: PromptLabel, validate
+     { szPromptLabel: "VOTE [1..10]: ",
+       // Validate Option: NUMBER must be in range [1..10]
+       szPromptType: PROMPT_TYPE.NUMBER,  iPromptMin:1,  iPromptMax: 10,iPromptWidth:50}
+      );
+  // 2) Show The answer to question (Prompt inserted and Button clicked by the user) 
+  showAnswerPrompt(objRet); 
+}
+
+/**
+ * Text Popup: Question
+ * @param PopupType POPUP_TYPE.QUESTION or POPUP_TYPE.QUESTION_3
+ */
+function sample1Question(PopupType){
+  // 1) Show Popup 
+  // PopupType = POPUP_TYPE.QUESTION (2 Buttons) or POPUP_TYPE.QUESTION_3 (3 Buttons)
+  var objRet = Popup (PopupType,"Do you like this sample?");
+  // 2) Show The answer to question (the Button clicked by the user) 
+  showAnswerQuestion (objRet); 
+
+}
+
+
+
+
+/**
+ * Text Popup: Notify
+ * @param PopupType   POPUP_TYPE.INFO POPUP_TYPE.CONFIRM  POPUP_TYPE.ERR  POPUP_TYPE.ALARM  POPUP_TYPE.WARN
+ */
+function sample1Notify(PopupType){
+  // PopupType:   POPUP_TYPE.[INFO, CONFIRM, WARN, ERR, ALARM]
+  Popup (PopupType,"This is an example of Message\nThis is the second Line");
+}
+
+
+
+/**
+ * SAMPLE_1: Text Popup
+ */
+function sample1(){
+  var szAlertType =  selectGetSelVal(getElementById2('popupType1'));
+  if (szAlertType == POPUP_TYPE.CHOICE){
+    return sample1Choice();
+  }else if (szAlertType == POPUP_TYPE.PROMPT){
+    return sample1Prompt();
+  }else if (szAlertType == POPUP_TYPE.QUESTION || szAlertType == POPUP_TYPE.QUESTION_3){
+    return sample1Question(szAlertType);
+  }else {
+    return sample1Notify(szAlertType);
+  }  
+}
+
+/**
+ * Align labelSample1 to Type Sample1 selected
+ */
+function onchange_sampleType1(){
+	var Fn = "[onchange_sampleType1()] ";
+	
+  var szAlertType =  selectGetSelText(getElementById2('popupType1'));
+	jslog (JSLOG_DEBUG,Fn + "szAlertType=" + szAlertType);
+  var label = getElementById2('labelSample1');
+  label.innerHTML = "POPUP_TYPE=" + szAlertType;
+}
+
+/* ============================================================================
+ *             Show answer question (used by SAMPLE_1, SAMPLE_2)
+ ============================================================================ */
+
+/**
+ * Show the answer to Popup Question
+ * @param objRet
+ */
+function showAnswerQuestion(objRet){
+  var retBtn   = objRet.retBtn; 
+  if (retBtn   == POPUP_BTN.CONFIRM){
+    Popup(POPUP_TYPE.CONFIRM,'<label class="PopupGood">Your answer was YES</label>',  {szTitle: "GOOD ANSWER!"});
+  }else if (retBtn   == POPUP_BTN.NO){
+    Popup(POPUP_TYPE.ERR,'<label class="PopupErr">Your answer was NO</label>',  {szTitle: "WHY DON'T WOUT LIKE IT?"});
+  }else if (retBtn   == POPUP_BTN.CANCEL){
+    Popup(POPUP_TYPE.INFO,'<label class="PopupWarn">You have clicked CANCEL Button</label>');
+  }else if (retBtn   == POPUP_BTN.CLOSE){
+    Popup(POPUP_TYPE.INFO,'You have close the Popup without any Choice');
+  }
+}
+
+
+/**
+ * Show the answer to Popup Prompt
+ * @param objRet
+ */
+function showAnswerPrompt (objRet){
+  var Fn = "[PopupSample.js showAnswerPrompt] ";
+  jslogObj (JSLOG_DEBUG,Fn + "objRet",objRet);
+  var retBtn   = objRet.retBtn; 
+  if (retBtn   == POPUP_BTN.CONFIRM){
+    Popup(POPUP_TYPE.CONFIRM,'You have inserted: <b>' + objRet.promptValue + ' </b>'); 
+  }else if (retBtn   == POPUP_BTN.CANCEL){
+    Popup(POPUP_TYPE.INFO,'You have clicked the <b>Cancel</b> Button');
+  }else if (retBtn   == POPUP_BTN.CLOSE){
+    Popup(POPUP_TYPE.INFO,'You have close the Window <label class="PopupWarning">without any Choice</label> with one of the following cases:<ul type="square">' + 
+      '  <li>Clicking the <b>X</b> on the Top Left Corner of the Window</li>' +
+      '  <li>Clicking <b>ESC</b></li>' +
+      '</ul><BR/>');
+  }
+}  
+
+/**
+ * Callback for Choice
+ * Show the answer to Choice
+ * @param objRet
+ */
+function showAnswerChoice(objRet){
+  var Fn = "[PopupSample.js showAnswerChoice] ";
+  jslogObj (JSLOG_TEST,Fn + "objRet",objRet);
+  jslogObj (JSLOG_DEBUG,"objRet", objRet,true);
+  // Example of objRet, if user select 2=Good and click OK
+  // objRet: {
+  //   "retBtn":1,
+  //   "choiceValue":"2",
+  //   "choiceText":"2 - Good",
+  //   "arChoice":[{"value":"1","szText":"1 - Not Good","bSel":false},
+  //               {"value":"2","szText":"2 - Good","bSel":true},
+  //               {"value":"3","szText":"3 - Very Good","bSel":false},
+  //               {"value":"4","szText":"4 - Excellent","bSel":false}]}  
+  var retBtn   = objRet.retBtn; 
+  if (retBtn   == POPUP_BTN.CONFIRM){
+    var szMsgHtml = 'You have clicked the <b>OK</b> Button and you have selected the following items:<ul type="square">' + 
+      '  <li><b>ChoiceValue:</b> ' +  objRet.choiceValue+ '</li>' +
+      '  <li><b>ChoiceText:</b> ' +  objRet.choiceText + '</li>' +
+      '</ul>';
+    // add the table with the detail
+    szMsgHtml += '<table class="Popup" width="100%">' +
+    '  <th class="PopupTitle" colspan="3">DETAILS OF YOUR SELECTION</th>' +   
+    '  <tr class="Popup">' +
+    '    <td class="PopupHea" width="20%">VALUE</th>' +
+    '    <td class="PopupHea" width="60%">TEXT</th>' +
+    '    <td class="PopupHea" width="20%">SELECTED</th>' +
+    '  </tr>';
+    var arChoice = objRet.arChoice;
+    for (var i=0; i<arChoice.length; i++){
+      var arItem = arChoice[i];
+      var szClassSel = arItem.bSel ? "PopupGood" : ""; 
+      var szTdSel = arItem.bSel ?   '<img src="' + JSU_PATH_IMG +  'PopupConfirm.png" width="14" height="14">' : '';
+      var szTr =  '  <tr class="Popup">' +
+        '    <td class="PopupCenter"><b>' + arItem.value  +  '</b></td>' +
+        '    <td class="' + szClassSel + ' PopupCenter">' + arItem.szText  +  '</td>' +
+        '    <td class="PopupCenter">' + szTdSel + '</td>' +
+        '  </tr>'; 
+      szMsgHtml += szTr;
+    }
+    szMsgHtml += "</table><BR/>";
+    Popup(POPUP_TYPE.INFO,szMsgHtml, 
+        {szTitle: "CHOICE DETAILS", iWidth:600, iHeight: 600, bShowImg: false});
+  }else if (retBtn   == POPUP_BTN.CANCEL){
+    Popup(POPUP_TYPE.INFO,'You have clicked the <b>Cancel</b> Button');
+  }else if (retBtn   == POPUP_BTN.CLOSE){
+    Popup(POPUP_TYPE.INFO,'You have close the Window <label class="PopupWarning">without any Choice</label> with one of the following cases:<ul type="square">' + 
+        '  <li>Clicking the <b>X</b> on the Top Left Corner of the Window</li>' +
+        '  <li>Clicking <b>ESC</b></li>' +
+        '</ul><BR/>');
+  }
+}
+
+
+
+/* ============================================================================
+ *             SAMPLE_2
+ ============================================================================ */
+
+
+function onchangeSample2(){
+  var Fn="[onchangeSample2] ";
+  var szAlertType =  selectGetSelVal(getElementById2('popupType2'));
+  jslog (JSLOG_DEBUG,"szAlertType=" + szAlertType);
+  elementShow (getElementById2("optChoice"),szAlertType == POPUP_TYPE.CHOICE,"block"); 
+  elementShow (getElementById2("optPrompt"),szAlertType == POPUP_TYPE.PROMPT,"block"); 
+    
+}
+
+
+/**
+ * SAMPLE_2: HTML Popup
+ */
+function sample2(){
+  var szAlertType =  selectGetSelVal(getElementById2('popupType2'));
+  if (szAlertType == POPUP_TYPE.INFO){
+    return sample2Info();
+  }else if (szAlertType == POPUP_TYPE.WARN){
+    return sample2Warn("");
+  }else if (szAlertType == POPUP_TYPE.ERR){
+    return sample2Err();
+  }else if (szAlertType == POPUP_TYPE.CONFIRM){
+    return sample2Confirm();
+  }else if (szAlertType == POPUP_TYPE.ALARM){
+    return sample2Alarm();
+  }else if (szAlertType == POPUP_TYPE.CHOICE){
+    return sample2Choice();
+  }else if (szAlertType == POPUP_TYPE.PROMPT){
+    return sample2Prompt();
+  }else if (szAlertType == POPUP_TYPE.QUESTION || szAlertType == POPUP_TYPE.QUESTION_3){
+    return sample2Question(szAlertType);
+  }
+}
+
+function sample2Info(){
+  var szMsg = 'This is an Information with <b>some part bold</b>, <i>some part Italic</i>,...<BR/><u>This is the Line 2 that is underlined</u><BR/>' +
+    '<label class="PopupGood">This is the  line 3 in bold green (to enphasize <i>Good Msg</i>)</label><BR/>' +
+  '<label class="PopupWarning">This is the  line 4 with Yellow Background (to enphasize <i>Warning Msg</i>)</label><BR/>' +
+  '<label class="PopupError">This is the  line 5 in Bold Red (to enphasize <i>Error Msg</i>)</label><BR/><BR/>' +
+    'You can try different Type of POPUP. The <b><u><i>Standard</i> POPUP</u></b> are:' +
+  '<ul type="square">' +
+    '<li><b>POPUP_TYPE.INFO</b> for Info</li>' +
+    '<li><b>POPUP_TYPE.WARN</b> for Warning</li>' +
+    '<li><b>POPUP_TYPE.ERR</b> for Error</li>' +
+    '<li><b>POPUP_TYPE.ALARM</b> for Alarm</li>' +
+    '<li><b>POPUP_TYPE.CONFIRM</b> for Confirmation</li>' +
+    '<li><b>POPUP_TYPE.QUESTION</b> to ask a Question with 2 Buttons</li>' +
+    '<li><b>POPUP_TYPE.QUESTION_3</b> to ask a Question with 3 Buttons</li>' +
+    '<li><b>POPUP_TYPE.PROMPT</b> to Prompt for a value</li>' +
+    '</ul>';
+  Popup(POPUP_TYPE.INFO,szMsg);
+}
+
+/*
+ *    @param szTitle {String} if it is different from "" or null it is set as Title into Popup, else Default is used (WARNING in this case)
+ */
+function sample2Warn(szTitle){
+   var szMsg = 'There were 2 Warnings and we can enphasize them using Popup.css class <b>PopupWarning</b><BR/><BR/>' +
+       '<b>WARNING LIST:</b>' +
+       '<ul type="square">' +
+        '<li><label class="PopupWarning">WARNING CODE 001234:</label> This an Example of a long phrase that describe this Warning. This phrase will be automatically splitted by Popup into more lines: we do not have to worrie about inserting newline into the description.</li> ' +
+        '<li><label class="PopupWarning">WARNING CODE 1234568:</label> This an Example of this Warning Description</li>' +
+      '</ul>';
+    Popup(POPUP_TYPE.WARN,szMsg,{szTitle:szTitle});
+}
+
+function sample2Err(){
+  Popup(POPUP_TYPE.ERR,'<label class="PopupError">This is an ERROR!</label><BR/>But dont worrie it is only an example<BR/><label class="PopupGood">Everything is still working properly :o)</label>');
+}
+
+
+function sample2Alarm(){
+  var szMsg =  '<label class="PopupError">The CPU temperature is critically hight!!!</label>' +  
+        '<img src="' +  JSU_PATH_ABOUT_IMG +  'ComputerFire.gif" width="70" height="70"  />';
+  Popup(POPUP_TYPE.ALARM,szMsg );
+}
+
+
+
+/*
+ * Question with 2 or 3 Buttons
+ */
+function sample2Question(szPopupType){
+  //1) Show Popup
+  var objRet = Popup(szPopupType,'Do you like <b>Popup API</b>?');
+  // 2) show answer to question
+  showAnswerQuestion (objRet);
+  
+}
+
+
+/**
+ * Show a POPUP_TYPE.CONFIRM with a table with various images (The Path of images is relative to Popup.html)
+ * 
+ */
+function sample2Confirm(){
+  // NOTE: the image Path are relative to Popup.html Path
+  var szMsg = 'Example of Confirmation: <label class="PopupGood">All the Test have been Completed.</label><BR/><BR/>' +
+    'Follow an Example of TABLE that can be used to display the Abstract of some TESTS:<BR/><BR/>' +
+    '<table class="Popup" width="95%">' +
+    '  <th class="PopupTitle" colspan="3">EXAMPLE OF TEST RESULTS</th>' +   
+    '  <tr class="Popup">' +
+    '    <td class="PopupHea" width="30%">TEST</th>' +
+    '    <td class="PopupHea" width="30%">RESULT</th>' +
+    '    <td class="PopupHea" width="40%">STATE</th>' +
+    '  </tr>' +
+    '  <tr class="Popup">' +
+    '    <td class="PopupLeft"><b>Test 1</b></td>' +
+    '    <td class="PopupGood PopupCenter">OK</td>' +
+    '    <td class="PopupCenter"><img src="' + JSU_PATH_IMG + 'PopupOk.jpg" width="20" height="20"></td>' +
+    '  </tr>' +
+    '  <tr class="Popup">' +
+    '    <td class="PopupLeft"><b>Test 2</b></td>' +
+    '    <td class="PopupGood PopupCenter">OK</td>' +
+    '    <td class="PopupCenter"><img src="' + JSU_PATH_IMG + 'PopupOk.jpg" width="20" height="20"></td>' +
+    '  </tr>' +
+    '  <tr class="Popup">' +
+    '    <td class="PopupLeft"><b>Test 3</b></td>' +
+    '    <td class="PopupWarning PopupCenter">WARNING</td>' +
+    '    <td class="PopupCenter"><img src="' + JSU_PATH_IMG + 'PopupWarning.png" width="20" height="20"></td>' +
+    '  </tr>' +
+    '  <tr class="Popup">' +
+    '    <td class="PopupLeft"><b>Test 4</b></td>' +
+    '    <td class="PopupError PopupCenter">ERROR</td>' +
+    '    <td class="PopupCenter"><img src="' + JSU_PATH_IMG + 'PopupError.png" width="20" height="20"></td>' +
+    '  </tr>' +
+    '<table><BR/>';
+  Popup(POPUP_TYPE.CONFIRM,szMsg);
+}
+
+
+/**
+ * Show PopupChoice with the option set by User
+ */
+function sample2Choice(){
+  var Fn="[sample2Choice] ";
+  var CHOICE_NUM = 20;
+  
+  // Prepare szMsgHtml
+  var szSel =  selectGetSelVal(getElementById2('selectChoiceMultiSel'));
+  jslog (JSLOG_DEBUG, Fn + "szSel=" + szSel);
+  var bChoiceMultiSel = selectGetSelVal(getElementById2('selectChoiceMultiSel')) == "TRUE";
+  var szChoiceLabel = bChoiceMultiSel ? "<b>Select 0..N FIELDS</b><BR/>" :  "<b>Select only One FIELD</b>";
+  // Prepare an Example of arChoice
+  var arChoice  = new Array();
+  for (var i=1;i<=CHOICE_NUM;i++){
+    var arItem = { 
+           value:i, 
+           szText:"This is an Example of the Item " + i, 
+           bSel: false
+           };
+    if (!bChoiceMultiSel && i == 10){
+      arItem.bSel = true; // Selected
+    }    
+    if (bChoiceMultiSel && i <=5){
+      arItem.bSel = true; // Selected
+    }    
+    arChoice.push (arItem);
+  }
+  var iChoiceMultiSize = null;
+  var szMsgHtml = "";
+  if (bChoiceMultiSel){
+    // Get the optional Size
+    var selectChoiceSize = getElementById2('selectChoiceSize');
+    var iChoiceMultiSize = parseInt(selectChoiceSize[selectChoiceSize.selectedIndex].value);
+    szMsgHtml = 'Example of <b>Multi Selection Choice</b> with:<ul>' + 
+        '<li>' + CHOICE_NUM + ' items </li>' + 
+        '<li>First 5 Items pre-selected</li>' +
+        '<li>Visible Items=' + iChoiceMultiSize +'</li></ul><BR/>';
+  }else{
+    szMsgHtml = "Example of <b>Single Selection Choice</b> with Item 10 pre-selected.<BR/><BR/>"; 
+  }
+  // 1) Show Popup
+  var objRet = PopupChoice (szMsgHtml,szChoiceLabel,arChoice,
+      { bChoiceMultiSel: bChoiceMultiSel,
+       iChoiceMultiSize: iChoiceMultiSize
+      });
+  // 2) Show The answer to choice: item chosen and Button clicked
+  showAnswerChoice(objRet);
+}
+
+
+/**
+ * Show Hide divChoiceMultiSel depending on selectChoiceType  
+ */
+function onchangeChoiceMultiSel(){
+  // Get the bMultiSize option selected
+  var bChoiceMultiSel = selectGetSelVal(getElementById2('selectChoiceMultiSel')) == "TRUE";
+  elementShow (getElementById2('divChoiceSize'),bChoiceMultiSel,'inline');
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function showSampleAbout(){
+  
+  showJsuAbout({szPathAboutImg: JSU_PATH_ABOUT_IMG});
+}
+
+
+
+/**
+ * Show PopupChoice with the option set by User
+ */
+function showSampleChoice(){
+  var CHOICE_NUM = 40;
+  
+  // Get the bMultiSize option selected
+  var selectChoiceType = getElementById2('selectChoiceType');
+  var bChoiceMultiSel = (selectChoiceType[selectChoiceType.selectedIndex].value == "SINGLE") ? false : true;
+  var szChoiceLabel = bChoiceMultiSel ? "<b>Select 0..N FIELDS</b><BR/>" :  "<b>Select only One FIELD</b>";
+  // Prepare an Example of arChoice
+  var arChoice  = new Array();
+  for (var i=1;i<=CHOICE_NUM;i++){
+    var arItem = { 
+           value:i, 
+           szText:"This is an Example of the Item " + i, 
+           bSel: false
+           };
+    if (!bChoiceMultiSel && i == 10){
+      arItem.bSel = true; // Selected
+    }    
+    if (bChoiceMultiSel && i <=5){
+      arItem.bSel = true; // Selected
+    }    
+    arChoice.push (arItem);
+  }
+  var iChoiceMultiSize = null;
+  if (bChoiceMultiSel){
+    // Get the optional Size
+    var selectChoiceSize = getElementById2('selectChoiceSize');
+    var iChoiceMultiSize = parseInt(selectChoiceSize[selectChoiceSize.selectedIndex].value);
+  }
+  var szMsgHtml = bChoiceMultiSel ? "Example of <b>Multi Selection Choice</b> with First 5 Items pre-selected." 
+                  : "Example of <b>Single Selection Choice</b> with Item 10 pre-selected."; 
+  
+  var objRet = PopupChoice (szMsgHtml,szChoiceLabel,arChoice,
+      {fnCallback:callbackChoice,
+       bChoiceMultiSel: bChoiceMultiSel,
+       iChoiceMultiSize: iChoiceMultiSize
+      });
+}
+
+
+
+/**
+ * Show Popup PROMPT with the option set by User
+ */
+function sample2Prompt(){
+  var Fn = "[sample2Prompt] ";
+  var szPromptType = selectGetSelVal(getElementById2("szPromptType"));
+  var szMsg = (szPromptType == PROMPT_TYPE.NUMBER) ?
+     "Please Insert a <B>Number</b>" :  
+    "Please Insert a <B>Text</b>";  
+  var objOpt ={
+    szPromptType: szPromptType,
+    szPromptLabel: getElementById2 ("szPromptLabel").value,
+    szPromptValue: getElementById2 ("szPromptValue").value,
+    iPromptMin:  parseInt (getElementById2("iPromptMin").value),
+    iPromptMax: parseInt (getElementById2 ("iPromptMax").value),
+    iPromptWidth: parseInt(getElementById2  ("iPromptWidth").value)
+  };  
+  jslogObj (JSLOG_DEBUG,Fn + "objOpt", objOpt );
+  var objRet = Popup (POPUP_TYPE.PROMPT,szMsg,objOpt);
+  showAnswerPrompt (objRet);
+
+}
+
+
+/* ============================================================================
+ *             SAMPLE_3
+ ============================================================================ */
+
+
+function onchangeSample3(){
+  var Fn="[onchangeSample3] ";
+  var szType =  selectGetSelVal(getElementById2('type3'));
+  elementShow (getElementById2("optLayout"),szType == "LAYOUT","block"); 
+    
+}
+
+/**
+ * Show Popup Info with the option set by User
+ */
+function sample3Layout(){
+  // var Fn = "[sample3Layout] ";
+  var objOpt ={
+      bShowImg: selectGetSelVal (getElementById2("bShowImg")) == "TRUE",
+      bResize: selectGetSelVal (getElementById2("bResize")) == "TRUE",
+      szTitle: getElementById2("szTitle").value,
+      iWidth: selectGetSelVal (getElementById2("iWidth")) 
+    };  
+  
+  var szMsg = 'Popup with a <b>CUSTOM LAYOUT</b>' +
+    '  <ul type="square">' +
+    '   <li><b>bShowImg: </b>' +  objOpt.bShowImg +  '</li>' +
+    '   <li><b>bResize: </b>' +  objOpt.bResize +  '</li>' +
+    '   <li><b>iWidth: </b>' +  objOpt.iWidth+  '</li>' +
+    '  </ul>';
+  Popup(POPUP_TYPE.INFO,szMsg, objOpt);
+
+}
+
+
+
+/**
+ * SAMPLE_3: HTML Popup
+ */
+function sample3(){
+  var szType =  selectGetSelVal(getElementById2('type3'));
+  if (szType == "LAYOUT"){
+    return sample3Layout();
+  }else if (szType == "1BTN"){
+    return sample3CustomBtn1();
+  }else if (szType == "2BTN"){
+    return sample3CustomBtn2();
+  }else if (szType == "3BTN"){
+    return sample3CustomBtn3();
+  }
+}
+
+
+/*
+ * Custom Btn Confirm = "CONTINUE"  
+ */
+function sample3CustomBtn1(){
+  var szMsg = '<b>1 Custom Button</b><BR/><BR/>Popup Option:<ul><li><b>szConfirmLabel</b>: "CONTINUE"</li></ul>';
+  Popup(POPUP_TYPE.ERR,szMsg,{szConfirmLabel: "CONTINUE"});
+}
+
+
+/*
+ * 2 Custom Btn, change also Btn Width  
+ */
+function sample3CustomBtn2(){
+  var szMsg = '<b>2 Custom Button</b><BR/><BR/>Popup Option:<ul>' +
+   '<li><b>szConfirmLabel</b>: "YES I Like it!"</li>' +
+   '<li><b>iConfirmWidth</b>: 200</li>' +
+   '<li><b>szNoLabel</b>: "NO I don\'t LIKE IT"</li>' +
+   '<li><b>iNoWidth</b>: 200</li>' +
+   '</ul></BR>' +
+   'Do you like <b>Popup API</b>?';
+  var objRet = Popup(POPUP_TYPE.QUESTION,szMsg,
+      {szConfirmLabel: "YES I Like it!",iConfirmWidth:200,
+       szNoLabel: "NO I don't LIKE IT",iNoWidth:200 }
+        );
+  showAnswerQuestion (objRet);
+}
+
+/*
+ * 3 Custom Btn, change also Width  
+ */
+function sample3CustomBtn3(){
+  var szMsg = '<b>3 Custom Button</b><BR/><BR/>Popup Option:<ul>' +
+  '<li><b>szConfirmLabel</b>: "YES It is Very Interesting"</li>' +
+  '<li><b>iConfirmWidth</b>: 200</li>' +
+  '<li><b>szNoLabel</b>: "NOT Very Much"</li>' +
+  '<li><b>iNoWidth</b>: 130</li>' +
+  '<li><b>szCancelLabel</b>: "INDIFFERENT"</li>' +
+  '<li><b>iCancelWidth</b>: 130</li>' +
+  '</ul></BR>' +
+  'Do you like <b>Popup API</b>?';
+  var objRet = Popup(POPUP_TYPE.QUESTION_3, szMsg,
+      {szConfirmLabel: "YES It is Very Interesting",iConfirmWidth:200,
+        szNoLabel: "NOT Very Much",iNoWidth:130, 
+        szCancelLabel: "INDIFFERENT",iCancelWidth:130}
+  );
+  showAnswerQuestion (objRet);
+  
+}
+
+
+
+/* ============================================================================
+ *             SAMPLE_4
+ ============================================================================ */
+
+/*
+ * Popup with a Video  
+ */
+function sample4Video(){
+	var szMsg = '<iframe width="600" height="500" src="https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1" frameborder="0" allowfullscreen></iframe>'; 
+  // Show Popup with Video   
+  Popup(POPUP_TYPE.INFO, szMsg,
+      // objOpt
+      {bShowImg:false,iWidth:620,position:{at: "top"}, szTitle: "Video Example"});
+  
+}
+
+
+
+
+/**
+ * SAMPLE_4: HTML Popup
+ */
+function sample4(){
+  var szType =  selectGetSelVal(getElementById2('type4'));
+  if (szType == "VIDEO"){
+    return sample4Video();
+  }else if (szType == "ABOUT"){
+    return showJsuPopupAbout();
+  }
+}
+
+/**
+ * Align labelSample4 to Type Sample4 selected
+ */
+function onchange_sampleType4(){
+	var Fn = "[onchange_sampleType4()] ";
+	
+  var szType =  selectGetSelText(getElementById2('type4'));
+	jslog (JSLOG_DEBUG,Fn + "szType=" + szType);
+  var label = getElementById2('labelSample4');
+  label.innerHTML =  szType;
+}
+
+
+
+
+//===================================================================================================
+//  BELOW CODE is not strictly related to the Sort feature, but it is ONLY Related to JS Code 
+//===========================================================================================
+
+
+
+var JS1_NOTIFY= '// 1) Show Popup \n' +
+'//PopupType:   POPUP_TYPE.INFO, .CONFIRM, .WARN, .ERR, .ALARM] \n' +
+'Popup (PopupType,"This is an example of Message\\nThis is the second Line"); ';
+
+var JS1_QUESTION= '// 1) Show Popup \n' +
+'// PopupType = POPUP_TYPE.QUESTION (2 Buttons) or POPUP_TYPE.QUESTION_3 (3 Buttons) \n'+
+'var objRet = Popup (PopupType,"Do you like this sample?") \n'+
+'// 2) manage the Popup answer, returned into objRet - example: objRet= {"retBtn": "NO"}\n' + 
+'  var retBtn   = objRet.retBtn; \n' +
+'  if (retBtn   == POPUP_BTN.CONFIRM){  // Popup Closed clicking OK \n' + 
+'  }else if (retBtn   == POPUP_BTN.NO){ // Popup Closed clicking NO \n' + 
+'  }else if (retBtn   == POPUP_BTN.CANCEL){  // Popup Closed clicking CANCEL \n' + 
+'  }else if (retBtn   == POPUP_BTN.CLOSE){  // Popup Closed clicking X or ESC \n' +
+'  ...';
+
+
+var JS1_PROMPT= '// 1) Show Popup \n' +
+'Popup (POPUP_TYPE.PROMPT, \n' +
+'  "Insert a VOTE [1..10] in the field below\\n(You can insert a  Value out of Range [1..10] to see Validation Features)\\n\\n", \n' +
+'  // objOpt Option: PromptLabel, validate \n' +
+'  { szPromptLabel: "VOTE [1..10]: ", \n' +
+'     // Validate Option: NUMBER must be in range [1..10] \n' +
+'     szPromptType: PROMPT_TYPE.NUMBER,  iPromptMin:1,  iPromptMax: 10,iPromptWidth:50, \n' +
+'   }); \n' +
+'  // Example of objRet, if user insert 9 and click OK: objRet= {"retBtn": "CONFIRM", "promptValue": "9"} \n' +
+'  var retBtn   = objRet.retBtn; \n' +
+'  if (retBtn   == POPUP_BTN.CONFIRM){  // Popup Closed clicking OK \n' + 
+'  }else if (retBtn   == POPUP_BTN.CANCEL){  // Popup Closed clicking CANCEL \n' + 
+'  }else if (retBtn   == POPUP_BTN.CLOSE){  // Popup Closed clicking X or ESC \n' +
+'  ...';
+
+
+var JS1_CHOICE= '// 1) Show Popup \n' +
+'var objRet = PopupChoice ( //Messages \n' +
+'  "Please Choose a Vote for Popup API",  "Popup VOTE: ", \n' +
+'  // arChoice: "Very Good" is pre-selected  \n' +
+'  [{value:1, szText:"1 - Not Good", bSel:false},  \n' +
+'     {value:2, szText:"2 - Good", bSel:false}, \n' +
+'     {value:3, szText:"3 - Very Good", bSel:true}, \n' +
+'     {value:4, szText:"4 - Excellent", bSel:false}, \n' +
+'  ]); \n' +
+'  // Example of objRet, if user select 2=Good and click OK: \n' +
+'  // objRet={\n' +
+'  //   "retBtn":"CONFIRM",\n' +
+'  //   "choiceValue":"2",\n' +
+'  //   "choiceText":"2 - Good",\n' +
+'  //   "arChoice":[{"value":"1","szText":"1 - Not Good","bSel":false},\n' +
+'  //               {"value":"2","szText":"2 - Good","bSel":true},\n' +
+'  //               {"value":"3","szText":"3 - Very Good","bSel":false}\n' +
+'  //               {"value":"4","szText":"4 - Excellent","bSel":false}]}\n' +  
+'// 2) manage the Popup answer, returned into objRet \n' + 
+'  var retBtn   = objRet.retBtn; \n' +
+'  if (retBtn   == POPUP_BTN.CONFIRM){  // Popup Closed clicking OK \n' + 
+'  }else if (retBtn   == POPUP_BTN.CANCEL){  // Popup Closed clicking CANCEL \n' + 
+'  }else if (retBtn   == POPUP_BTN.CLOSE){  // Popup Closed clicking X or ESC \n' +
+'  ...';
+
+
+var JS3_OPT =  
+'function Popup(szPopupType, szMsgHtml,objOpt){ \n' +
+' ........\n' +
+'} \n' +
+'// objOpt can be used to set OptionalParameter: \n' +
+' /* @param objOpt    [Object]}    Optional Object to change default Option:\n' +
+' *    szTitle:    {String}      change default Title\n' +
+' *    iWidth:  {Number}      Optional PopupWidth: if it passed it is used - Else DEfault is used\n' +
+' *    szConfirmLabel:  {String} Label of Confirm Button \n' +
+' *    iConfirmWidth:   {Number}  Width of Confirm Button \n' +
+' *    szNoLabel:  {String}      Label of No Button \n' +
+' *    iNoWidth:   {Number}      Width of No Button \n' +
+' *    szNoLabel:  {String}      Label of No Button \n' +
+' *    iNoWidth:   {Number}      Width of No Button \n' +
+' *    bShowImg:    {Boolean}     true to show Image  (Default=false)\n' +
+' *    bResize:    {Boolean}     true to allow Resize Dialog  (Default=true)\n' +
+' *    bCloseOnEscape: {Boolean}  Default true   \n' +
+' *    ------------------------------------------ ONLY For POPUP_TYPE.CHOICE:\n' + 
+' *    bChoiceMultiSel: {Boolean}  true if MultiSelect,else single select. Default false\n' +
+' *    iChoiceMultiSize: {Number}  if bChoiceMultiSel=true:  size (Num item) to display without Scrollbar\n' +
+' *    ------------------------------------------ ONLY For POPUP_TYPE.PROMPT: \n' +
+' *    szPromptType: {String}  PROMPT_TYPE.NUMBER  PROMPT_TYPE.STRING default=PROMPT_TYPE.STRING\n' +       
+' *    szPromptLabel: {String}  Label in Front of Prompt  \n' +
+' *    szPromptValue: {String}  Default Value to set       \n' +
+' *    iPromptWidth: {Number}  Width (px) of the Prompt Item       \n' +
+' *    iPromptMin: {Number}   Min (MinValue for PROMPT_TYPE.NUMBER, MinLen for PROMPT_TYPE.STRING)\n' +          
+' *    iPromptMax: {Number}   Max (MaxValue for PROMPT_TYPE.NUMBER, MaxLen for PROMPT_TYPE.STRING)';          
+
+var JS4_VIDEO= '// 1) Show Popup with Video \n' +
+'Popup(POPUP_TYPE.INFO, \n' +
+'   // szMsg = iframe with Video URL \n' + 
+'   //    Example: <iframe width="600" height="500" src="https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1" frameborder="0" allowfullscreen></iframe> \n' + 
+'   szMsg,\n' +
+'   // objOpt \n' +
+'   {bShowImg:false,iWidth:620, szTitle: "Video Example"}); \n';
+
+
+var JS4_ABOUT= '// 1) Show Popup with About\n' +
+'Popup(POPUP_TYPE.INFO, \n' +
+'   szMsg, // szMsg = HTML with About (see about.js for details) \n' + 
+'   // objOpt \n' +
+'   {bShowImg:false,iWidth:1100, szTitle: "JSU ABOUT"}); \n';
+
+
+/**
+ * Show JS Code Hightlighted for Sample1
+ * @param event
+ * @returns
+ */
+function sample1JS(event){
+  // Get the szAlertType set by User 
+  var szAlertType =  selectGetSelVal(getElementById2('popupType1'));
+  var szTip="";
+  
+  if (szAlertType == POPUP_TYPE.CHOICE){
+    szTip = JS1_CHOICE;
+  }else if (szAlertType == POPUP_TYPE.PROMPT){
+    szTip = JS1_PROMPT;
+  }else if (szAlertType == POPUP_TYPE.QUESTION || szAlertType == POPUP_TYPE.QUESTION_3){
+    szTip = JS1_QUESTION;
+  }else {
+    szTip = JS1_NOTIFY;
+  }  
+  TipJSFixedClicked(szTip,event,{szTitle:"JS Source Code - POPUP_TYPE=" + szAlertType});
+  
+}
+
+
+/**
+ * Show JS Code Hightlighted for Sample3
+ * @param event
+ * @returns
+ */
+function sample3JS(event){
+  TipJSFixedClicked(JS3_OPT,event,{iJSColNum:120, iMaxHeight:300,szTitle:"JS Source Code - Popup Option" });
+}
+
+
+/**
+ * Show JS Code Hightlighted for Sample4
+ * @param event
+ * @returns
+ */
+function sample4JS(event){
+  // Get the szAlertType set by User 
+  var szType =  selectGetSelVal(getElementById2('type4'));
+  var szTypeText =  selectGetSelText(getElementById2('type4'));
+  var szTip="";
+  
+  if (szType == "VIDEO"){
+    szTip = JS4_VIDEO;
+  }else if (szType == "ABOUT"){
+    szTip = JS4_ABOUT;
+  }
+  TipJSFixedClicked(szTip,event,{szTitle:"JS Source Code - Advanced Sample=" + szTypeText});
+  
+}
