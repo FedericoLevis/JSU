@@ -26,7 +26,7 @@ Table of Contents
 ## 1.1) JSU CORE Features 
 ``Pure JS Plugins, No Requirement``
 **JSU** is a Lightweight JavaScript Utility library with the main goal of simplifing developer design. JSU provides following flexible and powerful API in PURE JS code (No other plugin are required):
-  - [Validate]: **Validate Items** with many constraints/options. Show Validate Errors in Red Items or Section, Popup ... <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" border="10" /></a>  
+  - [Validate]: **Validate Items** with many constraints/options. Show Validate Errors in Red Items or Section, Popup ... <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
   - [Tooltip]: Many **HTML Tooltips** options: Floating/Fixed Tips with HTML, GIF, Video, JS Code, ... <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"><img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/jsuAboutTitle.png" 
 alt="Click to See the Video" width="50" height="50" border="10" /></a>
   - [SortTable]:  **Sort HTML Table** by clicking column header [Try SortTable Sample]  
