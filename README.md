@@ -12,8 +12,9 @@ Table of Contents
 -----------------
 
   *  <a href="#1-jsu-features">1) JSU Features</a> 
-    *  <a href="#1.1-jsu-core-features">1.1) JSU Core Features</a> 
-    *  <a href="#1.2-jsu-jquery-features">1.1) JSU jquery Features</a> 
+    *  <a href="#11-jsu-core-features">1.1) JSU Core Features</a> 
+    *  <a href="#12-jsu-jquery-features">1.2) JSU jquery Features</a> 
+    *  <a href="#12-jsu-popup-plugin-choice">1.3) JSU Popup Plugin Choice</a> 
   *  <a href="#2-jsu-configuration">2) JSU CONFIGURATION</a> 
     
     
@@ -38,7 +39,8 @@ JSU JQUERY Features are not *Pure JS plugin* like previous one, but they require
   - [JS Popup]: **HTML Modal Popup API working in all Browser** - Popup Buttons (YES, NO,..) use **callback implementation**  [Try JS Popup Sample]  
 
   
-## 1.3) JSU Popup: choice between Blocking Popup (PURE JS) or JS Popup (required: jquery, jquery-ui)
+## 1.3) JSU Popup Plugin Choice
+``Choice between Blocking Popup (PURE JS) or JS Popup (required: jquery, jquery-ui)``
 If you need Popup API the generic solution of [JS Popup] is recommended for Cross Browser compatibility. 
 However in some cases you could prefer the simpliest solution  of [Blocking Popup]:
   - If only IE Browser is required or if your JS code is based on CODE Blocking and you want to replace your existing alert with Popup
@@ -121,6 +123,10 @@ Then unzip it and everything is ready to be used: you can immediately try the JS
 # 5) JSU Samples
 ----
 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE
+" target="_blank"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+
   
 # 6) JSU Documentation
 ----
@@ -141,7 +147,6 @@ MIT
 ![JSUDancing]  | Try JSU Samples: [All Samples]
 ---------------|-----------
 
-   [1) JSU Features]: <https://github.com/FedericoLevis/JSU/blob/master/README.html#1) JSU Features>
    [Download JSU Obfuscated ZIP]: <https://github.com/FedericoLevis/JSU/archive/master.zip>
    [Tip documentation]: <https://rawgit.com/FedericoLevis/JSU/master/JSDoc/tooltip.js/index.html> 
    [about]: <https://rawgit.com/FedericoLevis/images/master/jsuAbout/jsuAboutTitle.png>
