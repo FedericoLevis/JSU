@@ -12,6 +12,8 @@ Table of Contents
 -----------------
 
   *  <a href="#1-jsu-features">1) JSU Features</a> 
+    *  <a href="#1.1-jsu-core-features">1.1) JSU Core Features</a> 
+    *  <a href="#1.2-jsu-jquery-features">1.1) JSU jquery Features</a> 
   *  <a href="#2-jsu-configuration">2) JSU CONFIGURATION</a> 
     
     
@@ -20,7 +22,8 @@ Table of Contents
 # 1) JSU Features
 ----
 
-## 1.1) JSU CORE Features (Pure JS Plugin, No Requirement)
+## 1.1) JSU CORE Features 
+``Pure JS Plugins, No Requirement``
 **JSU** is a Lightweight JavaScript Utility library with the main goal of simplifing developer design. JSU provides following flexible and powerful API in PURE JS code (No other plugin are required):
   - [Validate]: **Validate Items** with many constraints/options. Show Validate Errors in Red Items or Section, Popup ...  [Try Validate Sample]  
   - [Tooltip]: Many **HTML Tooltips** options: Floating/Fixed Tips with HTML, GIF, Video, JS Code, ... [Try Validate Sample]  
@@ -29,7 +32,8 @@ Table of Contents
   - [JSLog]: **Log** from JS Code into an optional Window: log Text, Object, JSON, Time Elapsed ... [Try JSLog Sample]  
   - [Blocking Popup]: **HTML Modal Blocking Popup** designed specially for **IE** : based on *ShowModalDialog API* that is fully supported only by IE. **Blocking Code implementation** (like alert). For Browser not supporting *ShowModalDialog* **Popup API**  will simply display an Alert instead of an HTML Popup  [Try Blocking Popup Sample]  
   
-## 1.1) JSU JQUERY Features: JS Popup (required: jquery, jquery-ui)
+## 1.2) JSU jquery Features
+``JS Popup (required: jquery, jquery-ui)``
 JSU JQUERY Features are not *Pure JS plugin* like previous one, but they require **jquery and jquery-ui** (provided in the JSU.ZIP):
   - [JS Popup]: **HTML Modal Popup API working in all Browser** - Popup Buttons (YES, NO,..) use **callback implementation**  [Try JS Popup Sample]  
 
