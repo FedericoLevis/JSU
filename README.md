@@ -24,7 +24,7 @@ Table of Contents
   *  <a href="#6-license">6) License</a> 
 
   
-
+<span id="1-jsu-features"></span>
 # 1) JSU Features
 **JSU** is a Lightweight JavaScript Utility library with the main goal of simplifing developer design. 
   - Most of the JSU Features API are in PURE JS code: for <a href="#11-jsu-core-features">JSU Core Features</a> **No other plugin is required**
@@ -37,6 +37,7 @@ Table of Contents
 
   
   
+<span id="11-jsu-core-features"></span>
 ## 1.1) JSU CORE Features 
 ``Pure JS Plugins, No Requirement``  
   - [Validate]: **Validate Items** with many constraints/options. Show Validate Errors in Red Items or Section, Popup ... <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
