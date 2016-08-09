@@ -54,12 +54,12 @@ JSU JQUERY Features are not *Pure JS plugin* like previous one, but they require
 
   
 ## 1.3) JSU Popup Plugin Choice
-``Choice between Blocking Popup (PURE JS) or JS Popup (required: jquery, jquery-ui)``  
-If you need Popup API the generic solution of [JS Popup] is recommended for Cross Browser compatibility. 
-However in some cases you could prefer the simpliest solution  of [Blocking Popup]:
+``Choice between [Blocking Popup] (PURE JS) or [JS Popup] (required: jquery, jquery-ui)``  
+Id you want to use **JSU Popup API**, the generic solution of [JS Popup] is recommended for Cross Browser compatibility. 
+However in some cases you could prefer the simplier solution  of [Blocking Popup]:
   - If only IE Browser is required or if your JS code is based on CODE Blocking and you want to replace your existing alert with Popup
   - If you do not want to load jquery   
-Whatever is your choice (Blocking Popup or JS Popup),  we underline that you can easily switch from one choice to the other: you simply have to  change one line in JSU configuration (see <a href="#4-jsu-configuration">4) JSU CONFIGURATION</a>). You do not need changing your  **API Popup** calls because they have exactly the same interface   
+Whatever is your choice (Blocking Popup or JS Popup), we underline that you can easily switch from one choice to the other: you simply have to  change one line in JSU configuration (see <a href="#4-jsu-configuration">4) JSU CONFIGURATION</a>). You do not need changing your  **API Popup** calls because they have exactly the same interface   
 (See [Blocking Popup API] and [JS Popup API] )
   
 
@@ -85,8 +85,8 @@ Feature Documentation |   API Documentation    | VIDEO of the FEATURE
 [Validate]    |  [Validate API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
 [SortTable]    |  [SortTable API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
 [JSlog]    |  [JSlog API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
-[BlockingPopup]    |  [BlockingPopup API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
-[JSPopup]    |  [JSPopup API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
+[Blocking Popup]    |  [Blocking Popup API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
+[JS Popup]    |  [JS Popup API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
 
 Each of the previous link can be reached by the [Main JSU Samples] or by the specific samples 
 
