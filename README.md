@@ -19,7 +19,7 @@ Table of Contents
   *  <a href="#3-download-and-installation">3) Download and Installation</a> 
   *  <a href="#4-jsu-configuration">4) JSU CONFIGURATION</a> 
     *  <a href="#41-jsu-configuration-requirejs">4.1) JSU CONFIGURATION: require.js</a> 
-    *  <a href="#42-jsu-configuration-include-each-js_file">4.2) JSU CONFIGURATION: include each JS FILE</a> 
+    *  <a href="#42-jsu-configuration-include-each-js-file">4.2) JSU CONFIGURATION: include each JS FILE</a> 
   *  <a href="#5-jsu-version">5) JSU Version</a> 
   *  <a href="#6-license">6) License</a> 
 
@@ -57,7 +57,7 @@ If you need Popup API the generic solution of [JS Popup] is recommended for Cros
 However in some cases you could prefer the simpliest solution  of [Blocking Popup]:
   - If only IE Browser is required or if your JS code is based on CODE Blocking and you want to replace your existing alert with Popup
   - If you do not want to load jquery   
-Whatever is your choice (Blocking Popup or JS Popup),  we underline that you can easily switch from one choice to the other: you simply have to  change one line in JSU configuration (see next par.). You do not need changing your  **API Popup** calls because they have exactly the same interface   
+Whatever is your choice (Blocking Popup or JS Popup),  we underline that you can easily switch from one choice to the other: you simply have to  change one line in JSU configuration (see <a href="#4-jsu-configuration">4) JSU CONFIGURATION</a>). You do not need changing your  **API Popup** calls because they have exactly the same interface   
 (See [Blocking Popup API] and [JS Popup API] )
   
 
@@ -72,9 +72,16 @@ JSU CONTENT        | LINK
 **API DOC**    | [JSU API Documentation]
 **CSS DOC**    | [JSU CSS Documentation]
 
-All previous links are connected each other (From one link you can reach the others)
+  - All previous links are connected each other: from one link you can reach the others.
+  - Each Feature has its specific sample with the detailed explanation of the JS API calls; all the specific samples are reachable from the Main JSU Sample [Try JSU Samples]
+  - Each Feature has also its specific Documentaion, API Documentation and Demo Video:
+  
+Feature Documentation |   API Documentation    | VIDEO of the FEATURE
+---------------|-------------------------------|---------------------
+[Tooltip]    |  [Tooltip API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
+alt="Click to See the Video" width="50" height="50" border="10" /></a>
 
-Each Features has its sample (reachable)
+Each of the previous link can be reached by the Main JSU Sample [Try JSU Samples] or by the specific samples 
 
   
 # 3) Download and Installation
@@ -167,15 +174,20 @@ MIT
    [JSUDancing]: <https://rawgit.com/FedericoLevis/images/master/jsuAbout/JSUDancing.gif>
    [Try JSU Samples]: <https://rawgit.com/FedericoLevis/JSU/master/samples/AllSamples.html>
    [JS Popup Sample]: <https://rawgit.com/FedericoLevis/JSU/master/samples/JSPopup/PopupSample.html>  
-   [Validate]: <https://rawgit.com/FedericoLevis/JSUDoc/master/cValidate.js/index.html>
-   [SortTable]: <https://rawgit.com/FedericoLevis/JSUDoc/master/cSortTable.js/index.html>
    [Tooltip]: <https://rawgit.com/FedericoLevis/JSUDoc/master/tooltip.js/index.html>
-   [LoadingDiv]: <https://rawgit.com/FedericoLevis/JSUDoc/master/util.js/index.html>
-   [JSLog]: <https://rawgit.com/FedericoLevis/JSUDoc/master/jslog.js/index.html>
-   [Blocking Popup]: <https://rawgit.com/FedericoLevis/JSUDoc/master/BlockPopup.js/index.html>
-   [JS Popup]: <https://rawgit.com/FedericoLevis/JSUDoc/master/JSPopup.js/index.html>  
-   [Blocking Popup API]: 	<https://rawgit.com/FedericoLevis/JSUDoc/master/BlockPopup.js/index.html>
-   [JS Popup API]:	<https://rawgit.com/FedericoLevis/JSUDoc/master/JSPopup.js/index.html>
+   [Tooltip API]: <https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/tooltip.doc>
+   [Validate]: <https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/Validate.html>
+   [Validate API]: <https://rawgit.com/FedericoLevis/JSUDoc/master/cValidate.js/index.html>
+   [SortTable]: <https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/SortTable.html>
+   [SortTable API]: <https://rawgit.com/FedericoLevis/JSUDoc/master/cSortTable.js/index.html>
+   [LoadingDiv]: <https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/LoadingDiv.html>
+   [LoadingDiv API]: <https://rawgit.com/FedericoLevis/JSUDoc/master/loadingDiv.js/index.html>
+   [JSLog]: <https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/jslog.html>
+   [JSLog API]: <https://rawgit.com/FedericoLevis/JSUDoc/master/jslog.js/index.html>
+   [Blocking Popup]: <https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/BlockPopup.html>
+   [Blocking Popup API]: <https://rawgit.com/FedericoLevis/JSUDoc/master/BlockPopup.js/index.html>
+   [JS Popup]: <https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/JSPopup.html>  
+   [JS Popup API]: <https://rawgit.com/FedericoLevis/JSUDoc/master/JSPopup.js/index.html>  
    [JSU Tooltip Loading with require.js jsu.js - TipSample.html]: <https://github.com/FedericoLevis/JSU/blob/master/samples/Tip/TipSample.html>
    [JSU Tooltip Loading with file List - TipSimple.html]: <https://github.com/FedericoLevis/JSU/blob/master/samples/Tip/TipSimple.html>
    
