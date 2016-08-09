@@ -26,8 +26,10 @@ Table of Contents
 ## 1.1) JSU CORE Features 
 ``Pure JS Plugins, No Requirement``
 **JSU** is a Lightweight JavaScript Utility library with the main goal of simplifing developer design. JSU provides following flexible and powerful API in PURE JS code (No other plugin are required):
-  - [Validate]: **Validate Items** with many constraints/options. Show Validate Errors in Red Items or Section, Popup ...  [Try Validate Sample]  
-  - [Tooltip]: Many **HTML Tooltips** options: Floating/Fixed Tips with HTML, GIF, Video, JS Code, ... [Try Validate Sample]  
+  - [Validate]: **Validate Items** with many constraints/options. Show Validate Errors in Red Items or Section, Popup ... <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"><img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/jsuAboutTitle.png" 
+alt="Click to See the Video" width="50" height="50" border="10" /></a>
+   - [Tooltip]: Many **HTML Tooltips** options: Floating/Fixed Tips with HTML, GIF, Video, JS Code, ... <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"><img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/jsuAboutTitle.png" 
+alt="Click to See the Video" width="50" height="50" border="10" /></a>
   - [SortTable]:  **Sort HTML Table** by clicking column header [Try SortTable Sample]  
   - [LoadingDiv]:  **Loading Div** to be displayed during Long Operation. Many Options provided: Loading Gif, Title, Message, ElapsedSec... [Try LoadingDiv Sample]  
   - [JSLog]: **Log** from JS Code into an optional Window: log Text, Object, JSON, Time Elapsed ... [Try JSLog Sample]  
@@ -124,8 +126,7 @@ Then unzip it and everything is ready to be used: you can immediately try the JS
 ----
 
 
-<a href="https://youtu.be/wpo2oM_L3ds" target="_blank"><img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/jsuAboutTitle.png" 
-alt="Click to See the Video" width="500" height="400" border="10" /></a>
+
 
   
 # 6) JSU Documentation
