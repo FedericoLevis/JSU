@@ -1,12 +1,12 @@
 ![about] | By [Federico Levis]
 ---------|-----------
 
-**Try JSU:** [All Samples]
-
 JSU 
 ========
 
 ``JSU`` **JS Utility Plugin**: Tooltip, Validate, Popup, SortTable, JSLog, Loading, ..
+All JSU Features can be tried with following sample: [Try JSU Samples]
+
 
 Table of Contents
 -----------------
@@ -26,9 +26,8 @@ Table of Contents
 ## 1.1) JSU CORE Features 
 ``Pure JS Plugins, No Requirement``
 **JSU** is a Lightweight JavaScript Utility library with the main goal of simplifing developer design. JSU provides following flexible and powerful API in PURE JS code (No other plugin are required):
-  - [Validate]: **Validate Items** with many constraints/options. Show Validate Errors in Red Items or Section, Popup ... <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"><img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/jsuAboutTitle.png" 
-alt="Click to See the Video" width="50" height="50" border="10" /></a>
-   - [Tooltip]: Many **HTML Tooltips** options: Floating/Fixed Tips with HTML, GIF, Video, JS Code, ... <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"><img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/jsuAboutTitle.png" 
+  - [Validate]: **Validate Items** with many constraints/options. Show Validate Errors in Red Items or Section, Popup ... <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" border="10" /></a>  
+  - [Tooltip]: Many **HTML Tooltips** options: Floating/Fixed Tips with HTML, GIF, Video, JS Code, ... <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"><img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/jsuAboutTitle.png" 
 alt="Click to See the Video" width="50" height="50" border="10" /></a>
   - [SortTable]:  **Sort HTML Table** by clicking column header [Try SortTable Sample]  
   - [LoadingDiv]:  **Loading Div** to be displayed during Long Operation. Many Options provided: Loading Gif, Title, Message, ElapsedSec... [Try LoadingDiv Sample]  
@@ -115,7 +114,7 @@ Then unzip it and everything is ready to be used: you can immediately try the JS
 
 # 4) JSU Feature DESCRIPTION
   - **All modern browsers are supported**: IE9+, Firefox 3+, Chrome,... 
-  - **Examples provided for each JSU feature**, showing in Fixed Tips the JS code required to implement the JSU features. From [All Samples] you can reach all the other samples and JSU Feature documentation
+  - **Examples provided for each JSU feature**, showing in Fixed Tips the JS code required to implement the JSU features. From [Try JSU Samples] you can reach all the other samples and JSU Feature documentation
   - **Very Powerful and Simple to use**: only 1 or 2 JS instructions to get all the power and flexibilty of the JSU feature 
   - **Very Simple and flexible JSU configuration** with require.js or including manually the required JSU Files (see par 2 )
   - **Flexible switch between Comment/Minified JSU** with a single code line modification in jsu.js (see par 2 ) 
@@ -145,7 +144,7 @@ Then unzip it and everything is ready to be used: you can immediately try the JS
 
 MIT
 
-![JSUDancing]  | Try JSU Samples: [All Samples]
+![JSUDancing]  | Try JSU Samples: [Try JSU Samples]
 ---------------|-----------
 
    [Download JSU Obfuscated ZIP]: <https://github.com/FedericoLevis/JSU/archive/master.zip>
@@ -153,7 +152,7 @@ MIT
    [about]: <https://rawgit.com/FedericoLevis/images/master/jsuAbout/jsuAboutTitle.png>
    [Federico Levis]: <https://www.linkedin.com/in/federicolevis> 
    [JSUDancing]: <https://rawgit.com/FedericoLevis/images/master/jsuAbout/JSUDancing.gif>
-   [All Samples]: <https://rawgit.com/FedericoLevis/JSU/master/samples/AllSamples.html>
+   [Try JSU Samples]: <https://rawgit.com/FedericoLevis/JSU/master/samples/AllSamples.html>
    [Try Validate Sample]: <https://rawgit.com/FedericoLevis/JSU/master/samples/Validate/ValidateSample.html>
    [Try Tip Sample]: <https://rawgit.com/FedericoLevis/JSU/master/samples/Tip/TipSample.html>  
    [Try SortTable Sample]: <https://rawgit.com/FedericoLevis/JSU/master/samples/Sort/SortSample.html>  
