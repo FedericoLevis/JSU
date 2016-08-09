@@ -26,17 +26,19 @@ Table of Contents
   
 
 # 1) JSU Features
-  - **All modern browsers are supported**: IE9+, Firefox 3+, Chrome,... 
-  - **Examples provided for each JSU feature**, showing in Fixed Tips the JS code required to implement the JSU features. From [Try JSU Samples] you can reach all the other samples and JSU Feature documentation
-  - **Very Powerful and Simple to use**: only 1 or 2 JS instructions to get all the power and flexibilty of the JSU feature 
-  - **Very Simple and flexible JSU configuration** with require.js or including manually the required JSU Files (see par 2 )
-  - **Flexible switch between Comment/Minified JSU** with a single code line modification in jsu.js (see par 2 ) 
-  - **Localization support**: all the displayed messages are isolated in local/LAN/locale-core.js. So you can easily select the desired language simply including the proper locale file (see par 2 ) . JSU provides locale/EN/locale-core.js (English=default) and locale/ITA/locale-core.js (Italian)You can also add and include your personal local/LAN/locale-core.js 
+**JSU** is a Lightweight JavaScript Utility library with the main goal of simplifing developer design. 
+  - Most of the JSU Features API are in PURE JS code: for <a href="#11-jsu-core-features">JSU Core Features</a> **No other plugin is required**
+  - **All modern browsers are supported**: IE9+, Firefox 3+, Chrome,... (NOTE: for Popup you should use [JS Popup] for Cross Browser compatibility) 
+  - **Examples, documentation and Video provided for each JSU feature** (see <a href="#2-jsu-samples-videos-documentation">2) JSU Samples, Videos, Documentation</a>.  From  the [Main JSU Samples] you can reach all the other samples and JSU Feature documentation
+  - **Very Powerful and Simple to use**: maximum 1 or 2 JS instructions are required to get all the power and flexibilty of the JSU feature 
+  - **Very Simple and flexible JSU configuration** with require.js or including manually the required JSU Files (see <a href="#4-jsu-configuration">4) JSU CONFIGURATION</a> ; you can also easily **switch between Comment/Minified JSU** with a single code line modification in jsu.js.  
+  - **Localization support**: all the displayed messages are isolated in local/LAN/locale-core.js. You can easily select the desired language simply including the proper locale file (see par 2 ). Default JSU locale is English (local/EN/locale-core.js)  
   - **CSS support** : if required you can easily customize presentation modifying JSU CSS files (core.css, Popup.css)
 
+  
+  
 ## 1.1) JSU CORE Features 
 ``Pure JS Plugins, No Requirement``  
-**JSU** is a Lightweight JavaScript Utility library with the main goal of simplifing developer design. JSU provides following flexible and powerful API in PURE JS code (No other plugin are required):
   - [Validate]: **Validate Items** with many constraints/options. Show Validate Errors in Red Items or Section, Popup ... <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
   - [Tooltip]: Many **HTML Tooltips** options: Floating/Fixed Tips with HTML, GIF, Video, JS Code, ... <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
 alt="Click to See the Video" width="50" height="50" border="10" /></a>
@@ -46,7 +48,7 @@ alt="Click to See the Video" width="50" height="50" border="10" /></a>
   - [Blocking Popup]: **HTML Modal Blocking Popup** designed specially for **IE** : based on *ShowModalDialog API* that is fully supported only by IE. **Blocking Code implementation** (like alert). For Browser not supporting *ShowModalDialog* (e.g. Chrome), **Popup API** simply display an Alert instead of an HTML Popup  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
   
 ## 1.2) JSU jquery Features
-``JS Popup (required: jquery, jquery-ui)``
+``JS Popup (required: jquery, jquery-ui)``  
 JSU JQUERY Features are not *Pure JS plugin* like previous one, but they require **jquery and jquery-ui** (provided in the JSU.ZIP):
   - [JS Popup]: **HTML Modal Popup API working in all Browser** - Popup Buttons (YES, NO,..) use **callback implementation**  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
 
@@ -80,6 +82,11 @@ Feature Documentation |   API Documentation    | VIDEO of the FEATURE
 ---------------|-------------------------------|---------------------
 [Tooltip]    |  [Tooltip API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
 [LoadingDiv]    |  [LoadingDiv API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
+[Validate]    |  [Validate API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
+[SortTable]    |  [SortTable API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
+[JSlog]    |  [JSlog API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
+[BlockingPopup]    |  [BlockingPopup API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
+[JSPopup]    |  [JSPopup API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
 
 Each of the previous link can be reached by the [Main JSU Samples] or by the specific samples 
 
