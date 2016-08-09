@@ -15,7 +15,8 @@ Table of Contents
     *  <a href="#11-jsu-core-features">1.1) JSU Core Features</a> 
     *  <a href="#12-jsu-jquery-features">1.2) JSU jquery Features</a> 
     *  <a href="#13-jsu-popup-plugin-choice">1.3) JSU Popup Plugin Choice</a> 
-  *  <a href="#2-jsu-configuration">2) JSU CONFIGURATION</a> 
+  *  <a href="#2-jsu-samples-videos-documentation">2) JSU Sample, Videos, Documentation</a> 
+  *  <a href="#3-jsu-configuration">3) JSU CONFIGURATION</a> 
     
     
 
@@ -23,7 +24,7 @@ Table of Contents
 ----
 
 ## 1.1) JSU CORE Features 
-``Pure JS Plugins, No Requirement``
+``Pure JS Plugins, No Requirement``  
 **JSU** is a Lightweight JavaScript Utility library with the main goal of simplifing developer design. JSU provides following flexible and powerful API in PURE JS code (No other plugin are required):
   - [Validate]: **Validate Items** with many constraints/options. Show Validate Errors in Red Items or Section, Popup ... <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
   - [Tooltip]: Many **HTML Tooltips** options: Floating/Fixed Tips with HTML, GIF, Video, JS Code, ... <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
@@ -31,7 +32,7 @@ alt="Click to See the Video" width="50" height="50" border="10" /></a>
   - [SortTable]:  **Sort HTML Table** by clicking column header <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
   - [LoadingDiv]:  **Loading Div** to be displayed during Long Operation. Many Options provided: Loading Gif, Title, Message, ElapsedSec... <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
   - [JSLog]: **Log** from JS Code into an optional Window: log Text, Object, JSON, Time Elapsed ... <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
-  - [Blocking Popup]: **HTML Modal Blocking Popup** designed specially for **IE** : based on *ShowModalDialog API* that is fully supported only by IE. **Blocking Code implementation** (like alert). For Browser not supporting *ShowModalDialog* **Popup API**  will simply display an Alert instead of an HTML Popup  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
+  - [Blocking Popup]: **HTML Modal Blocking Popup** designed specially for **IE** : based on *ShowModalDialog API* that is fully supported only by IE. **Blocking Code implementation** (like alert). For Browser not supporting *ShowModalDialog* (e.g. Chrome), **Popup API** simply display an Alert instead of an HTML Popup  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
   
 ## 1.2) JSU jquery Features
 ``JS Popup (required: jquery, jquery-ui)``
@@ -40,7 +41,7 @@ JSU JQUERY Features are not *Pure JS plugin* like previous one, but they require
 
   
 ## 1.3) JSU Popup Plugin Choice
-``Choice between Blocking Popup (PURE JS) or JS Popup (required: jquery, jquery-ui)``
+``Choice between Blocking Popup (PURE JS) or JS Popup (required: jquery, jquery-ui)``  
 If you need Popup API the generic solution of [JS Popup] is recommended for Cross Browser compatibility. 
 However in some cases you could prefer the simpliest solution  of [Blocking Popup]:
   - If only IE Browser is required or if your JS code is based on CODE Blocking and you want to replace your existing alert with Popup
@@ -50,8 +51,20 @@ In Both cases we underline that you can easily switch between the 2 options simp
   
 
 
-# 2) JSU SAMPLES, VIDEO, DOCUMENTATION
+# 2) JSU Sample, Videos, Documentation
 ----
+
+CONTENT        | LINK
+---------------|-----------
+JSU SAMPLES    | [Try JSU Samples]
+JSU DOC        | [JSU Documentation]
+JSU API DOC    | [JSU API Documentation]
+JSU CSS DOC    | [JSU CSS Documentation]
+
+All previous links are connected each other (From one link you can reach the others)
+
+
+  
 
   
   
@@ -156,6 +169,10 @@ MIT
 ---------------|-----------
 
    [Download JSU Obfuscated ZIP]: <https://github.com/FedericoLevis/JSU/archive/master.zip>
+   [JSU Documentation]: <https://rawgit.com/FedericoLevis/JSU/master/README.html>
+   [JSU API Documentation]: <https://rawgit.com/FedericoLevis/JSUDoc/master/JSUAPI.html>
+   [JSU CSS Documentation]: <https://rawgit.com/FedericoLevis/JSUDoc/master/CSSDoc/index.html>
+   
    [Tip documentation]: <https://rawgit.com/FedericoLevis/JSU/master/JSDoc/tooltip.js/index.html> 
    [about]: <https://rawgit.com/FedericoLevis/images/master/jsuAbout/jsuAboutTitle.png>
    [Federico Levis]: <https://www.linkedin.com/in/federicolevis> 
