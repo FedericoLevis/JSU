@@ -14,7 +14,7 @@ Table of Contents
   *  <a href="#1-jsu-features">1) JSU Features</a> 
     *  <a href="#11-jsu-core-features">1.1) JSU Core Features</a> 
     *  <a href="#12-jsu-jquery-features">1.2) JSU jquery Features</a> 
-    *  <a href="#12-jsu-popup-plugin-choice">1.3) JSU Popup Plugin Choice</a> 
+    *  <a href="#13-jsu-popup-plugin-choice">1.3) JSU Popup Plugin Choice</a> 
   *  <a href="#2-jsu-configuration">2) JSU CONFIGURATION</a> 
     
     
@@ -123,9 +123,13 @@ Then unzip it and everything is ready to be used: you can immediately try the JS
 # 5) JSU Samples
 ----
 
+<iframe width="750" height="600" src="https://www.youtube.com/embed/wpo2oM_L3ds?version=3&vq=hd720&autoplay=1" frameborder="0" allowfullscreen></iframe>' 
+
+
+
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE
-" target="_blank"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+" target="_blank"><img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/jsuAboutTitle.png" 
+alt="Click to See the Video" width="240" height="180" border="10" /></a>
 
   
 # 6) JSU Documentation
