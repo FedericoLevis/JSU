@@ -67,21 +67,21 @@ Whatever is your choice (Blocking Popup or JS Popup),  we underline that you can
 
 JSU CONTENT        | LINK
 ---------------|-----------
-**SAMPLES**    | [Try JSU Samples]
+**SAMPLES**    | [Main JSU Samples]
 **DOC**        | [JSU Documentation]
 **API DOC**    | [JSU API Documentation]
 **CSS DOC**    | [JSU CSS Documentation]
 
   - All previous links are connected each other: from one link you can reach the others.
-  - Each Feature has its specific sample with the detailed explanation of the JS API calls; all the specific samples are reachable from the Main JSU Sample [Try JSU Samples]
-  - Each Feature has also its specific Documentaion, API Documentation and Demo Video:
+  - Each Feature has its specific sample with the detailed explanation of the JS API calls; all the specific samples are reachable from the [Main JSU Samples]
+  - Each Feature has also its specific Documentation, API Documentation and Demo Video:
   
 Feature Documentation |   API Documentation    | VIDEO of the FEATURE
 ---------------|-------------------------------|---------------------
 [Tooltip]    |  [Tooltip API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
-alt="Click to See the Video" width="50" height="50" border="10" /></a>
+[LoadingDiv]    |  [LoadingDiv API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
 
-Each of the previous link can be reached by the Main JSU Sample [Try JSU Samples] or by the specific samples 
+Each of the previous link can be reached by the [Main JSU Samples] or by the specific samples 
 
   
 # 3) Download and Installation
@@ -173,6 +173,7 @@ MIT
    [Federico Levis]: <https://www.linkedin.com/in/federicolevis> 
    [JSUDancing]: <https://rawgit.com/FedericoLevis/images/master/jsuAbout/JSUDancing.gif>
    [Try JSU Samples]: <https://rawgit.com/FedericoLevis/JSU/master/samples/AllSamples.html>
+   [Main JSU Samples]: <https://rawgit.com/FedericoLevis/JSU/master/samples/AllSamples.html>
    [JS Popup Sample]: <https://rawgit.com/FedericoLevis/JSU/master/samples/JSPopup/PopupSample.html>  
    [Tooltip]: <https://rawgit.com/FedericoLevis/JSUDoc/master/tooltip.js/index.html>
    [Tooltip API]: <https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/tooltip.doc>
