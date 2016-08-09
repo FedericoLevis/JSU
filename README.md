@@ -11,8 +11,8 @@ JSU
 Table of Contents
 -----------------
 
-  *  <a href="#par1">1) JSU Features</a> 
-  *  <a href="#par2">2) JSU CONFIGURATION</a> 
+  *  <a href="#1-jsu-features">1) JSU Features</a> 
+  *  <a href="#2-jsu-configuration">2) JSU CONFIGURATION</a> 
     
     
 
