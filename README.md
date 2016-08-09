@@ -54,15 +54,16 @@ In Both cases we underline that you can easily switch between the 2 options simp
 # 2) JSU Sample, Videos, Documentation
 ----
 
-CONTENT        | LINK
+JSU CONTENT        | LINK
 ---------------|-----------
-JSU SAMPLES    | [Try JSU Samples]
-JSU DOC        | [JSU Documentation]
-JSU API DOC    | [JSU API Documentation]
-JSU CSS DOC    | [JSU CSS Documentation]
+**SAMPLES**    | [Try JSU Samples]
+**DOC**        | [JSU Documentation]
+**API DOC**    | [JSU API Documentation]
+**CSS DOC**    | [JSU CSS Documentation]
 
 All previous links are connected each other (From one link you can reach the others)
 
+Each Features has its sample (reachable)
 
   
 
