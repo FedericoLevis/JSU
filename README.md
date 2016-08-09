@@ -4,7 +4,7 @@
 JSU 
 ========
 
-``JSU`` **JS Utility Plugin**: Tooltip, Validate, Popup, SortTable, JSLog, Loading, ..
+``JSU`` **JS Utility Plugin**: Tooltip, Validate, Popup, SortTable, JSLog, Loading, ..  
 All JSU Features can be tried with following sample: [Try JSU Samples]
 
 
@@ -19,7 +19,6 @@ Table of Contents
     
     
 
-<span id="par1"></span>
 # 1) JSU Features
 ----
 
@@ -27,17 +26,17 @@ Table of Contents
 ``Pure JS Plugins, No Requirement``
 **JSU** is a Lightweight JavaScript Utility library with the main goal of simplifing developer design. JSU provides following flexible and powerful API in PURE JS code (No other plugin are required):
   - [Validate]: **Validate Items** with many constraints/options. Show Validate Errors in Red Items or Section, Popup ... <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
-  - [Tooltip]: Many **HTML Tooltips** options: Floating/Fixed Tips with HTML, GIF, Video, JS Code, ... <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"><img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/jsuAboutTitle.png" 
+  - [Tooltip]: Many **HTML Tooltips** options: Floating/Fixed Tips with HTML, GIF, Video, JS Code, ... <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
 alt="Click to See the Video" width="50" height="50" border="10" /></a>
-  - [SortTable]:  **Sort HTML Table** by clicking column header [Try SortTable Sample]  
-  - [LoadingDiv]:  **Loading Div** to be displayed during Long Operation. Many Options provided: Loading Gif, Title, Message, ElapsedSec... [Try LoadingDiv Sample]  
-  - [JSLog]: **Log** from JS Code into an optional Window: log Text, Object, JSON, Time Elapsed ... [Try JSLog Sample]  
-  - [Blocking Popup]: **HTML Modal Blocking Popup** designed specially for **IE** : based on *ShowModalDialog API* that is fully supported only by IE. **Blocking Code implementation** (like alert). For Browser not supporting *ShowModalDialog* **Popup API**  will simply display an Alert instead of an HTML Popup  [Try Blocking Popup Sample]  
+  - [SortTable]:  **Sort HTML Table** by clicking column header <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
+  - [LoadingDiv]:  **Loading Div** to be displayed during Long Operation. Many Options provided: Loading Gif, Title, Message, ElapsedSec... <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
+  - [JSLog]: **Log** from JS Code into an optional Window: log Text, Object, JSON, Time Elapsed ... <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
+  - [Blocking Popup]: **HTML Modal Blocking Popup** designed specially for **IE** : based on *ShowModalDialog API* that is fully supported only by IE. **Blocking Code implementation** (like alert). For Browser not supporting *ShowModalDialog* **Popup API**  will simply display an Alert instead of an HTML Popup  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
   
 ## 1.2) JSU jquery Features
 ``JS Popup (required: jquery, jquery-ui)``
 JSU JQUERY Features are not *Pure JS plugin* like previous one, but they require **jquery and jquery-ui** (provided in the JSU.ZIP):
-  - [JS Popup]: **HTML Modal Popup API working in all Browser** - Popup Buttons (YES, NO,..) use **callback implementation**  [Try JS Popup Sample]  
+  - [JS Popup]: **HTML Modal Popup API working in all Browser** - Popup Buttons (YES, NO,..) use **callback implementation**  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
 
   
 ## 1.3) JSU Popup Plugin Choice
@@ -49,13 +48,21 @@ However in some cases you could prefer the simpliest solution  of [Blocking Popu
 In Both cases we underline that you can easily switch between the 2 options simply changing one line in JSU configuration (see next par.). In fact you do not need to change your  **API Popup** calls because they have exactly the same interface   
 (See [Blocking Popup API] and [JS Popup API] )
   
-<span id="par2"></span>
-# 2) JSU CONFIGURATION
+
+
+# 2) JSU SAMPLES, VIDEO, DOCUMENTATION
 ----
 
-You a choose  2 options:
+  
+  
+  
+# 3) JSU CONFIGURATION
+----
 
-## 2.1) JSU CONFIGURATION: OPTION A) require.js
+You can choose between 2 options:
+
+## 3.1) JSU CONFIGURATION: require.js
+``OPTION A) LOAD ALL JSU JS with require.js``
 Previous samples loads all JSU CORE features together with require.js using following 2 pre-defined data-main files:
   - **pluging/jsu.js**  for only JSU CORE  Features (no Plugin required)
   - **pluging/jsu-jq.js**  for ALL JSU Features (jquery.js and jquery-ui.js are loaded) 
@@ -89,7 +96,8 @@ requirejs.config({
 
 For example see [JSU Tooltip Loading with require.js jsu.js - TipSample.html]
 
-## 2.1) JSU CONFIGURATION: OPTION B) Manually list the file to load
+## 3.2) JSU CONFIGURATION: LIST JS
+``OPTION B) Manually list the js to load``
 If you prefer you can manually load the required JSU css and js. 
 
 ```javascript
@@ -153,13 +161,6 @@ MIT
    [Federico Levis]: <https://www.linkedin.com/in/federicolevis> 
    [JSUDancing]: <https://rawgit.com/FedericoLevis/images/master/jsuAbout/JSUDancing.gif>
    [Try JSU Samples]: <https://rawgit.com/FedericoLevis/JSU/master/samples/AllSamples.html>
-   [Try Validate Sample]: <https://rawgit.com/FedericoLevis/JSU/master/samples/Validate/ValidateSample.html>
-   [Try Tip Sample]: <https://rawgit.com/FedericoLevis/JSU/master/samples/Tip/TipSample.html>  
-   [Try SortTable Sample]: <https://rawgit.com/FedericoLevis/JSU/master/samples/Sort/SortSample.html>  
-   [Try LoadingDiv Sample]: <https://rawgit.com/FedericoLevis/JSU/master/samples/Loading/LoadingSample.html>  
-   [Try JSLog Sample]: <https://rawgit.com/FedericoLevis/JSU/master/samples/jslog/jslogSample.html>  
-   [Try Blocking Popup Sample]: <https://rawgit.com/FedericoLevis/JSU/master/samples/BlockPopup/PopupSample.html>  
-   [Try JS Popup Sample]: <https://rawgit.com/FedericoLevis/JSU/master/samples/JSPopup/PopupSample.html>  
    [JS Popup Sample]: <https://rawgit.com/FedericoLevis/JSU/master/samples/JSPopup/PopupSample.html>  
    [Validate]: <https://rawgit.com/FedericoLevis/JSUDoc/master/cValidate.js/index.html>
    [SortTable]: <https://rawgit.com/FedericoLevis/JSUDoc/master/cSortTable.js/index.html>
