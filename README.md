@@ -123,13 +123,9 @@ Then unzip it and everything is ready to be used: you can immediately try the JS
 # 5) JSU Samples
 ----
 
-<iframe width="750" height="600" src="https://www.youtube.com/embed/wpo2oM_L3ds?version=3&vq=hd720&autoplay=1" frameborder="0" allowfullscreen></iframe>' 
 
-
-
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE
-" target="_blank"><img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/jsuAboutTitle.png" 
-alt="Click to See the Video" width="240" height="180" border="10" /></a>
+<a href="https://youtu.be/wpo2oM_L3ds" target="_blank"><img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/jsuAboutTitle.png" 
+alt="Click to See the Video" width="500" height="400" border="10" /></a>
 
   
 # 6) JSU Documentation
