@@ -15,13 +15,24 @@ Table of Contents
     *  <a href="#11-jsu-core-features">1.1) JSU Core Features</a> 
     *  <a href="#12-jsu-jquery-features">1.2) JSU jquery Features</a> 
     *  <a href="#13-jsu-popup-plugin-choice">1.3) JSU Popup Plugin Choice</a> 
-  *  <a href="#2-jsu-samples-videos-documentation">2) JSU Sample, Videos, Documentation</a> 
-  *  <a href="#3-jsu-configuration">3) JSU CONFIGURATION</a> 
-    
-    
+  *  <a href="#2-jsu-samples-videos-documentation">2) JSU Samples, Videos, Documentation</a> 
+  *  <a href="#3-download-and-installation">3) Download and Installation</a> 
+  *  <a href="#4-jsu-configuration">4) JSU CONFIGURATION</a> 
+    *  <a href="#41-jsu-configuration-requirejs">4.1) JSU CONFIGURATION: require.js</a> 
+    *  <a href="#42-jsu-configuration-include-each-js_file">4.2) JSU CONFIGURATION: include each JS FILE</a> 
+  *  <a href="#5-jsu-version">5) JSU Version</a> 
+  *  <a href="#6-license">6) License</a> 
+
+  
 
 # 1) JSU Features
-----
+  - **All modern browsers are supported**: IE9+, Firefox 3+, Chrome,... 
+  - **Examples provided for each JSU feature**, showing in Fixed Tips the JS code required to implement the JSU features. From [Try JSU Samples] you can reach all the other samples and JSU Feature documentation
+  - **Very Powerful and Simple to use**: only 1 or 2 JS instructions to get all the power and flexibilty of the JSU feature 
+  - **Very Simple and flexible JSU configuration** with require.js or including manually the required JSU Files (see par 2 )
+  - **Flexible switch between Comment/Minified JSU** with a single code line modification in jsu.js (see par 2 ) 
+  - **Localization support**: all the displayed messages are isolated in local/LAN/locale-core.js. So you can easily select the desired language simply including the proper locale file (see par 2 ) . JSU provides locale/EN/locale-core.js (English=default) and locale/ITA/locale-core.js (Italian)You can also add and include your personal local/LAN/locale-core.js 
+  - **CSS support** : if required you can easily customize presentation modifying JSU CSS files (core.css, Popup.css)
 
 ## 1.1) JSU CORE Features 
 ``Pure JS Plugins, No Requirement``  
@@ -46,12 +57,12 @@ If you need Popup API the generic solution of [JS Popup] is recommended for Cros
 However in some cases you could prefer the simpliest solution  of [Blocking Popup]:
   - If only IE Browser is required or if your JS code is based on CODE Blocking and you want to replace your existing alert with Popup
   - If you do not want to load jquery   
-In Both cases we underline that you can easily switch between the 2 options simply changing one line in JSU configuration (see next par.). In fact you do not need to change your  **API Popup** calls because they have exactly the same interface   
+Whatever is your choice (Blocking Popup or JS Popup),  we underline that you can easily switch from one choice to the other: you simply have to  change one line in JSU configuration (see next par.). You do not need changing your  **API Popup** calls because they have exactly the same interface   
 (See [Blocking Popup API] and [JS Popup API] )
   
 
 
-# 2) JSU Sample, Videos, Documentation
+# 2) JSU Samples, Videos, Documentation
 ----
 
 JSU CONTENT        | LINK
@@ -66,16 +77,22 @@ All previous links are connected each other (From one link you can reach the oth
 Each Features has its sample (reachable)
 
   
+# 3) Download and Installation
+----
 
-  
-  
-  
-# 3) JSU CONFIGURATION
+You can choose between 2 options:
+  - [Download JSU Obfuscated ZIP] JSU code *Obfuscated*, available only following JSU Feature: [Tooltip], [SortTable], [Blocking Popup]
+  - ***[Download FULL JSU ZIP]*** JSU Code and Sample: **Everything availble, All JS Clear with comment and also in the Minified version**   **[UNDER WORK, CURRENTLY NOT AVAILABLE]**
+Then unzip it and everything is ready to be used: you can immediately try the JSU sample in your unzipped *jsu/samples* directory
+
+
+ 
+# 4) JSU CONFIGURATION
 ----
 
 You can choose between 2 options:
 
-## 3.1) JSU CONFIGURATION: require.js
+## 4.1) JSU CONFIGURATION: require.js
 ``OPTION A) LOAD ALL JSU JS with require.js``
 Previous samples loads all JSU CORE features together with require.js using following 2 pre-defined data-main files:
   - **pluging/jsu.js**  for only JSU CORE  Features (no Plugin required)
@@ -110,7 +127,7 @@ requirejs.config({
 
 For example see [JSU Tooltip Loading with require.js jsu.js - TipSample.html]
 
-## 3.2) JSU CONFIGURATION: LIST JS
+## 4.2) JSU CONFIGURATION: include each JS FILE
 ``OPTION B) Manually list the js to load``
 If you prefer you can manually load the required JSU css and js. 
 
@@ -124,44 +141,14 @@ If you prefer you can manually load the required JSU css and js.
 
 For example see [JSU Tooltip Loading with file List - TipSimple.html]
 
-
-# 3) Download and Installation
-----
-
-You can choose between 2 options:
-  - [Download JSU Obfuscated ZIP] JSU code *Obfuscated*, available only following JSU Feature: [Tooltip], [SortTable], [Blocking Popup]
-  - ***[Download FULL JSU ZIP]*** JSU Code and Sample: **Everything availble, All JS Clear with comment and also in the Minified version**   **[UNDER WORK, CURRENTLY NOT AVAILABLE]**
-Then unzip it and everything is ready to be used: you can immediately try the JSU sample in your unzipped *jsu/samples* directory
   
-
-# 4) JSU Feature DESCRIPTION
-  - **All modern browsers are supported**: IE9+, Firefox 3+, Chrome,... 
-  - **Examples provided for each JSU feature**, showing in Fixed Tips the JS code required to implement the JSU features. From [Try JSU Samples] you can reach all the other samples and JSU Feature documentation
-  - **Very Powerful and Simple to use**: only 1 or 2 JS instructions to get all the power and flexibilty of the JSU feature 
-  - **Very Simple and flexible JSU configuration** with require.js or including manually the required JSU Files (see par 2 )
-  - **Flexible switch between Comment/Minified JSU** with a single code line modification in jsu.js (see par 2 ) 
-  - **Localization support**: all the displayed messages are isolated in local/LAN/locale-core.js. So you can easily select the desired language simply including the proper locale file (see par 2 ) . JSU provides locale/EN/locale-core.js (English=default) and locale/ITA/locale-core.js (Italian)You can also add and include your personal local/LAN/locale-core.js 
-  - **CSS support** : if required you can easily customize presentation modifying JSU CSS files (core.css, Popup.css)
-
-# 5) JSU Samples
-----
-
-
-
-
-  
-# 6) JSU Documentation
-----
-
-
-  
-# 7) Version
+# 5) JSU Version
 ----
 
 3.3  July 2016
 
 
-# 8) License
+# 6) License
 ----
 
 MIT
