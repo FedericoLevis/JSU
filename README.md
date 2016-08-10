@@ -1,5 +1,6 @@
 ![about] | By [Federico Levis]
 ---------|-----------
+----
 
 JSU 
 ========
@@ -84,7 +85,7 @@ Sample              |Feature Documentation |   API Documentation    | VIDEO of t
 [JSU Tip Sample]    | [Tooltip]    |  [Tooltip API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
 [Main JSU Samples]  | [LoadingDiv]    |  [LoadingDiv API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
 [Main JSU Samples]  | [Validate]    |  [Validate API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
-[JSU SortTable Sample] |  JSU SortTable]  | [SortTable API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
+[JSU SortTable Sample] |  [JSU SortTable]  | [SortTable API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
 [Main JSU Samples]  |[JSlog]    |  [JSlog API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
 [JSU Blocking Popup Sample] | [Blocking Popup] | [Blocking Popup API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
 [Main JSU Samples]  | [JS Popup]    |  [JS Popup API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
@@ -167,6 +168,9 @@ For example see [JSU Tooltip Loading with file List - TipSimple.html]
 ----
 
 MIT
+
+
+----
 
 ![JSUDancing]  | Try JSU Samples: [Try JSU Samples]
 ---------------|-----------
