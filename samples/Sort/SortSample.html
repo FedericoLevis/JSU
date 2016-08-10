@@ -25,14 +25,15 @@
 </head>
 
 <body>
+
 <!--  Table to download JSU.ZIP (common for all the sample) -->
 <table  width="100%">
   <tr>
   <td class="tipr">
   <b>Download Options:</b> 
   <input type="button"  class="tipFixed" id="tipFixedSample"  onclick="downloadTip(event)" /> 
-  <input type="button" class="downloadPay"     onclick="downloadPay()" />
-  <input type="button" class="downloadFree"    onclick="downloadFree();" />
+  <input type="button" class="downloadPay"     onclick="downloadPay()" onmouseover="downloadTipPay(event);" onmouseout="UnTip(event)"/>
+  <input type="button" class="downloadFree" onclick="downloadFree();"	onmouseover="downloadTipFree(event);" onmouseout="UnTip(event)"  />
   </td></tr>
 </table>   
 
@@ -55,17 +56,17 @@
         </select> 
       </th>
       </tr>
-    <tr class="tiptitleBig3">
-      <td width="45%" class="tipc">SAMPLE
+    <tr class="tiptitleBig3" id="tr_sample_0" >
+      <td id="col_0_1" width="45%" class="tipc">SAMPLE
         <!--  To show all sample or only ONE   -->
         <select id="selectSample" style="margin-left:15px" onchange="onchange_sample()">
-            <option value="1">Show Sample_1: Table with Standard Format</option>
-            <option value="2">Show Sample_2: Table with a CUSTOM FORMAT</option>
-            <option value="3">Show Sample_3: Other cSortTable API</option>
-            <option value="ALL" selected>Show ALL Samples</option>
+            <option value="1">Show SAMPLE_1: Table with Standard Format</option>
+            <option value="2">Show SAMPLE_2: Table with a CUSTOM FORMAT</option>
+            <option value="3">Show SAMPLE_3: Other cSortTable API</option>
+            <option value="ALL" selected>Show ALL SAMPLES</option>
       
       </td>
-      <td width="55%" class="tipc">DESCRIPTION</td>
+      <td id="col_0_2" width="55%" class="tipc">DESCRIPTION</td>
     </tr>
 
     <!--   ===================================== TBL1 ==============================================  -->

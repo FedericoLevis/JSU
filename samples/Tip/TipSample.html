@@ -13,11 +13,6 @@
 	<!--  JSU -->
 	<link rel="stylesheet" href="../../core/core.css" type="text/css">
 	<link rel="stylesheet" href="../../core/Popup/Popup.css" type="text/css">
-    <!--
-	<script>
-	var JSU_LOADED_TMO_MS=1;
-	</script>
-    -->
 	<script  data-main="../../plugin/jsu.js" src="../../core/require.js"></script>
   
   <!-- ONLY FOR About -->
@@ -33,15 +28,14 @@
   <td class="tipr">
   <b>Download Options:</b> 
   <input type="button"  class="tipFixed" id="tipFixedSample"  onclick="downloadTip(event)" /> 
-  <input type="button" class="downloadPay"     onclick="downloadPay()" />
-  <input type="button" class="downloadFree"    onclick="downloadFree();" />
+  <input type="button" class="downloadPay"     onclick="downloadPay()" onmouseover="downloadTipPay(event);" onmouseout="UnTip(event)"/>
+  <input type="button" class="downloadFree" onclick="downloadFree();"	onmouseover="downloadTipFree(event);" onmouseout="UnTip(event)"  />
   </td></tr>
 </table>   
 
 <table class="tip" BORDER="2" cellspacing="0" cellpadding="2" width="100%">
     <tr class="tiptitleBig">
       <th class="tiptitleBig" colspan="4">JSU<input type="button" class="tipFixed" id="tipJSUTitle" onclick="aboutTipJSU(event);" />
-	  
         <label class="aboutAuthor">by Federico Levis</label>
             <input type="button" class="tipFixed" id="tipJSUAuthor" onclick="aboutTipAuthor(event);" />
       </th>
@@ -89,11 +83,11 @@
                         onmouseover="Tip(JSU_TIP_HTML);" onmouseout="UnTip(event)" /> 
                   </td>
                   <td width="25%">       
-                  <img type="image" src="../../images/Readme.jpg" align="bottom"
+                  <img type="image" src="https://rawgit.com/FedericoLevis/JSU/master/images/Readme.jpg" align="bottom"
                         onmouseover="Tip(JSU_TIP_README)"    onmouseout="UnTip(event)"/></td>
                   <td width="25%"> 
                   Tip image <b>jsuInfo</b>      
-                  <img type="image" class="jsuInfo"
+                  <input type="button" class="jsuInfo"
                         onmouseover="Tip(JSU_TIP_INFO)"    onmouseout="UnTip(event)"/></td>                        
               </tr>           
           </table>
@@ -104,7 +98,7 @@
            <tr valign="top"><td>
               To add to an HTML Item the <b>Floating Tip</b> you have to call the <b>JSU Tip API</b> <label class="jsuAPI">Tip UnTip</label> in the following events:
                <ul> 
-               <li><b>onmouseover=</b>"<label class="jsuAPI">Tip</label>(<b><i>msg</i></b>);" </li>   
+               <li><b>onmouseover=</b>"<label class="jsuAPI">Tip</label>(<b><i>tipHTML</i></b>);" </li>   
                <li><b>onmouseout=</b>"<label class="jsuAPI">UnTip</label>(event);"  </li>
                </ul>
                JS Code of the 4 Sample 1 cases:
@@ -141,10 +135,10 @@
       <td class="sampleDesc" id="col_2_2">
          <table >
            <tr valign="top"><td>
-               To implement a <b>FixedTip</b> feature:  
+               To implement a <b>FixedTip</b> Tooltip :  
                <ul> 
                <li>Set an <b>input</b> with JSU <label class="jsuAPI">core.css</label> class like <label class="jsuAPI">tipFixed, tipArrowFixed</label> </li>
-               <li>In the <b>onclick</b> call the <b>JSU Tip API</b>   <label class="jsuAPI">TipFixedClick</label>(<b><i>msg</i></b>,event,objOpt)</li>
+               <li>In the <b>onclick</b> call the <b>JSU Tip API</b>   <label class="jsuAPI">TipFixedClick</label>(<b><i>tipHTML</i></b>,event,objOpt)</li>
                </ul>
                JS Code of the First 2 cases of Sample2:
 			         <ul>
@@ -175,7 +169,7 @@
       <td class="sampleDesc" id="col_3_2">
          <table >
            <tr valign="top"><td>
-               To show a <b>FixedTip</b> with <b>JS Code</b>:  
+               To show a <b>FixedTip</b> with <b>JS Code</b> in a TextBox:  
                <ul> 
 	               <li>Set an <b>input</b> with JSU <label class="jsuAPI">core.css</label> class like <label class="jsuAPI">tipJSFixed, tipArrowFixed</label> </li>
 	               <li>In the <b>onclick</b> call the <b>JSU Tip API</b>   <label class="jsuAPI">TipJSFixedClick</label>(<b><i>JScodeMsg</i></b>,event,objOpt)</li>
