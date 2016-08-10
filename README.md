@@ -76,18 +76,18 @@ JSU CONTENT        | LINK
 **CSS DOC**    | [JSU CSS Documentation]
 
   - All previous links are connected each other: from one link you can reach the others.
-  - Each Feature has its specific sample with the detailed explanation of the JS API calls; all the specific samples are reachable from the [Main JSU Samples]
+  - Each Feature has its specific sample with the detailed explanation of the JS API calls; in the FREE Version some samples can be reached only by by the [Main JSU Samples]
   - Each Feature has also its specific Documentation, API Documentation and Demo Video:
   
-Feature Documentation |   API Documentation    | VIDEO of the FEATURE
----------------|-------------------------------|---------------------
-[Tooltip]    |  [Tooltip API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
-[LoadingDiv]    |  [LoadingDiv API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
-[Validate]    |  [Validate API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
-[SortTable]    |  [SortTable API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
-[JSlog]    |  [JSlog API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
-[Blocking Popup]    |  [Blocking Popup API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
-[JS Popup]    |  [JS Popup API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
+Sample              |Feature Documentation |   API Documentation    | VIDEO of the FEATURE
+--------------------|---------------|-------------------------------|---------------------
+[JSU Tip Sample]    | [Tooltip]    |  [Tooltip API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
+[Main JSU Samples]  | [LoadingDiv]    |  [LoadingDiv API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
+[Main JSU Samples]  | [Validate]    |  [Validate API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
+[JSU SortTable Sample]    |  [SortTable API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
+[Main JSU Samples]  |[JSlog]    |  [JSlog API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
+[JSU Blocking Popup Sample]    | [Blocking Popup API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
+[Main JSU Samples]  | [JS Popup]    |  [JS Popup API] |  <a href="https://youtu.be/wpo2oM_L3ds" target="_blank"> <img src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" alt="Click to See the Video" width="100" height="20" border="2" /></a>  
 
 Each of the previous link can be reached by the [Main JSU Samples] or by the specific samples 
 
@@ -200,4 +200,7 @@ MIT
    [JSU Tooltip Loading with require.js jsu.js - TipSample.html]: <https://github.com/FedericoLevis/JSU/blob/master/samples/Tip/TipSample.html>
    [JSU Tooltip Loading with file List - TipSimple.html]: <https://github.com/FedericoLevis/JSU/blob/master/samples/Tip/TipSimple.html>
    
+   [JSU Tip Sample]: <https://rawgit.com/FedericoLevis/JSU/master/samples/Tip/TipSample.html>  
+   [JSU SortTable Sample]: <https://rawgit.com/FedericoLevis/JSU/master/samples/Sort/SortSample.html>  
+   [JSU Blocking Popup Sample]: <https://rawgit.com/FedericoLevis/JSU/master/samples/BlockPopup/PopupSample.html>  
    
