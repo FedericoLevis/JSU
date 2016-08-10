@@ -564,6 +564,11 @@ tr.tiptitleBig,th.tiptitleBig{
   font-size: 13pt;
 }
 
+tr.tiptitleVeryBig,th.tiptitleVeryBig{
+  font-size: 20pt;
+}
+
+
 
 label.tiptitle {
   font-family: Verdana;

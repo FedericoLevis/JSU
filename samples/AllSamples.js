@@ -1,8 +1,37 @@
-/***************************************************************************/
-/*                                                                         */
-/*  This obfuscated code was created by Javascript Obfuscator Free Version.*/
-/*  Javascript Obfuscator Free Version can be downloaded here              */
-/*  http://javascriptobfuscator.com                                        */
-/*                                                                         */
-/***************************************************************************/
-var _$_c66f=["<b>Sort Feature: DAFARE</b>","videoOpt","disabled"];var JSLOG_LEV=0;var TIP_SORT_FEATURE=_$_c66f[0];function jsu_loaded(){if(isIE()|| isFirefox()){var z=getElementById2(_$_c66f[1]);z[_$_c66f[2]]= false}}function onclickSortFeature(K){TipFixedClicked(TIP_SORT_FEATURE,K)}
+
+/* =============================================================================================
+   						CONSTANT
+============================================================================================= */
+
+var JSLOG_LEV = 0;
+
+
+var TIP_SORT_FEATURE="<b>Sort Feature: DAFARE</b>";
+
+
+
+/* =============================================================================================
+									FUNCTION
+============================================================================================= */
+
+/**
+* Called when jsu is loaded
+*/
+function jsu_loaded(){
+  // [Optional] Init jslog
+  // jslog_init(JSLOG_LEV);
+	if (isIE() || isFirefox()){
+		// We can show Video also in Popup
+		var select = getElementById2("videoOpt");
+		select.disabled = false;
+	}	
+	
+};
+
+
+function onclickSortFeature(event){
+	TipFixedClicked (TIP_SORT_FEATURE,event);
+}
+
+
+
