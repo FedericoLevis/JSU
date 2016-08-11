@@ -42,8 +42,8 @@ function sortTbl1Tmo(){
 	//You need Only 1 JSU call to set the Sort 
 	//1) create cSortTable related to Table with id='tbl1' 
   cSortTbl1 = new cSortTable("tbl1",
-  		 [  {col: 'Country'},  // Default type: SORT_TYPE.DATETIME  	
-  		    {col: 'Name'},  // Default type: SORT_TYPE.DATETIME
+  		 [  {col: 'Country'},  // Default type: SORT_TYPE.STRING	
+  		    {col: 'Name'},  // Default type: SORT_TYPE.STRING
 	        // For Date we set the FMT_DATETIME_TBL1 = "NNN dd, yyyy HH:mm:ss"
 	        {col:'Date', type: SORT_TYPE.DATETIME, fmt: FMT_DATETIME_TBL1},
 	        // For NUMBER  we use default separator (used creating the table)
@@ -161,8 +161,8 @@ var JS_CODE_SORT_TBL1= "//SORT SAMPLE_1: One JSU call is enough to set the Sort:
 "// 1) create cSortTable related to Table with id='tbl1' \n" +
 "var cSortTbl1 = new cSortTable('tbl1', \n" +
 " //Describe how to Sort the Table Columns \n" +
-"  [{col: 'Country'},  // Default type: SORT_TYPE.DATETIME \n"+  	
-"   {col: 'Name'},  // Default type: SORT_TYPE.DATETIME \n"+
+"  [{col: 'Country'},  // Default type: SORT_TYPE.STRING \n"+  	
+"   {col: 'Name'},  // Default type: SORT_TYPE.STRING \n"+
 "   // For Date we set the FMT_DATETIME_TBL1 = 'NNN dd, yyyy HH:mm:ss' \n"+
 "   {col:'Date', type: SORT_TYPE.DATETIME, fmt: FMT_DATETIME_TBL1},\n"+
 "   // For NUMBER  we use default separator (used creating the table)\n"+
