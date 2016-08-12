@@ -23,11 +23,22 @@ var JSU_TIP_INFO=JSU_TIP_HTML;
 var TIP_VIDEO_SAMPLE=	'<iframe width="600" height="500" src="https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1" frameborder="0" allowfullscreen></iframe>'; 
 
 var TIP_JS_CODE_SAMPLE_1='//This is an example of JS Code \n' +
-'function showMsg(msg){ \n' +
-'  alert (msg); \n' +
-'}\n' +
-'var msg="Hello!"; \n' +
-'showMsg (msg);';
+"//JS Code to Sort an HTML Table with JSU cSortTable: you need only one JSU API call. \n" +
+"// 1) create cSortTable related to Table with id='tbl1' \n" +
+"var cSortTbl1 = new cSortTable('tbl1', \n" +
+" //Describe how to Sort the Table Columns \n" +
+"  [{col: 'Country'},  // Default type: SORT_TYPE.STRING \n"+  	
+"   {col: 'Name'},  // Default type: SORT_TYPE.STRING \n"+
+"   // For Date we set the FMT_DATETIME_TBL1 = 'NNN dd, yyyy HH:mm:ss' \n"+
+"   {col:'Date', type: SORT_TYPE.DATETIME, fmt: FMT_DATETIME_TBL1},\n"+
+"   // For NUMBER  we use default separator (used creating the table)\n"+
+"   {col: 'Amount', type: SORT_TYPE.NUMBER} ],\n"+  		
+"   // OPTION \n" +
+"     {szSortCol:'Name',   // Current SortCol (we have already Popolated the Table order by this col)\n"+
+"     szSortDir:SORT_DIR.ASC, // Current SortDir (we have Popolated the Table in this way)	\n"+
+"     bSortApply:false   //  Table is already sorted\n"+
+"});\n" +
+"//Now you can Sort the Table by clicking on Colum Header ";
 
 
 /**
@@ -79,9 +90,10 @@ var JS_CODE_HTML_TIP= '//Define in JS the HTML Tip Msg: \n'+
 
 var JS_CODE_README_TIP= '//Define in JS the HTML Tip Msg:  \n'+
 'var JSU_TIP_README=\'<table class="tip" ........</table>\'; \n\n'+
-'//Add onmouseover="Tip()" and onmouseout="UnTip()" \n'+	
+'//Add onmouseover="Tip()" and onmouseout="UnTip()" \n'+
 '<img type="image" src="../../images/Readme.jpg" align="bottom" \n' +
 'onmouseover="Tip(JSU_TIP_README)"    onmouseout="UnTip(event)"/> '; 
+
 
 var JS_CODE_INFO_TIP= '//Define in JS the HTML Tip Msg: \n'+
 'var JSU_TIP_INFO="<b>Simple Tooltip</b> with <i>HTML tags</i><br/>Tip (You can use <u>whatever HTML TAG</u>\');" \n\n' + 
@@ -97,7 +109,8 @@ var JS_CODE_IMG_TIP_FIXED= '//Define in JS the HTML Tip Msg: \n'+
 '//  - whatever unique id \n' + 
 '//  - onclick="TipFixedClicked()" \n'+	
 '//  - objOpt = {szTitle:..} for Optional Title \n' +
-'<input type="button" class="tipFixed"  id="tipFixedSample" onclick="TipFixedClicked(TIP_FIXED_SAMPLE,event,{szTitle:\'Fixed Tip Sample\'});" /> '; 
+'<input type="button" class="tipFixed"  id="tipFixedSample" \n' +
+'   onclick="TipFixedClicked(TIP_FIXED_SAMPLE,event,{szTitle:\'Fixed Tip Sample\'});" /> '; 
 
 var JS_CODE_INPUT_TIP_FIXED= '//Define in JS the HTML Tip Msg: \n'+
 'var TIP_FIXED_SAMPLE=...; \n\n' +
@@ -107,7 +120,8 @@ var JS_CODE_INPUT_TIP_FIXED= '//Define in JS the HTML Tip Msg: \n'+
 '//  - whatever unique id \n' + 
 '//  - onclick="TipJSFixedClicked(msg,event,objOpt)" \n'+	
 '//  - objOpt = {iMaxHeight:300,bCloseBtn:false, szTitle:..} for Optional MaxHeight (VerticalScrollbar), NO CloseButton, Title \n' +
-' <input type="button" class="tipFixed" value="Try Me" id="tipFixedBtnSample"  onclick="TipFixedClicked(TIP_FIXED_SAMPLE,event,{iMaxHeight:300,bCloseBtn:false,szTitle:\'Fixed Tip Sample\'});" /> '; 
+' <input type="button" class="tipFixed" value="Try Me" id="tipFixedBtnSample"  \n' +
+'    onclick="TipFixedClicked(TIP_FIXED_SAMPLE,event,{iMaxHeight:300,bCloseBtn:false,szTitle:\'Fixed Tip Sample\'});" /> '; 
 
 var JS_CODE_IMG_JS_FIXED= '//Define in JS the Msg with the JS Code to higthlight: \n'+
 'var TIP_JS_CODE_SAMPLE_1=...; \n\n' +
@@ -125,4 +139,6 @@ var JS_CODE_INPUT_JS_FIXED= '//Define in JS the Msg with the JS Code to higthlig
 '//  - set whatever unique id \n' + 
 '//  - onclick="TipJSFixedClicked(msg,event,objOpt)" \n'+	
 '//  - objOpt = {iMaxHeight:300} for Optional MaxHeight (Vertical Scrollbar)\n' +
-' <input type="button" class="tipFixed" style="color:blue;" value="JS Source Code" id="tipBtnJSFixedSample"  onclick="TipJSFixedClicked(JS_CODE_SORT_SAMPLE,event,{iMaxHeight:300});" /> '; 
+' <input type="button" class="tipFixed" style="color:blue;" value="JS Source Code" id="tipBtnJSFixedSample"  \n'+
+'    onclick="TipJSFixedClicked(JS_CODE_SORT_SAMPLE,event,{iMaxHeight:300});" /> '; 
+

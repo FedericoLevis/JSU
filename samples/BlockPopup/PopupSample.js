@@ -18,7 +18,7 @@ function jsu_loaded(){
 
 function sampleInit(){
   // Populate popupType select
-  var arSelectId = ["popupType1","popupType1Desc","popupType2"];
+  var arSelectId = ["popupType1","popupType1Desc","popupType2","popupType2Desc",];
   var arPopupType = [POPUP_TYPE.INFO , POPUP_TYPE.WARN , POPUP_TYPE.ERR , POPUP_TYPE.ALARM ,POPUP_TYPE.CONFIRM, 
                      POPUP_TYPE.QUESTION , POPUP_TYPE.QUESTION_3 , POPUP_TYPE.CHOICE , POPUP_TYPE.PROMPT ];
   for (var i=0; i< arSelectId.length; i++){
@@ -29,7 +29,7 @@ function sampleInit(){
       appendOptionLast (select,popupType,popupType);
     }  
   }
-  onchangeSample2(); // simulate to init
+  onchangeSampleType2(); // simulate to init
   onchangeSample3(); // simulate to init
 }
 
@@ -117,8 +117,8 @@ function sample1(){
 /**
  * Align popupType1Desc to popupType1 selected
  */
-function onchange_sampleType1(){
-	var Fn = "[onchange_sampleType1()] ";
+function onchangeSampleType1(){
+	var Fn = "[onchangeSampleType1()] ";
 	
   var szAlertType =  selectGetSelVal(getElementById2('popupType1'));
 	jslog (JSLOG_DEBUG,Fn + "szAlertType=" + szAlertType + "  select same AlertType into popupType1");
@@ -230,14 +230,17 @@ function showAnswerChoice(objRet){
  *             SAMPLE_2
  ============================================================================ */
 
-
-function onchangeSample2(){
-  var Fn="[onchangeSample2] ";
+/**
+ * Align popupType2Desc to popupType2 selected
+ */
+function onchangeSampleType2(){
+	var Fn = "[onchangeSampleType2()] ";
+	
   var szAlertType =  selectGetSelVal(getElementById2('popupType2'));
-  jslog (JSLOG_DEBUG,"szAlertType=" + szAlertType);
+	jslog (JSLOG_DEBUG,Fn + "szAlertType=" + szAlertType + "  select same AlertType into popupType2");
+	selectSelValue(getElementById2('popupType2Desc'), szAlertType);
   elementShow (getElementById2("optChoice"),szAlertType == POPUP_TYPE.CHOICE,"block"); 
   elementShow (getElementById2("optPrompt"),szAlertType == POPUP_TYPE.PROMPT,"block"); 
-    
 }
 
 
@@ -266,6 +269,7 @@ function sample2(){
 }
 
 function sample2Info(){
+	// Prepare the Msg to display, with whatever HTML TAG
   var szMsg = 'This is an Information with <b>some part bold</b>, <i>some part Italic</i>,...<BR/><u>This is the Line 2 that is underlined</u><BR/>' +
     '<label class="PopupGood">This is the  line 3 in bold green (to enphasize <i>Good Msg</i>)</label><BR/>' +
   '<label class="PopupWarning">This is the  line 4 with Yellow Background (to enphasize <i>Warning Msg</i>)</label><BR/>' +
@@ -281,6 +285,7 @@ function sample2Info(){
     '<li><b>POPUP_TYPE.QUESTION_3</b> to ask a Question with 3 Buttons</li>' +
     '<li><b>POPUP_TYPE.PROMPT</b> to Prompt for a value</li>' +
     '</ul>';
+  // Show the Popup 
   Popup(POPUP_TYPE.INFO,szMsg);
 }
 
@@ -650,8 +655,8 @@ function sample4(){
 /**
  * Align type4Desc to type4 selected
  */
-function onchange_sampleType4(){
-	var Fn = "[onchange_sampleType4()] ";
+function onchangeSampleType4(){
+	var Fn = "[onchangeSampleType4()] ";
 	
   var szType =  selectGetSelVal(getElementById2('type4'));
 	jslog (JSLOG_DEBUG,Fn + "szAlertType=" + szType + "  select same AlertType into type4");
@@ -662,7 +667,6 @@ function onchange_sampleType4(){
 //===================================================================================================
 //  BELOW CODE is not strictly related to the Sort feature, but it is ONLY Related to JS Code 
 //===========================================================================================
-
 
 
 var JS1_NOTIFY= '// 1) Show Popup \n' +
@@ -721,6 +725,72 @@ var JS1_CHOICE= '// 1) Show Popup \n' +
 '  }else if (retBtn   == POPUP_BTN.CANCEL){  // Popup Closed clicking CANCEL \n' + 
 '  }else if (retBtn   == POPUP_BTN.CLOSE){  // Popup Closed clicking X or ESC \n' +
 '  ...';
+
+
+
+
+var JS2_NOTIFY= '// Prepare the Msg to display, with whatever HTML TAG \n' +
+'var szMsgHTML = "This is an Information with <b>some part bold</b>, <i>some part Italic</i>,... "; \n' +
+'// Show Popup \n' +
+'//PopupType:   POPUP_TYPE.INFO, .CONFIRM, .WARN, .ERR, .ALARM] \n' +
+'Popup (PopupType,szMsgHTML); ';
+
+var JS2_QUESTION= '// 1) Show Popup, using whatever HTML Tag in szMsg \n' +
+'// PopupType = POPUP_TYPE.QUESTION (2 Buttons) or POPUP_TYPE.QUESTION_3 (3 Buttons) \n'+
+'var objRet = Popup (PopupType,"Do you like <b>Popup API</b>") \n'+
+'// 2) manage the Popup answer, returned into objRet - example: objRet= {"retBtn": "NO"}\n' + 
+'  var retBtn   = objRet.retBtn; \n' +
+'  if (retBtn   == POPUP_BTN.CONFIRM){  // Popup Closed clicking OK \n' + 
+'  }else if (retBtn   == POPUP_BTN.NO){ // Popup Closed clicking NO \n' + 
+'  }else if (retBtn   == POPUP_BTN.CANCEL){  // Popup Closed clicking CANCEL \n' + 
+'  }else if (retBtn   == POPUP_BTN.CLOSE){  // Popup Closed clicking X or ESC \n' +
+'  ...';
+
+
+var JS2_PROMPT= '// 1) Show Popup, using whatever HTML Tag in szMsg \n' +
+'Popup (POPUP_TYPE.PROMPT, \n' +
+'  "Please insert a <b>NUMBER</b>", \n' +
+'  // objOpt Option: PromptLabel, validate \n' +
+'  { szPromptLabel: "VOTE [1..10]: ", \n' +
+'     // Validate Option: NUMBER must be in range [1..10] \n' +
+'     szPromptType: PROMPT_TYPE.NUMBER,  iPromptMin:1,  iPromptMax: 10,iPromptWidth:50, \n' +
+'   }); \n' +
+'  // Example of objRet, if user insert 9 and click OK: objRet= {"retBtn": "CONFIRM", "promptValue": "9"} \n' +
+'  var retBtn   = objRet.retBtn; \n' +
+'  if (retBtn   == POPUP_BTN.CONFIRM){  // Popup Closed clicking OK \n' + 
+'  }else if (retBtn   == POPUP_BTN.CANCEL){  // Popup Closed clicking CANCEL \n' + 
+'  }else if (retBtn   == POPUP_BTN.CLOSE){  // Popup Closed clicking X or ESC \n' +
+'  ...';
+
+
+var JS2_CHOICE= '// 1) Show Popup, using whatever HTML Tag in szMsg. In this example item10 is pre-selected \n' +
+'var objRet = PopupChoice ( //Messages \n' +
+'  "Example of <b>Single Selection Choice</b>......",  "<b>Select only one field</b>", \n' +
+'  // arChoice: \n' +
+'  [{value:1, szText:"This is an example of the Item1", bSel:false},  \n' +
+'     {value:2, szText:"This is an example of the Item2",  bSel:false}, \n' +
+'     ....... \n' +
+'     {value:10, szText:"This is an example of the Item10",  bSel:true}, \n' +
+'     ....... \n' +
+'  ]); \n' +
+'  // Example of objRet, if user select Item2 and click OK: \n' +
+'  // objRet={\n' +
+'  //   "retBtn":"CONFIRM",\n' +
+'  //   "choiceValue":"2",\n' +
+'  //   "choiceText":"This is an example of the Item2",\n' +
+'  //   "arChoice":[{"value":"1","szText":"This is an example of the Item1","bSel":false},\n' +
+'  //               {"value":"2","szText":"This is an example of the Item2","bSel":true},\n' +
+'  //               ..........................................'
+'  //               .......................................... }]}\n' +  
+'// 2) manage the Popup answer, returned into objRet \n' + 
+'  var retBtn   = objRet.retBtn; \n' +
+'  if (retBtn   == POPUP_BTN.CONFIRM){  // Popup Closed clicking OK \n' + 
+'  }else if (retBtn   == POPUP_BTN.CANCEL){  // Popup Closed clicking CANCEL \n' + 
+'  }else if (retBtn   == POPUP_BTN.CLOSE){  // Popup Closed clicking X or ESC \n' +
+'  ...';
+
+
+
 
 
 var JS3_OPT =  
@@ -786,9 +856,34 @@ function sample1JS(event){
   }else {
     szTip = JS1_NOTIFY;
   }  
-  TipJSFixedClicked(szTip,event,{szTitle:"JS Source Code - POPUP_TYPE=" + szAlertType});
+  TipJSFixedClicked(szTip,event,{iMaxWidth:1000, iMaxHeight:500,szTitle:"JS Source Code - POPUP_TYPE=" + szAlertType});
   
 }
+
+
+/**
+ * Show JS Code for Sample2 (in a TextBox because it has HTML tags)
+ * @param event
+ * @returns
+ */
+function sample2JS(event){
+  // Get the szAlertType set by User 
+  var szAlertType =  selectGetSelVal(getElementById2('popupType2Desc'));
+  var szTip="";
+  
+  if (szAlertType == POPUP_TYPE.CHOICE){
+    szTip = JS2_CHOICE;
+  }else if (szAlertType == POPUP_TYPE.PROMPT){
+    szTip = JS2_PROMPT;
+  }else if (szAlertType == POPUP_TYPE.QUESTION || szAlertType == POPUP_TYPE.QUESTION_3){
+    szTip = JS2_QUESTION;
+  }else {
+    szTip = JS2_NOTIFY;
+  }  
+  TipTextBoxFixedClicked(szTip,event,{iColNum:130, iRowNum:20,szTitle:"JS Source Code - POPUP_TYPE=" + szAlertType});
+  
+}
+
 
 
 /**
@@ -797,7 +892,7 @@ function sample1JS(event){
  * @returns
  */
 function sample3JS(event){
-  TipJSFixedClicked(JS3_OPT,event,{iJSColNum:120, iMaxHeight:300,szTitle:"JS Source Code - Popup Option" });
+  TipJSFixedClicked(JS3_OPT,event,{iMaxWidth:1000, iMaxHeight:400,szTitle:"JS Source Code - Popup Option" });
 }
 
 
@@ -814,9 +909,10 @@ function sample4JS(event){
   
   if (szType == "VIDEO"){
     szTip = JS4_VIDEO;
+    TipTextBoxFixedClicked(szTip,event,{szTitle:"JS Source Code - Advanced Sample=" + szTypeText});
   }else if (szType == "ABOUT"){
     szTip = JS4_ABOUT;
+    TipJSFixedClicked(szTip,event,{szTitle:"JS Source Code - Advanced Sample=" + szTypeText});
   }
-  TipJSFixedClicked(szTip,event,{szTitle:"JS Source Code - Advanced Sample=" + szTypeText});
   
 }

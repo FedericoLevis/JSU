@@ -18,6 +18,10 @@
   <!-- ONLY FOR About -->
   <link rel="stylesheet" href="../../core/about/about.css" type="text/css">
   <script type="text/javascript" src="../../core/about/about.js" ></script>
+  
+  <!-- ONLY FOR Prettify (used to color JS Code in Tip)  -->
+  <link rel="stylesheet" href="../../core/prettify/prettify-jsu.css" type="text/css">
+  <script type="text/javascript" src="../../core/prettify/prettify-jsu.js" ></script>
 
 </head>
 <body>
@@ -104,10 +108,10 @@
                JS Code of the 4 Sample 1 cases:
                <table class="sampleNoBorder" width="100%">
                <tr style="font-size: 8pt">
-                 <td > <b>Text Tip </b> Sample: <input type="button" class="tipJSFixed" id="tipJSSimpleTip" onclick="TipJSFixedClicked (JS_CODE_TEXT_TIP,event);" /></td>
-                 <td style="padding-left:15px"><b>HTML Tip </b> Sample: <input type="button" class="tipJSFixed" id="tipJSHTMLTip" onclick="TipJSFixedClicked (JS_CODE_HTML_TIP,event,{iJSColNum:130});" /></td>
-                 <td style="padding-left:15px"> <b>Readme Tip </b> Sample: <input type="button" class="tipJSFixed" id="tipJSReadmeTip" onclick="TipJSFixedClicked (JS_CODE_README_TIP,event);" /></td>
-                 <td style="padding-left:15px"> <b>Info Tip </b> Sample: <input type="button" class="tipJSFixed" id="tipJSReadmeTip" onclick="TipJSFixedClicked (JS_CODE_INFO_TIP,event,{iJSColNum:130});" /></td>
+                 <td > <b>Text Tip </b> Sample: <input type="button" class="tipJSFixed" id="tipJSSimpleTip" onclick="TipTextBoxFixedClicked (JS_CODE_TEXT_TIP,event,{iColNum:100, iRowNum:10});" /></td>
+                 <td style="padding-left:15px"><b>HTML Tip </b> Sample: <input type="button" class="tipJSFixed" id="tipJSHTMLTip" onclick="TipTextBoxFixedClicked (JS_CODE_HTML_TIP,event,{iColNum:110, iRowNum:10});" /></td>
+                 <td style="padding-left:15px"> <b>Readme Tip </b> Sample: <input type="button" class="tipJSFixed" id="tipJSReadmeTip" onclick="TipTextBoxFixedClicked (JS_CODE_README_TIP,event,{iColNum:80, iRowNum:10});" /></td>
+                 <td style="padding-left:15px"> <b>Info Tip </b> Sample: <input type="button" class="tipJSFixed" id="tipJSReadmeTip" onclick="TipTextBoxFixedClicked (JS_CODE_INFO_TIP,event,{iColNum:110, iRowNum:10});" /></td>
                </tr>               
                </table>  
            </td></tr>
@@ -142,9 +146,9 @@
                </ul>
                JS Code of the First 2 cases of Sample2:
 			         <ul>
-			           <li><b>case a)</b> input.tipFixed</b> Sample: <input type="button" class="tipJSFixed" id="imgTipFixed" onclick="TipJSFixedClicked (JS_CODE_IMG_TIP_FIXED,event);" /> 
+			           <li><b>case a)</b> input.tipFixed</b> Sample: <input type="button" class="tipJSFixed" id="imgTipFixed" onclick="TipTextBoxFixedClicked (JS_CODE_IMG_TIP_FIXED,event,{iColNum:120, iRowNum:12});" /> 
 			           </li>    
-			           <li><b>case b) </b> input.tipFixed</b> <i>"Try Me"</i> Sample: <input type="button" class="tipJSFixed" id="inputTipFixed" onclick="TipJSFixedClicked (JS_CODE_INPUT_TIP_FIXED,event,{iJSColNum:140});" /> 
+			           <li><b>case b) </b> input.tipFixed</b> <i>"Try Me"</i> Sample: <input type="button" class="tipJSFixed" id="inputTipFixed" onclick="TipTextBoxFixedClicked (JS_CODE_INPUT_TIP_FIXED,event,{iColNum:130, iRowNum:15);" /> 
 			           </li>    
 			         </ul>
            </td></tr>
@@ -161,7 +165,7 @@
                    <input type="button" class="tipJSFixed" id="tipInputJSFixedSample"  onclick="TipJSFixedClicked(TIP_JS_CODE_SAMPLE_1,event);" />
                </li>    
            <li><b>case b) </b> input  type="button" class="<label class="jsuAPI">tipArrowFixed</label>" (with Vertical Scrollbar):   
-                   <input type="button" class="tipArrowFixed" style="color:blue;" value="JS Source Code" id="tipBtnJSFixedSample"  onclick="TipJSFixedClicked(JS_CODE_VALIDATE,event,{iJSMaxHeight:200});" />
+                   <input type="button" class="tipArrowFixed" style="color:blue;" value="JS Source Code" id="tipBtnJSFixedSample"  onclick="TipJSFixedClicked(JS_CODE_VALIDATE,event,{iMaxHeight:200});" />
            </li>    
          </ul>
       </td>
@@ -176,9 +180,9 @@
                </ul>
                JS Code of Sample3:
                <ul>
-                 <li><b>case a)</b>input.tipJSFixed</b> Sample: <input type="button" class="tipJSFixed" id="imgTipJSFixed" onclick="TipJSFixedClicked (JS_CODE_IMG_JS_FIXED,event);" />
+                 <li><b>case a)</b>input.tipJSFixed</b> Sample: <input type="button" class="tipJSFixed" id="imgTipJSFixed" onclick="TipTextBoxFixedClicked (JS_CODE_IMG_JS_FIXED,event);" />
                  </li>    
-                 <li><b>case b) </b> input.tipArrowFixed</b> Sample with JSSourceCode"" Button: <input type="button" class="tipJSFixed" id="inputTipJSFixed" onclick="TipJSFixedClicked (JS_CODE_INPUT_JS_FIXED,event,{iJSMaxWidth:600});" />     
+                 <li><b>case b) </b> input.tipArrowFixed</b> Sample with JSSourceCode"" Button: <input type="button" class="tipJSFixed" id="inputTipJSFixed" onclick="TipTextBoxFixedClicked (JS_CODE_INPUT_JS_FIXED,event,{iColNum:130});" />     
                  </li>    
                </ul>
            </td></tr>
