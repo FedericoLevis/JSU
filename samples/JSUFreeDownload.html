@@ -9,6 +9,8 @@
 <!-- JSUtility   -->
 <script>
 var JSU_PATH_BASE="..";   // Path of jsu relative of this html
+
+var TIP_JSU_ZIP='<div style="width:250px;" align="left">Click to Download <b>JSU-master.zip</b>:<BR/> <b>JSU FREE Version <i>Obfuscated</i></b></div>';
 </script>
 <link rel="stylesheet" href="../core/core.css" type="text/css">
 <link rel="stylesheet" href="../core/Popup/Popup.css" type="text/css">
@@ -92,7 +94,8 @@ var JSU_PATH_BASE="..";   // Path of jsu relative of this html
 		</tr>
 		<tr>
 		  <td class="tipx" style="padding-top:20px;padding-bottom:20px;">
-         <input type="button" class="downloadPageFree" onclick="downloadPageFree();" onmouseover="downloadTipPageFree(event);" onmouseout="UnTip(event)"  />
+         <input type="button" class="downloadPageFree" onclick="downloadPageFree();" 
+            onmouseover="Tip(TIP_JSU_ZIP);" onmouseout="UnTip(event)"  />
 		  </td>
 		</tr>
   </table>			 
