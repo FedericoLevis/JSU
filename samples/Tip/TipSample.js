@@ -18,11 +18,7 @@ var JSU_TIP_README='<table class="tip" BORDER="2" cellspacing="0" cellpadding="2
 var JSU_TIP_INFO=JSU_TIP_HTML;
 
 
-
-
-var TIP_VIDEO_SAMPLE=	'<iframe width="600" height="500" src="https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1" frameborder="0" allowfullscreen></iframe>'; 
-
-var TIP_JS_CODE_SAMPLE_1='//This is an example of JS Code \n' +
+var JSU_TIP_3A='//This is an example of JS Code that we want to display Hightlighted: \n\n' +
 "//JS Code to Sort an HTML Table with JSU cSortTable: you need only one JSU API call. \n" +
 "// 1) create cSortTable related to Table with id='tbl1' \n" +
 "var cSortTbl1 = new cSortTable('tbl1', \n" +
@@ -40,6 +36,23 @@ var TIP_JS_CODE_SAMPLE_1='//This is an example of JS Code \n' +
 "});\n" +
 "//Now you can Sort the Table by clicking on Colum Header ";
 
+var JSU_TIP_3B='//This is an example of MIXED Code: JS and also HTML. \n' +
+'//	HTML TAGs cannot be displayed with TipJSFixedClick(), but you should use TipTextBoxFixedClick()  \n\n' +
+'//--------------------------------------------------------- JS CODE \n' +
+'var JS_CODE_SORT_SAMPLE=...; \n\n' +
+'//<input> object with: \n' +
+'//  - class="tipFixed" type="button" \n' + 
+'//  - value=Text to display in the button \n'+	
+'//  - set whatever unique id \n' + 
+'//  - onclick="TipJSFixedClicked(msg,event,objOpt)" \n'+	
+'//  - objOpt = {iMaxHeight:300} for Optional MaxHeight (Vertical Scrollbar)\n\n' +
+'//--------------------------------------------------------- CODE with HTML TAGs \n' +
+' <input type="button" class="tipFixed" style="color:blue;" value="JS Source Code" id="tipBtnJSFixedSample"  \n'+
+'    onclick="TipJSFixedClicked(JS_CODE_SORT_SAMPLE,event,{iMaxHeight:300});" /> '; 
+
+
+
+
 
 /**
 * Called when jsu is loaded
@@ -56,7 +69,7 @@ function jsu_loaded(){
 
 
 
-function sample2Fixed(event, iMaxHeight,bCloseBtn){
+function sample2a(event){
 	var szTip='<table class="tip" BORDER="2" cellspacing="0" cellpadding="2" width="450">' +
 	'<tr><td class="tipl">Open/Close <b>Fixed Tip</b>:<ul>' +
 	' <li><b>Open</b> Tip by clicking the <b>Down Arrow</b></li>' +
@@ -70,75 +83,165 @@ function sample2Fixed(event, iMaxHeight,bCloseBtn){
 	'In the Tip you can display whatever HTML object, also <b>GIF</b> <BR/>' +
 	'<div align="center"><img height="200px" src="' + JSU_PATH_ABOUT_IMG + 'JSUDancing.gif" /></div>' +
 	'</td></tr></table>';	
-	TipFixedClicked(szTip,event,{szTitle:'Fixed Tip Sample',iMaxHeight:iMaxHeight,bCloseBtn:bCloseBtn});
+	TipFixedClicked(szTip,event,{
+		szTitle:'Fixed Tip Sample',
+		iMaxHeight:1000,
+		bCloseBtn:true});
 }
+
+
+function sample2b(event){
+	var JSU_TIP_2B=	'<iframe width="600" height="500" src="https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1" frameborder="0" allowfullscreen></iframe>'; 
+	
+	TipFixedClicked(JSU_TIP_2B,event,{
+		 iMaxWidth: 650,  
+		 szTitle:'Fixed Tip with a Video'
+	 }
+	);
+}
+
+
+/**
+ * 
+ * @param event
+ */
+function sample3a(event){
+	TipJSFixedClicked(JSU_TIP_3A,event,
+			 {iMaxWidth:1000,
+		    iMaxHeight:600,
+		    szTitle:'Tip Sample with ONLY JS Code'
+		   });	
+}
+
+/**
+ * 
+ * @param event
+ */
+function sample3b(event){
+	TipTextBoxFixedClicked(JSU_TIP_3B,event,
+			 {iMaxRow:15,
+		    iMaxCol:130,
+		    szTitle:'Text Box with HTML TAGs'
+		   });	
+}
+
+
 
 //===================================================================================================
 //  BELOW CODE is not strictly related to the Sort feature, but it is ONLY Related to JS Code Highlight
 //===========================================================================================
 
-var JS_CODE_TEXT_TIP= '//Add onmouseover="Tip()" and onmouseout="UnTip()" \n'+
+var JS_CODE_1_TEXT= '//JS and HTML Code to implement SAMPLE_1 - TextTip case: \n\n' +
+'// 1 HTML) Add onmouseover="Tip()" and onmouseout="UnTip()" \n'+
 '<input type="button" value="Text Tip" \n' + 
 'onmouseover="Tip(\'Simple Tooltip without HTML tags.\\nNewline is working\')" \n' +
 'onmouseout="UnTip(event)"/>';
 
-var JS_CODE_HTML_TIP= '//Define in JS the HTML Tip Msg: \n'+
+var JS_CODE_1_HTML= '//JS and HTML Code to implement SAMPLE_1 - HTMLTip case: \n\n' +
+'// ---------------------------------------------------------------------------------  \n'+
+'// 1 JS) Define in JS the MsgHtml to show in the Tip:  \n'+
 'var JSU_TIP_HTML="<b>Simple Tooltip</b> with <i>HTML tags</i><br/>Tip (You can use <u>whatever HTML TAG</u>"; \n\n' + 
-'//Add onmouseover="Tip()" and onmouseout="UnTip()" \n'+	
+'// ---------------------------------------------------------------------------------  \n'+
+'// 2) Add onmouseover="Tip()" and onmouseout="UnTip()" \n'+	
 '<input type="text" value="HTML Tip" style="width:60px;" \n' +
 'onmouseover="Tip(JSU_TIP_HTML);" onmouseout="UnTip(event)" />'; 
 
-var JS_CODE_README_TIP= '//Define in JS the HTML Tip Msg:  \n'+
+var JS_CODE_1_README= '//JS and HTML Code to implement SAMPLE1 - READMETip case: \n\n' +
+'// ---------------------------------------------------------------------------------  \n'+
+'// 1 JS) Define in JS the MsgHtml to show in the Tip:  \n'+
 'var JSU_TIP_README=\'<table class="tip" ........</table>\'; \n\n'+
-'//Add onmouseover="Tip()" and onmouseout="UnTip()" \n'+
+'// ---------------------------------------------------------------------------------  \n'+
+'// 2 HTML) Add onmouseover="Tip()" and onmouseout="UnTip()" \n'+
 '<img type="image" src="../../images/Readme.jpg" align="bottom" \n' +
 'onmouseover="Tip(JSU_TIP_README)"    onmouseout="UnTip(event)"/> '; 
 
 
-var JS_CODE_INFO_TIP= '//Define in JS the HTML Tip Msg: \n'+
+var JS_CODE_1_INFO= '//JS and HTML Code to implement SAMPLE_1 - InfoButton Tip case: \n\n' +
+'// ---------------------------------------------------------------------------------  \n'+
+'// 1 JS) Define in JS the MsgHtml to show in the Tip:  \n'+
 'var JSU_TIP_INFO="<b>Simple Tooltip</b> with <i>HTML tags</i><br/>Tip (You can use <u>whatever HTML TAG</u>\');" \n\n' + 
-'//Add onmouseover="Tip()" and onmouseout="UnTip()" \n'+	
+'// ---------------------------------------------------------------------------------  \n'+
+'// 2 HTML) Add onmouseover="Tip()" and onmouseout="UnTip()" \n'+	
 '<img type="image" class="jsuInfo"  \n' +
 'onmouseover="Tip(JSU_TIP_INFO);" onmouseout="UnTip(event)" />'; 
 
 
-var JS_CODE_IMG_TIP_FIXED= '//Define in JS the HTML Tip Msg: \n'+
+var JS_CODE_2A= '//JS and HTML Code to implement SAMPLE_2 - case a GIF) \n\n' +
+'// ---------------------------------------------------------------------------------  \n'+
+'// 1 JS) Define in JS the MsgHtml to show in the Tip:  \n'+
 'var TIP_FIXED_SAMPLE=...; \n\n' +
+'// ---------------------------------------------------------------------------------  \n'+
+'// 2 HTML) Add an <input> with following attributes:" \n'+	
 '//<input> object with: \n' +
 '//  - class="tipFixed"  type="button" \n' + 
 '//  - whatever unique id \n' + 
 '//  - onclick="TipFixedClicked()" \n'+	
-'//  - objOpt = {szTitle:..} for Optional Title \n' +
+'//  - objOpt = {..} Set Option \n' +
 '<input type="button" class="tipFixed"  id="tipFixedSample" \n' +
-'   onclick="TipFixedClicked(TIP_FIXED_SAMPLE,event,{szTitle:\'Fixed Tip Sample\'});" /> '; 
+'   onclick="TipFixedClicked(TIP_FIXED_SAMPLE,event,{ \n' +
+'      iMaxHeight:1000, \n' +
+'      szTitle:\'Fixed Tip Sample\'});" /> '; 
 
-var JS_CODE_INPUT_TIP_FIXED= '//Define in JS the HTML Tip Msg: \n'+
-'var TIP_FIXED_SAMPLE=...; \n\n' +
+var JS_CODE_2B= '//JS and HTML Code to implement SAMPLE_2 - case b VIDEO) \n\n' +
+'// ---------------------------------------------------------------------------------  \n'+
+'// 1 JS) Define in JS the MsgHtml to show in the Tip, with the Video <iframe>:  \n'+
+'var JSU_TIP_2B=	\'<iframe width="600" height="500" \n'+
+'     src="https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1" \n'+
+'     frameborder="0" allowfullscreen></iframe>\'; \n\n'+ 
+'// ---------------------------------------------------------------------------------  \n'+
+'// 2 HTML) Add an <input> with following attributes:" \n'+	
 '//<input> object with: \n' +
-'//  - class="tipFixed" type="button" \n' + 
-'//  - value=Text to display in the button \n'+	
+'//  - class="tipFixed"  type="button" \n' + 
 '//  - whatever unique id \n' + 
-'//  - onclick="TipJSFixedClicked(msg,event,objOpt)" \n'+	
-'//  - objOpt = {iMaxHeight:300,bCloseBtn:false, szTitle:..} for Optional MaxHeight (VerticalScrollbar), NO CloseButton, Title \n' +
-' <input type="button" class="tipFixed" value="Try Me" id="tipFixedBtnSample"  \n' +
-'    onclick="TipFixedClicked(TIP_FIXED_SAMPLE,event,{iMaxHeight:300,bCloseBtn:false,szTitle:\'Fixed Tip Sample\'});" /> '; 
+'//  - onclick="TipFixedClicked()" \n'+	
+'//  - objOpt = {..} Set Option \n' +
+' <input type="button" class="tipArrowFixed" value="Show Video" id="tipFixedBtnVideo" \n'+	
+'  onclick="TipFixedClicked(JSU_TIP_2B,event,{ \n' +
+'     iMaxWidth: 650,  \n' +  
+'     szTitle:\'Fixed Tip with a Video\' \n' +
+'   });" /> ';
 
-var JS_CODE_IMG_JS_FIXED= '//Define in JS the Msg with the JS Code to higthlight: \n'+
-'var TIP_JS_CODE_SAMPLE_1=...; \n\n' +
-'//<img> object with: \n' +
-'//  - class="tipFixed" \n' + 
-'//  - Set whatever unique id \n' + 
-'//  - onclick="TipJSFixedClicked()" \n'+	
-'<img class="tipJSFixed" id="tipInputJSFixedSample"  onclick="TipJSFixedClicked(TIP_JS_CODE_SAMPLE_1,event);" />'; 
 
-var JS_CODE_INPUT_JS_FIXED= '//Define in JS the Msg with the JS Code to higthlight:: \n'+
-'var JS_CODE_SORT_SAMPLE=...; \n\n' +
+
+var JS_CODE_3A= '//JS and HTML Code to implement SAMPLE_3 - case a) ONLY JS \n' +
+'// In This case we can use TipJSFixedClicked to Hightlight the JS Code:  \n\n'+
+'// ---------------------------------------------------------------------------------  \n'+
+'// 1 JS) Define in JS the jsMsgCode to show in the Tip:  \n'+
+'var JSU_TIP_3A=...; \n\n' +
+'// ---------------------------------------------------------------------------------  \n'+
+'// 2 HTML) Add an <input> with following attributes:" \n'+	
 '//<input> object with: \n' +
-'//  - class="tipFixed" type="button" \n' + 
-'//  - value=Text to display in the button \n'+	
-'//  - set whatever unique id \n' + 
-'//  - onclick="TipJSFixedClicked(msg,event,objOpt)" \n'+	
-'//  - objOpt = {iMaxHeight:300} for Optional MaxHeight (Vertical Scrollbar)\n' +
-' <input type="button" class="tipFixed" style="color:blue;" value="JS Source Code" id="tipBtnJSFixedSample"  \n'+
-'    onclick="TipJSFixedClicked(JS_CODE_SORT_SAMPLE,event,{iMaxHeight:300});" /> '; 
+'//  - class="tipJSFixed"  type="button" \n' + 
+'//  - whatever unique id \n' + 
+'//  - onclick="TipJSFixedClicked()" \n'+	
+'//  - objOpt = {..} Set Option \n' +
+'<input type="button" class="tipJSFixed"  id="sample3a" \n' +
+'   onclick="TipJSFixedClicked(TIP_TIP_3A,event,{ \n' +
+'      iMaxWidth:1000,  \\ preferred MaxWidth  \n' +
+'      iMaxHeight:600, \\ preferred MaxHeight \n' +
+'      szTitle:\'Tip Sample with ONLY JS Code\'});" /> '; 
+
+
+var JS_CODE_3B= '//JS and HTML Code to implement SAMPLE_3 - case b) JS and HTML \n' +
+'// In This case we cannot use TipJSFixedClicked to Hightlight the JS Code, because there is already HTML Code in Msg \n'+
+'// Instead we use TipTextBoxFixedClicked to Show the message as Plain Text, and see the HTML TAGs  \n\n'+
+'// ---------------------------------------------------------------------------------  \n'+
+'// 1 JS) Define in JS the szTxt to show in the Tip (with also HTML TAGs):  \n'+
+'var JSU_TIP_3B=...; \n\n' +
+'// ---------------------------------------------------------------------------------  \n'+
+'// 2 HTML) Add an <input> with following attributes:" \n'+	
+'//<input> object with: \n' +
+'//  - class="tipJSFixed"  type="button" \n' + 
+'//  - whatever unique id \n' + 
+'//  - onclick="TipJSFixedClicked()" \n'+	
+'//  - objOpt = {..} Set Option \n' +
+'<input type="button" class="tipArrowFixed" style="color:blue;" value="Source Code" id="sample3b" \n' +
+'   onclick="TipTextBoxFixedClicked(TIP_TIP_3B,event,{ \n' +
+'      iMaxRow:20,  \\ preferred Row Num  \n' +
+'      iMaxCol:120, \\ preferred Col Num \n' +
+'      szTitle:\'Text Box with ONLY also HTML TAGs\'});" /> '; 
+
+
+
+
 
