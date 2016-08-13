@@ -16,8 +16,8 @@
 	<script  data-main="../../plugin/jsu.js" src="../../core/require.js"></script>
 
   <!-- ONLY FOR About -->
-  <link rel="stylesheet" href="../../core/about/about.css" type="text/css">
-  <script type="text/javascript" src="../../core/about/about.js" ></script>
+  <link rel="stylesheet" href="../about/about.css" type="text/css">
+  <script type="text/javascript" src="../about/about.js" ></script>
 
   <!-- ONLY FOR Prettify (used to color JS Code in Tip)  -->
   <link rel="stylesheet" href="../../core/prettify/prettify-jsu.css" type="text/css">
@@ -103,7 +103,7 @@
       <td class="sampleDesc"  id="col_1_2"  valign="top">
          <table >
            <tr valign="top"><td>
-               <label class="aboutSource">JS Souce Code</label> of Sample_1: <input type="button" class="tipJSFixed" id="tipJSTbl1" onclick="TipJSFixedClicked (JS_CODE_SORT_TBL1,event);" /><BR/>
+               <label class="aboutSource">JS Souce Code</label> of Sample_1: <input type="button" class="tipJSFixed" id="tipJSTbl1" onclick="TipFixedJS (JS_CODE_SORT_TBL1,event);" /><BR/>
                Table of this sample has <label class="sampleBrown">FEW PROPERTIES (in Brown below) different from <label class="jsuAPI">cSortTable</label> JSU default.</label><BR/>
                Table Columns:
                <ul type="square">
@@ -180,7 +180,7 @@
       <td class="sampleDesc" id="col_2_2"  valign="top">
          <table >
            <tr valign="top"><td>
-               <label class="aboutSource">JS Source Code</label> of SAMPLE_2: <input type="button" class="tipJSFixed" id="tipJSTbl2" onclick="TipJSFixedClicked (JS_CODE_SORT_TBL2,event);" /><BR/>
+               <label class="aboutSource">JS Source Code</label> of SAMPLE_2: <input type="button" class="tipJSFixed" id="tipJSTbl2" onclick="TipFixedJS (JS_CODE_SORT_TBL2,event);" /><BR/>
                Table has <label class="sampleBrown">MANY PROPERTIES (in Brown below) different from <label class="jsuAPI">cSortTable</label> JSU default.</label><BR/>
                Table Columns:
                <ul type="square">
@@ -266,9 +266,9 @@
                As explained in previous samples, to add Sort features to a Table we simply call <label class="tipJSUApi">new cSortTable</label>  <BR/>  
                If required, there are also following <label class="jsuAPI">cSortTable</label> API:
                <ul type="square">
-               <li><b>setSort</b> Set SortCol and SortDirection<input type="button" class="tipJSFixed" id="tipJSSetSort" onclick="TipJSFixedClicked (JS_CODE_SET_SORT,event);" /></li>
-               <li><b>getSortCol</b> Get Sort Column<input type="button" class="tipJSFixed" id="tipJSGetSortCol" onclick="TipJSFixedClicked (JS_CODE_GET_SORT_COL,event);" /></li>
-               <li><b>getSortDir</b> Get Sort Direction  <input type="button" class="tipJSFixed" id="tipJSGetSortDir" onclick="TipJSFixedClicked (JS_CODE_GET_SORT_DIR,event);" /></li>
+               <li><b>setSort</b> Set SortCol and SortDirection<input type="button" class="tipJSFixed" id="tipJSSetSort" onclick="TipFixedJS (JS_CODE_SET_SORT,event);" /></li>
+               <li><b>getSortCol</b> Get Sort Column<input type="button" class="tipJSFixed" id="tipJSGetSortCol" onclick="TipFixedJS (JS_CODE_GET_SORT_COL,event);" /></li>
+               <li><b>getSortDir</b> Get Sort Direction  <input type="button" class="tipJSFixed" id="tipJSGetSortDir" onclick="TipFixedJS (JS_CODE_GET_SORT_DIR,event);" /></li>
                </ul>
            </td></tr>
          </table>

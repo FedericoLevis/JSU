@@ -16,8 +16,8 @@
 	<script  data-main="../../plugin/jsu.js" src="../../core/require.js"></script>
   
   <!-- ONLY FOR About -->
-  <link rel="stylesheet" href="../../core/about/about.css" type="text/css">
-  <script type="text/javascript" src="../../core/about/about.js" ></script>
+  <link rel="stylesheet" href="../about/about.css" type="text/css">
+  <script type="text/javascript" src="../about/about.js" ></script>
   
   <!-- ONLY FOR Prettify (used to color JS Code in Tip)  -->
   <link rel="stylesheet" href="../../core/prettify/prettify-jsu.css" type="text/css">
@@ -30,7 +30,7 @@
 <table  width="100%">
   <tr>
   <td class=tipl"">
-     <input type="button"  class="tipGoogleAnal" id="tipGoogleAnal"  onclick="jsuGoogleAnal(event)" /> 
+     <input type="button"  class="tipGoogleAnal" id="tipGoogleAnal"  onclick="jsuGoogleAnal(event)"  onmouseover="jsuGoogleAnalTip(event);" onmouseout="UnTip(event)"/> 
   </td>
   <td class="tipr">
   <b>Download Options:</b> 
@@ -111,10 +111,10 @@
                JS Code of the 4 Sample 1 cases:
                <table class="sampleNoBorder" width="100%">
                <tr style="font-size: 8pt">
-                 <td > <b>Text Tip </b> Sample: <input type="button" class="tipJSFixed" id="tipJSSimpleTip" onclick="TipTextBoxFixedClicked (JS_CODE_1_TEXT,event,{iColNum:100, iRowNum:10});" /></td>
-                 <td style="padding-left:15px"><b>HTML Tip </b> Sample: <input type="button" class="tipJSFixed" id="tipJSHTMLTip" onclick="TipTextBoxFixedClicked (JS_CODE_1_HTML,event,{iMaxWidth:1000,iColNum:110, iRowNum:10});" /></td>
-                 <td style="padding-left:15px"> <b>Readme Tip </b> Sample: <input type="button" class="tipJSFixed" id="tipJSReadmeTip" onclick="TipTextBoxFixedClicked (JS_CODE_1_README,event,{iMaxWidth:1000,iColNum:80, iRowNum:10});" /></td>
-                 <td style="padding-left:15px"> <b>Info Tip </b> Sample: <input type="button" class="tipJSFixed" id="tipJSReadmeTip" onclick="TipTextBoxFixedClicked (JS_CODE_1_INFO,event,{iMaxWidth:1200,iColNum:110, iRowNum:10});" /></td>
+                 <td > <b>Text Tip </b> Sample: <input type="button" class="tipJSFixed" id="tipJSCode_1_1" onclick="TipFixedTextBox (JS_CODE_1_TEXT,event,{iColNum:100, iRowNum:10});" /></td>
+                 <td style="padding-left:15px"><b>HTML Tip </b> Sample: <input type="button" class="tipJSFixed" id="tipJSCode_1_2" onclick="TipFixedTextBox (JS_CODE_1_HTML,event,{iMaxWidth:1000,iColNum:110, iRowNum:10});" /></td>
+                 <td style="padding-left:15px"> <b>Readme Tip </b> Sample: <input type="button" class="tipJSFixed" id="tipJSCode_1_3" onclick="TipFixedTextBox (JS_CODE_1_README,event,{iMaxWidth:1000,iColNum:80, iRowNum:10});" /></td>
+                 <td style="padding-left:15px"> <b>Info Tip </b> Sample: <input type="button" class="tipJSFixed" id="tipJSCode_1_4" onclick="TipFixedTextBox (JS_CODE_1_INFO,event,{iMaxWidth:1200,iColNum:110, iRowNum:10});" /></td>
                </tr>               
                </table>  
            </td></tr>
@@ -143,16 +143,16 @@
                To implement a <b>FixedTip</b> Tooltip :  
                <ul> 
                <li>Set an <b>input</b> with JSU <label class="jsuAPI">core.css</label> class like <label class="jsuAPI">tipFixed, tipArrowFixed</label> </li>
-               <li>In the <b>onclick</b> call the <b>JSU Tip API</b>   <label class="jsuAPI">TipFixedClick</label>(<b><i>tipHTML</i></b>,event,objOpt)</li>
+               <li>In the <b>onclick</b> call the <b>JSU Tip API</b>   <label class="jsuAPI">TipFixed</label>(<b><i>tipHTML</i></b>,event,objOpt)</li>
                </ul>
                JS Code of the two cased of SAMPLE_2:
 			         <ul>
 			           <li><b>case a) GIF: </b> 
-			             <input type="button" class="tipJSFixed" id="imgTipFixed" onclick="TipTextBoxFixedClicked (JS_CODE_2A,event,{iColNum:120});" /> 
+			             <input type="button" class="tipJSFixed" id="imgTipFixed" onclick="TipFixedTextBox (JS_CODE_2A,event,{iColNum:120});" /> 
 			           </li>
 			           <BR/>    
 			           <li><b>case b) VIDEO: </b> 
-			             <input type="button" class="tipJSFixed" id="inputTipFixed" onclick="TipTextBoxFixedClicked (JS_CODE_2B,event,{iColNum:130});" /> 
+			             <input type="button" class="tipJSFixed" id="inputTipFixed" onclick="TipFixedTextBox (JS_CODE_2B,event,{iColNum:130});" /> 
 			           </li>    
 			         </ul>
            </td></tr>
@@ -166,12 +166,12 @@
          <label class="sampleTitle">SAMPLE_3 - FixedTip with JS Code</label>
          <ul>
            <li><b>case a) ONLY JS Code</b><BR/>
-               Use JS Tooltip API: <label class="jsuAPI">TipJSFixedClicked</label>":   
+               Use JS Tooltip API: <label class="jsuAPI">TipFixedJS</label>":   
                    <input type="button" class="tipJSFixed" id="sample3a"  onclick="sample3a(event);" />
            </li>    
            <BR/>    
            <li><b>case b) Message with HTML TAGs</b><BR/>
-            Use JS Tooltip API: <label class="jsuAPI">TipTextBoxFixedClicked</label>"    
+            Use JS Tooltip API: <label class="jsuAPI">TipFixedTextBox</label>"    
                    <input type="button" class="tipArrowFixed" style="color:blue;" value="Source Code" id="sample3b"  onclick="sample3b(event);" />
            </li>    
          </ul>
@@ -184,18 +184,18 @@
                <ul> 
 	               <li>Set an <b>input</b> with JSU <label class="jsuAPI">core.css</label> class like <label class="jsuAPI">tipJSFixed, tipArrowFixed</label> </li>
 	               <li>In the <b>onclick </b> event, call the proper <b>JSU Tooltip API</b> depending on the Code Type: <ul>
-                    <li><b>a) ONLY JS Code:</b> Call <label class="jsuAPI">TipJSFixedClick</label>(<b><i>JScodeMsg</i></b>,event,objOpt)</li> to hightlight JS Code </li>
-                    <li><b>b) Message with HTML TAGs:</b> Call <label class="jsuAPI">TipTextBoxFixedClick</label>(<b><i>szTextMsg</i></b>,event,objOpt)</li> that show HTML as Text Message in a <b> Text Box</b> </li>
+                    <li><b>a) ONLY JS Code:</b> Call <label class="jsuAPI">TipFixedJS</label>(<b><i>JScodeMsg</i></b>,event,objOpt)</li> to hightlight JS Code </li>
+                    <li><b>b) Message with HTML TAGs:</b> Call <label class="jsuAPI">TipFixedTextBox</label>(<b><i>szTextMsg</i></b>,event,objOpt)</li> that show HTML as Text Message in a <b> Text Box</b> </li>
 	               </ul>
                </ul>
                JS Code of SAMPLE_3:
                <ul>
                  <li><b>case a) ONLY JS Code: </b>  
-                    <input type="button" class="tipJSFixed" id="imgTipJSFixed" onclick="TipTextBoxFixedClicked (JS_CODE_3A,event,{iMaxWidth:1000});" />
+                    <input type="button" class="tipJSFixed" id="imgTipJSFixed" onclick="TipFixedTextBox (JS_CODE_3A,event,{iMaxWidth:1000});" />
                  </li>
                  <BR/>    
                  <li><b>case b) Message with HTML TAGs: </b>  
-                    <input type="button" class="tipJSFixed" id="imgTipJSFixed" onclick="TipTextBoxFixedClicked (JS_CODE_3B,event,{iMaxWidth:1000});" />
+                    <input type="button" class="tipJSFixed" id="imgTipJSFixed" onclick="TipFixedTextBox (JS_CODE_3B,event,{iMaxWidth:1000});" />
                  </li>    
                </ul>
            </td></tr>
