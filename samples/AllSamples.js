@@ -25,13 +25,12 @@ function jsu_loaded(){
 		var select = getElementById2("videoOpt");
 		select.disabled = false;
 	}	
-	
+	manage_par_opt();
 };
 
 
 function onclickSortFeature(event){
 	TipFixedClicked (TIP_SORT_FEATURE,event);
 }
-
 
 
