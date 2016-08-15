@@ -856,7 +856,7 @@ function sample1JS(event){
   }else {
     szTip = JS1_NOTIFY;
   }  
-  TipJSFixedClicked(szTip,event,{iMaxWidth:1000, iMaxHeight:500,szTitle:"JS Source Code - POPUP_TYPE=" + szAlertType});
+  TipJSFixedClicked(szTip,event,{iWidth:1000, iMaxHeight:500,szTitle:"JS Source Code - POPUP_TYPE=" + szAlertType});
   
 }
 
@@ -892,7 +892,7 @@ function sample2JS(event){
  * @returns
  */
 function sample3JS(event){
-  TipJSFixedClicked(JS3_OPT,event,{iMaxWidth:1000, iMaxHeight:400,szTitle:"JS Source Code - Popup Option" });
+  TipJSFixedClicked(JS3_OPT,event,{iWidth:1000, iMaxHeight:400,szTitle:"JS Source Code - Popup Option" });
 }
 
 

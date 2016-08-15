@@ -33,7 +33,7 @@ var externalPluginVersion = "/Minify";
 var JSU_PATH_IMG =   JSU_PATH_BASE + "/images/";
 // var JSU_PATH_ABOUT_IMG = JSU_PATH_IMG + "about/";
 var JSU_PATH_ABOUT_IMG = "https://rawgit.com/FedericoLevis/images/master/jsuAbout/";
-var JSU_PATH_POPUP_HTML = JSU_PATH_BASE +  "/core/Popup/";
+var JSU_PATH_POPUP_HTML = JSU_PATH_BASE +  "/core/BlockPopup/";
 
 
 //----------------------------------- MODULE CONFIGURATION
@@ -44,7 +44,7 @@ requirejs.config({
         'core': 'core' + jsuVersion,
         'lan': 'locale/EN',
 //      'lan': 'locale/ITA',     // For Italian Language
-        'popup': 'JSPopup' + jsuVersion,
+        'popup': 'JQPopup' + jsuVersion,
         'jquery': 'externalPlugin/jquery' + externalPluginVersion
     },
     shim: {

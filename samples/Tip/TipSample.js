@@ -94,7 +94,7 @@ function sample2b(event){
 	var JSU_TIP_2B=	'<iframe width="600" height="500" src="https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1" frameborder="0" allowfullscreen></iframe>'; 
 	
 	TipFixedClicked(JSU_TIP_2B,event,{
-		 iMaxWidth: 650,  
+		 iWidth: 650,  
 		 szTitle:'Fixed Tip with a Video'
 	 }
 	);
@@ -107,7 +107,7 @@ function sample2b(event){
  */
 function sample3a(event){
 	TipJSFixedClicked(JSU_TIP_3A,event,
-			 {iMaxWidth:1000,
+			 {iWidth:1000,
 		    iMaxHeight:600,
 		    szTitle:'Tip Sample with ONLY JS Code'
 		   });	
@@ -197,7 +197,7 @@ var JS_CODE_2B= '//JS and HTML Code to implement SAMPLE_2 - case b VIDEO) \n\n' 
 '//  - objOpt = {..} Set Option \n' +
 ' <input type="button" class="tipArrowFixed" value="Show Video" id="tipFixedBtnVideo" \n'+	
 '  onclick="TipFixedClicked(JSU_TIP_2B,event,{ \n' +
-'     iMaxWidth: 650,  \n' +  
+'     iWidth: 650,  \n' +  
 '     szTitle:\'Fixed Tip with a Video\' \n' +
 '   });" /> ';
 
@@ -217,7 +217,7 @@ var JS_CODE_3A= '//JS and HTML Code to implement SAMPLE_3 - case a) ONLY JS \n' 
 '//  - objOpt = {..} Set Option \n' +
 '<input type="button" class="tipJSFixed"  id="sample3a" \n' +
 '   onclick="TipJSFixedClicked(TIP_TIP_3A,event,{ \n' +
-'      iMaxWidth:1000,  \\ preferred MaxWidth  \n' +
+'      iWidth:1000,  \\ preferred MaxWidth  \n' +
 '      iMaxHeight:600, \\ preferred MaxHeight \n' +
 '      szTitle:\'Tip Sample with ONLY JS Code\'});" /> '; 
 
