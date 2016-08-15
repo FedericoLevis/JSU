@@ -51,6 +51,36 @@ var TIP_BTN_CLOSE = "Chiudi";
 var TIP_DEF_JS_TITLE = "Codice Sorgente JS";
 var TIP_BTN_CLOSE_TITLE = "Click o ESC per Chiudere il Tooltip";
 
+var TIP_DEF_GOOGLE_TITLE = "Google Analitycs";
+var TIP_GOOGLE_CAT = "Categoria";
+var TIP_GOOGLE_DESC = "Descrizione URL";
+var TIP_GOOGLE_LONG_URL = "Long URL";
+var TIP_GOOGLE_SHORT_URL = "Short URL";
+var TIP_GOOGLE_ANAL = "Google Analytics";
+var TIP_GOOGLE_ANAL_ALL = "TUTTE le Google Analytics";
+var TIP_DEF_GOOGLE_HEADER= 'Click Il Link <b><u>Google Analytics</u></b> per aprire la pagina delle Google Analitycs relative all\'URL selezionato</b>',
+var TIP_DEF_GOOGLE_FOOTER=  '<b>NOTE sulle Google Analitycs:</b><ul>' +
+    '<li>Sole le pagine caricate tramite lo <b><i>Short URL</i></b> sono conteggiate. Le pagine caricate con il <b><i>LongUrl</i></b> non vengono conteggiate</li>' +
+    '<li>Sembra che sia presente un <i>Defect</i> nella Google Analytics: <b>le pagine caricate con IE non vengono conteggiate</b>, quindi in valore reale dei contatori e` piu` elevato di quanto visualizzato.</li></ul>';
+var TIP_GOOGLE_ALL_LINK="Tutte le Google Analitycs";
+var TIP_GOOGLE_ALL_TITLE="Mostra TUTTE le <b>GOOGLE_ANAL_NUM Google Analitycs</b> della Tabella:";
+
+var TIP_GOOGLE_FILTER_CAT_ALL = "TUTTE le Categorie"; // For Filter
+
+//---------- Filter Cat
+var TIP_GOOGLE_FILTER_CAT_TITLE = "FILTRO delle Categorie:";
+var TIP_GOOGLE_FILTER_CAT_HEADER = "FILTRA le Categorie  da mostrare";
+//---------- Filter Type (last par in https://goo.gl/#analytics/goo.gl/HnNqnM/all_time )
+var TIP_GOOGLE_FILTER_TYPE_HEADER = "Analytics: ";  // displayed in Header
+var TIP_GOOGLE_FILTER_TYPE_TITLE = "Tipo di  Google Analytics da visualizzare. Poi puo` esseer cambiato dalla Google Analitycs page";  //Filter Tip
+// -- Entries in Filter
+var TIP_GOOGLE_FILTER_TYPE_ALL = "Statistiche di Tutto il periodo";
+var TIP_GOOGLE_FILTER_TYPE_MONTH = "Statistiche dell'Ultimo Mese";
+var TIP_GOOGLE_FILTER_TYPE_WEEK = "Statistiche dell'Ultima Settimana";
+var TIP_GOOGLE_FILTER_TYPE_DAY = "Statistiche dell'Ultimo Giorno";
+var TIP_GOOGLE_FILTER_TYPE_2HOURS = "Statistiche delle Ultime 2 ore";
+
+
 
 //---------------- SORT
 //Sort. NB: per ASC indichiamo Descendente perche` si Fa Toggle di Sort

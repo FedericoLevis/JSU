@@ -42,14 +42,14 @@
 </table>   
 
 <table class="tip" BORDER="2" cellspacing="0" cellpadding="2" width="100%">
-    <tr class="tiptitleBig">
-      <th class="tiptitleBig" colspan="4">JSU<input type="button" class="tipFixed" id="tipJSUTitle" onclick="aboutTipJSU(event);" />
+    <tr class="tipTitleBig">
+      <th class="tipTitleBig" colspan="4">JSU<input type="button" class="tipFixed" id="tipJSUTitle" onclick="aboutTipFixedJSU(event);" />
         <label class="aboutAuthor">by Federico Levis</label>
             <input type="button" class="tipFixed" id="tipJSUAuthor" onclick="aboutTipAuthor(event);" />
       </th>
     </tr>
-    <tr class="tiptitleBg2">
-      <th class="tiptitleBig2" colspan="4">JS Blocking Popup Sample - JSU <label class="jsuAPI">core/Popup.js API</label>
+    <tr class="tipTitleBg2">
+      <th class="tipTitleBig2" colspan="4">JS Blocking Popup Sample - JSU <label class="jsuAPI">core/Popup.js API</label>
         <input type="button" class="jsuHelp" onclick="jsuDocBlockPopup()" 
              onmouseover="Tip(JSU_TIP_CUR_FEATURE);" onmouseout="UnTip(event)" />
         <!--  ONLY for developers: displayed when URL PAR opt=1 -->     
@@ -61,7 +61,7 @@
              
       </th>
     </tr>
-    <tr id="tr_sample_0" class="tiptitleBig3">
+    <tr id="tr_sample_0" class="tipTitleBig3">
       <td id="col_0_1" width="50%" class="tipc">SAMPLE
         <!--  To show all sample or only ONE   -->
         <select id="selectSample" style="margin-left:15px" onchange="onchange_sample()">
@@ -95,7 +95,7 @@
                <label style="color:blue;font-weight:bold">JS Source Code</label> of Sample_1 - 
                 <b>POPUP_TYPE=</b>
                 <select id="popupType1Desc" style="width:120px;margin-left:5px""></select>  
-               <input type="button" class="tipJSFixed" id="imgTipJSFixed" onclick="sample1JS(event);" />
+               <input type="button" class="tipFixedJS" id="imgTipFixedJSFixed" onclick="sample1JS(event);" />
            </td></tr>
          </table>
       </td>
@@ -121,10 +121,10 @@
             <td>
               <div id="optChoice" style="display:none;">
 	              <table class="tip" BORDER="2" width="700px" cellspacing="0" cellpadding="3">
-	                 <tr class="tiptitle">
+	                 <tr class="tipTitle">
 	                  <td colspan="4">OPTIONAL Options of Popup Choice</td>
 	                </tr>
-	                 <tr class="tiptitle2">
+	                 <tr class="tipTitle2">
 	                  <td>OPTION</td>
                     <td>Default</td>
 	                  <td>Value</td>
@@ -165,10 +165,10 @@
             <td colspan="2">
               <div id="optPrompt" style="display:none;">
                 <table class="tip" BORDER="2" width="600px" cellspacing="0" cellpadding="3">
-                   <tr class="tiptitle">
+                   <tr class="tipTitle">
                     <td colspan="4">OPTIONAL Options of Popup Prompt</td>
                   </tr>
-                   <tr class="tiptitle2">
+                   <tr class="tipTitle2">
                     <td>OPTION</td>
                     <td>Default</td>
                     <td>Value</td>
@@ -237,7 +237,7 @@
            <tr valign="top"><td>
                <label style="color:blue;font-weight:bold">JS Source Code</label> of SAMPLE_2 - <b> POPUP_TYPE=</b> 
                 <select id="popupType2Desc" style="width:120px;margin-left:5px""></select>  
-               <input type="button" class="tipJSFixed" id="sample2JS" onclick="sample2JS(event);" />
+               <input type="button" class="tipFixedJS" id="sample2JS" onclick="sample2JS(event);" />
            </td></tr>
          </table>
       </td>
@@ -268,10 +268,10 @@
             <td>
               <div id="optLayout" style="display:none;">
                 <table class="tip" BORDER="2" width="700px" cellspacing="0" cellpadding="3">
-                   <tr class="tiptitle">
+                   <tr class="tipTitle">
                     <td colspan="4">Example of some of the OPTIONAL Option to customize Popup Layout</td>
                   </tr>
-                   <tr class="tiptitle2">
+                   <tr class="tipTitle2">
                     <td>OPTION</td>
                     <td>Default</td>
                     <td>Value</td>
@@ -332,7 +332,7 @@
          <table >
            <tr valign="top"><td>
                <label style="color:blue;font-weight:bold">JS Source Code</label> of SAMPLE_3: </label>
-               <input type="button" class="tipJSFixed" id="sample3JS" onclick="sample3JS(event);" />
+               <input type="button" class="tipFixedJS" id="sample3JS" onclick="sample3JS(event);" />
            </td></tr>
          </table>
       </td>    
@@ -364,7 +364,7 @@
                        <option value="VIDEO" >Popup with Video</option> 
                        <option value="ABOUT" selected >About Popup</option>
                 </select>  
-               <input type="button" class="tipJSFixed" id="sample4JS" onclick="sample4JS(event);" />
+               <input type="button" class="tipFixedJS" id="sample4JS" onclick="sample4JS(event);" />
            </td></tr>
          </table>
       </td>

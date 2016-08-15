@@ -5,7 +5,7 @@
   <title>Popup</title>
 
 <link rel="stylesheet" href="../core.css" type="text/css" >
-<link rel="stylesheet" href="./Popup.css" type="text/css">
+<link rel="stylesheet" href="../Popup.css" type="text/css">
 <!-- for about used in sample -->
 <link rel="stylesheet" href="../about/about.css" type="text/css">
 <script type="text/javascript" src="../about/about.js" ></script>
@@ -40,7 +40,7 @@ var JSU_PATH_BASE = '../..';
                  <table>
                    <tr>
                      <td><label id="PopupPromptLabel" class="PopupPrompt"></label></td>
-                     <td><input id="PopupPromptInput" class="PopupPrompt" onfocus="PopupDlgOnFocusPromptInput();"/></td>
+                     <td><input id="PopupPromptInput" class="PopupPrompt" onfocus="pp_onFocusPromptInput();"/></td>
                    </tr>
                    <tr>
                      <td>&nbsp;</td>
@@ -63,8 +63,8 @@ var JSU_PATH_BASE = '../..';
                        <legend id="PopupChoiceMultiLabel" class="PopupChoiceMulti">Multi</legend>
                        <select multiple id="PopupChoiceMultiSelect" class="PopupChoiceMulti" ></select>
                        <div style="margin-top:10px; margin-bottom:10px;">
-                          <a id="PopupSelectAll" href="javascript:PopupDlgSelectAll();" class="Popup">SELECT All</a>
-                          <a id="PopupDeselectAll" href="javascript:PopupDlgDeselectAll();" class="Popup" style="padding-left:15px;">DESELECT All</a>
+                          <a id="PopupSelectAll" href="javascript:pp_SelectAll();" class="Popup">SELECT All</a>
+                          <a id="PopupDeselectAll" href="javascript:pp_deselectAll();" class="Popup" style="padding-left:15px;">DESELECT All</a>
                        </div>
                      </fieldset>
                 </td>
@@ -74,9 +74,9 @@ var JSU_PATH_BASE = '../..';
 			</tr>
 		</table>	
 	  <div id="PopupDivBtn" class="PopupBtn" align="center" >
-			<input type="button" class="PopupBtn" id="PopupConfirm" value="OK" onclick="PopupDlgOnClickConfirm()" />
-      <input type="button" class="PopupBtn" id="PopupNo" value="NO" style="display:none;" onclick="PopupDlgOnClickNo()" />
-      <input type="button" class="PopupBtn" id="PopupCancel" value="Cancel" style="display:none;" onclick="PopupDlgOnClickCancel()" />
+			<input type="button" class="PopupBtn" id="PopupConfirm" value="OK" onclick="pp_onClickConfirm()" />
+      <input type="button" class="PopupBtn" id="PopupNo" value="NO" style="display:none;" onclick="pp_onClickNo()" />
+      <input type="button" class="PopupBtn" id="PopupCancel" value="Cancel" style="display:none;" onclick="pp_onClickCancel()" />
 	  </div>
   </div>
 
@@ -86,7 +86,7 @@ var JSU_PATH_BASE = '../..';
    * Called when jsu is loaded
    */
   function jsu_loaded(){
-    	PopupDlgOnLoad();
+    	pp_onLoad();
    }	  
   
   

@@ -44,10 +44,44 @@ var LOADING_DIV_MSG={
   	
 };  	
 
-//----------------------------------------- TOOLTIP
+//-------------------------------------------------------------------------------------------------
+//								TOOLTIP
+//-------------------------------------------------------------------------------------------------
 var TIP_BTN_CLOSE = "Close";
 var TIP_BTN_CLOSE_TITLE = "Click or ESC to Close the Tooltip";
 var TIP_DEF_JS_TITLE = "JS Source Code";
+
+//============================================ GOOGLE ANALYTICC
+var TIP_DEF_GOOGLE_TITLE = "Google Analitycs";
+var TIP_GOOGLE_CAT = "Category";
+var TIP_GOOGLE_DESC = "URL Description";
+var TIP_GOOGLE_LONG_URL = "Long URL";
+var TIP_GOOGLE_SHORT_URL = "Short URL";
+var TIP_GOOGLE_ANAL = "Google Analytics";
+var TIP_GOOGLE_ANAL_ALL = "ALL Google Analytics";
+
+var TIP_DEF_GOOGLE_HEADER= 'Click the <u><b>Google Analytics</b></u> Link to show the relative <b>Google Analitycs Page</b>, with the <b>statistics of the JSU URL</b>';
+var TIP_DEF_GOOGLE_FOOTER=  '<b>NOTEs about Google Analitycs:</b><ul>' +
+    '<li>Only the Pages loaded with the <b><i>ShortUrl</i></b> are counted. The pages loaded with the <b><i>LongUrl</i></b> are not counted</li>' +
+    '<li>Recently there is a limitation in Google Analytics and <b>pages loaded by IE are not counted</b>; therefore the real counter should be greater than the ones displayed.</li></ul>';
+var TIP_GOOGLE_ALL_LINK="All Previous Google Analitycs";
+var TIP_GOOGLE_ALL_TITLE="Show ALL the <b>GOOGLE_ANAL_NUM Google Analitycs</b> of the Table:";
+
+
+//---------- Filter Cat
+var TIP_GOOGLE_FILTER_CAT_HEADER = "Categories FILTER:";  // displayed in Header
+var TIP_GOOGLE_FILTER_CAT_TITLE = "FILTER the Categories to display";  //Filter Tip
+var TIP_GOOGLE_FILTER_CAT_ALL = "ALL Categories";  // Entry in Filter
+//---------- Filter Type (last par in https://goo.gl/#analytics/goo.gl/HnNqnM/all_time )
+var TIP_GOOGLE_FILTER_TYPE_HEADER = "Analytics TYPE: ";  // displayed in Header
+var TIP_GOOGLE_FILTER_TYPE_TITLE = "Initial Analytics TYPE displayed. Then it can be changed form Google Analitycs page";  //Filter Tip
+// -- Entries in Filter
+var TIP_GOOGLE_FILTER_TYPE_ALL = "Analytics of All Time";
+var TIP_GOOGLE_FILTER_TYPE_MONTH = "Analytics of Last Month";
+var TIP_GOOGLE_FILTER_TYPE_WEEK = "Analytics of Last Week";
+var TIP_GOOGLE_FILTER_TYPE_DAY = "Analytics of Last Day";
+var TIP_GOOGLE_FILTER_TYPE_2HOURS = "Analytics of Last 2 Hours";
+
 
 
 //----------------------------------------- SORT

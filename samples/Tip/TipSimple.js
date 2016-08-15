@@ -6,7 +6,7 @@ var JSU_PATH_ABOUT_IMG = "https://rawgit.com/FedericoLevis/images/master/jsuAbou
 var JSU_TIP_HTML="<b>Simple Tooltip</b> with <i>HTML tags</i><br/>Tip (You can use <u>whatever HTML TAG</u>)" ;
 
 var JSU_TIP_README='<table class="tip" BORDER="2" cellspacing="0" cellpadding="2" width="550">' +
-   '<tr class="tiptitleBig"><td>README EXAMPLE</td></tr>' +
+   '<tr class="tipTitleBig"><td>README EXAMPLE</td></tr>' +
    '<tr><td class="tipl">With <b>JSU tooltip</b> you can easily implement whatever <b>Floating HTML Tip</b><BR/>' +
    '<BR/>Moreover you can also use many other advanced <b>JSU tooltip Features</b>:<ul>' +
    '<li><b>Fixed</b> Tips, with URL, GIF, ...</li>' +
@@ -36,6 +36,6 @@ function sample2Fixed(event, iMaxHeight,bCloseBtn){
 	'In the Tip you can display whatever HTML object, also <b>GIF</b> <BR/>' +
 	'<div align="center"><img height="200px" src="' + JSU_PATH_ABOUT_IMG + 'JSUDancing.gif" /></div>' +
 	'</td></tr></table>';	
-	TipFixedClicked(szTip,event,{szTitle:'Fixed Tip Sample',iMaxHeight:iMaxHeight,bCloseBtn:bCloseBtn});
+	TipFixed(szTip,event,{szTitle:'Fixed Tip Sample',iMaxHeight:iMaxHeight,bCloseBtn:bCloseBtn});
 }
 
