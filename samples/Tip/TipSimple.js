@@ -22,7 +22,7 @@ var TIP_VIDEO_SAMPLE=	'<iframe width="600" height="500" src="https://www.youtube
 
 
 
-function sample2Fixed(event, iMaxHeight,bCloseBtn){
+function sample2Fixed(event, iTipMaxHeight,bCloseBtn){
 	var szTip='<table class="tip" BORDER="2" cellspacing="0" cellpadding="2" width="450">' +
 	'<tr><td class="tipl">Open/Close <b>Fixed Tip</b>:<ul>' +
 	' <li><b>Open</b> Tip by clicking the <b>Down Arrow</b></li>' +
@@ -36,6 +36,6 @@ function sample2Fixed(event, iMaxHeight,bCloseBtn){
 	'In the Tip you can display whatever HTML object, also <b>GIF</b> <BR/>' +
 	'<div align="center"><img height="200px" src="' + JSU_PATH_ABOUT_IMG + 'JSUDancing.gif" /></div>' +
 	'</td></tr></table>';	
-	TipFixed(szTip,event,{szTitle:'Fixed Tip Sample',iMaxHeight:iMaxHeight,bCloseBtn:bCloseBtn});
+	TipFixed(szTip,event,{szTitle:'Fixed Tip Sample',iTipMaxHeight:iTipMaxHeight,bCloseBtn:bCloseBtn});
 }
 

@@ -56,7 +56,7 @@ var JSU_TIP_3B='/** \n' +
 
 
 var JSU_TIP_3C='//This is an example of MIXED Code: JS and also HTML. \n' +
-'//	HTML TAGs cannot be displayed with TipFixedCode(), but you should use TipFixedTextBox()  \n\n' +
+'//	HTML TAGs cannot be displayed with TipFixedCode(), but you should use TipFixedTextArea()  \n\n' +
 '//--------------------------------------------------------- JS CODE \n' +
 'var JS_CODE_SORT_SAMPLE=...; \n\n' +
 '//<input> object with: \n' +
@@ -64,10 +64,10 @@ var JSU_TIP_3C='//This is an example of MIXED Code: JS and also HTML. \n' +
 '//  - value=Text to display in the button \n'+	
 '//  - set whatever unique id \n' + 
 '//  - onclick="TipFixedCode(msg,event,objOpt)" \n'+	
-'//  - objOpt = {iMaxHeight:300} for Optional MaxHeight (Vertical Scrollbar)\n\n' +
+'//  - objOpt = {iTipMaxHeight:300} for Optional MaxHeight (Vertical Scrollbar)\n\n' +
 '//--------------------------------------------------------- CODE with HTML TAGs \n' +
 ' <input type="button" class="tipFixed" style="color:blue;" value="JS Source Code" id="tipBtnJSFixedSample"  \n'+
-'    onclick="TipFixedCode(JS_CODE_SORT_SAMPLE,event,{iMaxHeight:300});" /> '; 
+'    onclick="TipFixedCode(JS_CODE_SORT_SAMPLE,event,{iTipMaxHeight:300});" /> '; 
 
 
 
@@ -104,7 +104,7 @@ function sample2a(event){
 	'</td></tr></table>';	
 	TipFixed(szTip,event,{
 		szTitle:'Fixed Tip Sample',
-		iMaxHeight:1000,
+		iTipMaxHeight:1000,
 		bCloseBtn:true});
 }
 
@@ -113,7 +113,7 @@ function sample2b(event){
 	var JSU_TIP_2B=	'<iframe width="600" height="500" src="https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1" frameborder="0" allowfullscreen></iframe>'; 
 	
 	TipFixed(JSU_TIP_2B,event,{
-		 iWidth: 650,  
+		 iTipWidth: 650,  
 		 szTitle:'Fixed Tip with a Video'
 	 }
 	);
@@ -126,8 +126,8 @@ function sample2b(event){
  */
 function sample3a(event){
 	TipFixedCode(JSU_TIP_3A,event,
-			 {iWidth:1000,
-		    iMaxHeight:600,
+			 {iTipWidth:1000,
+		    iTipMaxHeight:600,
 		    szTitle:'Tip Sample with JS Code Hightlighted'
 		   });	
 }
@@ -138,8 +138,8 @@ function sample3a(event){
  */
 function sample3b(event){
 	TipFixedCode(JSU_TIP_3B,event,
-			 {iWidth:1000,
-		    iMaxHeight:600,
+			 {iTipWidth:1000,
+		    iTipMaxHeight:600,
 		    szTitle:'Tip Sample with Java Code Hightlighted'
 		   });	
 }
@@ -151,7 +151,7 @@ function sample3b(event){
  * @param event
  */
 function sample3c(event){
-	TipFixedTextBox(JSU_TIP_3C,event,
+	TipFixedTextArea(JSU_TIP_3C,event,
 			 {iMaxRow:15,
 		    iMaxCol:130,
 		    szTitle:'Text Box with HTML TAGs'
@@ -164,39 +164,10 @@ function sample3c(event){
 //  BELOW CODE is not strictly related to the Sort feature, but it is ONLY Related to JS Code Highlight
 //===========================================================================================
 
-var JS_CODE_1_TEXT= '//JS and HTML Code to implement SAMPLE_1 - TextTip case: \n\n' +
-'// 1 HTML) Add onmouseover="Tip()" and onmouseout="UnTip()" \n'+
-'<input type="button" value="Text Tip" \n' + 
-'onmouseover="Tip(\'Simple Tooltip without HTML tags.\\nNewline is working\')" \n' +
-'onmouseout="UnTip(event)"/>';
-
-var JS_CODE_1_HTML= '//JS and HTML Code to implement SAMPLE_1 - HTMLTip case: \n\n' +
-'// ---------------------------------------------------------------------------------  \n'+
-'// 1 JS) Define in JS the MsgHtml to show in the Tip:  \n'+
-'var JSU_TIP_HTML="<b>Simple Tooltip</b> with <i>HTML tags</i><br/>Tip (You can use <u>whatever HTML TAG</u>"; \n\n' + 
-'// ---------------------------------------------------------------------------------  \n'+
-'// 2) Add onmouseover="Tip()" and onmouseout="UnTip()" \n'+	
-'<input type="text" value="HTML Tip" style="width:60px;" \n' +
-'onmouseover="Tip(JSU_TIP_HTML);" onmouseout="UnTip(event)" />'; 
-
-var JS_CODE_1_README= '//JS and HTML Code to implement SAMPLE1 - READMETip case: \n\n' +
-'// ---------------------------------------------------------------------------------  \n'+
-'// 1 JS) Define in JS the MsgHtml to show in the Tip:  \n'+
-'var JSU_TIP_README=\'<table class="tip" ........</table>\'; \n\n'+
-'// ---------------------------------------------------------------------------------  \n'+
-'// 2 HTML) Add onmouseover="Tip()" and onmouseout="UnTip()" \n'+
-'<img type="image" src="../../images/Readme.jpg" align="bottom" \n' +
-'onmouseover="Tip(JSU_TIP_README)"    onmouseout="UnTip(event)"/> '; 
 
 
-var JS_CODE_1_INFO= '//JS and HTML Code to implement SAMPLE_1 - InfoButton Tip case: \n\n' +
-'// ---------------------------------------------------------------------------------  \n'+
-'// 1 JS) Define in JS the MsgHtml to show in the Tip:  \n'+
-'var JSU_TIP_INFO="<b>Simple Tooltip</b> with <i>HTML tags</i><br/>Tip (You can use <u>whatever HTML TAG</u>\');" \n\n' + 
-'// ---------------------------------------------------------------------------------  \n'+
-'// 2 HTML) Add onmouseover="Tip()" and onmouseout="UnTip()" \n'+	
-'<img type="image" class="jsuInfo"  \n' +
-'onmouseover="Tip(JSU_TIP_INFO);" onmouseout="UnTip(event)" />'; 
+
+
 
 
 var JS_CODE_2A= '//JS and HTML Code to implement SAMPLE_2 - case a GIF) \n\n' +
@@ -212,7 +183,7 @@ var JS_CODE_2A= '//JS and HTML Code to implement SAMPLE_2 - case a GIF) \n\n' +
 '//  - objOpt = {..} Set Option \n' +
 '<input type="button" class="tipFixed"  id="tipFixedSample" \n' +
 '   onclick="TipFixed(TIP_FIXED_SAMPLE,event,{ \n' +
-'      iMaxHeight:1000, \n' +
+'      iTipMaxHeight:1000, \n' +
 '      szTitle:\'Fixed Tip Sample\'});" /> '; 
 
 var JS_CODE_2B= '//JS and HTML Code to implement SAMPLE_2 - case b VIDEO) \n\n' +
@@ -230,7 +201,7 @@ var JS_CODE_2B= '//JS and HTML Code to implement SAMPLE_2 - case b VIDEO) \n\n' 
 '//  - objOpt = {..} Set Option \n' +
 ' <input type="button" class="tipArrowFixed" value="Show Video" id="tipFixedBtnVideo" \n'+	
 '  onclick="TipFixed(JSU_TIP_2B,event,{ \n' +
-'     iWidth: 650,  \n' +  
+'     iTipWidth: 650,  \n' +  
 '     szTitle:\'Fixed Tip with a Video\' \n' +
 '   });" /> ';
 
@@ -250,8 +221,8 @@ var JS_CODE_3A= '//JS and HTML Code to implement SAMPLE_3 - case a) ONLY JS \n' 
 '//  - objOpt = {..} Set Option \n' +
 '<input type="button" class="tipFixedCode"  id="sample3a" \n' +
 '   onclick="TipFixedCode(TIP_TIP_3A,event,{ \n' +
-'      iWidth:1000,  \\ preferred MaxWidth  \n' +
-'      iMaxHeight:600, \\ preferred MaxHeight \n' +
+'      iTipWidth:1000,  \\ preferred MaxWidth  \n' +
+'      iTipMaxHeight:600, \\ preferred MaxHeight \n' +
 '      szTitle:\'Tip Sample with ONLY JS Code\'});" /> '; 
 
 
@@ -278,3 +249,88 @@ var JS_CODE_3B= '//JS and HTML Code to implement SAMPLE_3 - case b) JS and HTML 
 
 
 
+
+function sampleCode1a(event){
+	var JS_CODE_1a_HTML = '// To add the Text FloatingTip to whatever HTML Item: \n'+	 
+	'// - onmouseover="Tip(TextMsg)" \n'+	
+	'// - onmouseout="UnTip() " \n'+	
+	'// In This example: \n'+
+	'<input type="button" value="Text Tip" \n' + 
+	'   onmouseover="Tip(\'Simple Tooltip without HTML tags.\\nNewline is working\');" \n' +
+	'   onmouseout="UnTip(event);"/>';
+	TipFixedMultiCode([{szTitle:"HTML", szCode: JS_CODE_1a_HTML,  bHtml:true, iRowNum:6}],
+			                event,
+			                {sxTitle:"SAMPLE_1 Text tip - Source Code"});	
+}
+
+function sampleCode1b(event){
+	var JS_CODE_1b_JS = '//Define in JS a constant (e.g. JSU_TIP_HTML) with the MsgHtml to show in the Tip:  \n'+
+	'var JSU_TIP_HTML="<b>Simple Tooltip</b> with <i>HTML tags</i><br/>Tip (You can use <u>whatever HTML TAG</u>";'; 
+	var JS_CODE_1b_HTML = '// To add whatever HTML FloatingTip to whatever HTML Item: \n'+	 
+	'// - onmouseover="Tip(HtmlMsg);" \n'+	
+	'// - onmouseout="UnTip();" \n'+	
+	'// In This example: \n'+
+	'<input type="text" value="HTML Tip" style="width:60px;" \n' +
+  '  onmouseover="Tip(JSU_TIP_HTML);"  \n'+	
+  '  onmouseout="UnTip(event);"/>'; 
+  // 2 Codes, both contain HTML TAGS
+	TipFixedMultiCode([
+ 	      {szTitle:"JS", szCode: JS_CODE_1b_JS,  bHtml:true},
+	      {szTitle:"HTML", szCode: JS_CODE_1b_HTML,  bHtml:true}
+	    ],
+      event,
+      {sxTitle:"SAMPLE_1 HTML Tip - Source Code" , iTipWidth: 1000} );	
+}
+
+function sampleCode1c(event){
+	var JS_CODE_1c_JS = '//Define in JS a constant (e.g. JSU_TIP_README) with the MsgHtml to show in the Tip:  \n'+
+	'//In this example we built an HTML Table that will be shown in the Floating Tip: \'  \n' +
+	'var JSU_TIP_README=\'<table class="tip" BORDER="2" cellspacing="0" cellpadding="2" width="550">\'  \n' +
+  '  \'  <tr class="tipTitleBig"><td>README EXAMPLE</td></tr>\'  \n' +
+  '  \'  <tr><td class="tipl">With <b>JSU tooltip</b> you can easily implement whatever <b>Floating HTML Tip</b><BR/>\'  \n' +
+  '  \'     <BR/>Moreover you can also use many other advanced <b>JSU tooltip Features</b>:\'  \n' +
+  '  \'     <ul>\'  \n' +
+  '  \'       <li><b>Fixed</b> Tips, with URL, GIF, ...</li>\'  \n' +
+  '  \'       <li>Tips with <b>Video</b></li>\'  \n' +
+  '  \'       <li>Tips with <b>JS code</b></li>\'  \n' +
+  '  \'       <li>...</li>\'  \n' +
+  '  \'     </ul>\'  \n' +	
+  '  \'  </td></tr>\'  \n' +	
+  '  \'</table>';	
+  var JS_CODE_1c_HTML = '// To add whatever HTML FloatingTip to whatever HTML Item: \n'+	 
+	'// - onmouseover="Tip(HtmlMsg);" \n'+	
+	'// - onmouseout="UnTip();" \n'+	
+	'// In This example: \n'+
+	'<img type="image" src="https://rawgit.com/FedericoLevis/JSU/master/images/Readme.jpg" align="bottom" \n'+	
+  '  onmouseover="Tip(JSU_TIP_README);"  \n'+	
+  '  onmouseout="UnTip(event);"/>'; 
+
+	// 2 Codes, both contain HTML TAGS
+	TipFixedMultiCode([
+ 	      {szTitle:"JS", szCode: JS_CODE_1c_JS,  bHtml:true},
+	      {szTitle:"HTML", szCode: JS_CODE_1c_HTML,  bHtml:true}
+	    ],
+      event,
+      {sxTitle:"SAMPLE_1 README Tip - Source Code", iTipWidth: 900 } );	
+	
+}
+
+function sampleCode1d(event){
+	var JS_CODE_1d_JS = '//Define in JS a constant (e.g. JSU_TIP_HTML) with the MsgHtml to show in the Tip:  \n'+
+	'var JSU_TIP_HTML="<b>Simple Tooltip</b> with <i>HTML tags</i><br/>Tip (You can use <u>whatever HTML TAG</u>";'; 
+	var JS_CODE_1d_HTML = '// To add whatever HTML FloatingTip to whatever HTML Item: \n'+	 
+	'// - onmouseover="Tip(HtmlMsg);" \n'+	
+	'// - onmouseout="UnTip();" \n'+	
+	'// In This example we use the JSU class="jsuInfo": \n'+
+	'<input type="button" class="jsuInfo" \n' +
+  '  onmouseover="Tip(JSU_TIP_HTML);"  \n'+	
+  '  onmouseout="UnTip(event);"/>'; 
+  // 2 Codes, both contain HTML TAGS
+	TipFixedMultiCode([
+ 	      {szTitle:"JS", szCode: JS_CODE_1d_JS,  bHtml:true},
+	      {szTitle:"HTML", szCode: JS_CODE_1d_HTML,  bHtml:true}
+	    ],
+      event,
+      {sxTitle:"SAMPLE_4 HTML Tip - Tip image jsuInfo",iTipWidth: 1000 } );	
+
+}
