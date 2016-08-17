@@ -131,8 +131,7 @@ function sample2b(event){
  */
 function sample2c(event){
 	
-		var JSU_TIP_PAGE =	'<iframe width="1000" height="500" src="https://goo.gl/MoY5nK" ></iframe>'; 
-	// var JSU_TIP_PAGE =	'<iframe width="1000" height="500" src="https://goo.gl/HnNqnM.info" ></iframe>'; 
+		var JSU_TIP_PAGE =	'<iframe width="1000" height="600" src="https://goo.gl/MoY5nK" ></iframe>'; 
 	
 	TipFix(JSU_TIP_PAGE,event,{
 		 iTipWidth: 1020,  
@@ -219,7 +218,7 @@ var JS_CODE_3B= '//JS and HTML Code to implement SAMPLE_3 - case b) JS and HTML 
 '//  - whatever unique id \n' + 
 '//  - onclick="TipFixCode()" \n'+	
 '//  - objOpt = {..} Set Option \n' +
-'<input type="button" class="tipArrowFixed" style="color:blue;" value="Source Code" id="sample3b" \n' +
+'<input type="button" class="tipFixArrow" style="color:blue;" value="Source Code" id="sample3b" \n' +
 '   onclick="TipFixMultiCode(TIP_TIP_3B,event,{ \n' +
 '      iMaxRow:20,  \\ preferred Row Num  \n' +
 '      iMaxCol:120, \\ preferred Col Num \n' +
@@ -384,7 +383,7 @@ function sampleCode2a(event){
 	      {szTitle:"CSS: jsu/core/core.css", szCode: JS_CODE_2a_CSS,  bPrettify:true}
 	    ],
       event,
-      {szTitle:"SAMPLE_2 FixedTip with GIF, button, link - Source Code" , iTipWidth: 1000} );	
+      {szTitle:"SAMPLE_2 FixedTip with GIF, button, link - Source Code" , iTipWidth: 1100} );	
 }
 
 
@@ -395,12 +394,12 @@ function sampleCode2b(event){
 	'     src="https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1" \n'+
 	'     frameborder="0" allowfullscreen></iframe>\';'; 
 	
-	var JS_CODE_2b_HTML = '// In This example we add the Video FixedTip to an <input> "button" with the JSU class "tipArrowFixed":  \n'+	 
+	var JS_CODE_2b_HTML = '// In This example we add the Video FixedTip to an <input> "button" with the JSU class "tipFixArrow":  \n'+	 
 	'//  - class="tipFixed"  type="button" \n' + 
 	'//  - whatever unique id \n' + 
 	'//  - onclick="TipFix(szHtml,event,objOpt)" \n'+	
 	'//  - objOpt = {..} Set the desired Option \n' +
-	' <input type="button" class="tipArrowFixed" value="Show Video" id="tipFixedBtnVideo" \n'+	
+	' <input type="button" class="tipFixArrow" value="Show Video" id="tipFixedBtnVideo" \n'+	
 	'  onclick="TipFix(JSU_TIP_VIDEO,event,{ \n' +
 	'     iTipWidth: 650,  \n' +  
 	'     szTitle:\'Fixed Tip with a Video\' \n' +
@@ -408,11 +407,11 @@ function sampleCode2b(event){
 
 	var JS_CODE_2b_CSS = '/*' + CSS_SEP +  '\n' + 
 		'Tip button for FixedTip with an Up/Down Arrow:\n' +
-		'input.tipArrowFixed: <input class="tipArrowFixed" value="Example" type="button" style="margin-left:5px;margin-right:50px" /> \n' +
-		'input.tipArrowFixedUp: <input style="margin-left:5px" value="Example" class="tipArrowFixedUp" type="button" />   \n' + 
+		'input.tipFixArrow: <input class="tipFixArrow" value="Example" type="button" style="margin-left:5px;margin-right:50px" /> \n' +
+		'input.tipFixArrowUp: <input style="margin-left:5px" value="Example" class="tipFixArrowUp" type="button" />   \n' + 
 		'Used with JSU Tooltip API TipFix() - See <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/tooltip.js/index.html">JSU Tooltip API Doc</a> \n' + 
 		CSS_SEP + '*/ \n' +
-		  'input.tipArrowFixed, input.tipArrowFixedUp {  /* Common fields  */ \n' + 
+		  'input.tipFixArrow, input.tipFixArrowUp {  /* Common fields  */ \n' + 
 			'    height: 20px; \n' + 
 			'    padding-right: 30px; \n' + 
 			'    border: 1px solid #000; \n' + 
@@ -420,11 +419,11 @@ function sampleCode2b(event){
 			'    cursor: pointer; \n' + 
 			'} \n' + 
 			' \n' + 
-			'input.tipArrowFixed { /* specific image for tipArrowFixed */  \n' + 
-			'    background: #E0E0E0 url(https://raw.github.com/FedericoLevis/JSU/master/images/tipArrowFixed.png) no-repeat right center; \n' + 
+			'input.tipFixArrow { /* specific image for tipFixArrow */  \n' + 
+			'    background: #E0E0E0 url(https://raw.github.com/FedericoLevis/JSU/master/images/tipFixArrow.png) no-repeat right center; \n' + 
 			'} \n' + 
-			'input.tipArrowFixedUp { /* specific image for tipArrowFixedUp */ \n' + 
-			'    background: #E0E0E0 url(https://raw.github.com/FedericoLevis/JSU/master/images/tipArrowFixedUp.png) no-repeat right center; \n' + 
+			'input.tipFixArrowUp { /* specific image for tipFixArrowUp */ \n' + 
+			'    background: #E0E0E0 url(https://raw.github.com/FedericoLevis/JSU/master/images/tipFixArrowUp.png) no-repeat right center; \n' + 
 			'}'; 
 				
   // 3 Codes: First 2 with HTML TAGS, CSS without HTML tags
@@ -434,7 +433,7 @@ function sampleCode2b(event){
 	      {szTitle:"CSS: jsu/core/core.css", szCode: JS_CODE_2b_CSS,  bPrettify: true}
 	    ],
       event,
-      {szTitle:"SAMPLE_2 FixedTip with VIDEO - Source Code" , iTipWidth: 1000} );	
+      {szTitle:"SAMPLE_2 FixedTip with VIDEO - Source Code" , iTipWidth: 1100} );	
 }
 
 

@@ -44,8 +44,6 @@
 </table>   
 
 <hr>
-<h1 align="center">JS Utility (JSU) - Tooltip</h1>  
-
 
 <table class="tip" BORDER="2" cellspacing="0" cellpadding="2" width="100%">
     <tr class="tipTitleBig">
@@ -55,9 +53,10 @@
       </th>
     </tr>
     <tr class="tipTitleBg2">
-      <th class="tipTitleBig2" colspan="4">Tip Sample - JSU <label class="jsuAPI">tooltip.js API</label>
-        <input type="button" class="jsuHelp" onclick="jsuDocTip()" 
-             onmouseover="Tip(JSU_TIP_CUR_FEATURE);" onmouseout="UnTip(event)" /> 
+      <th class="tipTitleBig2" colspan="4"><h1 class="jsuSample">Tooltip Sample - JSU <label class="jsuAPI">tooltip.js API</label>
+            <input type="button" class="jsuHelp" onclick="jsuDocTip()" 
+                onmouseover="Tip(JSU_TIP_CUR_FEATURE);" onmouseout="UnTip(event)" /> 
+        </h1>
         <!--  ONLY for developers: displayed when URL PAR opt=1 -->     
         <select id="selectShowCol" style="display:none; margin-left:15px" onchange="onchangeShowCol()">
             <option value="1">Show SAMPLE</option>
@@ -97,7 +96,7 @@
                         onmouseover="Tip(JSU_TIP_HTML);" onmouseout="UnTip(event);" /> 
                   </td>
                   <td width="25%">       
-                  <img type="image" src="https://rawgit.com/FedericoLevis/JSU/master/images/Readme.jpg" align="bottom"
+                  <img type="image" src="https://rawgit.com/FedericoLevis/images/master/samples/Readme.jpg" align="bottom"
                         onmouseover="Tip(JSU_TIP_README);"    onmouseout="UnTip(event);"/></td>
                   <td width="25%"> 
                   Tip image <b>jsuInfo</b>      
@@ -139,8 +138,8 @@
            </li>    
            <BR/>
            <li><b>case b) FixedTip with Embedded Page: </b> 
-                  <input type="button" class="tipArrowFixed" value="Tip with Video" id="tipSample2b"  onclick="sample2b(event);" />
-                  <input type="button" class="tipArrowFixed"  value="Tip with Page" id="tipSample2c" style="margin-left:30px" onclick="sample2c(event);" />
+                  <input type="button" class="tipFixArrow" value="Tip with Video" id="tipSample2b"  onclick="sample2b(event);" />
+                  <input type="button" class="tipFixArrow"  value="Tip with Page" id="tipSample2c" style="margin-left:30px" onclick="sample2c(event);" />
            </li>    
          </ul>
       </td>
@@ -150,7 +149,7 @@
            <tr valign="top"><td>
                To implement a <b>FixedTip</b> Tooltip :  
                <ul> 
-               <li>Set an <b>input</b> with JSU <label class="jsuAPI">core.css</label> class like <label class="jsuAPI">tipFixed, tipArrowFixed</label> </li>
+               <li>Set an <b>input</b> with JSU <label class="jsuAPI">core.css</label> class like <label class="jsuAPI">tipFixed, tipFixArrow</label> </li>
                <li>In the <b>onclick event</b> call the <b>JSU Tip API</b>   <label class="jsuAPI">TipFix</label>(<b><i>tipHTML</i></b>,event,<b><i>objOpt</i></b>)</li>
                </ul>
                JS Code of the two cased of SAMPLE_2:
@@ -181,7 +180,7 @@
            <BR/>    
            <li><b>case c) Message with HTML TAGs</b><BR/>
             Use JS Tooltip API: <label class="jsuAPI">TipFixTextArea</label>"    
-                   <input type="button" class="tipArrowFixed" style="color:blue;" value="Source Code" id="sample3b"  onclick="sample3b(event);" />
+                   <input type="button" class="tipFixArrow" style="color:blue;" value="Source Code" id="sample3b"  onclick="sample3b(event);" />
            </li>    
          </ul>
       </td>
@@ -191,7 +190,7 @@
            <tr valign="top"><td>
                To show a <b>FixedTip</b> with <b>JS Code</b> in a TextBox:  
                <ul> 
-	               <li>Set an <b>input</b> with JSU <label class="jsuAPI">core.css</label> class like <label class="jsuAPI">tipFixedJS, tipArrowFixed</label> </li>
+	               <li>Set an <b>input</b> with JSU <label class="jsuAPI">core.css</label> class like <label class="jsuAPI">tipFixedJS, tipFixArrow</label> </li>
 	               <li>In the <b>onclick </b> event, call the proper <b>JSU Tooltip API</b> depending on the Code Type: <ul>
                     <li><b>a) ONLY JS Code:</b> Call <label class="jsuAPI">TipFixJS</label>(<b><i>JScodeMsg</i></b>,event,objOpt)</li> to hightlight JS Code </li>
                     <li><b>b) Message with HTML TAGs:</b> Call <label class="jsuAPI">TipFixTextArea</label>(<b><i>szTextMsg</i></b>,event,objOpt)</li> that show HTML as Text Message in a <b> Text Box</b> </li>
