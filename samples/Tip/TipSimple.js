@@ -36,6 +36,6 @@ function sample2Fixed(event, iTipMaxHeight,bCloseBtn){
 	'In the Tip you can display whatever HTML object, also <b>GIF</b> <BR/>' +
 	'<div align="center"><img height="200px" src="' + JSU_PATH_ABOUT_IMG + 'JSUDancing.gif" /></div>' +
 	'</td></tr></table>';	
-	TipFixed(szTip,event,{szTitle:'Fixed Tip Sample',iTipMaxHeight:iTipMaxHeight,bCloseBtn:bCloseBtn});
+	TipFix(szTip,event,{szTitle:'Fixed Tip Sample',iTipMaxHeight:iTipMaxHeight,bCloseBtn:bCloseBtn});
 }
 

@@ -856,7 +856,7 @@ function sample1JS(event){
   }else {
     szTip = JS1_NOTIFY;
   }  
-  TipFixedJS(szTip,event,{iWidth:1000, iTipMaxHeight:500,szTitle:"JS Source Code - POPUP_TYPE=" + szAlertType});
+  TipFixJS(szTip,event,{iWidth:1000, iTipMaxHeight:500,szTitle:"JS Source Code - POPUP_TYPE=" + szAlertType});
   
 }
 
@@ -880,7 +880,7 @@ function sample2JS(event){
   }else {
     szTip = JS2_NOTIFY;
   }  
-  TipFixedTextArea(szTip,event,{iColNum:130, iRowNum:20,szTitle:"JS Source Code - POPUP_TYPE=" + szAlertType});
+  TipFixTextArea(szTip,event,{iColNum:130, iRowNum:20,szTitle:"JS Source Code - POPUP_TYPE=" + szAlertType});
   
 }
 
@@ -892,7 +892,7 @@ function sample2JS(event){
  * @returns
  */
 function sample3JS(event){
-  TipFixedJS(JS3_OPT,event,{iWidth:1000, iTipMaxHeight:400,szTitle:"JS Source Code - Popup Option" });
+  TipFixJS(JS3_OPT,event,{iWidth:1000, iTipMaxHeight:400,szTitle:"JS Source Code - Popup Option" });
 }
 
 
@@ -909,10 +909,10 @@ function sample4JS(event){
   
   if (szType == "VIDEO"){
     szTip = JS4_VIDEO;
-    TipFixedTextArea(szTip,event,{szTitle:"JS Source Code - Advanced Sample=" + szTypeText});
+    TipFixTextArea(szTip,event,{szTitle:"JS Source Code - Advanced Sample=" + szTypeText});
   }else if (szType == "ABOUT"){
     szTip = JS4_ABOUT;
-    TipFixedJS(szTip,event,{szTitle:"JS Source Code - Advanced Sample=" + szTypeText});
+    TipFixJS(szTip,event,{szTitle:"JS Source Code - Advanced Sample=" + szTypeText});
   }
   
 }
