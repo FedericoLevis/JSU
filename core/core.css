@@ -464,12 +464,10 @@ input.tipGoogleAnalList, input.tipGoogleAnalListUp {  /* Button for Google Analy
     cursor: pointer;
 }
 input.tipGoogleAnalList {
-   /*  background: #FEFEFE url(https://raw.github.com/FedericoLevis/JSU/master/images/tipGoogleAnalList.png) no-repeat center center; */
-   background: #FEFEFE url(../images/tipGoogleAnalList.png) no-repeat center center; 
+   background: #FEFEFE url(https://raw.github.com/FedericoLevis/JSU/master/images/tipGoogleAnalList.png) no-repeat center center; 
 }
 input.tipGoogleAnalListUp {
-   /* background: #FEFEFE url(https://raw.github.com/FedericoLevis/JSU/master/images/tipGoogleAnalListUp.png) no-repeat center center; */
-   background: #FEFEFE url(../images/tipGoogleAnalListUp.png) no-repeat center center; 
+   background: #FEFEFE url(https://raw.github.com/FedericoLevis/JSU/master/images/tipGoogleAnalListUp.png) no-repeat center center; 
 }
 
 input.tipGoogleAnal, input.tipGoogleAnalUp {  /* Button to show 1 page with Google Analytics  */
@@ -481,12 +479,10 @@ input.tipGoogleAnal, input.tipGoogleAnalUp {  /* Button to show 1 page with Goog
     margin-left: 2px; 
 }
 input.tipGoogleAnal {
-   /* background: #FEFEFE url(https://raw.github.com/FedericoLevis/JSU/master/images/tipGoogleAnal.png) no-repeat center center; */
-   background: #FEFEFE url(../images/tipGoogleAnal.png) no-repeat center center; 
+   background: #FEFEFE url(https://raw.github.com/FedericoLevis/JSU/master/images/tipGoogleAnal.png) no-repeat center center;
 }
 input.tipGoogleAnalUp {
-   /* background: #FEFEFE url(https://raw.github.com/FedericoLevis/JSU/master/images/tipGoogleAnalUp.png) no-repeat center center; */
-   background: #FEFEFE url(../images/tipGoogleAnalUp.png) no-repeat center center; 
+   background: #FEFEFE url(https://raw.github.com/FedericoLevis/JSU/master/images/tipGoogleAnalUp.png) no-repeat center center; 
 }
 
 input.jsuHelp{	/* Help Button */  

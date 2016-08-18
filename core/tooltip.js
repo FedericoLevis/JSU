@@ -491,7 +491,7 @@ function TipFixCode(szCode, event, objOpt){
 		/* FULL_JSU_START */
 		var szCodeDiv = '<div id="divTipJS" class="prettyfy" style="width:"' + objOpt.iTipWidth + '"px;"> <pre class="prettyprint"><code>' + szCode + '</code></pre></div>';
 		TipFix (szCodeDiv,event,objOpt);
-		prettyPrint();  // Hightlight with prettyPrint the code between <pre> </pre> 
+		jsuPrettyPrint()();  // Hightlight with prettify-jsu the code between <pre> </pre> 
 		/* FULL_JSU_END */
 	}else{
 		TipFixTextArea(szCode, event, objOpt);
@@ -573,7 +573,7 @@ function TipFixMultiCode(arObjCode, event, objOpt){
 			// HTML must be put into a TextArea
 			szTbl+='     <textarea id="' + id + '"  rows="' + objCode.iRowNum + '" cols="' + objOpt.iColNum  + '" >' + objCode.szCode + '</textarea>\n';
 		}else{	
-			// This Code must be put prettified
+			// This Code must be prettified
 			var iWidth = (objOpt.iTipWidth == undefined) ? TIP_DEF_WIDTH : objOpt.iTipWidth;
 			var bContainer = false;
 			// check if is required MaxHeight
@@ -618,7 +618,7 @@ function TipFixMultiCode(arObjCode, event, objOpt){
 	objOpt.bNL2BR = false;  // we do not want to replace \n with <BR/>. Everythong is already well formatted
 	TipFix (szCodeDiv,event,objOpt);
 	if (bPrettifyEn){
-		prettyPrint();  // Hightlight with prettyPrint the code between <pre> </pre>
+		jsuPrettyPrint();  // Hightlight with prettify-jsu the code between <pre> </pre>
 	}
 	
 	
@@ -2604,7 +2604,7 @@ function tt_is_IE(){
  */
 function tt_isPrettifyEn(){
 	var fn = "[tooltip.js tt_isPrettifyEn()] ";
-	var bPrettifyLoaded =  (typeof(prettyPrint) != "undefined");
+	var bPrettifyLoaded =  (typeof(jsuPrettyPrint) != "undefined");
 	var bPrettifyCode = false; // Code present. Default = false (FREE version)
 	/* FULL_JSU_START */
 	bPrettifyCode = true;   // FULL JSU
