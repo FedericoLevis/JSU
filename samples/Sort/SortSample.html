@@ -33,46 +33,47 @@
 <body>
 
 <!--  Header Table: GoogleAnalytics and download -  common for all the JSU HTML -->
-<table  width="100%">
-  <tr>
-  <td class=tipl"">
-     <input type="button"  class="tipGoogleAnal" id="tipGoogleAnal"  onclick="jsuGoogleAnal(event)"  onmouseover="jsuGoogleAnalTip(event);" onmouseout="UnTip(event)"/> 
-  </td>
-  <td class="tipr">
-  <b>Download Options:</b> 
-  <input type="button"  class="tipFixed" id="tipFixedSample"  onclick="downloadTip(event)" /> 
-  <input type="button" class="downloadPay"     onclick="downloadPay()" onmouseover="downloadTipPay(event);" onmouseout="UnTip(event)"/>
-  <input type="button" class="downloadFree" onclick="downloadFree();"	onmouseover="downloadTipFree(event);" onmouseout="UnTip(event)"  />
-  </td></tr>
+<table class="sampleHea" width="100%" >
+  <tr >
+    <td class="tipl" width="30%">
+        <input type="button"  class="tipGoogleAnalList" id="tipGoogleAnalList"  onclick="jsuGoogleAnalList(event)"  onmouseover="jsuGoogleAnalListTip(event);" onmouseout="UnTip(event)"/> 
+    </td>
+    <td class="tipr" width="70%">
+     <table valign="bottom" align="right">
+        <tr>
+            <td class="tipr" ><b>Download Options:</b> </td>
+            <td><input type="button"  class="tipFix" id="tipFixSample"  onclick="downloadTip(event)" /> </td>
+            <td valign="bottom"> <input type="button" class="downloadPay"     onclick="downloadPay()" onmouseover="downloadTipPay(event);" onmouseout="UnTip(event)"/> </td>
+            <td valign="bottom"> <input type="button"  class="tipGoogleAnal" id="tipGoogleAnalPay"  onclick="jsuGoogleAnalPay();"  onmouseover="jsuGoogleAnalPayTip(event);" onmouseout="UnTip(event)"/> </td>
+            <td valign="bottom"> <input type="button" class="downloadFree" onclick="downloadFree();" onmouseover="downloadTipFree(event);" onmouseout="UnTip(event)"  /> </td>
+            <td valign="bottom"> <input type="button"  class="tipGoogleAnal" id="tipGoogleAnalFree"  onclick="jsuGoogleAnalFree();"  onmouseover="jsuGoogleAnalFreeTip(event);" onmouseout="UnTip(event)"/> </td>
+        </tr>
+      </table>  
+    </td>
+  </tr>
 </table>   
 
 <hr>
-<h1 align="center">JS Utility (JSU) - SortTable</h1>  
+<h1 class="jsuSample">JSU - JS Utility Plugin  - Sort Table Sample</h1>
 
 
 <table class="tip" BORDER="2" cellspacing="0" cellpadding="2" width="100%">
     <tr class="tipTitleBig">
-      <th class="tipTitleBig" colspan="4">JSU<input type="button" class="tipFixed" id="tipJSUTitle" onclick="aboutTipFixJSU(event);" />
+      <th class="tipTitleBig" colspan="4">JSU<input type="button" class="tipFix" id="tipJSUTitle" onclick="aboutTipFixJSU(event);" />
         <label class="aboutAuthor">by Federico Levis</label>
-            <input type="button" class="tipFixed" id="tipJSUAuthor" onclick="aboutTipAuthor(event);" />
-      </th>
-    </tr>
-    <tr class="tipTitleBg2">
-      <th class="tipTitleBig2" colspan="4">Table Sort Sample - JSU <label class="jsuAPI">cSortTable</label>
-               <input type="button" class="jsuHelp" onclick="jsuDocSort()" 
-             onmouseover="Tip(JSU_TIP_CUR_FEATURE);" onmouseout="UnTip(event)" />
+            <input type="button" class="tipFix" id="tipJSUAuthor" onclick="aboutTipAuthor(event);" />
         <!--  ONLY for developers: displayed when URL PAR opt=1 -->     
-        <select id="selectShowCol" style="display:none; margin-left:15px" onchange="onchangeShowCol()">
+        <select id="selectShowCol" class="parOption" onchange="onchangeShowCol()">
             <option value="1">Show SAMPLE</option>
             <option value="2">Show DESCRIPTION</option>
             <option value="ALL" selected>Show ALL</option>
         </select> 
       </th>
-      </tr>
-    <tr class="tipTitleBig3" id="tr_sample_0" >
+    </tr>
+    <tr class="tipTitleBig2" id="tr_sample_0" >
       <td id="col_0_1" width="45%" class="tipc">SAMPLE
         <!--  To show all sample or only ONE   -->
-        <select id="selectSample" style="margin-left:15px" onchange="onchange_sample()">
+        <select id="selectSample" class="selectSample"style="margin-left:15px" onchange="onchange_sample()">
             <option value="1">Show SAMPLE_1: Table with Standard Format</option>
             <option value="2">Show SAMPLE_2: Table with a CUSTOM FORMAT</option>
             <option value="3">Show SAMPLE_3: Other cSortTable API</option>
@@ -113,7 +114,7 @@
       <td class="sampleDesc"  id="col_1_2"  valign="top">
          <table >
            <tr valign="top"><td>
-               <label class="aboutSource">JS Souce Code</label> of Sample_1: <input type="button" class="tipFixedJS" id="tipJSTbl1" onclick="tipFixedCode( JS_CODE_SORT_TBL1,event);" /><BR/>
+               <label class="aboutSource">JS Souce Code</label> of Sample_1: <input type="button" class="tipFixJS" id="tipJSTbl1" onclick="tipFixCode( JS_CODE_SORT_TBL1,event);" /><BR/>
                Table of this sample has <label class="sampleBrown">FEW PROPERTIES (in Brown below) different from <label class="jsuAPI">cSortTable</label> JSU default.</label><BR/>
                Table Columns:
                <ul type="square">
@@ -190,7 +191,7 @@
       <td class="sampleDesc" id="col_2_2"  valign="top">
          <table >
            <tr valign="top"><td>
-               <label class="aboutSource">JS Source Code</label> of SAMPLE_2: <input type="button" class="tipFixedJS" id="tipJSTbl2" onclick="tipFixedCode( JS_CODE_SORT_TBL2,event);" /><BR/>
+               <label class="aboutSource">JS Source Code</label> of SAMPLE_2: <input type="button" class="tipFixJS" id="tipJSTbl2" onclick="tipFixCode( JS_CODE_SORT_TBL2,event);" /><BR/>
                Table has <label class="sampleBrown">MANY PROPERTIES (in Brown below) different from <label class="jsuAPI">cSortTable</label> JSU default.</label><BR/>
                Table Columns:
                <ul type="square">
@@ -276,9 +277,9 @@
                As explained in previous samples, to add Sort features to a Table we simply call <label class="tipJSUApi">new cSortTable</label>  <BR/>  
                If required, there are also following <label class="jsuAPI">cSortTable</label> API:
                <ul type="square">
-               <li><b>setSort</b> Set SortCol and SortDirection<input type="button" class="tipFixedJS" id="tipJSSetSort" onclick="tipFixedCode( JS_CODE_SET_SORT,event);" /></li>
-               <li><b>getSortCol</b> Get Sort Column<input type="button" class="tipFixedJS" id="tipJSGetSortCol" onclick="tipFixedCode( JS_CODE_GET_SORT_COL,event);" /></li>
-               <li><b>getSortDir</b> Get Sort Direction  <input type="button" class="tipFixedJS" id="tipJSGetSortDir" onclick="tipFixedCode( JS_CODE_GET_SORT_DIR,event);" /></li>
+               <li><b>setSort</b> Set SortCol and SortDirection<input type="button" class="tipFixJS" id="tipJSSetSort" onclick="tipFixCode( JS_CODE_SET_SORT,event);" /></li>
+               <li><b>getSortCol</b> Get Sort Column<input type="button" class="tipFixJS" id="tipJSGetSortCol" onclick="tipFixCode( JS_CODE_GET_SORT_COL,event);" /></li>
+               <li><b>getSortDir</b> Get Sort Direction  <input type="button" class="tipFixJS" id="tipJSGetSortDir" onclick="tipFixCode( JS_CODE_GET_SORT_DIR,event);" /></li>
                </ul>
            </td></tr>
          </table>

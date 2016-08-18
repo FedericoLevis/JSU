@@ -1,4 +1,4 @@
-
+    
 <!DOCTYPE html>
 
 <html>
@@ -30,47 +30,46 @@
 <body>
 
 <!--  Header Table: GoogleAnalytics and download -  common for all the JSU HTML -->
-<table  width="100%">
-  <tr>
-  <td class=tipl"">
-     <input type="button"  class="tipGoogleAnal" id="tipGoogleAnal"  onclick="jsuGoogleAnal(event)"  onmouseover="jsuGoogleAnalTip(event);" onmouseout="UnTip(event)"/> 
-  </td>
-  <td class="tipr">
-  <b>Download Options:</b> 
-  <input type="button"  class="tipFixed" id="tipFixedSample"  onclick="downloadTip(event)" /> 
-  <input type="button" class="downloadPay"     onclick="downloadPay()" onmouseover="downloadTipPay(event);" onmouseout="UnTip(event)"/>
-  <input type="button" class="downloadFree" onclick="downloadFree();"	onmouseover="downloadTipFree(event);" onmouseout="UnTip(event)"  />
-  </td></tr>
+<table class="sampleHea" width="100%" >
+  <tr >
+    <td class="tipl" width="30%">
+        <input type="button"  class="tipGoogleAnalList" id="tipGoogleAnalList"  onclick="jsuGoogleAnalList(event)"  onmouseover="jsuGoogleAnalListTip(event);" onmouseout="UnTip(event)"/> 
+    </td>
+    <td class="tipr" width="70%">
+     <table valign="bottom" align="right">
+        <tr>
+            <td class="tipr" ><b>Download Options:</b> </td>
+            <td><input type="button"  class="tipFix" id="tipFixSample"  onclick="downloadTip(event)" /> </td>
+            <td valign="bottom"> <input type="button" class="downloadPay"     onclick="downloadPay()" onmouseover="downloadTipPay(event);" onmouseout="UnTip(event)"/> </td>
+            <td valign="bottom"> <input type="button"  class="tipGoogleAnal" id="tipGoogleAnalPay"  onclick="jsuGoogleAnalPay();"  onmouseover="jsuGoogleAnalPayTip(event);" onmouseout="UnTip(event)"/> </td>
+            <td valign="bottom"> <input type="button" class="downloadFree" onclick="downloadFree();" onmouseover="downloadTipFree(event);" onmouseout="UnTip(event)"  /> </td>
+            <td valign="bottom"> <input type="button"  class="tipGoogleAnal" id="tipGoogleAnalFree"  onclick="jsuGoogleAnalFree();"  onmouseover="jsuGoogleAnalFreeTip(event);" onmouseout="UnTip(event)"/> </td>
+        </tr>
+      </table>  
+    </td>
+  </tr>
 </table>   
 
 <hr>
+<h1 class="jsuSample">JSU - JS Utility Plugin  - Tooltip Sample</h1>
 
 <table class="tip" BORDER="2" cellspacing="0" cellpadding="2" width="100%">
     <tr class="tipTitleBig">
-      <th class="tipTitleBig" colspan="4">JSU<input type="button" class="tipFixed" id="tipJSUTitle" onclick="aboutTipFixJSU(event);" />
+      <th class="tipTitleBig" colspan="4">JSU<input type="button" class="tipFix" id="tipJSUTitle" onclick="aboutTipFixJSU(event);" />
         <label class="aboutAuthor">by Federico Levis</label>
-            <input type="button" class="tipFixed" id="tipJSUAuthor" onclick="aboutTipAuthor(event);" />
-      </th>
-    </tr>
-    <tr class="tipTitleBg2">
-      <th class="tipTitleBig2" colspan="4"><h1 class="jsuSample">Tooltip Sample - JSU <label class="jsuAPI">tooltip.js API</label>
-            <input type="button" class="jsuHelp" onclick="jsuDocTip()" 
-                onmouseover="Tip(JSU_TIP_CUR_FEATURE);" onmouseout="UnTip(event)" /> 
-        </h1>
+            <input type="button" class="tipFix" id="tipJSUAuthor" onclick="aboutTipAuthor(event);" />
         <!--  ONLY for developers: displayed when URL PAR opt=1 -->     
-        <select id="selectShowCol" style="display:none; margin-left:15px" onchange="onchangeShowCol()">
+        <select id="selectShowCol" class="parOption" onchange="onchangeShowCol()">
             <option value="1">Show SAMPLE</option>
             <option value="2">Show DESCRIPTION</option>
             <option value="ALL" selected>Show ALL</option>
         </select> 
       </th>
-      
-      
     </tr>
-    <tr class="tipTitleBig3">
+    <tr class="tipTitleBig2">
       <td width="50%" class="tipc" id="col_0_1">SAMPLE
         <!--  To show all sample or only ONE   -->
-        <select id="selectSample" style="margin-left:15px" onchange="onchange_sample()">
+        <select id="selectSample" class="selectSample"  onchange="onchange_sample()">
             <option value="1">Show Sample_1: Floating Tip</option>
             <option value="2">Show Sample_2: Fixed Tip</option>
             <option value="3">Show Sample_3: FixedTip with Code Highlighted</option>
@@ -117,10 +116,10 @@
                JS Code of the 4 Sample 1 cases:
                <table class="sampleNoBorder" width="100%">
                <tr style="font-size: 8pt">
-                 <td > <b>Text Tip </b> Sample: <input type="button" class="tipFixedCode" id="tipCode1a" onclick="sampleCode1a(event);" /></td>
-                 <td style="padding-left:15px"><b>HTML Tip </b> Sample: <input type="button" class="tipFixedCode" id="tipCode1v" onclick="sampleCode1b(event);" /></td>
-                 <td style="padding-left:15px"> <b>Readme Tip </b> Sample: <input type="button" class="tipFixedCode" id="tipCode1c" onclick="sampleCode1c(event);" /></td>
-                 <td style="padding-left:15px"> <b>Info Tip </b> Sample: <input type="button" class="tipFixedCode" id="tipCode1d" onclick="sampleCode1d(event);" /></td>
+                 <td > <b>Text Tip </b> Sample: <input type="button" class="tipFixCode" id="tipCode1a" onclick="sampleCode1a(event);" /></td>
+                 <td style="padding-left:15px"><b>HTML Tip </b> Sample: <input type="button" class="tipFixCode" id="tipCode1v" onclick="sampleCode1b(event);" /></td>
+                 <td style="padding-left:15px"> <b>Readme Tip </b> Sample: <input type="button" class="tipFixCode" id="tipCode1c" onclick="sampleCode1c(event);" /></td>
+                 <td style="padding-left:15px"> <b>Info Tip </b> Sample: <input type="button" class="tipFixCode" id="tipCode1d" onclick="sampleCode1d(event);" /></td>
                </tr>               
                </table>  
            </td></tr>
@@ -134,7 +133,7 @@
          <label class="sampleTitle">SAMPLE_2 - Fixed Tip with GIF, button, link, VIDEO,..</label>
          <ul>
            <li><b>case a) FixedTip with GIF, Button, Link:</b>  
-               <input type="button"  class="tipFixed" id="tipSample2a"  onclick="sample2a(event);" />
+               <input type="button"  class="tipFix" id="tipSample2a"  onclick="sample2a(event);" />
            </li>    
            <BR/>
            <li><b>case b) FixedTip with Embedded Page: </b> 
@@ -149,18 +148,18 @@
            <tr valign="top"><td>
                To implement a <b>FixedTip</b> Tooltip :  
                <ul> 
-               <li>Set an <b>input</b> with JSU <label class="jsuAPI">core.css</label> class like <label class="jsuAPI">tipFixed, tipFixArrow</label> </li>
+               <li>Set an <b>input</b> with JSU <label class="jsuAPI">core.css</label> class like <label class="jsuAPI">tipFix, tipFixArrow</label> </li>
                <li>In the <b>onclick event</b> call the <b>JSU Tip API</b>   <label class="jsuAPI">TipFix</label>(<b><i>tipHTML</i></b>,event,<b><i>objOpt</i></b>)</li>
                </ul>
                JS Code of the two cased of SAMPLE_2:
 			         <ul>
 			           <li><b>case a) FixedTip with GIF, Button, Link: </b> 
-			             <input type="button" class="tipFixedJS" id="sampleCode2a" onclick="sampleCode2a(event);" /> 
+			             <input type="button" class="tipFixJS" id="sampleCode2a" onclick="sampleCode2a(event);" /> 
 			           </li>
 			           <BR/>    
 			           <li><b>case b) FixedTip with HTML URL:</b> 
-			             <input type="button" class="tipFixedJS" id="sampleCode2b" onclick="sampleCode2b(event);" /> 
-                   <input style="margin-left:20px" type="button" class="tipFixedJS" id="inputTipFix" onclick="sampleCode2b(event);" /> 
+			             <input type="button" class="tipFixJS" id="sampleCode2b" onclick="sampleCode2b(event);" /> 
+                   <input style="margin-left:20px" type="button" class="tipFixJS" id="inputTipFix" onclick="sampleCode2b(event);" /> 
 			           </li>    
 			         </ul>
            </td></tr>
@@ -174,9 +173,9 @@
          <label class="sampleTitle">SAMPLE_3 - FixedTip with Code Highlighted</label><BR/>
          API <label class="jsuAPI">TipFixCode</label> <b>higlights SW Code</b>: js, java,  perl, pl, pm, bsh, csh, sh, c, cpp, rb, py, cv, cs ,json, ..
          <ul>
-           <li><b>case a) JS Code</b>  <input type="button" class="tipFixedJS" id="sample3a"  onclick="sample3a(event);" />  </li>    
+           <li><b>case a) JS Code</b>  <input type="button" class="tipFixJS" id="sample3a"  onclick="sample3a(event);" />  </li>    
            <BR/>    
-           <li><b>case b) Java Code</b>  <input type="button" class="tipFixedCode" id="sample3b"  onclick="sample3b(event);" />  </li>    
+           <li><b>case b) Java Code</b>  <input type="button" class="tipFixCode" id="sample3b"  onclick="sample3b(event);" />  </li>    
            <BR/>    
            <li><b>case c) Message with HTML TAGs</b><BR/>
             Use JS Tooltip API: <label class="jsuAPI">TipFixTextArea</label>"    
@@ -190,7 +189,7 @@
            <tr valign="top"><td>
                To show a <b>FixedTip</b> with <b>JS Code</b> in a TextBox:  
                <ul> 
-	               <li>Set an <b>input</b> with JSU <label class="jsuAPI">core.css</label> class like <label class="jsuAPI">tipFixedJS, tipFixArrow</label> </li>
+	               <li>Set an <b>input</b> with JSU <label class="jsuAPI">core.css</label> class like <label class="jsuAPI">tipFixJS, tipFixArrow</label> </li>
 	               <li>In the <b>onclick </b> event, call the proper <b>JSU Tooltip API</b> depending on the Code Type: <ul>
                     <li><b>a) ONLY JS Code:</b> Call <label class="jsuAPI">TipFixJS</label>(<b><i>JScodeMsg</i></b>,event,objOpt)</li> to hightlight JS Code </li>
                     <li><b>b) Message with HTML TAGs:</b> Call <label class="jsuAPI">TipFixTextArea</label>(<b><i>szTextMsg</i></b>,event,objOpt)</li> that show HTML as Text Message in a <b> Text Box</b> </li>
@@ -199,11 +198,11 @@
                JS Code of SAMPLE_3:
                <ul>
                  <li><b>case a) ONLY JS Code: </b>  
-                    <input type="button" class="tipFixedJS" id="imgTipFixJSFixed" onclick="TipFixTextArea (JS_CODE_3A,event,{iMaxWidth:1000});" />
+                    <input type="button" class="tipFixJS" id="imgTipFixJSFixed" onclick="TipFixTextArea (JS_CODE_3A,event,{iMaxWidth:1000});" />
                  </li>
                  <BR/>    
                  <li><b>case b) Message with HTML TAGs: </b>  
-                    <input type="button" class="tipFixedJS" id="imgTipFixJSFixed" onclick="TipFixTextArea (JS_CODE_3B,event,{iMaxWidth:1000});" />
+                    <input type="button" class="tipFixJS" id="imgTipFixJSFixed" onclick="TipFixTextArea (JS_CODE_3B,event,{iMaxWidth:1000});" />
                  </li>    
                </ul>
            </td></tr>

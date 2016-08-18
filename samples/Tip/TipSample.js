@@ -62,13 +62,13 @@ var JSU_TIP_3C='//This is an example of MIXED Code: JS and also HTML. \n' +
 '//--------------------------------------------------------- JS CODE \n' +
 'var JS_CODE_SORT_SAMPLE=...; \n\n' +
 '//<input> object with: \n' +
-'//  - class="tipFixed" type="button" \n' + 
+'//  - class="tipFix" type="button" \n' + 
 '//  - value=Text to display in the button \n'+	
 '//  - set whatever unique id \n' + 
 '//  - onclick="TipFixCode(msg,event,objOpt)" \n'+	
 '//  - objOpt = {iTipMaxHeight:300} for Optional MaxHeight (Vertical Scrollbar)\n\n' +
 '//--------------------------------------------------------- CODE with HTML TAGs \n' +
-' <input type="button" class="tipFixed" style="color:blue;" value="JS Source Code" id="tipBtnJSFixedSample"  \n'+
+' <input type="button" class="tipFix" style="color:blue;" value="JS Source Code" id="tipBtnJSFixedSample"  \n'+
 '    onclick="TipFixCode(JS_CODE_SORT_SAMPLE,event,{iTipMaxHeight:300});" /> '; 
 
 
@@ -194,11 +194,11 @@ var JS_CODE_3A= '//JS and HTML Code to implement SAMPLE_3 - case a) ONLY JS \n' 
 '// ---------------------------------------------------------------------------------  \n'+
 '// 2 HTML) Add an <input> with following attributes:" \n'+	
 '//<input> object with: \n' +
-'//  - class="tipFixedCode"  type="button" \n' + 
+'//  - class="tipFixCode"  type="button" \n' + 
 '//  - whatever unique id \n' + 
 '//  - onclick="TipFixCode()" \n'+	
 '//  - objOpt = {..} Set Option \n' +
-'<input type="button" class="tipFixedCode"  id="sample3a" \n' +
+'<input type="button" class="tipFixCode"  id="sample3a" \n' +
 '   onclick="TipFixCode(TIP_TIP_3A,event,{ \n' +
 '      iTipWidth:1000,  \\ preferred MaxWidth  \n' +
 '      iTipMaxHeight:600, \\ preferred MaxHeight \n' +
@@ -214,7 +214,7 @@ var JS_CODE_3B= '//JS and HTML Code to implement SAMPLE_3 - case b) JS and HTML 
 '// ---------------------------------------------------------------------------------  \n'+
 '// 2 HTML) Add an <input> with following attributes:" \n'+	
 '//<input> object with: \n' +
-'//  - class="tipFixedCode"  type="button" \n' + 
+'//  - class="tipFixCode"  type="button" \n' + 
 '//  - whatever unique id \n' + 
 '//  - onclick="TipFixCode()" \n'+	
 '//  - objOpt = {..} Set Option \n' +
@@ -240,7 +240,7 @@ function sampleCode1a(event){
 	
 	TipFixMultiCode([{szTitle:"HTML: TipSample.html", szCode: JS_CODE_1a_HTML,  bPrettify:false}],
 			                event,
-			                {szTitle:"SAMPLE_1 Text tip - Source Code"});	
+			                {szTitle:"SAMPLE_1 Text tip - Source Code",iTipWidth: 700});	
 }
 
 function sampleCode1b(event){
@@ -341,25 +341,25 @@ function sampleCode2a(event){
 	var JS_CODE_2a_JS = '//Define in JS a constant (e.g. TIP_FIXED_SAMPLE) with the MsgHtml (with GIF, button, link,...) to show in the Tip.  \n'+
 	'var TIP_FIXED_SAMPLE=...; ';
 	
-	var JS_CODE_2a_HTML = '// In This example we add the FixedTip to an <input> "button" with the JSU class "tipFixed":  \n'+	 
+	var JS_CODE_2a_HTML = '// In This example we add the FixedTip to an <input> "button" with the JSU class "tipFix":  \n'+	 
 	'//<input> object with: \n' +
-	'//  - class="tipFixed"  type="button" \n' + 
+	'//  - class="tipFix"  type="button" \n' + 
 	'//  - whatever unique id \n' + 
 	'//  - onclick="TipFix(szHtml,event,objOpt)" \n'+	
 	'//  - objOpt = {..} Optional Option \n' +
-	'<input type="button" class="tipFixed"  id="tipFixedSample" \n' +
+	'<input type="button" class="tipFix"  id="tipFixSample" \n' +
 	'   onclick="TipFix(TIP_FIXED_SAMPLE,event,{ \n' +
 	'      iTipMaxHeight:1000, \n' +
 	'      szTitle:\'Fixed Tip Sample\'});" /> '; 
 
 	
 	var JS_CODE_2a_CSS = '/*' + CSS_SEP +  '\n' + 
-	'Tip button for FixedTip with a Question Mark and an Up/Down Arrow:\n' +
-	'input.tipFixed: <input class="tipFixed" type="button" style="margin-left:5px;margin-right:50px" /> \n' +
-	'input.tipFixedUp: <input style="margin-left:5px" class="tipFixedUp" type="button" />   \n' + 
-	'Used with JSU Tooltip API TipFix() or TipFixxxx()  - See <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/tooltip.js/index.html">JSU Tooltip API Doc</a> \n' + 
+	'Tip button for FixedTip - ' +
+	'see JSU Tooltip API TipFix()  <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/tooltip.js/index.html">JSU Tooltip API Doc</a> \n' + 
+	'input.tipFix <input class="tipFix" type="button" style="margin-left:5px;margin-right:50px" /> ' +
+	'input.tipFixUp <input style="margin-left:5px" class="tipFixUp" type="button" />   \n' + 
 	CSS_SEP + '*/ \n' +
-	'input.tipFixed, input.tipFixedUp{  /* Fields Common for input.tipFixed and input.tipFixedUp */  \n' + 
+	'input.tipFix, input.tipFixUp{  /* Fields Common for input.tipFix and input.tipFixUp */  \n' + 
 	'    height: 20px; \n' + 
 	'    width: 13px; \n' + 
 	'    border: 1px solid #000; \n' + 
@@ -368,19 +368,19 @@ function sampleCode2a(event){
 	'    margin-left: 4px;  \n' + 
 	'} \n' + 
 	' \n' + 
-	'input.tipFixed{ /* Specific field of input.tipFixed. Image= ? with arrow Down */ \n' + 
-	'    background: #E0E0E0 url(https://raw.github.com/FedericoLevis/JSU/master/images/tipFixed.png) no-repeat center center; \n' + 
+	'input.tipFix{ /* Specific field of input.tipFix. Image= ? with arrow Down */ \n' + 
+	'    background: #E0E0E0 url(https://raw.github.com/FedericoLevis/JSU/master/images/tipFix.png) no-repeat center center; \n' + 
 	'} \n' + 
 	' \n' + 
-	'input.tipFixedUp{ /* Specific field of input.tipFixedUp. Image= ? with arrow Up   */ \n' + 
-	'    background: #E0E0E0 url(https://raw.github.com/FedericoLevis/JSU/master/images/tipFixedUp.png) no-repeat center center; \n' + 
+	'input.tipFixUp{ /* Specific field of input.tipFixUp. Image= ? with arrow Up   */ \n' + 
+	'    background: #E0E0E0 url(https://raw.github.com/FedericoLevis/JSU/master/images/tipFixUp.png) no-repeat center center; \n' + 
 	'} \n '; 
 	
   // 3 Codes: First 2 with HTML TAGS, CSS without HTML tags
 	TipFixMultiCode([
  	      {szTitle:"JS: TipSample.js", szCode: JS_CODE_2a_JS,  bPrettify:true},
-	      {szTitle:"HTML: TipSample.html", szCode: JS_CODE_2a_HTML,  bPrettify:false},
-	      {szTitle:"CSS: jsu/core/core.css", szCode: JS_CODE_2a_CSS,  bPrettify:true}
+	      {szTitle:"HTML: TipSample.html", szCode: JS_CODE_2a_HTML,  bPrettify:false, iRowNum:6},
+	      {szTitle:"CSS: jsu/core/core.css", szCode: JS_CODE_2a_CSS,  bPrettify:true, iMaxHeight: 250 }
 	    ],
       event,
       {szTitle:"SAMPLE_2 FixedTip with GIF, button, link - Source Code" , iTipWidth: 1100} );	
@@ -395,11 +395,11 @@ function sampleCode2b(event){
 	'     frameborder="0" allowfullscreen></iframe>\';'; 
 	
 	var JS_CODE_2b_HTML = '// In This example we add the Video FixedTip to an <input> "button" with the JSU class "tipFixArrow":  \n'+	 
-	'//  - class="tipFixed"  type="button" \n' + 
+	'//  - class="tipFix"  type="button" \n' + 
 	'//  - whatever unique id \n' + 
 	'//  - onclick="TipFix(szHtml,event,objOpt)" \n'+	
 	'//  - objOpt = {..} Set the desired Option \n' +
-	' <input type="button" class="tipFixArrow" value="Show Video" id="tipFixedBtnVideo" \n'+	
+	' <input type="button" class="tipFixArrow" value="Show Video" id="tipFixBtnVideo" \n'+	
 	'  onclick="TipFix(JSU_TIP_VIDEO,event,{ \n' +
 	'     iTipWidth: 650,  \n' +  
 	'     szTitle:\'Fixed Tip with a Video\' \n' +
