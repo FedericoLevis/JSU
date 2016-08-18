@@ -131,10 +131,9 @@ function sample2b(event){
  */
 function sample2c(event){
 	
-	var szTipFrame =	'<iframe width="1000" height="600" src="' + JSU_SHORT_URL_DOWNLOAD_FREE + '" ></iframe>'; 
-	
+	var szTipFrame =	'<iframe width="1030" height="600" src="' + JSU_SHORT_URL_DOWNLOAD_FREE + '" ></iframe>'; 
 	TipFix(szTipFrame,event,{
-		 iTipWidth: 1020,  
+		 iTipWidth: 1070,
 		 szTitle:'Fixed Tip containing the FREE JSU.zip Download Page'
 	 }
 	);
