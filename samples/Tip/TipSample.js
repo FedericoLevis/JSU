@@ -131,11 +131,11 @@ function sample2b(event){
  */
 function sample2c(event){
 	
-		var JSU_TIP_PAGE =	'<iframe width="1000" height="600" src="https://goo.gl/MoY5nK" ></iframe>'; 
+	var szTipFrame =	'<iframe width="1000" height="600" src="' + JSU_SHORT_URL_DOWNLOAD_FREE + '" ></iframe>'; 
 	
-	TipFix(JSU_TIP_PAGE,event,{
+	TipFix(szTipFrame,event,{
 		 iTipWidth: 1020,  
-		 szTitle:'Fixed Tip with a Page: Main JSU Sample'
+		 szTitle:'Fixed Tip containing the FREE JSU.zip Download Page'
 	 }
 	);
 }
