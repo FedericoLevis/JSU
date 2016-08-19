@@ -230,7 +230,11 @@ function sampleCode1a(event){
 	
 	TipFixMultiCode([{szTitle:"HTML: TipSample.html", szCode: JS_CODE_1a_HTML,  bPrettify:false}],
 			                event,
-			                {szTitle:"SAMPLE_1 Text tip - Source Code",iTipWidth: 700});	
+			                {
+		                    szTitle:"SAMPLE_1 Text tip - Source Code",
+		            		    iframeToResize: getIframeToResize(),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
+		                    iTipWidth: 700
+		                    });	
 }
 
 function sampleCode1b(event){
