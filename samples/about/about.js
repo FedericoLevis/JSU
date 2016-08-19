@@ -1434,7 +1434,7 @@ function testExecute(){
 	jslog (JSLOG_DEBUG,Fn + "LAUNCH szUrl=" + szUrl);
 	if (var_test.bFrame){
 		UnTip();
-		var szTipFrame =	'<iframe width="1100" height="800" src="' + szUrl + '" ></iframe>'; 
+		var szTipFrame =	'<iframe width="1200" height="100" src="' + szUrl + '" ></iframe>'; 
 		TipFix(szTipFrame,null,{
 			 iTipWidth: 1200,
 			 szTitle:szUrl,
