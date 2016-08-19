@@ -953,7 +953,8 @@ function manage_par_opt(){
 		  var iframeEl = window.parent.document.getElementById ('iframe' + szParDoc);				
 			var trEl = getElementById2("tr_sample_" + szParDoc, false);
 			if (trEl){
-				iframeEl.height = trEl.height; 
+				var h = parseInt(trEl.height.replace ("px",""));
+				iframeEl.height = h + 40; 
 			}
 			// now we show the iframe that was hidden
 			elementShow (iframeEl,true);

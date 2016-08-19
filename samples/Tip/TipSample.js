@@ -83,7 +83,9 @@ function sample2b1(event){
  */
 function sample2b2(event){
 	// DAFARE
-	var szTipFrame =	'<iframe width="1030" height="600" src="' + JSU_SHORT_URL_DOWNLOAD_FREE + '.info' + '" ></iframe>'; 
+	// var szTipFrame =	'<iframe width="1030" height="600" src="' + JSU_SHORT_URL_DOWNLOAD_FREE +  '" ></iframe>';
+	var szTipFrame =	'<iframe width="1030" height="600" src="https://goo.gl/#analytics/goo.gl/HnNqnM/all_time" ></iframe>';
+	
 	TipFix(szTipFrame,event,{
 		 iTipWidth: 1070,
 		 szTitle:'Fixed Tip containing the FREE JSU.zip Download Page',
