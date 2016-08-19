@@ -55,7 +55,7 @@ function sample2a(event){
 	'</td></tr></table>';	
 	TipFix(szTip,event,{
 		szTitle:'Fixed Tip Sample',
-		iframeToResize: getIframeToResize(2),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
+		iframeToResize: getIframeToResize(),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
 		iTipMaxHeight:1000
   });
 }	
@@ -70,7 +70,7 @@ function sample2b1(event){
 	
 	TipFix(JSU_TIP_VIDEO,event,{
 		iTipWidth: 620,  
-		iframeToResize: getIframeToResize(2),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
+		iframeToResize: getIframeToResize(),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
 		szTitle:'Fixed Tip with a Video'
 	 }
 	);
@@ -87,7 +87,7 @@ function sample2b2(event){
 	TipFix(szTipFrame,event,{
 		 iTipWidth: 1070,
 		 szTitle:'Fixed Tip containing the FREE JSU.zip Download Page',
-  		iframeToResize: getIframeToResize(2),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
+  		iframeToResize: getIframeToResize(),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
 		 bCloseBtn : false
 	 }
 	
@@ -120,7 +120,7 @@ function sample3a(event){
 	TipFixCode(szCode,event,
 			 {iTipWidth:1000,
 		    iTipMaxHeight:600,
-				iframeToResize: getIframeToResize(3),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
+				iframeToResize: getIframeToResize(),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
 		    szTitle:'Tip Sample with JS Code Hightlighted'
 		   });	
 }
@@ -155,7 +155,7 @@ function sample3b(event){
 	TipFixCode(szCode,event,
 			 {iTipWidth:1000,
 		    iTipMaxHeight:600,
-				iframeToResize: getIframeToResize(3),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
+				iframeToResize: getIframeToResize(),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
 		    szTitle:'Tip Sample with Java Code Hightlighted'
 		   });	
 }
@@ -252,7 +252,7 @@ function sampleCode1b(event){
 	    ],
       event,
       { szTitle:"SAMPLE_1 HTML Tip - Source Code" , 
-		    iframeToResize: getIframeToResize(1),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
+		    iframeToResize: getIframeToResize(),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
 		    iTipWidth: 1000
 		  } );	
 }
@@ -289,7 +289,7 @@ function sampleCode1c(event){
       event,
       { 
 		    szTitle:"SAMPLE_1 README Tip - Source Code",
-		    iframeToResize: getIframeToResize(1),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
+		    iframeToResize: getIframeToResize(),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
 		    iTipWidth: 1000 
 		   } 
 	 );	
@@ -331,7 +331,7 @@ function sampleCode1d(event){
       event,
       {
  		   szTitle:"SAMPLE_4 HTML Tip - Tip image jsuInfo",
-		    iframeToResize: getIframeToResize(1),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
+		    iframeToResize: getIframeToResize(),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
  		   iTipWidth: 1000 
  		   } 
  	 );	
@@ -388,7 +388,7 @@ function sampleCode2a(event){
       event,
       { 
 		    szTitle:"SAMPLE_2 FixedTip with GIF, button, link - Source Code" ,
-		    iframeToResize: getIframeToResize(2),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
+		    iframeToResize: getIframeToResize(),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
 		    iTipWidth: 1100} );	
 }
 
@@ -441,7 +441,7 @@ function sampleCode2b1(event){
       event,
       {
 		   szTitle:"SAMPLE_2 FixedTip with VIDEO - Source Code" ,
-   	    iframeToResize: getIframeToResize(2),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
+   	    iframeToResize: getIframeToResize(),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
 		   iTipWidth: 1100
 		  } );	
 }
@@ -496,7 +496,7 @@ function sampleCode2b2(event){
       event,
       { 
 		    szTitle:"SAMPLE_2 FixedTip with HTMLPage - Source Code" , 
-		    iframeToResize: getIframeToResize(2),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
+		    iframeToResize: getIframeToResize(),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
 		    iTipWidth: 1100
 		  } );	
 }
@@ -514,7 +514,7 @@ function sampleCode3a(event){
   '	   });';
   TipFixCode(szTip,event,{
   	 szTitle:"JS Code of SAMPLE 3a or 3b",
-     iframeToResize: getIframeToResize(3)  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
+     iframeToResize: getIframeToResize()  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
   	 });
 }
 
@@ -536,7 +536,7 @@ function sampleCode3c(event){
     '      {szTitle:"FixedTip with GIF, button, link - Source Code" , iTipWidth: 1100} );	';
     TipFixCode(szTip,event,{
     	 szTitle:"JS Code of SAMPLE 3c",
-       iframeToResize: getIframeToResize(3)  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
+       iframeToResize: getIframeToResize()  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
     });
   
   

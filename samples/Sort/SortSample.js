@@ -56,9 +56,6 @@ function sortTbl1Tmo(){
 
 
 function sortTbl2(){
-	if (getElementById2 ('tbl2',false) == 0){
-		return; // for particolr cases of tbl2 not still present. FUTURE: manage also ths cases 
-	}
 	//You need Only 1 JSU call to set the Sort 
 	//1) create cSortTable related to Table with id='tbl2' 
 	cSortTbl2 = new cSortTable('tbl2', 
