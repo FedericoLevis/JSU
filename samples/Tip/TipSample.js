@@ -19,57 +19,6 @@ var JSU_TIP_README='<table class="tip" BORDER="2" cellspacing="0" cellpadding="2
 
 var JSU_TIP_INFO=JSU_TIP_HTML;
 
-var JSU_TIP_3A="//JS Code to Sort an HTML Table with JSU cSortTable: you need only one JSU API call. \n" +
-"// 1) create cSortTable related to Table with id='tbl1' \n" +
-"var cSortTbl1 = new cSortTable('tbl1', \n" +
-" //Describe how to Sort the Table Columns \n" +
-"  [{col: 'Country'},  // Default type: SORT_TYPE.STRING \n"+  	
-"   {col: 'Name'},  // Default type: SORT_TYPE.STRING \n"+
-"   // For Date we set the FMT_DATETIME_TBL1 = 'NNN dd, yyyy HH:mm:ss' \n"+
-"   {col:'Date', type: SORT_TYPE.DATETIME, fmt: FMT_DATETIME_TBL1},\n"+
-"   // For NUMBER  we use default separator (used creating the table)\n"+
-"   {col: 'Amount', type: SORT_TYPE.NUMBER} ],\n"+  		
-"   // OPTION \n" +
-"     {szSortCol:'Name',   // Current SortCol (we have already Popolated the Table order by this col)\n"+
-"     szSortDir:SORT_DIR.ASC, // Current SortDir (we have Popolated the Table in this way)	\n"+
-"     bSortApply:false   //  Table is already sorted\n"+
-"});\n" +
-"//Now you can Sort the Table by clicking on Colum Header ";
-
-var JSU_TIP_3B='/** \n' +
-'* Class Factorial \n' +
-'* print 100 Factorial numbers \n' +
-'*/ \n' +
-'public class Factorial   \n'+
-'{   \n'+
-'	public static void main(String[] args)   \n'+
-'	{	final int NUM_FACTS = 100;   \n'+
-'		for(int i = 0; i < NUM_FACTS; i++)   \n'+
-'			System.out.println( i + "! is " + factorial(i));   \n'+
-'	}   \n'+
-'	   \n'+
-'	public static int factorial(int n)   \n'+
-'	{	int result = 1;   \n'+
-'		for(int i = 2; i <= n; i++)   \n'+
-'			result *= i;   \n'+
-'		return result;   \n'+
-'	} ';
-
-
-
-var JSU_TIP_3C='//This is an example of MIXED Code: JS and also HTML. \n' +
-'//	HTML TAGs cannot be displayed with TipFixCode(), but you should use TipFixTextArea()  \n\n' +
-'//--------------------------------------------------------- JS CODE \n' +
-'var JS_CODE_SORT_SAMPLE=...; \n\n' +
-'//<input> object with: \n' +
-'//  - class="tipFix" type="button" \n' + 
-'//  - value=Text to display in the button \n'+	
-'//  - set whatever unique id \n' + 
-'//  - onclick="TipFixCode(msg,event,objOpt)" \n'+	
-'//  - objOpt = {iTipMaxHeight:300} for Optional MaxHeight (Vertical Scrollbar)\n\n' +
-'//--------------------------------------------------------- CODE with HTML TAGs \n' +
-' <input type="button" class="tipFix" style="color:blue;" value="JS Source Code" id="tipBtnJSFixedSample"  \n'+
-'    onclick="TipFixCode(JS_CODE_SORT_SAMPLE,event,{iTipMaxHeight:300});" /> '; 
 
 
 
@@ -114,7 +63,7 @@ function sample2a(event){
  * TipFix with VIDEO
  * @param event
  */
-function sample2b(event){
+function sample2b1(event){
 	var JSU_TIP_VIDEO=	'<iframe width="600" height="500" src="https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1" frameborder="0" allowfullscreen></iframe>'; 
 	
 	TipFix(JSU_TIP_VIDEO,event,{
@@ -126,10 +75,10 @@ function sample2b(event){
 
 
 /**
- * TipFix with URL
+ * TipFix with HTML Page
  * @param event
  */
-function sample2c(event){
+function sample2b2(event){
 	
 	var szTipFrame =	'<iframe width="1030" height="600" src="' + JSU_SHORT_URL_DOWNLOAD_FREE + '" ></iframe>'; 
 	TipFix(szTipFrame,event,{
@@ -147,19 +96,58 @@ function sample2c(event){
  * @param event
  */
 function sample3a(event){
-	TipFixCode(JSU_TIP_3A,event,
+	var szCode="//JS Code to Sort an HTML Table with JSU cSortTable: you need only one JSU API call. \n" +
+	"// 1) create cSortTable related to Table with id='tbl1' \n" +
+	"var cSortTbl1 = new cSortTable('tbl1', \n" +
+	" //Describe how to Sort the Table Columns \n" +
+	"  [{col: 'Country'},  // Default type: SORT_TYPE.STRING \n"+  	
+	"   {col: 'Name'},  // Default type: SORT_TYPE.STRING \n"+
+	"   // For Date we set the FMT_DATETIME_TBL1 = 'NNN dd, yyyy HH:mm:ss' \n"+
+	"   {col:'Date', type: SORT_TYPE.DATETIME, fmt: FMT_DATETIME_TBL1},\n"+
+	"   // For NUMBER  we use default separator (used creating the table)\n"+
+	"   {col: 'Amount', type: SORT_TYPE.NUMBER} ],\n"+  		
+	"   // OPTION \n" +
+	"     {szSortCol:'Name',   // Current SortCol (we have already Popolated the Table order by this col)\n"+
+	"     szSortDir:SORT_DIR.ASC, // Current SortDir (we have Popolated the Table in this way)	\n"+
+	"     bSortApply:false   //  Table is already sorted\n"+
+	"});\n" +
+	"//Now you can Sort the Table by clicking on Colum Header ";
+	
+	TipFixCode(szCode,event,
 			 {iTipWidth:1000,
 		    iTipMaxHeight:600,
 		    szTitle:'Tip Sample with JS Code Hightlighted'
 		   });	
 }
 
+
+
+
 /**
  * 
  * @param event
  */
 function sample3b(event){
-	TipFixCode(JSU_TIP_3B,event,
+	var szCode ='/** \n' +
+	'* Class Factorial \n' +
+	'* print 100 Factorial numbers \n' +
+	'*/ \n' +
+	'public class Factorial   \n'+
+	'{   \n'+
+	'	public static void main(String[] args)   \n'+
+	'	{	final int NUM_FACTS = 100;   \n'+
+	'		for(int i = 0; i < NUM_FACTS; i++)   \n'+
+	'			System.out.println( i + "! is " + factorial(i));   \n'+
+	'	}   \n'+
+	'	   \n'+
+	'	public static int factorial(int n)   \n'+
+	'	{	int result = 1;   \n'+
+	'		for(int i = 2; i <= n; i++)   \n'+
+	'			result *= i;   \n'+
+	'		return result;   \n'+
+	'	} ';
+
+	TipFixCode(szCode,event,
 			 {iTipWidth:1000,
 		    iTipMaxHeight:600,
 		    szTitle:'Tip Sample with Java Code Hightlighted'
@@ -167,17 +155,12 @@ function sample3b(event){
 }
 
 
-
 /**
  * 
  * @param event
  */
 function sample3c(event){
-	TipFixTextArea(JSU_TIP_3C,event,
-			 {iMaxRow:15,
-		    iMaxCol:130,
-		    szTitle:'Text Box with HTML TAGs'
-		   });	
+	sampleCode2a(event);
 }
 
 
@@ -377,7 +360,7 @@ function sampleCode2a(event){
 	'    background: #E0E0E0 url(https://raw.github.com/FedericoLevis/JSU/master/images/tipFixUp.png) no-repeat center center; \n' + 
 	'} \n '; 
 	
-  // 3 Codes: First 2 with HTML TAGS, CSS without HTML tags
+  // Show 3 Code Sections : we want to prettify Msg1 and Msg3 (for Msg2 we want to see the HTML TAGS as Plain Text)
 	TipFixMultiCode([
  	      {szTitle:"JS: TipSample.js", szCode: JS_CODE_2a_JS,  bPrettify:true},
 	      {szTitle:"HTML: TipSample.html", szCode: JS_CODE_2a_HTML,  bPrettify:false, iRowNum:6},
@@ -388,25 +371,25 @@ function sampleCode2a(event){
 }
 
 
-function sampleCode2b(event){
-	var JS_CODE_2b_JS = '//Define in JS a constant (e.g. JSU_TIP_VIDEO) with the MsgHtml (with <iframe> format)  to show in the Tip.  \n'+
+function sampleCode2b1(event){
+	var JS_CODE_2b1_JS = '//Define in JS a constant (e.g. JSU_TIP_VIDEO) with the MsgHtml containing the <iframe> format  to show the Video in the Tip.  \n'+
 	'// For example to show a youtube video use the relative "embed src" available in its YouTube page: \n'+
 	'var JSU_TIP_VIDEO=	\'<iframe width="600" height="500" \n'+
 	'     src="https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1" \n'+
 	'     frameborder="0" allowfullscreen></iframe>\';'; 
 	
-	var JS_CODE_2b_HTML = '// In This example we add the Video FixedTip to an <input> "button" with the JSU class "tipFixArrow":  \n'+	 
+	var JS_CODE_2b1_HTML = '// In This example we add the Video FixedTip to an <input> "button" with the JSU class "tipFixArrow":  \n'+	 
 	'//  - class="tipFix"  type="button" \n' + 
 	'//  - whatever unique id \n' + 
 	'//  - onclick="TipFix(szHtml,event,objOpt)" \n'+	
 	'//  - objOpt = {..} Set the desired Option \n' +
-	' <input type="button" class="tipFixArrow" value="Show Video" id="tipFixBtnVideo" \n'+	
+	' <input type="button" class="tipFixArrow" value="Show Video" id="tipSample2b1" \n'+	
 	'  onclick="TipFix(JSU_TIP_VIDEO,event,{ \n' +
 	'     iTipWidth: 650,  \n' +  
 	'     szTitle:\'Fixed Tip with a Video\' \n' +
 	'   });" /> ';
 
-	var JS_CODE_2b_CSS = '/*' + CSS_SEP +  '\n' + 
+	var JS_CODE_2b1_CSS = '/*' + CSS_SEP +  '\n' + 
 		'Tip button for FixedTip with an Up/Down Arrow:\n' +
 		'input.tipFixArrow: <input class="tipFixArrow" value="Example" type="button" style="margin-left:5px;margin-right:50px" /> \n' +
 		'input.tipFixArrowUp: <input style="margin-left:5px" value="Example" class="tipFixArrowUp" type="button" />   \n' + 
@@ -429,12 +412,97 @@ function sampleCode2b(event){
 				
   // 3 Codes: First 2 with HTML TAGS, CSS without HTML tags
 	TipFixMultiCode([
- 	      {szTitle:"JS: TipSample.js", szCode: JS_CODE_2b_JS,  bPrettify: false},
-	      {szTitle:"HTML: TipSample.html", szCode: JS_CODE_2b_HTML,  bPrettify: false},
-	      {szTitle:"CSS: jsu/core/core.css", szCode: JS_CODE_2b_CSS,  bPrettify: true}
+ 	      {szTitle:"JS: TipSample.js", szCode: JS_CODE_2b1_JS,  bPrettify: false},
+	      {szTitle:"HTML: TipSample.html", szCode: JS_CODE_2b1_HTML,  bPrettify: false},
+	      {szTitle:"CSS: jsu/core/core.css", szCode: JS_CODE_2b1_CSS,  bPrettify: true}
 	    ],
       event,
       {szTitle:"SAMPLE_2 FixedTip with VIDEO - Source Code" , iTipWidth: 1100} );	
 }
 
+
+function sampleCode2b2(event){
+	var JS_CODE_2b2_JS = '//Define in JS the function the call TipFix, passing the MsgHtml with the <iframe> with the Page URL  \n'+
+	'// For example to show the JSU download page https://goo.gl/HnNqnM : \n'+
+	'function sample2b2(event){ \n' +
+	' var szTipFrame =	\'<iframe width="1030" height="600" src="https://goo.gl/HnNqnM" ></iframe>\';  \n' +
+	'	TipFix(szTipFrame,event,{ \n' +
+	'		 iTipWidth: 1070, \n' +
+	'		 szTitle:\'Fixed Tip containing the FREE JSU.zip Download Page\', \n' +
+	'	  bCloseBtn : false \n' +
+	'	 } \n' +
+	'}';
+
+	var JS_CODE_2b2_HTML = '// In This example we add the HTMLPage FixedTip to an <input> "button" with the JSU class "tipFixArrow":  \n'+	 
+	'//  - class="tipFix"  type="button" \n' + 
+	'//  - whatever unique id \n' + 
+	'//  - onclick="sample2b2(event)" \n'+	
+	' <input type="button" class="tipFixArrow" value="Show HTML Page" id="tipSample2b2" \n'+	
+	'  onclick="sample2b2(event)" /> ';
+
+	var JS_CODE_2b2_CSS = '/*' + CSS_SEP +  '\n' + 
+		'Tip button for FixedTip with an Up/Down Arrow:\n' +
+		'input.tipFixArrow: <input class="tipFixArrow" value="Example" type="button" style="margin-left:5px;margin-right:50px" /> \n' +
+		'input.tipFixArrowUp: <input style="margin-left:5px" value="Example" class="tipFixArrowUp" type="button" />   \n' + 
+		'Used with JSU Tooltip API TipFix() - See <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/tooltip.js/index.html">JSU Tooltip API Doc</a> \n' + 
+		CSS_SEP + '*/ \n' +
+		  'input.tipFixArrow, input.tipFixArrowUp {  /* Common fields  */ \n' + 
+			'    height: 20px; \n' + 
+			'    padding-right: 30px; \n' + 
+			'    border: 1px solid #000; \n' + 
+			'    font-weight: bold; \n' + 
+			'    cursor: pointer; \n' + 
+			'} \n' + 
+			' \n' + 
+			'input.tipFixArrow { /* specific image for tipFixArrow */  \n' + 
+			'    background: #E0E0E0 url(https://raw.github.com/FedericoLevis/JSU/master/images/tipFixArrow.png) no-repeat right center; \n' + 
+			'} \n' + 
+			'input.tipFixArrowUp { /* specific image for tipFixArrowUp */ \n' + 
+			'    background: #E0E0E0 url(https://raw.github.com/FedericoLevis/JSU/master/images/tipFixArrowUp.png) no-repeat right center; \n' + 
+			'}'; 
+				
+  // 3 Codes: First 2 with HTML TAGS, CSS without HTML tags
+	TipFixMultiCode([
+ 	      {szTitle:"JS: TipSample.js", szCode: JS_CODE_2b2_JS,  bPrettify: false},
+	      {szTitle:"HTML: TipSample.html", szCode: JS_CODE_2b2_HTML,  bPrettify: false},
+	      {szTitle:"CSS: jsu/core/core.css", szCode: JS_CODE_2b2_CSS,  bPrettify: true}
+	    ],
+      event,
+      {szTitle:"SAMPLE_2 FixedTip with HTMLPage - Source Code" , iTipWidth: 1100} );	
+}
+
+
+
+function sampleCode3a(event){
+  var szTip = '// Prepare szCode Msg with the code to be disaplyed  Hightlighted \n' +
+  'var szCode = \'...\'; \n' +
+  '  // show the code Hightlighted \n' +
+  '  TipFixCode(szCode,event, \n' +
+  '		 {iTipWidth:1000, \n' +
+  '	    iTipMaxHeight:600, \n' +
+  '	    szTitle:\'Tip Sample with JS Code Hightlighted\' \n' +
+  '	   });';
+  TipFixCode(szTip,event,{szTitle:"JS Code of SAMPLE 3a or 3b"});
+}
+
+
+function sampleCode3c(event){
+    var szTip = '// Prepare 3 szCode Msg with the 3 code sections to be disaplayed together\n' +
+    'var JS_CODE_2a_JS = \'...\'; \n' +
+    'var JS_CODE_2a_HTML = \'...\'; \n' +
+    'var JS_CODE_2a_CSS = \'...\'; \n' +
+    '// Show 3 Code Sections: \n' +
+    '//  - Msg1 and Msg3 prettified  \n' + 
+    '//  - Msg2 not prettified to see the HTML TAGS as Plain Text  \n' +
+    '	TipFixMultiCode([ \n' +
+    ' 	      {szTitle:"JS: TipSample.js", szCode: JS_CODE_2a_JS,  bPrettify:true}, \n' +
+    '	      {szTitle:"HTML: TipSample.html", szCode: JS_CODE_2a_HTML,  bPrettify:false, iRowNum:6}, \n' +
+    '	      {szTitle:"CSS: jsu/core/core.css", szCode: JS_CODE_2a_CSS,  bPrettify:true, iMaxHeight: 250 } \n' +
+    '	    ], \n' +
+    '      event, \n' +
+    '      {szTitle:"FixedTip with GIF, button, link - Source Code" , iTipWidth: 1100} );	';
+    TipFixCode(szTip,event,{szTitle:"JS Code of SAMPLE 3c"});
+  
+  
+}
 
