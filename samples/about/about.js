@@ -942,7 +942,7 @@ function manage_par_opt(){
 				}
 			}
 		} 
- 		//-----------------------------------------------------------
+		//-----------------------------------------------------------
 		var szParOpt = urlGetParVal (URL_PAR_OPT);
 		jslog (JSLOG_JSU,fn + "URL PAR " + URL_PAR_OPT + "=" + szParOpt);
 		b_par_opt = (szParOpt != ""); 
@@ -1465,7 +1465,7 @@ function testExecute(){
 
 function iframeAdjustHeight(szId)
 {
-	
+	// TEST
 	var el = getElementById2 (szId,true);
   //find the height of the internal page
   var h =   el.contentWindow.document.body.scrollHeight;
