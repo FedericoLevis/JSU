@@ -30,8 +30,7 @@ var tmo = null;
 
 
 function sortTbl1(){
-	// DAFARE Funzione in util o fare cone cognos
-	getElementById2('divTbl1').innerHTML = "<div class='jsuLoading' style='height:250px'></div>";
+  getElementById2('divTbl1').innerHTML = "<div class='jsuLoading' style='height:250px'></div>";
   tmo= setTimeout(sortTbl1Tmo, 300); 
 }
 
@@ -57,22 +56,26 @@ function sortTbl1Tmo(){
 
 
 function sortTbl2(){
+	if (getElementById2 ('tbl2',false) == 0){
+		return; // for particolr cases of tbl2 not still present. FUTURE: manage also ths cases 
+	}
 	//You need Only 1 JSU call to set the Sort 
 	//1) create cSortTable related to Table with id='tbl2' 
 	cSortTbl2 = new cSortTable('tbl2', 
-	 //Describe how to Sort the Table Columns 
-		[{col: 'Operation', type: SORT_TYPE.NONE}, // NoSort for This Col
-    {col: 'Request Number', type: SORT_TYPE.NUMBER}, 	
-    {col: 'Insert Date', type: SORT_TYPE.DATETIME, fmt: 'dd/mm/yyyy'},
-    {col: 'State'},
-    // NUMBER. We set Separator [default = locale settings]
-    {col: 'Amount', type: SORT_TYPE.NUMBER, groupSep:',',decimalSep:'.'} ],
-   // OPTION
-   { iRowSortHeader:2,  // 2 Header Rows [default=1]
-		 szClassFooter: "myFooter", // class that identify tr footer 
-		 // Apply SortAsc on 'InsertDate' Column 
-     szSortCol:'Insert Date', szSortDir: SORT_DIR.ASC, bSortApply: true});
-   //Now you can Sort the Table by clicking on Colum Header
+			 //Describe how to Sort the Table Columns 
+				[{col: 'Operation', type: SORT_TYPE.NONE}, // NoSort for This Col
+		    {col: 'Request Number', type: SORT_TYPE.NUMBER}, 	
+		    {col: 'Insert Date', type: SORT_TYPE.DATETIME, fmt: 'dd/mm/yyyy'},
+		    {col: 'State'},
+		    // NUMBER. We set Separator [default = locale settings]
+		    {col: 'Amount', type: SORT_TYPE.NUMBER, groupSep:',',decimalSep:'.'} ],
+		   // OPTION
+		   { iRowSortHeader:2,  // 2 Header Rows [default=1]
+				 szClassFooter: "myFooter", // class that identify tr footer 
+				 // Apply SortAsc on 'InsertDate' Column 
+		     szSortCol:'Insert Date', szSortDir: SORT_DIR.ASC, bSortApply: true});
+		   //Now you can Sort the Table by clicking on Colum Header
+	
 }
 
 
