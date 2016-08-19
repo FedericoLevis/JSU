@@ -952,10 +952,11 @@ function manage_par_opt(){
 			// resize iframe basing on the unique row displayed
 		  var iframeEl = window.parent.document.getElementById ('iframe' + szParDoc);				
 			var trEl = getElementById2("tr_sample_" + szParDoc, false);
+			var tdEl = getElementById2("col_" + szParDoc + "_1", false);
 			if (trEl){
 				 // Set new height
 				 iframeEl.height = trEl.clientHeight - 20;
-				 alert (iframeEl.height);
+				 alert (trEl.clientHeight + " - col " + tdEl.clientHeight);
 			}
 			// now we show the iframe that was hidden
 			elementShow (iframeEl,true);
