@@ -82,8 +82,8 @@ function sample2b1(event){
  * @param event
  */
 function sample2b2(event){
-	
-	var szTipFrame =	'<iframe width="1030" height="600" src="' + JSU_SHORT_URL_DOWNLOAD_FREE + '" ></iframe>'; 
+	// DAFARE
+	var szTipFrame =	'<iframe width="1030" height="600" src="' + JSU_SHORT_URL_DOWNLOAD_FREE + '.info' + '" ></iframe>'; 
 	TipFix(szTipFrame,event,{
 		 iTipWidth: 1070,
 		 szTitle:'Fixed Tip containing the FREE JSU.zip Download Page',
