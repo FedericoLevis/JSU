@@ -1462,6 +1462,17 @@ function testExecute(){
 
 
 
+function iframeAdjustHeight2()
+{
+  alert ("1");
+  var el = window.parent.document.getElementById ('iframe1');
+  var h =   el.contentWindow.document.body.scrollHeight;
+  alert (h); 
+  //change the height of the iframe
+  el.height=  h ;
+
+}
+
 
 function iframeAdjustHeight(szId)
 {
