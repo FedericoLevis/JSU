@@ -949,6 +949,7 @@ function manage_par_opt(){
 			}
 			url_par.doc = szParDoc;
 			// now we show the iframe that was hidden
+		  var iframeEl = window.parent.document.getElementById ('iframe' + url_par.doc);				
 			elementShow (iframeEl,true);
 			tmo_resize = setTimeout (resizeIframe,1000);
 
