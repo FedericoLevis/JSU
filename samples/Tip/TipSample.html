@@ -63,7 +63,7 @@
     <tr id="tr_title_1" class="tipTitleBig">
       <th class="tipTitleBig" colspan="4">JSU<input type="button" class="tipFix" id="tipJSUTitle" onclick="aboutTipFixJSU(event);" />
         <label class="aboutAuthor">by Federico Levis</label>  <input type="button" class="tipFix" id="tipJSUAuthor" onclick="aboutTipAuthor(event);" />
-        <label class="jsuHelp">Tooltip API<label>  <input type="button" class="jsuHelp" onclick="jsuDocTip();"  onmouseover="Tip(JSU_TIP_CUR_FEATURE);" onmouseout="UnTip(event)" /> 
+        <label class="jsuHelp">Tooltip Documentation<label>  <input type="button" class="jsuHelp" onclick="jsuDocTip();"  onmouseover="Tip(JSU_TIP_DOC_TIP);" onmouseout="UnTip(event)" /> 
 
 
         <!--  ONLY for developers: displayed when URL PAR opt=1 -->     
@@ -121,7 +121,7 @@
                <li><b>onmouseover=</b>"<label class="jsuAPI">Tip</label>(<b><i>tipHTML</i></b>);" </li>   
                <li><b>onmouseout=</b>"<label class="jsuAPI">UnTip</label>(event);"  </li>
                </ul>
-               Code SAMPLE 1 cases:
+               Code of SAMPLE 1 cases:
                <table class="sampleNoBorder" width="100%">
                <tr style="font-size: 8pt">
                  <td > <b>Text Tip </b> Sample: <input type="button" class="tipFixCode" id="tipCode1a" onclick="sampleCode1a(event);" /></td>
@@ -140,13 +140,17 @@
       <td class="sample" id="col_2_1" >
          <label class="sampleTitle">SAMPLE_2 - Fixed Tip with GIF, button, link, VIDEO,..</label>
          <ul>
-           <li><b>case a) FixedTip with GIF, Button, Link:</b>  
+           <li>case a) FixedTip with <b>GIF, Button, Link</b>
                <input type="button"  class="tipFix" id="tipSample2a"  onclick="sample2a(event);" />
            </li>    
            <BR/>
-           <li><b>case b) FixedTip with Embedded Page: </b> 
+           <li>case b) FixedTip with inside an <b>Embedded Page</b>  
                   <input type="button" class="tipFixArrow" value="Tip with Video" id="tipSample2b1"  onclick="sample2b1(event);" />
                   <input type="button" class="tipFixArrow"  value="Tip with HTML Page" id="tipSample2b2" style="margin-left:30px" onclick="sample2b2(event);" />
+           </li>    
+           <BR/>
+           <li>case c) FixedTip for <b>Google Analytics</b> 
+                  <input type="button"  class="tipGoogleAnalList" id="tipSample2c"  onclick="jsuGoogleAnalList(event);"  onmouseover="jsuGoogleAnalListTip(event);" onmouseout="UnTip(event)"/> 
            </li>    
          </ul>
       </td>
@@ -161,14 +165,16 @@
                </ul>
                Code of SAMPLE_2 cases:
 			         <ul>
-			           <li><b>case a) FixedTip with GIF, Button, Link: </b> 
+                        <li>case a) FixedTip with <b>GIF, Button, Link</b>
 			             <input type="button" class="tipFixCode" id="sampleCode2a" onclick="sampleCode2a(event);" /> 
 			           </li>
-			           <BR/>    
-			           <li><b>case b) FixedTip with Embedded Page:</b> 
+                       <li>case b) FixedTip with inside an <b>Embedded Page</b>  
 			             &nbsp;Video: <input type="button" class="tipFixCode" id="sampleCode2b" onclick="sampleCode2b1(event);" style="margin-right:20px" /> 
                    &nbsp;HTMLPage: <input type="button" class="tipFixCode" id="inputTipFix" onclick="sampleCode2b2(event);" /> 
 			           </li>    
+                        <li>case c) FixedTip for <b>Google Analytics</b> 
+			             <input type="button" class="tipFixCode" id="sampleCode2c" onclick="sampleCode2c(event);" /> 
+			           </li>
 			         </ul>
            </td></tr>
          </table>
@@ -179,12 +185,13 @@
     <tr id="tr_sample_3" valign="top">
       <td class="sample" id="col_3_1" >
          <label class="sampleTitle">SAMPLE_3 - FixedTip with Code Highlighted</label><BR/>
-         API <label class="jsuAPI">TipFixCode</label> <b>higlights SW Code</b>: js, java,  perl, pl, pm, bsh, csh, sh, c, cpp, rb, py, cv, cs ,json, ..
+         The Tooltip API <label class="jsuAPI">TipFixCode</label> <b>higlights SW Code</b>: js, java,  perl, pl, pm, bsh, csh, sh, c, cpp, rb, py, cv, cs ,json, ..
          <ul>
-           <li><b>case a) Highlight JS Code</b>  <input type="button" class="tipFixJS" id="sample3a"  onclick="sample3a(event);" />  </li>    
-           <li><b>case b) Highlight Java Code</b>  
+           <li>case a) <b>Highlight JS</b> Code:&nbsp;
+              <input type="button" class="tipFixJS" id="sample3a"  onclick="sample3a(event);" />  </li>    
+           <li>case b) <b>Highlight Java</b> Code:&nbsp;  
               <input type="button" class="tipFixCode" id="sample3b"  onclick="sample3b(event);" />  </li>    
-           <li><b>case c) Multi Code Sections Hightlighted (JS and CSS) and Not (HTML)</b>
+           <li>case c) <b>Highlight Multi Code Sections</b> Hightlighted (JS and CSS) and Not (HTML):&nbsp;
                    <input type="button" class="tipFixCode" id="sample3c"  onclick="sample3c(event);" />  </li>             </ul>
       </td>
       <!--   SAMPLE DESCRIPTION -->
@@ -198,16 +205,18 @@
 	                  <label class="jsuAPI">TipFixJSCode</label>(<b><i>szCode</i></b>,event,<b><i>objOpt</i></b>)</label> for one Code section, &nbsp;&nbsp;
 	                   <label class="jsuAPI">TipFixJSMultiCode</label>(<b><i>arObjCode</i></b>,event,<b><i>objOpt</i></b>)</label> </li> for MultiCode Sections
 	               </ul>
-               </ul>
-               JS Code of SAMPLE_3 cases:
-               <ul>
-                 <li><b>case a and b) Highlight JS/Java Code: </b> 
+           </ul>
+           JS Code of SAMPLE_3 cases:
+           <ul>
+           <li>case a) and b) <b>Highlight JS</b> Code  
                    <input type="button" class="tipFixJS" id="sampleCode3a" onclick="sampleCode3a (event);" /> 
                  </li>
-                 <li><b>case c) Multi Code Sections Hightlighted (JS and CSS) and Not (HTML)</b>
+           <li>case c) <b>Highlight Multi Code Sections</b> Hightlighted (JS and CSS) and Not (HTML)
                    <input type="button" class="tipFixJS" id="sampleCode3c" onclick="sampleCode3c (event);" /> 
-                 </li>    
-               </ul>    
+            </li>    
+           </ul>    
+
+
                
            </td></tr>
          </table>
@@ -218,9 +227,6 @@
 
 <!--  USED by jsuGoToURL()  -->
 <a id="href_hidden" target="_blank" href="" style="display:none"">HIDDEN</a>
-
- <input  type="button" value="Prova Resize" onclick="testResize();" />  
-
 
 <!--       TEST -->
 <div id="test" style="display:none;visibility:hidden;">

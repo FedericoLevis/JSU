@@ -1,4 +1,7 @@
 // ==================================================================== CONSTANT
+
+
+
 //var JSLOG_LEV = 31;
 var JSLOG_LEV = 0;
 
@@ -55,7 +58,6 @@ function sample2a(event){
 	'</td></tr></table>';	
 	TipFix(szTip,event,{
 		szTitle:'Fixed Tip Sample',
-		iframeToResize: getIframeToResize(),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
 		iTipMaxHeight:1000
   });
 }	
@@ -70,7 +72,6 @@ function sample2b1(event){
 	
 	TipFix(JSU_TIP_VIDEO,event,{
 		iTipWidth: 620,  
-		iframeToResize: getIframeToResize(),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
 		szTitle:'Fixed Tip with a Video'
 	 }
 	);
@@ -82,19 +83,18 @@ function sample2b1(event){
  * @param event
  */
 function sample2b2(event){
-	// DAFARE
-	// var szTipFrame =	'<iframe width="1030" height="600" src="' + JSU_SHORT_URL_DOWNLOAD_FREE +  '" ></iframe>';
-	var szTipFrame =	'<iframe width="1030" height="600" src="https://goo.gl/#analytics/goo.gl/HnNqnM/all_time" ></iframe>';
+	var szTipFrame =	'<iframe width="1030" height="600" src="' + JSU_SHORT_URL_DOWNLOAD_FREE +  '" ></iframe>';
 	
 	TipFix(szTipFrame,event,{
 		 iTipWidth: 1070,
 		 szTitle:'Fixed Tip containing the FREE JSU.zip Download Page',
-  		iframeToResize: getIframeToResize(),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
 		 bCloseBtn : false
 	 }
 	
 	);
 }
+
+
 
 
 /**
@@ -122,7 +122,6 @@ function sample3a(event){
 	TipFixCode(szCode,event,
 			 {iTipWidth:1000,
 		    iTipMaxHeight:600,
-				iframeToResize: getIframeToResize(),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
 		    szTitle:'Tip Sample with JS Code Hightlighted'
 		   });	
 }
@@ -157,7 +156,6 @@ function sample3b(event){
 	TipFixCode(szCode,event,
 			 {iTipWidth:1000,
 		    iTipMaxHeight:600,
-				iframeToResize: getIframeToResize(),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
 		    szTitle:'Tip Sample with Java Code Hightlighted'
 		   });	
 }
@@ -234,7 +232,6 @@ function sampleCode1a(event){
 			                event,
 			                {
 		                    szTitle:"SAMPLE_1 Text tip - Source Code",
-		            		    iframeToResize: getIframeToResize(),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
 		                    iTipWidth: 700
 		                    });	
 }
@@ -258,7 +255,6 @@ function sampleCode1b(event){
 	    ],
       event,
       { szTitle:"SAMPLE_1 HTML Tip - Source Code" , 
-		    iframeToResize: getIframeToResize(),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
 		    iTipWidth: 1000
 		  } );	
 }
@@ -295,7 +291,6 @@ function sampleCode1c(event){
       event,
       { 
 		    szTitle:"SAMPLE_1 README Tip - Source Code",
-		    iframeToResize: getIframeToResize(),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
 		    iTipWidth: 1000 
 		   } 
 	 );	
@@ -337,7 +332,6 @@ function sampleCode1d(event){
       event,
       {
  		   szTitle:"SAMPLE_4 HTML Tip - Tip image jsuInfo",
-		    iframeToResize: getIframeToResize(),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
  		   iTipWidth: 1000 
  		   } 
  	 );	
@@ -394,7 +388,6 @@ function sampleCode2a(event){
       event,
       { 
 		    szTitle:"SAMPLE_2 FixedTip with GIF, button, link - Source Code" ,
-		    iframeToResize: getIframeToResize(),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
 		    iTipWidth: 1100} );	
 }
 
@@ -447,7 +440,6 @@ function sampleCode2b1(event){
       event,
       {
 		   szTitle:"SAMPLE_2 FixedTip with VIDEO - Source Code" ,
-   	    iframeToResize: getIframeToResize(),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
 		   iTipWidth: 1100
 		  } );	
 }
@@ -502,15 +494,53 @@ function sampleCode2b2(event){
       event,
       { 
 		    szTitle:"SAMPLE_2 FixedTip with HTMLPage - Source Code" , 
-		    iframeToResize: getIframeToResize(),  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
 		    iTipWidth: 1100
 		  } );	
 }
 
+function sampleCode2c(event){
+	var szTip = '/** \n' +
+	' * Show a FixedTip with the Link to JSU Google Analytics \n' +
+	' * @param event \n' +
+	' */ \n' +
+	'function jsuGoogleAnalList (event){ \n' +
+	'   // Categories \n' +
+	'	var GA_CAT_DOWN = "JSU DOWNLOAD"; \n' +
+	'	var GA_CAT_SAMPLE_FREE = "JSU FREE - SAMPLES"; \n' +
+	'	var GA_CAT_SAMPLE_FULL = "JSU FULL - SAMPLES"; \n' +
+	'	var GA_CAT_DOC_FREE = "JSU FREE - DOC"; \n' +
+	'	var GA_CAT_DOC_FULL = "JSU FULL - DOC"; \n' +
+	'   \n' +
+	'  // Prepare arObjGoogleAnal: only shortUrl is mandatory. In this case we populate all fields \n' +
+	'  var arObjGoogleAnalList = [ \n' +
+	'       {shortUrl: JSU_SHORT_URL_DOWNLOAD_FREE, longUrl: JSU_LONG_URL_DOWNLOAD_PAGE_FREE , cat:GA_CAT_DOWN,desc:\'Download JSU.ZIP FREE\'}, \n' +
+	'       {shortUrl: JSU_SHORT_URL_SAMPLE_ALL, longUrl: JSU_LONG_URL_SAMPLE_ALL,cat:GA_CAT_SAMPLE_FREE, desc:\'Main JSU Sample\'}, \n' +
+	'       {shortUrl: JSU_SHORT_URL_SAMPLE_TIP, longUrl: JSU_LONG_URL_SAMPLE_TIP,cat:GA_CAT_SAMPLE_FREE, desc:\'Tooltip Sample\'}, \n' +
+	'       {shortUrl: JSU_SHORT_URL_SAMPLE_SORT, longUrl: JSU_LONG_URL_SAMPLE_SORT, cat:GA_CAT_SAMPLE_FREE, desc:\'SortTable Sample\'}, \n' +
+	'       {shortUrl: JSU_SHORT_URL_SAMPLE_BLOCKPOPUP, longUrl: JSU_LONG_URL_SAMPLE_BLOCKPOPUP, cat:GA_CAT_SAMPLE_FREE,desc:\'Blocking Popup Sample\'}, \n' +
+	'       // -------------------------- \n' +
+	'       {shortUrl: JSU_SHORT_URL_DOC, longUrl: JSU_LONG_URL_DOC, cat:GA_CAT_DOC_FREE,desc:\'JSU Documentation\'}, \n' +
+	'       {shortUrl: JSU_SHORT_URL_DOC_TIP, longUrl: JSU_LONG_URL_DOC_TIP, cat:GA_CAT_DOC_FREE,desc:\'JSU Tooltip Documentation\'}, \n' +
+	'       {shortUrl: JSU_SHORT_URL_DOC_LOADING, longUrl: JSU_LONG_URL_DOC_LOADING, cat:GA_CAT_DOC_FREE,desc:\'JSU LoadingDiv Documentation\'}, \n' +
+	'       {shortUrl: JSU_SHORT_URL_DOC_SORT, longUrl: JSU_LONG_URL_DOC_SORT, cat:GA_CAT_DOC_FREE,desc:\'JSU SortTable Documentation\'} \n' +
+	'     ]; \n' +
+	'  // show the TipFix with the List of Link \n' +
+	'  TipFixGoogleAnalList(arObjGoogleAnalList,event,{ \n' +
+	'    	bShortUrl: false,   // ShortUrl not visible at startup \n' +
+	'    	bLongUrl: false,  // LongUrl not visible at startup \n' +
+	'    	szTitle:\'JSU Google Analitycs\', \n' +
+	'    	iTipWidth: 1100  // Tip Width    \n' +
+	'    }); \n' +
+	'   \n' +
+	'} \n';
+	   TipFixCode(szTip,event,{
+  	 szTitle:"JS Code of SAMPLE 3c: Google Analytics List"
+  	 });
+}
 
 
 function sampleCode3a(event){
-  var szTip = '// Prepare szCode Msg with the code to be disaplyed  Hightlighted \n' +
+  var szTip = '// Prepare szCode Msg with the code to be displayed  Hightlighted \n' +
   'var szCode = \'...\'; \n' +
   '  // show the code Hightlighted \n' +
   '  TipFixCode(szCode,event, \n' +
@@ -519,8 +549,7 @@ function sampleCode3a(event){
   '	    szTitle:\'Tip Sample with JS Code Hightlighted\' \n' +
   '	   });';
   TipFixCode(szTip,event,{
-  	 szTitle:"JS Code of SAMPLE 3a or 3b",
-     iframeToResize: getIframeToResize()  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
+  	 szTitle:"JS Code of SAMPLE 3a or 3b"
   	 });
 }
 
@@ -541,10 +570,10 @@ function sampleCode3c(event){
     '      event, \n' +
     '      {szTitle:"FixedTip with GIF, button, link - Source Code" , iTipWidth: 1100} );	';
     TipFixCode(szTip,event,{
-    	 szTitle:"JS Code of SAMPLE 3c",
-       iframeToResize: getIframeToResize()  // if the HTML page is running embedded in iframe (of JSU documentation), we pass the iframe to resize to TipFix
+    	 szTitle:"JS Code of SAMPLE 3c"
     });
   
   
 }
+
 

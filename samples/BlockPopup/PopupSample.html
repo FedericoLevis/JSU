@@ -5,7 +5,7 @@
 
 <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
-  <title>JS Utility | JSU Modal Blocking Popup Plugin | Federico Levis</title>
+  <title>JS Utility | JSU Blocking Popup Plugin | Federico Levis</title>
   <meta charset="utf-8"/>
   <meta name="description" content="JSU utility (JSU) - Modal Blocking Popup: Info, Warning, Error, Alarm, Question, Choice, Prompt" />
   <meta name="keywords" content="js, utility, JSU, popup, modal, blocking, Info, Warning, Error, Alarm, Question, Choice, Prompt, federico, levis" />
@@ -52,14 +52,15 @@
 </table>   
 
 <hr>
-<h1 class="jsuSample">JSU - JS Utility Plugin  - Tooltip Sample</h1>
+<h1 class="jsuSample">JSU - JS Utility Plugin  - Blocking Popup Sample</h1>
 
 
 <table class="tip" BORDER="2" cellspacing="0" cellpadding="2" width="100%">
     <tr class="tipTitleBig">
       <th class="tipTitleBig" colspan="4">JSU<input type="button" class="tipFix" id="tipJSUTitle" onclick="aboutTipFixJSU(event);" />
-        <label class="aboutAuthor">by Federico Levis</label>
-            <input type="button" class="tipFix" id="tipJSUAuthor" onclick="aboutTipAuthor(event);" />
+        <label class="aboutAuthor">by Federico Levis</label> <input type="button" class="tipFix" id="tipJSUAuthor" onclick="aboutTipAuthor(event);" />
+        <label class="jsuHelp">Blocking Popup Documentation<label>  <input type="button" class="jsuHelp" onclick="jsuDocBlockPopup();"  onmouseover="Tip(JSU_TIP_DOC_BLOCKPOPUP);" onmouseout="UnTip(event)" /> 
+        
         <!--  ONLY for developers: displayed when URL PAR opt=1 -->     
         <select id="selectShowCol" class="parOption" onchange="onchangeShowCol()">
             <option value="1">Show SAMPLE</option>
