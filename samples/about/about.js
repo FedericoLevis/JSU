@@ -1534,3 +1534,17 @@ function resizeIframe(){
 	}
 	
 }
+
+
+function showSampleTrHeight(){
+	var szMsg = "";
+
+	for (var i=1; i<=SAMPLE_MAX_NUM; i++){
+		var trEl = getElementById2("tr_sample_" + i, false);
+		if (trEl){
+			szMsg += i + "  Height= " + trEl.clientHeight + "\n";
+		}
+	}
+	alert (szMsg);
+}
+
