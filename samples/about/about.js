@@ -303,12 +303,11 @@ var url_par = {
 };
 
 
+var tmo_resize = null;
+
 // option to show Video
 var video_opt = VIDEO_OPT.YOU_TUBE;  //default
 
-// For Test of Google Analytics
-var par_test = 100;
-var par_period = 60;
 
 /* =============================================================================================
 									GLOBAL API
@@ -949,17 +948,10 @@ function manage_par_opt(){
 				}
 			}
 			url_par.doc = szParDoc;
-			// resize iframe basing on the unique row displayed
-		  var iframeEl = window.parent.document.getElementById ('iframe' + szParDoc);				
-			var trEl = getElementById2("tr_sample_" + szParDoc, false);
-			var tdEl = getElementById2("col_" + szParDoc + "_1", false);
-			if (trEl){
-				 // Set new height
-				 iframeEl.height = trEl.clientHeight - 20;
-				 alert (trEl.clientHeight + " - col " + tdEl.clientHeight);
-			}
 			// now we show the iframe that was hidden
 			elementShow (iframeEl,true);
+			tmo_resize = setTimeout (resizeIframe,1000);
+
 		} 
 		//-----------------------------------------------------------
 		var szParOpt = urlGetParVal (URL_PAR_OPT);
@@ -1527,4 +1519,18 @@ function iframeAdjustHeight(szId)
   el.height=  h ;
 }
 
-
+/*
+ * Only for developer: show the height of the rows
+ */
+function resizeIframe(){
+	clearTimeout (tmo_resize);
+  var iframeEl = window.parent.document.getElementById ('iframe' + url_par.doc);				
+	var trEl = getElementById2("tr_sample_" + url_par.doc, false);
+	alert (url_par.doc + " - " + trEl.clientHeight);
+	// resize iframe basing on the unique row displayed
+	if (trEl){
+		 // Set new height
+		 iframeEl.height = trEl.clientHeight + 5;
+	}
+	
+}
