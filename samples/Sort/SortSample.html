@@ -104,7 +104,7 @@
 			        <tr>
 			          <td>
 			            <!--  div containing the table to sort  -->
-							    <div id="divTbl1" class="sampleSort" style="width:500px;max-height:180px" >
+							    <div id="divTbl1" class="sampleSort det" style="width:500px;max-height:180px" >
 							       <div class="jsuLoading" style="height:180px"></div>
 							    </div>
 			          </td>
@@ -115,7 +115,7 @@
       <td class="sampleDesc"  id="col_1_2"  valign="top">
          <table >
            <tr valign="top"><td>
-               <label class="aboutSource">JS Souce Code</label> of Sample_1: <input type="button" class="tipFixJS" id="tipJSTbl1" onclick="tipFixCode( JS_CODE_SORT_TBL1,event);" /><BR/>
+               <label class="aboutSource">JS Souce Code</label> of Sample_1: <input type="button" class="tipFixJS" id="tipJSTbl1" onclick="TipFixCode( JS_CODE_SORT_TBL1,event);" /><BR/>
                Table of this sample has <label class="sampleBrown">FEW PROPERTIES (in Brown below) different from <label class="jsuAPI">cSortTable</label> JSU default.</label><BR/>
                Table Columns:
                <ul type="square">
@@ -160,14 +160,14 @@
 				      <td class="sampleSort" align="right">1,000,200.00</td>
 				    </tr>
 				    <tr>       
-				      <td class="sampleSort" align="center"><img class="sampleSort" src="../../images/delete.png"/></td>
+				      <td class="sampleSort" align="center"><img class="sampleSort" src="https://raw.githubusercontent.com/FedericoLevis/images/master/samples/delete.png"/></td>
 				      <td class="sampleSort" align="right">5</td>
 				      <td class="sampleSort" align="right">19/04/2016</td>
 				      <td class="sampleSort" align="right">DONE</td>
 				      <td class="sampleSort" align="right">1,725.50</td>
 				    </tr>
 				    <tr>       
-				      <td class="sampleSort" align="center"><img class="sampleSort" src="../../images/delete.png"/></td>
+				      <td class="sampleSort" align="center"><img class="sampleSort" src="https://raw.githubusercontent.com/FedericoLevis/images/master/samples/delete.png"/></td>
 				      <td class="sampleSort" align="right">5</td>
 				      <td class="sampleSort" align="right">12/04/2016</td>
 				      <td class="sampleSort" align="right">DONE</td>
@@ -192,7 +192,7 @@
       <td class="sampleDesc" id="col_2_2"  valign="top">
          <table >
            <tr valign="top"><td>
-               <label class="aboutSource">JS Source Code</label> of SAMPLE_2: <input type="button" class="tipFixJS" id="tipJSTbl2" onclick="tipFixCode( JS_CODE_SORT_TBL2,event);" /><BR/>
+               <label class="aboutSource">JS Source Code</label> of SAMPLE_2: <input type="button" class="tipFixJS" id="tipJSTbl2" onclick="TipFixCode( JS_CODE_SORT_TBL2,event);" /><BR/>
                Table has <label class="sampleBrown">MANY PROPERTIES (in Brown below) different from <label class="jsuAPI">cSortTable</label> JSU default.</label><BR/>
                Table Columns:
                <ul type="square">
@@ -230,7 +230,7 @@
 											   <table>
 											      <tr >
 											      	<td style="padding-top:10px">
-																<input type="button" style="margin-left:5px" value="Set Sort Col" onclick="tbl1SetSort()"/>
+																<input type="button" style="margin-left:5px" value="Set Sort Col" onclick="tblSetSort()"/>
 				                        <select id="selectSortCol"  style="margin-left:10px">  
 				                                <option value="Country">Country</option>
 																				<option value="Name">Name</option>
@@ -255,8 +255,8 @@
 											   <table>
 											      <tr >
 											      	<td style="padding-top:10px">
-																  <input type="button" style="margin-left:10px" value="getSortCol" onclick="tbl1GetSortCol()" />				
-																  <input type="button" style="margin-left:20px" value="getSortDir" onclick="tbl1GetSortDir()"/>				
+																  <input type="button" style="margin-left:10px" value="getSortCol" onclick="tblGetSortCol()" />				
+																  <input type="button" style="margin-left:20px" value="getSortDir" onclick="tblGetSortDir()"/>				
                                  <label style="padding-left:20px;"> From Table of </label>
                                  <select id="selectTblGetSort"  style="margin-left:5px">  
 				                                <option value="tbl1" selected>SAMPLE_1</option>
@@ -278,9 +278,9 @@
                As explained in previous samples, to add Sort features to a Table we simply call <label class="tipJSUApi">new cSortTable</label>  <BR/>  
                If required, there are also following <label class="jsuAPI">cSortTable</label> API:
                <ul type="square">
-               <li><b>setSort</b> Set SortCol and SortDirection<input type="button" class="tipFixJS" id="tipJSSetSort" onclick="tipFixCode( JS_CODE_SET_SORT,event);" /></li>
-               <li><b>getSortCol</b> Get Sort Column<input type="button" class="tipFixJS" id="tipJSGetSortCol" onclick="tipFixCode( JS_CODE_GET_SORT_COL,event);" /></li>
-               <li><b>getSortDir</b> Get Sort Direction  <input type="button" class="tipFixJS" id="tipJSGetSortDir" onclick="tipFixCode( JS_CODE_GET_SORT_DIR,event);" /></li>
+               <li><b>setSort</b> Set SortCol and SortDirection<input type="button" class="tipFixJS" id="tipJSSetSort" onclick="TipFixCode( JS_CODE_SET_SORT,event);" /></li>
+               <li><b>getSortCol</b> Get Sort Column<input type="button" class="tipFixJS" id="tipJSGetSortCol" onclick="TipFixCode( JS_CODE_GET_SORT_COL,event);" /></li>
+               <li><b>getSortDir</b> Get Sort Direction  <input type="button" class="tipFixJS" id="tipJSGetSortDir" onclick="TipFixCode( JS_CODE_GET_SORT_DIR,event);" /></li>
                </ul>
            </td></tr>
          </table>

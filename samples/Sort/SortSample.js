@@ -81,7 +81,7 @@ function sortTbl2(){
  */
 function populateTbl1(){
   var iRowNum =  parseInt(selectGetSelVal (getElementById2 ("selectTbl1NumRow")));
-  var szTblHtml = '<table id="tbl1" border="1" width="99%" >' +
+  var szTblHtml = '<table class="det" id="tbl1" border="1" width="99%" >' +
 	'<tr class="header"> <th width="25%">Country</th> <th width="25%">Name</th><th width="30%">Date</th><th width="20%">Amount</th></tr>';
   var dd = new Date();	
   var fTot = 0;
@@ -90,7 +90,7 @@ function populateTbl1(){
     var szNum = fNum.toLocaleString();
 		var szDate = formatDate (dd,FMT_DATETIME_TBL1);
 		var szIndZeroPad = num2StrPad(i+1,"0",5); 
-	    var szTr = '<tr><td>Country '+szIndZeroPad+'</td><td>Name ' + szIndZeroPad + '</td><td>' + szDate + '</td><td>' + szNum + '</td></tr>\n';	
+	    var szTr = '<tr class="det"><td class="det">Country '+szIndZeroPad+'</td><td class="det">Name ' + szIndZeroPad + '</td><td class="det">' + szDate + '</td><td class="det">' + szNum + '</td></tr>\n';	
 		szTblHtml +=  szTr ;
 		dd.setDate(dd.getDate() - 1); 	
 		fTot += fNum;
@@ -105,9 +105,9 @@ function populateTbl1(){
 
 
 /**
- * Get current setting and Set Sort In Tbl1
+ * Get current setting and Set Sort In Tbl1 or Tbl2
  */
-function tbl1SetSort() {
+function tblSetSort() {
 	var szTbl = selectGetSelVal(getElementById2 ("selectTblSetSort"));
 	var cSort = (szTbl == 'tbl1') ? cSortTbl1 : cSortTbl2;  
 	// Get the Settings
@@ -134,14 +134,14 @@ function onchangeSelectTblSetSort(){
 }
 
 
-function tbl1GetSortCol() {
+function tblGetSortCol() {
 	var szTbl = selectGetSelVal(getElementById2 ("selectTblGetSort"));
 	var cSort = (szTbl == 'tbl1') ? cSortTbl1 : cSortTbl2;
 	var szSortCol = cSort.getSortCol ();
   showInfo ("Current SortCol: <b>" + szSortCol + "</b>");
 }	  
 
-function tbl1GetSortDir() {
+function tblGetSortDir() {
 	var szTbl = selectGetSelVal(getElementById2 ("selectTblGetSort"));
 	var cSort = (szTbl == 'tbl1') ? cSortTbl1 : cSortTbl2;
 	// Get Current SortDirection as  SORT_DIR.ASC or SORT_DIR.DESC   

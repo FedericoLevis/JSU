@@ -34,7 +34,7 @@ var externalPluginVersion = "/Minify";
 
 // ----------------------------------- FIXED, depending on JSU_PATH_BASE
 var JSU_PATH_IMG =   JSU_PATH_BASE + "/images/";
-var JSU_PATH_POPUP_HTML = JSU_PATH_BASE +  "/core/BlockPopup/";
+var JSU_PATH_POPUP_HTML = JSU_PATH_BASE +  "/core/IEPopup/";
 //----------------------------------- FIXED 
 var JSU_PATH_ABOUT_IMG = "https://rawgit.com/FedericoLevis/images/master/jsuAbout/";
 var JSU_PATH_DOC = "https://rawgit.com/FedericoLevis/JSUDoc/master/";
@@ -52,7 +52,7 @@ requirejs.config({
         'core': 'core' + jsuVersion,
         'lan': 'locale/EN',
 //      'lan': 'locale/ITA',     // For Italian Language
-        'popup': 'core/BlockPopup' + jsuVersion,
+        'popup': 'core/IEPopup' + jsuVersion,
     },
     shim: {
       'core/jslog': ['core/dom-drag'],
@@ -67,6 +67,7 @@ require([ // First 3 always present
          'core/jslog',            
          'core/util',							
          'core/tooltip',
+         'core/loadingDiv',							
          'core/cSortTable',       /* require date */
          'popup/Popup',
          'core/loadingDiv',							

@@ -33,7 +33,7 @@ var externalPluginVersion = "/Minify";
 var JSU_PATH_IMG =   JSU_PATH_BASE + "/images/";
 // var JSU_PATH_ABOUT_IMG = JSU_PATH_IMG + "about/";
 var JSU_PATH_ABOUT_IMG = "https://rawgit.com/FedericoLevis/images/master/jsuAbout/";
-var JSU_PATH_POPUP_HTML = JSU_PATH_BASE +  "/core/BlockPopup/";
+var JSU_PATH_POPUP_HTML = JSU_PATH_BASE +  "/core/IEPopup/";
 
 
 //----------------------------------- MODULE CONFIGURATION
