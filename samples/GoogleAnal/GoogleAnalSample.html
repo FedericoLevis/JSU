@@ -1,0 +1,190 @@
+    
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
+  <title>JS Utility | JSU Google Analytics Plugin Sample | Federico Levis</title>
+  <meta charset="utf-8"/>
+  <meta name="description" content="JSU utility (JSU) - API to access to Google Analytics pages created with goo.gl url shortener"/>
+  <meta name="keywords" content="js, utility, google, analytics, goo.gl, shortener, JSU, tooltip, tip, statistics, federico, levis" />
+	<!-- This sample -->
+		<script type="text/javascript" src="./GoogleAnalSample.js" ></script>
+
+	<!--  JSU -->
+	<link rel="stylesheet" href="../../core/jsu.css" type="text/css">
+	<script  data-main="../../plugin/jsu.js" src="../../core/require.js"></script>
+  
+  <!-- ONLY FOR About -->
+  <link rel="stylesheet" href="../about/about.css" type="text/css">
+  <script type="text/javascript" src="../about/about.js" ></script>
+  
+  <!-- ONLY FOR Prettify (used to color JS Code in Tip)  -->
+  <link rel="stylesheet" href="../../core/prettify/prettify-jsu.css" type="text/css">
+  <script type="text/javascript" src="../../core/prettify/prettify-jsu.js" ></script>
+
+</head>
+<body>
+
+
+<div id="sampleHeader">
+
+<!--  TOOLBAR Table: GoogleAnalytics and download -  common for all the JSU HTML -->
+<table class="sampleToolbar" width="100%" >
+  <tr >
+    <td class="tipl" width="30%">
+        <input type="button"  class="googleAnalList" id="googleAnalList"  onclick="jsuGoogleAnalList(event)"  onmouseover="jsuGoogleAnalListTip(event);" onmouseout="UnTip(event)"/> 
+    </td>
+    <td class="tipr" width="70%">
+     <table valign="bottom" align="right">
+        <tr>
+            <td class="tipr" ><b>Download Options:</b> </td>
+            <td><input type="button"  class="tipFix" id="downloadOption"  onclick="downloadTip(event)" /> </td>
+            <td valign="bottom"> <input type="button" class="downloadPay"  id="downloadPay"    onclick="downloadPay(event);" onmouseover="downloadTipPay(event);" onmouseout="UnTip(event)"/> </td>
+            <td valign="bottom"> <input type="button"  class="googleAnal" id="googleAnalPay"  onclick="jsuGoogleAnalPay();"  onmouseover="jsuGoogleAnalPayTip(event);" onmouseout="UnTip(event)"/> </td>
+            <td valign="bottom"> <input type="button" class="downloadFree" id="downloadFree" onclick="downloadFree(event);" onmouseover="downloadTipFree(event);" onmouseout="UnTip(event)"  /> </td>
+            <td valign="bottom"> <input type="button"  class="googleAnal" id="googleAnalFree"  onclick="jsuGoogleAnalFree();"  onmouseover="jsuGoogleAnalFreeTip(event);" onmouseout="UnTip(event)"/> </td>
+        </tr>
+      </table>  
+    </td>
+  </tr>
+</table>   
+
+<hr>
+<h1 class="jsuSample">JSU - JS Utility Plugin  - Google Analytics Sample</h1>      
+
+
+</div>
+
+<table class="tip" BORDER="2" cellspacing="0" cellpadding="2" width="100%">
+    <tr id="tr_title_1" class="tipTitleBig">
+      <th class="tipTitleBig" colspan="4">JSU<input type="button" class="tipFix" id="tipJSUTitle" onclick="aboutTipFixJSU(event);" />
+        <label class="aboutAuthor">by Federico Levis</label>  <input type="button" class="tipFix" id="tipJSUAuthor" onclick="aboutTipAuthor(event);" />
+        <label class="jsuHelp">Google Analytics Documentation<label>  <input type="button" class="jsuHelp" onclick="jsuDocGA();"  onmouseover="Tip(JSU_TIP_DOC_GA);" onmouseout="UnTip(event)" /> 
+        <!--  ONLY for developers: displayed when URL PAR opt=1 -->     
+        <select id="selectShowCol" class="parOption" onchange="onchangeShowCol()">
+            <option value="1">Show SAMPLE</option>
+            <option value="2">Show DESCRIPTION</option>
+            <option value="ALL" selected>Show ALL</option>
+        </select> 
+      </th>
+    </tr>
+    <tr  id="tr_title_2" class="tipTitleBig2">
+      <td width="50%" class="tipc" id="col_0_1">SAMPLE
+        <!--  To show all sample or only ONE   -->
+        <select id="selectSample" class="selectSample"  onchange="onchange_sample()">
+            <option value="1">Show Sample_1: Google Analytics Single Page</option>
+            <option value="2">Show Sample_2: Google Analytics List</option>
+            <option value="ALL" selected>Show ALL Samples</option>
+        </select> 
+      </td>
+      <td width="50%" class="tipc" id="col_0_2">DESCRIPTION</td>
+    </tr>
+
+    <!--   ===================================== SAMPLE_1 ==============================================  -->
+    <tr id="tr_sample_1" valign="top">
+      <td class="sample" id="col_1_1" >
+         <label class="sampleTitle">SAMPLE_1 - Google Analytics List</label><BR/>
+		 <table class="sampleNote"><tr>
+		    <td><input class="sampleNote"></td>
+		    <td>Try the different <label class="jsuAPI">googleAnalList</label> <b>API Options</b> and click the GoogleAnalitycs Buttons</td>
+		 </tr></table>
+		 <table class="tipNoBorder">
+		   <tr>
+			 <td class="tipr" >
+    		  <table class="det" BORDER="1" cellpadding="2" cellspacing="2">
+			    <tr class="detTitle"><td colspan="5">googleAnalList API Options</td></tr>
+				<tr class="detTitle2"><td width="40px">FULL JSU</td><td  width="40px">FREE JSU</td><td width="70px">OPTION</td><td width="100px">VALUE</td width="200px"><td>DESCRIPTION</td></tr>
+				<tr class="det">
+				  <td class="jsuOptPresent"></td>
+				  <td class="jsuOptAbsent"></td>
+				  <td class="tipcBold">bShortUrl</td>
+				  <td>
+				    <select id="bShortUrl" class="parDefault" style="width:100px;" onchange="onchangeShortUrl();">  
+						  <option selected value="FALSE" >false</i></option> 
+						  <option value="TRUE" >true</option> 
+					 </select>                
+                  </td>
+                  <td class="tipl">Show Column ShortURL</td> 
+				</tr>
+				<tr class="det">
+				  <td class="jsuOptPresent"></td>
+				  <td class="jsuOptAbsent"></td>
+				  <td class="tipcBold">bLongUrl</td>
+				  <td>
+				    <select id="bLongUrl" class="parDefault" style="width:100px;" onchange="onchangeLongUrl();">  
+						  <option selected value="FALSE" >false</i></option> 
+						  <option value="TRUE" >true</option> 
+					 </select>                
+                  </td>
+                  <td class="tipl">Show Column LongURL</td> 
+				</tr>
+			   </table>	
+			 </td>
+			 <td class="tipl" style="margin-left:30px">
+               &nbsp;&nbsp;<input type="button"  class="googleAnalList" id="sample1"  onclick="sample1(event);"  onmouseover="jsuGoogleAnalListTip(event);" onmouseout="UnTip(event)"/> 
+			 </td>
+		   </tr>
+        </table>		  
+      </td>
+      <!--   SAMPLE2 DESCRIPTION -->
+      <td class="sampleDesc" id="col_1_2">
+         <table >
+           <tr valign="top"><td>
+               To implement a <b>FixedTip</b> Tooltip :  
+               <ul> 
+               <li>Set an <i><b>input button</b></i> with JSU <label class="jsuAPI">core.css</label> class <label class="jsuAPI">GoogleAnalList</label> </li>
+               <li>In the <b>onclick event</b> call the <b>JSU GoogleAnal API</b>   <label class="jsuAPI">GoogleAnalList</label>(<b><i>tipHTML</i></b>,event,<b><i>objOpt</i></b>)</li>
+               </ul>
+               Code of Google Analytics List Sample:
+			   <input type="button" class="tipFixCode" id="sampleCode1" onclick="sampleCode1(event);" /> 
+           </td></tr>
+         </table>
+      </td>
+    </tr>
+    <!--   ===================================== SAMPLE_2 ==============================================  -->
+    <tr id="tr_sample_2" valign="top">
+      <td class="sample" id="col_2_1">
+         <label class="sampleTitle">SAMPLE_2 - Google Analytics Single Page:</label>
+         <table class="sampleNoBorder">
+              <tr>
+                  <td width="100%">
+                     <input type="button" value="Text Tip"
+                        onmouseover="Tip('Simple Tooltip without HTML tags.\nNewline is working');"
+                         onmouseout="UnTip(event);" />
+                   </td>
+              </tr>           
+          </table>
+      </td>
+      <!--   SAMPLE DESCRIPTION -->
+      <td class="sampleDesc" id="col_2_2">
+         <table >
+           <tr valign="top"><td>
+              To add to an HTML Item the <b>Floating Tip</b> you have to call the <b>JSU Tip API</b> <label class="jsuAPI">Tip UnTip</label> in the following events:
+               <ul> 
+               <li><b>onmouseover=</b>"<label class="jsuAPI">Tip</label>(<b><i>tipHTML</i></b>);" </li>   
+               <li><b>onmouseout=</b>"<label class="jsuAPI">UnTip</label>(event);"  </li>
+               </ul>
+               Code of SAMPLE 1 case:
+               <table class="sampleNoBorder" width="100%">
+               <tr style="font-size: 8pt">
+                 <td > <b>Text Tip </b> Sample: <input type="button" class="tipFixCode" id="tipCode1a" onclick="sampleCode1a(event);" /></td>
+               </tr>               
+               </table>  
+           </td></tr>
+         </table>
+      </td>
+    </tr>
+
+
+
+</table>
+
+<!--  USED by jsuGoToURL()  -->
+<a id="href_hidden" target="_blank" href="" style="display:none"">HIDDEN</a>
+
+
+
+</body>
+</html>

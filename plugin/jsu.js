@@ -67,6 +67,7 @@ require([ // First 3 always present
          'core/jslog',            
          'core/util',							
          'core/tooltip',
+         'core/googleAnal',
          'core/loadingDiv',							
          'core/cSortTable',       /* require date */
          'popup/Popup',

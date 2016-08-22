@@ -61,6 +61,7 @@ require([ // First 3 always present
          'core/jslog',            /* require dom-drag, json2 */
          'core/util',							/* require json2 */
          'core/tooltip',
+         'core/googleAnal',
          'core/cSortTable',       /* require date, jslog */
          'core/loadingDiv',							
          'core/cValidate',        /* require date, jslog, tooltip, popup/Popup */

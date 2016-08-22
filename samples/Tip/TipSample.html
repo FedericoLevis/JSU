@@ -7,15 +7,14 @@
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
   <title>JS Utility | JSU Tooltip Plugin Sample | Federico Levis</title>
   <meta charset="utf-8"/>
-  <meta name="description" content="JSU utility (JSU) - Floating/Fixed HTML Tooltip with GIF, Video, Pages, Google Analytics" />
-  <meta name="keywords" content="js, utility, JSU, tooltip, tip, google, analytics, html, gif, federico, levis" />
+  <meta name="description" content="JSU utility (JSU) - Floating/Fixed HTML Tooltip with GIF, Video, Iframe, Google Analytics" />
+  <meta name="keywords" content="js, utility, JSU, tooltip, tip, google, analytics, html, gif, video, iframe, federico, levis" />
 	<!-- This sample -->
-	<link rel="stylesheet" type="text/css" href="../Sample.css">
-	<script type="text/javascript" src="./TipSample.js" ></script>
+		<script type="text/javascript" src="./TipSample.js" ></script>
 
 	<!--  JSU -->
 	<link rel="stylesheet" href="../../core/jsu.css" type="text/css">
-		<script  data-main="../../plugin/jsu.js" src="../../core/require.js"></script>
+	<script  data-main="../../plugin/jsu.js" src="../../core/require.js"></script>
   
   <!-- ONLY FOR About -->
   <link rel="stylesheet" href="../about/about.css" type="text/css">
@@ -35,7 +34,7 @@
 <table class="sampleToolbar" width="100%" >
   <tr >
     <td class="tipl" width="30%">
-        <input type="button"  class="tipGoogleAnalList" id="tipGoogleAnalList"  onclick="jsuGoogleAnalList(event)"  onmouseover="jsuGoogleAnalListTip(event);" onmouseout="UnTip(event)"/> 
+        <input type="button"  class="googleAnalList" id="googleAnalList"  onclick="jsuGoogleAnalList(event)"  onmouseover="jsuGoogleAnalListTip(event);" onmouseout="UnTip(event)"/> 
     </td>
     <td class="tipr" width="70%">
      <table valign="bottom" align="right">
@@ -43,9 +42,9 @@
             <td class="tipr" ><b>Download Options:</b> </td>
             <td><input type="button"  class="tipFix" id="downloadOption"  onclick="downloadTip(event)" /> </td>
             <td valign="bottom"> <input type="button" class="downloadPay"  id="downloadPay"    onclick="downloadPay(event);" onmouseover="downloadTipPay(event);" onmouseout="UnTip(event)"/> </td>
-            <td valign="bottom"> <input type="button"  class="tipGoogleAnal" id="tipGoogleAnalPay"  onclick="jsuGoogleAnalPay();"  onmouseover="jsuGoogleAnalPayTip(event);" onmouseout="UnTip(event)"/> </td>
+            <td valign="bottom"> <input type="button"  class="googleAnal" id="googleAnalPay"  onclick="jsuGoogleAnalPay();"  onmouseover="jsuGoogleAnalPayTip(event);" onmouseout="UnTip(event)"/> </td>
             <td valign="bottom"> <input type="button" class="downloadFree" id="downloadFree" onclick="downloadFree(event);" onmouseover="downloadTipFree(event);" onmouseout="UnTip(event)"  /> </td>
-            <td valign="bottom"> <input type="button"  class="tipGoogleAnal" id="tipGoogleAnalFree"  onclick="jsuGoogleAnalFree();"  onmouseover="jsuGoogleAnalFreeTip(event);" onmouseout="UnTip(event)"/> </td>
+            <td valign="bottom"> <input type="button"  class="googleAnal" id="googleAnalFree"  onclick="jsuGoogleAnalFree();"  onmouseover="jsuGoogleAnalFreeTip(event);" onmouseout="UnTip(event)"/> </td>
         </tr>
       </table>  
     </td>
@@ -63,8 +62,6 @@
       <th class="tipTitleBig" colspan="4">JSU<input type="button" class="tipFix" id="tipJSUTitle" onclick="aboutTipFixJSU(event);" />
         <label class="aboutAuthor">by Federico Levis</label>  <input type="button" class="tipFix" id="tipJSUAuthor" onclick="aboutTipAuthor(event);" />
         <label class="jsuHelp">Tooltip Documentation<label>  <input type="button" class="jsuHelp" onclick="jsuDocTip();"  onmouseover="Tip(JSU_TIP_DOC_TIP);" onmouseout="UnTip(event)" /> 
-
-
         <!--  ONLY for developers: displayed when URL PAR opt=1 -->     
         <select id="selectShowCol" class="parOption" onchange="onchangeShowCol()">
             <option value="1">Show SAMPLE</option>
@@ -88,46 +85,12 @@
 
     <!--   ===================================== SAMPLE_1 ==============================================  -->
     <tr id="tr_sample_1" valign="top">
-      <td class="sample" id="col_1_1" >
-         <label class="sampleTitle">SAMPLE_1 - GoogleAnalitycs Tip</label>
-         <ul>
-           <li>case a) Tip for a Single <b>Google Analytics</b> Page
-               <input type="button"  class="tipFix" id="tipSample1a"  onclick="sample1a(event);" />
-           </li>    
-           <BR/>
-           <li>case b) Tip for <b>Google Analytics</b> List
-                  <input type="button"  class="tipGoogleAnalList" id="tipSample1b"  onclick="jsuGoogleAnalList(event);"  onmouseover="jsuGoogleAnalListTip(event);" onmouseout="UnTip(event)"/> 
-           </li>    
-         </ul>
-      </td>
-      <!--   SAMPLE1 DESCRIPTION -->
-      <td class="sampleDesc" id="col_1_2">
-         <table >
-           <tr valign="top"><td>
-               To implement a <b>FixedTip</b> Tooltip :  
-               <ul> 
-               <li>Set an <i><b>input button</b></i> with JSU <label class="jsuAPI">core.css</label> class like <label class="jsuAPI">tipFix, tipFixArrow</label> </li>
-               <li>In the <b>onclick event</b> call the <b>JSU Tip API</b>   <label class="jsuAPI">TipFix</label>(<b><i>tipHTML</i></b>,event,<b><i>objOpt</i></b>)</li>
-               </ul>
-               Code of SAMPLE_1 cases:
-			         <ul>
-                        <li>case a) Tip for a Single <b>Google Analytics</b> Page
-			             <input type="button" class="tipFixCode" id="sampleCode1a" onclick="sampleCode1a(event);" /> 
-			           </li>
-                       <li>case b) FixedTip with inside an <b>Embedded Page</b>  
-			             <input type="button" class="tipFixCode" id="sampleCode1b" onclick="sampleCode1b(event);" /> 
-			           </li>
-			         </ul>
-           </td></tr>
-         </table>
-      </td>
-    </tr>
-    
-    
-    <!--   ===================================== SAMPLE_2 ==============================================  -->
-    <tr id="tr_sample_2" valign="top">
-      <td class="sample" id="col_2_1">
-         <label class="sampleTitle">SAMPLE_2 - Floating Tip:</label>
+      <td class="sample" id="col_1_1">
+         <label class="sampleTitle">SAMPLE_1 - Floating Tip:</label>
+		 <table class="sampleNote"><tr>
+		    <td><input class="sampleNote"></td>
+		    <td>Put the mouse over the DOM Elements, to see  the <b>Floating Tip</b></label></td>
+		 </tr></table>
          <table class="sampleNoBorder">
               <tr>
                   <td width="25%">
@@ -150,7 +113,7 @@
           </table>
       </td>
       <!--   SAMPLE DESCRIPTION -->
-      <td class="sampleDesc" id="col_2_2">
+      <td class="sampleDesc" id="col_1_2">
          <table >
            <tr valign="top"><td>
               To add to an HTML Item the <b>Floating Tip</b> you have to call the <b>JSU Tip API</b> <label class="jsuAPI">Tip UnTip</label> in the following events:
@@ -158,15 +121,62 @@
                <li><b>onmouseover=</b>"<label class="jsuAPI">Tip</label>(<b><i>tipHTML</i></b>);" </li>   
                <li><b>onmouseout=</b>"<label class="jsuAPI">UnTip</label>(event);"  </li>
                </ul>
-               Code of SAMPLE 2 cases:
+               Code of SAMPLE 1 cases:
                <table class="sampleNoBorder" width="100%">
                <tr style="font-size: 8pt">
-                 <td > <b>Text Tip </b> Sample: <input type="button" class="tipFixCode" id="tipCode2a" onclick="sampleCode2a(event);" /></td>
-                 <td style="padding-left:15px"><b>HTML Tip </b> Sample: <input type="button" class="tipFixCode" id="tipCode2b" onclick="sampleCode2b(event);" /></td>
-                 <td style="padding-left:15px"> <b>Readme Tip </b> Sample: <input type="button" class="tipFixCode" id="tipCode2c" onclick="sampleCode2c(event);" /></td>
-                 <td style="padding-left:15px"> <b>Info Tip </b> Sample: <input type="button" class="tipFixCode" id="tipCode2d" onclick="sampleCode2d(event);" /></td>
+                 <td > <b>Text Tip </b> Sample: <input type="button" class="tipFixCode" id="tipCode1a" onclick="sampleCode1a(event);" /></td>
+                 <td style="padding-left:15px"><b>HTML Tip </b> Sample: <input type="button" class="tipFixCode" id="tipCode1v" onclick="sampleCode1b(event);" /></td>
+                 <td style="padding-left:15px"> <b>Readme Tip </b> Sample: <input type="button" class="tipFixCode" id="tipCode1c" onclick="sampleCode1c(event);" /></td>
+                 <td style="padding-left:15px"> <b>Info Tip </b> Sample: <input type="button" class="tipFixCode" id="tipCode1d" onclick="sampleCode1d(event);" /></td>
                </tr>               
                </table>  
+           </td></tr>
+         </table>
+      </td>
+    </tr>
+
+    <!--   ===================================== SAMPLE_2 ==============================================  -->
+    <tr id="tr_sample_2" valign="top">
+      <td class="sample" id="col_2_1" >
+         <label class="sampleTitle">SAMPLE_2 - Fixed Tip with GIF, button, link, VIDEO,..</label><BR/>
+		 <table class="sampleNote"><tr>
+		    <td><input class="sampleNote"></td>
+		    <td><b>Click</b> over the Button to Open <b>Fixed Tip</b> - <b>Click again</b> to Close it</label></td>
+		 </tr></table>
+         <ul>
+           <li>case a) FixedTip with <b>GIF, Button, Link</b>
+               <input type="button"  class="tipFix" id="tipSample2a"  onclick="sample2a(event);" />
+           </li>    
+           <BR/>
+           <li>case b) FixedTip with inside an <b>Embedded Page</b>  
+                  <input type="button" class="tipFixArrow" value="Tip with Video" id="tipSample2b1"  onclick="sample2b1(event);" />
+                  <input type="button" class="tipFixArrow"  value="Tip with HTML Page" id="tipSample2b2" style="margin-left:30px" onclick="sample2b2(event);" />
+           </li>    
+           <BR/>
+           <li>case c) FixedTip for <b>Google Analytics</b> 
+                  <input type="button"  class="googleAnalList" id="tipSample2c"  onclick="jsuGoogleAnalList(event);"  onmouseover="jsuGoogleAnalListTip(event);" onmouseout="UnTip(event)"/> 
+           </li>    
+         </ul>
+      </td>
+      <!--   SAMPLE2 DESCRIPTION -->
+      <td class="sampleDesc" id="col_2_2">
+         <table >
+           <tr valign="top"><td>
+               To implement a <b>FixedTip</b> Tooltip :  
+               <ul> 
+               <li>Set an <i><b>input button</b></i> with JSU <label class="jsuAPI">jsu.css</label> class like <label class="jsuAPI">tipFix, tipFixArrow</label> </li>
+               <li>In the <b>onclick event</b> call the <b>JSU Tip API</b>   <label class="jsuAPI">TipFix</label>(<b><i>tipHTML</i></b>,event,<b><i>objOpt</i></b>)</li>
+               </ul>
+               Code of SAMPLE_2 cases:
+			         <ul>
+                        <li>case a) FixedTip with <b>GIF, Button, Link</b>
+			             <input type="button" class="tipFixCode" id="sampleCode2a" onclick="sampleCode2a(event);" /> 
+			           </li>
+                       <li>case b) FixedTip with inside an <b>Embedded Page</b>  
+			             &nbsp;Video: <input type="button" class="tipFixCode" id="sampleCode2b" onclick="sampleCode2b1(event);" style="margin-right:20px" /> 
+                   &nbsp;HTMLPage: <input type="button" class="tipFixCode" id="inputTipFix" onclick="sampleCode2b2(event);" /> 
+			           </li>    
+			         </ul>
            </td></tr>
          </table>
       </td>
@@ -175,74 +185,40 @@
     <!--   ===================================== SAMPLE_3 ==============================================  -->
     <tr id="tr_sample_3" valign="top">
       <td class="sample" id="col_3_1" >
-         <label class="sampleTitle">SAMPLE_3 - Fixed Tip with GIF, button, link, VIDEO,..</label>
-         <ul>
-           <li>case a) FixedTip with <b>GIF, Button, Link</b>
-               <input type="button"  class="tipFix" id="tipSample3a"  onclick="sample3a(event);" />
-           </li>    
-           <BR/>
-           <li>case b) FixedTip with inside an <b>Embedded Page</b>  
-                  <input type="button" class="tipFixArrow" value="Tip with Video" id="tipSample3b1"  onclick="sample3b1(event);" />
-                  <input type="button" class="tipFixArrow"  value="Tip with HTML Page" id="tipSample3b2" style="margin-left:30px" onclick="sample3b2(event);" />
-           </li>    
-         </ul>
-      </td>
-      <!--   SAMPLE2 DESCRIPTION -->
-      <td class="sampleDesc" id="col_3_2">
-         <table >
-           <tr valign="top"><td>
-               To implement a <b>FixedTip</b> Tooltip :  
-               <ul> 
-               <li>Set an <i><b>input button</b></i> with JSU <label class="jsuAPI">core.css</label> class like <label class="jsuAPI">tipFix, tipFixArrow</label> </li>
-               <li>In the <b>onclick event</b> call the <b>JSU Tip API</b>   <label class="jsuAPI">TipFix</label>(<b><i>tipHTML</i></b>,event,<b><i>objOpt</i></b>)</li>
-               </ul>
-               Code of SAMPLE_3 cases:
-			         <ul>
-                        <li>case a) FixedTip with <b>GIF, Button, Link</b>
-			             <input type="button" class="tipFixCode" id="sampleCode3a" onclick="sampleCode3a(event);" /> 
-			           </li>
-                       <li>case b) FixedTip with inside an <b>Embedded Page</b>  
-			             &nbsp;Video: <input type="button" class="tipFixCode" id="sampleCode3b" onclick="sampleCode3b1(event);" style="margin-right:20px" /> 
-                   &nbsp;HTMLPage: <input type="button" class="tipFixCode" id="inputTipFix" onclick="sampleCode3b2(event);" /> 
-			           </li>    
-			         </ul>
-           </td></tr>
-         </table>
-      </td>
-    </tr>
-
-    <!--   ===================================== SAMPLE_4 ==============================================  -->
-    <tr id="tr_sample_4" valign="top">
-      <td class="sample" id="col_4_1" >
-         <label class="sampleTitle">SAMPLE_4 - FixedTip with Code Highlighted</label><BR/>
-         The Tooltip API <label class="jsuAPI">TipFixCode</label> <b>higlights SW Code</b>: js, java,  perl, pl, pm, bsh, csh, sh, c, cpp, rb, py, cv, cs ,json, ..
+         <label class="sampleTitle">SAMPLE_3 - FixedTip with Code Highlighted</label><BR/>
+		 <table class="sampleNote"><tr>
+		    <td><input class="sampleNote"></td>
+		    <td>The Tooltip API <label class="jsuAPI">TipFixCode</label> <b>higlights SW Code</b>: js, java,  perl, pl, pm, bsh, csh, sh, c, cpp, rb, py, cv, cs ,json, ..<b><BR/>
+			   Click</b> over the Button to Open <b>Fixed Tip</b> - <b>Click again</b> to Close it</label></td>
+		 </tr></table>
+         
          <ul>
            <li>case a) <b>Highlight JS</b> Code:&nbsp;
-              <input type="button" class="tipFixJS" id="sample4a"  onclick="sample4a(event);" />  </li>    
+              <input type="button" class="tipFixJS" id="sample3a"  onclick="sample3a(event);" />  </li>    
            <li>case b) <b>Highlight Java</b> Code:&nbsp;  
-              <input type="button" class="tipFixCode" id="sample4b"  onclick="sample4b(event);" />  </li>    
+              <input type="button" class="tipFixCode" id="sample3b"  onclick="sample3b(event);" />  </li>    
            <li>case c) <b>Highlight Multi Code Sections</b> Hightlighted (JS and CSS) and Not (HTML):&nbsp;
-                   <input type="button" class="tipFixCode" id="sample4c"  onclick="sample4c(event);" />  </li>             </ul>
+                   <input type="button" class="tipFixCode" id="sample3c"  onclick="sample3c(event);" />  </li>             </ul>
       </td>
       <!--   SAMPLE DESCRIPTION -->
-      <td class="sampleDesc" id="col_4_2">
+      <td class="sampleDesc" id="col_3_2">
          <table >
            <tr valign="top"><td>
                To hightlight one or more Section of  Code (JS, CSS, Java,..):  
                <ul> 
-	               <li>Set an <b>input</b> with JSU <label class="jsuAPI">core.css</label> class like <label class="jsuAPI">tipFixJS, tipFixCode, ...</label> </li>
+	               <li>Set an <b>input</b> with JSU <label class="jsuAPI">jsu.css</label> class like <label class="jsuAPI">tipFixJS, tipFixCode, ...</label> </li>
 	               <li>In the <b>onclick </b> event, call 
 	                  <label class="jsuAPI">TipFixJSCode</label>(<b><i>szCode</i></b>,event,<b><i>objOpt</i></b>)</label> for one Code section, &nbsp;&nbsp;
 	                   <label class="jsuAPI">TipFixJSMultiCode</label>(<b><i>arObjCode</i></b>,event,<b><i>objOpt</i></b>)</label> </li> for MultiCode Sections
 	               </ul>
            </ul>
-           JS Code of SAMPLE_4 cases:
+           JS Code of SAMPLE_3 cases:
            <ul>
            <li>case a) and b) <b>Highlight JS</b> Code  
-                   <input type="button" class="tipFixJS" id="sampleCode4a" onclick="sampleCode4a (event);" /> 
+                   <input type="button" class="tipFixJS" id="sampleCode3a" onclick="sampleCode3a (event);" /> 
                  </li>
            <li>case c) <b>Highlight Multi Code Sections</b> Hightlighted (JS and CSS) and Not (HTML)
-                   <input type="button" class="tipFixJS" id="sampleCode4c" onclick="sampleCode4c (event);" /> 
+                   <input type="button" class="tipFixJS" id="sampleCode3c" onclick="sampleCode3c (event);" /> 
             </li>    
            </ul>    
 
