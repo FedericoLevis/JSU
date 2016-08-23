@@ -16,13 +16,17 @@ Copyright by Federico Levis - JSUtily https://github.com/FedericoLevis/JSU
 This file may be freely distributed/modified under the MIT license. 
 ========================================================================================= */
 
+/* PATh Fisso e non ci sono i file non FREE: cValidate */
+
+
 /* the BASE Path: Path of ..../jsu folder. 
  a) Fixed 
  b) relative Path (relative to HTML including this file)
 */  
 
 if (typeof (JSU_PATH_BASE) == "undefined"){
-	var JSU_PATH_BASE = '../..';  // Default: it is the setting for the JSU sample
+    // GIT
+    var JSU_PATH_BASE="https://rawgit.com/FedericoLevis/JSU/master";
 }
 
 // ===================================== OPTION: JSU with Comment or Minified   
@@ -38,6 +42,11 @@ var JSU_PATH_POPUP_HTML = JSU_PATH_BASE +  "/core/IEPopup/";
 //----------------------------------- FIXED 
 var JSU_PATH_ABOUT_IMG = "https://rawgit.com/FedericoLevis/images/master/jsuAbout/";
 var JSU_PATH_DOC = "https://rawgit.com/FedericoLevis/JSUDoc/master/";
+
+//used by samples
+// TBD
+var JSU_FREE=true;
+// var JSU_FREE=false;
 
 
 //Only for TEST during development
@@ -67,12 +76,12 @@ require([ // First 3 always present
          'core/jslog',            
          'core/util',							
          'core/tooltip',
+         'core/prettify-jsu',      /* only for code- prettify */
          'core/googleAnal',
          'core/loadingDiv',							
          'core/cSortTable',       /* require date */
          'popup/Popup',
-         'core/loadingDiv',							
-         'core/cValidate'        /* require date, Popup */
+         'core/loadingDiv'							
 		   ],
     	   function()	{	
 							if (typeof (jslog_init) == "function"){

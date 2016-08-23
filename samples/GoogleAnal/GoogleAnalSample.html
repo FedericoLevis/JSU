@@ -10,11 +10,13 @@
   <meta name="description" content="JSU utility (JSU) - API to access to Google Analytics pages created with goo.gl url shortener"/>
   <meta name="keywords" content="js, utility, google, analytics, goo.gl, shortener, JSU, tooltip, tip, statistics, federico, levis" />
 	<!-- This sample -->
-		<script type="text/javascript" src="./GoogleAnalSample.js" ></script>
+  <script type="text/javascript" src="./GoogleAnalSample.js" ></script>
 
-	<!--  JSU -->
-	<link rel="stylesheet" href="../../core/jsu.css" type="text/css">
-	<script  data-main="../../plugin/jsu.js" src="../../core/require.js"></script>
+	<!--  JSU  with JQ -->
+  <!-- JSUtility with JQPopup and jq (jquery, jquery-ui)  -->
+  <link rel="stylesheet" href="../../externalPlugin/jquery/jquery-ui.css">
+  <link rel="stylesheet" href="../../core/jsu.css" type="text/css">
+  <script  data-main="../../plugin/jsu-jq.js" src="../../core/require.js"></script>
   
   <!-- ONLY FOR About -->
   <link rel="stylesheet" href="../about/about.css" type="text/css">
@@ -71,7 +73,7 @@
       </th>
     </tr>
     <tr  id="tr_title_2" class="tipTitleBig2">
-      <td width="50%" class="tipc" id="col_0_1">SAMPLE
+      <td width="60%" class="tipc" id="col_0_1">SAMPLE
         <!--  To show all sample or only ONE   -->
         <select id="selectSample" class="selectSample"  onchange="onchange_sample()">
             <option value="1">Show Sample_1: Google Analytics Single Page</option>
@@ -79,29 +81,54 @@
             <option value="ALL" selected>Show ALL Samples</option>
         </select> 
       </td>
-      <td width="50%" class="tipc" id="col_0_2">DESCRIPTION</td>
+      <td width="40%" class="tipc" id="col_0_2">DESCRIPTION</td>
     </tr>
 
     <!--   ===================================== SAMPLE_1 ==============================================  -->
     <tr id="tr_sample_1" valign="top">
       <td class="sample" id="col_1_1" >
          <label class="sampleTitle">SAMPLE_1 - Google Analytics List</label><BR/>
-		 <table class="sampleNote"><tr>
-		    <td><input class="sampleNote"></td>
-		    <td>Try the different <label class="jsuAPI">googleAnalList</label> <b>API Options</b> and click the GoogleAnalitycs Buttons</td>
+		 <table class="note"><tr>
+		    <td><input class="note"></td>
+		    <td>Try the different <label class="jsuAPI">googleAnalList</label> <b>API Options</b> and choose the GoogleAnalitycs Button to show the List in a TipFixed or JQPopup<BR/>
+			  <b>NOTE:</b> Google Analytics has <label class="allSampleLimit"><a class="tipLink" href="javascript:showJSUVersionParLimit();">Limitation in FREE JSU version</a></label>: BLACK options are not available
+			</td>
 		 </tr></table>
+		 <!--   --------------------------------- OPTION with sectErr pro possible Option not allowed ---->
+         <!--  DIV for ERR Section -->
+         <div id="divSampleErr1" class="validateErrSect"></div>
 		 <table class="tipNoBorder">
 		   <tr>
 			 <td class="tipr" >
-    		  <table class="det" BORDER="1" cellpadding="2" cellspacing="2">
+    		  <table class="det" BORDER="1" cellpadding="3" cellspacing="3" >
 			    <tr class="detTitle"><td colspan="5">googleAnalList API Options</td></tr>
-				<tr class="detTitle2"><td width="40px">FULL JSU</td><td  width="40px">FREE JSU</td><td width="70px">OPTION</td><td width="100px">VALUE</td width="200px"><td>DESCRIPTION</td></tr>
+				<tr class="detTitle2"><td >FULL<BR/>JSU</td><td>FREE<BR/>JSU</td><td width="70px">OPTION</td><td width="120px">VALUE</td width="300px"><td>DESCRIPTION</td></tr>
+
+				<tr class="det">
+				  <td class="jsuOptPresent"></td>
+				  <td class="jsuOptPresent"></td>
+				  <td class="tipcBold">iWidth</td>
+				  <td class="parDefault">
+				    <select id="width"  style="width:100px;" onchange="onchangeWidth();">  
+                  </td>
+                  <td class="tipl">Width (px) of the Box displayed</td> 
+				</tr>
+				<tr class="det">
+				  <td class="jsuOptPresent"></td>
+				  <td class="jsuOptPresent"></td>
+				  <td class="tipcBold">szParTime</td>
+				  <td class="parDefault">
+				    <select id="parTime"  style="width:100px;" onchange="onchangeParTime();">  
+                  </td>
+                  <td class="tipl">Initial Value of <b>Google Analtycs Time</b> Parameter</td> 
+				</tr>
+
 				<tr class="det">
 				  <td class="jsuOptPresent"></td>
 				  <td class="jsuOptAbsent"></td>
 				  <td class="tipcBold">bShortUrl</td>
-				  <td>
-				    <select id="bShortUrl" class="parDefault" style="width:100px;" onchange="onchangeShortUrl();">  
+				  <td class="parDefault">
+				    <select id="bShortUrl"  style="width:100px;" onchange="onchangeShortUrl();">  
 						  <option selected value="FALSE" >false</i></option> 
 						  <option value="TRUE" >true</option> 
 					 </select>                
@@ -112,8 +139,8 @@
 				  <td class="jsuOptPresent"></td>
 				  <td class="jsuOptAbsent"></td>
 				  <td class="tipcBold">bLongUrl</td>
-				  <td>
-				    <select id="bLongUrl" class="parDefault" style="width:100px;" onchange="onchangeLongUrl();">  
+				  <td class="parDefault">
+				    <select id="bLongUrl"  style="width:100px;" onchange="onchangeLongUrl();">  
 						  <option selected value="FALSE" >false</i></option> 
 						  <option value="TRUE" >true</option> 
 					 </select>                
@@ -122,8 +149,17 @@
 				</tr>
 			   </table>	
 			 </td>
-			 <td class="tipl" style="margin-left:30px">
-               &nbsp;&nbsp;<input type="button"  class="googleAnalList" id="sample1"  onclick="sample1(event);"  onmouseover="jsuGoogleAnalListTip(event);" onmouseout="UnTip(event)"/> 
+			 <td class="tipl" style="padding-left:50px" >
+               <table class="detNoBorder" cellpadding="10px">
+                 <tr>
+                   <td class="tiplBold" width="70px">TipFix:</td>
+                   <td><input type="button"  class="googleAnalList" id="sample1a"  onclick="sample1(event,false);"  onmouseover="jsuGoogleAnalListTip(event);" onmouseout="UnTip(event)"/> </td>
+                 </tr>
+                 <tr>
+                   <td class="tiplBold" >JQPopup:</td>
+                   <td><input type="button"  class="googleAnalListJQPopup" id="sample1b"  onclick="sample1(event,true);"  onmouseover="jsuGoogleAnalListTip(event);" onmouseout="UnTip(event)"/> </td>
+                 <tr>  
+               </table>
 			 </td>
 		   </tr>
         </table>		  
