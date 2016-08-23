@@ -76,7 +76,7 @@ require([ // First 3 always present
          'core/jslog',            
          'core/util',							
          'core/tooltip',
-         'core/prettify-jsu',      /* only for code- prettify */
+         'core/prettify/prettify-jsu',      /* only for code- prettify */
          'core/googleAnal',
          'core/loadingDiv',							
          'core/cSortTable',       /* require date */
