@@ -276,8 +276,10 @@ function errFreeJsu(iSample,szErr){
   '  <td class="tipl errSample">' + szErr + '</td>' +
   '</tr>' +
   '<tr>' +
-  '  For the deatils see<td><label class="allSampleLimit"><a class="tipLink" href="javascript:showJSUVersionParLimit();">Description of the features not available in FREE JSU</a></label>' +  
-  '</tr></table>';
+  ' <td></td>' +
+  ' <td style="color:black">' +
+  '  For the details see: <label class="featSampleLimit"><a class="tipLink" href="javascript:showJSUVersionParLimit();">JSU Options available only in FULL Version</a></label>' +  
+  ' </td></tr></table>';
 	// DAFARE URL
 	var elErrSect = getElementById2('divSampleErr' + iSample,true);
 	elErrSect.innerHTML = szSectMsg;
