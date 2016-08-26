@@ -10,7 +10,7 @@ var CSS_SEP = "-----------------------------------------------------------------
 
 var JSU_TIP_HTML="<b>Simple Tooltip</b> with <i>HTML tags</i><br/>Tip (You can use <u>whatever HTML TAG</u>)" ;
 
-var JSU_TIP_README='<table class="tip" BORDER="2" cellspacing="0" cellpadding="2" width="550">' +
+var JSU_TIP_README='<table class="tip" BORDER="2" cellspacing="0" cellpadding="2" width="550px">' +
    '<tr class="tipTitleBig"><td>README EXAMPLE</td></tr>' +
    '<tr><td class="tipl">With <b>JSU tooltip</b> you can easily implement whatever <b>Floating HTML Tip</b><BR/>' +
    '<BR/>Moreover you can also use many other advanced <b>JSU tooltip Features</b>:<ul>' +
@@ -19,9 +19,6 @@ var JSU_TIP_README='<table class="tip" BORDER="2" cellspacing="0" cellpadding="2
    '<li>Tips with <b>JS code</b></li>' +
    '<li>...</li>' +
    '</ul></td></tr></table>';
-
-var JSU_TIP_INFO=JSU_TIP_HTML;
-
 
 
 
@@ -39,6 +36,17 @@ function jsu_loaded(){
 
 
 
+
+
+function sample1d(event){
+	var szTip='<div>' +
+  '<table class="tip" BORDER="2" cellspacing="0" cellpadding="2" width="550px" align="center">' +
+  ' <tr><td><img height="100px" src="' + JSU_PATH_ABOUT_IMG + 'JSUDancing.gif" /></td></tr></table>' +
+  JSU_TIP_README +
+   '</div>';
+	Tip(szTip);
+	
+}
 
 
 
@@ -299,7 +307,7 @@ function sampleCode1c(event){
 
 function sampleCode1d(event){
 	var JS_CODE_1d_JS = '//Define in JS a constant (e.g. JSU_TIP_HTML) with the MsgHtml to show in the Tip:  \n'+
-	'var JSU_TIP_HTML="<b>Simple Tooltip</b> with <i>HTML tags</i><br/>Tip (You can use <u>whatever HTML TAG</u>";'; 
+	'var JSU_TIP_HTML="...";'; 
 	
 	var JS_CODE_1d_HTML = '// To add whatever HTML FloatingTip to whatever HTML Item: \n'+	 
 	'// - onmouseover="Tip(HtmlMsg);" \n'+	
@@ -325,7 +333,7 @@ function sampleCode1d(event){
 		
   //3 Codes: First 2 with HTML TAGS, CSS without HTML tags
  	TipFixMultiCode([
- 	      {szTitle:"JS: TipSample.js", szCode: JS_CODE_1d_JS,  bPrettify:false},
+ 	      {szTitle:"JS: TipSample.js", szCode: JS_CODE_1d_JS,  bPrettify:true},
 	      {szTitle:"HTML: TipSample.html", szCode: JS_CODE_1d_HTML,  bPrettify:false},
  	      {szTitle:"CSS: jsu/core/core.css", szCode: JS_CODE_1d_CSS,  bPrettify:true}
 	    ],

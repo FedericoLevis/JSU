@@ -22,6 +22,18 @@
   <link rel="stylesheet" href="../about/about.css" type="text/css">
   <script type="text/javascript" src="../about/about.js" ></script>
   
+ <!-- ONLY for  GOOGLE ANALYTICS -  this part can be removed --> 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  if (typeof (JSU_GA_EN) != "undefined" && JSU_GA_EN){
+      ga('create', 'UA-83225633-1', 'auto');
+      ga('send', 'pageview');
+  } 
+</script>
 
 </head>
 <body>
@@ -87,8 +99,8 @@
          <label class="sampleTitle">SAMPLE_1 - Google Analytics List</label><BR/>
 		 <table class="note"><tr>
 		    <td><input class="note"></td>
-		    <td>Try the different <label class="jsuAPI">googleAnalList</label> <b>API Options</b> and choose the GoogleAnalitycs Button to show the List in a TipFixed or JQPopup<BR/>
-			  <b>NOTE:</b> Google Analytics has <label class="allSampleLimit"><a class="tipLink" href="javascript:showJSUVersionParLimit();">Limitation in FREE JSU version</a></label>: BLACK options are not available
+		    <td id="tdNote1">You can try the various <a class="tipLink" href="https://rawgit.com/FedericoLevis/JSUDoc/master/googleAnal.js/global.html#googleAnalList" target="_blank">googleAnalList API Options</a>  
+            and click over the GoogleAnalitycs Button to show the List in a TipFixed or JQPopup
 			</td>
 		 </tr></table>
 		 <!--   --------------------------------- OPTION with sectErr pro possible Option not allowed ---->
@@ -97,25 +109,34 @@
 		 <table class="tipNoBorder">
 		   <tr>
 			 <td class="tipr" >
-    		  <table class="det" BORDER="1" cellpadding="3" cellspacing="3" >
-			    <tr class="detTitle"><td colspan="5">googleAnalList API Options</td></tr>
-				<tr class="detTitle2"><td >FULL<BR/>JSU</td><td>FREE<BR/>JSU</td><td width="70px">OPTION</td><td width="120px">VALUE</td width="300px"><td>DESCRIPTION</td></tr>
+    		  <table class="det" BORDER="1" cellpadding="3" cellspacing="3" width ="500px">
+			    <tr class="detTitle"><td colspan="5">Main googleAnalList API Options</td></tr>
+				<tr class="detTitle2"><td >FULL<BR/>JSU</td><td>FREE<BR/>JSU</td><td width="70px">OPTION</td><td width="120px">VALUE</td><td>DESCRIPTION</td></tr>
 
 				<tr class="det">
 				  <td class="jsuOptPresent"></td>
 				  <td class="jsuOptPresent"></td>
 				  <td class="tipcBold">iWidth</td>
 				  <td class="parDefault">
-				    <select id="width"  style="width:100px;" onchange="onchangeWidth();">  
+				    <select id="iWidth"  style="width:80px;" onchange="onchangeWidth();">  
                   </td>
                   <td class="tipl">Width (px) of the Box displayed</td> 
 				</tr>
 				<tr class="det">
 				  <td class="jsuOptPresent"></td>
 				  <td class="jsuOptPresent"></td>
+				  <td class="tipcBold">iTblMaxHeight</td>
+				  <td class="parDefault">
+				    <select id="iTblMaxHeight"  style="width:80px;" onchange="onchangeTblMaxHeight();">  
+                  </td>
+                  <td class="tipl">Max Height (px) of the Table with Google Analytics Links</td> 
+				</tr>
+				<tr class="det">
+				  <td class="jsuOptPresent"></td>
+				  <td class="jsuOptAbsent"></td>
 				  <td class="tipcBold">szParTime</td>
 				  <td class="parDefault">
-				    <select id="parTime"  style="width:100px;" onchange="onchangeParTime();">  
+				    <select id="szParTime"  style="width:80px;" onchange="onchangeParTime();">  
                   </td>
                   <td class="tipl">Initial Value of <b>Google Analtycs Time</b> Parameter</td> 
 				</tr>
@@ -125,7 +146,7 @@
 				  <td class="jsuOptAbsent"></td>
 				  <td class="tipcBold">bShortUrl</td>
 				  <td class="parDefault">
-				    <select id="bShortUrl"  style="width:100px;" onchange="onchangeShortUrl();">  
+				    <select id="bShortUrl"  style="width:80px;" onchange="onchangeShortUrl();">  
 						  <option selected value="FALSE" >false</i></option> 
 						  <option value="TRUE" >true</option> 
 					 </select>                
@@ -137,7 +158,7 @@
 				  <td class="jsuOptAbsent"></td>
 				  <td class="tipcBold">bLongUrl</td>
 				  <td class="parDefault">
-				    <select id="bLongUrl"  style="width:100px;" onchange="onchangeLongUrl();">  
+				    <select id="bLongUrl"  style="width:80px;" onchange="onchangeLongUrl();">  
 						  <option selected value="FALSE" >false</i></option> 
 						  <option value="TRUE" >true</option> 
 					 </select>                
@@ -147,14 +168,18 @@
 			   </table>	
 			 </td>
 			 <td class="tipl" style="padding-left:50px" >
-               <table class="detNoBorder" cellpadding="10px">
+               <table class="detNoBorder" cellpadding="2px">
                  <tr>
-                   <td class="tiplBold" width="70px">TipFix:</td>
-                   <td><input type="button"  class="googleAnalList" id="sample1a"  onclick="sample1(event,false);"  onmouseover="jsuGoogleAnalListTip(event);" onmouseout="UnTip(event)"/> </td>
+                   <td class="tiplBold"> TipFix:</td>
+                 </tr>  
+                 <tr>
+                   <td class="tipl"><input type="button"  class="googleAnalList" id="sample1a"  onclick="sample1(event,false);"  onmouseover="jsuGoogleAnalListTip(event);" onmouseout="UnTip(event)"/> </td>
                  </tr>
                  <tr>
-                   <td class="tiplBold" >JQPopup:</td>
-                   <td><input type="button"  class="googleAnalListJQPopup" id="sample1b"  onclick="sample1(event,true);"  onmouseover="jsuGoogleAnalListTip(event);" onmouseout="UnTip(event)"/> </td>
+                   <td class="tiplBold" style="padding-top:40px;">JQPopup <i>(Available Only with FULL JSU)</i>:</td>
+                 </tr>  
+                 <tr>
+                   <td class="tipl"><input type="button"  class="googleAnalListJQPopup" id="sample1b"  onclick="sample1(event,true);"  onmouseover="jsuGoogleAnalListTip(event);" onmouseout="UnTip(event)"/> </td>
                  <tr>  
                </table>
 			 </td>

@@ -61,43 +61,83 @@ function sample_init(){
              	 	[GA_DEF.WIDTH,GA_DEF.WIDTH], // 1100
              	 	[GA_DEF.WIDTH+200,GA_DEF.WIDTH+200],   
         ];
-	selectPopulate (getElementById2 ("width",true),arWidth,GA_DEF.WIDTH);
-  var arParTime=	[	
+	selectPopulate (getElementById2 ("iWidth",true),arWidth,GA_DEF.WIDTH);
+
+  var arTblMaxHeight=	[	
+             	 	[undefined,'NO LIMIT'],   
+              	 	[150,150],   
+              	 	[300,300], 
+              	 	[500,500]   
+         ];
+	selectPopulate (getElementById2 ("iTblMaxHeight",true),arTblMaxHeight,undefined);
+	
+	var arParTime=	[	
               	 	[GA_PAR_TIME.all_time,GA_PAR_TIME.all_time],   
               	 	[GA_PAR_TIME.month,GA_PAR_TIME.month],   
               	 	[GA_PAR_TIME.week,GA_PAR_TIME.week],   
               	 	[GA_PAR_TIME.day,GA_PAR_TIME.day],   
               	 	[GA_PAR_TIME.two_hours,GA_PAR_TIME.two_hours]   
          ];
- 	selectPopulate (getElementById2 ("parTime",true),arParTime, GA_PAR_TIME.all_time);
+	var elParTime = getElementById2 ("szParTime",true);
+ 	selectPopulate (elParTime,arParTime, GA_PAR_TIME.all_time);
+ 	
+ 	var arNote = ["tdNote1"];
+  if (JSU_FREE){
+  	for (var i=0; i<arNote.length; i++){
+    	var td = getElementById2(arNote[i], true);
+    	td.innerHTML += '<BR/><label class="tipWarnBold">This is the FREE JSU Version where Google Analytics has <label class="featSampleLimit"><a class="tipLink" href="javascript:showJSUVersionParLimit();">Limitation</a></label>: ONY the GREEN options below are available</label>';
+  		
+  	}
+  }	
 	
 }
 
+//------------------------------ PAR ALLOWED ALWAYS (FREE and FULL)
 
-/**
- * set different class depending on default/modified value
- */
-function onchangeParTime(){
-	var Fn = "[GoogleAnalSample.js onchangeParTime()] ";
-	var el = getElementById2("parTime",true);
-	opt_ga_list.szParTime = selectGetSelVal (el); 
-	jslog (JSLOG_DEBUG,Fn + "SET opt_ga_list.szParTime=" + opt_ga_list.szParTime);
-	var szClass = (opt_ga_list.szParTime == opt_ga_list_def.szParTime) ?  "parDefault" : "parModified";	
-	el.parentNode.className = szClass;
-	jslog (JSLOG_DEBUG,Fn + "SET className=" + szClass);
-}
 
 /**
  * set different class depending on default/modified value
  */
 function onchangeWidth(){
 	var Fn = "[GoogleAnalSample.js onchangeWidth()] ";
-	var el = getElementById2("width",true);
+	var el = getElementById2("iWidth",true);
 	opt_ga_list.iWidth = selectGetSelVal (el); 
 	var szClass = (opt_ga_list.iWidth == opt_ga_list_def.iWidth) ?  "parDefault" : "parModified";	
 	el.parentNode.className = szClass;
 	jslog (JSLOG_DEBUG,Fn + "SET className=" + szClass);
 }
+
+/**
+ * set different class depending on default/modified value
+ */
+function onchangeTblMaxHeight(){
+	var Fn = "[GoogleAnalSample.js onchangeTblMaxHeight()] ";
+	var el = getElementById2("iTblMaxHeight",true);
+	opt_ga_list.iTblMaxHeight = selectGetSelVal (el); 
+	var szClass = (opt_ga_list.iTblMaxHeight == opt_ga_list_def.iTblMaxHeight) ?  "parDefault" : "parModified";	
+	el.parentNode.className = szClass;
+	jslog (JSLOG_DEBUG,Fn + "SET className=" + szClass);
+}
+
+
+
+// ------------------------------ PAR NOT ALLOWD in FREE
+
+/**
+ * set different class depending on default/modified value
+ */
+function onchangeParTime(){
+	var Fn = "[GoogleAnalSample.js onchangeParTime()] ";
+	var el = getElementById2("szParTime",true);
+	opt_ga_list.szParTime = selectGetSelVal (el); 
+	jslog (JSLOG_DEBUG,Fn + "SET opt_ga_list.szParTime=" + opt_ga_list.szParTime);
+  var szClass = (opt_ga_list.szParTime == opt_ga_list_def.szParTime) 
+  	?	"parDefault" 
+  	: ((JSU_FREE) ? "parNotAllowed" : "parModified");
+	el.parentNode.className = szClass;
+	jslog (JSLOG_DEBUG,Fn + "SET className=" + szClass);
+}
+
 
 
 /**
@@ -146,8 +186,7 @@ function sample1(event,bJQPopup){
 	jslog (JSLOG_DEBUG,Fn + "IN: bJQPopup" + bJQPopup);
 
   
-  // DAFARE se bJQPopup e non e` definito mostro dsezione LimitedFeature
-	if (!checkFreeJsuSample1()){
+	if (!checkFreeJsuSample1(bJQPopup)){
 		return; /// Validation ERR
 	}
 	elementShow (getElementById2('divSampleErr1'),false); // Hide Err Sect if visible
@@ -233,15 +272,26 @@ function sampleCode1(event){
 
 /**
  * 
+ * @bJQPopup {Boolean}
+ * 
  * @returns {Boolean}   true if check OK
  */
-function checkFreeJsuSample1(){
+function checkFreeJsuSample1(bJQPopup){
 	var Fn = "[GoogleAnalSample.js checkFreeJsu()] ";
 	jslog (JSLOG_DEBUG,Fn + JSLOG_FUN_START);
 	jslog (JSLOG_DEBUG,Fn + "JSU_FREE=" + JSU_FREE);
 	if (JSU_FREE){
+		// -------------------------
 		var bErr= false;
 		var szErr = "Following Parameters are <b>allowed ONLY in FULL JSU Version</b>:<ul>";
+		if (bJQPopup && JSU_FREE){
+			szErr += '<li class="errBold">bJQPopup  <i>(You cannot Click JQPopup Button with FREE JSU)</i> </li>';
+			bErr= true;
+		}
+		if (opt_ga_list.szParTime != opt_ga_list_def.szParTime){
+			szErr += '<li class="errBold">szParTime</li>';
+			bErr= true;
+		}
 		if (opt_ga_list.bShortUrl != opt_ga_list_def.bShortUrl){
 			szErr += '<li class="errBold">bShortUrl</li>';
 			bErr= true;
@@ -260,31 +310,6 @@ function checkFreeJsuSample1(){
 	return true; 
 }
 
-
-
-/**
- * DAFARE metere in about.js 
- * Show SEc withh Error for apr not present in FREE JSU
- * 
- * @param iSample  1,2,    idex of Sample
- * @param szErr
- * @param szUrlDoc  Url of Document to go to see Feature
- */
-function errFreeJsu(iSample,szErr){
-	var szSectMsg = '<table width="100%"><tr>' +
-  '  <td class="PopupImgWarning" width="80px"></td>' +
-  '  <td class="tipl errSample">' + szErr + '</td>' +
-  '</tr>' +
-  '<tr>' +
-  ' <td></td>' +
-  ' <td style="color:black">' +
-  '  For the details see: <label class="featSampleLimit"><a class="tipLink" href="javascript:showJSUVersionParLimit();">JSU Options available only in FULL Version</a></label>' +  
-  ' </td></tr></table>';
-	// DAFARE URL
-	var elErrSect = getElementById2('divSampleErr' + iSample,true);
-	elErrSect.innerHTML = szSectMsg;
-	elementShow (elErrSect,true);
-}
 
 
 
