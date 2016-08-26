@@ -47,6 +47,7 @@ var JSU_PATH_DOC = "https://rawgit.com/FedericoLevis/JSUDoc/master/";
 // TBD
 var JSU_FREE=true;
 // var JSU_FREE=false;
+var JSU_GA_EN = true; // Enable GoogleAnaltycs
 
 
 //Only for TEST during development
@@ -94,7 +95,21 @@ require([ // First 3 always present
 
 var jsuLoadedTmo = null;   
 
+//   ONLY for  GOOGLE ANALYTICS -  this part can be removed 
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  if (typeof (JSU_GA_EN) != "undefined" && JSU_GA_EN){
+      ga('create', 'UA-83225633-1', 'auto');
+      ga('send', 'pageview');
+  } 
+
+
+
 function jsu_loaded_1(){
+
   if (typeof (JSU_LOADED_TMO_MS) == "undefined"){
     if (typeof (jsu_loaded) != "undefined"){
      return jsu_loaded();
