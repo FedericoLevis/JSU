@@ -655,11 +655,18 @@ function downloadPay(event){
 function downloadFree(event){
 	var fn = "[about.js downloadFree()] ";
 	jslog(JSLOG_DEBUG, fn + JSLOG_FUN_START);
+	ga('send', {
+	  hitType: 'event',
+	  eventCategory: 'DownloadFree',
+	  eventAction: 'Play',
+	  eventLabel: 'OpenPage'
+	});
+
 	UnTip();
 	/* Old
   jsuGoToURL(JSU_SHORT_URL_DOWNLOAD_FREE,false);
   */
-	var szTipFrame =	'<iframe width="1030" height="650" src="' + JSU_SHORT_URL_DOWNLOAD_FREE + '" ></iframe>'; 
+	var szTipFrame =	'<iframe width="1030" height="580" src="' + JSU_SHORT_URL_DOWNLOAD_FREE + '" ></iframe>'; 
 	TipFix(szTipFrame,event,{
 		 iTipWidth: 1070,
 		 szTitle:'Download FREE JSU.zip',
