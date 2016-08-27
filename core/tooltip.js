@@ -116,11 +116,14 @@ var tt_tipFix = {
 
 // ------------------------------ Fixed Up/Down classes. See core.css. To add new class, add similar code referring to another existing class
 // TOGGLE IMAGES. If the immage is not in these class, NO TOGGLE is done
-var TIP_TOGGLE_CLASS = {	Down: "tipFix",		Up: "tipFixUp"};
-var TIP_TOGGLE_CLASS_ARROW = {		Down: "tipFixArrow",		Up: "tipFixArrowUp"};
-var TIP_TOGGLE_CLASS_GA = {		Down: "googleAnalList",		Up: "googleAnalListUp"};
-var TIP_TOGGLE_CLASS_JS = {	Down: "tipFixJS",	Up: "tipFixJSUp"};
-var TIP_TOGGLE_CLASS_CODE = {	Down: "tipFixCode",	Up: "tipFixCodeUp"};
+var tt_arToggleClass = [
+     {  Down: "tipFix",		Up: "tipFixUp"},
+     {	Down: "tipFixArrow",		Up: "tipFixArrowUp"},
+     {	Down: "googleAnalList",		Up: "googleAnalListUp"},
+     {	Down: "tipFixJS",	Up: "tipFixJSUp"},
+     {	Down: "tipFixCode",	Up: "tipFixCodeUp"},
+     {	Down: "jsuOpt",	Up: "jsuOptUp"}
+     ];
 
 
 
@@ -402,50 +405,34 @@ function TipFix(tipMsgHtml,event, objOpt)
 		if (szId == undefined || szId.length == 0){
 			return tt_Err(fn + "SW ERROR tipImg has id=null \n tipImg used with TipFix must have an id");
 		}
-		var bToggled = true; //default
+		var bToggled = false; //default
 		//---------------------- TOGGLE IMAGE 
 		tt_log ( fn + "OLD classname=" + className);
-		if (className == TIP_TOGGLE_CLASS.Down ){
-			className = TIP_TOGGLE_CLASS.Up;
-		}else	if (className == TIP_TOGGLE_CLASS.Up){
-			className = TIP_TOGGLE_CLASS.Down;
-			bShow = false;
-		}else	if (className == TIP_TOGGLE_CLASS_ARROW.Up){
-			className = TIP_TOGGLE_CLASS_ARROW.Down;
-			bShow = false;
-		}else	if (className == TIP_TOGGLE_CLASS_ARROW.Down ){
-			className = TIP_TOGGLE_CLASS_ARROW.Up;
-		}else	if (className == TIP_TOGGLE_CLASS_GA.Up){			
-			className = TIP_TOGGLE_CLASS_GA.Down;			
-			bShow = false;
-		}else	if (className == TIP_TOGGLE_CLASS_GA.Down ){		
-			className = TIP_TOGGLE_CLASS_GA.Up;		
-		}	else	if (className == TIP_TOGGLE_CLASS_JS.Up){
-			className = TIP_TOGGLE_CLASS_JS.Down;
-			bShow = false;
-		}else	if (className == TIP_TOGGLE_CLASS_JS.Down ){
-			className = TIP_TOGGLE_CLASS_JS.Up;
-		}else	if (className == TIP_TOGGLE_CLASS_CODE.Up){
-			className = TIP_TOGGLE_CLASS_CODE.Down;
-			bShow = false;
-		}else	if (className == TIP_TOGGLE_CLASS_CODE.Down ){
-			className = TIP_TOGGLE_CLASS_CODE.Up;
-		}else {
-			if (tt_tipFix.objClass != undefined && tt_tipFix.objClass.Down != undefined && tt_tipFix.objClass.Up != undefined){
+		for (i=0; i< tt_arToggleClass.length; i++){
+			var objToggle = tt_arToggleClass[i];
+			if (className == objToggle.Down){
+				className = objToggle.Up;
+				bToggled = true;
+				tt_log ( fn + "TOGGLE From " + objToggle.Down + " TO " + objToggle.Up);
+			}else	if (className == objToggle.Up){
+				className = objToggle.Down;
+				tt_log ( fn + "TOGGLE From " + objToggle.Up + " TO " + objToggle.Down);
+				bShow = false;
+				bToggled = true;
+			}
+		}
+		if (tt_tipFix.objClass != undefined && tt_tipFix.objClass.Down != undefined && tt_tipFix.objClass.Up != undefined){
 				tt_logObj ( fn + "CASE of CUSTOM objClass" + tt_tipFix.objClass);
 				// Custom Class passed by User
 				if (className == tt_tipFix.objClass.Up){
 				  className = tt_tipFix.objClass.Down;
+					bToggled = true;
 				  bShow = false;
 			  }else	if (className == tt_tipFix.objClass.Down ){
 				  className = tt_tipFix.objClass.Up;
-			  }else {
-			  	bToggled= false; // NOT FOUND
-			  }	
-			}else {
-		  	bToggled= false; // NOT FOUND
-			}
-		}
+					bToggled = true;
+			  }
+		}		
 		if (bToggled){
 			tt_log ( fn + "TOGGLE TO NEW classname=" + className);
 		}	else{
@@ -800,11 +787,10 @@ function tt_UnTipFix(){
 function tt_isClassFixed(szClass){
   var bTipFix = false;	
 	var fn="[tooltip.js tt_isClassFixed()] ";
-	if (szClass == TIP_TOGGLE_CLASS_JS.Up  || szClass == TIP_TOGGLE_CLASS.Up  ||
-			szClass == TIP_TOGGLE_CLASS_CODE.Up  ||
-			szClass == TIP_TOGGLE_CLASS_ARROW.Up || 
-			szClass == TIP_TOGGLE_CLASS_GA.Up){
-		bTipFix = true;
+	for (i=0; i< tt_arToggleClass.length; i++){
+		if (tt_arToggleClass[i].Up == szClass){
+			bTipFix = true;
+		}
 	}
 	if (tt_tipFix.objClass != undefined && tt_tipFix.objClass.Down != undefined && tt_tipFix.objClass.Up != undefined){
 		// Custom Class passed by User
@@ -825,16 +811,10 @@ function tt_RestoreImgFixed() {
 	if (tip_img_fixed != null){
 		var szClass = "";
 		// Change img of tip_fixed if present
-		if (tip_img_fixed.className == TIP_TOGGLE_CLASS.Up){
-			szClass = TIP_TOGGLE_CLASS.Down;
-		}	else if (tip_img_fixed.className == TIP_TOGGLE_CLASS_ARROW.Up){
-			szClass = TIP_TOGGLE_CLASS_ARROW.Down;
-		}	else if (tip_img_fixed.className == TIP_TOGGLE_CLASS_GA.Up){
-			szClass = TIP_TOGGLE_CLASS_GA.Down;
-		}	else if (tip_img_fixed.className == TIP_TOGGLE_CLASS_JS.Up){
-			szClass = TIP_TOGGLE_CLASS_JS.Down;
-		}	else if (tip_img_fixed.className == TIP_TOGGLE_CLASS_CODE.Up){
-			szClass = TIP_TOGGLE_CLASS_CODE.Down;
+		for (i=0; i< tt_arToggleClass.length; i++){
+			if (tt_arToggleClass[i].Up == tip_img_fixed.className){
+				szClass = tt_arToggleClass[i].Down ;
+			}
 		}
 		if (tt_tipFix.objClass != undefined && tt_tipFix.objClass.Down != undefined && tt_tipFix.objClass.Up != undefined){
 			// Custom Class passed by User

@@ -70,7 +70,7 @@
       </th>
     </tr>
     <tr  id="tr_title_2" class="tipTitleBig2">
-      <td width="60%" class="tipc" id="col_0_1">SAMPLE
+      <td width="50%" class="tipc" id="col_0_1">SAMPLE
         <!--  To show all sample or only ONE   -->
         <select id="selectSample" class="selectSample"  onchange="onchange_sample()">
             <option value="1">Show Sample_1: Google Analytics Single Page</option>
@@ -78,112 +78,58 @@
             <option value="ALL" selected>Show ALL Samples</option>
         </select> 
       </td>
-      <td width="40%" class="tipc" id="col_0_2">DESCRIPTION</td>
+      <td width="50%" class="tipc" id="col_0_2">DESCRIPTION</td>
     </tr>
 
     <!--   ===================================== SAMPLE_1 ==============================================  -->
     <tr id="tr_sample_1" valign="top">
       <td class="sample" id="col_1_1" >
-         <label class="sampleTitle">SAMPLE_1 - Google Analytics List</label><BR/>
-		 <table class="note"><tr>
-		    <td><input class="note"></td>
-		    <td id="tdNote1">You can try the various <a class="tipLink" href="https://rawgit.com/FedericoLevis/JSUDoc/master/googleAnal.js/global.html#googleAnalList" target="_blank">googleAnalList API Options</a>  
-            and click over the GoogleAnalitycs Button to show the List in a TipFixed or JQPopup
-			</td>
-		 </tr></table>
-		 <!--   --------------------------------- OPTION with sectErr pro possible Option not allowed ---->
-         <!--  DIV for ERR Section -->
-         <div id="divSampleErr1" class="validateErrSect"></div>
-		 <table class="tipNoBorder">
-		   <tr>
-			 <td class="tipr" >
-    		  <table class="det" BORDER="1" cellpadding="3" cellspacing="3" width ="500px">
-			    <tr class="detTitle"><td colspan="5">Main googleAnalList API Options</td></tr>
-				<tr class="detTitle2"><td >FULL<BR/>JSU</td><td>FREE<BR/>JSU</td><td width="70px">OPTION</td><td width="120px">VALUE</td><td>DESCRIPTION</td></tr>
-
-				<tr class="det">
-				  <td class="jsuOptPresent"></td>
-				  <td class="jsuOptPresent"></td>
-				  <td class="tipcBold">iWidth</td>
-				  <td class="parDefault">
-				    <select id="iWidth"  style="width:80px;" onchange="onchangeWidth();">  
-                  </td>
-                  <td class="tipl">Width (px) of the Box displayed</td> 
-				</tr>
-				<tr class="det">
-				  <td class="jsuOptPresent"></td>
-				  <td class="jsuOptPresent"></td>
-				  <td class="tipcBold">iTblMaxHeight</td>
-				  <td class="parDefault">
-				    <select id="iTblMaxHeight"  style="width:80px;" onchange="onchangeTblMaxHeight();">  
-                  </td>
-                  <td class="tipl">Max Height (px) of the Table with Google Analytics Links</td> 
-				</tr>
-				<tr class="det">
-				  <td class="jsuOptPresent"></td>
-				  <td class="jsuOptAbsent"></td>
-				  <td class="tipcBold">szParTime</td>
-				  <td class="parDefault">
-				    <select id="szParTime"  style="width:80px;" onchange="onchangeParTime();">  
-                  </td>
-                  <td class="tipl">Initial Value of <b>Google Analtycs Time</b> Parameter</td> 
-				</tr>
-
-				<tr class="det">
-				  <td class="jsuOptPresent"></td>
-				  <td class="jsuOptAbsent"></td>
-				  <td class="tipcBold">bShortUrl</td>
-				  <td class="parDefault">
-				    <select id="bShortUrl"  style="width:80px;" onchange="onchangeShortUrl();">  
-						  <option selected value="FALSE" >false</i></option> 
-						  <option value="TRUE" >true</option> 
-					 </select>                
-                  </td>
-                  <td class="tipl">Show Column ShortURL</td> 
-				</tr>
-				<tr class="det">
-				  <td class="jsuOptPresent"></td>
-				  <td class="jsuOptAbsent"></td>
-				  <td class="tipcBold">bLongUrl</td>
-				  <td class="parDefault">
-				    <select id="bLongUrl"  style="width:80px;" onchange="onchangeLongUrl();">  
-						  <option selected value="FALSE" >false</i></option> 
-						  <option value="TRUE" >true</option> 
-					 </select>                
-                  </td>
-                  <td class="tipl">Show Column LongURL</td> 
-				</tr>
-			   </table>	
-			 </td>
-			 <td class="tipl" style="padding-left:50px" >
-               <table class="detNoBorder" cellpadding="2px">
+         <table class="detNoBorder" width="100%">
+           <tr><td class="tipl" width="100%">
+             <label class="sampleTitle">SAMPLE_1 - List of  Google Analitycs </label> 
+             <label id="sampleLimit1" class="featSampleLimit" style="margin-left:20px;">FREE JSU Version with <a class="tipLink" href="javascript:showJSUVersionParLimit();">Limitation</a></label>
+             <BR/>
+             <table class="sampleNote"><tr>
+                <td><input class="sampleNote"></td>
+                <td>
+                 <ul class="sampleNote">
+                  <li>Click the Button to show the List of GoogleAnalytics URL in a TipFixed or JQPopup (Available only with FULL JSU)</li>
+                  <li>Click Option Button and retry changing options (Most are available only with FULL JSU)</li>
+                </ul>
+                </td>
+             </tr>
+             </table>
+           </td></tr>
+           <!--   --------------------------------- 2 BUTTONS and Option ---->
+           <tr><td>  
+              <table class="detNoBorder" cellspacing="0px" width="100%">
                  <tr>
-                   <td class="tiplBold"> TipFix:</td>
+                   <td class="tiplBold" width="40%"> TipFix:<BR/>
+                      <input style="margin-top:5px" type="button"  class="googleAnalList" id="sample1a"  onclick="sample1(event,false);"  onmouseover="jsuGoogleAnalListTip(event);" onmouseout="UnTip(event)"/> 
+                   </td>
+                    <td class="tiplBold" width="40%"> JQPopup <i>(Available Only with FULL JSU)</i>:<BR/>
+                       <input  style="margin-top:5px" type="button"  class="googleAnalListJQPopup" id="googleAnalListJQPopup"  onclick="sample1(event,true);"  onmouseover="jsuGoogleAnalListTip(event);" onmouseout="UnTip(event)"/> 
+                    </td>
+                    <td class="tipc" style="vertical-align:bottom;" width="20%"> <BR/>
+                       <input  type="button"  class="jsuOpt" id="jsuSample1Opt"  onclick="sample1Opt(event,true);"  onmouseover="sample1OptTip(event);" onmouseout="UnTip(event)"/> 
+                    </td>
                  </tr>  
-                 <tr>
-                   <td class="tipl"><input type="button"  class="googleAnalList" id="sample1a"  onclick="sample1(event,false);"  onmouseover="jsuGoogleAnalListTip(event);" onmouseout="UnTip(event)"/> </td>
-                 </tr>
-                 <tr>
-                   <td class="tiplBold" style="padding-top:40px;">JQPopup <i>(Available Only with FULL JSU)</i>:</td>
-                 </tr>  
-                 <tr>
-                   <td class="tipl"><input type="button"  class="googleAnalListJQPopup" id="sample1b"  onclick="sample1(event,true);"  onmouseover="jsuGoogleAnalListTip(event);" onmouseout="UnTip(event)"/> </td>
-                 <tr>  
                </table>
-			 </td>
-		   </tr>
-        </table>		  
+           </td></tr>
+         </table>
       </td>
-      <!--   SAMPLE2 DESCRIPTION -->
+      <!--   SAMPLE1 DESCRIPTION -->
       <td class="sampleDesc" id="col_1_2">
          <table >
            <tr valign="top"><td>
-               To implement a <b>FixedTip</b> Tooltip :  
+               Steps to implement an UserFriendly Box with a List of  Google Analitycs of <a class="tipLink" href="https://goo.gl/">Google Shorten URL</a></label> :  
                <ul> 
-               <li>Set an <i><b>input button</b></i> with JSU <label class="jsuAPI">core.css</label> class <label class="jsuAPI">GoogleAnalList</label> </li>
-               <li>In the <b>onclick event</b> call the <b>JSU GoogleAnal API</b>   <label class="jsuAPI">GoogleAnalList</label>(<b><i>tipHTML</i></b>,event,<b><i>objOpt</i></b>)</li>
+               <li>Get from <a class="tipLink" href="https://goo.gl/">https://goo.gl/</a> the Shorten URL associated to the LongURLs of your pages</li>
+               <li>Replace your LongURL with the ShortURL in the Links to your pages</li>
+               <li>Set an <i><b>input button</b></i> with the desired <a class="tipLink" href="https://rawgit.com/FedericoLevis/JSUDoc/master/CSSDoc/GoogleAnal.html#google-analytics-button">JSU Google Analytics CSS Class</a></li>
+               <li>In the <b>onclick event</b> call the JSU GoogleAnalytic API <a class="tipLink" href="https://rawgit.com/FedericoLevis/JSUDoc/master/googleAnal.js/global.html#gaShortUrlList">gaShortUrlList()</a>  </li>
                </ul>
-               Code of Google Analytics List Sample:
+               Code of the Samples:
 			   <input type="button" class="tipFixCode" id="sampleCode1" onclick="sampleCode1(event);" /> 
            </td></tr>
          </table>

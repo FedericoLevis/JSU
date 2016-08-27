@@ -1201,7 +1201,7 @@ function jsuGoogleAnalList (event){
   
   // Prepare arObjGoogleAnal: only shortUrl is mandatory  
   // In this case we populate all fields
-  var arObjGoogleAnalList = [
+  var arObjGaList = [
        {shortUrl: JSU_SHORT_URL_DOWNLOAD_FREE, longUrl: JSU_LONG_URL_DOWNLOAD_PAGE_FREE , cat:GA_CAT_DOWN,desc:'Download JSU.ZIP FREE'},
        {shortUrl: JSU_SHORT_URL_SAMPLE_ALL, longUrl: JSU_LONG_URL_SAMPLE_ALL,cat:GA_CAT_SAMPLE_FREE, desc:'Main JSU Sample'},
        {shortUrl: JSU_SHORT_URL_SAMPLE_TIP, longUrl: JSU_LONG_URL_SAMPLE_TIP,cat:GA_CAT_SAMPLE_FREE, desc:'Tooltip Sample'},
@@ -1227,7 +1227,7 @@ function jsuGoogleAnalList (event){
        
      ];
   // show the TipFix with the List of Link
-  googleAnalList(arObjGoogleAnalList,event,{
+  gaShortUrlList(arObjGaList,event,{
     	bShortUrl: false,   // ShortUrl not visible at startup
     	bLongUrl: false,  // LongUrl not visible at startup
     	szTitle:'JSU Google Analitycs',
@@ -1484,22 +1484,22 @@ function jsuGoToURL(szUrl,bNewWindow){
 /**
  * Show SEc withh Error for apr not present in FREE JSU
  * 
- * @param iSample  1,2,    idex of Sample
+ * @param szIdSectErr       Id of Sect Err to display
  * @param szErr
  * @param szUrlDoc  Url of Document to go to see Feature
  */
-function errFreeJsu(iSample,szErr){
+function errFreeJsu(szIdSectErr,szErr){
 	var szSectMsg = '<table width="100%"><tr>' +
-  '  <td class="PopupImgWarning" width="80px"></td>' +
+  '  <td class="PopupImgWarning" style="padding-top:10px;" width="80px"></td>' +
   '  <td class="tipl errSample">' + szErr + '</td>' +
   '</tr>' +
   '<tr>' +
   ' <td></td>' +
   ' <td style="color:black">' +
   '  For the details see: ' +
-   '<a class="tipLink" href="javascript:showJSUVersionParLimit();"><label class="featSampleLimit">JSU Options available only in FULL Version</label></a>' +  
+   '<a class="tipLink" href="javascript:showJSUVersionParLimit();">JSU Options available only in FULL Version</a>' +  
   ' </td></tr></table>';
-	var elErrSect = getElementById2('divSampleErr' + iSample,true);
+	var elErrSect = getElementById2(szIdSectErr,true);
 	elErrSect.innerHTML = szSectMsg;
 	elementShow (elErrSect,true);
 }

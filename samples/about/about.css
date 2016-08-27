@@ -77,20 +77,6 @@ input.playVideoSmall {  /* PlayVideo for About */
   font-weight: bold; 
   font-size: 13px;    
 } 
-.allSampleLimit { /* Link about Feature Limit */
-  color: blue; 
-  font-weight: bold; 
-  font-size: 10px;
-  /* background-color: yellow !important; */
-}      
- 
-.featSampleLimit { /* Link about Feature Limit */
-  color: blue; 
-  font-weight: bold; 
-  font-size: 12px;
-  align: left;
-  /* background-color: yellow !important; */
-}      
 
 
 table.jsuHeader, table.jsuHeaderNoBorder,table.jsuFooterNoBorder {
@@ -202,8 +188,9 @@ ul {
   padding-top: 2px;
   padding-bottom: 2px;
   margin-top: 0px;
-  margin-bottom: 2px;
+  margin-bottom: 0px;
 }
+
 
 li {
   padding-top:0px;
@@ -464,9 +451,19 @@ td.jsuOptPresent { /* Option present */
 }
 
 
-td.jsuOptAbsent{ /* Option absent*/
-  background-color: black;    
+td.jsuOptAbsent{ /* Option absent in FREE Version*/
+  background-color: Yellow;    
   width: 30px;    
+}
+
+
+td.jsuParPresent { /* par present */
+  background-color: #66FF66;
+}
+
+
+td.jsuParAbsent{ /* Par absent in FREE Version*/
+  background-color: Yellow;    
 }
 
 
@@ -475,21 +472,6 @@ td.jsuOptAbsent{ /* Option absent*/
   font-weight: normal;
   color: red; /* */
 }
-
-
-
-td.parDefault{
-  font-weight: normal;
-}	
-td.parModified{
-  font-weight: bold;
-  background-color: #66FF66;
-} 
-
-td.parNotAllowed{  
-  font-weight: bold;
-  background-color: Yellow !important;
-} 
 
 
 
@@ -777,5 +759,63 @@ select.bold{
   display: none; 
 
 }
+
+
+table.sampleNote{  */
+  text-align: left;
+  font-family: Verdana;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 11px;
+  color: black; /* Black */
+  width: 100%;
+  background-color: #ffffcc; 
+  border-top: 1px solid black; 
+  border-bottom: 1px solid black; 
+  border-collapse: separate;
+  border-spacing: 2px;  
+  margin-top: 4px;
+  margin-bottom: 5px;
+}
+
+td.sampleNote{
+  vertical-align: top;
+  padding-right:5px;
+  background-color: #ffffCC;
+}
+input.sampleNote{ /* Image for the Note in the Tip */
+    height: 18px;
+    width: 36px;
+    border: 0px ;
+    background: white url("https://rawgit.com/FedericoLevis/JSU/master/images/tipNote.png") no-repeat center center; 
+    /* background: #FFFFCC url(../images/tipNote.png) no-repeat center center; */ 
+}
+
+
+ul.sampleNote {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.allSampleLimit { /* Link about Feature Limit */
+  color: blue; 
+  font-weight: bold; 
+  font-size: 10px;
+  /* background-color: yellow !important; */
+}      
+ 
+
+label.featSampleLimit{  /* on the Right of SAMPL Title whe FREE JSU with Limitation */
+	display: none;
+  background: Yellow; /* Yellow */
+  color: red;
+  font-weight: bold; 
+  font-size: 16px;
+  font-family: Calibri;
+  
+}
+
 
 
