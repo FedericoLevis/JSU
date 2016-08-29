@@ -58,7 +58,7 @@ function sampleInit(){
     }  
   }
   onchangeSampleType1(); // simulate to init
-  onchangeSample3(); // simulate to init
+  onchangeSample2(); // simulate to init
 }
 
 
