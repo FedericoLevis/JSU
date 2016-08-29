@@ -12,13 +12,41 @@ function jsu_loaded(){
   // [Optional] Init jslog with JSLOG_LEV 
   // jslog_init(JSLOG_LEV);
   sampleInit();  
-	manage_par_opt(); // manage optional PAR show_opt, only for developer
+	initSampleCmn(); // manage optional PAR show_opt, only for developer
+	
+	var szMsg = '<table class="sampleNote" width="450px" align="left" style="border: 1px solid black;"><tr> \n' +
+	'                <td class="sampleNote" style="vertical-align:middle;"><input class="sampleNote" ></td> \n' +
+	'                <td class="tipl"> \n' +
+	'                 <ul class="sampleNote"> \n' +
+	'                  <li><label class="featSampleLimit" style="display:inline">IE Popup Browser Compatibility: ONLY IE <input type="button" class="browserTipIESmall" onmouseover="jsuTipBrowserIEPopup(event);" onmouseout="UnTip(event)"/></label></li> \n' +
+	'                  <li><b>Current Browser IS NOT IE</b><BR/>IE Popup will show alert instead of HTML Popup </li> \n' +
+	'                  <li>For JSU Popup with FULL Browser Compatibility see <a class="tipLink" href="javascript:showSampleJQPopup();">JQ Popup</a></li> \n' +
+	'                </ul> \n' +
+	'                </td> \n' +
+	'             </tr> \n' +
+	'             </table>';
+	
+
+	
+	if (!isIE()){
+		loadingDivShow ( {
+			szTitleHtml: "IE POPUP Browser Compatibility: ONLY IE",  
+	    szDiffMsgHtml: szMsg,  
+	    bShowElapsedSec: true, 
+	    bShowCancel: true,
+	    iDivWidth: 700,
+	    szCancelLabel: "OK",
+	    bRecalcBestPos: false, // set false during Startup 
+	    szDiffUrlGif: JSU_PATH_IMG + "PopupAlarm.gif"
+	  });
+		
+	}
   
 }
 
 function sampleInit(){
   // Populate popupType select
-  var arSelectId = ["popupType1","popupType1Desc","popupType2","popupType2Desc",];
+  var arSelectId = ["popupType1","popupType1Desc"];
   var arPopupType = [POPUP_TYPE.INFO , POPUP_TYPE.WARN , POPUP_TYPE.ERR , POPUP_TYPE.ALARM ,POPUP_TYPE.CONFIRM, 
                      POPUP_TYPE.QUESTION , POPUP_TYPE.QUESTION_3 , POPUP_TYPE.CHOICE , POPUP_TYPE.PROMPT ];
   for (var i=0; i< arSelectId.length; i++){
@@ -29,107 +57,13 @@ function sampleInit(){
       appendOptionLast (select,popupType,popupType);
     }  
   }
-  onchangeSampleType2(); // simulate to init
+  onchangeSampleType1(); // simulate to init
   onchangeSample3(); // simulate to init
 }
 
-/* ============================================================================
- *             SAMPLE_1
- ============================================================================ */
-
-
-/**
- * Text Popup: Choice
- */
-function sample1Choice(){
-  // 1) Show Popup 
-  var objRet = PopupChoice (
-      "Please Choose a Vote for Popup API", 
-      "Popup VOTE: ",
-      // arChoice: "Very Good" is pre-selected
-      [{value:1, szText:"1 - Not Good", bSel:false},
-       {value:2, szText:"2 - Good", bSel:false},
-       {value:3, szText:"3 - Very Good", bSel:true},
-       {value:4, szText:"4 - Excellent", bSel:false},
-      ],
-      {bChoiceMultiSel: false}
-  );
-  // 2) Show The answer to choice: item chosen and Button clicked 
-  showAnswerChoice (objRet);
-}
-
-/**
- * Text Popup: Prompt
- */
-function sample1Prompt(){
-  // 1) Show Popup 
-  var objRet = Popup (POPUP_TYPE.PROMPT,
-      "Insert a VOTE [1..10] in the field below\n(You can insert a  Value out of Range [1..10] to see Validation Features)\n\n",
-      // objOpt Option: PromptLabel, validate
-     { szPromptLabel: "VOTE [1..10]: ",
-       // Validate Option: NUMBER must be in range [1..10]
-       szPromptType: PROMPT_TYPE.NUMBER,  iPromptMin:1,  iPromptMax: 10,iPromptWidth:50}
-      );
-  // 2) Show The answer to question (Prompt inserted and Button clicked by the user) 
-  showAnswerPrompt(objRet); 
-}
-
-/**
- * Text Popup: Question
- * @param PopupType POPUP_TYPE.QUESTION or POPUP_TYPE.QUESTION_3
- */
-function sample1Question(PopupType){
-  // 1) Show Popup 
-  // PopupType = POPUP_TYPE.QUESTION (2 Buttons) or POPUP_TYPE.QUESTION_3 (3 Buttons)
-  var objRet = Popup (PopupType,"Do you like this sample?");
-  // 2) Show The answer to question (the Button clicked by the user) 
-  showAnswerQuestion (objRet); 
-
-}
-
-
-
-
-/**
- * Text Popup: Notify
- * @param PopupType   POPUP_TYPE.INFO POPUP_TYPE.CONFIRM  POPUP_TYPE.ERR  POPUP_TYPE.ALARM  POPUP_TYPE.WARN
- */
-function sample1Notify(PopupType){
-  // PopupType:   POPUP_TYPE.[INFO, CONFIRM, WARN, ERR, ALARM]
-  Popup (PopupType,"This is an example of Message\nThis is the second Line");
-}
-
-
-
-/**
- * SAMPLE_1: Text Popup
- */
-function sample1(){
-  var szAlertType =  selectGetSelVal(getElementById2('popupType1'));
-  if (szAlertType == POPUP_TYPE.CHOICE){
-    return sample1Choice();
-  }else if (szAlertType == POPUP_TYPE.PROMPT){
-    return sample1Prompt();
-  }else if (szAlertType == POPUP_TYPE.QUESTION || szAlertType == POPUP_TYPE.QUESTION_3){
-    return sample1Question(szAlertType);
-  }else {
-    return sample1Notify(szAlertType);
-  }  
-}
-
-/**
- * Align popupType1Desc to popupType1 selected
- */
-function onchangeSampleType1(){
-	var Fn = "[onchangeSampleType1()] ";
-	
-  var szAlertType =  selectGetSelVal(getElementById2('popupType1'));
-	jslog (JSLOG_DEBUG,Fn + "szAlertType=" + szAlertType + "  select same AlertType into popupType1");
-	selectSelValue(getElementById2('popupType1Desc'), szAlertType);
-}
 
 /* ============================================================================
- *             Show answer question (used by SAMPLE_1, SAMPLE_2)
+ *             Show answer question (used by SAMPLE_1)
  ============================================================================ */
 
 /**
@@ -230,48 +164,56 @@ function showAnswerChoice(objRet){
 
 
 /* ============================================================================
- *             SAMPLE_2
+ *             SAMPLE_1
  ============================================================================ */
 
 /**
  * Align popupType2Desc to popupType2 selected
  */
-function onchangeSampleType2(){
-	var Fn = "[onchangeSampleType2()] ";
+function onchangeSampleType1(){
+	var Fn = "[onchangeSampleType1()] ";
 	
-  var szAlertType =  selectGetSelVal(getElementById2('popupType2'));
-	jslog (JSLOG_DEBUG,Fn + "szAlertType=" + szAlertType + "  select same AlertType into popupType2");
-	selectSelValue(getElementById2('popupType2Desc'), szAlertType);
-  elementShow (getElementById2("optChoice"),szAlertType == POPUP_TYPE.CHOICE,"block"); 
-  elementShow (getElementById2("optPrompt"),szAlertType == POPUP_TYPE.PROMPT,"block"); 
+  var szAlertType =  selectGetSelVal(getElementById2('popupType1'));
+	jslog (JSLOG_DEBUG,Fn + "szAlertType=" + szAlertType + "  select same AlertType into popupType1");
+	selectSelValue(getElementById2('popupType1Desc'), szAlertType);
+	var bPopupChoice = (szAlertType == POPUP_TYPE.CHOICE);
+	var bPopupPrompt = (szAlertType == POPUP_TYPE.PROMPT);
+	var bPopupOther = (!bPopupChoice && !bPopupPrompt);
+  elementShow (getElementById2("sample_1_note_popup"),bPopupOther,"block"); 
+  elementShow (getElementById2("optChoice"),bPopupChoice,"block"); 
+  elementShow (getElementById2("sample_1_note_choice"),bPopupChoice,"block"); 
+  elementShow (getElementById2("optPrompt"),bPopupPrompt,"block"); 
+  elementShow (getElementById2("sample_1_note_prompt"),bPopupPrompt,"block"); 
 }
+
+
 
 
 /**
- * SAMPLE_2: HTML Popup
+ * SAMPLE_1: IE Popup
  */
-function sample2(){
-  var szAlertType =  selectGetSelVal(getElementById2('popupType2'));
+function sample1(){
+  var szAlertType =  selectGetSelVal(getElementById2('popupType1'));
   if (szAlertType == POPUP_TYPE.INFO){
-    return sample2Info();
+    return sample1Info();
   }else if (szAlertType == POPUP_TYPE.WARN){
-    return sample2Warn("");
+    return sample1Warn("");
   }else if (szAlertType == POPUP_TYPE.ERR){
-    return sample2Err();
+    return sample1Err();
   }else if (szAlertType == POPUP_TYPE.CONFIRM){
-    return sample2Confirm();
+    return sample1Confirm();
   }else if (szAlertType == POPUP_TYPE.ALARM){
-    return sample2Alarm();
+    return sample1Alarm();
   }else if (szAlertType == POPUP_TYPE.CHOICE){
-    return sample2Choice();
+    return sample1Choice();
   }else if (szAlertType == POPUP_TYPE.PROMPT){
-    return sample2Prompt();
+    return sample1Prompt();
   }else if (szAlertType == POPUP_TYPE.QUESTION || szAlertType == POPUP_TYPE.QUESTION_3){
-    return sample2Question(szAlertType);
+    return sample1Question(szAlertType);
   }
 }
 
-function sample2Info(){
+function sample1Info(){
 	// Prepare the Msg to display, with whatever HTML TAG
   var szMsg = 'This is an Information with <b>some part bold</b>, <i>some part Italic</i>,...<BR/><u>This is the Line 2 that is underlined</u><BR/>' +
     '<label class="PopupGood">This is the  line 3 in bold green (to enphasize <i>Good Msg</i>)</label><BR/>' +
@@ -296,7 +238,7 @@ function sample2Info(){
 /*
  *    @param szTitle {String} if it is different from "" or null it is set as Title into Popup, else Default is used (WARNING in this case)
  */
-function sample2Warn(szTitle){
+function sample1Warn(szTitle){
    var szMsg = 'There were 2 Warnings and we can enphasize them using Popup.css class <b>PopupWarning</b><BR/><BR/>' +
        '<b>WARNING LIST:</b>' +
        '<ul type="square">' +
@@ -306,12 +248,12 @@ function sample2Warn(szTitle){
     Popup(POPUP_TYPE.WARN,szMsg,{szTitle:szTitle});
 }
 
-function sample2Err(){
+function sample1Err(){
   Popup(POPUP_TYPE.ERR,'<label class="PopupError">This is an ERROR!</label><BR/>But dont worrie it is only an example<BR/><label class="PopupGood">Everything is still working properly :o)</label>');
 }
 
 
-function sample2Alarm(){
+function sample1Alarm(){
   var szMsg =  '<label class="PopupError">The CPU temperature is critically hight!!!</label>' +  
         '<img src="' +  JSU_PATH_ABOUT_IMG +  'ComputerFire.gif" width="70" height="70"  />';
   Popup(POPUP_TYPE.ALARM,szMsg );
@@ -322,7 +264,7 @@ function sample2Alarm(){
 /*
  * Question with 2 or 3 Buttons
  */
-function sample2Question(szPopupType){
+function sample1Question(szPopupType){
   //1) Show Popup
   var objRet = Popup(szPopupType,'Do you like <b>Popup API</b>?');
   // 2) show answer to question
@@ -335,7 +277,7 @@ function sample2Question(szPopupType){
  * Show a POPUP_TYPE.CONFIRM with a table with various images (The Path of images is relative to Popup.html)
  * 
  */
-function sample2Confirm(){
+function sample1Confirm(){
   // NOTE: the image Path are relative to Popup.html Path
   var szMsg = 'Example of Confirmation: <label class="PopupGood">All the Test have been Completed.</label><BR/><BR/>' +
     'Follow an Example of TABLE that can be used to display the Abstract of some TESTS:<BR/><BR/>' +
@@ -374,8 +316,8 @@ function sample2Confirm(){
 /**
  * Show PopupChoice with the option set by User
  */
-function sample2Choice(){
-  var Fn="[sample2Choice] ";
+function sample1Choice(){
+  var Fn="[sample1Choice] ";
   var CHOICE_NUM = 20;
   
   // Prepare szMsgHtml
@@ -500,8 +442,8 @@ function showSampleChoice(){
 /**
  * Show Popup PROMPT with the option set by User
  */
-function sample2Prompt(){
-  var Fn = "[sample2Prompt] ";
+function sample1Prompt(){
+  var Fn = "[sample1Prompt] ";
   var szPromptType = selectGetSelVal(getElementById2("szPromptType"));
   var szMsg = (szPromptType == PROMPT_TYPE.NUMBER) ?
      "Please Insert a <B>Number</b>" :  
@@ -522,22 +464,24 @@ function sample2Prompt(){
 
 
 /* ============================================================================
- *             SAMPLE_3
+ *             SAMPLE_2
  ============================================================================ */
 
 
-function onchangeSample3(){
-  var Fn="[onchangeSample3] ";
-  var szType =  selectGetSelVal(getElementById2('type3'));
-  elementShow (getElementById2("optLayout"),szType == "LAYOUT","block"); 
+function onchangeSample2(){
+  var Fn="[onchangeSample2] ";
+  var szType =  selectGetSelVal(getElementById2('type2'));
+	var bLayout = (szType == "LAYOUT");
+  elementShow (getElementById2("optLayout"),bLayout,"block"); 
+  elementShow (getElementById2("sample_2_note_layout"),bLayout,"block"); 
+  
     
 }
-
 /**
  * Show Popup Info with the option set by User
  */
-function sample3Layout(){
-  // var Fn = "[sample3Layout] ";
+function sample2Layout(){
+  // var Fn = "[sample2Layout] ";
   var objOpt ={
       bShowImg: selectGetSelVal (getElementById2("bShowImg")) == "TRUE",
       bResize: selectGetSelVal (getElementById2("bResize")) == "TRUE",
@@ -560,16 +504,16 @@ function sample3Layout(){
 /**
  * SAMPLE_3: HTML Popup
  */
-function sample3(){
-  var szType =  selectGetSelVal(getElementById2('type3'));
+function sample2(){
+  var szType =  selectGetSelVal(getElementById2('type2'));
   if (szType == "LAYOUT"){
-    return sample3Layout();
+    return sample2Layout();
   }else if (szType == "1BTN"){
-    return sample3CustomBtn1();
+    return sample2CustomBtn1();
   }else if (szType == "2BTN"){
-    return sample3CustomBtn2();
+    return sample2CustomBtn2();
   }else if (szType == "3BTN"){
-    return sample3CustomBtn3();
+    return sample2CustomBtn3();
   }
 }
 
@@ -577,7 +521,7 @@ function sample3(){
 /*
  * Custom Btn Confirm = "CONTINUE"  
  */
-function sample3CustomBtn1(){
+function sample2CustomBtn1(){
   var szMsg = '<b>1 Custom Button</b><BR/><BR/>Popup Option:<ul><li><b>szConfirmLabel</b>: "CONTINUE"</li></ul>';
   Popup(POPUP_TYPE.ERR,szMsg,{szConfirmLabel: "CONTINUE"});
 }
@@ -586,7 +530,7 @@ function sample3CustomBtn1(){
 /*
  * 2 Custom Btn, change also Btn Width  
  */
-function sample3CustomBtn2(){
+function sample2CustomBtn2(){
   var szMsg = '<b>2 Custom Button</b><BR/><BR/>Popup Option:<ul>' +
    '<li><b>szConfirmLabel</b>: "YES I Like it!"</li>' +
    '<li><b>iConfirmWidth</b>: 200</li>' +
@@ -604,7 +548,7 @@ function sample3CustomBtn2(){
 /*
  * 3 Custom Btn, change also Width  
  */
-function sample3CustomBtn3(){
+function sample2CustomBtn3(){
   var szMsg = '<b>3 Custom Button</b><BR/><BR/>Popup Option:<ul>' +
   '<li><b>szConfirmLabel</b>: "YES It is Very Interesting"</li>' +
   '<li><b>iConfirmWidth</b>: 200</li>' +
@@ -632,7 +576,7 @@ function sample3CustomBtn3(){
 /*
  * Popup with a Video  
  */
-function sample4Video(){
+function sample3Video(){
 	var szMsg = '<iframe width="600" height="500" src="https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1" frameborder="0" allowfullscreen></iframe>'; 
   // Show Popup with Video   
   Popup(POPUP_TYPE.INFO, szMsg,
@@ -641,31 +585,38 @@ function sample4Video(){
   
 }
 
+/*
+ * Popup with a Embedded Page  
+ */
+function sample3Page(){
+	var szMsg =	'<iframe width="1060" height="600" align="center" src="' + JSU_LONG_URL_DOWNLOAD_PAGE_FREE +'" ></iframe>';
+  // Show Popup with Page   
+  Popup(POPUP_TYPE.INFO, szMsg,
+      // objOpt
+      {bShowImg:false,
+  	   iWidth:1100,
+  	   iHeight: 650,
+  	   bShowBtnSect : false,  // Do Not show Button section on the Bottom of the Popup
+  	   position:{at: "top"}, 
+  	   szTitle: "Popup with Embedded HTML Page"
+  	  });  
+}
+
 
 
 
 /**
- * SAMPLE_4: HTML Popup
+ * SAMPLE_3: 
  */
-function sample4(){
-  var szType =  selectGetSelVal(getElementById2('type4'));
+function sample3(){
+  var szType =  selectGetSelVal(getElementById2('type3'));
   if (szType == "VIDEO"){
-    return sample4Video();
-  }else if (szType == "ABOUT"){
-    return showJsuPopupAbout();
+    return sample3Video();
+  }else if (szType == "PAGE"){
+    return sample3Page();
   }
 }
 
-/**
- * Align type4Desc to type4 selected
- */
-function onchangeSampleType4(){
-	var Fn = "[onchangeSampleType4()] ";
-	
-  var szType =  selectGetSelVal(getElementById2('type4'));
-	jslog (JSLOG_DEBUG,Fn + "szAlertType=" + szType + "  select same AlertType into type4");
-	selectSelValue(getElementById2('type4Desc'), szType);
-}
 
 
 //===================================================================================================
@@ -673,73 +624,15 @@ function onchangeSampleType4(){
 //===========================================================================================
 
 
-var JS1_NOTIFY= '// 1) Show Popup \n' +
-'//PopupType:   POPUP_TYPE.INFO, .CONFIRM, .WARN, .ERR, .ALARM] \n' +
-'Popup (PopupType,"This is an example of Message\\nThis is the second Line"); ';
-
-var JS1_QUESTION= '// 1) Show Popup \n' +
-'// PopupType = POPUP_TYPE.QUESTION (2 Buttons) or POPUP_TYPE.QUESTION_3 (3 Buttons) \n'+
-'var objRet = Popup (PopupType,"Do you like this sample?") \n'+
-'// 2) manage the Popup answer, returned into objRet - example: objRet= {"retBtn": "NO"}\n' + 
-'  var retBtn   = objRet.retBtn; \n' +
-'  if (retBtn   == POPUP_BTN.CONFIRM){  // Popup Closed clicking OK \n' + 
-'  }else if (retBtn   == POPUP_BTN.NO){ // Popup Closed clicking NO \n' + 
-'  }else if (retBtn   == POPUP_BTN.CANCEL){  // Popup Closed clicking CANCEL \n' + 
-'  }else if (retBtn   == POPUP_BTN.CLOSE){  // Popup Closed clicking X or ESC \n' +
-'  ...';
 
 
-var JS1_PROMPT= '// 1) Show Popup \n' +
-'Popup (POPUP_TYPE.PROMPT, \n' +
-'  "Insert a VOTE [1..10] in the field below\\n(You can insert a  Value out of Range [1..10] to see Validation Features)\\n\\n", \n' +
-'  // objOpt Option: PromptLabel, validate \n' +
-'  { szPromptLabel: "VOTE [1..10]: ", \n' +
-'     // Validate Option: NUMBER must be in range [1..10] \n' +
-'     szPromptType: PROMPT_TYPE.NUMBER,  iPromptMin:1,  iPromptMax: 10,iPromptWidth:50, \n' +
-'   }); \n' +
-'  // Example of objRet, if user insert 9 and click OK: objRet= {"retBtn": "CONFIRM", "promptValue": "9"} \n' +
-'  var retBtn   = objRet.retBtn; \n' +
-'  if (retBtn   == POPUP_BTN.CONFIRM){  // Popup Closed clicking OK \n' + 
-'  }else if (retBtn   == POPUP_BTN.CANCEL){  // Popup Closed clicking CANCEL \n' + 
-'  }else if (retBtn   == POPUP_BTN.CLOSE){  // Popup Closed clicking X or ESC \n' +
-'  ...';
-
-
-var JS1_CHOICE= '// 1) Show Popup \n' +
-'var objRet = PopupChoice ( //Messages \n' +
-'  "Please Choose a Vote for Popup API",  "Popup VOTE: ", \n' +
-'  // arChoice: "Very Good" is pre-selected  \n' +
-'  [{value:1, szText:"1 - Not Good", bSel:false},  \n' +
-'     {value:2, szText:"2 - Good", bSel:false}, \n' +
-'     {value:3, szText:"3 - Very Good", bSel:true}, \n' +
-'     {value:4, szText:"4 - Excellent", bSel:false}, \n' +
-'  ]); \n' +
-'  // Example of objRet, if user select 2=Good and click OK: \n' +
-'  // objRet={\n' +
-'  //   "retBtn":"CONFIRM",\n' +
-'  //   "choiceValue":"2",\n' +
-'  //   "choiceText":"2 - Good",\n' +
-'  //   "arChoice":[{"value":"1","szText":"1 - Not Good","bSel":false},\n' +
-'  //               {"value":"2","szText":"2 - Good","bSel":true},\n' +
-'  //               {"value":"3","szText":"3 - Very Good","bSel":false}\n' +
-'  //               {"value":"4","szText":"4 - Excellent","bSel":false}]}\n' +  
-'// 2) manage the Popup answer, returned into objRet \n' + 
-'  var retBtn   = objRet.retBtn; \n' +
-'  if (retBtn   == POPUP_BTN.CONFIRM){  // Popup Closed clicking OK \n' + 
-'  }else if (retBtn   == POPUP_BTN.CANCEL){  // Popup Closed clicking CANCEL \n' + 
-'  }else if (retBtn   == POPUP_BTN.CLOSE){  // Popup Closed clicking X or ESC \n' +
-'  ...';
-
-
-
-
-var JS2_NOTIFY= '// Prepare the Msg to display, with whatever HTML TAG \n' +
+var JS1_NOTIFY= '// Prepare the Msg to display, with whatever HTML TAG \n' +
 'var szMsgHTML = "This is an Information with <b>some part bold</b>, <i>some part Italic</i>,... "; \n' +
 '// Show Popup \n' +
 '//PopupType:   POPUP_TYPE.INFO, .CONFIRM, .WARN, .ERR, .ALARM] \n' +
 'Popup (PopupType,szMsgHTML); ';
 
-var JS2_QUESTION= '// 1) Show Popup, using whatever HTML Tag in szMsg \n' +
+var JS1_QUESTION= '// 1) Show Popup, using whatever HTML Tag in szMsg \n' +
 '// PopupType = POPUP_TYPE.QUESTION (2 Buttons) or POPUP_TYPE.QUESTION_3 (3 Buttons) \n'+
 'var objRet = Popup (PopupType,"Do you like <b>Popup API</b>") \n'+
 '// 2) manage the Popup answer, returned into objRet - example: objRet= {"retBtn": "NO"}\n' + 
@@ -751,7 +644,7 @@ var JS2_QUESTION= '// 1) Show Popup, using whatever HTML Tag in szMsg \n' +
 '  ...';
 
 
-var JS2_PROMPT= '// 1) Show Popup, using whatever HTML Tag in szMsg \n' +
+var JS1_PROMPT= '// 1) Show Popup, using whatever HTML Tag in szMsg \n' +
 'Popup (POPUP_TYPE.PROMPT, \n' +
 '  "Please insert a <b>NUMBER</b>", \n' +
 '  // objOpt Option: PromptLabel, validate \n' +
@@ -767,7 +660,7 @@ var JS2_PROMPT= '// 1) Show Popup, using whatever HTML Tag in szMsg \n' +
 '  ...';
 
 
-var JS2_CHOICE= '// 1) Show Popup, using whatever HTML Tag in szMsg. In this example item10 is pre-selected \n' +
+var JS1_CHOICE= '// 1) Show Popup, using whatever HTML Tag in szMsg. In this example item10 is pre-selected \n' +
 'var objRet = PopupChoice ( //Messages \n' +
 '  "Example of <b>Single Selection Choice</b>......",  "<b>Select only one field</b>", \n' +
 '  // arChoice: \n' +
@@ -797,7 +690,7 @@ var JS2_CHOICE= '// 1) Show Popup, using whatever HTML Tag in szMsg. In this exa
 
 
 
-var JS3_OPT =  
+var JS2_OPT =  
 'function Popup(szPopupType, szMsgHtml,objOpt){ \n' +
 ' ........\n' +
 '} \n' +
@@ -825,7 +718,7 @@ var JS3_OPT =
 ' *    iPromptMin: {Number}   Min (MinValue for PROMPT_TYPE.NUMBER, MinLen for PROMPT_TYPE.STRING)\n' +          
 ' *    iPromptMax: {Number}   Max (MaxValue for PROMPT_TYPE.NUMBER, MaxLen for PROMPT_TYPE.STRING)';          
 
-var JS4_VIDEO= '// 1) Show Popup with Video \n' +
+var JS3_VIDEO= '// 1) Show Popup with Video \n' +
 'Popup(POPUP_TYPE.INFO, \n' +
 '   // szMsg = iframe with Video URL \n' + 
 '   //    Example: <iframe width="600" height="500" src="https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1" frameborder="0" allowfullscreen></iframe> \n' + 
@@ -834,15 +727,29 @@ var JS4_VIDEO= '// 1) Show Popup with Video \n' +
 '   {bShowImg:false,iWidth:620, szTitle: "Video Example"}); \n';
 
 
-var JS4_ABOUT= '// 1) Show Popup with About\n' +
-'Popup(POPUP_TYPE.INFO, \n' +
-'   szMsg, // szMsg = HTML with About (see about.js for details) \n' + 
-'   // objOpt \n' +
-'   {bShowImg:false,iWidth:1100, szTitle: "JSU ABOUT"}); \n';
+var JS3_PAGE= '// Prepare the HTML Msg with the Embedded Page \n' +
+	'  var szMsg =	\'<iframe width="1060" height="600" align="center"  \n' +
+	'      src="https://rawgit.com/FedericoLevis/JSU/master/samples/JSUFreeDownload.html" ></iframe>\'; \n' +
+	'  // Show Popup with Page    \n' +
+	'  Popup(POPUP_TYPE.INFO, szMsg, \n' +
+	'      // objOpt \n' +
+	'      {bShowImg:false, \n' +
+	'  	   iWidth:1100, \n' +
+	'  	   iHeight: 650, \n' +
+	'  	   bShowBtnSect : false,  // Do Not show Button section on the Bottom of the Popup \n' +
+	'  	   position:{at: "top"},  \n' +
+	'  	   szTitle: "Popup with Embedded HTML Page" \n' +
+	'  	  });\n\n';
+
+
+
+
+
+
 
 
 /**
- * Show JS Code Hightlighted for Sample1
+ * Show JS Code for Sample2 (in a TextBox because it has HTML tags)
  * @param event
  * @returns
  */
@@ -860,30 +767,6 @@ function sample1Code(event){
   }else {
     szTip = JS1_NOTIFY;
   }  
-  TipFixCode(szTip,event,{iWidth:1000, iTipMaxHeight:500,szTitle:"JS Source Code - POPUP_TYPE=" + szAlertType});
-  
-}
-
-
-/**
- * Show JS Code for Sample2 (in a TextBox because it has HTML tags)
- * @param event
- * @returns
- */
-function sample2Code(event){
-  // Get the szAlertType set by User 
-  var szAlertType =  selectGetSelVal(getElementById2('popupType2Desc'));
-  var szTip="";
-  
-  if (szAlertType == POPUP_TYPE.CHOICE){
-    szTip = JS2_CHOICE;
-  }else if (szAlertType == POPUP_TYPE.PROMPT){
-    szTip = JS2_PROMPT;
-  }else if (szAlertType == POPUP_TYPE.QUESTION || szAlertType == POPUP_TYPE.QUESTION_3){
-    szTip = JS2_QUESTION;
-  }else {
-    szTip = JS2_NOTIFY;
-  }  
   TipFixTextArea(szTip,event,{iColNum:130, iRowNum:20,szTitle:"JS Source Code - POPUP_TYPE=" + szAlertType});
   
 }
@@ -891,12 +774,12 @@ function sample2Code(event){
 
 
 /**
- * Show JS Code Hightlighted for Sample3
+ * Show JS Code Hightlighted for Sample2
  * @param event
  * @returns
  */
-function sample3Code(event){
-  TipFixCode(JS3_OPT,event,{iWidth:1000, iTipMaxHeight:400,szTitle:"JS Source Code - Popup Option" });
+function sample2Code(event){
+  TipFixCode(JS2_OPT,event,{iWidth:1000, iTipMaxHeight:400,szTitle:"JS Source Code - Popup Option" });
 }
 
 
@@ -905,17 +788,17 @@ function sample3Code(event){
  * @param event
  * @returns
  */
-function sample4Code(event){
+function sample3Code(event){
   // Get the szAlertType set by User 
-  var szType =  selectGetSelVal(getElementById2('type4Desc'));
-  var szTypeText =  selectGetSelText(getElementById2('type4Desc'));
+  var szType =  selectGetSelVal(getElementById2('type3Desc'));
+  var szTypeText =  selectGetSelText(getElementById2('type3Desc'));
   var szTip="";
   
   if (szType == "VIDEO"){
-    szTip = JS4_VIDEO;
+    szTip = JS3_VIDEO;
     TipFixTextArea(szTip,event,{szTitle:"JS Source Code - Advanced Sample=" + szTypeText});
-  }else if (szType == "ABOUT"){
-    szTip = JS4_ABOUT;
+  }else if (szType == "PAGE"){
+    szTip = JS3_PAGE;
     TipFixTextArea(szTip,event,{szTitle:"JS Source Code - Advanced Sample=" + szTypeText});
   }
   

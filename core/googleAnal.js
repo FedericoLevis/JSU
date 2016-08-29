@@ -1,11 +1,11 @@
 /** @fileOverview
 ========================================================================================= <BR/> 
-<b>File:</b> 			core/ga.js <BR/>
+<b>File:</b> 			core/googleAnal.js <BR/>
 <b>Author:</b>     		<a href="https://www.linkedin.com/in/federicolevis" target="_blank">Federico Levis</a> <BR/>
 <b>Google Analytics Doc:</b> <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/GoogleAnalytics.html" target="_blank">JSU GoogleAnalytics Documentation</a> <BR/>
 <b>JSU API Doc:</b> <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/JSUAPI.html" target="_blank">JSU API Documentation</a> <BR/>
 <b>Description:</b>     JSU Google Analytics API <BR/>   
-<b>REQUIRED:</b>        JSU:  tooltip.js locale-core.js jsu.css <BR/>
+<b>REQUIRED:</b>        JSU:  jsu.css locale-core.js jsuCmn.js tooltip.js <BR/>
 <b>OPTIONAL:</b>        JSU:  jslog.js dom-drag.js if you want to use jslog <BR/> 
 <b>First Version:</b>     ver 1.0 - Feb 2014  <BR/>
 <b>Current Version:</b>   ver 3.3 - Jul 2016  <BR/>
@@ -47,7 +47,7 @@ var GA_PAR_TIME={
 };
 
 /**
- * Default Value of ga.js par
+ * Default Value of googleAnal.js par
  */
 var GA_DEF = {
 		JSPOPUP: false,
@@ -56,7 +56,8 @@ var GA_DEF = {
 		TBL_MAX_HEIGHT: 300,  // if more lines there will be scroolbar
 		SHORT_URL: false,
 		LONG_URL: false,
-		PAR_TIME: GA_PAR_TIME.all_time
+		PAR_TIME: GA_PAR_TIME.all_time,
+		NEW_WINDOW: true
 };
 
 
@@ -80,6 +81,17 @@ var ga_ga = {
 
 
 var GA_LINK_SEP="&nbsp;&nbsp;&nbsp;";
+var GALOG_FUN_START = " ------------- START";
+var GALOG_FUN_END = " ------------- END";
+
+
+// Div with hidden anchor
+var GA_DIV_HIDDEN_ID = "jsuDivHidden";
+var GA_HREF_HIDDEN_ID = "jsuHrefHidden";
+// init to whatver href, then it will be changed run-time
+var GA_HREF_HIDDEN = '<a id="' + GA_HREF_HIDDEN_ID +'" target="_blank" style="display:none" href="https://goo.gl/HnNqnM" >HIDDEN</a>'; 
+
+
 
 //=====================  PUBLIC  =============================================//
 
@@ -114,7 +126,7 @@ var GA_LINK_SEP="&nbsp;&nbsp;&nbsp;";
 	        <li> szHeaderTxt {String}: [DEF_GA_LABEL.HEADER] Message to put before the Table of Link to Analytics. You can set "" to remove it 
 	        <li> szFooterTxt {String}: [DEF_GA_LABEL.FOOTER] Message to put after the Table of Link to Analytics. You can set "" to remove it 
 	        <li> szParTime {String}:  [GA_PAR_TIME.all_time] Default ParTime ar Startup. 
-	             &nbsp;see  <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/ga.js/global.html#GA_PAR_TIME" target="_self">GA_PAR_TIME</a>  
+	             &nbsp;see  <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/googleAnal.js/global.html#GA_PAR_TIME" target="_self">GA_PAR_TIME</a>  
 	        </li>
         </ul> 
         </td></tr>
@@ -122,10 +134,10 @@ var GA_LINK_SEP="&nbsp;&nbsp;&nbsp;";
      
   	@example
  //--------------------------------------------------------- HTML   
-  <input type="button"  class="tipGoogleAnal" id="tipGoogleAnal"  onclick="jsuGoogleAnal(event)" />
+  <input type="button"  class="googleAnalList" id="googleAnalList1"  onclick="jsuGoogleAnalList(event)" />
 	  
   // --------------------------------- JS
-  function jsuGoogleAnal(event){	
+  function jsuGoogleAnalList(event){	
 	var GA_CAT_DOWN = "JSU DOWNLOAD";
 	var GA_CAT_SAMPLE_FREE = "JSU FREE - SAMPLES";
 	var GA_CAT_DOC_FREE = "JSU FREE - DOC";
@@ -162,11 +174,11 @@ var GA_LINK_SEP="&nbsp;&nbsp;&nbsp;";
 													     
  */
 function gaShortUrlList(arObjGaList, event, objOpt){
-	var fn = "[ga.js gaShortUrlList()] ";
+	var fn = "[googleAnal.js gaShortUrlList()] ";
 
-	ga_log (fn + TIPLOG_FUN_START);
-	ga_logObj (fn + "IN arObjGaList", arObjGaList);
-	ga_logObj (fn + "IN objOpt", objOpt);
+	jsu_log (fn + GALOG_FUN_START);
+	jsu_logObj (fn + "IN arObjGaList", arObjGaList);
+	jsu_logObj (fn + "IN objOpt", objOpt);
 	// -------- FREE/FULL JSU Management -  only some Options are available in FREE Version: iWidth iTblMaxWidth
 	// We Setup objOptTmp with default values, useful for FREE JSU case
 	var objOptSet = {
@@ -194,7 +206,7 @@ function gaShortUrlList(arObjGaList, event, objOpt){
 		objOptSet.iWidth= objOpt.iWidth;
 	}
 	// ---------------- Fields avalialble only in FULL Version (This code will be removed in FREE JSU)
-	// ********************** FULL_JSU_START
+// JSU_FULL_START ------------------------------------------------- 
 	if (objOpt.szTitle != undefined){	objOptSet.szTitle = objOpt.szTitle; }
 	if (objOpt.bJQPopup != undefined){objOptSet.bJQPopup = objOpt.bJQPopup; }
 	if (objOpt.bAllGoogleAnalLink != undefined){	objOptSet.bAllBtn = objOpt.bAllBtn; }
@@ -203,8 +215,8 @@ function gaShortUrlList(arObjGaList, event, objOpt){
 	if (objOpt.bShortUrl != undefined){	objOptSet.bShortUrl= objOpt.bShortUrl; }
 	if (objOpt.bLongUrl != undefined){	objOptSet.bLongUrl = objOpt.bLongUrl; }
 	if (objOpt.szParTime != undefined){	objOptSet.szParTime = objOpt.szParTime; }
-	// ********************** FULL_JSU_END
-	ga_logObj (fn + "objOptSet", objOptSet);
+// JSU_FULL_END --------------------------------------------------
+	jsu_logObj (fn + "objOptSet", objOptSet);
 
 	
 	
@@ -214,14 +226,14 @@ function gaShortUrlList(arObjGaList, event, objOpt){
 		if (typeof(Popup) == undefined || isIEPopup()){
 			return alert ("SW ERROR: gaShortUrlList() with bJQPopup option set,  but JQPopup is not loaded!");
 		}
-		ga_log ("JQPopup MODE is required. Popup() will be open");
+		jsu_log ("JQPopup MODE is required. Popup() will be open");
 	}else{
 		// ------------- Specific options for TipFix
 		objOptSet.bCloseBtn = true; 
     objOptSet.iTipWidth = objOptSet.iWidth; 		
 	}
 	UnTip(event);  // Untip (if a Tip was currently displayed)	
-	ga_log ("Prepare HTML Msg with the Box Layout that will be displayed...");
+	jsu_log ("Prepare HTML Msg with the Box Layout that will be displayed...");
 	// Set Global var
 	ga_ga.iTblWidth = objOptSet.iWidth - 20; // -20 for some lateral space
 	ga_ga.iTblMaxHeight = objOptSet.iTblMaxHeight;  
@@ -240,12 +252,12 @@ function gaShortUrlList(arObjGaList, event, objOpt){
 				bPresent = true;
 			}
 		}
-		ga_log (fn + "szCat=" + szCat + "  bPresent=" + bPresent);
+		jsu_log (fn + "szCat=" + szCat + "  bPresent=" + bPresent);
 		if (!bPresent){
 			arCat.push(szCat);
 		}
 	}
-	ga_logObj (fn + "arCat=", arCat);
+	jsu_logObj (fn + "arCat=", arCat);
 	ga_ga.bJQPopup = objOptSet.bJQPopup;
 	ga_ga.arFilterCat = arCat;
 	ga_ga.iSelFilterCat = 0; // ALL
@@ -253,12 +265,12 @@ function gaShortUrlList(arObjGaList, event, objOpt){
 	// --------------------------- HEADER
 	
 	var szCbShowUrl = "";
-	// ********************** FULL_JSU_START
+// JSU_FULL_START ------------------------------------------------- 
 	var szShortChecked = (ga_ga.bShortUrl) ? "checked" : "";  
 	var szLongChecked = (ga_ga.bLongUrl) ? "checked" : "";  
 	szCbShowUrl =    '<input type="checkbox" id="cbShortUrl" ' + szShortChecked + ' onclick="ga_onclickShortUrl();"/>Show ShortUrl ' +
        '<input style="margin-left:20px" type="checkbox" id="cbLongUrl" ' + szLongChecked + ' onclick="ga_onclickLongUrl();" />Show LongUrl';
-	// ********************** FULL_JSU_START
+// JSU_FULL_END ------------------------------------------------- 
 	
 	szTbl += '<tr style="padding-top:5px;">' +
          '<td class="tiplBold" width="300px" style="padding-bottom:10px">'+ szCbShowUrl +
@@ -280,22 +292,63 @@ function gaShortUrlList(arObjGaList, event, objOpt){
 	}  
  	szTbl += '</table>';
 	if (objOptSet.bJQPopup){
-		// ********************** FULL_JSU_START
+	// JSU_FULL_START ------------------------------------------------- 
 		Popup (POPUP_TYPE.INFO,szTbl,{
 			  bShowImg:false, // always false
 			  szTitle: objOptSet.szTitle, 
 			  iWidth: objOptSet.iWidth+30  // +30 for best layout and avoid scroolbar
 			  });
-		// ********************** FULL_JSU_END
+	// JSU_FULL_END ------------------------------------------------- 
 	}
 	else{
 		// Show Tip With Empty Table
 		TipFix (szTbl,event,objOptSet);
 	}
 	ga_gaTblShow();
-	ga_log (fn + TIPLOG_FUN_END);
+	jsu_log (fn + GALOG_FUN_END);
 }
 
+
+/**
+ * Display the Page with Google analytics related to szShortUrl 
+ * @param szShortUrl   {String}   Short URL generated with <a class="tipLink" href="https://goo.gl/">https://goo.gl/</a>
+ * @param [objOpt] {Object}   
+ * @param [objOpt] {Object}   
+     <table class="jsDoc" border="2" cellpadding="2" cellspacing="2">
+        <tr><td class="jsDocTitle">OPTION</td></tr>
+        <tr><td class="jsDocParam">
+        <ul>
+	        <li> szParTime {String}:  [GA_PAR_TIME.all_time] Default ParTime ar Startup. 
+	             &nbsp;see  <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/googleAnal.js/global.html#GA_PAR_TIME" target="_self">GA_PAR_TIME</a>  
+	        </li>
+	        <li> bNewWindow {Boolean} [true] if true show Google Analytics in a new Page </li>
+        </ul> 
+        </td></tr>
+     </table>  
+     
+  	@example
+ //--------------------------------------------------------- HTML   
+  <input type="button"  class="googleAnal" id="googleAnal"  onclick="jsuGoogleAnalPage(event)" />
+	  
+  // --------------------------------- JS
+													     
+ */
+function gaShortUrlPage(szShortUrl, objOpt){
+	var fn = "[googleAnal.js gaShortUrlPage()] ";
+
+	jsu_log (fn + GALOG_FUN_START);
+	jsu_log (fn + "IN szShortUrl", szShortUrl);
+	jsu_logObj (fn + "IN objOpt", objOpt);
+	if (objOpt == undefined){
+		objOpt = new Object();
+	}
+	//----------- Set Fields Available also in FREE JSU
+	if (objOpt.szParTime == undefined){	objOpt.szParTime = GA_DEF.PAR_TIME; }
+	if (objOpt.bNewWindow == undefined){	objOpt.bNewWindow = GA_DEF.NEW_WINDOW; }
+  var szGaUrl = szShortUrl.replace('goo.gl','goo.gl/#analytics/goo.gl') + '/' + objOpt.szParTime;
+	ga_GoToURL (szGaUrl,objOpt.bNewWindow);
+	jsu_log (fn + GALOG_FUN_END);
+}
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------------
  * 							LOCAL FUNCTION
@@ -307,9 +360,9 @@ function gaShortUrlList(arObjGaList, event, objOpt){
  * GLOBAL ga_ga
  */
 function ga_gaTblShow (){
-	var fn = "[ga.js ga_gaTblShow()] ";
+	var fn = "[googleAnal.js ga_gaTblShow()] ";
 
-	ga_log (fn + TIPLOG_FUN_START);
+	jsu_log (fn + GALOG_FUN_START);
 	var bSort = typeof (cSortTable) != "undefined"; // can we add cSortTable? Is It Loaded?
 	
 	var szTbl = '<table id="tblGoogle" class="det" BORDER="2" cellspacing="0" cellpadding="5" width="100%">'; 
@@ -353,7 +406,7 @@ function ga_gaTblShow (){
 		szSelectParTime +=szOpt;		
 	}
 	szSelectParTime += '\n</select>';
-	// ga_logHtml (fn + "szSelectParTime",szSelectParTime);
+	// jsu_logHtml (fn + "szSelectParTime",szSelectParTime);
 	// ------------------------ add FilterCat
 	var iColUrl = 0;
 	if (ga_ga.bShortUrl){ iColUrl++;}
@@ -375,16 +428,16 @@ function ga_gaTblShow (){
   // --------------------------------------------- Insert the Link Rows 
 	// Inser only if Filter Match and SET Global .iVisibleLink 	
 	ga_ga.iVisibleLink = 0; // Global
-	ga_logObj (fn , "iSelFilterCat =" + ga_ga.iSelFilterCat);
+	jsu_logObj (fn , "iSelFilterCat =" + ga_ga.iSelFilterCat);
 	var arObj = ga_ga.arObjGaList;
 	var szCatSel = ga_ga.arFilterCat[ga_ga.iSelFilterCat];
-	ga_logObj (fn + "szCatSel=" + szCatSel + " arFilterCat=", ga_ga.arFilterCat);
+	jsu_logObj (fn + "szCatSel=" + szCatSel + " arFilterCat=", ga_ga.arFilterCat);
 	for (var i=0; i< arObj.length; i++){
 		var objGoogle = arObj[i];
 		var szCat = objGoogle.cat;
 		// Check if we haev to show this cat: bFilterCat must be set and the cat must match the Filter (iSelFilterCat=0 means ALL Categories FILTER)  
 		var bShow = (ga_ga.iSelFilterCat == 0 || szCat == szCatSel); 
-		ga_log (fn + "FilterSel=" + szCatSel + "  Cur cat=" + szCat + " --> bShow=" + bShow);
+		jsu_log (fn + "FilterSel=" + szCatSel + "  Cur cat=" + szCat + " --> bShow=" + bShow);
 		if (bShow){
 			var szId = "a_ga" + ga_ga.iVisibleLink;
 			// e.g From  https://goo.gl/HnNqnM to   https://goo.gl/#analytics/goo.gl/HnNqnM/week 
@@ -419,7 +472,7 @@ function ga_gaTblShow (){
 	
 	// Create Sort only if cSortTable is loaded
 	if (bSort){
-		ga_log (fn + "Create SortTable bShortUrl=" + ga_ga.bShortUrl + " ga_ga.bLongUrl=" + ga_ga.bLongUrl);
+		jsu_log (fn + "Create SortTable bShortUrl=" + ga_ga.bShortUrl + " ga_ga.bLongUrl=" + ga_ga.bLongUrl);
 		var arSortCol = new Array();
 		/*
 		var arSortCol = [  {col: GA_LABEL.SHORT_URL},   
@@ -446,7 +499,7 @@ function ga_gaTblShow (){
 			   }); 
 	}
 	
-	ga_log (fn + TIPLOG_FUN_END);
+	jsu_log (fn + GALOG_FUN_END);
 }
 
 
@@ -457,14 +510,14 @@ function ga_gaTblShow (){
  * Re design the Table of Google Analitycs basing on the cbShortUrl selected 
  */
 function ga_onclickShortUrl(){
-	var fn = "[ga.js ga_onclickShortUrl] ";
+	var fn = "[googleAnal.js ga_onclickShortUrl] ";
 
-	ga_log (fn + TIPLOG_FUN_START);
+	jsu_log (fn + GALOG_FUN_START);
 	// Toggle
 	ga_ga.bShortUrl = (ga_ga.bShortUrl) ? false : true;
   // redesign Tbl	
 	ga_gaTblShow();
-	ga_log (fn + TIPLOG_FUN_END);
+	jsu_log (fn + GALOG_FUN_END);
 }
 
 /*
@@ -472,14 +525,14 @@ function ga_onclickShortUrl(){
  * Re design the Table of Google Analitycs basing on the cbShortUrl selected 
  */
 function ga_onclickLongUrl(){
-	var fn = "[ga.js ga_onclickLongUrl] ";
+	var fn = "[googleAnal.js ga_onclickLongUrl] ";
 
-	ga_log (fn + TIPLOG_FUN_START);
+	jsu_log (fn + GALOG_FUN_START);
 	// Toggle
 	ga_ga.bLongUrl = (ga_ga.bLongUrl) ? false : true; 
   // redesign Tbl	
 	ga_gaTblShow();
-	ga_log (fn + TIPLOG_FUN_END);
+	jsu_log (fn + GALOG_FUN_END);
 }
 
 
@@ -489,14 +542,14 @@ function ga_onclickLongUrl(){
  * Re design the Table of Google Analitycs basing on the FilterCat selected 
  */
 function ga_onchangeCat(){
-	var fn = "[ga.js ga_onchangeCat()] ";
+	var fn = "[googleAnal.js ga_onchangeCat()] ";
 
-	ga_log (fn + TIPLOG_FUN_START);
+	jsu_log (fn + GALOG_FUN_START);
 	var select = document.getElementById ("gaCat");
 	ga_ga.iSelFilterCat = select.selectedIndex;
-	ga_log (fn + "iSelFilterCat=" + ga_ga.iSelFilterCat);
+	jsu_log (fn + "iSelFilterCat=" + ga_ga.iSelFilterCat);
 	ga_gaTblShow();
-	ga_log (fn + TIPLOG_FUN_END);
+	jsu_log (fn + GALOG_FUN_END);
 }
 
 /*
@@ -504,17 +557,17 @@ function ga_onchangeCat(){
  * Change global var and align href of the GoogleAnal Links 
  */
 function ga_onchangeTime(){
-	var fn = "[ga.js ga_onchangeTime()t] ";
+	var fn = "[googleAnal.js ga_onchangeTime()t] ";
 
-	ga_log (fn + TIPLOG_FUN_START);
+	jsu_log (fn + GALOG_FUN_START);
 	var select = document.getElementById ("gaFilterTime");
 	// e.g week
 	ga_ga.szParTime = select[select.selectedIndex].value;
 	ga_ga.szParTimeText = select[select.selectedIndex].text;
-	ga_log (fn + "szParTime=" + ga_ga.szParTime + " szParTimeText=" + ga_ga.szParTimeText);
+	jsu_log (fn + "szParTime=" + ga_ga.szParTime + " szParTimeText=" + ga_ga.szParTimeText);
   //--------------- align href
 	var arObj = ga_ga.arObjGaList;
-	ga_log (fn + "SET href for the " + arObj.length + " URLs");
+	jsu_log (fn + "SET href for the " + arObj.length + " URLs");
 	for (var i=0; i< arObj.length; i++){
 		var objGoogle = arObj[i];
 		var szId = "a_ga" + i;
@@ -527,7 +580,7 @@ function ga_onchangeTime(){
 	var aEl = document.getElementById ('a_gaAll');
   aEl.innerHTML = GA_LABEL.ANAL_ALL + GA_LINK_SEP + ga_ga.szParTimeText;
 	
-	ga_log (fn + TIPLOG_FUN_END);
+	jsu_log (fn + GALOG_FUN_END);
 }
 
 
@@ -536,18 +589,18 @@ function ga_onchangeTime(){
  * Open all the Google analytics pages
  */
 function ga_onclickAll(){
-	var fn = "[ga.js ga_onclickAll()] ";
+	var fn = "[googleAnal.js ga_onclickAll()] ";
 
-	ga_log (fn + TIPLOG_FUN_START);
+	jsu_log (fn + GALOG_FUN_START);
 	ga_ga.iLinkClickCur = 0;
 	ga_clickSimulate(ga_ga.iLinkClickCur);
 	if (ga_ga.iVisibleLink == 1){
-		ga_log (fn + "Only one anchor. Finish click simulation");
+		jsu_log (fn + "Only one anchor. Finish click simulation");
 	}else {
-		ga_log (fn + "Create Timer of " + TMO_GA_CLICK_SIMUL_MS +" for Next Click Simulate");
+		jsu_log (fn + "Create Timer of " + TMO_GA_CLICK_SIMUL_MS +" for Next Click Simulate");
 		ga_ga.tmoClick = setTimeout (ga_timerClickSimul,TMO_GA_CLICK_SIMUL_MS);
 	}
-	ga_log (fn + TIPLOG_FUN_END);
+	jsu_log (fn + GALOG_FUN_END);
 }
 
 
@@ -557,27 +610,27 @@ function ga_onclickAll(){
  * @param iLink  0,1...
  */
 function ga_clickSimulate(iLink){
-	var fn = "[ga.js ga_clickSimulate()] ";
+	var fn = "[googleAnal.js ga_clickSimulate()] ";
 
-	ga_log (fn + TIPLOG_FUN_START);
+	jsu_log (fn + GALOG_FUN_START);
 	var szId = "a_ga" + iLink;
   var aEl = document.getElementById (szId);
-  ga_log (fn + "simulate Click on anchor["+ iLink + "] with id=" + szId + " - href=" + aEl.href); 
+  jsu_log (fn + "simulate Click on anchor["+ iLink + "] with id=" + szId + " - href=" + aEl.href); 
   if (aEl.click != undefined){
-  	ga_log (fn + "a.click is defined. We call it");
+  	jsu_log (fn + "a.click is defined. We call it");
   	aEl.click();
   }else {
-  	ga_log (fn + "a.click is NOT defined in this Browser");
+  	jsu_log (fn + "a.click is NOT defined in this Browser");
   	if(document.createEvent) {
   		// e.g SAFARI or OPERA
-  		ga_log (fn + "el [" + i + "] of " + ga_ga.iVisibleLink + " - We create the event to simulate the FIRST click. ");
+  		jsu_log (fn + "el [" + i + "] of " + ga_ga.iVisibleLink + " - We create the event to simulate the FIRST click. ");
   		var evt = document.createEvent("MouseEvents"); 
   		evt.initMouseEvent("click", true, true, window, 
   				0, 0, 0, 0, 0, false, false, false, false, 0, null);
   		var allowDefault = aEl.dispatchEvent(evt);
   	}
   }	
-	ga_log (fn + TIPLOG_FUN_END);
+	jsu_log (fn + GALOG_FUN_END);
 	
 }
 
@@ -586,76 +639,72 @@ function ga_clickSimulate(iLink){
  * Timer Elapsed
  */
 function ga_timerClickSimul(){
-	var fn = "[ga.js ga_timerClickSimul()] ";
+	var fn = "[googleAnal.js ga_timerClickSimul()] ";
 
-	ga_log (fn + TIPLOG_FUN_START);
+	jsu_log (fn + GALOG_FUN_START);
 	clearTimeout (ga_ga.tmoClick ); // for security.
 	// e.g SAFARI or OPERA
 	ga_clickSimulate(++ga_ga.iLinkClickCur);
   if (ga_ga.iLinkClickCur >= (ga_ga.iVisibleLink- 1)){
-		ga_log (fn + "Click simulation COMPLETED for all " + ga_ga.iVisibleLink + " anchors");
+		jsu_log (fn + "Click simulation COMPLETED for all " + ga_ga.iVisibleLink + " anchors");
   }else {
-		ga_log (fn + "Create Timer of " + TMO_GA_CLICK_SIMUL_MS +" for Next Click Simulate");
+		jsu_log (fn + "Create Timer of " + TMO_GA_CLICK_SIMUL_MS +" for Next Click Simulate");
     ga_ga.tmoClick = setTimeout (ga_timerClickSimul,TMO_GA_CLICK_SIMUL_MS);
   }
 	
-	ga_log (fn + TIPLOG_FUN_END);
+	jsu_log (fn + GALOG_FUN_END);
 }
 
-
-/*
- * call jslog if it is defined
- * @param msg
+/**
+ * WE use an Hidden a tag, for compatibility with MObile (instead of using window.open)
+ * 
+ * @param szUrl
+ * @param [bNewWindow] {Boolean} default true
+ * @returns
  */
-function ga_log(msg){
-	if (typeof(jslog) == "function"){
-		jslog (JSLOG_JSU, msg);
-	}
+function ga_GoToURL(szUrl,bNewWindow){
+	var fn = "[googleAnal.js ga_GoToURL()] ";
+	try{
+		jsu_log (fn + GALOG_FUN_START);
+		if (bNewWindow == undefined){
+			bNewWindow = true;
+		}
+		jsu_log (fn + "bNewWindow=" + bNewWindow);
+		var aEl = document.getElementById(GA_HREF_HIDDEN_ID);
+		if (aEl == undefined){
+			jsu_log(fn + "add " + GA_HREF_HIDDEN_ID + " HIDDEN div and anchor to document.body");
+			divHidden = document.createElement("div");
+			divHidden.id = GA_DIV_HIDDEN_ID;		
+			divHidden.innerHTML = GA_HREF_HIDDEN;
+			document.body.appendChild(divHidden);
+			aEl = document.getElementById(GA_HREF_HIDDEN_ID);
+		}
+		aEl.href = szUrl;
+		jsu_log (fn + "aEl.href=" + aEl.href);
+		aEl.target = (bNewWindow)? "_blank" : "_self";
+	  if (aEl.click){
+			jsu_log(fn + "a.click is defined. We call it");
+			aEl.click();
+	  } else {
+			jsu_log(fn + "aEl.click is NOT defined in this Browser");
+	  	if(document.createEvent) {
+	  		// e.g SAFARI
+				jsu_log(fn + "document.createEvent is defined in this Browser. We create the event to simulate the click");
+	      var evt = document.createEvent("MouseEvents"); 
+	      evt.initMouseEvent("click", true, true, window, 
+	          0, 0, 0, 0, 0, false, false, false, false, 0, null); 
+	      var allowDefault = aEl.dispatchEvent(evt);
+	      // you can check allowDefault for false to see if
+	      // any handler called evt.preventDefault().
+	      // Firefox will *not* redirect to anchorObj.href
+	      // for you. However every other browser will.
+	  	}
+	  }
+		jsu_log (fn + GALOG_FUN_END);
+	}catch (e){
+		jsu_err (fn + "EXCEPTION: " + e.message);
+	}	
 }
 
-/*
- * call jslogObj if it is defined
- * @param msg
- */
-function ga_logObj(msg,obj){
-	if (typeof(jslogObj) == "function"){
-		jslogObj (JSLOG_JSU, msg,obj);
-	}
-}
-
-/*
- * call jslogHtml if it is defined
- * @param msg
- */
-function ga_logHtml(msg,szHtml){
-	if (typeof(jslogHtml) == "function"){
-		jslogHtml (JSLOG_JSU, msg,szHtml);
-	}
-}
-
-/*
- * Show an Error because this szFeatNotSupported is not supported
- * @param szFeatNotSupported
- */
-function ga_featNotSupported(szFeatNotSupported){
-	var szMsg = "Sorry but this feature is NOT PRESENT in JSU Free Version:\n " + szFeatNotSupported + '\n\n\n' +
-	  "To use this feature you have to download FULL JSU Version";
-	if (typeof (Popup) != "undefined"){
-		Popup (POPUP_TYPE.ERR,szMsg);
-	}else {
-		alert (szMsg);
-	}
-}
 
 
-/* 
- * Check if it is Full version 
- * @returns {Boolean}
- */
-function ga_isFullVersion(){
-	var bFullVersion = false; // default = FreeVersion
-	/* FULL_JSU_START */
-	bFullVersion = true;   // FULL_JSU
-	/* FULL_JSU_END */
-	return bFullVersion;
-}

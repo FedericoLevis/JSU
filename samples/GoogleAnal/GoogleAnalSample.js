@@ -5,32 +5,28 @@
 //var JSLOG_LEV = 31;
 var JSLOG_LEV = 0;
 
-var CSS_SEP = "-------------------------------------------------------------------------------------------";
 
 
 /*---------------------------- VAR ------*/
-var b_enCheckOpt= true;   // used to disable during setup Option TipFix
 
-var opt_ga_list_def = {
-	// we will define these opt in opt_int, after loading JSU
-	iWidth : undefined,   
-	iTblMaxHeight : undefined,
-	szParTime : undefined,
-	//----
-	bShortUrl : false,     // Only FULL
-	bLongUrl : false		 // Only FULL
-};
 
 
 /* Current values */
 var opt_ga_list = {
-	iWidth : opt_ga_list_def.iWidth,
-	iTblMaxHeight : opt_ga_list_def.iTblMaxHeight,
-	szParTime : opt_ga_list_def.szParTime,
-	bShortUrl : opt_ga_list_def.bShortUrl,
-	bLongUrl : opt_ga_list_def.bLongUrl
+	iWidth : 900,
+	iTblMaxHeight : 500,
+	szParTime : 'all_time',
+	bShortUrl : false,
+	bLongUrl : false
 };
 
+
+/* Current values */
+var opt_ga_page = {
+	szShortUrl : "https://goo.gl/HnNqnM", 
+	bNewWindow : true,
+	szParTime : 'all_time'
+};
 
 
 
@@ -40,7 +36,7 @@ var opt_ga_list = {
 function jsu_loaded(){
   // [Optional] Init jslog with JSLOG_LEV 
   // jslog_init(JSLOG_LEV);
-	manage_par_opt(); // manage optional PAR show_opt, only for developer
+	initSampleCmn(); // manage optional PAR show_opt, only for developer
 	sample_init();
 }
 
@@ -50,65 +46,51 @@ function jsu_loaded(){
 */
 function sample_init(){
  	
-	opt_ga_list_def.iWidth = GA_DEF.WIDTH;
-	opt_ga_list.iWidth = opt_ga_list_def.iWidth ;
-	opt_ga_list_def.iTblMaxHeight = GA_DEF.TBL_MAX_HEIGHT;
-	opt_ga_list.iTblMaxHeight = opt_ga_list_def.iTblMaxHeight ;
-	opt_ga_list_def.szParTime = GA_DEF.PAR_TIME;
-	opt_ga_list.szParTime = opt_ga_list_def.szParTime ;
-  if (JSU_FREE){
-  	for (var i=0; i<2; i++){
-    	elementShow (getElementById2("sampleLimit" + i, false), true,"inline");
-  	}
+	opt_ga_list.iWidth = GA_DEF.WIDTH ;	
+	opt_ga_list.iTblMaxHeight = GA_DEF.TBL_MAX_HEIGHT;
+	opt_ga_list.szParTime = GA_DEF.PAR_TIME;
+	opt_ga_page.szParTime = GA_DEF.PAR_TIME;
+	opt_ga_page.szShortUrl = JSU_SHORT_URL_DOWNLOAD_FREE
+  if (isJsuFree()){
   	// disable
   	var input = getElementById2("googleAnalListJQPopup", true);
   	input.className = "googleAnalListJQPopupDisabled";
   	input.disabled = true;
-  			
   }
-  
 	
 }
+
+
+
+/* ---------------------------------------------------------
+ * 				SAMPLE_1
+ --------------------------------------------------------- */
 
 //------------------------------ PAR ALLOWED ALWAYS (FREE and FULL)
 
 
+
 /**
- * set different class depending on default/modified value
+ * Apply Sample1Opt
  */
-function onchangeWidth(){
+function sample1OptApply(){
+	opt_ga_list.bLongUrl = (selectGetSelVal (getElementById2("bLongUrl",true)) == "TRUE");
 	opt_ga_list.iWidth = selectGetSelVal (getElementById2("iWidth",true)); 
-}
-
-/**
- */
-function onchangeTblMaxHeight(){
 	opt_ga_list.iTblMaxHeight = selectGetSelVal (getElementById2("iTblMaxHeight",true)); 
-}
-
-
-
-// ------------------------------ PAR NOT ALLOWD in FREE
-
-/**
- */
-function onchangeParTime(){
 	opt_ga_list.szParTime = selectGetSelVal (getElementById2("szParTime",true)); 
-}
-
-
-/**
- */
-function onchangeShortUrl(){
 	opt_ga_list.bShortUrl = (selectGetSelVal (getElementById2("bShortUrl",true)) == "TRUE");
 }
 
 /**
+ * Apply Sample2Opt
  */
-function onchangeLongUrl(){
-	opt_ga_list.bLongUrl = (selectGetSelVal (getElementById2("bLongUrl",true)) == "TRUE");
+function sample2OptApply(){
+	var fn = "[sample2OptApply()] ";
+	opt_ga_page.szShortUrl = getElementById2("szShortUrl2",true).value; 
+	opt_ga_page.szParTime = selectGetSelVal (getElementById2("szParTime2",true)); 
+	opt_ga_page.bNewWindow = (selectGetSelVal (getElementById2("bNewWindow2",true)) == "TRUE");
+	jslogObj (JSLOG_DEBUG,fn + "opt_ga_page", opt_ga_page);
 }
-
 
 /**
  * Call API gaShortUrlList()
@@ -156,8 +138,274 @@ function sample1(event,bJQPopup){
 
 
 
+
+
+
 /**
- * gaList Code Sample		
+ * Show Option for Sample1
+ * @param event
+ */
+function sample1Opt (event){
+	var szFreeLimit = "";
+	var szPar = "jsuParPresent";
+	if (isJsuFree()){
+		szFreeLimit =  '<div align="left" style="margin-top:5px;margin-left:5px;margin-bottom:0px;"> <table class="note"><tr>' +
+        '  <td><input class="note"></td> ' +
+  			'  <td> <label style="background-color:Yellow;">Yellow Options</label> are NOT avaliable in FREE JSU -  see &nbsp;<a class="tipLink" href="javascript:showJSUVersionParLimit();">JSU Options available only in FULL Version</a></td>' +  
+        '</tr></table></div>';			
+		szPar = "jsuParAbsent";
+	}	
+
+	var szOpt = szFreeLimit + ' <div align="center" style="width:700px"><table class="tipNoBorder" width="800px"> ' +
+	'  <table class="tipNoBorder" width ="100%"> ' +
+	'               <tr> ' +
+	'                 <td class="tipr" > ' +
+	'                  <table class="det" BORDER="2" cellpadding="3" cellspacing="3"  width ="100%"> ' +
+	'                    <tr class="detTitle"><td colspan="5">Main <a class="tipLinkJsLog" href="https://rawgit.com/FedericoLevis/JSUDoc/master/googleAnal.js/global.html#gaShortUrlList" target="_blank">gaShortUrlList() API Options</a></td></tr> ' +
+	'                    <tr class="detTitle2"><td >FULL<BR/>JSU</td><td>FREE<BR/>JSU</td><td width="70px">OPTION</td><td width="120px">VALUE</td><td>DESCRIPTION</td></tr> ' +
+	'                    <tr class="det"> ' +
+	'                      <td class="jsuOptPresent"></td> ' +
+	'                      <td class="jsuOptPresent"></td> ' +
+	'                      <td class="tipcBold">iWidth</td> ' +
+	'                      <td class="jsuParPresent"> ' +
+	'                        <select id="iWidth"  style="width:80px;">   ' +
+	'                      </td> ' +
+	'                      <td class="tipl">Width (px) of the Box displayed</td>  ' +
+	'                    </tr> ' +
+	'                    <tr class="det"> ' +
+	'                      <td class="jsuOptPresent"></td> ' +
+	'                      <td class="jsuOptPresent"></td> ' +
+	'                      <td class="tipcBold">iTblMaxHeight</td> ' +
+	'                      <td class="jsuParPresent"> ' +
+	'                        <select id="iTblMaxHeight"  style="width:80px;" >   ' +
+	'                      </td> ' +
+	'                      <td class="tipl">Max Height (px) of the Table with Google Analytics Links</td>  ' +
+	'                    </tr> ' +
+	//-------------------------------------------- ONLY IN FULL JSU
+	'                    <tr class="det"> ' +
+	'                      <td class="jsuOptPresent"></td> ' +
+	'                      <td class="jsuOptAbsent"></td> ' +
+	'                      <td class="tipcBold">szParTime</td> ' +
+	'                      <td class="' + szPar + '"> ' +
+	'                        <select id="szParTime"  style="width:80px;" >   ' +
+	'                      </td> ' +
+	'                      <td class="tipl">Initial Value of <b>Google Analytics Time</b> Parameter</td>  ' +
+	'                    </tr> ' +
+	'                    <tr class="det"> ' +
+	'                      <td class="jsuOptPresent"></td> ' +
+	'                      <td class="jsuOptAbsent"></td> ' +
+	'                      <td class="tipcBold">bShortUrl</td> ' +
+	'                      <td class="' + szPar + '"> ' +
+	'                        <select id="bShortUrl"  style="width:80px;">   ' +
+	'                              <option selected value="FALSE" >false</i></option>  ' +
+	'                              <option value="TRUE" >true</option>  ' +
+	'                         </select>                 ' +
+	'                      </td> ' +
+	'                      <td class="tipl">Show Column ShortURL</td>  ' +
+	'                    </tr> ' +
+	'                    <tr class="det"> ' +
+	'                      <td class="jsuOptPresent"></td> ' +
+	'                      <td class="jsuOptAbsent"></td> ' +
+	'                      <td class="tipcBold">bLongUrl</td> ' +
+	'                      <td class="' + szPar + '"> ' +
+	'                        <select id="bLongUrl"  style="width:80px;" >   ' +
+	'                              <option selected value="FALSE" >false</i></option>  ' +
+	'                              <option value="TRUE" >true</option>  ' +
+	'                         </select>                 ' +
+	'                      </td> ' +
+	'                      <td class="tipl">Show Column LongURL</td>  ' +
+	'                    </tr> ' +
+	'                   </table>	 ' +
+	'                 </td> ' +
+	'               </tr> ' +
+	'            </table> ' +
+	'      <input type="button" value="Apply Option" onclick="sample1OptApply()"/>' +
+	'      </div><BR/>';
+  TipFix (szOpt,event,{szTitle:"gaShortUrlList() OPTION", bCloseBtn: false, iWidth: 820});	
+// Init
+	
+  var arWidth=	[	
+            	 	[GA_DEF.WIDTH-400,GA_DEF.WIDTH-400],   
+             	 	[GA_DEF.WIDTH-200,GA_DEF.WIDTH-200],   
+             	 	[GA_DEF.WIDTH,GA_DEF.WIDTH], // 1100
+             	 	[GA_DEF.WIDTH+200,GA_DEF.WIDTH+200],   
+        ];
+	selectPopulate (getElementById2 ("iWidth",true),arWidth,opt_ga_list.iWidth);
+
+  var arTblMaxHeight=	[	
+             	 	[undefined,'NO LIMIT'],   
+              	 	[150,150],   
+              	 	[300,300], 
+              	 	[500,500]   
+         ];
+	selectPopulate (getElementById2 ("iTblMaxHeight",true),arTblMaxHeight,opt_ga_list.iTblMaxHeight);
+	
+	var arParTime=	[	
+              	 	[GA_PAR_TIME.all_time,GA_PAR_TIME.all_time],   
+              	 	[GA_PAR_TIME.month,GA_PAR_TIME.month],   
+              	 	[GA_PAR_TIME.week,GA_PAR_TIME.week],   
+              	 	[GA_PAR_TIME.day,GA_PAR_TIME.day],   
+              	 	[GA_PAR_TIME.two_hours,GA_PAR_TIME.two_hours]   
+         ];
+	var selectParTime = getElementById2 ("szParTime",true);
+	var selectShortUrl = getElementById2 ("bShortUrl",true);
+	var selectLongUrl = getElementById2 ("bLongUrl",true);
+ 	selectPopulate (selectParTime,arParTime, opt_ga_list.szParTime);
+  // set cur val
+ 	selectSelValue (selectShortUrl,opt_ga_list.bShortUrl ? "TRUE" : "FALSE");
+ 	selectSelValue (selectLongUrl,opt_ga_list.bLongUrl ? "TRUE" : "FALSE");
+	if (isJsuFree()){
+		// disable Opt not availble in FREE JSU
+		selectParTime.disabled=true;
+		selectShortUrl.disabled=true;
+		selectLongUrl.disabled=true;
+	}	
+	
+}
+
+
+
+/**
+ * Show the Floating Tip
+ * @param event
+ */
+function sample1aTip (event){
+	Tip('Show the TipFix with the List of Links to <b>Google Analytics</b>');
+}
+
+/**
+ * Show the Floating Tip
+ * @param event
+ */
+function sample1bTip (event){
+	Tip('Show the JQPopup with the List of Links to <b>Google Analytics</b>');
+}
+
+/**
+ * Show the Floating Tip
+ * @param event
+ */
+function sample1OptTip (event){
+	Tip('Show the Box to Set <b>gaShortUrlList Option</b>');
+}
+
+
+
+/* ---------------------------------------------------------
+ * 				SAMPLE_2
+ --------------------------------------------------------- */
+
+
+/**
+ * Call API gaShortUrlPage()
+ * 
+ */
+function sample2(){
+  var fn = "[sample2()] ";
+	jslogObj (JSLOG_DEBUG,fn + "opt_ga_page", opt_ga_page);
+
+	gaShortUrlPage (	opt_ga_page.szShortUrl,
+			{
+		  bNewWindow: opt_ga_page.bNewWindow,
+		  szParTime: opt_ga_page.szParTime
+		  });
+	
+}
+
+
+
+
+/**
+ * Show Option for Sample2
+ * @param event
+ */
+function sample2Opt (event){
+	var szFreeLimit = "";
+
+	var szOpt = ' <div align="center" style="width:700px"><table class="tipNoBorder" width="700px"> ' +
+	'               <tr> ' +
+	'                 <td class="tipr" > ' +
+	'                  <table class="det" BORDER="2" cellpadding="3" cellspacing="3"  width ="100%"> ' +
+	'                    <tr class="detTitle"><td colspan="5">Main <a class="tipLinkJsLog" href="https://rawgit.com/FedericoLevis/JSUDoc/master/googleAnal.js/global.html#gaShortUrlPage" target="_blank">gaShortUrlPage() API Options</a></td></tr> ' +
+	'                    <tr class="detTitle2"><td width="70px">OPTION</td><td width="150px">VALUE</td><td>DESCRIPTION</td></tr> ' +
+	'                    <tr class="det"> ' +
+	'                      <td class="tipcBold">szShortUrl</td> ' +
+	'                      <td class="tipl"> ' +
+	'                        <input id="szShortUrl2" style="width:100%;">   ' +
+	'                      </td> ' +
+	'                      <td class="tipl">Short URL retrieved by goo.gl</td>  ' +
+	'                    </tr> ' +
+	'                    <tr class="det"> ' +
+	'                      <td class="tipcBold">szParTime</td> ' +
+	'                      <td class="tipc"> ' +
+	'                        <select id="szParTime2"  style="width:100px;">   ' +
+	'                      </td> ' +
+	'                      <td class="tipl">Initial Value of <b>Google Analytics Time</b> Parameter</td>  ' +
+	'                    </tr> ' +
+	'                    <tr class="det"> ' +
+	'                      <td class="tipcBold">bNewWindow</td> ' +
+	'                      <td class="tipc"> ' +
+	'                        <select id="bNewWindow2"  style="width:100px;" >   ' +
+	'                              <option selected value="FALSE" >false</i></option>  ' +
+	'                              <option value="TRUE" >true</option>  ' +
+	'                         </select>                 ' +
+	'                      </td> ' +
+	'                      <td class="tipl">if true:Show Google Analytic in a New Page</td>  ' +
+	'                    </tr> ' +
+	'                   </table>	 ' +
+	'                 </td> ' +
+	'               </tr> ' +
+	'            </table> ' +
+	'      <input type="button" value="Apply Option" onclick="sample2OptApply()"/>' +
+	'      </div><BR/>';
+	TipFix (szOpt,event,{szTitle:"gaShortUrlPage() OPTION", bCloseBtn: false, iTipWidth:720});	
+// Init
+	
+	var arParTime=	[	
+              	 	[GA_PAR_TIME.all_time,GA_PAR_TIME.all_time],   
+              	 	[GA_PAR_TIME.month,GA_PAR_TIME.month],   
+              	 	[GA_PAR_TIME.week,GA_PAR_TIME.week],   
+              	 	[GA_PAR_TIME.day,GA_PAR_TIME.day],   
+              	 	[GA_PAR_TIME.two_hours,GA_PAR_TIME.two_hours]   
+         ];
+	var selectParTime = getElementById2 ("szParTime2",true);
+	var selectNewWindow = getElementById2 ("bNewWindow2",true);
+ 	selectPopulate (selectParTime,arParTime, opt_ga_page.szParTime);
+  // set cur val
+ 	selectSelValue (selectNewWindow,opt_ga_page.bNewWindow ? "TRUE" : "FALSE");
+ 	getElementById2("szShortUrl2",true).value = opt_ga_page.szShortUrl;
+	
+}
+
+
+
+
+/**
+ * Show the Floating Tip
+ * @param event
+ */
+function sample2Tip (event){
+	Tip('Show the <b>Google Analytics Page</b> ');
+}
+
+/**
+ * Show the Floating Tip
+ * @param event
+ */
+function sample2OptTip (event){
+	Tip('Show the Box to Set the <b>Options</b> of the Google Analytics disaplayed clicking in the Button on this sample');
+}
+
+
+
+/* ---------------------------------------------------------
+ * 				CODE TIP
+ --------------------------------------------------------- */
+
+
+
+/**
+ * sample1 Code Sample		
  * @param event
  */
 function sampleCode1(event){
@@ -206,133 +454,18 @@ function sampleCode1(event){
 }
 
 
-
 /**
- * Show the Floating Tip
+ * sample2 Code Sample		
  * @param event
  */
-function sample1OptTip (event){
-	Tip('Show the Box to Set <b>gaShortUrlList Option</b>');
+function sampleCode2(event){
+	var szTip = 'gaShortUrlPage(opt_ga_page.szShortUrl,  // e.g.: \'https://goo.gl/HnNqnM\' \n' +
+			'   { \n' +
+			'     bNewWindow: opt_ga_page.bNewWindow,  // e.g: true \n' +
+			'     szParTime: opt_ga_page.szParTime   // e.g: \'day\' \n' +
+			'   });';
+			
+	TipFixCode(szTip,event,{
+  	 szTitle:"JS Code of SAMPLE 2: Google Analytics Page",iTipWidth:1000,iTipMaxHeight:500
+  	 });
 }
-
-
-/**
- * Show Option for Sample1
- * @param event
- */
-function sample1Opt (event){
-	var szFreeLimit = "";
-	var szPar = "jsuParPresent";
-	if (JSU_FREE){
-		szFreeLimit =  '<div align="left" style="margin-top:5px;margin-left:5px;margin-bottom:0px;"> <table class="note"><tr>' +
-        '  <td><input class="note"></td> ' +
-  			'  <td> <label style="background-color:Yellow;">Yellow Options</label> are NOT avaliable in FREE JSU -  see &nbsp;<a class="tipLink" href="javascript:showJSUVersionParLimit();">JSU Options available only in FULL Version</a></td>' +  
-        '</tr></table></div>';			
-		szPar = "jsuParAbsent";
-	}	
-
-	var szOpt = szFreeLimit +
-	'  <table class="tipNoBorder" width ="800px"> ' +
-	'               <tr> ' +
-	'                 <td class="tipr" > ' +
-	'                  <table class="det" BORDER="2" cellpadding="3" cellspacing="3"  width ="100%"> ' +
-	'                    <tr class="detTitle"><td colspan="5">Main <a class="tipLinkJsLog" href="https://rawgit.com/FedericoLevis/JSUDoc/master/googleAnal.js/global.html#gaShortUrlList" target="_blank">gaShortUrlList() API Options</a></td></tr> ' +
-	'                    <tr class="detTitle2"><td >FULL<BR/>JSU</td><td>FREE<BR/>JSU</td><td width="70px">OPTION</td><td width="120px">VALUE</td><td>DESCRIPTION</td></tr> ' +
-	'                    <tr class="det"> ' +
-	'                      <td class="jsuOptPresent"></td> ' +
-	'                      <td class="jsuOptPresent"></td> ' +
-	'                      <td class="tipcBold">iWidth</td> ' +
-	'                      <td class="jsuParPresent"> ' +
-	'                        <select id="iWidth"  style="width:80px;" onchange="onchangeWidth();">   ' +
-	'                      </td> ' +
-	'                      <td class="tipl">Width (px) of the Box displayed</td>  ' +
-	'                    </tr> ' +
-	'                    <tr class="det"> ' +
-	'                      <td class="jsuOptPresent"></td> ' +
-	'                      <td class="jsuOptPresent"></td> ' +
-	'                      <td class="tipcBold">iTblMaxHeight</td> ' +
-	'                      <td class="jsuParPresent"> ' +
-	'                        <select id="iTblMaxHeight"  style="width:80px;" onchange="onchangeTblMaxHeight();">   ' +
-	'                      </td> ' +
-	'                      <td class="tipl">Max Height (px) of the Table with Google Analytics Links</td>  ' +
-	'                    </tr> ' +
-	//-------------------------------------------- ONLY IN FULL JSU
-	'                    <tr class="det"> ' +
-	'                      <td class="jsuOptPresent"></td> ' +
-	'                      <td class="jsuOptAbsent"></td> ' +
-	'                      <td class="tipcBold">szParTime</td> ' +
-	'                      <td class="' + szPar + '"> ' +
-	'                        <select id="szParTime"  style="width:80px;" onchange="onchangeParTime();">   ' +
-	'                      </td> ' +
-	'                      <td class="tipl">Initial Value of <b>Google Analtycs Time</b> Parameter</td>  ' +
-	'                    </tr> ' +
-	'                    <tr class="det"> ' +
-	'                      <td class="jsuOptPresent"></td> ' +
-	'                      <td class="jsuOptAbsent"></td> ' +
-	'                      <td class="tipcBold">bShortUrl</td> ' +
-	'                      <td class="' + szPar + '"> ' +
-	'                        <select id="bShortUrl"  style="width:80px;" onchange="onchangeShortUrl();">   ' +
-	'                              <option selected value="FALSE" >false</i></option>  ' +
-	'                              <option value="TRUE" >true</option>  ' +
-	'                         </select>                 ' +
-	'                      </td> ' +
-	'                      <td class="tipl">Show Column ShortURL</td>  ' +
-	'                    </tr> ' +
-	'                    <tr class="det"> ' +
-	'                      <td class="jsuOptPresent"></td> ' +
-	'                      <td class="jsuOptAbsent"></td> ' +
-	'                      <td class="tipcBold">bLongUrl</td> ' +
-	'                      <td class="' + szPar + '"> ' +
-	'                        <select id="bLongUrl"  style="width:80px;" onchange="onchangeLongUrl();">   ' +
-	'                              <option selected value="FALSE" >false</i></option>  ' +
-	'                              <option value="TRUE" >true</option>  ' +
-	'                         </select>                 ' +
-	'                      </td> ' +
-	'                      <td class="tipl">Show Column LongURL</td>  ' +
-	'                    </tr> ' +
-	'                   </table>	 ' +
-	'                 </td> ' +
-	'               </tr> ' +
-	'            </table> ' ;
-	TipFix (szOpt,event,{szTitle:"gaShortUrlList OPTION"});	
-// Init
-	
-  var arWidth=	[	
-            	 	[GA_DEF.WIDTH-400,GA_DEF.WIDTH-400],   
-             	 	[GA_DEF.WIDTH-200,GA_DEF.WIDTH-200],   
-             	 	[GA_DEF.WIDTH,GA_DEF.WIDTH], // 1100
-             	 	[GA_DEF.WIDTH+200,GA_DEF.WIDTH+200],   
-        ];
-	selectPopulate (getElementById2 ("iWidth",true),arWidth,opt_ga_list.iWidth);
-
-  var arTblMaxHeight=	[	
-             	 	[undefined,'NO LIMIT'],   
-              	 	[150,150],   
-              	 	[300,300], 
-              	 	[500,500]   
-         ];
-	selectPopulate (getElementById2 ("iTblMaxHeight",true),arTblMaxHeight,opt_ga_list.iTblMaxHeight);
-	
-	var arParTime=	[	
-              	 	[GA_PAR_TIME.all_time,GA_PAR_TIME.all_time],   
-              	 	[GA_PAR_TIME.month,GA_PAR_TIME.month],   
-              	 	[GA_PAR_TIME.week,GA_PAR_TIME.week],   
-              	 	[GA_PAR_TIME.day,GA_PAR_TIME.day],   
-              	 	[GA_PAR_TIME.two_hours,GA_PAR_TIME.two_hours]   
-         ];
-	var selectParTime = getElementById2 ("szParTime",true);
-	var selectShortUrl = getElementById2 ("bShortUrl",true);
-	var selectLongUrl = getElementById2 ("bLongUrl",true);
- 	selectPopulate (selectParTime,arParTime, opt_ga_list.szParTime);
-  // set cur val
- 	selectSelValue (selectShortUrl,opt_ga_list.bShortUrl ? "TRUE" : "FALSE");
- 	selectSelValue (selectLongUrl,opt_ga_list.bLongUrl ? "TRUE" : "FALSE");
-	if (JSU_FREE){
-		// disable Opt not availble in FREE JSU
-		selectParTime.disabled=true;
-		selectShortUrl.disabled=true;
-		selectLongUrl.disabled=true;
-	}	
-	
-}
-

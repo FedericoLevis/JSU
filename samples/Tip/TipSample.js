@@ -30,7 +30,7 @@ var JSU_TIP_README='<table class="tip" BORDER="2" cellspacing="0" cellpadding="2
 function jsu_loaded(){
   // [Optional] Init jslog with JSLOG_LEV 
   // jslog_init(JSLOG_LEV);
-	manage_par_opt(); // manage optional PAR show_opt, only for developer
+	initSampleCmn(); // manage optional PAR show_opt, only for developer
 		
 }
 
@@ -335,7 +335,7 @@ function sampleCode1d(event){
  	TipFixMultiCode([
  	      {szTitle:"JS: TipSample.js", szCode: JS_CODE_1d_JS,  bPrettify:true},
 	      {szTitle:"HTML: TipSample.html", szCode: JS_CODE_1d_HTML,  bPrettify:false},
- 	      {szTitle:"CSS: jsu/core/core.css", szCode: JS_CODE_1d_CSS,  bPrettify:true}
+ 	      {szTitle:"CSS: jsu/core/jsu.css", szCode: JS_CODE_1d_CSS,  bPrettify:true}
 	    ],
       event,
       {
@@ -391,7 +391,7 @@ function sampleCode2a(event){
 	TipFixMultiCode([
  	      {szTitle:"JS: TipSample.js", szCode: JS_CODE_2a_JS,  bPrettify:true},
 	      {szTitle:"HTML: TipSample.html", szCode: JS_CODE_2a_HTML,  bPrettify:false, iRowNum:6},
-	      {szTitle:"CSS: jsu/core/core.css", szCode: JS_CODE_2a_CSS,  bPrettify:true, iMaxHeight: 250 }
+	      {szTitle:"CSS: jsu/core/jsu.css", szCode: JS_CODE_2a_CSS,  bPrettify:true, iMaxHeight: 250 }
 	    ],
       event,
       { 
@@ -443,7 +443,7 @@ function sampleCode2b1(event){
 	TipFixMultiCode([
  	      {szTitle:"JS: TipSample.js", szCode: JS_CODE_2b1_JS,  bPrettify: false},
 	      {szTitle:"HTML: TipSample.html", szCode: JS_CODE_2b1_HTML,  bPrettify: false},
-	      {szTitle:"CSS: jsu/core/core.css", szCode: JS_CODE_2b1_CSS,  bPrettify: true}
+	      {szTitle:"CSS: jsu/core/jsu.css", szCode: JS_CODE_2b1_CSS,  bPrettify: true}
 	    ],
       event,
       {
@@ -497,7 +497,7 @@ function sampleCode2b2(event){
 	TipFixMultiCode([
  	      {szTitle:"JS: TipSample.js", szCode: JS_CODE_2b2_JS,  bPrettify: false},
 	      {szTitle:"HTML: TipSample.html", szCode: JS_CODE_2b2_HTML,  bPrettify: false},
-	      {szTitle:"CSS: jsu/core/core.css", szCode: JS_CODE_2b2_CSS,  bPrettify: true}
+	      {szTitle:"CSS: jsu/core/jsu.css", szCode: JS_CODE_2b2_CSS,  bPrettify: true}
 	    ],
       event,
       { 
@@ -534,7 +534,7 @@ function sampleCode3c(event){
     '	TipFixMultiCode([ \n' +
     ' 	      {szTitle:"JS: TipSample.js", szCode: JS_CODE_2a_JS,  bPrettify:true}, \n' +
     '	      {szTitle:"HTML: TipSample.html", szCode: JS_CODE_2a_HTML,  bPrettify:false, iRowNum:6}, \n' +
-    '	      {szTitle:"CSS: jsu/core/core.css", szCode: JS_CODE_2a_CSS,  bPrettify:true, iMaxHeight: 250 } \n' +
+    '	      {szTitle:"CSS: jsu/core/jsu.css", szCode: JS_CODE_2a_CSS,  bPrettify:true, iMaxHeight: 250 } \n' +
     '	    ], \n' +
     '      event, \n' +
     '      {szTitle:"FixedTip with GIF, button, link - Source Code" , iTipWidth: 1100} );	';

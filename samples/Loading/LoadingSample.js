@@ -25,7 +25,7 @@ var PATH_SAMPLES_GIF = "https://rawgit.com/FedericoLevis/images/master/samples/"
 function jsu_loaded(){
   // [Optional] Init jslog with JSLOG_LEV 
   // jslog_init(JSLOG_LEV);
-	manage_par_opt(); // manage optional PAR show_opt, only for developer
+	initSampleCmn(); // manage optional PAR show_opt, only for developer
 	populateDuration();
 	populateUrlGif();
 	// Set DEfault
@@ -119,7 +119,7 @@ function tmoElapsedLoading2 () {
 	clearTimeout (tmoLoading2);
 	loadingDivHide ();	
 	var elLoadedSample2 = getElementById2("loadedSample2");
-	elLoadedSample2.className = "tipGood";
+	elLoadedSample2.className = "tipGoodBold";
 	elLoadedSample2.innerHTML = "Loaded";
 	elementShow (elLoadedSample2,true,"inline");
 }
@@ -129,7 +129,7 @@ function loading2CancelCallback(){
 	clearTimeout (tmoLoading2);
 	var elLoadedSample2 = getElementById2("loadedSample2");
 	elLoadedSample2.innerHTML = "CANCELLED";
-	elLoadedSample2.className = "tipErr";
+	elLoadedSample2.className = "tipErrBold";
 	elementShow (elLoadedSample2,true,"inline");
 }
 
@@ -201,7 +201,7 @@ function tmoElapsedLoading3() {
 	clearTimeout (tmoLoading3);
 	loadingDivHide ();	
 	var elLoadedSample3 = getElementById2("loadedSample3");
-	elLoadedSample3.className = "tipGood";
+	elLoadedSample3.className = "tipGoodBold";
 	elLoadedSample3.innerHTML = "Loaded";
 	elementShow (elLoadedSample3,true,"inline");
 }
@@ -214,7 +214,7 @@ function loading3CancelCallback(){
 	clearTimeout (tmoLoading3);
 	var elLoadedSample3 = getElementById2("loadedSample3");
 	elLoadedSample3.innerHTML = "CANCELLED";
-	elLoadedSample3.className = "tipErr";
+	elLoadedSample3.className = "tipErrBold";
 	elementShow (elLoadedSample3,true,"inline");
 }
 

@@ -43,10 +43,6 @@ var JSU_PATH_POPUP_HTML = JSU_PATH_BASE +  "/core/IEPopup/";
 var JSU_PATH_ABOUT_IMG = "https://rawgit.com/FedericoLevis/images/master/jsuAbout/";
 var JSU_PATH_DOC = "https://rawgit.com/FedericoLevis/JSUDoc/master/";
 
-//used by samples
-// TBD
-var JSU_FREE=true;
-// var JSU_FREE=false;
 var JSU_GA_EN = true; // Enable GoogleAnaltycs
 
 
@@ -75,7 +71,7 @@ requirejs.config({
 require([ // First 3 always present
          'lan/locale-core', 
          'core/jslog',            
-         'core/util',							
+         'core/jsuCmn','core/util',							
          'core/tooltip',
          'core/prettify-jsu',      /* only for code- prettify */
          'core/googleAnal',

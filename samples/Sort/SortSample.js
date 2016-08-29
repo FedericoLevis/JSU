@@ -19,7 +19,7 @@ var cSortTbl2= null;  // cSortTable Object for 'tbl2' (used to change settings  
 function jsu_loaded(){
   // [Optional] Init jslog with JSLOG_LEV 
   // jslog_init(JSLOG_LEV);
-	manage_par_opt(); // manage optional PAR show_opt, only for developer
+	initSampleCmn(); // manage optional PAR show_opt, only for developer
   sortTbl1();	
   sortTbl2();	
 	

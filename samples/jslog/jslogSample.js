@@ -11,7 +11,7 @@ var JSLOG_LEV = 7;
 function jsu_loaded(){
   // Init jslog with JSLOG_LEV 
   // jslog_init(JSLOG_LEV);
-	manage_par_opt(); // manage optional PAR show_opt, only for developer
+	initSampleCmn(); // manage optional PAR show_opt, only for developer
   // jslog (JSLOG_INFO,"jslog sample STARTED");
   populate_jslogLev();
 }
