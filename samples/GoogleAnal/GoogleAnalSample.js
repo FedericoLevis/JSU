@@ -50,7 +50,7 @@ function sample_init(){
 	opt_ga_list.iTblMaxHeight = GA_DEF.TBL_MAX_HEIGHT;
 	opt_ga_list.szParTime = GA_DEF.PAR_TIME;
 	opt_ga_page.szParTime = GA_DEF.PAR_TIME;
-	opt_ga_page.szShortUrl = JSU_SHORT_URL_DOWNLOAD_FREE
+	opt_ga_page.szShortUrl = JSU_SHORT_URL_DOWNLOAD_FREE;
   if (isJsuFree()){
   	// disable
   	var input = getElementById2("googleAnalListJQPopup", true);
@@ -147,13 +147,14 @@ function sample1(event,bJQPopup){
  */
 function sample1Opt (event){
 	var szFreeLimit = "";
-	var szPar = "jsuParPresent";
+	var szParOpt = "jsuParPresent";
 	if (isJsuFree()){
 		szFreeLimit =  '<div align="left" style="margin-top:5px;margin-left:5px;margin-bottom:0px;"> <table class="note"><tr>' +
         '  <td><input class="note"></td> ' +
-  			'  <td> <label style="background-color:Yellow;">Yellow Options</label> are NOT avaliable in FREE JSU -  see &nbsp;<a class="tipLink" href="javascript:showJSUVersionParLimit();">JSU Options available only in FULL Version</a></td>' +  
-        '</tr></table></div>';			
-		szPar = "jsuParAbsent";
+  			'  <td> <label style="background-color:Yellow;">Yellow Options</label> are NOT avaliable in FREE JSU -  see &nbsp;' +
+  			'      <a id="gaShortUrlListOpt" class="tipLink" href="javascript:showJSUVersionParLimit();">JSU Options available only in FULL Version</a></td>' +  
+        '</tr></table></div>';
+		szParOpt = "jsuParAbsent";
 	}	
 
 	var szOpt = szFreeLimit + ' <div align="center" style="width:700px"><table class="tipNoBorder" width="800px"> ' +
@@ -166,8 +167,8 @@ function sample1Opt (event){
 	'                    <tr class="det"> ' +
 	'                      <td class="jsuOptPresent"></td> ' +
 	'                      <td class="jsuOptPresent"></td> ' +
-	'                      <td class="tipcBold">iWidth</td> ' +
-	'                      <td class="jsuParPresent"> ' +
+	'                      <td class="jsuParPresent">iWidth</td> ' +
+	'                      <td class="tipc"> ' +
 	'                        <select id="iWidth"  style="width:80px;">   ' +
 	'                      </td> ' +
 	'                      <td class="tipl">Width (px) of the Box displayed</td>  ' +
@@ -175,8 +176,8 @@ function sample1Opt (event){
 	'                    <tr class="det"> ' +
 	'                      <td class="jsuOptPresent"></td> ' +
 	'                      <td class="jsuOptPresent"></td> ' +
-	'                      <td class="tipcBold">iTblMaxHeight</td> ' +
-	'                      <td class="jsuParPresent"> ' +
+	'                      <td class="jsuParPresent">iTblMaxHeight</td> ' +
+	'                      <td class="tipc"> ' +
 	'                        <select id="iTblMaxHeight"  style="width:80px;" >   ' +
 	'                      </td> ' +
 	'                      <td class="tipl">Max Height (px) of the Table with Google Analytics Links</td>  ' +
@@ -185,8 +186,8 @@ function sample1Opt (event){
 	'                    <tr class="det"> ' +
 	'                      <td class="jsuOptPresent"></td> ' +
 	'                      <td class="jsuOptAbsent"></td> ' +
-	'                      <td class="tipcBold">szParTime</td> ' +
-	'                      <td class="' + szPar + '"> ' +
+	'                      <td id="szParTimeOpt" class="' + szParOpt + '">szParTime</td> ' +
+	'                      <td class="tipc"> ' +
 	'                        <select id="szParTime"  style="width:80px;" >   ' +
 	'                      </td> ' +
 	'                      <td class="tipl">Initial Value of <b>Google Analytics Time</b> Parameter</td>  ' +
@@ -194,8 +195,8 @@ function sample1Opt (event){
 	'                    <tr class="det"> ' +
 	'                      <td class="jsuOptPresent"></td> ' +
 	'                      <td class="jsuOptAbsent"></td> ' +
-	'                      <td class="tipcBold">bShortUrl</td> ' +
-	'                      <td class="' + szPar + '"> ' +
+	'                      <td id="bShortUrlOpt" class="' + szParOpt + '">bShortUrl</td> ' +
+	'                      <td class="tipc"> ' +
 	'                        <select id="bShortUrl"  style="width:80px;">   ' +
 	'                              <option selected value="FALSE" >false</i></option>  ' +
 	'                              <option value="TRUE" >true</option>  ' +
@@ -206,8 +207,8 @@ function sample1Opt (event){
 	'                    <tr class="det"> ' +
 	'                      <td class="jsuOptPresent"></td> ' +
 	'                      <td class="jsuOptAbsent"></td> ' +
-	'                      <td class="tipcBold">bLongUrl</td> ' +
-	'                      <td class="' + szPar + '"> ' +
+	'                      <td id="bLongUrlOpt" class="' + szParOpt + '">bLongUrl</td> ' +
+	'                      <td class="tipc"> ' +
 	'                        <select id="bLongUrl"  style="width:80px;" >   ' +
 	'                              <option selected value="FALSE" >false</i></option>  ' +
 	'                              <option value="TRUE" >true</option>  ' +
@@ -219,7 +220,7 @@ function sample1Opt (event){
 	'                 </td> ' +
 	'               </tr> ' +
 	'            </table> ' +
-	'      <input type="button" value="Apply Option" onclick="sample1OptApply()"/>' +
+	'      <input type="button" class="jsuButton" value="Apply Option" onclick="sample1OptApply()"/>' +
 	'      </div><BR/>';
   TipFix (szOpt,event,{szTitle:"gaShortUrlList() OPTION", bCloseBtn: false, iWidth: 820});	
 // Init
@@ -356,7 +357,7 @@ function sample2Opt (event){
 	'                 </td> ' +
 	'               </tr> ' +
 	'            </table> ' +
-	'      <input type="button" value="Apply Option" onclick="sample2OptApply()"/>' +
+	'      <input type="button" class="jsuButton" value="Apply Option" onclick="sample2OptApply()"/>' +
 	'      </div><BR/>';
 	TipFix (szOpt,event,{szTitle:"gaShortUrlPage() OPTION", bCloseBtn: false, iTipWidth:720});	
 // Init
