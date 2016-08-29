@@ -27,6 +27,7 @@ if (typeof (JSU_PATH_BASE) == "undefined"){
 //  "/Minify"       Version Minified
 //  "/Obfuscated"     Version Obscured
 var jsuVersion = "";
+
 var externalPluginVersion = "/Minify";
 
 // ----------------------------------- FIXED (they depend on JSU_PATH_BASE)
@@ -58,8 +59,8 @@ requirejs.config({
 
 require([ // First 3 always present
          'lan/locale-core', 
-         'core/jslog',            /* require dom-drag, json2 */
-         'core/util',							/* require json2 */
+         'core/jslog',            
+         'core/util','core/jsuCmn'							
          'core/tooltip',
          'core/googleAnal',
          'core/cSortTable',       /* require date, jslog */
