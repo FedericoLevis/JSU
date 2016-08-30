@@ -1681,14 +1681,14 @@ function testExecute(){
 }
 
 // quelli con bPresent=false possono essere presnti rundomicamente con 1 possilita su par.pos
-var ar_test = [{iCountReq:6,bPresent:true,szName:'DownloadFree',szURL:JSU_SHORT_URL_DOWNLOAD_FREE, iCountCur:0, iClickDone:0},
+var ar_test = [{iCountReq:4,bPresent:true,szName:'DownloadFree',szURL:JSU_SHORT_URL_DOWNLOAD_FREE, iCountCur:0, iClickDone:0},
               {iCountReq:7,bPresent:true,szName:'SampleAll',szURL:JSU_SHORT_URL_SAMPLE_ALL, iCountCur:0, iClickDone:0},
               {iCountReq:7,bPresent:false,szName:'SampleTIP',szURL:JSU_SHORT_URL_SAMPLE_TIP, iCountCur:0, iClickDone:0},
               {iCountReq:8,bPresent:false, szName:'SampleGA',szURL:JSU_SHORT_URL_SAMPLE_GA, iCountCur:0, iClickDone:0},
               {iCountReq:9,bPresent:false, szName:'SampleLOADING',szURL:JSU_SHORT_URL_SAMPLE_LOADING, iCountCur:0, iClickDone:0},
               {iCountReq:6,bPresent:false, szName:'SampleSORT',szURL:JSU_SHORT_URL_SAMPLE_SORT, iCountCur:0, iClickDone:0},
               {iCountReq:5,bPresent:false, szName:'DocIEPOPUP',szURL:JSU_SHORT_URL_DOC_IEPOPUP, iCountCur:0, iClickDone:0},
-              {iCountReq:4,bPresent:true, szName:'DocAll',szURL:JSU_SHORT_URL_DOC, iCountCur:0, iClickDone:0},
+              {iCountReq:8,bPresent:true, szName:'DocAll',szURL:JSU_SHORT_URL_DOC, iCountCur:0, iClickDone:0},
               {iCountReq:7,bPresent:false, szName:'DocTIP',szURL:JSU_SHORT_URL_DOC_TIP, iCountCur:0, iClickDone:0},
               {iCountReq:8,bPresent:false, szName:'DocGA',szURL:JSU_SHORT_URL_DOC_GA, iCountCur:0, iClickDone:0},
               {iCountReq:7,bPresent:false, szName:'DocLOADING',szURL:JSU_SHORT_URL_DOC_LOADING, iCountCur:0, iClickDone:0},
@@ -1712,7 +1712,7 @@ function testGetNext(){
 				el.iClickDone++;
 				el.iCountCur=0;
 				// jslogClear ();
-				//jslogObj (JSLOG_DEBUG,"Current=" +i, el);
+				jslogObj (JSLOG_DEBUG,"Current=" +i, el);
 				// jslogObj (JSLOG_DEBUG,"arTest", ar_test);
 				// PRINT
 				var szTbl = '<table class="det" width="500px">' +
@@ -1724,14 +1724,14 @@ function testGetNext(){
 				  '  <td width="40pxpx" class="tipl">Req</td>' +
 				  '</tr>';
 				for (var k=0; k< ar_test.length; k++){
-					var el = ar_test[k];
-					if (el.bPresent){
+					var elPrint = ar_test[k];
+					if (elPrint.bPresent){
 						
 					var szRow = '<td class="tipr">' + k + '</td>' +
-					'<td class="tipl">' + el.szName + '</td>' +
-				  '  <td class="tipr">' + el.iClickDone + '</td>' +
-				  '  <td class="tipr">' + el.iCountCur + '</td>' +
-				  '  <td class="tipr">' + el.iCountReq + '</td>' +
+					'<td class="tipl">' + elPrint.szName + '</td>' +
+				  '  <td class="tipr">' + elPrint.iClickDone + '</td>' +
+				  '  <td class="tipr">' + elPrint.iCountCur + '</td>' +
+				  '  <td class="tipr">' + elPrint.iCountReq + '</td>' +
 				  '</tr>';
 					szTbl += szRow;
 					}
@@ -1739,6 +1739,7 @@ function testGetNext(){
 				szTbl += '</tr></table>';
 				var div = getElementById2 ('divTestOut');
 				divTestOut.innerHTML = szTbl;
+				jslog (JSLOG_DEBUG,fn + "return szURL" + el.szURL);
 				return el.szURL;
 			}
 		}	
