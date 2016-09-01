@@ -16,17 +16,16 @@ Copyright by Federico Levis - JSUtily https://github.com/FedericoLevis/JSU
 This file may be freely distributed/modified under the MIT license. 
 ========================================================================================= */
 
-/* PATh Fisso e non ci sono i file non FREE: cValidate */
-
-
 /* the BASE Path: Path of ..../jsu folder. 
  a) Fixed 
  b) relative Path (relative to HTML including this file)
 */  
 
 if (typeof (JSU_PATH_BASE) == "undefined"){
+    // ONLY for LOCAL DEVELOPMENT
+	var JSU_PATH_BASE = '../..';  // Default: it is the setting for the JSU sample
     // GIT
-    var JSU_PATH_BASE="https://rawgit.com/FedericoLevis/JSU/master";
+    // var JSU_PATH_BASE="https://rawgit.com/FedericoLevis/JSU/master";
 }
 
 // ===================================== OPTION: JSU with Comment or Minified   
@@ -61,7 +60,7 @@ requirejs.config({
         'core': 'core' + jsuVersion,
         'lan': 'locale/EN',
 //      'lan': 'locale/ITA',     // For Italian Language
-        'popup': 'core/IEPopup' + jsuVersion,
+        'popup': 'core/IEPopup' + jsuVersion
     },
     shim: {
       'core/jslog': ['core/dom-drag'],
@@ -81,7 +80,8 @@ require([ // First 3 always present
          'core/loadingDiv',							
          'core/cSortTable',       /* require date */
          'popup/Popup',
-         'core/loadingDiv'							
+         'core/loadingDiv',							
+         'core/cValidate'        /* require date, Popup */
 		   ],
     	   function()	{	
 							if (typeof (jslog_init) == "function"){
@@ -91,28 +91,24 @@ require([ // First 3 always present
 						} 
    );
 
-
-var jsuLoadedTmo = null;   
-
+// ----------------------------------  ONLY for  GOOGLE ANALYTICS -  this part can be removed 
 if (typeof (JSU_GA_EN) != "undefined" && JSU_GA_EN){
-	// ----------------------------------  ONLY for  GOOGLE ANALYTICS -  this part can be removed 
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
   	  if (typeof (JSU_GA_TRACKING_ID) == "undefined"){
   	  	// we use the default TrackingId theat identify FREE JSU
-  	  	var JSU_GA_TRACKING_ID = 'UA-83225633-1';
-  	  }	
-	    ga('create',JSU_GA_TRACKING_ID , 'auto');
-	    ga('send', 'pageview');
-} 
+  	  	var JSU_GA_TRACKING_ID = 'UA-83225633-1'; 
+  	  }
+      ga('create',JSU_GA_TRACKING_ID , 'auto');
+      ga('send', 'pageview');
+  } 
 // ------------------------------------------------------------------------------
-
+var jsuLoadedTmo = null;   
 
 function jsu_loaded_1(){
-
   if (typeof (JSU_LOADED_TMO_MS) == "undefined"){
     if (typeof (jsu_loaded) != "undefined"){
      return jsu_loaded();

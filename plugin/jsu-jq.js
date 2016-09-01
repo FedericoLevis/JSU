@@ -19,7 +19,10 @@ This file may be freely distributed/modified under the MIT license.
 */  
 
 if (typeof (JSU_PATH_BASE) == "undefined"){
-	var JSU_PATH_BASE = '../..';  // DEfault: it is the setting for the JSU sample
+    // ONLY for LOCAL DEVELOPMENT
+	var JSU_PATH_BASE = '../..';  // Default: it is the setting for the JSU sample
+    // GIT
+    // var JSU_PATH_BASE="https://rawgit.com/FedericoLevis/JSU/master";
 }
 
 //===================================== OPTION: JSU with Comment or Minified   
@@ -27,7 +30,6 @@ if (typeof (JSU_PATH_BASE) == "undefined"){
 //  "/Minify"       Version Minified
 //  "/Obfuscated"     Version Obscured
 var jsuVersion = "";
-
 var externalPluginVersion = "/Minify";
 
 // ----------------------------------- FIXED (they depend on JSU_PATH_BASE)
@@ -36,6 +38,11 @@ var JSU_PATH_IMG =   JSU_PATH_BASE + "/images/";
 var JSU_PATH_ABOUT_IMG = "https://rawgit.com/FedericoLevis/images/master/jsuAbout/";
 var JSU_PATH_POPUP_HTML = JSU_PATH_BASE +  "/core/IEPopup/";
 
+
+if (typeof (JSU_GA_EN) == "undefined"){
+	// DEFAULT:  Enable GoogleAnaltycs
+	var JSU_GA_EN = true; 
+}
 
 //----------------------------------- MODULE CONFIGURATION
 requirejs.config({
@@ -59,9 +66,10 @@ requirejs.config({
 
 require([ // First 3 always present
          'lan/locale-core', 
-         'core/jslog',            
-         'core/util','core/jsuCmn'							
+         'core/jslog',            /* require dom-drag, json2 */
+         'core/jsuCmn','core/util',							/* require json2 */
          'core/tooltip',
+         'core/prettify-jsu',      /* only for code- prettify */
          'core/googleAnal',
          'core/cSortTable',       /* require date, jslog */
          'core/loadingDiv',							
@@ -77,7 +85,23 @@ require([ // First 3 always present
 } 
 );
 
+//----------------------------------  ONLY for  GOOGLE ANALYTICS -  this part can be removed 
+if (typeof (JSU_GA_EN) != "undefined" && JSU_GA_EN){
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+	  if (typeof (JSU_GA_TRACKING_ID) == "undefined"){
+	  	// we use the default TrackingId theat identify FREE JSU
+	  	var JSU_GA_TRACKING_ID = 'UA-83225633-1'; 
+	  }
+    ga('create',JSU_GA_TRACKING_ID , 'auto');
+    ga('send', 'pageview');
+} 
+//------------------------------------------------------------------------------
+
+  
 var jsuLoadedTmo = null;   
 
 function jsu_loaded_1(){
