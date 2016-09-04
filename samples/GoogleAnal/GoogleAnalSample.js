@@ -1,8 +1,696 @@
-/***************************************************************************/
-/*                                                                         */
-/*  This obfuscated code was created by Javascript Obfuscator Free Version.*/
-/*  Javascript Obfuscator Free Version can be downloaded here              */
-/*  http://javascriptobfuscator.com                                        */
-/*                                                                         */
-/***************************************************************************/
-var _$_15eb=["all_time","https://goo.gl/HnNqnM","iWidth","WIDTH","iTblMaxHeight","TBL_MAX_HEIGHT","szParTime","PAR_TIME","szShortUrl","googleAnalListJQPopup","className","googleAnalListJQPopupDisabled","disabled","bShowCbShortUrl","bShowCbLongUrl","bShortUrl","TRUE","bLongUrl","[sample2OptApply()] ","value","szShortUrl2","szParTime2","bNewWindow","bNewWindow2","opt_ga_page","[GoogleAnalSample.js sample1)] ","JSU DOWNLOAD","JSU FREE - SAMPLES","JSU FREE - DOC","Download JSU.ZIP FREE","Main JSU Sample","Tooltip Sample","LoadingDiv Sample","JSLog Sample","SortTable Sample","IE Popup Sample","JSU Documentation","JSU Tooltip Documentation","JSU LoadingDiv Documentation","JSU JSLog Doc","JSU SortTable Documentation","JSU IE Popup Doc","JSU Google Analitycs","","jsuParPresent","<div align=\"left\" style=\"margin-top:5px;margin-left:5px;margin-bottom:0px;\"> <table class=\"note\"><tr>","  <td><input class=\"note\"></td> ","  <td> <label style=\"background-color:Yellow;\">Yellow Options</label> are NOT avaliable in FREE JSU -  see &nbsp;","      <a id=\"gaShortUrlListOpt\" class=\"tipLink\" href=\"javascript:showJSUVersionParLimit();\">JSU Options available only in FULL Version</a></td>","</tr></table></div>","jsuParAbsent"," <div align=\"center\" style=\"width:700px\"><table class=\"tipNoBorder\" width=\"800px\"> ","  <table class=\"tipNoBorder\" width =\"100%\"> ","               <tr> ","                 <td class=\"tipr\" > ","                  <table class=\"det\" BORDER=\"2\" cellpadding=\"3\" cellspacing=\"3\"  width =\"100%\"> ","                    <tr class=\"detTitle\"><td colspan=\"5\">Main <a class=\"tipLinkJsLog\" href=\"https://rawgit.com/FedericoLevis/JSUDoc/master/googleAnal.js/global.html#gaShortUrlList\" target=\"_blank\">gaShortUrlList() API Options</a></td></tr> ","                    <tr class=\"detTitle2\"><td >FULL<BR/>JSU</td><td>FREE<BR/>JSU</td><td width=\"70px\">OPTION</td><td width=\"120px\">VALUE</td><td>DESCRIPTION</td></tr> ","                    <tr class=\"det\"> ","                      <td class=\"jsuOptPresent\"></td> ","                      <td class=\"jsuParPresent\">iWidth</td> ","                      <td class=\"tipc\"> ","                        <select id=\"iWidth\"  style=\"width:80px;\">   ","                      </td> ","                      <td class=\"tipl\">Width (px) of the Box displayed</td>  ","                    </tr> ","                      <td class=\"jsuParPresent\">iTblMaxHeight</td> ","                        <select id=\"iTblMaxHeight\"  style=\"width:80px;\" >   ","                      <td class=\"tipl\">Max Height (px) of the Table with Google Analytics Links</td>  ","                      <td class=\"jsuOptAbsent\"></td> ","                      <td id=\"szParTimeOpt\" class=\"","\">szParTime</td> ","                        <select id=\"szParTime\"  style=\"width:80px;\" >   ","                      <td class=\"tipl\">Initial Value of <b>Google Analytics Time</b> Parameter</td>  ","                      <td id=\"bShowCbShortUrlOpt\" class=\"","\">bShowCbShortUrl</td> ","                        <select id=\"bShowCbShortUrl\"  style=\"width:80px;\">   ","                              <option selected value=\"FALSE\" >false</i></option>  ","                              <option value=\"TRUE\" >true</option>  ","                         </select>                 ","                      <td class=\"tipl\">Show Column ShortURL</td>  ","                      <td id=\"bShortUrlOpt\" class=\"","\">bShortUrl</td> ","                        <select id=\"bShortUrl\"  style=\"width:80px;\">   ","                      <td class=\"tipl\">Inital Value of CheckBox to Show Column ShortURL</td>  ","                      <td id=\"bShowCbLongUrlOpt\" class=\"","\">bShowCbLongUrl</td> ","                        <select id=\"bShowCbLongUrl\"  style=\"width:80px;\" >   ","                      <td class=\"tipl\">Show Column LongURL</td>  ","                      <td id=\"bLongUrlOpt\" class=\"","\">bLongUrl</td> ","                        <select id=\"bLongUrl\"  style=\"width:80px;\" >   ","                      <td class=\"tipl\">Inital Value of CheckBox to Show Column LongURL</td>  ","                   </table>\x09 ","                 </td> ","               </tr> ","            </table> ","      <input type=\"button\" class=\"jsuButton\" value=\"Apply Options\" onclick=\"sample1OptApply()\"/>","      </div><BR/>","gaShortUrlList() OPTION","NO LIMIT","month","week","day","two_hours","FALSE","Show the TipFix with the List of Links to <b>Google Analytics</b>","Show the JQPopup with the List of Links to <b>Google Analytics</b>","Show the Box to Set <b>gaShortUrlList Option</b>","[sample2()] "," <div align=\"center\" style=\"width:700px\"><table class=\"tipNoBorder\" width=\"700px\"> ","<tr>","<table class=\"sampleNoteOpt\"><tr>","   <td class=\"sampleNoteOpt\"><input class=\"sampleNoteOpt\"></td>","   <td class=\"tipl\">","     <b>Change Options</b>, click button <b>Apply Options</b> and click  <b>GoogleAnalytic Icon</b> to see the Option effect","   </td>","</tr>","</table>","                    <tr class=\"detTitle\"><td colspan=\"5\">Main <a class=\"tipLinkJsLog\" href=\"https://rawgit.com/FedericoLevis/JSUDoc/master/googleAnal.js/global.html#gaShortUrlPage\" target=\"_blank\">gaShortUrlPage() API Options</a></td></tr> ","                    <tr class=\"detTitle2\"><td width=\"70px\">OPTION</td><td width=\"150px\">VALUE</td><td>DESCRIPTION</td></tr> ","                      <td class=\"tipcBold\">szShortUrl</td> ","                      <td class=\"tipl\"> ","                        <input id=\"szShortUrl2\" style=\"width:100%;\">   ","                      <td class=\"tipl\">Short URL retrieved by goo.gl</td>  ","                      <td class=\"tipcBold\">szParTime</td> ","                        <select id=\"szParTime2\"  style=\"width:100px;\">   ","                      <td class=\"tipcBold\">bNewWindow</td> ","                        <select id=\"bNewWindow2\"  style=\"width:100px;\" >   ","                      <td class=\"tipl\">if true:Show Google Analytic in a New Page</td>  ","      <div align=\"center\" style=\"width:100%;margin-top:20px;margin-bottom:2px;\"><input type=\"button\" class=\"jsuButton\" value=\"Apply Options\" onclick=\"sample2OptApply()\"/></div>","gaShortUrlPage() OPTION","Show the <b>Google Analytics Page</b> ","Show the Box to Set the <b>Options</b> of the Google Analytics disaplayed clicking in the Button on this sample","/**\x0A","* Call API gaShortUrlList() \x0A","* \x0A","* @param event \x0A","* @param bJQPopup {Boolean}  true if we have to show the List in JQPopup \x0A","*/ \x0A","\x09function sample1(event,bJQPopup){ \x0A"," var GA_CAT_DOWN = \"JSU DOWNLOAD\"; \x0A","\x09var GA_CAT_SAMPLE_FREE = \"JSU FREE - SAMPLES\"; \x0A","\x09var GA_CAT_DOC_FREE = \"JSU FREE - DOC\"; \x0A","\x09 \x0A","  // Prepare arObjGaList: only shortUrl is mandatory   \x0A","  // In this case we populate all fields \x0A","  var arObjGaList = [ \x0A","       {shortUrl: JSU_SHORT_URL_DOWNLOAD_FREE, longUrl: JSU_LONG_URL_DOWNLOAD_PAGE_FREE , cat:GA_CAT_DOWN,desc:'Download JSU.ZIP FREE'}, \x0A","       {shortUrl: JSU_SHORT_URL_SAMPLE_ALL, longUrl: JSU_LONG_URL_SAMPLE_ALL,cat:GA_CAT_SAMPLE_FREE, desc:'Main JSU Sample'}, \x0A","       {shortUrl: JSU_SHORT_URL_SAMPLE_TIP, longUrl: JSU_LONG_URL_SAMPLE_TIP,cat:GA_CAT_SAMPLE_FREE, desc:'Tooltip Sample'}, \x0A","       {shortUrl: JSU_SHORT_URL_SAMPLE_LOADING, longUrl: JSU_LONG_URL_SAMPLE_LOADING, cat:GA_CAT_SAMPLE_FREE,desc:'LoadingDiv Sample'}, \x0A","       {shortUrl: JSU_SHORT_URL_SAMPLE_JSLOG, longUrl: JSU_LONG_URL_SAMPLE_JSLOG, cat:GA_CAT_SAMPLE_FREE,desc:'JSLog Sample'}, \x0A","       {shortUrl: JSU_SHORT_URL_SAMPLE_SORT, longUrl: JSU_LONG_URL_SAMPLE_SORT, cat:GA_CAT_SAMPLE_FREE, desc:'SortTable Sample'}, \x0A","       {shortUrl: JSU_SHORT_URL_SAMPLE_IEPOPUP, longUrl: JSU_LONG_URL_SAMPLE_IEPOPUP, cat:GA_CAT_SAMPLE_FREE,desc:'IE Popup Sample'}, \x0A","       // -------------------------- \x0A","       {shortUrl: JSU_SHORT_URL_DOC, longUrl: JSU_LONG_URL_DOC, cat:GA_CAT_DOC_FREE,desc:'JSU Documentation'}, \x0A","       {shortUrl: JSU_SHORT_URL_DOC_TIP, longUrl: JSU_LONG_URL_DOC_TIP, cat:GA_CAT_DOC_FREE,desc:'JSU Tooltip Documentation'}, \x0A","       {shortUrl: JSU_SHORT_URL_DOC_LOADING, longUrl: JSU_LONG_URL_DOC_LOADING, cat:GA_CAT_DOC_FREE,desc:'JSU LoadingDiv Documentation'}, \x0A","       {shortUrl: JSU_SHORT_URL_DOC_JSLOG, longUrl: JSU_LONG_URL_DOC_JSLOG, cat:GA_CAT_DOC_FREE,desc:'JSU JSLog Doc'}, \x0A","       {shortUrl: JSU_SHORT_URL_DOC_SORT, longUrl: JSU_LONG_URL_DOC_SORT, cat:GA_CAT_DOC_FREE,desc:'JSU SortTable Documentation'}, \x0A","       {shortUrl: JSU_SHORT_URL_DOC_IEPOPUP, longUrl: JSU_LONG_URL_DOC_IEPOPUP, cat:GA_CAT_DOC_FREE,desc:'JSU IE Popup Doc'} \x0A","     ]; \x0A","  // show the TipFix with the List of Link \x0A","  gaShortUrlList(arObjGaList,event,{ \x0A","        bJQPopup: bJQPopup, \x0A","    \x09szTitle:'JSU Google Analitycs', \x0A","    \x09iWidth: opt_ga_list.iWidth,  // Width of the Box \x0A","    \x09iTblMaxHeight: opt_ga_list.iTblMaxHeight,  // Max Height\x09 of the Table with the LIst of Google Analitycs Links \x0A","    \x09szParTime: opt_ga_list.szParTime,   // Initial Par Time \x0A","    \x09bShortUrl: opt_ga_list.bShortUrl,   // ShortUrl visible or not at startup \x0A","    \x09bLongUrl: opt_ga_list.bLongUrl  // LongUrl visible or not at startup \x0A","    });","JS Code of SAMPLE 1: Google Analytics List","gaShortUrlPage(opt_ga_page.szShortUrl,  // e.g.: 'https://goo.gl/HnNqnM' \x0A","   { \x0A","     bNewWindow: opt_ga_page.bNewWindow,  // e.g: true \x0A","     szParTime: opt_ga_page.szParTime   // e.g: 'day' \x0A","   });","JS Code of SAMPLE 2: Google Analytics Page"];var JSLOG_LEV=0;var opt_ga_list={iWidth:900,iTblMaxHeight:500,szParTime:_$_15eb[0],bShowCbShortUrl:true,bShowCbLongUrl:true,bShortUrl:false,bLongUrl:false};var opt_ga_page={szShortUrl:_$_15eb[1],bNewWindow:true,szParTime:_$_15eb[0]};function jsu_loaded(){initSampleCmn();sample_init()}function sample_init(){opt_ga_list[_$_15eb[2]]= GA_DEF[_$_15eb[3]];opt_ga_list[_$_15eb[4]]= GA_DEF[_$_15eb[5]];opt_ga_list[_$_15eb[6]]= GA_DEF[_$_15eb[7]];opt_ga_page[_$_15eb[6]]= GA_DEF[_$_15eb[7]];opt_ga_page[_$_15eb[8]]= JSU_SHORT_URL_DOWNLOAD_FREE;if(isJsuFree()){var dD=getElementById2(_$_15eb[9],true);dD[_$_15eb[10]]= _$_15eb[11];dD[_$_15eb[12]]= true;opt_ga_list[_$_15eb[13]]= false;opt_ga_list[_$_15eb[14]]= false}}function sample1OptApply(){opt_ga_list[_$_15eb[2]]= selectGetSelVal(getElementById2(_$_15eb[2],true));opt_ga_list[_$_15eb[4]]= selectGetSelVal(getElementById2(_$_15eb[4],true));opt_ga_list[_$_15eb[6]]= selectGetSelVal(getElementById2(_$_15eb[6],true));opt_ga_list[_$_15eb[15]]= (selectGetSelVal(getElementById2(_$_15eb[15],true))== _$_15eb[16]);opt_ga_list[_$_15eb[17]]= (selectGetSelVal(getElementById2(_$_15eb[17],true))== _$_15eb[16]);opt_ga_list[_$_15eb[13]]= (selectGetSelVal(getElementById2(_$_15eb[13],true))== _$_15eb[16]);opt_ga_list[_$_15eb[14]]= (selectGetSelVal(getElementById2(_$_15eb[14],true))== _$_15eb[16])}function sample2OptApply(){var s=_$_15eb[18];opt_ga_page[_$_15eb[8]]= getElementById2(_$_15eb[20],true)[_$_15eb[19]];opt_ga_page[_$_15eb[6]]= selectGetSelVal(getElementById2(_$_15eb[21],true));opt_ga_page[_$_15eb[22]]= (selectGetSelVal(getElementById2(_$_15eb[23],true))== _$_15eb[16]);jslogObj(JSLOG_DEBUG,s+ _$_15eb[24],opt_ga_page)}function sample1(a,dE){var d=_$_15eb[25];var bq=_$_15eb[26];var br=_$_15eb[27];var bo=_$_15eb[28];var bn=[{shortUrl:JSU_SHORT_URL_DOWNLOAD_FREE,longUrl:JSU_LONG_URL_DOWNLOAD_PAGE_FREE,cat:bq,desc:_$_15eb[29]},{shortUrl:JSU_SHORT_URL_SAMPLE_ALL,longUrl:JSU_LONG_URL_SAMPLE_ALL,cat:br,desc:_$_15eb[30]},{shortUrl:JSU_SHORT_URL_SAMPLE_TIP,longUrl:JSU_LONG_URL_SAMPLE_TIP,cat:br,desc:_$_15eb[31]},{shortUrl:JSU_SHORT_URL_SAMPLE_LOADING,longUrl:JSU_LONG_URL_SAMPLE_LOADING,cat:br,desc:_$_15eb[32]},{shortUrl:JSU_SHORT_URL_SAMPLE_JSLOG,longUrl:JSU_LONG_URL_SAMPLE_JSLOG,cat:br,desc:_$_15eb[33]},{shortUrl:JSU_SHORT_URL_SAMPLE_SORT,longUrl:JSU_LONG_URL_SAMPLE_SORT,cat:br,desc:_$_15eb[34]},{shortUrl:JSU_SHORT_URL_SAMPLE_IEPOPUP,longUrl:JSU_LONG_URL_SAMPLE_IEPOPUP,cat:br,desc:_$_15eb[35]},{shortUrl:JSU_SHORT_URL_DOC,longUrl:JSU_LONG_URL_DOC,cat:bo,desc:_$_15eb[36]},{shortUrl:JSU_SHORT_URL_DOC_TIP,longUrl:JSU_LONG_URL_DOC_TIP,cat:bo,desc:_$_15eb[37]},{shortUrl:JSU_SHORT_URL_DOC_LOADING,longUrl:JSU_LONG_URL_DOC_LOADING,cat:bo,desc:_$_15eb[38]},{shortUrl:JSU_SHORT_URL_DOC_JSLOG,longUrl:JSU_LONG_URL_DOC_JSLOG,cat:bo,desc:_$_15eb[39]},{shortUrl:JSU_SHORT_URL_DOC_SORT,longUrl:JSU_LONG_URL_DOC_SORT,cat:bo,desc:_$_15eb[40]},{shortUrl:JSU_SHORT_URL_DOC_IEPOPUP,longUrl:JSU_LONG_URL_DOC_IEPOPUP,cat:bo,desc:_$_15eb[41]}];gaShortUrlList(bn,a,{bJQPopup:dE,szTitle:_$_15eb[42],iWidth:opt_ga_list[_$_15eb[2]],iTblMaxHeight:opt_ga_list[_$_15eb[4]],szParTime:opt_ga_list[_$_15eb[6]],bShowCbShortUrl:opt_ga_list[_$_15eb[13]],bShowCbLongUrl:opt_ga_list[_$_15eb[14]],bShortUrl:opt_ga_list[_$_15eb[15]],bLongUrl:opt_ga_list[_$_15eb[17]]})}function sample1Opt(a){var dW=_$_15eb[43];var S=_$_15eb[44];if(isJsuFree()){dW= _$_15eb[45]+ _$_15eb[46]+ _$_15eb[47]+ _$_15eb[48]+ _$_15eb[49];S= _$_15eb[50]};var dX=dW+ _$_15eb[51]+ _$_15eb[52]+ _$_15eb[53]+ _$_15eb[54]+ _$_15eb[55]+ _$_15eb[56]+ _$_15eb[57]+ _$_15eb[58]+ _$_15eb[59]+ _$_15eb[59]+ _$_15eb[60]+ _$_15eb[61]+ _$_15eb[62]+ _$_15eb[63]+ _$_15eb[64]+ _$_15eb[65]+ _$_15eb[58]+ _$_15eb[59]+ _$_15eb[59]+ _$_15eb[66]+ _$_15eb[61]+ _$_15eb[67]+ _$_15eb[63]+ _$_15eb[68]+ _$_15eb[65]+ _$_15eb[58]+ _$_15eb[59]+ _$_15eb[69]+ _$_15eb[70]+ S+ _$_15eb[71]+ _$_15eb[61]+ _$_15eb[72]+ _$_15eb[63]+ _$_15eb[73]+ _$_15eb[65]+ _$_15eb[58]+ _$_15eb[59]+ _$_15eb[69]+ _$_15eb[74]+ S+ _$_15eb[75]+ _$_15eb[61]+ _$_15eb[76]+ _$_15eb[77]+ _$_15eb[78]+ _$_15eb[79]+ _$_15eb[63]+ _$_15eb[80]+ _$_15eb[65]+ _$_15eb[58]+ _$_15eb[59]+ _$_15eb[69]+ _$_15eb[81]+ S+ _$_15eb[82]+ _$_15eb[61]+ _$_15eb[83]+ _$_15eb[77]+ _$_15eb[78]+ _$_15eb[79]+ _$_15eb[63]+ _$_15eb[84]+ _$_15eb[65]+ _$_15eb[58]+ _$_15eb[59]+ _$_15eb[69]+ _$_15eb[85]+ S+ _$_15eb[86]+ _$_15eb[61]+ _$_15eb[87]+ _$_15eb[77]+ _$_15eb[78]+ _$_15eb[79]+ _$_15eb[63]+ _$_15eb[88]+ _$_15eb[65]+ _$_15eb[58]+ _$_15eb[59]+ _$_15eb[69]+ _$_15eb[89]+ S+ _$_15eb[90]+ _$_15eb[61]+ _$_15eb[91]+ _$_15eb[77]+ _$_15eb[78]+ _$_15eb[79]+ _$_15eb[63]+ _$_15eb[92]+ _$_15eb[65]+ _$_15eb[93]+ _$_15eb[94]+ _$_15eb[95]+ _$_15eb[96]+ _$_15eb[97]+ _$_15eb[98];TipFix(dX,a,{szTitle:_$_15eb[99],bCloseBtn:false,iWidth:820});var dQ=[[GA_DEF[_$_15eb[3]]- 400,GA_DEF[_$_15eb[3]]- 400],[GA_DEF[_$_15eb[3]]- 200,GA_DEF[_$_15eb[3]]- 200],[GA_DEF[_$_15eb[3]],GA_DEF[_$_15eb[3]]],[GA_DEF[_$_15eb[3]]+ 200,GA_DEF[_$_15eb[3]]+ 200]];selectPopulate(getElementById2(_$_15eb[2],true),dQ,opt_ga_list[_$_15eb[2]]);var dP=[[undefined,_$_15eb[100]],[150,150],[300,300],[500,500]];selectPopulate(getElementById2(_$_15eb[4],true),dP,opt_ga_list[_$_15eb[4]]);var dO=[[GA_PAR_TIME[_$_15eb[0]],GA_PAR_TIME[_$_15eb[0]]],[GA_PAR_TIME[_$_15eb[101]],GA_PAR_TIME[_$_15eb[101]]],[GA_PAR_TIME[_$_15eb[102]],GA_PAR_TIME[_$_15eb[102]]],[GA_PAR_TIME[_$_15eb[103]],GA_PAR_TIME[_$_15eb[103]]],[GA_PAR_TIME[_$_15eb[104]],GA_PAR_TIME[_$_15eb[104]]]];var dS=getElementById2(_$_15eb[6],true);var dT=getElementById2(_$_15eb[15],true);var dR=getElementById2(_$_15eb[17],true);var dV=getElementById2(_$_15eb[13],true);var dU=getElementById2(_$_15eb[14],true);selectPopulate(dS,dO,opt_ga_list[_$_15eb[6]]);selectSelValue(dV,opt_ga_list[_$_15eb[13]]?_$_15eb[16]:_$_15eb[105]);selectSelValue(dU,opt_ga_list[_$_15eb[14]]?_$_15eb[16]:_$_15eb[105]);selectSelValue(dT,opt_ga_list[_$_15eb[15]]?_$_15eb[16]:_$_15eb[105]);selectSelValue(dR,opt_ga_list[_$_15eb[17]]?_$_15eb[16]:_$_15eb[105]);if(isJsuFree()){dS[_$_15eb[12]]= true;dT[_$_15eb[12]]= true;dR[_$_15eb[12]]= true;dV[_$_15eb[12]]= true;dU[_$_15eb[12]]= true}}function sample1aTip(a){Tip(_$_15eb[106])}function sample1bTip(a){Tip(_$_15eb[107])}function sample1OptTip(a){Tip(_$_15eb[108])}function sample2(){var s=_$_15eb[109];jslogObj(JSLOG_DEBUG,s+ _$_15eb[24],opt_ga_page);gaShortUrlPage(opt_ga_page[_$_15eb[8]],{bNewWindow:opt_ga_page[_$_15eb[22]],szParTime:opt_ga_page[_$_15eb[6]]})}function sample2Opt(a){var dW=_$_15eb[43];var dX=_$_15eb[110]+ _$_15eb[111]+ _$_15eb[112]+ _$_15eb[113]+ _$_15eb[114]+ _$_15eb[115]+ _$_15eb[116]+ _$_15eb[117]+ _$_15eb[118]+ _$_15eb[117]+ _$_15eb[53]+ _$_15eb[54]+ _$_15eb[55]+ _$_15eb[119]+ _$_15eb[120]+ _$_15eb[58]+ _$_15eb[121]+ _$_15eb[122]+ _$_15eb[123]+ _$_15eb[63]+ _$_15eb[124]+ _$_15eb[65]+ _$_15eb[58]+ _$_15eb[125]+ _$_15eb[61]+ _$_15eb[126]+ _$_15eb[63]+ _$_15eb[73]+ _$_15eb[65]+ _$_15eb[58]+ _$_15eb[127]+ _$_15eb[61]+ _$_15eb[128]+ _$_15eb[77]+ _$_15eb[78]+ _$_15eb[79]+ _$_15eb[63]+ _$_15eb[129]+ _$_15eb[65]+ _$_15eb[93]+ _$_15eb[94]+ _$_15eb[95]+ _$_15eb[96]+ _$_15eb[130]+ _$_15eb[98];TipFix(dX,a,{szTitle:_$_15eb[131],bCloseBtn:false,iTipWidth:720});var dO=[[GA_PAR_TIME[_$_15eb[0]],GA_PAR_TIME[_$_15eb[0]]],[GA_PAR_TIME[_$_15eb[101]],GA_PAR_TIME[_$_15eb[101]]],[GA_PAR_TIME[_$_15eb[102]],GA_PAR_TIME[_$_15eb[102]]],[GA_PAR_TIME[_$_15eb[103]],GA_PAR_TIME[_$_15eb[103]]],[GA_PAR_TIME[_$_15eb[104]],GA_PAR_TIME[_$_15eb[104]]]];var dS=getElementById2(_$_15eb[21],true);var eb=getElementById2(_$_15eb[23],true);selectPopulate(dS,dO,opt_ga_page[_$_15eb[6]]);selectSelValue(eb,opt_ga_page[_$_15eb[22]]?_$_15eb[16]:_$_15eb[105]);getElementById2(_$_15eb[20],true)[_$_15eb[19]]= opt_ga_page[_$_15eb[8]]}function sample2Tip(a){Tip(_$_15eb[132])}function sample2OptTip(a){Tip(_$_15eb[133])}function sampleCode1(a){var b=_$_15eb[134]+ _$_15eb[135]+ _$_15eb[136]+ _$_15eb[137]+ _$_15eb[138]+ _$_15eb[139]+ _$_15eb[140]+ _$_15eb[141]+ _$_15eb[142]+ _$_15eb[143]+ _$_15eb[144]+ _$_15eb[145]+ _$_15eb[146]+ _$_15eb[147]+ _$_15eb[148]+ _$_15eb[149]+ _$_15eb[150]+ _$_15eb[151]+ _$_15eb[152]+ _$_15eb[153]+ _$_15eb[154]+ _$_15eb[155]+ _$_15eb[156]+ _$_15eb[157]+ _$_15eb[158]+ _$_15eb[159]+ _$_15eb[160]+ _$_15eb[161]+ _$_15eb[162]+ _$_15eb[163]+ _$_15eb[164]+ _$_15eb[165]+ _$_15eb[166]+ _$_15eb[167]+ _$_15eb[168]+ _$_15eb[169]+ _$_15eb[170]+ _$_15eb[171]+ _$_15eb[172];TipFixCode(b,a,{szTitle:_$_15eb[173],iTipWidth:1000,iTipMaxHeight:500})}function sampleCode2(a){var b=_$_15eb[174]+ _$_15eb[175]+ _$_15eb[176]+ _$_15eb[177]+ _$_15eb[178];TipFixCode(b,a,{szTitle:_$_15eb[179],iTipWidth:1000,iTipMaxHeight:500})}
+// ==================================================================== CONSTANT
+
+
+
+//var JSLOG_LEV = 31;
+var JSLOG_LEV = 0;
+
+
+
+/*---------------------------- VAR ------*/
+
+
+
+/* Current values */
+var opt_ga_list = {
+	iWidth : 900,
+	iTblMaxHeight : 500,
+	szParTime : 'all_time',
+	bShowCbShortUrl : true,
+	bShowCbLongUrl : true,
+	bShortUrl : false,
+	bLongUrl : false
+};
+
+
+/* Current values */
+var opt_ga_page = {
+	szShortUrl : "https://goo.gl/HnNqnM", 
+	bNewWindow : true,
+	szParTime : 'all_time'
+};
+
+
+
+/**
+* Called when jsu is loaded
+*/
+function jsu_loaded(){
+  // [Optional] Init jslog with JSLOG_LEV 
+  // jslog_init(JSLOG_LEV);
+	initSampleCmn(); // manage optional PAR show_opt, only for developer
+	sample_init();
+}
+
+
+/**
+* Called when jsu is loaded
+*/
+function sample_init(){
+ 	
+	opt_ga_list.iWidth = GA_DEF.WIDTH ;	
+	opt_ga_list.iTblMaxHeight = GA_DEF.TBL_MAX_HEIGHT;
+	opt_ga_list.szParTime = GA_DEF.PAR_TIME;
+	opt_ga_page.szParTime = GA_DEF.PAR_TIME;
+	opt_ga_page.szShortUrl = JSU_SHORT_URL_DOWNLOAD_FREE;
+  if (isJsuFree()){
+  	// disable
+  	var input = getElementById2("googleAnalListJQPopup", true);
+  	input.className = "googleAnalListJQPopupDisabled";
+  	input.disabled = true;
+  	opt_ga_list.bShowCbShortUrl = false;
+  	opt_ga_list.bShowCbLongUrl = false;
+  }
+	
+}
+
+
+
+/* ---------------------------------------------------------
+ * 				SAMPLE_1
+ --------------------------------------------------------- */
+
+//------------------------------ PAR ALLOWED ALWAYS (FREE and FULL)
+
+
+
+/**
+ * Apply Sample1Opt
+ */
+function sample1OptApply(){
+	opt_ga_list.iWidth = selectGetSelVal (getElementById2("iWidth",true)); 
+	opt_ga_list.iTblMaxHeight = selectGetSelVal (getElementById2("iTblMaxHeight",true)); 
+	opt_ga_list.szParTime = selectGetSelVal (getElementById2("szParTime",true)); 
+	opt_ga_list.bShortUrl = (selectGetSelVal (getElementById2("bShortUrl",true)) == "TRUE");
+	opt_ga_list.bLongUrl = (selectGetSelVal (getElementById2("bLongUrl",true)) == "TRUE");
+	opt_ga_list.bShowCbShortUrl = (selectGetSelVal (getElementById2("bShowCbShortUrl",true)) == "TRUE");
+	opt_ga_list.bShowCbLongUrl = (selectGetSelVal (getElementById2("bShowCbLongUrl",true)) == "TRUE");
+}
+
+/**
+ * Apply Sample2Opt
+ */
+function sample2OptApply(){
+	var fn = "[sample2OptApply()] ";
+	opt_ga_page.szShortUrl = getElementById2("szShortUrl2",true).value; 
+	opt_ga_page.szParTime = selectGetSelVal (getElementById2("szParTime2",true)); 
+	opt_ga_page.bNewWindow = (selectGetSelVal (getElementById2("bNewWindow2",true)) == "TRUE");
+	jslogObj (JSLOG_DEBUG,fn + "opt_ga_page", opt_ga_page);
+}
+
+/**
+ * Call API gaShortUrlList()
+ * 
+ * @param event
+ * @param bJQPopup {Boolean}  true if we have to show the List in JQPopup
+ */
+function sample1(event,bJQPopup){
+
+	var Fn = "[GoogleAnalSample.js sample1)] ";
+	var GA_CAT_DOWN = "JSU DOWNLOAD";
+	var GA_CAT_SAMPLE_FREE = "JSU FREE - SAMPLES";
+	var GA_CAT_DOC_FREE = "JSU FREE - DOC";
+	
+  // Prepare arObjGaList: only shortUrl is mandatory  
+  // In this case we populate all fields
+  var arObjGaList = [
+       {shortUrl: JSU_SHORT_URL_DOWNLOAD_FREE, longUrl: JSU_LONG_URL_DOWNLOAD_PAGE_FREE , cat:GA_CAT_DOWN,desc:'Download JSU.ZIP FREE'},
+       {shortUrl: JSU_SHORT_URL_SAMPLE_ALL, longUrl: JSU_LONG_URL_SAMPLE_ALL,cat:GA_CAT_SAMPLE_FREE, desc:'Main JSU Sample'},
+       {shortUrl: JSU_SHORT_URL_SAMPLE_TIP, longUrl: JSU_LONG_URL_SAMPLE_TIP,cat:GA_CAT_SAMPLE_FREE, desc:'Tooltip Sample'},
+       {shortUrl: JSU_SHORT_URL_SAMPLE_LOADING, longUrl: JSU_LONG_URL_SAMPLE_LOADING, cat:GA_CAT_SAMPLE_FREE,desc:'LoadingDiv Sample'},
+       {shortUrl: JSU_SHORT_URL_SAMPLE_JSLOG, longUrl: JSU_LONG_URL_SAMPLE_JSLOG, cat:GA_CAT_SAMPLE_FREE,desc:'JSLog Sample'},
+       {shortUrl: JSU_SHORT_URL_SAMPLE_SORT, longUrl: JSU_LONG_URL_SAMPLE_SORT, cat:GA_CAT_SAMPLE_FREE, desc:'SortTable Sample'},
+       {shortUrl: JSU_SHORT_URL_SAMPLE_IEPOPUP, longUrl: JSU_LONG_URL_SAMPLE_IEPOPUP, cat:GA_CAT_SAMPLE_FREE,desc:'IE Popup Sample'},
+       // --------------------------
+       {shortUrl: JSU_SHORT_URL_DOC, longUrl: JSU_LONG_URL_DOC, cat:GA_CAT_DOC_FREE,desc:'JSU Documentation'},
+       {shortUrl: JSU_SHORT_URL_DOC_TIP, longUrl: JSU_LONG_URL_DOC_TIP, cat:GA_CAT_DOC_FREE,desc:'JSU Tooltip Documentation'},
+       {shortUrl: JSU_SHORT_URL_DOC_LOADING, longUrl: JSU_LONG_URL_DOC_LOADING, cat:GA_CAT_DOC_FREE,desc:'JSU LoadingDiv Documentation'},
+       {shortUrl: JSU_SHORT_URL_DOC_JSLOG, longUrl: JSU_LONG_URL_DOC_JSLOG, cat:GA_CAT_DOC_FREE,desc:'JSU JSLog Doc'},
+       {shortUrl: JSU_SHORT_URL_DOC_SORT, longUrl: JSU_LONG_URL_DOC_SORT, cat:GA_CAT_DOC_FREE,desc:'JSU SortTable Documentation'},
+       {shortUrl: JSU_SHORT_URL_DOC_IEPOPUP, longUrl: JSU_LONG_URL_DOC_IEPOPUP, cat:GA_CAT_DOC_FREE,desc:'JSU IE Popup Doc'}
+     ];
+  // show the TipFix with the List of Link
+  gaShortUrlList(arObjGaList,event,{
+        bJQPopup: bJQPopup,
+    	szTitle:'JSU Google Analitycs',
+    	iWidth: opt_ga_list.iWidth,  // Width of the Box
+    	iTblMaxHeight: opt_ga_list.iTblMaxHeight,  // Max Height	 of the Table with the LIst of Google Analitycs Links
+    	szParTime: opt_ga_list.szParTime,   // Initial Par Time
+    	bShowCbShortUrl: opt_ga_list.bShowCbShortUrl,   // ShortUrl visible or not at startup
+    	bShowCbLongUrl: opt_ga_list.bShowCbLongUrl,  // LongUrl visible or not at startup
+    	bShortUrl: opt_ga_list.bShortUrl,   // ShortUrl initial value
+    	bLongUrl: opt_ga_list.bLongUrl  // LongUrl initial Value
+    });
+
+}
+
+
+/**
+ * Show Option for Sample1
+ * @param event
+ */
+function sample1Opt (event){
+	var szFreeLimit = "";
+	var szParOpt = "tipc";
+	if (isJsuFree()){
+		szParOpt = "jsuParAbsent";
+	}	
+
+	var szOpt = ' <div align="center" style="width:700px"><table class="tipNoBorder" width="700px"> ' +
+	'<tr>' +
+	'<table class="sampleNoteOpt"><tr>' +
+	'   <td class="sampleNoteOpt"><input class="sampleNoteOpt"></td>' +
+	'   <td class="tipl">' +
+	'     <ul>' +
+	'       <li id="sample1OptFreeNote">The <label class="jsuParAbsent">Option with Yellow Background</label> are NOT Available in this JSU FREE Version</li>' +
+	'       <li>For all the Available OPTIONS see <a class="tipLink" href="https://rawgit.com/FedericoLevis/JSUDoc/master/googleAnal.js/global.html#gaShortUrlList" target="_blank">gaShortUrlList() API Options</a></li>' +
+	'       <li>You can <b>Change Options</b>, click button <b>Apply Options</b> and click <b>GoogleAnalytic Button</b> to test the Options</li>' +
+	'     </ul>' +
+	'   </td>' +
+	'</tr>' +
+	'</table>' +
+  '</tr>' +
+	'               <tr> ' +
+	'                 <td class="tipr" > ' +
+	'                  <table class="det" BORDER="2" cellpadding="3" cellspacing="3"  width ="100%"> ' +
+	'                    <tr class="detTitle"><td colspan="5">gaShortUrlList() OPTIONS</td></tr> ' +
+	'                    <tr class="detTitle2"><td width="70px">OPTION</td><td width="150px">VALUE</td><td>DESCRIPTION</td></tr> ' +
+	'                    <tr class="det"> ' +
+	'                      <td class="tipc">iWidth</td> ' +
+	'                      <td class="tipc"> ' +
+	'                        <select id="iWidth"  style="width:80px;">   ' +
+	'                      </td> ' +
+	'                      <td class="tipl">Width (px) of the Box displayed</td>  ' +
+	'                    </tr> ' +
+	'                    <tr class="det"> ' +
+	'                      <td class="tipc">iTblMaxHeight</td> ' +
+	'                      <td class="tipc"> ' +
+	'                        <select id="iTblMaxHeight"  style="width:80px;" >   ' +
+	'                      </td> ' +
+	'                      <td class="tipl">Max Height (px) of the Table with Google Analytics Links</td>  ' +
+	'                    </tr> ' +
+	//-------------------------------------------- ONLY IN FULL JSU
+	'                    <tr class="det"> ' +
+	'                      <td id="szParTimeOpt" class="' + szParOpt + '">szParTime</td> ' +
+	'                      <td class="tipc"> ' +
+	'                        <select id="szParTime"  style="width:80px;" >   ' +
+	'                      </td> ' +
+	'                      <td class="tipl">Initial Value of <b>Google Analytics Time</b> Parameter</td>  ' +
+	'                    </tr> ' +
+	'                    <tr class="det"> ' +
+	'                      <td id="bShowCbShortUrlOpt" class="' + szParOpt + '">bShowCbShortUrl</td> ' +
+	'                      <td class="tipc"> ' +
+	'                        <select id="bShowCbShortUrl"  style="width:80px;">   ' +
+	'                              <option selected value="FALSE" >false</i></option>  ' +
+	'                              <option value="TRUE" >true</option>  ' +
+	'                         </select>                 ' +
+	'                      </td> ' +
+	'                      <td class="tipl">Show Column ShortURL</td>  ' +
+	'                    </tr> ' +
+	'                    <tr class="det"> ' +
+	'                      <td id="bShortUrlOpt" class="' + szParOpt + '">bShortUrl</td> ' +
+	'                      <td class="tipc"> ' +
+	'                        <select id="bShortUrl"  style="width:80px;">   ' +
+	'                              <option selected value="FALSE" >false</i></option>  ' +
+	'                              <option value="TRUE" >true</option>  ' +
+	'                         </select>                 ' +
+	'                      </td> ' +
+	'                      <td class="tipl">Inital Value of CheckBox to Show Column ShortURL</td>  ' +
+	'                    </tr> ' +
+	'                    <tr class="det"> ' +
+	'                      <td id="bShowCbLongUrlOpt" class="' + szParOpt + '">bShowCbLongUrl</td> ' +
+	'                      <td class="tipc"> ' +
+	'                        <select id="bShowCbLongUrl"  style="width:80px;" >   ' +
+	'                              <option selected value="FALSE" >false</i></option>  ' +
+	'                              <option value="TRUE" >true</option>  ' +
+	'                         </select>                 ' +
+	'                      </td> ' +
+	'                      <td class="tipl">Show Column LongURL</td>  ' +
+	'                    </tr> ' +
+	'                    <tr class="det"> ' +
+	'                      <td id="bLongUrlOpt" class="' + szParOpt + '">bLongUrl</td> ' +
+	'                      <td class="tipc"> ' +
+	'                        <select id="bLongUrl"  style="width:80px;" >   ' +
+	'                              <option selected value="FALSE" >false</i></option>  ' +
+	'                              <option value="TRUE" >true</option>  ' +
+	'                         </select>                 ' +
+	'                      </td> ' +
+	'                      <td class="tipl">Inital Value of CheckBox to Show Column LongURL</td>  ' +
+	'                    </tr> ' +
+	'                   </table>	 ' +
+	'                 </td> ' +
+	'               </tr> ' +
+	'            </table> ' +
+	'      <div align="center" style="width:100%;margin-top:20px;margin-bottom:2px;"><input type="button" class="jsuButton" value="Apply Options" onclick="sample1OptApply()"/></div>' +
+	'      </div><BR/>';
+	TipFix (szOpt,event,{
+		 szTitle:"gaShortUrlPage() OPTIONS", 
+		 bCloseBtn: false,
+		 tipFixedPos: TIP_FIXED_POS.RIGHT,		 
+		 iTipWidth:720});	
+// Init
+	
+  var arWidth=	[	
+            	 	[GA_DEF.WIDTH-400,GA_DEF.WIDTH-400],   
+             	 	[GA_DEF.WIDTH-200,GA_DEF.WIDTH-200],   
+             	 	[GA_DEF.WIDTH,GA_DEF.WIDTH], // 1100
+             	 	[GA_DEF.WIDTH+200,GA_DEF.WIDTH+200],   
+        ];
+	selectPopulate (getElementById2 ("iWidth",true),arWidth,opt_ga_list.iWidth);
+
+  var arTblMaxHeight=	[	
+             	 	[undefined,'NO LIMIT'],   
+              	 	[150,150],   
+              	 	[300,300], 
+              	 	[500,500]   
+         ];
+	selectPopulate (getElementById2 ("iTblMaxHeight",true),arTblMaxHeight,opt_ga_list.iTblMaxHeight);
+	
+	var arParTime=	[	
+              	 	[GA_PAR_TIME.all_time,GA_PAR_TIME.all_time],   
+              	 	[GA_PAR_TIME.month,GA_PAR_TIME.month],   
+              	 	[GA_PAR_TIME.week,GA_PAR_TIME.week],   
+              	 	[GA_PAR_TIME.day,GA_PAR_TIME.day],   
+              	 	[GA_PAR_TIME.two_hours,GA_PAR_TIME.two_hours]   
+         ];
+	var selectParTime = getElementById2 ("szParTime",true);
+	var selectShortUrl = getElementById2 ("bShortUrl",true);
+	var selectLongUrl = getElementById2 ("bLongUrl",true);
+	var selectShowCbShortUrl = getElementById2 ("bShowCbShortUrl",true);
+	var selectShowCbLongUrl = getElementById2 ("bShowCbLongUrl",true);
+ 	selectPopulate (selectParTime,arParTime, opt_ga_list.szParTime);
+  // set cur val
+ 	selectSelValue (selectShowCbShortUrl,opt_ga_list.bShowCbShortUrl ? "TRUE" : "FALSE");
+ 	selectSelValue (selectShowCbLongUrl,opt_ga_list.bShowCbLongUrl ? "TRUE" : "FALSE");
+ 	selectSelValue (selectShortUrl,opt_ga_list.bShortUrl ? "TRUE" : "FALSE");
+ 	selectSelValue (selectLongUrl,opt_ga_list.bLongUrl ? "TRUE" : "FALSE");
+ 	var bJsuFree = isJsuFree(); 
+	if (bJsuFree){
+		// disable Opt not availble in FREE JSU
+		selectParTime.disabled=true;
+		selectShortUrl.disabled=true;
+		selectLongUrl.disabled=true;
+		selectShowCbShortUrl.disabled=true;
+		selectShowCbLongUrl.disabled=true;
+	}	
+  elementShowById('sample1OptFreeNote',bJsuFree,'');
+
+	
+}
+
+
+
+
+
+
+/**
+ * Show Option for Sample1
+ * @param event
+ */
+function sample1OptOld (event){
+	var szFreeLimit = "";
+	var szParOpt = "jsuParPresent";
+	if (isJsuFree()){
+		szFreeLimit =  '<div align="left" style="margin-top:5px;margin-left:5px;margin-bottom:0px;"> <table class="note"><tr>' +
+        '  <td><input class="note"></td> ' +
+  			'  <td> <label style="background-color:Yellow;">Yellow Options</label> are NOT avaliable in FREE JSU -  see &nbsp;' +
+  			'      <a id="gaShortUrlListOpt" class="tipLink" href="javascript:showJSUVersionParLimit();">JSU Options available only in FULL Version</a></td>' +  
+        '</tr></table></div>';
+		szParOpt = "jsuParAbsent";
+	}	
+
+	var szOpt = szFreeLimit + ' <div align="center" style="width:700px"><table class="tipNoBorder" width="800px"> ' +
+	'  <table class="tipNoBorder" width ="100%"> ' +
+
+	'<tr>' +
+	'<table class="sampleNoteOpt"><tr>' +
+	'   <td class="sampleNoteOpt"><input class="sampleNoteOpt"></td>' +
+	'   <td class="tipl">' +
+	'     <ul>' +
+	'       <li>For all the Available OPTIONS see <a class="tipLinkJsLog" href="https://rawgit.com/FedericoLevis/JSUDoc/master/googleAnal.js/global.html#gaShortUrlPage" target="_blank">gaShortUrlPage() API Options</a></li>' +
+	'       <li><b>Change Options</b>, click button <b>Apply Options</b> and click <b>GoogleAnalytic Icon</b> to test the Options</li>' +
+	'     </ul>' +
+	'   </td>' +
+	'</tr>' +
+	'</table>' +
+  '</tr>' +
+	
+	
+	'               <tr> ' +
+	'                 <td class="tipr" > ' +
+	'                  <table class="det" BORDER="2" cellpadding="3" cellspacing="3"  width ="100%"> ' +
+	'                    <tr class="detTitle"><td colspan="5">Main <a class="tipLinkJsLog" href="https://rawgit.com/FedericoLevis/JSUDoc/master/googleAnal.js/global.html#gaShortUrlList" target="_blank">gaShortUrlList() API Options</a></td></tr> ' +
+	'                    <tr class="detTitle2"><td >FULL<BR/>JSU</td><td>FREE<BR/>JSU</td><td width="70px">OPTION</td><td width="120px">VALUE</td><td>DESCRIPTION</td></tr> ' +
+	'                    <tr class="det"> ' +
+	'                      <td class="jsuOptPresent"></td> ' +
+	'                      <td class="jsuOptPresent"></td> ' +
+	'                      <td class="jsuParPresent">iWidth</td> ' +
+	'                      <td class="tipc"> ' +
+	'                        <select id="iWidth"  style="width:80px;">   ' +
+	'                      </td> ' +
+	'                      <td class="tipl">Width (px) of the Box displayed</td>  ' +
+	'                    </tr> ' +
+	'                    <tr class="det"> ' +
+	'                      <td class="jsuOptPresent"></td> ' +
+	'                      <td class="jsuOptPresent"></td> ' +
+	'                      <td class="jsuParPresent">iTblMaxHeight</td> ' +
+	'                      <td class="tipc"> ' +
+	'                        <select id="iTblMaxHeight"  style="width:80px;" >   ' +
+	'                      </td> ' +
+	'                      <td class="tipl">Max Height (px) of the Table with Google Analytics Links</td>  ' +
+	'                    </tr> ' +
+	//-------------------------------------------- ONLY IN FULL JSU
+	'                    <tr class="det"> ' +
+	'                      <td class="jsuOptPresent"></td> ' +
+	'                      <td class="jsuOptAbsent"></td> ' +
+	'                      <td id="szParTimeOpt" class="' + szParOpt + '">szParTime</td> ' +
+	'                      <td class="tipc"> ' +
+	'                        <select id="szParTime"  style="width:80px;" >   ' +
+	'                      </td> ' +
+	'                      <td class="tipl">Initial Value of <b>Google Analytics Time</b> Parameter</td>  ' +
+	'                    </tr> ' +
+	'                    <tr class="det"> ' +
+	'                      <td class="jsuOptPresent"></td> ' +
+	'                      <td class="jsuOptAbsent"></td> ' +
+	'                      <td id="bShowCbShortUrlOpt" class="' + szParOpt + '">bShowCbShortUrl</td> ' +
+	'                      <td class="tipc"> ' +
+	'                        <select id="bShowCbShortUrl"  style="width:80px;">   ' +
+	'                              <option selected value="FALSE" >false</i></option>  ' +
+	'                              <option value="TRUE" >true</option>  ' +
+	'                         </select>                 ' +
+	'                      </td> ' +
+	'                      <td class="tipl">Show Column ShortURL</td>  ' +
+	'                    </tr> ' +
+	'                    <tr class="det"> ' +
+	'                      <td class="jsuOptPresent"></td> ' +
+	'                      <td class="jsuOptAbsent"></td> ' +
+	'                      <td id="bShortUrlOpt" class="' + szParOpt + '">bShortUrl</td> ' +
+	'                      <td class="tipc"> ' +
+	'                        <select id="bShortUrl"  style="width:80px;">   ' +
+	'                              <option selected value="FALSE" >false</i></option>  ' +
+	'                              <option value="TRUE" >true</option>  ' +
+	'                         </select>                 ' +
+	'                      </td> ' +
+	'                      <td class="tipl">Inital Value of CheckBox to Show Column ShortURL</td>  ' +
+	'                    </tr> ' +
+	'                    <tr class="det"> ' +
+	'                      <td class="jsuOptPresent"></td> ' +
+	'                      <td class="jsuOptAbsent"></td> ' +
+	'                      <td id="bShowCbLongUrlOpt" class="' + szParOpt + '">bShowCbLongUrl</td> ' +
+	'                      <td class="tipc"> ' +
+	'                        <select id="bShowCbLongUrl"  style="width:80px;" >   ' +
+	'                              <option selected value="FALSE" >false</i></option>  ' +
+	'                              <option value="TRUE" >true</option>  ' +
+	'                         </select>                 ' +
+	'                      </td> ' +
+	'                      <td class="tipl">Show Column LongURL</td>  ' +
+	'                    </tr> ' +
+	'                    <tr class="det"> ' +
+	'                      <td class="jsuOptPresent"></td> ' +
+	'                      <td class="jsuOptAbsent"></td> ' +
+	'                      <td id="bLongUrlOpt" class="' + szParOpt + '">bLongUrl</td> ' +
+	'                      <td class="tipc"> ' +
+	'                        <select id="bLongUrl"  style="width:80px;" >   ' +
+	'                              <option selected value="FALSE" >false</i></option>  ' +
+	'                              <option value="TRUE" >true</option>  ' +
+	'                         </select>                 ' +
+	'                      </td> ' +
+	'                      <td class="tipl">Inital Value of CheckBox to Show Column LongURL</td>  ' +
+	'                    </tr> ' +
+	'                   </table>	 ' +
+	'                 </td> ' +
+	'               </tr> ' +
+	'            </table> ' +
+	'      <input type="button" class="jsuButton" value="Apply Options" onclick="sample1OptApply()"/>' +
+	'      </div><BR/>';
+  TipFix (szOpt,event,{szTitle:"gaShortUrlList() OPTION", bCloseBtn: false, iWidth: 820});	
+// Init
+	
+  var arWidth=	[	
+            	 	[GA_DEF.WIDTH-400,GA_DEF.WIDTH-400],   
+             	 	[GA_DEF.WIDTH-200,GA_DEF.WIDTH-200],   
+             	 	[GA_DEF.WIDTH,GA_DEF.WIDTH], // 1100
+             	 	[GA_DEF.WIDTH+200,GA_DEF.WIDTH+200],   
+        ];
+	selectPopulate (getElementById2 ("iWidth",true),arWidth,opt_ga_list.iWidth);
+
+  var arTblMaxHeight=	[	
+             	 	[undefined,'NO LIMIT'],   
+              	 	[150,150],   
+              	 	[300,300], 
+              	 	[500,500]   
+         ];
+	selectPopulate (getElementById2 ("iTblMaxHeight",true),arTblMaxHeight,opt_ga_list.iTblMaxHeight);
+	
+	var arParTime=	[	
+              	 	[GA_PAR_TIME.all_time,GA_PAR_TIME.all_time],   
+              	 	[GA_PAR_TIME.month,GA_PAR_TIME.month],   
+              	 	[GA_PAR_TIME.week,GA_PAR_TIME.week],   
+              	 	[GA_PAR_TIME.day,GA_PAR_TIME.day],   
+              	 	[GA_PAR_TIME.two_hours,GA_PAR_TIME.two_hours]   
+         ];
+	var selectParTime = getElementById2 ("szParTime",true);
+	var selectShortUrl = getElementById2 ("bShortUrl",true);
+	var selectLongUrl = getElementById2 ("bLongUrl",true);
+	var selectShowCbShortUrl = getElementById2 ("bShowCbShortUrl",true);
+	var selectShowCbLongUrl = getElementById2 ("bShowCbLongUrl",true);
+ 	selectPopulate (selectParTime,arParTime, opt_ga_list.szParTime);
+  // set cur val
+ 	selectSelValue (selectShowCbShortUrl,opt_ga_list.bShowCbShortUrl ? "TRUE" : "FALSE");
+ 	selectSelValue (selectShowCbLongUrl,opt_ga_list.bShowCbLongUrl ? "TRUE" : "FALSE");
+ 	selectSelValue (selectShortUrl,opt_ga_list.bShortUrl ? "TRUE" : "FALSE");
+ 	selectSelValue (selectLongUrl,opt_ga_list.bLongUrl ? "TRUE" : "FALSE");
+	if (isJsuFree()){
+		// disable Opt not availble in FREE JSU
+		selectParTime.disabled=true;
+		selectShortUrl.disabled=true;
+		selectLongUrl.disabled=true;
+		selectShowCbShortUrl.disabled=true;
+		selectShowCbLongUrl.disabled=true;
+	}	
+	
+}
+
+
+
+/**
+ * Show the Floating Tip
+ * @param event
+ */
+function sample1aTip (event){
+	Tip('Show the TipFix with the List of Links to <b>Google Analytics</b>');
+}
+
+/**
+ * Show the Floating Tip
+ * @param event
+ */
+function sample1bTip (event){
+	Tip('Show the JQPopup with the List of Links to <b>Google Analytics</b>');
+}
+
+/**
+ * Show the Floating Tip
+ * @param event
+ */
+function sample1OptTip (event){
+	Tip('Show the Box to Set <b>gaShortUrlList Option</b>');
+}
+
+
+
+/* ---------------------------------------------------------
+ * 				SAMPLE_2
+ --------------------------------------------------------- */
+
+
+/**
+ * Call API gaShortUrlPage()
+ * 
+ */
+function sample2(){
+  var fn = "[sample2()] ";
+	jslogObj (JSLOG_DEBUG,fn + "opt_ga_page", opt_ga_page);
+
+	gaShortUrlPage (	opt_ga_page.szShortUrl,
+			{
+		  bNewWindow: opt_ga_page.bNewWindow,
+		  szParTime: opt_ga_page.szParTime
+		  });
+	
+}
+
+
+
+
+/**
+ * Show Option for Sample2
+ * @param event
+ */
+function sample2Opt (event){
+	var szFreeLimit = "";
+
+	var szOpt = ' <div align="center" style="width:700px"><table class="tipNoBorder" width="700px"> ' +
+	'<tr>' +
+	'<table class="sampleNoteOpt"><tr>' +
+	'   <td class="sampleNoteOpt"><input class="sampleNoteOpt"></td>' +
+	'   <td class="tipl">' +
+	'     <ul>' +
+	'       <li>For all the Available OPTIONS see <a class="tipLink" href="https://rawgit.com/FedericoLevis/JSUDoc/master/googleAnal.js/global.html#gaShortUrlPage" target="_blank">gaShortUrlPage() API Options</a></li>' +
+	'       <li><b>Change Options</b>, click button <b>Apply Options</b> and click <b>GoogleAnalytic Icon</b> to test the Options</li>' +
+	'     </ul>' +
+	'   </td>' +
+	'</tr>' +
+	'</table>' +
+  '</tr>' +
+	'               <tr> ' +
+	'                 <td class="tipr" > ' +
+	'                  <table class="det" BORDER="2" cellpadding="3" cellspacing="3"  width ="100%"> ' +
+	'                    <tr class="detTitle"><td colspan="5">gaShortUrlPage() OPTIONS</td></tr> ' +
+	'                    <tr class="detTitle2"><td width="70px">OPTION</td><td width="150px">VALUE</td><td>DESCRIPTION</td></tr> ' +
+	'                    <tr class="det"> ' +
+	'                      <td class="tipcBold">szShortUrl</td> ' +
+	'                      <td class="tipl"> ' +
+	'                        <input id="szShortUrl2" style="width:100%;">   ' +
+	'                      </td> ' +
+	'                      <td class="tipl">Short URL retrieved by goo.gl</td>  ' +
+	'                    </tr> ' +
+	'                    <tr class="det"> ' +
+	'                      <td class="tipcBold">szParTime</td> ' +
+	'                      <td class="tipc"> ' +
+	'                        <select id="szParTime2"  style="width:100px;">   ' +
+	'                      </td> ' +
+	'                      <td class="tipl">Initial Value of <b>Google Analytics Time</b> Parameter</td>  ' +
+	'                    </tr> ' +
+	'                    <tr class="det"> ' +
+	'                      <td class="tipcBold">bNewWindow</td> ' +
+	'                      <td class="tipc"> ' +
+	'                        <select id="bNewWindow2"  style="width:100px;" >   ' +
+	'                              <option selected value="FALSE" >false</i></option>  ' +
+	'                              <option value="TRUE" >true</option>  ' +
+	'                         </select>                 ' +
+	'                      </td> ' +
+	'                      <td class="tipl">if true:Show Google Analytic in a New Page</td>  ' +
+	'                    </tr> ' +
+	'                   </table>	 ' +
+	'                 </td> ' +
+	'               </tr> ' +
+	'            </table> ' +
+	'      <div align="center" style="width:100%;margin-top:20px;margin-bottom:2px;"><input type="button" class="jsuButton" value="Apply Options" onclick="sample2OptApply()"/></div>' +
+	'      </div><BR/>';
+	TipFix (szOpt,event,{
+		szTitle:"gaShortUrlPage() OPTION", 
+		bCloseBtn: false, 
+		tipFixedPos: TIP_FIXED_POS.RIGHT,		 
+		iTipWidth:720});
+	
+// Init
+	
+	var arParTime=	[	
+              	 	[GA_PAR_TIME.all_time,GA_PAR_TIME.all_time],   
+              	 	[GA_PAR_TIME.month,GA_PAR_TIME.month],   
+              	 	[GA_PAR_TIME.week,GA_PAR_TIME.week],   
+              	 	[GA_PAR_TIME.day,GA_PAR_TIME.day],   
+              	 	[GA_PAR_TIME.two_hours,GA_PAR_TIME.two_hours]   
+         ];
+	var selectParTime = getElementById2 ("szParTime2",true);
+	var selectNewWindow = getElementById2 ("bNewWindow2",true);
+ 	selectPopulate (selectParTime,arParTime, opt_ga_page.szParTime);
+  // set cur val
+ 	selectSelValue (selectNewWindow,opt_ga_page.bNewWindow ? "TRUE" : "FALSE");
+ 	getElementById2("szShortUrl2",true).value = opt_ga_page.szShortUrl;
+	
+}
+
+
+
+
+/**
+ * Show the Floating Tip
+ * @param event
+ */
+function sample2Tip (event){
+	Tip('Show the <b>Google Analytics Page</b> ');
+}
+
+/**
+ * Show the Floating Tip
+ * @param event
+ */
+function sample2OptTip (event){
+	Tip('Show the Box to Set the <b>Options</b> of the Google Analytics disaplayed clicking in the Button on this sample');
+}
+
+
+
+/* ---------------------------------------------------------
+ * 				CODE TIP
+ --------------------------------------------------------- */
+
+
+
+/**
+ * sample1 Code Sample		
+ * @param event
+ */
+function sampleCode1(event){
+	var szTip = '/**\n'+
+	'* Call API gaShortUrlList() \n'+
+	'* \n'+
+	'* @param event \n'+
+	'* @param bJQPopup {Boolean}  true if we have to show the List in JQPopup \n'+
+	'*/ \n'+
+	'	function sample1(event,bJQPopup){ \n'+
+	' var GA_CAT_DOWN = "JSU DOWNLOAD"; \n' +
+	'	var GA_CAT_SAMPLE_FREE = "JSU FREE - SAMPLES"; \n' +
+	'	var GA_CAT_DOC_FREE = "JSU FREE - DOC"; \n' +
+	'	 \n' +
+	'  // Prepare arObjGaList: only shortUrl is mandatory   \n' +
+	'  // In this case we populate all fields \n' +
+	'  var arObjGaList = [ \n' +
+	'       {shortUrl: JSU_SHORT_URL_DOWNLOAD_FREE, longUrl: JSU_LONG_URL_DOWNLOAD_PAGE_FREE , cat:GA_CAT_DOWN,desc:\'Download JSU.ZIP FREE\'}, \n' +
+	'       {shortUrl: JSU_SHORT_URL_SAMPLE_ALL, longUrl: JSU_LONG_URL_SAMPLE_ALL,cat:GA_CAT_SAMPLE_FREE, desc:\'Main JSU Sample\'}, \n' +
+	'       {shortUrl: JSU_SHORT_URL_SAMPLE_TIP, longUrl: JSU_LONG_URL_SAMPLE_TIP,cat:GA_CAT_SAMPLE_FREE, desc:\'Tooltip Sample\'}, \n' +
+	'       {shortUrl: JSU_SHORT_URL_SAMPLE_LOADING, longUrl: JSU_LONG_URL_SAMPLE_LOADING, cat:GA_CAT_SAMPLE_FREE,desc:\'LoadingDiv Sample\'}, \n' +
+	'       {shortUrl: JSU_SHORT_URL_SAMPLE_JSLOG, longUrl: JSU_LONG_URL_SAMPLE_JSLOG, cat:GA_CAT_SAMPLE_FREE,desc:\'JSLog Sample\'}, \n' +
+	'       {shortUrl: JSU_SHORT_URL_SAMPLE_SORT, longUrl: JSU_LONG_URL_SAMPLE_SORT, cat:GA_CAT_SAMPLE_FREE, desc:\'SortTable Sample\'}, \n' +
+	'       {shortUrl: JSU_SHORT_URL_SAMPLE_IEPOPUP, longUrl: JSU_LONG_URL_SAMPLE_IEPOPUP, cat:GA_CAT_SAMPLE_FREE,desc:\'IE Popup Sample\'}, \n' +
+	'       // -------------------------- \n' +
+	'       {shortUrl: JSU_SHORT_URL_DOC, longUrl: JSU_LONG_URL_DOC, cat:GA_CAT_DOC_FREE,desc:\'JSU Documentation\'}, \n' +
+	'       {shortUrl: JSU_SHORT_URL_DOC_TIP, longUrl: JSU_LONG_URL_DOC_TIP, cat:GA_CAT_DOC_FREE,desc:\'JSU Tooltip Documentation\'}, \n' +
+	'       {shortUrl: JSU_SHORT_URL_DOC_LOADING, longUrl: JSU_LONG_URL_DOC_LOADING, cat:GA_CAT_DOC_FREE,desc:\'JSU LoadingDiv Documentation\'}, \n' +
+	'       {shortUrl: JSU_SHORT_URL_DOC_JSLOG, longUrl: JSU_LONG_URL_DOC_JSLOG, cat:GA_CAT_DOC_FREE,desc:\'JSU JSLog Doc\'}, \n' +
+	'       {shortUrl: JSU_SHORT_URL_DOC_SORT, longUrl: JSU_LONG_URL_DOC_SORT, cat:GA_CAT_DOC_FREE,desc:\'JSU SortTable Documentation\'}, \n' +
+	'       {shortUrl: JSU_SHORT_URL_DOC_IEPOPUP, longUrl: JSU_LONG_URL_DOC_IEPOPUP, cat:GA_CAT_DOC_FREE,desc:\'JSU IE Popup Doc\'} \n' +
+	'     ]; \n' +
+	'  // show the TipFix with the List of Link \n' +
+	'  gaShortUrlList(arObjGaList,event,{ \n' +
+	'        bJQPopup: bJQPopup, \n' +
+	'    	szTitle:\'JSU Google Analitycs\', \n' +
+	'    	iWidth: opt_ga_list.iWidth,  // Width of the Box \n' +
+	'    	iTblMaxHeight: opt_ga_list.iTblMaxHeight,  // Max Height	 of the Table with the LIst of Google Analitycs Links \n' +
+	'    	szParTime: opt_ga_list.szParTime,   // Initial Par Time \n' +
+	'    	bShortUrl: opt_ga_list.bShortUrl,   // ShortUrl visible or not at startup \n' +
+	'    	bLongUrl: opt_ga_list.bLongUrl  // LongUrl visible or not at startup \n' +
+	'    });'  ;
+	TipFixCode(szTip,event,{
+  	 szTitle:"JS Code of SAMPLE 1: Google Analytics List",iTipWidth:1000,iTipMaxHeight:500
+  	 });
+}
+
+
+/**
+ * sample2 Code Sample		
+ * @param event
+ */
+function sampleCode2(event){
+	var szTip = 'gaShortUrlPage(opt_ga_page.szShortUrl,  // e.g.: \'https://goo.gl/HnNqnM\' \n' +
+			'   { \n' +
+			'     bNewWindow: opt_ga_page.bNewWindow,  // e.g: true \n' +
+			'     szParTime: opt_ga_page.szParTime   // e.g: \'day\' \n' +
+			'   });';
+			
+	TipFixCode(szTip,event,{
+  	 szTitle:"JS Code of SAMPLE 2: Google Analytics Page",iTipWidth:1000,iTipMaxHeight:500
+  	 });
+}

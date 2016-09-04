@@ -1,8 +1,211 @@
-/***************************************************************************/
-/*                                                                         */
-/*  This obfuscated code was created by Javascript Obfuscator Free Version.*/
-/*  Javascript Obfuscator Free Version can be downloaded here              */
-/*  http://javascriptobfuscator.com                                        */
-/*                                                                         */
-/***************************************************************************/
-var _$_b4de=["NNN dd, yyyy HH:mm:ss","innerHTML","divTbl1","<div class='jsuLoading' style='height:250px'></div>","tbl1","Country","Name","Date","DATETIME","Amount","NUMBER","ASC","tbl2","Operation","NONE","Request Number","Insert Date","dd/mm/yyyy","State",",",".","myFooter","selectTbl1NumRow","<table class=\"det\" id=\"tbl1\" border=\"1\" width=\"99%\" >","<tr class=\"header\"> <th width=\"25%\">Country</th> <th width=\"25%\">Name</th><th width=\"30%\">Date</th><th width=\"20%\">Amount</th></tr>","random","floor","toLocaleString","0","<tr class=\"det\"><td class=\"det\">Country ","</td><td class=\"det\">Name ","</td><td class=\"det\">","</td></tr>\x0A","getDate","setDate","<tr class=\"","\"> <td colspan=\"3\">Total</td> <td> ","</table>","selectTblSetSort","selectSortCol","selectSortDir","setSort","length","selectTblGetSort","getSortCol","Current SortCol: <b>","</b>","getSortDir","Ascending (A..Z)","Descending (Z..A)","Current SortDir: <b>","//SORT SAMPLE_1: One JSU call is enough to set the Sort: \x0A","// 1) create cSortTable related to Table with id='tbl1' \x0A","var cSortTbl1 = new cSortTable('tbl1', \x0A"," //Describe how to Sort the Table Columns \x0A","  [{col: 'Country'},  // Default type: SORT_TYPE.STRING \x0A","   {col: 'Name'},  // Default type: SORT_TYPE.STRING \x0A","   // For Date we set the FMT_DATETIME_TBL1 = 'NNN dd, yyyy HH:mm:ss' \x0A","   {col:'Date', type: SORT_TYPE.DATETIME, fmt: FMT_DATETIME_TBL1},\x0A","   // For NUMBER  we use default separator (used creating the table)\x0A","   {col: 'Amount', type: SORT_TYPE.NUMBER} ],\x0A","   // OPTION \x0A","     {szSortCol:'Name',   // Current SortCol (we have already Popolated the Table order by this col)\x0A","     szSortDir:SORT_DIR.ASC, // Current SortDir (we have Popolated the Table in this way)\x09\x0A","     bSortApply:false   //  Table is already sorted\x0A","});\x0A","//Now you can Sort the Table by clicking on Colum Header ","//SORT SAMPLE_2: One JSU call is enough to set the Sort: \x0A","// 1) create cSortTable related to Table with id='tbl2' \x0A","var cSortTbl1 = new cSortTable('tbl2', \x0A","[{col: 'Operation', type: SORT_TYPE.NONE}, // NoSort for This Col \x0A","    {col: 'Request Number', type: SORT_TYPE.NUMBER}, \x0A","    {col: 'Insert Date', type: SORT_TYPE.DATETIME, fmt: 'dd/mm/yyyy'},\x0A","    {col: 'State'},\x0A","    // NUMBER. We set Separator [default = locale settings]\x0A","    {col: 'Amount', type: SORT_TYPE.NUMBER, groupSep:',',decimalSep:'.'} ],\x0A","   { iRowSortHeader:2,  // 2 Header Rows [default=1]\x0A","     szClassFooter: 'myFooter', // class that identify tr footer \x0A","     // Apply SortAsc on 'Insert Date' Column \x0A","     szSortCol:'Insert Date', szSortDir: SORT_DIR.ASC, bSortApply: true\x0A","// Set SortCol and SortDirection  \x0A","// Example szSortCol = 'Name'         iSortDir=SORT_DIR.DESC \x0A","cSort.setSort (szSortCol,iSortDir); ","// Get Current SortColn  \x0A","var szSortCol =  cSort.getSortCol (); ","// Get Current SortDirection:  SORT_DIR.ASC or SORT_DIR.DESC \x0A","var iSortDir =  cSort.getSortDir (); "];var FMT_DATETIME_TBL1=_$_b4de[0];var cSortTbl1=null;var cSortTbl2=null;function jsu_loaded(){initSampleCmn();sortTbl1();sortTbl2()}var tmo=null;function sortTbl1(){getElementById2(_$_b4de[2])[_$_b4de[1]]= _$_b4de[3];tmo= setTimeout(sortTbl1Tmo,300)}function sortTbl1Tmo(){clearTimeout(tmo);populateTbl1();cSortTbl1=  new cSortTable(_$_b4de[4],[{col:_$_b4de[5]},{col:_$_b4de[6]},{col:_$_b4de[7],type:SORT_TYPE[_$_b4de[8]],fmt:FMT_DATETIME_TBL1},{col:_$_b4de[9],type:SORT_TYPE[_$_b4de[10]]}],{szSortCol:_$_b4de[6],szSortDir:SORT_DIR[_$_b4de[11]],bSortApply:false})}function sortTbl2(){cSortTbl2=  new cSortTable(_$_b4de[12],[{col:_$_b4de[13],type:SORT_TYPE[_$_b4de[14]]},{col:_$_b4de[15],type:SORT_TYPE[_$_b4de[10]]},{col:_$_b4de[16],type:SORT_TYPE[_$_b4de[8]],fmt:_$_b4de[17]},{col:_$_b4de[18]},{col:_$_b4de[9],type:SORT_TYPE[_$_b4de[10]],groupSep:_$_b4de[19],decimalSep:_$_b4de[20]}],{iRowSortHeader:2,szClassFooter:_$_b4de[21],szSortCol:_$_b4de[16],szSortDir:SORT_DIR[_$_b4de[11]],bSortApply:true})}function populateTbl1(){var ci=parseInt(selectGetSelVal(getElementById2(_$_b4de[22])));var cm=_$_b4de[23]+ _$_b4de[24];var cf= new Date();var ch=0;for(var l=0;l< ci;l++){var cg=Math[_$_b4de[26]]((Math[_$_b4de[25]]()* 10000000)+ 1)/ 100;var cl=cg[_$_b4de[27]]();var cj=formatDate(cf,FMT_DATETIME_TBL1);var ck=num2StrPad(l+ 1,_$_b4de[28],5);var r=_$_b4de[29]+ ck+ _$_b4de[30]+ ck+ _$_b4de[31]+ cj+ _$_b4de[31]+ cl+ _$_b4de[32];cm+= r;cf[_$_b4de[34]](cf[_$_b4de[33]]()- 1);ch+= cg};var cl=ch[_$_b4de[27]]();var r=_$_b4de[35]+ SORT_TR_CLASS_FOOTER+ _$_b4de[36]+ cl+ _$_b4de[32];cm+= (r+ _$_b4de[37]);getElementById2(_$_b4de[2])[_$_b4de[1]]= cm}function tblSetSort(){var bR=selectGetSelVal(getElementById2(_$_b4de[38]));var eM=(bR== _$_b4de[4])?cSortTbl1:cSortTbl2;var eN=selectGetSelVal(getElementById2(_$_b4de[39]));var eO=parseInt(selectGetSelVal(getElementById2(_$_b4de[40])));eM[_$_b4de[41]](eN,eO)}function onchangeSelectTblSetSort(){var bO=[_$_b4de[5],_$_b4de[6],_$_b4de[7],_$_b4de[9]];var bP=[_$_b4de[15],_$_b4de[16],_$_b4de[18],_$_b4de[9]];var bR=selectGetSelVal(getElementById2(_$_b4de[38]));var bN=(bR== _$_b4de[4])?bO:bP;var bQ=getElementById2(_$_b4de[39]);selectRemoveAll(bQ);for(var l=0;l< bN[_$_b4de[42]];l++){appendOptionLast(bQ,bN[l],bN[l])}}function tblGetSortCol(){var bR=selectGetSelVal(getElementById2(_$_b4de[43]));var eM=(bR== _$_b4de[4])?cSortTbl1:cSortTbl2;var eN=eM[_$_b4de[44]]();showInfo(_$_b4de[45]+ eN+ _$_b4de[46])}function tblGetSortDir(){var bR=selectGetSelVal(getElementById2(_$_b4de[43]));var eM=(bR== _$_b4de[4])?cSortTbl1:cSortTbl2;var eO=eM[_$_b4de[47]]();var eP=(eO== SORT_DIR[_$_b4de[11]])?_$_b4de[48]:_$_b4de[49];showInfo(_$_b4de[50]+ eP+ _$_b4de[46])}var JS_CODE_SORT_TBL1=_$_b4de[51]+ _$_b4de[52]+ _$_b4de[53]+ _$_b4de[54]+ _$_b4de[55]+ _$_b4de[56]+ _$_b4de[57]+ _$_b4de[58]+ _$_b4de[59]+ _$_b4de[60]+ _$_b4de[61]+ _$_b4de[62]+ _$_b4de[63]+ _$_b4de[64]+ _$_b4de[65]+ _$_b4de[66];var JS_CODE_SORT_TBL2=_$_b4de[67]+ _$_b4de[68]+ _$_b4de[69]+ _$_b4de[54]+ _$_b4de[70]+ _$_b4de[71]+ _$_b4de[72]+ _$_b4de[73]+ _$_b4de[74]+ _$_b4de[75]+ _$_b4de[61]+ _$_b4de[76]+ _$_b4de[77]+ _$_b4de[78]+ _$_b4de[79]+ _$_b4de[65]+ _$_b4de[66];var JS_CODE_SET_SORT=_$_b4de[80]+ _$_b4de[81]+ _$_b4de[82];var JS_CODE_GET_SORT_COL=_$_b4de[83]+ _$_b4de[84];var JS_CODE_GET_SORT_DIR=_$_b4de[85]+ _$_b4de[86]
+// ==================================================================== CONSTANT
+// var JSLOG_LEV = 7;
+
+
+ var FMT_DATETIME_TBL1 = "NNN dd, yyyy HH:mm:ss";
+
+
+
+//==================================================================== VARIABLE
+
+var cSortTbl1= null;  // cSortTable Object for 'tbl1' (used to change settings  with cSortTable API) 
+var cSortTbl2= null;  // cSortTable Object for 'tbl2' (used to change settings  with cSortTable API) 
+
+
+
+/**
+* Called when jsu is loaded
+*/
+function jsu_loaded(){
+  // [Optional] Init jslog with JSLOG_LEV 
+  // jslog_init(JSLOG_LEV);
+	initSampleCmn(); // manage optional PAR show_opt, only for developer
+  sortTbl1();	
+  sortTbl2();	
+	
+}
+
+
+var tmo = null;   
+
+
+function sortTbl1(){
+  getElementById2('divTbl1').innerHTML = "<div class='jsuLoading' style='height:250px'></div>";
+  tmo= setTimeout(sortTbl1Tmo, 300); 
+}
+
+function sortTbl1Tmo(){
+  clearTimeout (tmo);
+	populateTbl1();
+	
+	//You need Only 1 JSU call to set the Sort 
+	//1) create cSortTable related to Table with id='tbl1' 
+  cSortTbl1 = new cSortTable("tbl1",
+  		 [  {col: 'Country'},  // Default type: SORT_TYPE.STRING	
+  		    {col: 'Name'},  // Default type: SORT_TYPE.STRING
+	        // For Date we set the FMT_DATETIME_TBL1 = "NNN dd, yyyy HH:mm:ss"
+	        {col:'Date', type: SORT_TYPE.DATETIME, fmt: FMT_DATETIME_TBL1},
+	        // For NUMBER  we use default separator (used creating the table)
+	        {col: 'Amount', type: SORT_TYPE.NUMBER} ],  		
+  				 {
+  					szSortCol:"Name",   // Current SortCol (we have already Popolated the Table order by this col)
+  					szSortDir:SORT_DIR.ASC, // Current SortDir (we have Popolated the Table in this way)	
+  					bSortApply:false   // don't need to ReSort: it is already sorted
+		 });
+}
+
+
+function sortTbl2(){
+	//You need Only 1 JSU call to set the Sort 
+	//1) create cSortTable related to Table with id='tbl2' 
+	cSortTbl2 = new cSortTable('tbl2', 
+			 //Describe how to Sort the Table Columns 
+				[{col: 'Operation', type: SORT_TYPE.NONE}, // NoSort for This Col
+		    {col: 'Request Number', type: SORT_TYPE.NUMBER}, 	
+		    {col: 'Insert Date', type: SORT_TYPE.DATETIME, fmt: 'dd/mm/yyyy'},
+		    {col: 'State'},
+		    // NUMBER. We set Separator [default = locale settings]
+		    {col: 'Amount', type: SORT_TYPE.NUMBER, groupSep:',',decimalSep:'.'} ],
+		   // OPTION
+		   { iRowSortHeader:2,  // 2 Header Rows [default=1]
+				 szClassFooter: "myFooter", // class that identify tr footer 
+				 // Apply SortAsc on 'InsertDate' Column 
+		     szSortCol:'Insert Date', szSortDir: SORT_DIR.ASC, bSortApply: true});
+		   //Now you can Sort the Table by clicking on Colum Header
+	
+}
+
+
+/**
+ * Populate tbl1 
+ */
+function populateTbl1(){
+  var iRowNum =  parseInt(selectGetSelVal (getElementById2 ("selectTbl1NumRow")));
+  var szTblHtml = '<table class="det" id="tbl1" border="1" width="99%" >' +
+	'<tr class="header"> <th width="25%">Country</th> <th width="25%">Name</th><th width="30%">Date</th><th width="20%">Amount</th></tr>';
+  var dd = new Date();	
+  var fTot = 0;
+  for (var i=0; i< iRowNum;i++){
+    var fNum = Math.floor((Math.random() * 10000000) + 1)/100;
+    var szNum = fNum.toLocaleString();
+		var szDate = formatDate (dd,FMT_DATETIME_TBL1);
+		var szIndZeroPad = num2StrPad(i+1,"0",5); 
+	    var szTr = '<tr class="det"><td class="det">Country '+szIndZeroPad+'</td><td class="det">Name ' + szIndZeroPad + '</td><td class="det">' + szDate + '</td><td class="det">' + szNum + '</td></tr>\n';	
+		szTblHtml +=  szTr ;
+		dd.setDate(dd.getDate() - 1); 	
+		fTot += fNum;
+  }
+  // Last Row with Total
+  var szNum = fTot.toLocaleString();
+  var szTr = '<tr class="'  + SORT_TR_CLASS_FOOTER + '"> <td colspan="3">Total</td> <td> ' + szNum + '</td></tr>\n';
+  szTblHtml += (szTr + '</table>');
+  getElementById2('divTbl1').innerHTML = szTblHtml;
+}	  
+  
+
+
+/**
+ * Get current setting and Set Sort In Tbl1 or Tbl2
+ */
+function tblSetSort() {
+	var szTbl = selectGetSelVal(getElementById2 ("selectTblSetSort"));
+	var cSort = (szTbl == 'tbl1') ? cSortTbl1 : cSortTbl2;  
+	// Get the Settings
+	var szSortCol = selectGetSelVal(getElementById2 ("selectSortCol"));
+	var iSortDir = parseInt(selectGetSelVal(getElementById2 ("selectSortDir")));
+	// Set SortCol=szSortCol    
+	// Example szSortCol = 'Name'         iSortDir=SORT_DIR.DESC
+	cSort.setSort (szSortCol,iSortDir);
+}	  
+
+
+
+function onchangeSelectTblSetSort(){
+	var arColTbl1 = ["Country","Name","Date","Amount"];
+	var arColTbl2 = ["Request Number","Insert Date","State","Amount"];
+	
+	var szTbl = selectGetSelVal(getElementById2 ("selectTblSetSort"));
+	var arCol = (szTbl == 'tbl1') ? arColTbl1 : arColTbl2;
+	var selectSortCol = getElementById2 ("selectSortCol");
+	selectRemoveAll (selectSortCol);
+	for (var i = 0; i < arCol.length; i++){
+		appendOptionLast (selectSortCol,arCol[i],arCol[i]);
+	}
+}
+
+
+function tblGetSortCol() {
+	var szTbl = selectGetSelVal(getElementById2 ("selectTblGetSort"));
+	var cSort = (szTbl == 'tbl1') ? cSortTbl1 : cSortTbl2;
+	var szSortCol = cSort.getSortCol ();
+  showInfo ("Current SortCol: <b>" + szSortCol + "</b>");
+}	  
+
+function tblGetSortDir() {
+	var szTbl = selectGetSelVal(getElementById2 ("selectTblGetSort"));
+	var cSort = (szTbl == 'tbl1') ? cSortTbl1 : cSortTbl2;
+	// Get Current SortDirection as  SORT_DIR.ASC or SORT_DIR.DESC   
+	var iSortDir =  cSort.getSortDir ();
+	// Get Current SortDirection as Label: Ascending (A..Z) or Descending (Z..Z)   
+  var szSortDir =  (iSortDir == SORT_DIR.ASC) ? "Ascending (A..Z)" : "Descending (Z..A)";
+  showInfo ("Current SortDir: <b>" + szSortDir + "</b>");
+}	  
+
+
+
+//===================================================================================================
+//  BELOW CODE is not strictly related to the Sort feature, but it is ONLY Related to JS Code Highlight
+//===========================================================================================
+
+var JS_CODE_SORT_TBL1= "//SORT SAMPLE_1: One JSU call is enough to set the Sort: \n" +
+"// 1) create cSortTable related to Table with id='tbl1' \n" +
+"var cSortTbl1 = new cSortTable('tbl1', \n" +
+" //Describe how to Sort the Table Columns \n" +
+"  [{col: 'Country'},  // Default type: SORT_TYPE.STRING \n"+  	
+"   {col: 'Name'},  // Default type: SORT_TYPE.STRING \n"+
+"   // For Date we set the FMT_DATETIME_TBL1 = 'NNN dd, yyyy HH:mm:ss' \n"+
+"   {col:'Date', type: SORT_TYPE.DATETIME, fmt: FMT_DATETIME_TBL1},\n"+
+"   // For NUMBER  we use default separator (used creating the table)\n"+
+"   {col: 'Amount', type: SORT_TYPE.NUMBER} ],\n"+  		
+"   // OPTION \n" +
+"     {szSortCol:'Name',   // Current SortCol (we have already Popolated the Table order by this col)\n"+
+"     szSortDir:SORT_DIR.ASC, // Current SortDir (we have Popolated the Table in this way)	\n"+
+"     bSortApply:false   //  Table is already sorted\n"+
+"});\n" +
+"//Now you can Sort the Table by clicking on Colum Header ";
+
+
+var JS_CODE_SORT_TBL2= "//SORT SAMPLE_2: One JSU call is enough to set the Sort: \n" +
+"// 1) create cSortTable related to Table with id='tbl2' \n" +
+"var cSortTbl1 = new cSortTable('tbl2', \n" +
+" //Describe how to Sort the Table Columns \n" +
+"[{col: 'Operation', type: SORT_TYPE.NONE}, // NoSort for This Col \n" +
+"    {col: 'Request Number', type: SORT_TYPE.NUMBER}, \n" +
+"    {col: 'Insert Date', type: SORT_TYPE.DATETIME, fmt: 'dd/mm/yyyy'},\n" +
+"    {col: 'State'},\n" +
+"    // NUMBER. We set Separator [default = locale settings]\n" +
+"    {col: 'Amount', type: SORT_TYPE.NUMBER, groupSep:',',decimalSep:'.'} ],\n" +
+"   // OPTION \n" +
+"   { iRowSortHeader:2,  // 2 Header Rows [default=1]\n" +
+"     szClassFooter: 'myFooter', // class that identify tr footer \n"+ 
+"     // Apply SortAsc on 'Insert Date' Column \n" +
+"     szSortCol:'Insert Date', szSortDir: SORT_DIR.ASC, bSortApply: true\n" +
+"});\n" +
+"//Now you can Sort the Table by clicking on Colum Header ";
+
+
+var JS_CODE_SET_SORT= "// Set SortCol and SortDirection  \n"+   
+"// Example szSortCol = 'Name'         iSortDir=SORT_DIR.DESC \n" +
+"cSort.setSort (szSortCol,iSortDir); "; 
+
+var JS_CODE_GET_SORT_COL= "// Get Current SortColn  \n"+   
+"var szSortCol =  cSort.getSortCol (); ";
+
+var JS_CODE_GET_SORT_DIR= "// Get Current SortDirection:  SORT_DIR.ASC or SORT_DIR.DESC \n"+   
+"var iSortDir =  cSort.getSortDir (); ";
+
+
+
+
+
+

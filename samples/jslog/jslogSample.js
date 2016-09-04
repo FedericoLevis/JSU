@@ -1,8 +1,218 @@
-/***************************************************************************/
-/*                                                                         */
-/*  This obfuscated code was created by Javascript Obfuscator Free Version.*/
-/*  Javascript Obfuscator Free Version can be downloaded here              */
-/*  http://javascriptobfuscator.com                                        */
-/*                                                                         */
-/***************************************************************************/
-var _$_c5f0=["logLev","dv","selected","logTime","value","selectedIndex","options","1","Federico Levis","This a Log at Level 1. My name is ",",  Height="," cm  - Current Time is: ","21/04/2015","22/04/2015","23/04/2015","24/04/2015","25/04/2015","Log at Level 2 of a JS Object.  jsonEx:","DOM ELEMENT tipJS1Lev1","tipJS1Lev1","Federico","Levis","Padova","Italy","<a class='tipLinkJsLog' href='https://www.linkedin.com/in/federicolevis' target='_blank' >https://www.linkedin.com/in/federicolevis</a>","<a class='tipLinkJsLog' href='mailto:federico.levis@virgilio.it' target='_blank' >federico.levis@virgilio.it</a>","<a class='tipLinkJsLog' href='http://federicolevis.wix.com/cognos' target='_blank' >http://federicolevis.wix.com/cognos</a>","<a class='tipLinkJsLog' href='https://github.com/FedericoLevis/PLSQLUtility' target='_blank' >https://github.com/FedericoLevis/PLSQLUtility</a>","logCompact","getElementById","Log at Level 2 of a JS Object -  author:","DOM ELEMENT logLev","DOM ELEMENT tipJS1Lev1 with also style","ONLY_MEANINGFUL","=","PASSING PARAMETER  =","?","href_validate","href","click","// START jslog:  \x0A","// ====================================================================\x0A","// - iLogLev is a BITMASK to Enable the various Level.\x0A","//  JSLOG_ERR   =  0  ERRORS: always enable when jslog is visible  \x0A","//  JSLOG_INFO  =  1  INFO: Important Information  \x0A","//  JSLOG_DEBUG =  2  DEBUG Information  \x0A","//  JSLOG_TRACE =  4  TRACE (e.g. Large Data like JSON)  \x0A","//  JSLOG_TRACE  =  8  Feature under TEST  \x0A","//  JSLOG_JSU   = 16  JSU Functionality (usually stable)  \x0A","//    \x0A","//   Example of Bitmask iLogLev used to Enable (X) various JSLOG_xxx group:\x0A\x0A","//     iLogLev   |  Level=1      Level=2  \x09\x09 Level=4 \x0A","//               |  JSLOG_INFO   JSLOG_DEBUG  JSLOG_TRACE \x0A","//   ------------|--------------------------------------- \x0A","//        1      |     X                               \x0A","//        2      |                   X                  \x0A","//        5      |     X                          X      \x0A","//        7      |     X             X            X     \x0A","// ====================================================================\x0A\x0A","// - bLogTime is an example of one of the Optional OPTIONS\x0A\x0A","jslog_init(iLogLev,{ bLogTime: bLogTime}); ","// Close jslog Window \x0A","jslog_end();","// Prepare szMsg: \x0A","var szName = \"Federico Levis\";\x0A","var iHeight = 177; \x0A","var now = new Date(); \x0A","//LOG at Level JSLOG_INFO=1 \x0A","jslog(JSLOG_INFO,\"This a Log at Level 1. My name is \" + szName + \",  Height=\" + iHeight + \" cm  - Current Time is: \" + now);\x0A","//Prepare json\x09\x0A","var jsonEx = {\"total\":5,\"rows\":[ \x0A","\x09{\"day\":\"21/04/2015\",\"duration_sec\":15,\"err_num\":7}, \x0A","\x09{\"day\":\"22/04/2015\",\"duration_sec\":0,\"err_num\":1}, \x0A","\x09{\"day\":\"23/04/2015\",\"duration_sec\":3,\"err_num\":3}, \x0A","\x09{\"day\":\"24/04/2015\",\"duration_sec\":3,\"err_num\":2}, \x0A","\x09{\"day\":\"25/04/2015\",\"duration_sec\":3,\"err_num\":14} \x0A","]}; \x0A","// log json at Level JSLOG_DEBUG=2 \x0A","jslogJson(JSLOG_DEBUG,\"Log at Level 2 of a JS Object.  jsonEx:\", jsonEx);","// Prepare object to log\x0A","  var author ={ \x0A","\x09  szFirstName: \"Federico\",   \x0A","\x09  szLastName : \"Levis\", \x0A","\x09  szCity : \"Padova\", \x0A","\x09  szNation : \"Italy\", \x0A","\x09  height: 176 \x0A","   info :{...} \x0A","  };  \x0A","  // Get bLogCompact Option selected by User  \x0A","  var selectLogCompact = document.getElementById(\"logCompact\"); \x0A","  var bLogCompact =   (selectLogCompact.options[selectLogCompact.selectedIndex].value == \"1\"); \x0A","  // Log Object author at Level JSLOG_TRACE=4 with bLogCompac Option \x0A","  jslogObj(JSLOG_TRACE,\"Log at Level 2 of a JS Object -  author:\", author,bLogCompact);","//LOG DOM Element with id=\"logLev\" at Level JSLOG_TEST=8 \x0A","jslogDomElById (JSLOG_TEST,\"DOM ELEMENT logLev\",\"logLev\"); \x0A","//LOG DOM Element with id=\"tipJS1Lev1\" with also style, at Level JSLOG_TEST=8 \x0A","jslogDomElById (JSLOG_TEST,\"DOM ELEMENT tipJS1Lev1 with also style\",\"tipJS1Lev1\",{style:JSLOG_OPT.ONLY_MEANINGFUL});","// Test1: pass jslog=7 as URL parameter \x0A","aId.href = \"https://rawgit.com/JSUtility/JSUDoc/master/JSPopup.js/index.html?jslog=7\"; \x0A","// Now click the Link: jslog window with LogLevel=7 will be displayed... \x0A","// ...\x0A","//Test2: DO NOT pass jslog as URL parameter (default is jslog=0) \x0A","aId.href = \"https://rawgit.com/JSUtility/JSUDoc/master/JSPopup.js/index.html\"; \x0A","// Now click the Link: jslog windows will not be displayed... \x0A"];var JSLOG_LEV=7;function jsu_loaded(){initSampleCmn();populate_jslogLev()}function populate_jslogLev(){var bd=getElementById2(_$_c5f0[0]);for(var l=0;l< 31;l++){var bX= new Option(l,l);bd[l]= bX;bX[_$_c5f0[1]]= l;if(l== 15){bX[_$_c5f0[2]]= true}}}function sample1_jslogStart(){var U=selectGetSelVal(getElementById2(_$_c5f0[0]));var dG=getElementById2(_$_c5f0[3]);var dF=(dG[_$_c5f0[6]][dG[_$_c5f0[5]]][_$_c5f0[4]]== _$_c5f0[7]);jslog_init(U,{bLogTime:dF})}function jslog1(){var Y=_$_c5f0[8];var W=177;var X= new Date();jslog(JSLOG_INFO,_$_c5f0[9]+ Y+ _$_c5f0[10]+ W+ _$_c5f0[11]+ X)}function jslog2(){var Z={"total":5,"rows":[{"day":_$_c5f0[12],"duration_sec":15,"err_num":7},{"day":_$_c5f0[13],"duration_sec":0,"err_num":1},{"day":_$_c5f0[14],"duration_sec":3,"err_num":3},{"day":_$_c5f0[15],"duration_sec":3,"err_num":2},{"day":_$_c5f0[16],"duration_sec":3,"err_num":14}]};jslogJson(JSLOG_DEBUG,_$_c5f0[17],Z);jslogDomEl(JSLOG_DEBUG,_$_c5f0[18],getElementById2(_$_c5f0[19]))}function jslog4(){var ba={szFirstName:_$_c5f0[20],szLastName:_$_c5f0[21],szCity:_$_c5f0[22],szNation:_$_c5f0[23],height:176,info:{CV:_$_c5f0[24],email:_$_c5f0[25],JSU_Site:_$_c5f0[24],COGNOS_Site:_$_c5f0[26],PLSQL_Site:_$_c5f0[27]}};var bc=document[_$_c5f0[29]](_$_c5f0[28]);var bb=(bc[_$_c5f0[6]][bc[_$_c5f0[5]]][_$_c5f0[4]]== _$_c5f0[7]);jslogObj(JSLOG_TRACE,_$_c5f0[30],ba,bb)}function jslog8(){jslogDomElById(JSLOG_TEST,_$_c5f0[31],logLev);jslogDomElById(JSLOG_TEST,_$_c5f0[32],_$_c5f0[19],{style:JSLOG_OPT[_$_c5f0[33]]})}function jslog_sample2(U){var E=getSampleUrl(JSU_URL_SAMPLE_VALIDATE,JSU_ID_SAMPLE_VALIDATE);jslog(JSLOG_INFO,E);var V=JSLOG_LEV_URL_PAR+ _$_c5f0[34]+ U;jslog(JSLOG_INFO,_$_c5f0[35]+ V);E= E+ _$_c5f0[36]+ JSLOG_LEV_URL_PAR+ _$_c5f0[34]+ U;var T=getElementById2(_$_c5f0[37]);T[_$_c5f0[38]]= E;T[_$_c5f0[39]]()}var JS1_JSLOG_START=_$_c5f0[40]+ _$_c5f0[41]+ _$_c5f0[42]+ _$_c5f0[43]+ _$_c5f0[44]+ _$_c5f0[45]+ _$_c5f0[46]+ _$_c5f0[47]+ _$_c5f0[48]+ _$_c5f0[49]+ _$_c5f0[50]+ _$_c5f0[51]+ _$_c5f0[52]+ _$_c5f0[53]+ _$_c5f0[54]+ _$_c5f0[55]+ _$_c5f0[56]+ _$_c5f0[57]+ _$_c5f0[58]+ _$_c5f0[59]+ _$_c5f0[60];var JS1_JSLOG_END=_$_c5f0[61]+ _$_c5f0[62];var JS1_LEV1=_$_c5f0[63]+ _$_c5f0[64]+ _$_c5f0[65]+ _$_c5f0[66]+ _$_c5f0[67]+ _$_c5f0[68];var JS1_LEV2=_$_c5f0[69]+ _$_c5f0[70]+ _$_c5f0[71]+ _$_c5f0[72]+ _$_c5f0[73]+ _$_c5f0[74]+ _$_c5f0[75]+ _$_c5f0[76]+ _$_c5f0[77]+ _$_c5f0[78];var JS1_LEV4=_$_c5f0[79]+ _$_c5f0[80]+ _$_c5f0[81]+ _$_c5f0[82]+ _$_c5f0[83]+ _$_c5f0[84]+ _$_c5f0[85]+ _$_c5f0[86]+ _$_c5f0[87]+ _$_c5f0[88]+ _$_c5f0[89]+ _$_c5f0[90]+ _$_c5f0[91]+ _$_c5f0[92];var JS1_LEV8=_$_c5f0[93]+ _$_c5f0[94]+ _$_c5f0[95]+ _$_c5f0[96];var JS2_START=_$_c5f0[97]+ _$_c5f0[98]+ _$_c5f0[99]+ _$_c5f0[100]+ _$_c5f0[101]+ _$_c5f0[102]+ _$_c5f0[103]+ _$_c5f0[100]
+// ==================================================================== CONSTANT
+//var JSLOG_LEV = 31;
+// var JSLOG_LEV = 0;
+var JSLOG_LEV = 7;
+
+
+
+/**
+* Called when jsu is loaded
+*/
+function jsu_loaded(){
+  // Init jslog with JSLOG_LEV 
+  // jslog_init(JSLOG_LEV);
+	initSampleCmn(); // manage optional PAR show_opt, only for developer
+  // jslog (JSLOG_INFO,"jslog sample STARTED");
+  populate_jslogLev();
+}
+
+
+/**
+* Populate jslogLev Select
+*/
+function populate_jslogLev(){
+  var select = getElementById2("logLev");
+
+  for (var i=0;i<31;i++){
+    var Opt = new Option(i, i);
+    select[i] = Opt;
+    Opt.dv = i;
+    if (i==15){
+    	Opt.selected = true;
+    }
+  } 
+}
+
+
+/* ============================================================================
+ *             SAMPLE_1
+ ============================================================================ */
+
+function sample1_jslogStart(){
+  var iLogLev =   selectGetSelVal(getElementById2("logLev"));
+  var selectLogTime = getElementById2("logTime");
+  var bLogTime =   (selectLogTime.options[selectLogTime.selectedIndex].value == "1");
+  jslog_init(iLogLev,{ bLogTime: bLogTime});
+}
+
+function jslog1()
+{
+	
+  var szName = "Federico Levis";
+  var iHeight = 177;
+  var now = new Date();
+  
+  jslog(JSLOG_INFO,"This a Log at Level 1. My name is " + szName + ",  Height=" + iHeight + " cm  - Current Time is: " + now);
+}
+
+
+
+
+function jslog2()
+{
+	// Prepare json	
+	var jsonEx = {"total":5,"rows":[
+		{"day":"21/04/2015","duration_sec":15,"err_num":7},
+		{"day":"22/04/2015","duration_sec":0,"err_num":1},
+		{"day":"23/04/2015","duration_sec":3,"err_num":3},
+		{"day":"24/04/2015","duration_sec":3,"err_num":2},
+		{"day":"25/04/2015","duration_sec":3,"err_num":14}
+  ]};
+  // log json at Level JSLOG_DEBUG=2
+  jslogJson(JSLOG_DEBUG,"Log at Level 2 of a JS Object.  jsonEx:", jsonEx);
+  
+  // PROVA
+  jslogDomEl (JSLOG_DEBUG,"DOM ELEMENT tipJS1Lev1",getElementById2("tipJS1Lev1"));
+
+
+}
+
+
+function jslog4()
+{
+	// Prepare object to log
+  var author ={
+	  szFirstName: "Federico",  
+	  szLastName : "Levis",
+	  szCity : "Padova",
+	  szNation : "Italy",
+	  height: 176,
+	  info:{
+  	  CV: "<a class='tipLinkJsLog' href='https://www.linkedin.com/in/federicolevis' target='_blank' >https://www.linkedin.com/in/federicolevis</a>",
+  	  email: "<a class='tipLinkJsLog' href='mailto:federico.levis@virgilio.it' target='_blank' >federico.levis@virgilio.it</a>",
+  	  JSU_Site: "<a class='tipLinkJsLog' href='https://www.linkedin.com/in/federicolevis' target='_blank' >https://www.linkedin.com/in/federicolevis</a>",
+  	  COGNOS_Site: "<a class='tipLinkJsLog' href='http://federicolevis.wix.com/cognos' target='_blank' >http://federicolevis.wix.com/cognos</a>",
+  	  PLSQL_Site: "<a class='tipLinkJsLog' href='https://github.com/FedericoLevis/PLSQLUtility' target='_blank' >https://github.com/FedericoLevis/PLSQLUtility</a>"
+	  }
+  }; 
+  // Get bLogCompact Option selected by User
+  var selectLogCompact = document.getElementById("logCompact");
+  var bLogCompact =   (selectLogCompact.options[selectLogCompact.selectedIndex].value == "1");
+  // Log Object author at Level JSLOG_TRACE=4 with bLogCompac Option
+  jslogObj(JSLOG_TRACE,"Log at Level 2 of a JS Object -  author:", author,bLogCompact);
+}
+
+function jslog8()
+{
+	//LOG DOM Element with id="logLev" at Level JSLOG_TEST=8
+  jslogDomElById (JSLOG_TEST,"DOM ELEMENT logLev",logLev);
+  //LOG DOM Element with id="tipJS1Lev1" with also style, at Level JSLOG_TEST=8
+  jslogDomElById (JSLOG_TEST,"DOM ELEMENT tipJS1Lev1 with also style","tipJS1Lev1",{style:JSLOG_OPT.ONLY_MEANINGFUL});
+
+}
+
+
+/* ============================================================================
+ *             SAMPLE_2
+ ============================================================================ */
+
+/**
+ * 
+ * @param iLogLev
+ */
+function jslog_sample2(iLogLev){
+	var szUrl = getSampleUrl(JSU_URL_SAMPLE_VALIDATE, JSU_ID_SAMPLE_VALIDATE);
+	jslog (JSLOG_INFO,szUrl);
+	var szPar = JSLOG_LEV_URL_PAR + "=" + iLogLev;
+	jslog (JSLOG_INFO,"PASSING PARAMETER  ="+ szPar );
+	// Example: https://rawgit.com/FedericoLevis/WORK/master/3/samples/Validate/ValidateSample.html?jslog=3
+	szUrl = szUrl +  "?" + JSLOG_LEV_URL_PAR + "=" + iLogLev;		
+	var aId = getElementById2("href_validate");
+	aId.href = szUrl;
+	aId.click();
+	
+}
+
+
+
+
+
+//===================================================================================================
+//  BELOW CODE is not strictly related to the Sort feature, but it is ONLY Related to JS Code Highlight
+//===========================================================================================
+
+
+var JS1_JSLOG_START= '// START jslog:  \n' +
+'// ====================================================================\n' +
+'// - iLogLev is a BITMASK to Enable the various Level.\n' +
+'//  JSLOG_ERR   =  0  ERRORS: always enable when jslog is visible  \n' +
+'//  JSLOG_INFO  =  1  INFO: Important Information  \n' +
+'//  JSLOG_DEBUG =  2  DEBUG Information  \n' +
+'//  JSLOG_TRACE =  4  TRACE (e.g. Large Data like JSON)  \n' +
+'//  JSLOG_TRACE  =  8  Feature under TEST  \n' +
+'//  JSLOG_JSU   = 16  JSU Functionality (usually stable)  \n' +
+'//    \n' +
+'//   Example of Bitmask iLogLev used to Enable (X) various JSLOG_xxx group:\n\n' +
+'//     iLogLev   |  Level=1      Level=2  		 Level=4 \n' +
+'//               |  JSLOG_INFO   JSLOG_DEBUG  JSLOG_TRACE \n' +
+'//   ------------|--------------------------------------- \n' +
+'//        1      |     X                               \n' +
+'//        2      |                   X                  \n' +
+'//        5      |     X                          X      \n' +
+'//        7      |     X             X            X     \n' +
+'// ====================================================================\n\n' +
+'// - bLogTime is an example of one of the Optional OPTIONS\n\n' +
+'jslog_init(iLogLev,{ bLogTime: bLogTime}); ';
+
+var JS1_JSLOG_END= '// Close jslog Window \n' +
+'jslog_end();';
+
+var JS1_LEV1= '// Prepare szMsg: \n' +
+'var szName = "Federico Levis";\n' +
+'var iHeight = 177; \n' +
+'var now = new Date(); \n' +
+'//LOG at Level JSLOG_INFO=1 \n' +
+'jslog(JSLOG_INFO,"This a Log at Level 1. My name is " + szName + ",  Height=" + iHeight + " cm  - Current Time is: " + now);\n';
+
+
+var JS1_LEV2='//Prepare json	\n' +
+'var jsonEx = {"total":5,"rows":[ \n' +
+'	{"day":"21/04/2015","duration_sec":15,"err_num":7}, \n' +
+'	{"day":"22/04/2015","duration_sec":0,"err_num":1}, \n' +
+'	{"day":"23/04/2015","duration_sec":3,"err_num":3}, \n' +
+'	{"day":"24/04/2015","duration_sec":3,"err_num":2}, \n' +
+'	{"day":"25/04/2015","duration_sec":3,"err_num":14} \n' +
+']}; \n' +
+'// log json at Level JSLOG_DEBUG=2 \n' +
+'jslogJson(JSLOG_DEBUG,"Log at Level 2 of a JS Object.  jsonEx:", jsonEx);';
+
+var JS1_LEV4= '// Prepare object to log\n' +
+'  var author ={ \n' +
+'	  szFirstName: "Federico",   \n' +
+'	  szLastName : "Levis", \n' +
+'	  szCity : "Padova", \n' +
+'	  szNation : "Italy", \n' +
+'	  height: 176 \n' +
+'   info :{...} \n' +
+'  };  \n' + 
+'  // Get bLogCompact Option selected by User  \n' +
+'  var selectLogCompact = document.getElementById("logCompact"); \n' +
+'  var bLogCompact =   (selectLogCompact.options[selectLogCompact.selectedIndex].value == "1"); \n' +
+'  // Log Object author at Level JSLOG_TRACE=4 with bLogCompac Option \n' +
+'  jslogObj(JSLOG_TRACE,"Log at Level 2 of a JS Object -  author:", author,bLogCompact);';
+
+var JS1_LEV8= '//LOG DOM Element with id="logLev" at Level JSLOG_TEST=8 \n' +
+'jslogDomElById (JSLOG_TEST,"DOM ELEMENT logLev","logLev"); \n' +
+'//LOG DOM Element with id="tipJS1Lev1" with also style, at Level JSLOG_TEST=8 \n' +
+'jslogDomElById (JSLOG_TEST,"DOM ELEMENT tipJS1Lev1 with also style","tipJS1Lev1",{style:JSLOG_OPT.ONLY_MEANINGFUL});';
+
+
+
+var JS2_START= '// Test1: pass jslog=7 as URL parameter \n' +
+'aId.href = "https://rawgit.com/JSUtility/JSUDoc/master/JSPopup.js/index.html?jslog=7"; \n' +
+'// Now click the Link: jslog window with LogLevel=7 will be displayed... \n' +
+'// ...\n' +
+'//Test2: DO NOT pass jslog as URL parameter (default is jslog=0) \n' +
+'aId.href = "https://rawgit.com/JSUtility/JSUDoc/master/JSPopup.js/index.html"; \n' +
+'// Now click the Link: jslog windows will not be displayed... \n' +
+'// ...\n';

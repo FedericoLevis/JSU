@@ -12,9 +12,13 @@
 	<!-- This sample -->
 		<script type="text/javascript" src="./TipSample.js" ></script>
 
-	<!--  JSU -->
-	<link rel="stylesheet" href="../../core/jsu.css" type="text/css">
-	<script  data-main="../../plugin/jsu.js" src="../../core/require.js"></script>
+  <!--  ***************************   JSU ****************************** -->
+  <!--  Define JSU_GA_TRACKING_ID to Enable GoogleAnalitycs and send a pageView statistic  -->
+  <script>
+     var JSU_GA_TRACKING_ID = 'UA-83225633-1'
+  </script>
+  <link rel="stylesheet" href="../../core/jsu.css" type="text/css">
+  <script  data-main="../../plugin/jsu.js" src="../../core/require.js"></script>
   
   <!-- ONLY FOR About -->
   <link rel="stylesheet" href="../about/about.css" type="text/css">
@@ -88,7 +92,7 @@
          <label class="sampleTitle">SAMPLE_1 - Floating Tip:</label>
 		 <table class="sampleNote"><tr>
 		    <td class="sampleNote"><input class="sampleNote"></td>
-		    <td>Put the mouse over the DOM Elements, to see  the <b>Floating Tip</b></label></td>
+		    <td class="tipl">Put the mouse over the DOM Elements, to see  the <b>Floating Tip</b></label></td>
 		 </tr></table>
          <table class="sampleNoBorder">
               <tr>
@@ -140,8 +144,8 @@
          <label class="sampleTitle">SAMPLE_2 - Fixed Tip with GIF, button, link, VIDEO,..</label>
          <label id="limit_sample_2" class="featSampleLimit" style="margin-left:20px;">FREE JSU Version with <a class="tipLink" href="javascript:showJSUVersionParLimit();">Limitations</a></label>
 		 <table class="sampleNote"><tr>
-		    <td><input class="sampleNote"></td>
-		    <td><b>Click</b> over the Button to Open <b>Fixed Tip</b> - <b>Click again</b> to Close it</label></td>
+		    <td class="sampleNote"><input class="sampleNote"></td>
+		    <td class="tipl"><b>Click</b> over the Button to Open <b>Fixed Tip</b> - <b>Click again</b> to Close it</label></td>
 		 </tr></table>
          <ul>
            <li>case a) FixedTip with <b>GIF, Button, Link</b>
@@ -228,13 +232,6 @@
 
 </table>
 
-<!--  USED by jsuGoToURL()  -->
-<a id="href_hidden" target="_blank" href="" style="display:none"">HIDDEN</a>
-
-<!--       TEST -->
-<div id="test" style="display:none;visibility:hidden;">
-  <input  type="button" value="Show tr height" onclick="showSampleTrHeight();" />  
-</div>
 
 
 

@@ -13,10 +13,13 @@
   <script type="text/javascript" src="./GoogleAnalSample.js" ></script>
 
   
-	<!--  JSU  -->
+  <!--  ***************************   JSU ****************************** -->
+  <!--  Define JSU_GA_TRACKING_ID to Enable GoogleAnalitycs and send a pageView statistic  -->
+  <script>
+     var JSU_GA_TRACKING_ID = 'UA-83225633-1'
+  </script>
   <link rel="stylesheet" href="../../core/jsu.css" type="text/css">
   <script  data-main="../../plugin/jsu.js" src="../../core/require.js"></script>
-  
   
 	<!--  JSU  with JQ 
   <link rel="stylesheet" href="../../externalPlugin/jquery/jquery-ui.css">
@@ -105,8 +108,7 @@
       <td class="sample" id="col_1_1" >
          <table class="detNoBorder" width="100%">
            <tr><td class="tipl" width="100%">
-             <label class="sampleTitle">SAMPLE_1 - List of  Google Analitycs </label> 
-             <BR/>
+             <label class="sampleTitle">SAMPLE_1 - List of  Google Analitycs </label>  <BR/>
              <table class="sampleNote"><tr>
                 <td class="sampleNote"><input class="sampleNote"></td>
                 <td>
@@ -128,8 +130,10 @@
                     <td class="tiplBold" width="40%"> JQPopup <i>(Available Only with FULL JSU)</i>:<BR/>
                        <input  style="margin-top:5px" type="button"  class="googleAnalListJQPopup" id="googleAnalListJQPopup"  onclick="sample1(event,true);"  onmouseover="sample1bTip(event);" onmouseout="UnTip(event)"/> 
                     </td>
-                    <td class="tipc" style="vertical-align:bottom;" width="20%"> <BR/>
+                    <td class="sampleOpt" width="20%"> 
+                       <BR/><BR/>       
                        <input  type="button"  class="jsuOpt" id="jsuSample1Opt"  onclick="sample1Opt(event,true);"  onmouseover="sample1OptTip(event);" onmouseout="UnTip(event)"/> 
+                       <BR/><BR/>
                     </td>
                  </tr>  
                </table>
@@ -161,7 +165,6 @@
            <tr><td class="tipl" width="100%">
              <label class="sampleTitle">SAMPLE_2 - Google Analitycs Single Page</label> 
              <label id="limit_sample_2" class="featSampleLimit" style="margin-left:20px;">FREE JSU Version with <a class="tipLink" href="javascript:showJSUVersionParLimit();">Limitations</a></label>
-             <BR/>
              <table class="sampleNote"><tr>
                 <td class="sampleNote"><input class="sampleNote"></td>
                 <td class="tipl">
@@ -179,9 +182,11 @@
                  <tr>
                    <td class="tipcBold" width="50%"> 
                       <input style="margin-top:5px" type="button"  class="googleAnal" id="sample2a"  onclick="sample2(event);"  onmouseover="sample2Tip(event);" onmouseout="UnTip(event)"/> 
+                      <BR/><BR/>
                    </td>
-                    <td class="tipl" style="vertical-align:bottom;" width="50%"> 
+                    <td class="sampleOpt" width="50%"> 
                        <input  type="button"  class="jsuOpt" id="jsuSample2Opt"  onclick="sample2Opt(event,true);"  onmouseover="sample2OptTip(event);" onmouseout="UnTip(event)"/> 
+                       <BR/><BR/>
                     </td>
                  </tr>  
                </table>

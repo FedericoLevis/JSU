@@ -12,9 +12,14 @@
 	<!-- This sample -->
 		<script type="text/javascript" src="./LoadingSample.js" ></script>
 	
-	<!--  JSU -->
-	<link rel="stylesheet" href="../../core/jsu.css" type="text/css">
-		<script  data-main="../../plugin/jsu.js" src="../../core/require.js"></script>
+  <!--  ***************************   JSU ****************************** -->
+  <!--  Define JSU_GA_TRACKING_ID to Enable GoogleAnalitycs and send a pageView statistic  -->
+  <script>
+     var JSU_GA_TRACKING_ID = 'UA-83225633-1'
+  </script>
+  <link rel="stylesheet" href="../../core/jsu.css" type="text/css">
+  <script  data-main="../../plugin/jsu.js" src="../../core/require.js"></script>
+  
   
   <!-- ONLY FOR About -->
   <link rel="stylesheet" href="../about/about.css" type="text/css">
@@ -27,8 +32,8 @@
 <body>
 <div class="jsuLoading" id="jsuLoading"></div> 
 
-<!--  Header Table: GoogleAnalytics and download -  common for all the JSU HTML -->
-<table class="sampleHea" width="100%" >
+<!--  TOOLBAR Table: GoogleAnalytics and download -  common for all the JSU HTML -->
+<table class="sampleToolbar" width="100%" >
   <tr >
     <td class="tipl" width="30%">
         <input type="button"  class="googleAnalList" id="googleAnalList"  onclick="jsuGoogleAnalList(event)"  onmouseover="jsuGoogleAnalListTip(event);" onmouseout="UnTip(event)"/> 
@@ -37,16 +42,17 @@
      <table valign="bottom" align="right">
         <tr>
             <td class="tipr" ><b>Download Options:</b> </td>
-            <td><input type="button"  class="tipFix" id="tipFixSample"  onclick="downloadTip(event)" /> </td>
-            <td valign="bottom"> <input type="button" class="downloadPay"     onclick="downloadPay(event);" onmouseover="downloadTipPay(event);" onmouseout="UnTip(event)"/> </td>
+            <td><input type="button"  class="tipFix" id="downloadOption"  onclick="downloadTip(event)" /> </td>
+            <td valign="bottom"> <input type="button" class="downloadPay"  id="downloadPay"    onclick="downloadPay(event);" onmouseover="downloadTipPay(event);" onmouseout="UnTip(event)"/> </td>
             <td valign="bottom"> <input type="button"  class="googleAnal" id="googleAnalPay"  onclick="jsuGoogleAnalPay();"  onmouseover="jsuGoogleAnalPayTip(event);" onmouseout="UnTip(event)"/> </td>
-            <td valign="bottom"> <input type="button" class="downloadFree" onclick="downloadFree(event);" onmouseover="downloadTipFree(event);" onmouseout="UnTip(event)"  /> </td>
+            <td valign="bottom"> <input type="button" class="downloadFree" id="downloadFree" onclick="downloadFree(event);" onmouseover="downloadTipFree(event);" onmouseout="UnTip(event)"  /> </td>
             <td valign="bottom"> <input type="button"  class="googleAnal" id="googleAnalFree"  onclick="jsuGoogleAnalFree();"  onmouseover="jsuGoogleAnalFreeTip(event);" onmouseout="UnTip(event)"/> </td>
         </tr>
       </table>  
     </td>
   </tr>
 </table>   
+
 
 <hr>
 <h1 class="jsuSample">JSU - JS Utility Plugin  - LoadingDiv</h1>
