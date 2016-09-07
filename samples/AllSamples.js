@@ -5,4 +5,4 @@
 /*  http://javascriptobfuscator.com                                        */
 /*                                                                         */
 /***************************************************************************/
-var _$_9058=["<b>Sort Feature: DAFARE</b>","videoOpt","disabled"];var JSLOG_LEV=0;var TIP_SORT_FEATURE=_$_9058[0];function jsu_loaded(){if(isIE()|| isFirefox()){var bd=getElementById2(_$_9058[1]);bd[_$_9058[2]]= false};initSampleCmn()}function onclickSortFeature(a){TipFix(TIP_SORT_FEATURE,a)}
+var _$_f221=["<b>Sort Feature: DAFARE</b>","videoOpt","disabled"];var JSLOG_LEV=0;var TIP_SORT_FEATURE=_$_f221[0];function jsu_loaded(){if(isIE()|| isFirefox()){var bd=getElementById2(_$_f221[1]);bd[_$_f221[2]]= false};initSampleCmn()}function onclickSortFeature(a){TipFix(TIP_SORT_FEATURE,a)}
