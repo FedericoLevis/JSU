@@ -8,14 +8,14 @@
   <title>JS Utility | JSU IE Popup Plugin | Federico Levis</title>
   <meta charset="utf-8"/>
   <meta name="description" content="JSU utility (JSU) - Modal IE Popup: Info, Warning, Error, Alarm, Question, Choice, Prompt" />
-  <meta name="keywords" content="js, utility, JSU, popup, modal, IE, Info, Warning, Error, Alarm, Question, Choice, Prompt, federico, levis" />
+  <meta name="keywords" content="js, utility, JSU, popup, modal, IE, Info, Warning, Error, Alarm, Question, Choice, Prompt, Blocking, federico, levis" />
 	<!-- This sample -->
 		<script type="text/javascript" src="./PopupSample.js" ></script>
 
    <!--  ***************************   JSU ****************************** -->
   <!--  Define JSU_GA_TRACKING_ID to Enable GoogleAnalitycs and send a pageView statistic  -->
   <script>
-     var JSU_GA_TRACKING_ID = 'UA-83225633-1'
+     var JSU_GA_TRACKING_ID = 'UA-83225633-1';
   </script>
   <link rel="stylesheet" href="../../core/jsu.css" type="text/css">
   <script  data-main="../../plugin/jsu.js" src="../../core/require.js"></script>
@@ -52,7 +52,7 @@
 <hr>
 <h1 class="jsuSample">JSU - JS Utility Plugin  - IE Popup Sample</h1>
 
- <!--   TIP Warning for Limitations -->
+<!--   TIP Warning for Limitations -->
 <div style="width:100%;" id="sample_limit" align="center">
   <table class="tipNoBorder" width="800px" >
     <tr><td>
@@ -61,7 +61,7 @@
                 <td class="tipl">
                  <ul class="sampleNote ">
                   <li><label class="tipWarnBold">IE Popup Browser Compatibility: ONLY IE <input type="button" class="browserTipIESmall" onmouseover="jsuTipBrowserIEPopup(event);" onmouseout="UnTip(event)"/></label></li>
-                  <li id="noteBrowserNotIE">Current Browser is NOT Supported by<label class="tipWarnBold">IE Popup that will display only simple alert</label> instead of HTML Popup</li>
+                  <li id="noteBrowserNotIE">Current Browser is NOT Supported by&nbsp;<label class="tipWarnBold">IE Popup that will display only simple alert</label> instead of HTML Popup</li>
                   <li>For JSU Popup with FULL Browser Compatibility see <a class="tipLink" href="javascript:showSampleIEPopup();">JQ Popup</a></li>
                 </ul>
                 </td>
@@ -71,8 +71,6 @@
   </table>
  </div> 
 
- 
- 
 
 <table class="tip" BORDER="2" cellspacing="0" cellpadding="2" width="100%">
     <tr class="tipTitleBig">
@@ -142,7 +140,7 @@
             <td><b>POPUP_TYPE: </b></td>
             <td>
                 <select id="popupType1" style="width:120px" onchange="onchangeSampleType1()"></select>  
-                <input type="button" value="Show IE Popup" onclick="sample1()"  />
+                <input type="button" class="jsuButton"value="Show IE Popup" onclick="sample1()"  />
             </td>
           </tr>
         </table>
@@ -303,7 +301,7 @@
                        <option value="2BTN">2 Custom Button</option>
                        <option value="3BTN">3 Custom Button</option>
                 </select>  
-                <input type="button" value="Show Popup with Custom Option" onclick="sample2()"  />
+                <input type="button" class="jsuButton"value="Show Popup with Custom Option" onclick="sample2()"  />
             </td>
           </tr>
         </table>
@@ -396,7 +394,7 @@
                        <option value="VIDEO" >Popup with Video</option> 
                        <option value="PAGE" selected >Embedded HTML Page</option>
                 </select>  
-                <input type="button" value="Show Popup" onclick="sample3()"  />
+                <input type="button" class="jsuButton"value="Show Popup" onclick="sample3()"  />
             </td>
           </tr>  
           </table>

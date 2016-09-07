@@ -15,7 +15,7 @@
   <!--  ***************************   JSU ****************************** -->
   <!--  Define JSU_GA_TRACKING_ID to Enable GoogleAnalitycs and send a pageView statistic  -->
   <script>
-     var JSU_GA_TRACKING_ID = 'UA-83225633-1'
+     var JSU_GA_TRACKING_ID = 'UA-83225633-1';
   </script>
   <link rel="stylesheet" href="../../core/jsu.css" type="text/css">
   <script  data-main="../../plugin/jsu.js" src="../../core/require.js"></script>
@@ -119,7 +119,10 @@
       <td class="sampleDesc" id="col_1_2">
          <table >
            <tr valign="top"><td>
-              To add to an HTML Item the <b>Floating Tip</b> you have to call the <b>JSU Tip API</b> <label class="jsuAPI">Tip UnTip</label> in the following events:
+              To add to an HTML Item the <b>Floating Tip</b> you have to call the <b>JSU Tooltip API</b>&nbsp;&nbsp; 
+			  <a class="tipLink" href="https://rawgit.com/FedericoLevis/JSUDoc/master/tooltip.js/global.html#Tip" target="_blank">Tip()</a>&nbsp;&nbsp;
+			  <a class="tipLink" href="https://rawgit.com/FedericoLevis/JSUDoc/master/tooltip.js/global.html#UnTip" target="_blank">UnTip()</a>&nbsp;&nbsp;
+			   in the following events:
                <ul> 
                <li><b>onmouseover=</b>"<label class="jsuAPI">Tip</label>(<b><i>tipHTML</i></b>);" </li>   
                <li><b>onmouseout=</b>"<label class="jsuAPI">UnTip</label>(event);"  </li>
@@ -164,8 +167,11 @@
            <tr valign="top"><td>
                To implement a <b>FixedTip</b> Tooltip :  
                <ul> 
-               <li>Set an <i><b>input button</b></i> with JSU <label class="jsuAPI">jsu.css</label> class like <label class="jsuAPI">tipFix, tipFixArrow</label> </li>
-               <li>In the <b>onclick event</b> call the <b>JSU Tip API</b>   <label class="jsuAPI">TipFix</label>(<b><i>tipHTML</i></b>,event,<b><i>objOpt</i></b>)</li>
+               <li>Use an <i><b>input button</b></i> setting one of the &nbsp;&nbsp;
+                     <a class="tipLink" href="https://rawgit.com/FedericoLevis/JSUDoc/master/CSSDoc/Tooltip.html#tooltip-button-for-tipfix" target="_blank">JSU Classes for TipFix Button</a>
+			   </li>
+               <li>In the <b>onclick event</b> call the <b>JSU Tip API</b>&nbsp;&nbsp;  
+			  <a class="tipLink" href="https://rawgit.com/FedericoLevis/JSUDoc/master/tooltip.js/global.html#TipFix" target="_blank">TipFix()</a>
                </ul>
                Code of SAMPLE_2 cases:
 			         <ul>
@@ -189,8 +195,11 @@
          <label id="limit_sample_3" class="featSampleLimit" style="margin-left:20px;">FREE JSU Version with <a class="tipLink" href="javascript:showJSUVersionParLimit();">Limitations</a></label>
 		 <table class="sampleNote"><tr>
 		    <td class="sampleNote"><input class="sampleNote"></td>
-		    <td>The Tooltip API <label class="jsuAPI">TipFixCode</label> <b>higlights SW Code</b>: js, java,  perl, pl, pm, bsh, csh, sh, c, cpp, rb, py, cv, cs ,json, ..<b><BR/>
-			   Click</b> over the Button to Open <b>Fixed Tip</b> - <b>Click again</b> to Close it</label></td>
+		    <td>The Tooltip API 
+			  &nbsp;<a class="tipLink" href="https://rawgit.com/FedericoLevis/JSUDoc/master/tooltip.js/global.html#TipFixCode" target="_blank">TipFixCode()</a> and 
+			  <a class="tipLink" href="https://rawgit.com/FedericoLevis/JSUDoc/master/tooltip.js/global.html#TipFixMultiCode" target="_blank">TipFixMultiCode()</a>
+			   <b>higlight SW Code</b>: js, java,  perl, pl, sh,json, ..<BR/>
+			   <b>Click</b> over the Button to Open <b>Fixed Tip</b> - <b>Click again</b> to Close it</label></td>
 		 </tr></table>
          
          <ul>
@@ -207,11 +216,14 @@
            <tr valign="top"><td>
                To hightlight one or more Section of  Code (JS, CSS, Java,..):  
                <ul> 
-	               <li>Set an <b>input</b> with JSU <label class="jsuAPI">jsu.css</label> class like <label class="jsuAPI">tipFixJS, tipFixCode, ...</label> </li>
-	               <li>In the <b>onclick </b> event, call 
-	                  <label class="jsuAPI">TipFixJSCode</label>(<b><i>szCode</i></b>,event,<b><i>objOpt</i></b>)</label> for one Code section, &nbsp;&nbsp;
-	                   <label class="jsuAPI">TipFixJSMultiCode</label>(<b><i>arObjCode</i></b>,event,<b><i>objOpt</i></b>)</label> </li> for MultiCode Sections
-	               </ul>
+	               <li>Use an <b>input button</b> setting the desired <label class="jsuAPI">jsu.css</label> &nbsp;
+                          <a class="tipLink" href="https://rawgit.com/FedericoLevis/JSUDoc/master/CSSDoc/Tooltip.html#tooltip-button-for-tipfix" target="_blank">class for Tooltip Code Button: tipFixJS, tipFixCode</a>
+				   </li>
+				   
+	               <li>In the <b>onclick </b> event, call
+			  &nbsp;&nbsp;<a class="tipLink" href="https://rawgit.com/FedericoLevis/JSUDoc/master/tooltip.js/global.html#TipFixCode" target="_blank">TipFixCode()</a>&nbsp;&nbsp;or&nbsp;&nbsp;
+			  <a class="tipLink" href="https://rawgit.com/FedericoLevis/JSUDoc/master/tooltip.js/global.html#TipFixMultiCode" target="_blank">TipFixMultiCode()</a>
+                   </li>
            </ul>
            JS Code of SAMPLE_3 cases:
            <ul>

@@ -15,7 +15,7 @@
   <!--  ***************************   JSU ****************************** -->
   <!--  Define JSU_GA_TRACKING_ID to Enable GoogleAnalitycs and send a pageView statistic  -->
   <script>
-     var JSU_GA_TRACKING_ID = 'UA-83225633-1'
+     var JSU_GA_TRACKING_ID = 'UA-83225633-1';
   </script>
   <link rel="stylesheet" href="../../core/jsu.css" type="text/css">
   <script  data-main="../../plugin/jsu.js" src="../../core/require.js"></script>
@@ -89,7 +89,7 @@
     <tr id="tr_sample_1">
       <td class="sample"  id="col_1_1" valign="top" >
         <label class="sampleTitle">SAMPLE_1 - DEFAULT loadingDiv </label>
-     <!--   TIP for PopupChoice -->
+       <!--   TIP  -->
         <table id="sample_1_note" class="sampleNote"<tr>
                 <td class="sampleNote"><input class="sampleNote"></td>
                 <td class="tipl">
@@ -104,7 +104,7 @@
               <tr> 
                 <td align="left">Loading Duration: </td>
                 <td align="left"> <select id="selectDur1" style="marging-left:5px"></select>  </td> 
-                <td align="left"> <input type="button" style="marging-left:10px" onclick="onclickLoading1();" value="Start LoadingDiv"/>  </td> 
+                <td align="left"> <input type="button" class="jsuButton" style="marging-left:10px" onclick="onclickLoading1();" value="Start LoadingDiv"/>  </td> 
                 <td id="loadedSample1" align="left" class="tipGood" style="display:none;padding-left:10px;">Loaded</td> 
               </tr>
             </table>
@@ -112,7 +112,6 @@
       </td>
       
       <td class="sampleDesc"  id="col_1_2" valign="top">
-         <b>JS Code of the sample:</b>
          <table >
            <tr valign="top"><td>
                <label style="color:blue;font-weight:bold">JS Source Code</label> of Sample_1: 
@@ -127,7 +126,7 @@
 
       <td class="sample"  id="col_2_1" >
          <label class="sampleTitle">SAMPLE_2 - loadingDiv OPTIONS </label>
-     <!--   TIP for PopupChoice -->
+     <!--   TIP  -->
         <table id="sample_2_note" class="sampleNote"><tr>
                 <td class="sampleNote"><input class="sampleNote"></td>
                 <td class="tipl">
@@ -218,7 +217,7 @@
               <tr> 
                 <td style="padding-top:15px;" align="left">Loading Duration:&nbsp;  
                  <select id="selectDur2"> </select>
-                 <input type="button" style="margin-left:10px;" onclick="onclickLoading2();" value="Start LoadingDiv"/>
+                 <input type="button" style="margin-left:10px;" onclick="onclickLoading2();"  class="jsuButton" value="Start LoadingDiv"/>
                  <label id="loadedSample2" align="left" class="tipGood" style="display:none;padding-left:10px;">Loaded</label> 
                 </td>    
               </tr>
@@ -256,7 +255,7 @@
 		                </select>  
 		            </td>
 		            <td style="padding-left:20px">
-                    <input type="button"  onclick="onclickLoading3();" value="Start LoadingDiv"  />
+                    <input type="button"  class="jsuButton" onclick="onclickLoading3();" value="Start LoadingDiv"  />
 		            </td>
                 <td id="loadedSample3" align="left" class="tipGood" style="display:none;padding-left: 10px;">Loaded</td> 
               </tr>
