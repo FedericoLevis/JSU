@@ -17,7 +17,7 @@
                          
 <b>REQUIRED:</b>        JSU with jquery, jquery-ui <BR/>
 <b>First Version:</b>     ver 1.0 - Jul 2007  <BR/>
-<b>Current Version:</b>   ver 3.3 - Jul 2016  <BR/>
+<b>Current Version:</b>   ver 1.8 - Jul 2016  <BR/>
 <BR/>-----------------------------------------------------------------------------------<BR/>
 <b>DISCLAIMER</b>  <BR/>
 Copyright by Federico Levis - <a href="https://github.com/JSUtility/JSU" target="_blank">JSU</a> <BR/> 
