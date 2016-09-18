@@ -8,7 +8,7 @@
 <b>REQUIRED:</b>        JSU:  jsu.css locale-core.js jsuCmn.js tooltip.js <BR/>
 <b>OPTIONAL:</b>        JSU:  jslog.js dom-drag.js if you want to use jslog <BR/> 
 <b>First Version:</b>     ver 1.0 - Feb 2014  <BR/>
-<b>Current Version:</b>   ver 1.8 - Jul 2016  <BR/>
+<b>Current Version:</b>   JSU v. 1.8 &nbsp;&nbsp;&nbsp;Last Update: 2016-Sep-18  <BR/>
 <BR/>-----------------------------------------------------------------------------------<BR/>
 <b>DISCLAIMER</b>  <BR/>
 Copyright by Federico Levis - <a href="https://github.com/FedericoLevis/JSU" target="_self">JSU</a> <BR/> 
@@ -49,7 +49,7 @@ var GA_PAR_TIME={
 var GA_DEF = {
 		JSPOPUP: false,
 		ALL_LINK: true, // default: Present the Link to display all the pages of Google analytics together
-		WIDTH: 1100, // Box Width
+		WIDTH: 900, // Box Width
 		TBL_MAX_HEIGHT: 300,  // if more lines there will be scroolbar
 		SHOW_CB_SHORT_URL: true,   // Show CB
 		SHOW_CB_LONG_URL: true,    // Show CB
@@ -296,7 +296,7 @@ function gaShortUrlList(arObjGaList, event, objOpt){
 		Popup (POPUP_TYPE.INFO,szTbl,{
 			  bShowImg:false, // always false
 			  szTitle: objOptSet.szTitle, 
-			  iWidth: objOptSet.iWidth+30  // +30 for best layout and avoid scroolbar
+			  iWidth: parseInt(objOptSet.iWidth)+30  // +30 for best layout and avoid scroolbar
 			  });
 	}
 	else{

@@ -84,8 +84,8 @@ function sample_init(){
  * @param bClose true to Close the TipFix
  */
 function sample1OptApply(bClose){
-	opt_ga_list.iWidth = selectGetSelVal (getElementById2("iWidth",true)); 
-	opt_ga_list.iTblMaxHeight = selectGetSelVal (getElementById2("iTblMaxHeight",true)); 
+	opt_ga_list.iWidth = parseInt(selectGetSelVal (getElementById2("iWidth",true))); 
+	opt_ga_list.iTblMaxHeight = parseInt(selectGetSelVal (getElementById2("iTblMaxHeight",true))); 
 	opt_ga_list.szParTime = selectGetSelVal (getElementById2("szParTime",true)); 
 	opt_ga_list.bShortUrl = (selectGetSelVal (getElementById2("bShortUrl",true)) == "TRUE");
 	opt_ga_list.bLongUrl = (selectGetSelVal (getElementById2("bLongUrl",true)) == "TRUE");
@@ -123,8 +123,8 @@ function sample1(event,bJQPopup){
 	jslog (JSLOG_DEBUG,fn + JSLOG_FUN_START);
 	jslog (JSLOG_DEBUG,fn + "bJQPopup=" + bJQPopup);
 	var GA_CAT_DOWN = "JSU DOWNLOAD";
-	var GA_CAT_SAMPLE_FREE = "JSU FREE - SAMPLES";
-	var GA_CAT_DOC_FREE = "JSU FREE - DOC";
+	var GA_CAT_SAMPLE_FREE = "JSU SAMPLES";
+	var GA_CAT_DOC_FREE = "JSU DOC";
 		
   // Prepare arObjGaList: only shortUrl is mandatory  
   // In this case we populate all fields

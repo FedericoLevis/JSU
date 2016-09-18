@@ -56,9 +56,6 @@ var cValidateObj3 = null;
 function jsu_loaded(){
 	var fn = "[ValidateSample.js jsu_loaded()] ";
 	jslog (JSLOG_INFO,fn + JSLOG_FUN_START);
-	/* For sample that are NOT FREE like this one, we have to setup the State
-   */
-	setupState(); 	
   // [Optional] Init jslog with JSLOG_LEV 
   // jslog_init(JSLOG_LEV);
 	// jslogSetSize (JSLOG_SIZE.M); // Set Size

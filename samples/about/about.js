@@ -96,9 +96,6 @@ var JSU_LONG_URL_SAMPLE_VALIDATE =	"https://rawgit.com/FedericoLevis/JSU/master/
 //var JSU_SHORT_URL_SAMPLE_LOADING  =	"https://rawgit.com/FedericoLevis/WORK/master/3/samples/Validate/ValidateSample.html";
 
 
-var JSU_LONG_URL_SAMPLE_JQPOPUP  =	"https://rawgit.com/FedericoLevis/JSU/master/samples/JQPopup/PopupSample.html";
-//var JSU_SHORT_URL_SAMPLE_JQPOPUP  =	"https://rawgit.com/FedericoLevis/WORK/master/7/samples/JQPopup/PopupSample.html";
-
 
 // ------------------
 var JSU_LONG_URL_DOWNLOAD_PAGE_FREE  =	"https://rawgit.com/FedericoLevis/JSU/master/samples/JSUFreeDownload.html";
@@ -107,10 +104,12 @@ var JSU_LONG_URL_DOWNLOAD_PAGE_FREE  =	"https://rawgit.com/FedericoLevis/JSU/mas
 var JSU_LONG_URL_SAMPLE_ALL  =	"https://rawgit.com/FedericoLevis/JSU/master/samples/AllSamples.html";
 var JSU_LONG_URL_SAMPLE_SORT  =	"https://rawgit.com/FedericoLevis/JSU/master/samples/Sort/SortSample.html";
 var JSU_LONG_URL_SAMPLE_TIP  =	"https://rawgit.com/FedericoLevis/JSU/master/samples/Tip/TipSample.html";
+var JSU_LONG_URL_SAMPLE_VALIDATE  =	"https://rawgit.com/FedericoLevis/JSU/master/samples/Validate/ValidateSample.html";
 var JSU_LONG_URL_SAMPLE_GA  =	"https://rawgit.com/FedericoLevis/JSU/master/samples/GoogleAnal/GoogleAnalSample.html";
 var JSU_LONG_URL_SAMPLE_IEPOPUP  =	"https://rawgit.com/FedericoLevis/JSU/master/samples/IEPopup/PopupSample.html";
 var JSU_LONG_URL_SAMPLE_LOADING  =	"https://rawgit.com/FedericoLevis/JSU/master/samples/Loading/LoadingSample.html";
 var JSU_LONG_URL_SAMPLE_JSLOG  =	"https://rawgit.com/FedericoLevis/JSU/master/samples/jslog/jslogSample.html";
+var JSU_LONG_URL_SAMPLE_JQPOPUP  =	"https://rawgit.com/FedericoLevis/JSU/master/samples/JQPopup/PopupSample.html";
 
 //----------- goo.gl of FREE Features
 var JSU_SHORT_URL_DOWNLOAD_FREE  =	"https://goo.gl/HnNqnM";
@@ -120,21 +119,15 @@ var JSU_SHORT_URL_SAMPLE_GA  =	"http://goo.gl/UzfnFK";
 var JSU_SHORT_URL_SAMPLE_SORT  = "https://goo.gl/hJm8vV";
 var JSU_SHORT_URL_SAMPLE_IEPOPUP  =	"https://goo.gl/1b2ely";
 var JSU_SHORT_URL_SAMPLE_LOADING  =	"https://goo.gl/jttCME";
-var JSU_SHORT_URL_SAMPLE_VALIDATE =	"https://goo.gl/F3r4lP";
+var JSU_SHORT_URL_SAMPLE_VALIDATE =	"https://goo.gl/SboNsD";
 var JSU_SHORT_URL_SAMPLE_JSLOG  =	"https://goo.gl/aAtyxG";
-var JSU_SHORT_URL_SAMPLE_JQPOPUP  =	"https://goo.gl/09zCLG";
+var JSU_SHORT_URL_SAMPLE_JQPOPUP  =	"https://goo.gl/8xn5Gu";
 var JSU_SHORT_URL_GITHUB = "https://goo.gl/LYDepH";
 var JSU_SHORT_URL_COGNOS = "http://goo.gl/JZJSPn";
 var JSU_SHORT_URL_PLSQL = "https://goo.gl/OI3eIo";
 var JSU_SHORT_URL_LINKEDIN = "https://goo.gl/J9mJfh";  
 //---------------------
 var JSU_LONG_URL_LINKEDIN = "https://www.linkedin.com/in/federicolevis";  
-
-// Used to replace n of sample not free
-var JSU_LONG_URL_SAMPLE_NOTFREE = 'https://rawgit.com/FedericoLevis/JSU/master/samples/Misc/SampleNotFree.html'
-// ID sample NOt FREE (see WORK dir)
-var JSU_ID_SAMPLE_VALIDATE  =	3;
-var JSU_ID_SAMPLE_JQPOPUP  =	7;
 	
 	
 //----------------------- API DOC
@@ -716,7 +709,7 @@ function donateTip(event){
 ' <tr> ' +
 '	  <td width="100%" align="left"> ' +
  ' JSU is a <b>FREE NO-Profit project</b>.<BR/>' +
- 'If it was useful for your job, <b>You can Contribute to JSU Survival & Evolution with your Donation</b><BR/>' +
+ 'If it was useful for your job, <b>You can Contribute to JSU Evolution with your Donation</b><BR/>' +
  '  </td> ' +
  ' </tr>' +
  ' <tr>' +
@@ -1080,20 +1073,16 @@ function getSampleUrl(szUrl,iId){
 }
 
 
-/*
- * NOT FREE 
- */
-function showSampleValidate(){
-  showSampleWindow(JSU_LONG_URL_SAMPLE_VALIDATE, JSU_ID_SAMPLE_VALIDATE);
+
+function showSampleJQPopup(bNewWindow){
+	if (bNewWindow == undefined){  bNewWindow= false}
+	jsuGoToURL(JSU_SHORT_URL_SAMPLE_JQPOPUP,bNewWindow);
 }
 
-/*
- * NOT FREE
- */
-function showSampleJQPopup(){
-  showSampleWindow(JSU_LONG_URL_SAMPLE_JQPOPUP, JSU_ID_SAMPLE_JQPOPUP);
+function showSampleJQPopup(bNewWindow){
+	if (bNewWindow == undefined){  bNewWindow= false}
+	jsuGoToURL(JSU_SHORT_URL_SAMPLE_VALIDATE,bNewWindow);
 }
-
 
 
 
@@ -1159,50 +1148,6 @@ function showJSUVersionParLimit(bNewWindow){
 	jsuGoToURL(JSU_LONG_URL_VERSION_PAR_LIMIT,bNewWindow);
 }
 
-
-
-
-
-
-
-/*
- * Show a Window with a Sample, to manage NOT FREE JS FEatures
- * 
- * @param szUrl e.g: "https://rawgit.com/FedericoLevis/JSU/master/samples/Validate/ValidateSample.html"
- * @param iId   1 ,3, 5, 7
- * 
- */
-function showSampleWindow(szUrl,iId){
-	var bTest = false;
-	// To manage Mobile, where window.open seems to work
-	var bSmallWindow = window.innerWidth <= 800;
-	var ua = navigator.userAgent;
-	var bMobile = ( ua.match(/Android/i) || ua.match(/webOS/i) || ua.match(/iPhone/i)	 || ua.match(/iPad/i) || 
-			 ua.match(/iPod/i) || ua.match(/BlackBerry/i) || ua.match(/Windows Phone/i) );
-	
-	if (bSmallWindow || bMobile || bTest){
-		// start with URL
-		jsuGoToURL (getSampleUrl(szUrl,iId));
-	}else {
-	  window.open(getSampleUrl(szUrl,iId),	"_blank","menubar=1,resizable=1,menubar=1,width=100,height=100");
-    window.moveTo(10, 20);
-	}
-
-}
-
-/*
- * Only for samples that are not FREE we have to setup n 
- */
-function setupState(){
-	// URK
-	var szLocation = window.n + ""; 
-	var bRawGit = szLocation.indexOf ("FedericoLevis") > 0;
-	if (bRawGit){
-	  history.replaceState(null, null,JSU_LONG_URL_SAMPLE_NOTFREE);
-	}  
-  window.moveTo(10, 20);
-  window.resizeTo(screen.width-20, screen.height-30);
-}
 
 
 
@@ -1288,10 +1233,8 @@ function jsuVideoValidate(bNewWindow){
 function jsuGoogleAnalList (event){
 	var Fn = "[about.js jsuGoogleAnalList()] ";
 	var GA_CAT_DOWN = "JSU DOWNLOAD";
-	var GA_CAT_SAMPLE_FREE = "JSU FREE - SAMPLES";
-	var GA_CAT_SAMPLE_FULL = "JSU FULL - SAMPLES";
-	var GA_CAT_DOC_FREE = "JSU FREE - DOC";
-	var GA_CAT_DOC_FULL = "JSU FULL - DOC";
+	var GA_CAT_SAMPLE = "JSU SAMPLES";
+	var GA_CAT_DOC = "JSU DOC";
 	jslog (JSLOG_JSU,Fn + JSLOG_FUN_START);
   UnTip(event);	
   
@@ -1299,29 +1242,25 @@ function jsuGoogleAnalList (event){
   // In this case we populate all fields
   var arObjGaList = [
        {shortUrl: JSU_SHORT_URL_DOWNLOAD_FREE, longUrl: JSU_LONG_URL_DOWNLOAD_PAGE_FREE , cat:GA_CAT_DOWN,desc:'Download JSU.ZIP FREE'},
-       {shortUrl: JSU_SHORT_URL_SAMPLE_ALL, longUrl: JSU_LONG_URL_SAMPLE_ALL,cat:GA_CAT_SAMPLE_FREE, desc:'Main JSU Sample'},
-       {shortUrl: JSU_SHORT_URL_SAMPLE_TIP, longUrl: JSU_LONG_URL_SAMPLE_TIP,cat:GA_CAT_SAMPLE_FREE, desc:'Tooltip Sample'},
-       {shortUrl: JSU_SHORT_URL_SAMPLE_GA, longUrl: JSU_LONG_URL_SAMPLE_GA,cat:GA_CAT_SAMPLE_FREE, desc:'Google Analytics Sample'},
-       {shortUrl: JSU_SHORT_URL_SAMPLE_LOADING, longUrl: JSU_LONG_URL_SAMPLE_LOADING, cat:GA_CAT_SAMPLE_FREE,desc:'LoadingDiv Sample'},
-       {shortUrl: JSU_SHORT_URL_SAMPLE_JSLOG, longUrl: JSU_LONG_URL_SAMPLE_JSLOG, cat:GA_CAT_SAMPLE_FREE,desc:'JSLog Sample'},
-       {shortUrl: JSU_SHORT_URL_SAMPLE_SORT, longUrl: JSU_LONG_URL_SAMPLE_SORT, cat:GA_CAT_SAMPLE_FREE, desc:'SortTable Sample'},
-       {shortUrl: JSU_SHORT_URL_SAMPLE_IEPOPUP, longUrl: JSU_LONG_URL_SAMPLE_IEPOPUP, cat:GA_CAT_SAMPLE_FREE,desc:'IE Popup Sample'},
+       {shortUrl: JSU_SHORT_URL_SAMPLE_ALL, longUrl: JSU_LONG_URL_SAMPLE_ALL,cat:GA_CAT_SAMPLE, desc:'Main JSU Sample'},
+       {shortUrl: JSU_SHORT_URL_SAMPLE_TIP, longUrl: JSU_LONG_URL_SAMPLE_TIP,cat:GA_CAT_SAMPLE, desc:'Tooltip Sample'},
+       {shortUrl: JSU_SHORT_URL_SAMPLE_VALIDATE, longUrl: JSU_LONG_URL_SAMPLE_VALIDATE,cat:GA_CAT_SAMPLE, desc:'Validate Sample'},
+       {shortUrl: JSU_SHORT_URL_SAMPLE_LOADING, longUrl: JSU_LONG_URL_SAMPLE_LOADING, cat:GA_CAT_SAMPLE,desc:'LoadingDiv Sample'},
+       {shortUrl: JSU_SHORT_URL_SAMPLE_GA, longUrl: JSU_LONG_URL_SAMPLE_GA,cat:GA_CAT_SAMPLE, desc:'Google Analytics Sample'},
+       {shortUrl: JSU_SHORT_URL_SAMPLE_JSLOG, longUrl: JSU_LONG_URL_SAMPLE_JSLOG, cat:GA_CAT_SAMPLE,desc:'JSLog Sample'},
+       {shortUrl: JSU_SHORT_URL_SAMPLE_SORT, longUrl: JSU_LONG_URL_SAMPLE_SORT, cat:GA_CAT_SAMPLE, desc:'SortTable Sample'},
+       {shortUrl: JSU_SHORT_URL_SAMPLE_IEPOPUP, longUrl: JSU_LONG_URL_SAMPLE_IEPOPUP, cat:GA_CAT_SAMPLE,desc:'IE Popup Sample'},
+       {shortUrl: JSU_SHORT_URL_SAMPLE_JQPOPUP, longUrl: JSU_LONG_URL_SAMPLE_JQPOPUP, cat:GA_CAT_SAMPLE,desc:'JQ Popup Sample'},
        // --------------------------
-       {shortUrl: JSU_SHORT_URL_DOC, longUrl: JSU_LONG_URL_DOC, cat:GA_CAT_DOC_FREE,desc:'JSU Documentation'},
-       {shortUrl: JSU_SHORT_URL_DOC_TIP, longUrl: JSU_LONG_URL_DOC_TIP, cat:GA_CAT_DOC_FREE,desc:'JSU Tooltip Documentation'},
-       {shortUrl: JSU_SHORT_URL_DOC_GA, longUrl: JSU_LONG_URL_DOC_GA, cat:GA_CAT_DOC_FREE,desc:'JSU Tooltip Documentation'},
-       {shortUrl: JSU_SHORT_URL_DOC_LOADING, longUrl: JSU_LONG_URL_DOC_LOADING, cat:GA_CAT_DOC_FREE,desc:'JSU Google Analytics Documentation'},
-       {shortUrl: JSU_SHORT_URL_DOC_JSLOG, longUrl: JSU_LONG_URL_DOC_JSLOG, cat:GA_CAT_DOC_FULL,desc:'JSU JSLog Doc'},
-       {shortUrl: JSU_SHORT_URL_DOC_SORT, longUrl: JSU_LONG_URL_DOC_SORT, cat:GA_CAT_DOC_FREE,desc:'JSU SortTable Documentation'},
-       {shortUrl: JSU_SHORT_URL_DOC_IEPOPUP, longUrl: JSU_LONG_URL_DOC_IEPOPUP, cat:GA_CAT_DOC_FULL,desc:'JSU IE Popup Doc'}
-       // --------------------------
-       /*
-       {shortUrl: JSU_SHORT_URL_SAMPLE_JQPOPUP, longUrl: JSU_LONG_URL_SAMPLE_JQPOPUP, cat:GA_CAT_SAMPLE_FULL,desc:'JQ Popup Sample'},
-       {shortUrl: JSU_SHORT_URL_SAMPLE_VALIDATE, longUrl: JSU_LONG_URL_SAMPLE_VALIDATE, cat:GA_CAT_SAMPLE_FULL,desc:'Validate Sample'},
-       {shortUrl: JSU_SHORT_URL_DOC_VALIDATE, longUrl: JSU_LONG_URL_DOC_VALIDATE, cat:GA_CAT_DOC_FULL,desc:'JSU Validate Doc'},
-       {shortUrl: JSU_SHORT_URL_DOC_JQPOPUP, longUrl: JSU_LONG_URL_DOC_JQPOPUP, cat:GA_CAT_DOC_FULL,desc:'JSU JQ Popup Doc'}
-       */
-       
+       {shortUrl: JSU_SHORT_URL_DOC, longUrl: JSU_LONG_URL_DOC, cat:GA_CAT_DOC,desc:'JSU Documentation'},
+       {shortUrl: JSU_SHORT_URL_DOC_TIP, longUrl: JSU_LONG_URL_DOC_TIP, cat:GA_CAT_DOC,desc:'JSU Tooltip Documentation'},
+       {shortUrl: JSU_SHORT_URL_DOC_VALIDATE, longUrl: JSU_LONG_URL_DOC_VALIDATE, cat:GA_CAT_DOC,desc:'JSU Google Analytics Documentation'},
+       {shortUrl: JSU_SHORT_URL_DOC_LOADING, longUrl: JSU_LONG_URL_DOC_LOADING, cat:GA_CAT_DOC,desc:'JSU Google Analytics Documentation'},
+       {shortUrl: JSU_SHORT_URL_DOC_GA, longUrl: JSU_LONG_URL_DOC_GA, cat:GA_CAT_DOC,desc:'JSU Tooltip Documentation'},
+       {shortUrl: JSU_SHORT_URL_DOC_JSLOG, longUrl: JSU_LONG_URL_DOC_JSLOG, cat:GA_CAT_DOC,desc:'JSU JSLog Doc'},
+       {shortUrl: JSU_SHORT_URL_DOC_SORT, longUrl: JSU_LONG_URL_DOC_SORT, cat:GA_CAT_DOC,desc:'JSU SortTable Documentation'},
+       {shortUrl: JSU_SHORT_URL_DOC_IEPOPUP, longUrl: JSU_LONG_URL_DOC_IEPOPUP, cat:GA_CAT_DOC,desc:'JSU IE Popup Doc'},
+       {shortUrl: JSU_SHORT_URL_DOC_JQPOPUP, longUrl: JSU_LONG_URL_DOC_JQPOPUP, cat:GA_CAT_DOC,desc:'JSU JQ Popup Doc'}
        
      ];
   // show the TipFix with the List of Link
@@ -1684,10 +1623,12 @@ function testExecute(){
 	}		
 }
 
-// quelli con bPresent=false possono essere presnti rundomicamente con 1 possilita su par.pos
+// quelli con bPresent=false possono essere presenti randomicamente con 1 possilita su par.pos
 var ar_test = [{iCountReq:4,bPresent:true,szName:'DownloadFree',szURL:JSU_SHORT_URL_DOWNLOAD_FREE, iCountCur:0, iClickDone:0},
               {iCountReq:7,bPresent:true,szName:'SampleAll',szURL:JSU_SHORT_URL_SAMPLE_ALL, iCountCur:0, iClickDone:0},
               {iCountReq:7,bPresent:false,szName:'SampleTIP',szURL:JSU_SHORT_URL_SAMPLE_TIP, iCountCur:0, iClickDone:0},
+              {iCountReq:5,bPresent:false,szName:'SampleValidate',szURL:JSU_SHORT_URL_SAMPLE_VALIDATE, iCountCur:0, iClickDone:0},
+              {iCountReq:5,bPresent:false,szName:'SampleJQPopup',szURL:JSU_SHORT_URL_SAMPLE_JQPOPUP, iCountCur:0, iClickDone:0},
               {iCountReq:8,bPresent:false, szName:'SampleGA',szURL:JSU_SHORT_URL_SAMPLE_GA, iCountCur:0, iClickDone:0},
               {iCountReq:9,bPresent:false, szName:'SampleLOADING',szURL:JSU_SHORT_URL_SAMPLE_LOADING, iCountCur:0, iClickDone:0},
               {iCountReq:6,bPresent:false, szName:'SampleSORT',szURL:JSU_SHORT_URL_SAMPLE_SORT, iCountCur:0, iClickDone:0},

@@ -41,7 +41,7 @@
 <BR/>
 <b>REQUIRE:</b>            JSU: jslog.js dom-drag.js   <BR/>
 <b>First Version:</b>     ver 1.0 - Jul 2007  <BR/>
-<b>Current Version:</b>   ver 1.8 - Jul 2016  <BR/>
+<b>Current Version:</b>   JSU v. 1.8 &nbsp;&nbsp;&nbsp;Last Update: 2016-Sep-18  <BR/>
 <BR/>-----------------------------------------------------------------------------------<BR/>
 <b>DISCLAIMER</b>  <BR/>
 Copyright by Federico Levis - <a href="https://github.com/JSUtility/JSU" target="_self">JSU</a> <BR/> 
