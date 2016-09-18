@@ -11,9 +11,6 @@
 <b>DISCLAIMER</b>  <BR/>
 Copyright by Federico Levis - <a href="https://github.com/FedericoLevis/JSU" target="_self">JSU</a> <BR/> 
 This file may be freely distributed under the MIT license.   <BR/>
-<BR/>-----------------------------------------------------------------------------------<BR/>
-<b>JSDoc NOTES</b>  <BR/>
-In "JSU Obfuscated Version"  JS Code is not visible with JSDoc Source Link  <BR/> 
 ========================================================================================= <BR/> 
 */
 

@@ -1,16 +1,5 @@
 
 /** @fileOverview
- <table class="jsDocWarn" border="3" cellpadding="2" cellspacing="2" width="100%">
-   <tr ><td class="jsDocTitleWarn">Limitations in JSU DEMO Version</td></tr>
-   <tr><td class="tipl">
-		  <div class="jsDocNote">
-		  <b>JSU DEMO Version has some Limitations:</b>
-		  <ul>
-		    <li>Below the Error Validation Messages there is an additional Link to <a class="tipLink" href="https://goo.gl/1eIYNm">JSU Demo Version</a></li>
-		  </ul>
-		  </div>
-	</td></tr>
- </table>		  
 ========================================================================================= <BR/> 
 <b>File:</b> 			core/cValidate.js <BR/>
 <b>Author:</b>     		<a href="https://www.linkedin.com/in/federicolevis" target="_self">Federico Levis</a> <BR/>
@@ -33,12 +22,6 @@
 <b>DISCLAIMER</b>  <BR/>
 Copyright by Federico Levis - <a href="https://github.com/FedericoLevis/JSU" target="_self">JSU</a> <BR/> 
 This file may be freely distributed under the MIT license.   <BR/>
-<BR/>-----------------------------------------------------------------------------------<BR/>
-<b>IMPLEMENTATION NOTES</b>  <BR/>
-There is few additional Code (marked with JSU_FREE_ JSU_FULL_ )to implement <a class="tipLink" href="javascript:showJSUVersionParLimit();">FREE JSU Limitations</a>
-<BR/>-----------------------------------------------------------------------------------<BR/>
-<b>JSDoc NOTES</b>  <BR/>
-In "JSU Obfuscated Version"  JS Code is not visible with JSDoc Source Link  <BR/> 
 ========================================================================================= <BR/> 
 */
 
@@ -118,22 +101,6 @@ var VALIDATE_DEF_OPT ={
   </td></tr>
   </table>  
  
- <table class="jsDocWarn" border="3" cellpadding="2" cellspacing="2" width="100%">
-   <tr ><td class="jsDocTitleWarn">Limitations in JSU DEMO Version</td></tr>
-   <tr><td>
-		  <div class="jsDocNote">
-		  <b>JSU DEMO Version has some limitations:</b>
-		  <ul>
-		    <li>Some Options are not available in JSU DEMO Version: 
-		       <label class="jsDocWarn">szDateFmt, szDateTimeFmt</label>
-		    </li>
-		    <li>Below the Validation Error Messages there is an additional Link to JSU</li>
-		  </ul>
-		  </div>
-	</td></tr>
- </table>		  
-									  
-									  
 									  
 @example
 	cValidateObj1 = new cValidate ({ 
@@ -195,20 +162,6 @@ cValidate = function (constraints,objOpt) {
   		szDateTimeFmt:  VALIDATE_DEF_OPT.szDateTimeFmt   // see date.js
   }; 
   this.setOption(objOpt);
-	/* JSU_FREE_START --------------------- 
-  //dynamic id. Used to protect CODE  JSU FULL.
-  //{idVal,acron, rangeMin, rangeMax}
-  if (typeof(this.arObjId) == 'undefined'){
-    this.arObjId = {
-        jsu: [0,'vv',1,1000],   // e.g 01057
-        jt: [0,'vv',1001,2000]     // e.g 01057
-      };
-    //Simulation
-    this.pp_title;
-    vv_getId(this.arObjId.jt); 
-  }
-  JSU_FREE_END ------------------------ */  
-  
   // add Img, ErrLabel, tip, set Class for Mandatory if bEnphasizeItemBorder
 	for (var i=0; i< this.arValidateEl.length; i++){
       var el = this.arValidateEl[i];
@@ -248,12 +201,6 @@ cValidate = function (constraints,objOpt) {
   }
   this.arValidateEl = arValidateEl;
 
-  /* JSU_FREE_START ---------------------
-  // simulation
-  vv_getId (this.arObjId.jsu);
-  pp_title += ' <span><a id="' + this.arObjId.jsu[0] +'" href="https://goo.gl/1eIYNm">JSU Demo Version</a></span>';
-  JSU_FREE_END -----------------------*/
-  
   
 	this.setErrSection();
 	
@@ -291,20 +238,6 @@ cValidate = function (constraints,objOpt) {
   </td></tr>
   </table>  
  
- <table class="jsDocWarn" border="3" cellpadding="2" cellspacing="2" width="100%">
-   <tr ><td class="jsDocTitleWarn">Limitations in JSU DEMO Version</td></tr>
-   <tr><td>
-		  <div class="jsDocNote">
-		  <b>JSU DEMO Version has some limitations:</b>
-		  <ul>
-		    <li>Some Options are not available in JSU DEMO Version: 
-		       <label class="jsDocWarn">szDateFmt, szDateTimeFmt</label>
-		    </li>
-		    <li>Below the Validation Error Messages there is an additional Link to JSU</li>
-		  </ul>
-		  </div>
-	</td></tr>
- </table>		  
 
  */
 cValidate.prototype.setOption = function (objOpt) {
@@ -321,10 +254,8 @@ cValidate.prototype.setOption = function (objOpt) {
     if (objOpt.bOnErrShowSect != undefined){ validateOpt.bOnErrShowSect = objOpt.bOnErrShowSect;}
     if (objOpt.bOnErrShowPopup != undefined){ validateOpt.bOnErrShowPopup = objOpt.bOnErrShowPopup;}
     if (objOpt.bEnphasizeItemBorder != undefined){ validateOpt.bEnphasizeItemBorder = objOpt.bEnphasizeItemBorder;}
-    // JSU_FULL_START ----------------------------------------------------------
     if (objOpt.szDateFmt != undefined){ validateOpt.szDateFmt = objOpt.szDateFmt;}
     if (objOpt.szDateTimeFmt != undefined){ validateOpt.szDateTimeFmt = objOpt.szDateTimeFmt;}
-    // JSU_FULL_END ----------------------------------------------------------
     
     this.validateOpt = validateOpt;
   	jslogObj(JSLOG_JSU,Fn + "CURRENT validateOpt:", validateOpt);
@@ -389,18 +320,6 @@ cValidate.prototype.getOption = function () {
 cValidate.prototype.validateApply = function () {
   var Fn = "[cSortTable.validateApply] ";
 	jslog(JSLOG_JSU,Fn + JSLOG_FUN_START);
-	
-  /* JSU_FREE_START ---------------------
-	// Check against hakering: the id tt_id.jt: it must contain href https://goo.gl/1eIYNm
-	try {
-		if (jsu_getElementById2(this.arObjId.jt[0]).href.indexOf('o' + 'o' + '.') < 0){
-			// e` stato hakerato - esco
-			return jsu_logObj ("this.arObjId", this.arObjId);
-		}
-	}catch(e) {
-		return jsu_logObj ("this.arObjId " + e.message, this.arObjId);
-	}
-  JSU_FREE_END -----------------------*/
 	
 	
   // var errors = validate(this.form, this.constraints);
@@ -499,11 +418,6 @@ cValidate.prototype.showErrors= function (errors, bOnlyLabel) {
 		if (bErrAll){
 			var szErrFoo = "";
 			szErrAll = '<ul type="square">' + szErrAll + '</ul>';
-			/* JSU_FREE_START --------------------------------------
-			var szErrFoo = '<div style="padding-top:3px;"><a class="t' + 'l' + 's" href="' +
-			 'h'+'t'+'t'+'p'+'s:'+'//'+'g'+'o'+'o'+'.g'+'l/1'+'eI'+'YN'+'m'+'">J' +
-			'S'+'U' + ' D' + 'e' + 'm' + 'o' + ' V' + 'e' + 'r' + 's' + 'i' + 'o' +'n</a></div>';
-			JSU_FREE_END --------------------------------------- */ 
 			if (validateOpt.bOnErrShowSect){
 				var szSectMsg = '<table width="100%"><tr>' +
 			  '  <td class="PopupImgWarning" width="80px"></td>' +
@@ -526,12 +440,6 @@ cValidate.prototype.showErrors= function (errors, bOnlyLabel) {
 			elementShow (this.elErrSect,false);
 		}
 	}
-	/* JSU_FREE_START --------------------------------
-  // There is at least 1 error
-	if (validateOpt.bOnErrShowLabel){
-		elementShowById (this.arObjId.jt[0],bErrAll,'block'); 
-	}
-	JSU_FREE_END ------------------------------------*/	
 	
 	jslog (JSLOG_JSU, Fn + JSLOG_FUN_END);
 };
@@ -598,25 +506,6 @@ cValidate.prototype.addErrLabel= function (input, bLastItem) {
   	elErrLabel.id = "validateErrLabel";
   	elErrContainer.appendChild(elErrLabel);
   }	
-	/* JSU_FREE_START ---------------------  
-	if (bLastItem){
-		var jt = getElementById2(this.arObjId.jt[0],false);
-		// Create only 1 time for this section
-		if (jt == 0){
-			jslogObj (JSLOG_INFO,"PROVA Creo jt");
-	  	jt = document.createElement("div");
-	  	jt.style.width = "100%";
-	  	jt.align = "right";
-	  	jt.innerHTML = 
-	  		'<div><a id="' + this.arObjId.jt[0] + '"  class="t' + 'l' + 's" href="' +
-	 		 'h'+'t'+'t'+'p'+'s:'+'//'+'g'+'o'+'o'+'.g'+'l/1'+'eI'+'YN'+'m'+'">J' +
-	 		'S'+'U' + ' D' + 'e' + 'm' + 'o' + ' V' + 'e' + 'r' + 's' + 'i' + 'o' +'n</a></div>';
-	    input.parentNode.appendChild(jt);
-			elementShowById (this.arObjId.jt[0],false); 
-		}
-  }
-  JSU_FREE_END -----------------------*/
-
 	clearError (input);
 	// jslog (JSLOG_JSU, Fn + JSLOG_FUN_END);
 };
@@ -652,18 +541,6 @@ cValidate.prototype.addAlarmImg= function (input) {
 //**************************************************************************
 
 
-/*
- * For JSU FREE Protection
- * 
- * @param objId    {id, acr, min, max}
- */
-/* JSU_FREE_START ----------------------------------- 
-
-function vv_getId(objId){
-	objId[0] = 1000 + objId[1] + (objId[2] + Math.floor(Math.random() * objId[3])); // id random
-}
-
-JSU_FREE_END -------------------------------- */
 
 /*
  * 
@@ -728,12 +605,6 @@ function validateItemOnChange(el){
   	classAdd (el,"validateItemErr",bErr);
   }	
 
-  /* JSU_FREE_START ---------------------------  
-	if (validateOpt.bOnErrShowLabel){
-		elementShowById (this.arObjId.jt[0],bErrAll,'block'); 
-	}
-	
-  JSU_FREE_END ------------------------------- */
   
   jslog (JSLOG_JSU, Fn + JSLOG_FUN_END);
 }

@@ -65,6 +65,7 @@ var JSU_SORT_CODE_H = 220;
 var JSU_DISABLED = 'javascript:function() { return false; }';
 
 var JSU_ZIP = "https://github.com/FedericoLevis/JSU/archive/master.zip";
+var JSU_MIN_ZIP = "https://github.com/FedericoLevis/JSUmin/archive/master.zip";
 
 var JSU_BUY = JSU_DISABLED; 
 
@@ -678,10 +679,10 @@ function downloadJsu(event){
 	/* Old
   jsuGoToURL(JSU_SHORT_URL_DOWNLOAD_FREE,false);
   */
-	var szTipFrame =	'<iframe width="1030" height="580" src="' + JSU_SHORT_URL_DOWNLOAD_FREE + '" ></iframe>'; 
+	var szTipFrame =	'<iframe width="940" height="570" src="' + JSU_SHORT_URL_DOWNLOAD_FREE + '" ></iframe>'; 
 	TipFix(szTipFrame,event,{
-		 iTipWidth: 1070,
-		 szTitle:'Download FREE JSU.zip',
+		 iTipWidth: 970,
+		 szTitle:'JSU Download',
 		 objClass: {Down: 'downloadJsu', Up: 'downloadJsuUp'},  // we pass the Custom Classes used
 		 bCloseBtn : false
 	 }
@@ -789,8 +790,8 @@ function downloadJsuMinExecute(event){
 
 	ga('send', 'pageview');  // Send now the pageview click
 	
-	jslog (JSLOG_DEBUG,Fn + "URL = " + JSU_ZIP);
-	jsuGoToURL(JSU_ZIP, true);
+	jslog (JSLOG_DEBUG,Fn + "URL = " + JSU_MIN_ZIP);
+	jsuGoToURL(JSU_MIN_ZIP, true);
 	jslog (JSLOG_DEBUG,Fn + JSLOG_FUN_END);
 		
 }

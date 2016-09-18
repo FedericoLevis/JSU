@@ -1,8 +1,4 @@
 <head>
-<script>
-  // Required for DOC of JS Code
-  var JSU_PATH_BASE="https://rawgit.com/FedericoLevis/JSU/master";
-</script>
 
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type" >
   <title>JS Utility | JSU Documentation | Federico Levis</title>
@@ -55,23 +51,28 @@
 
 
 <!--  TOOLBAR Table: GoogleAnalytics and download -  common for all the JSU HTML -->
-<table class="sampleToolbar" width="100%" >
+<table class="sampleToolbar" valign="top" width="100%" >
   <tr >
-    <td class="tipl" width="30%">
+    <td class="tipl" valign="middle" width="50%">
         <input type="button"  class="googleAnalList" id="googleAnalList"  onclick="jsuGoogleAnalList(event)"  onmouseover="jsuGoogleAnalListTip(event);" onmouseout="UnTip(event)"/> 
     </td>
-    <td class="tipr" width="70%">
-     <table valign="bottom" align="right">
+    <td class="tipr" width="50%">
+     <table valign="middle" align="right">
         <tr>
-            <td class="tipr" ><b>Download Options:</b> </td>
-            <td><input type="button"  class="tipFix" id="downloadOption"  onclick="downloadTip(event)" /> </td>
-            <td valign="bottom"> <input type="button" class="downloadPay"  id="downloadPay"    onclick="downloadPay()" onmouseover="downloadTipPay(event);" onmouseout="UnTip(event)"/> </td>
-            <td valign="bottom"> <input type="button"  class="googleAnal" id="googleAnalPay"  onclick="jsuGoogleAnalPay();"  onmouseover="jsuGoogleAnalPayTip(event);" onmouseout="UnTip(event)"/> </td>
-            <td valign="bottom"> <input type="button" class="downloadFree" id="downloadFree" onclick="downloadFree();" onmouseover="downloadTipFree(event);" onmouseout="UnTip(event)"  /> </td>
-            <td valign="bottom"> <input type="button"  class="googleAnal" id="googleAnalFree"  onclick="jsuGoogleAnalFree();"  onmouseover="jsuGoogleAnalFreeTip(event);" onmouseout="UnTip(event)"/> </td>
+            <td valign="middle"> <input type="button" class="downloadJsu" id="downloadJsu" onclick="downloadJsu(event);" onmouseover="downloadJsuTip(event);" onmouseout="UnTip(event)"  /> </td>
+            <td valign="middle"> <input type="button"  class="googleAnal jsuDownloadGA" id="googleAnalFree"  onclick="jsuGoogleAnalFree();"  onmouseover="jsuGoogleAnalFreeTip(event);" onmouseout="UnTip(event)"/> </td>
+            <td class="donate" valign="top">
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="2HF4Z8X989Q4Y">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"
+                    onmouseover="donateTip(event);" onmouseout="UnTip(event)">
+                <img alt="" border="0" src="https://www.paypalobjects.com/it_IT/i/scr/pixel.gif" width="1" height="1">
+                </form>
+           </td>
         </tr>
-      </table>  
-    </td>
+     </table>   
+    </td> 
   </tr>
 </table>   
 
@@ -81,12 +82,16 @@
 
 
 
+<hr>
+
+<h1>
+<a id="jsu-" class="anchor" href="#jsu-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>JSU </h1>
 
 <p><code>JSU</code> <strong>JS Utility Plugin</strong>: Tooltip, Validate, Popup, SortTable, JSLog, LoadingDiv, Google Analytics and other features ...<br>
 All JSU Features can be tried with following sample: <a href="https://goo.gl/MoY5nK">Try JSU Samples</a></p>
 
 <h2>
-<a id="user-content-table-of-contents" class="anchor" href="#table-of-contents" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Table of Contents</h2>
+<a id="table-of-contents" class="anchor" href="#table-of-contents" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Table of Contents</h2>
 
 <ul>
 <li> <a href="#1-jsu-features">1) JSU Features</a> 
@@ -113,7 +118,7 @@ All JSU Features can be tried with following sample: <a href="https://goo.gl/MoY
 <p></p>
 
 <h1>
-<a id="user-content-1-jsu-features" class="anchor" href="#1-jsu-features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1) JSU Features</h1>
+<a id="1-jsu-features" class="anchor" href="#1-jsu-features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1) JSU Features</h1>
 
 <p><strong>JSU</strong> is a Lightweight JavaScript Utility library with the main goal of simplifing developer design. </p>
 
@@ -140,7 +145,7 @@ All JSU Features can be tried with following sample: <a href="https://goo.gl/MoY
 <p></p>
 
 <h2>
-<a id="user-content-11-jsu-core-features" class="anchor" href="#11-jsu-core-features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1.1) JSU CORE Features</h2>
+<a id="11-jsu-core-features" class="anchor" href="#11-jsu-core-features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1.1) JSU CORE Features</h2>
 
 <p><code>Pure JQ Plugins, No Requirement</code>  </p>
 
@@ -149,19 +154,19 @@ All JSU Features can be tried with following sample: <a href="https://goo.gl/MoY
 <a href="https://goo.gl/AGKlpQ">Tooltip</a>: Many <strong>HTML Tooltips</strong> options: <strong>Floating/Fixed Tips</strong> with GIF, Video, Code Highlight (JS, CSS, Java, Shell,...) <a href="https://youtu.be/wpo2oM_L3ds"> <img src="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" alt="Click to See the Video" width="100" height="20" border="2" data-canonical-src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" style="max-width:100%;"></a><br>
 </li>
 <li>
-<a href="http://goo.gl/UYJ5Zv">Google Analytics</a>:  JSU API to build in few minutes a <strong>User Friendly List of Links to Google Analytics</strong>   <a href="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" target="_blank"><img src="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" alt="Click to See the Video" width="100" height="20" border="2" data-canonical-src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" style="max-width:100%;"></a><br>
+<a href="https://goo.gl/M7LT4v">Validate</a>: <strong>Validate Items</strong> with many constraints/options. Show Validate Errors in Red Items or Section, Popup ...  <a href="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" target="_blank"><img src="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" alt="Click to See the Video" width="100" height="20" border="2" data-canonical-src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" style="max-width:100%;"></a><br>
 </li>
 <li>
 <a href="https://goo.gl/0tIOIJ">LoadingDiv</a>:  <strong>Loading Div</strong> to be displayed during Long Operation. Many Options provided: Loading Gif, Title, Message, ElapsedSec...  <a href="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" target="_blank"><img src="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" alt="Click to See the Video" width="100" height="20" border="2" data-canonical-src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" style="max-width:100%;"></a><br>
 </li>
 <li>
-<a href="https://goo.gl/aKR7b2">SortTable</a>:  <strong>Sort HTML Table</strong> by clicking column header  <a href="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" target="_blank"><img src="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" alt="Click to See the Video" width="100" height="20" border="2" data-canonical-src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" style="max-width:100%;"></a><br>
+<a href="http://goo.gl/UYJ5Zv">Google Analytics</a>:  JSU API to build in few minutes a <strong>User Friendly List of Links to Google Analytics</strong>   <a href="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" target="_blank"><img src="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" alt="Click to See the Video" width="100" height="20" border="2" data-canonical-src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" style="max-width:100%;"></a><br>
 </li>
 <li>
 <a href="https://goo.gl/Iobg3a">JSLog</a>: <strong>Log</strong> from JS Code into an optional Window: log Text, Object, JSON, Time Elapsed ...  <a href="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" target="_blank"><img src="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" alt="Click to See the Video" width="100" height="20" border="2" data-canonical-src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" style="max-width:100%;"></a><br>
 </li>
 <li>
-<a href="https://goo.gl/M7LT4v">Validate</a>: <strong>Validate Items</strong> with many constraints/options. Show Validate Errors in Red Items or Section, Popup ...  <a href="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" target="_blank"><img src="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" alt="Click to See the Video" width="100" height="20" border="2" data-canonical-src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" style="max-width:100%;"></a><br>
+<a href="https://goo.gl/aKR7b2">SortTable</a>:  <strong>Sort HTML Table</strong> by clicking column header  <a href="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" target="_blank"><img src="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" alt="Click to See the Video" width="100" height="20" border="2" data-canonical-src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" style="max-width:100%;"></a><br>
 </li>
 <li>
 <a href="https://goo.gl/iWW5cz">IE Popup</a>: <strong>HTML Modal Popup</strong> designed only for <strong>IE</strong> (the feature is based on <em>IE ShowModalDialog API</em>). This feature can be useful if you need <strong>Blocking Code implementation</strong> (like alert) and if only IE is the browser required. 
@@ -170,7 +175,7 @@ In other browser (Firefox, Chrome,...) <strong>IE Popup API</strong> will simply
 </ul>
 
 <h2>
-<a id="user-content-12-jsu-jquery-features" class="anchor" href="#12-jsu-jquery-features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1.2) JSU jquery Features</h2>
+<a id="12-jsu-jquery-features" class="anchor" href="#12-jsu-jquery-features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1.2) JSU jquery Features</h2>
 
 <p><code>JQ Popup (required: jquery, jquery-ui)</code><br>
 JSU JQUERY Features are not <em>Pure JS plugin</em> like previous one, but they require <strong>jquery and jquery-ui</strong> (provided in the JSU.ZIP):</p>
@@ -182,7 +187,7 @@ JSU JQUERY Features are not <em>Pure JS plugin</em> like previous one, but they 
 </ul>
 
 <h2>
-<a id="user-content-13-jsu-popup-plugin-choice" class="anchor" href="#13-jsu-popup-plugin-choice" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1.3) JSU Popup Plugin Choice</h2>
+<a id="13-jsu-popup-plugin-choice" class="anchor" href="#13-jsu-popup-plugin-choice" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1.3) JSU Popup Plugin Choice</h2>
 
 <p><code>Choice between [IE Popup] (PURE JS) or [JQ Popup] (required: jquery, jquery-ui)</code><br>
 Id you want to use <strong>JSU Popup API</strong>, the generic solution of <a href="https://goo.gl/iPqUqL">JQ Popup</a> is recommended for Cross Browser compatibility. 
@@ -196,7 +201,7 @@ Whatever is your choice (IE Popup or JQ Popup), we underline that you can easily
 </ul>
 
 <h1>
-<a id="user-content-2-jsu-samples-videos-documentation" class="anchor" href="#2-jsu-samples-videos-documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2) JSU Samples, Videos, Documentation</h1>
+<a id="2-jsu-samples-videos-documentation" class="anchor" href="#2-jsu-samples-videos-documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2) JSU Samples, Videos, Documentation</h1>
 
 <hr>
 
@@ -245,48 +250,55 @@ Whatever is your choice (IE Popup or JQ Popup), we underline that you can easily
 </thead>
 <tbody>
 <tr>
-<td><a href="https://goo.gl/1e6ju7">JSU Tooltip Sample</a></td>
+<td><a href="https://goo.gl/1e6ju7">Tooltip Sample</a></td>
 <td><a href="https://goo.gl/AGKlpQ">Tooltip</a></td>
 <td><a href="https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/tooltip.js/index.html">Tooltip API</a></td>
 <td><a href="https://youtu.be/wpo2oM_L3ds"> <img src="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" alt="Click to See the Video" width="100" height="20" border="2" data-canonical-src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" style="max-width:100%;"></a></td>
 </tr>
 <tr>
-<td><a href="https://goo.gl/jttCME">JSU LoadingDiv Sample</a></td>
-<td><a href="https://goo.gl/0tIOIJ">LoadingDiv</a></td>
-<td><a href="https://rawgit.com/FedericoLevis/JSUDoc/master/loadingDiv.js/index.html">LoadingDiv API</a></td>
-<td> <a href="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" target="_blank"><img src="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" alt="Click to See the Video" width="100" height="20" border="2" data-canonical-src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" style="max-width:100%;"></a>
-</td>
-</tr>
-<tr>
-<td><a href="https://goo.gl/hJm8vV">JSU SortTable Sample</a></td>
-<td><a href="https://goo.gl/aKR7b2">SortTable</a></td>
-<td><a href="https://rawgit.com/FedericoLevis/JSUDoc/master/cSortTable.js/index.html">SortTable API</a></td>
-<td> <a href="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" target="_blank"><img src="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" alt="Click to See the Video" width="100" height="20" border="2" data-canonical-src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" style="max-width:100%;"></a>
-</td>
-</tr>
-<tr>
-<td><a href="https://goo.gl/aAtyxG">JSU JSLog Sample</a></td>
-<td><a href="https://goo.gl/Iobg3a">JSlog</a></td>
-<td><a href="https://rawgit.com/FedericoLevis/JSUDoc/master/jslog.js/index.html">JSlog API</a></td>
-<td> <a href="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" target="_blank"><img src="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" alt="Click to See the Video" width="100" height="20" border="2" data-canonical-src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" style="max-width:100%;"></a>
-</td>
-</tr>
-<tr>
-<td><a href="https://goo.gl/u2zTRz">JSU IE Popup Sample</a></td>
-<td><a href="https://goo.gl/iWW5cz">IE Popup</a></td>
-<td><a href="https://rawgit.com/FedericoLevis/JSUDoc/master/IEPopup.js/index.html">IE Popup API</a></td>
-<td> <a href="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" target="_blank"><img src="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" alt="Click to See the Video" width="100" height="20" border="2" data-canonical-src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" style="max-width:100%;"></a>
-</td>
-</tr>
-<tr>
-<td><a href="https://goo.gl/MoY5nK">Main JSU Samples</a></td>
+<td><a href="https://goo.gl/SboNsD">Validate Sample</a></td>
 <td><a href="https://goo.gl/M7LT4v">Validate</a></td>
 <td><a href="https://rawgit.com/FedericoLevis/JSUDoc/master/cValidate.js/index.html">Validate API</a></td>
 <td> <a href="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" target="_blank"><img src="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" alt="Click to See the Video" width="100" height="20" border="2" data-canonical-src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" style="max-width:100%;"></a>
 </td>
 </tr>
 <tr>
-<td><a href="https://goo.gl/MoY5nK">Main JSU Samples</a></td>
+<td><a href="http://goo.gl/UzfnFK">Google Analytics Sample</a></td>
+<td><a href="http://goo.gl/UYJ5Zv">Google Analytics</a></td>
+<td><a href="https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/googleAnal.js/index.html">Google Analytics API</a></td>
+<td> <a href="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" target="_blank"><img src="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" alt="Click to See the Video" width="100" height="20" border="2" data-canonical-src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" style="max-width:100%;"></a>
+</td>
+</tr>
+<tr>
+<td><a href="https://goo.gl/jttCME">LoadingDiv Sample</a></td>
+<td><a href="https://goo.gl/0tIOIJ">LoadingDiv</a></td>
+<td><a href="https://rawgit.com/FedericoLevis/JSUDoc/master/loadingDiv.js/index.html">LoadingDiv API</a></td>
+<td> <a href="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" target="_blank"><img src="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" alt="Click to See the Video" width="100" height="20" border="2" data-canonical-src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" style="max-width:100%;"></a>
+</td>
+</tr>
+<tr>
+<td><a href="https://goo.gl/aAtyxG">JSLog Sample</a></td>
+<td><a href="https://goo.gl/Iobg3a">JSlog</a></td>
+<td><a href="https://rawgit.com/FedericoLevis/JSUDoc/master/jslog.js/index.html">JSlog API</a></td>
+<td> <a href="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" target="_blank"><img src="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" alt="Click to See the Video" width="100" height="20" border="2" data-canonical-src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" style="max-width:100%;"></a>
+</td>
+</tr>
+<tr>
+<td><a href="https://goo.gl/hJm8vV">SortTable Sample</a></td>
+<td><a href="https://goo.gl/aKR7b2">SortTable</a></td>
+<td><a href="https://rawgit.com/FedericoLevis/JSUDoc/master/cSortTable.js/index.html">SortTable API</a></td>
+<td> <a href="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" target="_blank"><img src="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" alt="Click to See the Video" width="100" height="20" border="2" data-canonical-src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" style="max-width:100%;"></a>
+</td>
+</tr>
+<tr>
+<td><a href="https://goo.gl/u2zTRz">IE Popup Sample</a></td>
+<td><a href="https://goo.gl/iWW5cz">IE Popup</a></td>
+<td><a href="https://rawgit.com/FedericoLevis/JSUDoc/master/IEPopup.js/index.html">IE Popup API</a></td>
+<td> <a href="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" target="_blank"><img src="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" alt="Click to See the Video" width="100" height="20" border="2" data-canonical-src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" style="max-width:100%;"></a>
+</td>
+</tr>
+<tr>
+<td><a href="https://goo.gl/aAtyxG">JQ Popup Sample</a></td>
 <td><a href="https://goo.gl/iPqUqL">JQ Popup</a></td>
 <td><a href="https://rawgit.com/FedericoLevis/JSUDoc/master/JSPopup.js/index.html">JQ Popup API</a></td>
 <td> <a href="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" target="_blank"><img src="https://camo.githubusercontent.com/5e9ed95eaee5dfcee98ebe7149773f44b1de15fa/68747470733a2f2f7261776769742e636f6d2f466564657269636f4c657669732f696d616765732f6d61737465722f6a737541626f75742f506c6179566964656f2e706e67" alt="Click to See the Video" width="100" height="20" border="2" data-canonical-src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png" style="max-width:100%;"></a>
@@ -298,22 +310,29 @@ Whatever is your choice (IE Popup or JQ Popup), we underline that you can easily
 <p>Each of the previous link can be reached by the <a href="https://goo.gl/MoY5nK">Main JSU Samples</a> or by the specific samples </p>
 
 <h1>
-<a id="user-content-3-download-and-installation" class="anchor" href="#3-download-and-installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3) Download and Installation</h1>
+<a id="3-download-and-installation" class="anchor" href="#3-download-and-installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3) Download and Installation</h1>
 
 <hr>
 
-<p>You have 2 options: <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/JSUversion.html">JSU FREE or FULL Version</a> 
-After downloading JSU.zip, unzip it and everything is ready to be used. You can immediately try the JSU sample in your unzipped <em>jsu/samples</em> directory</p>
+<p>You have 2 <a href="https://goo.gl/HnNqnM">JSU Download Options</a>: </p>
+
+<ul>
+<li>
+<strong>JSU minified version</strong> </li>
+<li>
+<strong>JSU Development version</strong> with Source plenty of comments and with Samples
+After downloading JSU.zip, unzip it and everything is ready to be used. With <strong>JSU Development version</strong> you can immediately try the JSU sample in your unzipped <em>jsu/samples</em> directory</li>
+</ul>
 
 <h1>
-<a id="user-content-4-jsu-configuration" class="anchor" href="#4-jsu-configuration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4) JSU CONFIGURATION</h1>
+<a id="4-jsu-configuration" class="anchor" href="#4-jsu-configuration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4) JSU CONFIGURATION</h1>
 
 <hr>
 
 <p>You can choose between 2 options:</p>
 
 <h2>
-<a id="user-content-41-jsu-configuration-requirejs" class="anchor" href="#41-jsu-configuration-requirejs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4.1) JSU CONFIGURATION: require.js</h2>
+<a id="41-jsu-configuration-requirejs" class="anchor" href="#41-jsu-configuration-requirejs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4.1) JSU CONFIGURATION: require.js</h2>
 
 <p><code>OPTION A) LOAD ALL JSU JS with require.js</code>
 Previous samples loads all JSU CORE features together with require.js using following 2 pre-defined data-main files:</p>
@@ -325,12 +344,15 @@ Previous samples loads all JSU CORE features together with require.js using foll
 <strong>pluging/jsu-jq.js</strong>  for ALL JSU Features (jquery.js and jquery-ui.js are loaded) </li>
 </ul>
 
-<div class="highlight highlight-source-js"><pre><span class="pl-c">&lt;!--</span>  <span class="pl-c1">JSU</span> css <span class="pl-c">--&gt;</span>
-<span class="pl-k">&lt;</span>link rel<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> href<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>../../core/jsu.css<span class="pl-pds">"</span></span> type<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>text/css<span class="pl-pds">"</span></span><span class="pl-k">&gt;</span>
-<span class="pl-c">&lt;!--</span>  <span class="pl-c1">JSU</span> js <span class="pl-c">--&gt;</span>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">&lt;</span>link rel<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> href<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>https://rawgit.com/FedericoLevis/JSU/master/core/jsu.css<span class="pl-pds">"</span></span> type<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>text/css<span class="pl-pds">"</span></span><span class="pl-k">&gt;</span>
+<span class="pl-k">&lt;</span>script data<span class="pl-k">-</span>main<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>https://rawgit.com/FedericoLevis/JSU/master/plugin/jsu.js<span class="pl-pds">"</span></span> src<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>https://rawgit.com/FedericoLevis/JSU/master/core/require.js<span class="pl-pds">"</span></span><span class="pl-k">&gt;&lt;</span><span class="pl-k">/</span>script<span class="pl-k">&gt;</span></pre></div>
+
+<p>*Load all JSU CORE Features from GitHub Repository *</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">&lt;</span>link rel<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> href<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>../../core/jsu.css<span class="pl-pds">"</span></span> type<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>text/css<span class="pl-pds">"</span></span><span class="pl-k">&gt;</span>
 <span class="pl-k">&lt;</span>script  data<span class="pl-k">-</span>main<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>../../plugin/jsu.js<span class="pl-pds">"</span></span> src<span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>../../core/require.js<span class="pl-pds">"</span></span><span class="pl-k">&gt;&lt;</span><span class="pl-k">/</span>script<span class="pl-k">&gt;</span></pre></div>
 
-<p><em>Example of the Code used in the JSU CORE Samples to include ONLY the JSU CORE Features</em></p>
+<p>*Alternative way to Load JSU CORE from a JSU sample, if downloaded locally *</p>
 
 <p>You can <strong>easily modify jsu.js or jsu-jq.js</strong> to automatically modify the language and the jsuVersion (<strong>minified or commented</strong>) of all JSU files loaded</p>
 
@@ -352,7 +374,7 @@ Previous samples loads all JSU CORE features together with require.js using foll
 <p>For example see <a href="https://github.com/FedericoLevis/JSU/blob/master/samples/Tip/TipSample.html">JSU Tooltip Loading with require.js jsu.js - TipSample.html</a></p>
 
 <h2>
-<a id="user-content-42-jsu-configuration-include-each-js-file" class="anchor" href="#42-jsu-configuration-include-each-js-file" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4.2) JSU CONFIGURATION: include each JS FILE</h2>
+<a id="42-jsu-configuration-include-each-js-file" class="anchor" href="#42-jsu-configuration-include-each-js-file" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4.2) JSU CONFIGURATION: include each JS FILE</h2>
 
 <p><code>OPTION B) Manually list the js to load</code>
 If you prefer you can manually load the required JSU css and js. </p>
@@ -365,18 +387,20 @@ If you prefer you can manually load the required JSU css and js. </p>
 <p>For example see <a href="https://github.com/FedericoLevis/JSU/blob/master/samples/Tip/TipSimple.html">JSU Tooltip Loading with file List - TipSimple.html</a></p>
 
 <h1>
-<a id="user-content-5-jsu-version" class="anchor" href="#5-jsu-version" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>5) JSU Version</h1>
+<a id="5-jsu-version" class="anchor" href="#5-jsu-version" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>5) JSU Version</h1>
 
 <hr>
 
-<p>3.3  July 2016</p>
+<p>JSU v. 1.8    Last Update: 2016-Sep-18</p>
 
 <h1>
-<a id="user-content-6-license" class="anchor" href="#6-license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>6) License</h1>
+<a id="6-license" class="anchor" href="#6-license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>6) License</h1>
 
 <hr>
 
 <p>MIT</p>
+
+<hr>
 
 <hr class="jsuDoc">
 <!-- JSU FOOTER  COMMON-->
