@@ -1,8 +1,1489 @@
-/***************************************************************************/
-/*                                                                         */
-/*  This obfuscated code was created by Javascript Obfuscator Free Version.*/
-/*  Javascript Obfuscator Free Version can be downloaded here              */
-/*  http://javascriptobfuscator.com                                        */
-/*                                                                         */
-/***************************************************************************/
-var _$_4731=["URL","jslog","debug","../../images/","undefined","-------------------- START","-------------------- END"," ============================= START"," ============================= END","<span style=\"color: #f00\">-----------------------------------------------------------------------------------------------------------------------</span>","TopLeft","BottomRight","Top","Left","Right","Bottom","XS","S","M","L","XL","NONE","ONLY_MEANINGFUL","ALL","370px","400px","1200px","search","exec","[?&]","=([^&]*)","=","name","indexOf","length","substr","iLogLev","console","Level=","innerHTML","labelTitle","selectedIndex","selectLogLev","setSize","window","top","style","px","clearWindow","bLogTime","szPathImg",": ","\x0A","stringify","send","iColNum","iRowNum",":<BR>","<textarea rows=\"","\" cols=\"","\">","</textarea><BR>","nodeName=","nodeName","attributes","value","outerHTML=","outerHTML","><",">\x0A<","getComputedStyle","\x0A\x0A--------------------------------------- ","meaningful style \x0A","style \x0A","","animation","accelerator","function","  "," = '","'\x0A","\" readonly>","getElementById","},","} ,\x0A  ",":[",":\x0A[\x0A  ","[{","[\x0A  {","}]","}\x0A]\x0A  ","getTime"," sec"," msec","killWindow","string","match","replace","szLogSize","getElementsByTagName","createElement","createTextNode","body","createWindow","getCookie","debugging_on","div","background","#000","font","9pt \"Lucida Grande\", \"Lucida Sans Unicode\", sans-serif","padding","2px","position","absolute","left","0px","height","zIndex","100","minHeight","40px","width","minWidth","150px","span","border","1px solid #000","cursor","pointer","color","display","block","lineHeight",".5em","0 0 3px","4px","right","title","Close jslogVar.console Debugger","setAttribute","x","appendChild","click","addEvent","bottom","3px","5px solid #ccc","borderLeftColor","borderTopColor","#ccc","0","overflow","hidden","Resize the jslogVar.console Debugger","xFrom","yFrom","init","onDrag","resizeX","resizeY","adjustViewport","onDragEnd","setCookie","h3","className","appendAllBtn","    ","getGroupSep","label","jslogFooter","viewport","pre","1px solid #ccc","#ebebeb","white","backgroundColor","black","textAlign","fontSize","1.2em","margin","0 3px","25px","auto","abs","<br/>","<textarea rows","getHours","num2StrPad",":","getMinutes","getSeconds",".","getMilliseconds"," ","[","] ","buffer","scrollWithIt","timer","jslogVar.console.sendBuffer()","setTimeout","killTimer","scrollTop","scrollHeight","removeChild","parentNode","=0","cookie","jslogVar.console=",";","substring","split","addEventListener","attachEvent","e","event","on","removeEventListener","detachEvent","arrowTopLeft.jpg","Move JSConsole to TOP LEFT CORNER","getImgPos","arrowBottomRight.jpg","Move JSConsole to BOTTOM RIGHT LEFT CORNER","arrowLeft.jpg","Move JSConsole to LEFT SIDE","arrowRight.jpg","Move JSConsole to the RIGHT SIDE","arrowTop.jpg","Move JSConsole to the TOP","arrowBottom.jpg","Move JSConsole to the BOTTOM","Size SX","push","Size S","Size M","Size L","Size XL","getBtn","getBtnSep","Clear","Clear the Window","Delimiter","Add a Separator Delimet","sendDelimiter","isIE","CopyToClipboard","Copy To Clipboard All the  contain of the  Window","copy2Clipboard","SelectAll","Select ALL","selectAll","Show debug Fields","Show hidden fields having class=\"debug\" or id=\"debug\"","debugVisible","Show "," Fields","Show hidden fields having class=\"","\" or id=\"","\"","Hide ","Fields","Hide again Debug fields having class=\"","arBtnDebug","SPAN","DIV","TABLE","id","none","SETTINGS: ","select","LogLevel=","CLOSE JSLOG","dv","selected","change","NO Time","1","Log Time","selection","createTextRange","moveToElementText","getSelection","createRange","selectNode","addRange","<BR>","<br>","TextArea","innerText","copy2Clipboard NOT supported for This Browser - Supported Browser for COPY to Clipboard: IE.","To Copy to Clipboard Please use SelectAll or CTRL-C  CTRL-V","RemoveFormat","execCommand","Copy","appName","Microsoft Internet Explorer","Netscape","userAgent","Trident/.*rv:([0-9]{1,}[.0-9]{0,})","input","jslogButton","type","button","#ffffff","fontWeight","bold","0 2px 0px 10px","0 3px 0px 0px","0 10px 0px 0px","img","0px 2px","src","align","1px solid black","mouseenter","1px solid yellow","mouseleave","setPos","innerHeight","innerWidth","screen","toString","join","iTop"];var JSLOG_ERR=0;var JSLOG_INFO=1;var JSLOG_DEBUG=2;var JSLOG_TRACE=4;var JSLOG_TEST=8;var JSLOG_JSU=16;var JSLOG_LEV_URL=_$_4731[0];var JSLOG_LEV_URL_PAR=_$_4731[1];var JSLOG_ID_DEBUG=_$_4731[2];var JSLOG_DEF_LOG_TIME=false;var JSLOG_DEF_PATH_IMG=_$_4731[3];if( typeof (JSU_PATH_IMG)!= _$_4731[4]){JSLOG_DEF_PATH_IMG= JSU_PATH_IMG};var JSLOG_FUN_START=_$_4731[5];var JSLOG_FUN_END=_$_4731[6];var JSLOG_FILE_START=_$_4731[7];var JSLOG_FILE_END=_$_4731[8];var JSLOG_DELIMITER=_$_4731[9];var JSLOG_DEF_DOM_EL_COL_NUM=150;var JSLOG_MAX_TEXT_BOX_ROW_NUM=10;var JSLOG_POS_TOPLEFT=_$_4731[10];var JSLOG_POS_BOTTOMRIGHT=_$_4731[11];var JSLOG_POS_TOP=_$_4731[12];var JSLOG_POS_LEFT=_$_4731[13];var JSLOG_POS_RIGTH=_$_4731[14];var JSLOG_POS_BOTTOM=_$_4731[15];var JSLOG_SIZE={XS:_$_4731[16],S:_$_4731[17],M:_$_4731[18],L:_$_4731[19],XL:_$_4731[20]};var JSLOG_STYLE={NONE:_$_4731[21],ONLY_MEANINGFUL:_$_4731[22],ALL:_$_4731[23]};var WIN_JSLOG_TOP=_$_4731[24];var JSLOG_SIZE_DEF=JSLOG_SIZE[_$_4731[18]];var WIN_JSLOG_H=_$_4731[25];var WIN_JSLOG_W=_$_4731[26];var jslogVar={iLogLev:0,bLogTime:JSLOG_DEF_LOG_TIME,szPathImg:JSLOG_DEF_PATH_IMG,console:null};function jslog_init(mP,B){var lL=0;if(mP== JSLOG_LEV_URL){function mO(dH){if(dH= ( new RegExp(_$_4731[29]+ encodeURIComponent(dH)+ _$_4731[30]))[_$_4731[28]](location[_$_4731[27]])){return decodeURIComponent(dH[1])}}var mS=mO(JSLOG_LEV_URL_PAR);var mR=JSLOG_LEV_URL_PAR+ _$_4731[31];if( typeof (mS)!= _$_4731[4]){window[_$_4731[32]]= mR+ mS}else {var mQ=window[_$_4731[32]];if(mQ[_$_4731[33]](mR)>  -1){mS= parseInt(mQ[_$_4731[35]](mR[_$_4731[34]]))}};if(( typeof (mS)!= _$_4731[4])){lL= mS}else {lL= 0}}else {lL= parseInt(mP)};jj_consoleStart(lL,B)}function jslogLevSet(lL){jslogVar[_$_4731[36]]= lL;if(lL== 0){jslog_end()}else {if(jslogVar[_$_4731[37]]){var ne=_$_4731[38]+ lL;jslogVar[_$_4731[37]][_$_4731[40]][_$_4731[39]]= ne;jslogVar[_$_4731[37]][_$_4731[42]][_$_4731[41]]= lL}}}function jslogSetSize(lM){if(jslogVar[_$_4731[37]]!= null){jslogVar[_$_4731[37]][_$_4731[43]](lM)}}function jslogSetTop(ni){if(jslogVar[_$_4731[37]]!= null&& jslogVar[_$_4731[37]][_$_4731[44]]!= null){jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[45]]= ni+ _$_4731[47]}}function jslogClear(){if(jslogVar[_$_4731[37]]){jslogVar[_$_4731[37]][_$_4731[48]]()}}function jslogGetLogLev(){return jslogVar[_$_4731[36]]}function jslogGetOpt(){return {iLogLev:jslogVar[_$_4731[36]],bLogTime:jslogVar[_$_4731[49]],szPathImg:jslogVar[_$_4731[50]]}}function jslogObj(mZ,ct,cI,nf){if(nf== undefined|| nf== null){nf= false};var ng=(nf)?0:2;var nh=(nf)?_$_4731[51]:_$_4731[52];if(isLogLevEnable(mZ)&& jslogVar[_$_4731[37]]){jslogVar[_$_4731[37]][_$_4731[54]](mZ,ct+ nh+ JSON[_$_4731[53]](cI,null,ng))};return 0}function jslogHtml(lL,ct,mL,B){if(!isLogLevEnable(lL)|| jslogVar[_$_4731[37]]== undefined){return};if(B== undefined){B=  new Object()};if(B[_$_4731[55]]== undefined){B[_$_4731[55]]= JSLOG_DEF_DOM_EL_COL_NUM};if(B[_$_4731[56]]== undefined){B[_$_4731[56]]= jj_getHtmlRowNum(mL)};var mY=ct+ _$_4731[57]+ _$_4731[58]+ B[_$_4731[56]]+ _$_4731[59]+ B[_$_4731[55]]+ _$_4731[60]+ mL+ _$_4731[61];jslog(lL,mY);return 0}function jslogDomEl(lL,ct,bJ,B){if(bJ== null|| bJ== 0){return};if(!isLogLevEnable(lL)|| jslogVar[_$_4731[37]]== undefined){return};if(B== undefined){B=  new Object()};if(B[_$_4731[55]]== undefined){B[_$_4731[55]]= JSLOG_DEF_DOM_EL_COL_NUM};if(B[_$_4731[46]]== undefined){B[_$_4731[46]]= JSLOG_STYLE[_$_4731[21]]};var mW=_$_4731[62]+ bJ[_$_4731[63]]+ _$_4731[52];for(var c=0;c< bJ[_$_4731[64]][_$_4731[34]];c++){var cD=bJ[_$_4731[64]][c];mW+= cD[_$_4731[32]]+ _$_4731[31]+ cD[_$_4731[65]]+ _$_4731[52]};mW+= _$_4731[66]+ jj_replaceAll(bJ[_$_4731[67]],_$_4731[68],_$_4731[69]);if(B[_$_4731[46]]!= JSLOG_STYLE[_$_4731[21]]){var mV=bJ[_$_4731[46]];var mU=window[_$_4731[70]](bJ,null);mW+= _$_4731[71];if(B[_$_4731[46]]== JSLOG_STYLE[_$_4731[22]]){mW+= _$_4731[72]}else {mW+= _$_4731[73]};for(x in mV){var mT=true;if(B[_$_4731[46]]== JSLOG_STYLE[_$_4731[22]]){if((mV[x]== 0&& mU[x]== undefined)|| (mV[x]== false&& mU[x]== undefined)|| (mV[x]== _$_4731[74]&& mU[x]== _$_4731[74])|| (x[_$_4731[33]](_$_4731[75])>= 0|| x[_$_4731[33]](_$_4731[76])>= 0)|| (mV[x]!= undefined&& ( typeof (mV[x])== _$_4731[77]))){mT= false}};if(mT){var mX=mV[x];if(mX== 0|| mX== _$_4731[74]){mX= mU[x]};mW+= _$_4731[78]+ x+ _$_4731[79]+ mX+ _$_4731[80]}}};if(B[_$_4731[56]]== undefined){B[_$_4731[56]]= jj_getHtmlRowNum(mW)};var mY=ct+ _$_4731[57]+ _$_4731[58]+ B[_$_4731[56]]+ _$_4731[59]+ B[_$_4731[55]]+ _$_4731[81]+ mW+ _$_4731[61];jslog(lL,mY);return 0}function jslogDomElById(mZ,ct,X,B){return jslogDomEl(mZ,ct,document[_$_4731[82]](X),B)}function json2jslogStr(nd){var nj=jj_replaceAll(JSON[_$_4731[53]](nd),_$_4731[83],_$_4731[84]);nj= jj_replaceAll(nj,_$_4731[85],_$_4731[86]);nj= jj_replaceAll(nj,_$_4731[87],_$_4731[88]);return jj_replaceAll(nj,_$_4731[89],_$_4731[90])}function jslogJson(lL,ct,nd){if(isLogLevEnable(lL)){jslogVar[_$_4731[37]][_$_4731[54]](lL,ct+ _$_4731[52]+ json2jslogStr(nd))};return 0}function jslogElapsedTime(lL,ct,bD){if(isLogLevEnable(lL)&& jslogVar[_$_4731[37]]){var na= new Date();var nb=na[_$_4731[91]]()- bD[_$_4731[91]]();var nc=(nb> 1000)?((nb/ 1000)+ _$_4731[92]):(nb+ _$_4731[93]);jslogVar[_$_4731[37]][_$_4731[54]](lL,ct+ nc)};return 0}function jslog(lL,ct){if(isLogLevEnable(lL)&& jslogVar[_$_4731[37]]){jslogVar[_$_4731[37]][_$_4731[54]](lL,ct)};return 0}function jslog_end(){if(jslogVar[_$_4731[37]]){jslogVar[_$_4731[37]][_$_4731[94]]()}}function isLogLevEnable(lL){return ((jslogVar[_$_4731[36]]& lL|| lL== 0)&& jslogVar[_$_4731[37]]!= null)}function jj_getHtmlRowNum(mL){if( typeof (mL)!= _$_4731[95]){return 0};var mK=1+ (mL[_$_4731[96]](/\n/g)|| [])[_$_4731[34]];if(mK> JSLOG_MAX_TEXT_BOX_ROW_NUM){mK= JSLOG_MAX_TEXT_BOX_ROW_NUM};return mK}function jj_replaceAll(cW,mM,mN){if( typeof (cW)== _$_4731[4]){return _$_4731[74]};while(cW[_$_4731[33]](mM)>  -1){cW= cW[_$_4731[97]](mM,mN)};return cW}function jj_consoleStart(lL,B){var lM=JSLOG_SIZE_DEF;jslog_end();jslogVar[_$_4731[36]]= lL;if(jslogVar[_$_4731[36]]== 0){return};if(B!= undefined){if(B[_$_4731[50]]!= undefined){jslogVar[_$_4731[50]]= B[_$_4731[50]]};if(B[_$_4731[49]]!= undefined){jslogVar[_$_4731[49]]= B[_$_4731[49]]};if(B[_$_4731[98]]!= undefined){lM= B[_$_4731[98]]}};jslogVar[_$_4731[37]]= {debugging_on:false,window:null,viewport:null,buffer:_$_4731[74],debugVisible:false,arBtnDebug: new Array(),init:function(){if(!document[_$_4731[99]]|| !document[_$_4731[82]]|| !document[_$_4731[100]]|| !document[_$_4731[101]]){return};var lN=document[_$_4731[99]](_$_4731[102])[0];if( typeof (lN)== _$_4731[4]){return};jslogVar[_$_4731[37]][_$_4731[103]]();jslogVar[_$_4731[37]][_$_4731[104]]();jslogVar[_$_4731[37]][_$_4731[105]]= true;jslogVar[_$_4731[37]][_$_4731[43]](lM)},createWindow:function(){jslogVar[_$_4731[37]][_$_4731[44]]= document[_$_4731[100]](_$_4731[106]);jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[107]]= _$_4731[108];jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[109]]= _$_4731[110];jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[111]]= _$_4731[112];jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[113]]= _$_4731[114];jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[45]]= WIN_JSLOG_TOP;jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[115]]= _$_4731[116];jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[117]]= WIN_JSLOG_H;jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[118]]= _$_4731[119];jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[120]]= _$_4731[121];jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[122]]= WIN_JSLOG_W;jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[123]]= _$_4731[124];var eh=document[_$_4731[100]](_$_4731[125]);eh[_$_4731[46]][_$_4731[126]]= _$_4731[127];eh[_$_4731[46]][_$_4731[128]]= _$_4731[129];eh[_$_4731[46]][_$_4731[130]]= _$_4731[108];eh[_$_4731[46]][_$_4731[131]]= _$_4731[132];eh[_$_4731[46]][_$_4731[133]]= _$_4731[134];eh[_$_4731[46]][_$_4731[111]]= _$_4731[135];eh[_$_4731[46]][_$_4731[113]]= _$_4731[114];eh[_$_4731[46]][_$_4731[45]]= _$_4731[136];eh[_$_4731[46]][_$_4731[137]]= _$_4731[136];eh[_$_4731[140]](_$_4731[138],_$_4731[139]);eh[_$_4731[142]](document[_$_4731[101]](_$_4731[141]));jslogVar[_$_4731[37]][_$_4731[144]](eh,_$_4731[143],function(){jslogVar[_$_4731[37]][_$_4731[94]]()});jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[142]](eh);var lR=document[_$_4731[100]](_$_4731[106]);lR[_$_4731[46]][_$_4731[113]]= _$_4731[114];lR[_$_4731[46]][_$_4731[145]]= _$_4731[146];lR[_$_4731[46]][_$_4731[137]]= _$_4731[146];var lQ=document[_$_4731[100]](_$_4731[125]);lQ[_$_4731[46]][_$_4731[126]]= _$_4731[147];lQ[_$_4731[46]][_$_4731[148]]= lQ[_$_4731[46]][_$_4731[149]]= _$_4731[108];lQ[_$_4731[46]][_$_4731[128]]= _$_4731[129];lQ[_$_4731[46]][_$_4731[130]]= _$_4731[150];lQ[_$_4731[46]][_$_4731[131]]= _$_4731[132];lQ[_$_4731[46]][_$_4731[117]]= _$_4731[151];lQ[_$_4731[46]][_$_4731[122]]= _$_4731[151];lQ[_$_4731[46]][_$_4731[152]]= _$_4731[153];lQ[_$_4731[140]](_$_4731[138],_$_4731[154]);if( typeof (Drag)!= _$_4731[4]){lQ[_$_4731[155]]= 0;lQ[_$_4731[156]]= 0;Drag[_$_4731[157]](lQ,null,null,null,null,null,true,true);lQ[_$_4731[158]]= function(eh,bk){jslogVar[_$_4731[37]][_$_4731[159]](eh,this);jslogVar[_$_4731[37]][_$_4731[160]](bk,this);jslogVar[_$_4731[37]][_$_4731[161]]()};lQ[_$_4731[162]]= function(){jslogVar[_$_4731[37]][_$_4731[163]]()};lR[_$_4731[142]](lQ);jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[142]](lR)};var lP=document[_$_4731[100]](_$_4731[164]);lP[_$_4731[165]]= _$_4731[1];jslogVar[_$_4731[37]][_$_4731[166]](lP,false);lP[_$_4731[142]](jslogVar[_$_4731[37]][_$_4731[168]](_$_4731[167]));jslogVar[_$_4731[37]][_$_4731[40]]= document[_$_4731[100]](_$_4731[169]);jslogVar[_$_4731[37]][_$_4731[40]][_$_4731[165]]= _$_4731[1];jslogVar[_$_4731[37]][_$_4731[40]][_$_4731[39]]= _$_4731[38]+ jslogVar[_$_4731[36]];lP[_$_4731[142]](jslogVar[_$_4731[37]][_$_4731[40]]);jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[142]](lP);var lO=document[_$_4731[100]](_$_4731[106]);lO[_$_4731[165]]= _$_4731[170];jslogVar[_$_4731[37]][_$_4731[166]](lO,true);jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[142]](lO);jslogVar[_$_4731[37]][_$_4731[171]]= document[_$_4731[100]](_$_4731[172]);jslogVar[_$_4731[37]][_$_4731[171]][_$_4731[46]][_$_4731[126]]= _$_4731[173];jslogVar[_$_4731[37]][_$_4731[171]][_$_4731[46]][_$_4731[130]]= _$_4731[174];jslogVar[_$_4731[37]][_$_4731[171]][_$_4731[46]][_$_4731[130]]= _$_4731[175];jslogVar[_$_4731[37]][_$_4731[171]][_$_4731[46]][_$_4731[176]]= _$_4731[177];jslogVar[_$_4731[37]][_$_4731[171]][_$_4731[46]][_$_4731[178]]= _$_4731[115];jslogVar[_$_4731[37]][_$_4731[171]][_$_4731[46]][_$_4731[179]]= _$_4731[180];jslogVar[_$_4731[37]][_$_4731[171]][_$_4731[46]][_$_4731[181]]= _$_4731[151];jslogVar[_$_4731[37]][_$_4731[171]][_$_4731[46]][_$_4731[111]]= _$_4731[182];jslogVar[_$_4731[37]][_$_4731[171]][_$_4731[46]][_$_4731[113]]= _$_4731[114];jslogVar[_$_4731[37]][_$_4731[171]][_$_4731[46]][_$_4731[45]]= _$_4731[183];jslogVar[_$_4731[37]][_$_4731[171]][_$_4731[46]][_$_4731[115]]= _$_4731[112];jslogVar[_$_4731[37]][_$_4731[171]][_$_4731[46]][_$_4731[152]]= _$_4731[184];jslogVar[_$_4731[37]][_$_4731[161]]();jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[142]](jslogVar[_$_4731[37]][_$_4731[171]]);document[_$_4731[99]](_$_4731[102])[0][_$_4731[142]](jslogVar[_$_4731[37]][_$_4731[44]]);if( typeof (Drag)!= _$_4731[4]){Drag[_$_4731[157]](lP,jslogVar[_$_4731[37]][_$_4731[44]]);jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[162]]= function(){jslogVar[_$_4731[37]][_$_4731[163]]()}}},resizeX:function(eh,lS){var lU=parseInt(jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[122]]);var lT=Math[_$_4731[185]](lU- (eh- lS[_$_4731[155]]))+ _$_4731[47];if(parseInt(lT)< parseInt(jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[123]])){lT= jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[123]]};jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[122]]= lT;lS[_$_4731[155]]= eh},resizeY:function(bk,lS){var lV=parseInt(jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[117]]);var lW=Math[_$_4731[185]](lV- (bk- lS[_$_4731[156]]))+ _$_4731[47];if(parseInt(lW)< parseInt(jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[120]])){lW= jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[120]]};jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[117]]= lW;lS[_$_4731[156]]= bk},adjustViewport:function(){jslogVar[_$_4731[37]][_$_4731[171]][_$_4731[46]][_$_4731[122]]= (parseInt(jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[122]])- 8)+ _$_4731[47];jslogVar[_$_4731[37]][_$_4731[171]][_$_4731[46]][_$_4731[117]]= (parseInt(jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[117]])- 50)+ _$_4731[47]},send:function(lX,fP){fP= fP+ _$_4731[186];if(fP[_$_4731[33]](_$_4731[187])< 0){while(fP[_$_4731[33]](_$_4731[52])>  -1){fP= fP[_$_4731[97]](_$_4731[52],_$_4731[186])}};var lY=_$_4731[74];if(jslogVar[_$_4731[49]]){var eH= new Date();lY= jslogVar[_$_4731[37]][_$_4731[189]](eH[_$_4731[188]](),_$_4731[151],2)+ _$_4731[190]+ jslogVar[_$_4731[37]][_$_4731[189]](eH[_$_4731[191]](),_$_4731[151],2)+ _$_4731[190]+ jslogVar[_$_4731[37]][_$_4731[189]](eH[_$_4731[192]](),_$_4731[151],2)+ _$_4731[193]+ jslogVar[_$_4731[37]][_$_4731[189]](eH[_$_4731[194]](),_$_4731[151],3)+ _$_4731[195]};if(lX!= null){fP= lY+ _$_4731[196]+ lX+ _$_4731[197]+ fP};if(jslogVar[_$_4731[37]][_$_4731[171]]== null){jslogVar[_$_4731[37]][_$_4731[198]]+= fP}else {jslogVar[_$_4731[37]][_$_4731[171]][_$_4731[39]]+= fP;jslogVar[_$_4731[37]][_$_4731[199]]()}},sendBuffer:function(){if(jslogVar[_$_4731[37]][_$_4731[171]]== null){jslogVar[_$_4731[37]][_$_4731[200]]= window[_$_4731[202]](_$_4731[201],500)}else {jslogVar[_$_4731[37]][_$_4731[171]][_$_4731[39]]+= jslogVar[_$_4731[37]][_$_4731[198]];jslogVar[_$_4731[37]][_$_4731[199]]();jslogVar[_$_4731[37]][_$_4731[203]]()}},scrollWithIt:function(){jslogVar[_$_4731[37]][_$_4731[171]][_$_4731[204]]= jslogVar[_$_4731[37]][_$_4731[171]][_$_4731[205]]},killWindow:function(){jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[207]][_$_4731[206]](jslogVar[_$_4731[37]][_$_4731[44]]);jslogVar[_$_4731[37]][_$_4731[105]]= false;jslogVar[_$_4731[37]]= null;window[_$_4731[32]]= JSLOG_LEV_URL_PAR+ _$_4731[208]},setCookie:function(){var lZ=jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[45]]+ _$_4731[195]+ jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[115]];var ma=jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[117]]+ _$_4731[195]+ jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[122]];document[_$_4731[209]]= _$_4731[210]+ escape(lZ+ _$_4731[195]+ ma)},getCookie:function(){if(!document[_$_4731[209]]){return};var mb=document[_$_4731[209]];var md=mb[_$_4731[33]](_$_4731[210]);if(md!=  -1){var me=md+ _$_4731[210][_$_4731[34]];var mc=mb[_$_4731[33]](_$_4731[211],me);var cf=(mc!=  -1)?mb[_$_4731[212]](me,mc):mb[_$_4731[212]](me);cf= unescape(cf);var cX=cf[_$_4731[213]](_$_4731[195]);jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[45]]= cX[0];jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[115]]= cX[1];jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[117]]= cX[2];jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[122]]= cX[3];jslogVar[_$_4731[37]][_$_4731[161]]()}},timer:null,killTimer:function(){clearTimeout(jslogVar[_$_4731[37]][_$_4731[200]])},addEvent:function(cI,mf,fH){if(cI[_$_4731[214]]){cI[_$_4731[214]](mf,fH,false)}else {if(cI[_$_4731[215]]){cI[_$_4731[216]+ mf+ fH]= fH;cI[mf+ fH]= function(){cI[_$_4731[216]+ mf+ fH](window[_$_4731[217]])};cI[_$_4731[215]](_$_4731[218]+ mf,cI[mf+ fH])}}},removeEvent:function(cI,mf,fH){if(cI[_$_4731[219]]){cI[_$_4731[219]](mf,fH,false)}else {if(cI[_$_4731[220]]){cI[_$_4731[220]](_$_4731[218]+ mf,cI[mf+ fH]);cI[mf+ fH]= null;cI[_$_4731[216]+ mf+ fH]= null}}},appendAllBtn:function(mo,n){var ml= new Array();mo[_$_4731[142]](jslogVar[_$_4731[37]][_$_4731[223]](_$_4731[221],_$_4731[222],JSLOG_POS_TOPLEFT));mo[_$_4731[142]](jslogVar[_$_4731[37]][_$_4731[223]](_$_4731[224],_$_4731[225],JSLOG_POS_BOTTOMRIGHT));mo[_$_4731[142]](jslogVar[_$_4731[37]][_$_4731[223]](_$_4731[226],_$_4731[227],JSLOG_POS_LEFT));mo[_$_4731[142]](jslogVar[_$_4731[37]][_$_4731[223]](_$_4731[228],_$_4731[229],JSLOG_POS_RIGTH));mo[_$_4731[142]](jslogVar[_$_4731[37]][_$_4731[223]](_$_4731[230],_$_4731[231],JSLOG_POS_TOP));mo[_$_4731[142]](jslogVar[_$_4731[37]][_$_4731[223]](_$_4731[232],_$_4731[233],JSLOG_POS_BOTTOM));mo[_$_4731[142]](jslogVar[_$_4731[37]][_$_4731[168]](_$_4731[74]));var mn= new Array();var dw=30;mn[_$_4731[235]]([_$_4731[16],dw,_$_4731[234],function(){jslogVar[_$_4731[37]][_$_4731[43]](JSLOG_SIZE[_$_4731[16]])}]);mn[_$_4731[235]]([_$_4731[17],dw,_$_4731[236],function(){jslogVar[_$_4731[37]][_$_4731[43]](JSLOG_SIZE[_$_4731[17]])}]);mn[_$_4731[235]]([_$_4731[18],dw,_$_4731[237],function(){jslogVar[_$_4731[37]][_$_4731[43]](JSLOG_SIZE[_$_4731[18]])}]);mn[_$_4731[235]]([_$_4731[19],dw,_$_4731[238],function(){jslogVar[_$_4731[37]][_$_4731[43]](JSLOG_SIZE[_$_4731[19]])}]);mn[_$_4731[235]]([_$_4731[20],dw,_$_4731[239],function(){jslogVar[_$_4731[37]][_$_4731[43]](JSLOG_SIZE[_$_4731[20]])}]);for(var c=0;c< mn[_$_4731[34]];c++){var mh=jslogVar[_$_4731[37]][_$_4731[240]](mn[c]);mo[_$_4731[142]](mh);mo[_$_4731[142]](jslogVar[_$_4731[37]][_$_4731[241]]())};mo[_$_4731[142]](jslogVar[_$_4731[37]][_$_4731[168]](_$_4731[74]));ml[_$_4731[235]]([_$_4731[242],60,_$_4731[243],function(){jslogVar[_$_4731[37]][_$_4731[48]]()}]);ml[_$_4731[235]]([_$_4731[244],70,_$_4731[245],function(){jslogVar[_$_4731[37]][_$_4731[246]]()}]);if(jslogVar[_$_4731[37]][_$_4731[247]]()){ml[_$_4731[235]]([_$_4731[248],120,_$_4731[249],function(){jslogVar[_$_4731[37]][_$_4731[250]]()}])}else {ml[_$_4731[235]]([_$_4731[251],70,_$_4731[252],function(){jslogVar[_$_4731[37]][_$_4731[253]]()}])};for(var c=0;c< ml[_$_4731[34]];c++){var mh=jslogVar[_$_4731[37]][_$_4731[240]](ml[c]);mo[_$_4731[142]](mh);mo[_$_4731[142]](jslogVar[_$_4731[37]][_$_4731[241]]())};mo[_$_4731[142]](jslogVar[_$_4731[37]][_$_4731[168]](_$_4731[74]));var mi=jslogVar[_$_4731[37]][_$_4731[240]]([_$_4731[254],130,_$_4731[255],function(){var mt,ms;if(jslogVar[_$_4731[37]][_$_4731[256]]){jslogVar[_$_4731[37]][_$_4731[256]]= false;mt= _$_4731[257]+ JSLOG_ID_DEBUG+ _$_4731[258];ms= _$_4731[259]+ JSLOG_ID_DEBUG+ _$_4731[260]+ JSLOG_ID_DEBUG+ _$_4731[261]}else {jslogVar[_$_4731[37]][_$_4731[256]]= true;mt= _$_4731[262]+ JSLOG_ID_DEBUG+ _$_4731[263];ms= _$_4731[264]+ JSLOG_ID_DEBUG+ _$_4731[260]+ JSLOG_ID_DEBUG+ _$_4731[261]};for(var c=0;c< jslogVar[_$_4731[37]][_$_4731[265]][_$_4731[34]];c++){var mi=jslogVar[_$_4731[37]][_$_4731[265]][c];mi[_$_4731[65]]= mt;mi[_$_4731[138]]= ms};var mu=[_$_4731[266],_$_4731[267],_$_4731[268]];for(var mr=0;mr< mu[_$_4731[34]];mr++){var je=document[_$_4731[99]](mu[mr]);for(var c=0;c< je[_$_4731[34]];c++){var bP=je[c];if(bP[_$_4731[269]]== _$_4731[2]|| bP[_$_4731[165]]== _$_4731[2]){if(jslogVar[_$_4731[37]][_$_4731[256]]){bP[_$_4731[46]][_$_4731[131]]= _$_4731[132]}else {bP[_$_4731[46]][_$_4731[131]]= _$_4731[270]}}}}}]);mo[_$_4731[142]](mi);jslogVar[_$_4731[37]][_$_4731[265]][_$_4731[235]](mi);mo[_$_4731[142]](jslogVar[_$_4731[37]][_$_4731[168]](_$_4731[74]));if(n){var mk=document[_$_4731[100]](_$_4731[169]);mk[_$_4731[165]]= _$_4731[170];mk[_$_4731[39]]= _$_4731[271];mo[_$_4731[142]](mk);var mp=document[_$_4731[100]](_$_4731[272]);mp[_$_4731[165]]= _$_4731[1];for(var c=0;c<= 31;c++){var jA=_$_4731[273]+ c;if(c== 0){jA= _$_4731[274]};var mj= new Option(jA,c);mj[_$_4731[275]]= jA;mj[_$_4731[276]]= (jslogVar[_$_4731[36]]== c);mp[mp[_$_4731[34]]]= mj};jslogVar[_$_4731[37]][_$_4731[144]](mp,_$_4731[277],function(){jslogLevSet(this[_$_4731[41]])});mo[_$_4731[142]](mp);jslogVar[_$_4731[37]][_$_4731[42]]= mp;var mq=document[_$_4731[100]](_$_4731[272]);mq[_$_4731[165]]= _$_4731[1];var mg=[[_$_4731[151],_$_4731[278]],[_$_4731[279],_$_4731[280]]];for(var c=0;c< mg[_$_4731[34]];c++){var jA=mg[c][1];var mj= new Option(jA,mg[c][0]);mj[_$_4731[275]]= jA;mj[_$_4731[276]]= ((!jslogVar[_$_4731[49]]&& c== 0)|| (jslogVar[_$_4731[49]]&& c== 1));mq[mq[_$_4731[34]]]= mj};jslogVar[_$_4731[37]][_$_4731[144]](mq,_$_4731[277],function(){jslogVar[_$_4731[49]]= (this[_$_4731[41]]== 1)});mo[_$_4731[142]](mq)}},sendDelimiter:function(){jslogVar[_$_4731[37]][_$_4731[54]](null,JSLOG_DELIMITER)},selectAll:function(){if(document[_$_4731[281]]){var mv=document[_$_4731[102]][_$_4731[282]]();mv[_$_4731[283]](jslogVar[_$_4731[37]][_$_4731[44]]);mv[_$_4731[272]]()}else {if(window[_$_4731[284]]){var mv=document[_$_4731[285]]();mv[_$_4731[286]](jslogVar[_$_4731[37]][_$_4731[44]]);window[_$_4731[284]]()[_$_4731[287]](mv)}}},copy2Clipboard:function(){var c=0;var mw=_$_4731[74]+ jslogVar[_$_4731[37]][_$_4731[171]][_$_4731[39]];while(mw[_$_4731[33]](_$_4731[288])>  -1){mw= mw[_$_4731[97]](_$_4731[288],_$_4731[52]);c++};while(mw[_$_4731[33]](_$_4731[289])>  -1){mw= mw[_$_4731[97]](_$_4731[289],_$_4731[52]);c++};var mx=document[_$_4731[100]](_$_4731[290]);mx[_$_4731[291]]= mw;if( typeof (mx[_$_4731[282]])== _$_4731[4]){alert(_$_4731[292]+ _$_4731[293]);return};Copied= mx[_$_4731[282]]();Copied[_$_4731[295]](_$_4731[294]);Copied[_$_4731[295]](_$_4731[296])},isIE:function(){try{return ((navigator[_$_4731[297]]== _$_4731[298])|| ((navigator[_$_4731[297]]== _$_4731[299])&& ( new RegExp(_$_4731[301])[_$_4731[28]](navigator[_$_4731[300]])!= null)))}catch(err){return false}},getBtn:function(my){var mh=document[_$_4731[100]](_$_4731[302]);mh[_$_4731[165]]= _$_4731[303];mh[_$_4731[140]](_$_4731[304],_$_4731[305]);mh[_$_4731[140]](_$_4731[65],my[0]);mh[_$_4731[46]][_$_4731[122]]= my[1]+ _$_4731[47];mh[_$_4731[140]](_$_4731[138],my[2]);jslogVar[_$_4731[37]][_$_4731[144]](mh,_$_4731[143],my[3]);return mh},getTxtSep:function(mA){var mz=document[_$_4731[100]](_$_4731[125]);mz[_$_4731[46]][_$_4731[130]]= _$_4731[306];mz[_$_4731[46]][_$_4731[307]]= _$_4731[308];mz[_$_4731[46]][_$_4731[111]]= _$_4731[309];mz[_$_4731[46]][_$_4731[178]]= _$_4731[137];mz[_$_4731[142]](document[_$_4731[101]](mA));return mz},getBtnSep:function(){var mz=document[_$_4731[100]](_$_4731[125]);mz[_$_4731[46]][_$_4731[130]]= _$_4731[306];mz[_$_4731[46]][_$_4731[111]]= _$_4731[310];return mz},getGroupSep:function(){var mz=document[_$_4731[100]](_$_4731[125]);mz[_$_4731[46]][_$_4731[130]]= _$_4731[306];mz[_$_4731[46]][_$_4731[111]]= _$_4731[311];return mz},getImgPos:function(fz,mD,mC){var mB=document[_$_4731[100]](_$_4731[312]);mB[_$_4731[46]][_$_4731[111]]= _$_4731[313];mB[_$_4731[46]][_$_4731[128]]= _$_4731[129];mB[_$_4731[314]]= jslogVar[_$_4731[50]]+ fz;mB[_$_4731[117]]= 15;mB[_$_4731[122]]= 15;mB[_$_4731[315]]= _$_4731[45];mB[_$_4731[138]]= mD;mB[_$_4731[46]][_$_4731[126]]= _$_4731[316];jslogVar[_$_4731[37]][_$_4731[144]](mB,_$_4731[317],function(){this[_$_4731[46]][_$_4731[126]]= _$_4731[318]});jslogVar[_$_4731[37]][_$_4731[144]](mB,_$_4731[319],function(){this[_$_4731[46]][_$_4731[126]]= _$_4731[316]});jslogVar[_$_4731[37]][_$_4731[144]](mB,_$_4731[143],function(){jslogVar[_$_4731[37]][_$_4731[320]](mC)});return mB},setSize:function(ma){var mE=0;var mF=0;var dw=0;var eG=0;if( typeof (window[_$_4731[321]])!= _$_4731[4]){mE= window[_$_4731[321]]- 30;mF= window[_$_4731[322]]- 30}else {mE= window[_$_4731[323]][_$_4731[117]]- 150;mF= window[_$_4731[323]][_$_4731[122]]- 30};if(ma== JSLOG_SIZE[_$_4731[16]]){dw= 1100;eG= 150}else {if(ma== JSLOG_SIZE[_$_4731[17]]){eG= parseInt(mE* 0.3);dw= parseInt(mF* 0.8)}else {if(ma== JSLOG_SIZE[_$_4731[18]]){eG= parseInt(mE* 0.5);dw= parseInt(mF* 1)}else {if(ma== JSLOG_SIZE[_$_4731[19]]){eG= parseInt(mE* 0.6);dw= parseInt(mF* 1)}else {if(ma== JSLOG_SIZE[_$_4731[20]]){jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[45]]= _$_4731[116];jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[115]]= _$_4731[116];eG= parseInt(mE* 1);dw= parseInt(mF* 1)}}}}};if(dw< 1100){dw= 1100};jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[122]]= dw+ _$_4731[47];jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[117]]= eG+ _$_4731[47];jslogVar[_$_4731[37]][_$_4731[161]]()},setPos:function(mG){var jT=0;var jQ=0;if( typeof (window[_$_4731[321]])!= _$_4731[4]){jT= window[_$_4731[321]]- 50;jQ= window[_$_4731[322]]- 150}else {jT= window[_$_4731[323]][_$_4731[117]]- 100;jQ= window[_$_4731[323]][_$_4731[122]]- 200};if(mG== JSLOG_POS_TOPLEFT){jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[45]]= _$_4731[116];jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[115]]= _$_4731[116]}else {if(mG== JSLOG_POS_BOTTOMRIGHT){jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[45]]= jT+ _$_4731[47];jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[115]]= jQ+ _$_4731[47]}else {if(mG== JSLOG_POS_TOP){jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[45]]= _$_4731[116]}else {if(mG== JSLOG_POS_BOTTOM){jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[45]]= jT+ _$_4731[47]}else {if(mG== JSLOG_POS_LEFT){jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[115]]= _$_4731[116]}else {if(mG== JSLOG_POS_RIGTH){jslogVar[_$_4731[37]][_$_4731[44]][_$_4731[46]][_$_4731[115]]= jQ+ _$_4731[47]}}}}}}},clearWindow:function(){jslogVar[_$_4731[37]][_$_4731[171]][_$_4731[39]]= _$_4731[74]},num2StrPad:function(mI,jj,mH){var mJ=mH- mI[_$_4731[324]]()[_$_4731[34]]+ 1;return Array(+(mJ> 0&& mJ))[_$_4731[325]](_$_4731[151])+ mI}};jslogVar[_$_4731[37]][_$_4731[157]]();if(B&& B[_$_4731[326]]){jslogSetTop(B[_$_4731[326]])}}
+/** @fileOverview
+========================================================================================= <BR/> 
+<b>File:</b> 			core/jslog.js <BR/>
+<b>Author:</b>     		<a href="https://www.linkedin.com/in/federicolevis" target="_self">Federico Levis</a> <BR/>
+<b>JS Log Doc:</b>   <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/jslog.html" target="_self">JSU JS Log Documentation</a> <BR/>
+<b>JSU API Doc:</b> <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/JSUAPI.html" target="_self">JSU API Documentation</a> <BR/>
+<b>Description:</b>        jslog API:   jslog*    <BR/>   
+<b>REQUIRE:</b>           JSU: dom-drag.js    <BR/>
+<b>First Version:</b>     ver 1.0 - Nov 2008  <BR/>
+<b>Current Version:</b>   ver 1.8 - Jul 2016  <BR/>
+<BR/>-----------------------------------------------------------------------------------<BR/>
+<b>DISCLAIMER</b>  <BR/>
+Copyright by Federico Levis - <a href="https://github.com/FedericoLevis/JSU" target="_self">JSU</a> <BR/> 
+This file may be freely distributed under the MIT license.   <BR/>
+<BR/>-----------------------------------------------------------------------------------<BR/>
+<b>JSDoc NOTES</b>  <BR/>
+In "JSU Obfuscated Version"  JS Code is not visible with JSDoc Source Link  <BR/> 
+========================================================================================= <BR/> 
+*/
+
+//**************************************************************************
+//				CONSTANT
+//**************************************************************************
+
+// -------------------------------- Log Level 
+
+/**
+ * JSLOG_ERR = 0 ERRORS: always enable when jslog is visible
+ */
+var JSLOG_ERR = 0;
+/**
+ * JSLOG_INFO = 1 Important Information
+ */
+var JSLOG_INFO = 1;	   
+/**
+ * JSLOG_DEBUG = 2 DEBUG Information
+ */
+var JSLOG_DEBUG = 2;
+/**
+ * JSLOG_TRACE = 4 DUMP Large Data (usually for json or object)
+ */
+var JSLOG_TRACE = 4;        
+/**
+ * JSLOG_TEST = 8 Feature under TEST
+ */
+var JSLOG_TEST = 8;  
+/**
+ * JSLOG_JSU = 16 JSU Functionality (usually stable)
+ */
+var JSLOG_JSU = 16;    	   
+// ---------------- NOTE: you can add also New Levels
+
+/**
+ * jslog_init (JSLOG_LEV_URL) to get jslogVar.iLogLev from URL parameter jslog
+ */
+var JSLOG_LEV_URL = "URL"; 
+
+/**
+ * Parameter to add to URL to set LogLev: JSLOG_LEV_URL_PAR = "jslog"
+ * @example
+  // init jslog reading URL parameter jslog, if present
+  // For example 
+  //  a) LogLev will be set to 3 and jslogWindow will be displayed:
+  //    URL=https://rawgit.com/FedericoLevis/JSU/master/samples/Sort/SortSample.html?jslog=3
+  //  a) LogLev will be set to 0 and jslogWindow will NOT be displayed:
+  //    URL=https://rawgit.com/FedericoLevis/JSU/master/samples/Sort/SortSample.html
+  jslog_init('URL');
+ * 
+ */
+var JSLOG_LEV_URL_PAR = "jslog";
+var JSLOG_ID_DEBUG = "debug";  // id/class that identify yje element that can be Show/Hide by jslog Button 
+
+//------------ Option: Default value
+var JSLOG_DEF_LOG_TIME = false;
+var JSLOG_DEF_PATH_IMG = "../../images/"; // Default (for samples)
+if (typeof (JSU_PATH_IMG) != "undefined"){
+	JSLOG_DEF_PATH_IMG = JSU_PATH_IMG; 
+}
+
+//---------------------------------------
+var JSLOG_FUN_START = "-------------------- START";
+var JSLOG_FUN_END = "-------------------- END";
+var JSLOG_FILE_START = " ============================= START";
+var JSLOG_FILE_END = " ============================= END";
+
+var JSLOG_DELIMITER= '<span style="color: #f00">-----------------------------------------------------------------------------------------------------------------------</span>';
+
+// For jslogDomEl
+var JSLOG_DEF_DOM_EL_COL_NUM = 150;
+var JSLOG_MAX_TEXT_BOX_ROW_NUM = 10; // Max, then we will use scrollbar
+
+
+//------------------------ POSITION
+var JSLOG_POS_TOPLEFT="TopLeft";
+var JSLOG_POS_BOTTOMRIGHT="BottomRight";
+var JSLOG_POS_TOP="Top";
+var JSLOG_POS_LEFT="Left";
+var JSLOG_POS_RIGTH="Right";
+var JSLOG_POS_BOTTOM="Bottom";
+
+//------------------------ SIZE
+/**
+ * Size of the log Window<ul>
+		<li>JSLOG_SIZE.XS:"XS"   </li>
+		<li>JSLOG_SIZE.S:"S"   </li>
+		<li>JSLOG_SIZE.M:"M"   </li>
+		<li>JSLOG_SIZE.L:"L"   </li>
+		<li>JSLOG_SIZE.XL:"XL"   </li>
+	</ul>	
+ */
+var JSLOG_SIZE = {
+		XS:"XS",
+		S:"S",
+		M:"M",
+		L:"L",
+		XL:"XL"
+};
+
+
+//------------------------ ObjOpt Flag
+/**
+ * For ObjOpt Fields. e.g OpjOpt.style <ul>
+		<li>JSLOG_STYLE.NONE:"NONE"   </li>
+		<li>JSLOG_STYLE.ONLY_MEANINGFUL:"ONLY_MEANINGFUL"   </li>
+		<li>JSLOG_STYLE.ALL:"ALL"   </li>
+	</ul>	
+ */
+var JSLOG_STYLE = {
+		NONE:"NONE",
+		ONLY_MEANINGFUL:"ONLY_MEANINGFUL",
+		ALL:"ALL"
+};
+
+//dimensioni iniziali. Attenzione ad TOP perche` poi viene settato insieme a SIZE_DEF
+var WIN_JSLOG_TOP='370px';
+//settata
+var JSLOG_SIZE_DEF = JSLOG_SIZE.M;
+// Temporanee
+var WIN_JSLOG_H='400px';
+var WIN_JSLOG_W='1200px';
+
+
+//**************************************************************************
+//    GLOBAL VARIABLE
+//**************************************************************************
+
+var jslogVar ={
+	iLogLev : 0,
+	bLogTime: JSLOG_DEF_LOG_TIME,  // True to Log Time
+	szPathImg: JSLOG_DEF_PATH_IMG, // Default
+	console: null
+};
+
+//
+
+
+//**************************************************************************
+//										GLOBAL API
+//**************************************************************************
+
+
+
+/**
+ * Init jslog and Show jslog Window if jsLogLev > 0
+ * @param jsLogLev	{Number|String} 2 option: <ul>
+ 											<li>	'URL' (JSLOG_LEV_URL_PAR='URL') To get jslog parameter from URL (if absent in the URL a LogLev of 0 will be used, that means NO jsLog) </li>
+                      <li>   iLogLev is a BITMASK to Enable the various Level. Level=0 (JSLOG_ERR) is always enabled when jslog is visible 
+															Example of Levels Enable with various settings: <ul>
+																<li> jsLogLev=3 to Enable JSLOG_INFO(1) and JSLOG_DEBUG(2)
+																<li> jsLogLev=4 to Enable only JSLOG_TEST(4)
+                              </ul>
+      <table class="jsDoc" border="2" cellpadding="2" cellspacing="2">
+        <tr><td class="jsDocTitle">jsLogLev BITMASK Values</td></tr>
+        <tr><td class="jsDocParam">
+        <ul>
+			     <li>  JSLOG_ERR   =  0  ERRORS: always enable when jslog is visible    </li>
+			     <li>  JSLOG_INFO  =  1  INFO: Important Information    </li>
+			     <li>  JSLOG_DEBUG =  2  DEBUG Information    </li>
+			     <li>  JSLOG_TRACE =  4  TRACE (e.g. Large Data like JSON)    </li>
+			     <li>  JSLOG_TEST  =  8  You can use this value for Specific isolated Feature under TEST/Development </li>
+			     <li>  JSLOG_JSU   = 16  JSU Functionality (usually stable)    </li>
+        </ul> 
+        </td></tr>
+     </table>  
+   </li>         
+  </ul>
+ 
+ 				
+	@param [objOpt] {Object}   Option 
+      <table class="jsDoc" border="2" cellpadding="2" cellspacing="2">
+        <tr><td class="jsDocTitle">OPTIONS</td></tr>
+        <tr><td class="jsDocParam">
+          <ul>	
+					  <li> .bLogTime	{Boolean}   [def=false] true to log also the Time in format [HH:MM:SS.ms] </li>
+	  			  <li> . szPathImg {String}   	BaseSortPath (e.g	"../../../images") to be used instead of the one configured in conf.js <BR/>
+  															Example  "/portalDtct0/images/"    "../../images/" </li>
+  				  <li> . szSize {String}  [JSLOG_SIZE.M] JSLOG_SIZE.XS, JSLOG_SIZE.M, .....	
+	             &nbsp;see  <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/jslog.js/global.html#JSLOG_SIZE" target="_self">JSLOG_SIZE</a>  
+	          </li>
+	          <li> iTop {Number}  Top to set to JSLog Window </li>
+  				</ul>										
+        </td></tr>
+     </table>  
+ 
+  @example
+  // init jslog reading URL parameter jslog, if present
+  // For example 
+  //  a) LogLev will be set to 3 and jslogWindow will be displayed:
+  //    URL=https://rawgit.com/FedericoLevis/JSU/master/samples/Sort/SortSample.html?jslog=3
+  //  a) LogLev will be set to 0 and jslogWindow will NOT be displayed:
+  //    URL=https://rawgit.com/FedericoLevis/JSU/master/samples/Sort/SortSample.html
+  jslog_init('URL');
+
+  @example
+  // init jslog with Level=3 to Enable JSLOG_ERR (0), JSLOG_INFO(1) and JSLOG_DEBUG(2)
+  jslog_init(3);
+
+   @example
+  // init jslog with Level=4 to Enable JSLOG_ERR (0) JSLOG_TEST(4)
+  jslog_init(4); 
+   															 
+  															 
+ */
+function jslog_init(jsLogLev,objOpt)
+{
+	var iLogLev = 0; // Default
+  if (jsLogLev == JSLOG_LEV_URL){
+  	function getPar(name){
+ 	   if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
+ 	  	 return decodeURIComponent(name[1]);
+  	}
+  	var urlLogLev = getPar (JSLOG_LEV_URL_PAR);
+  	// alert ("PAR urlLogLev=" + urlLogLev);
+    var szNameLogLev = JSLOG_LEV_URL_PAR + "=";
+  	if (typeof (urlLogLev) != 'undefined'){
+  	  // Save in Session window.name
+      window.name = szNameLogLev  + urlLogLev;
+  	}else{
+      // Retrieve jsLog from window.name if it has been set previously
+  	  var szLogLev = window.name;
+  	  if (szLogLev.indexOf(szNameLogLev ) > -1){
+         urlLogLev = parseInt(szLogLev.substr (szNameLogLev.length));
+  	  }
+    }	
+  	if ((typeof (urlLogLev) != 'undefined')){
+  		iLogLev = urlLogLev;
+  	}else {
+  		iLogLev =0;
+  	}  
+  }else {
+  	iLogLev = parseInt(jsLogLev);
+  }
+	jj_consoleStart(iLogLev,objOpt);
+}	
+
+
+
+/**
+Change jslogLev
+@param iLogLev {Number}    iLogLev &nbsp;see  <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/jslog.js/global.html#jslog" target="_self">iLogLev Parameter</a>
+
+  <div class="jsDocNote">
+  <b>Implementation NOTES:</b>
+  <ul>
+    <li>GLOBAL VAR:   jslogVar.iLogLev  set with par iLogLev</li>
+  </ul>
+  </div> 
+ 
+ */
+function jslogLevSet(iLogLev)
+{
+	jslogVar.iLogLev = iLogLev;
+	if (iLogLev == 0){
+		jslog_end();
+	}else if (jslogVar.console){
+		var szTitle = "Level=" + iLogLev;
+		jslogVar.console.labelTitle.innerHTML = szTitle;
+		jslogVar.console.selectLogLev.selectedIndex = iLogLev;
+	}
+	
+}
+
+
+/**
+Set jslog Window SIZE
+@param szLogSize JSLOG_SIZE.XS, JSLOG_SIZE.M, .....	
+	             &nbsp;see  <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/jslog.js/global.html#JSLOG_SIZE" target="_self">JSLOG_SIZE
+  <div class="jsDocNote">
+  <b>Implementation NOTES:</b>
+  <ul>
+    <li>GLOBAL VAR:   jslogVar</li>
+  </ul>
+  </div> 
+*/
+function jslogSetSize(szLogSize)
+{
+	if (jslogVar.console != null){
+		jslogVar.console.setSize (szLogSize); 
+	}
+}
+
+
+/**
+Set jslog Window SIZE
+@param iTop  {Number}  (e.g. 800) Set top of jslog Window 
+  <div class="jsDocNote">
+  <b>Implementation NOTES:</b>
+  <ul>
+    <li>GLOBAL VAR:   jslogVar</li>
+  </ul>
+  </div> 
+*/
+function jslogSetTop(iTop)
+{
+	if (jslogVar.console != null && jslogVar.console.window!= null){
+		jslogVar.console.window.style.top = iTop + "px"; 
+	}
+}
+
+
+
+/**
+Clear jslog Window
+*/
+function jslogClear(){
+	if (jslogVar.console){
+		jslogVar.console.clearWindow();
+	}
+}
+
+
+/**
+Get jslogLev
+@return jslogVar.iLogLev {Number}     Current jslogLev
+
+  <div class="jsDocNote">
+  <b>Implementation NOTES:</b>
+  <ul>
+    <li>GLOBAL VAR:   jslogVar</li>
+  </ul>
+  </div> 
+*/
+function jslogGetLogLev()
+{
+	return jslogVar.iLogLev;
+}
+
+
+
+/**
+ * Get All Current Option
+ * @return {Object}  OBJECT with current jslog option: <ul>
+ *                    <li> .iLogLev </li>
+ *                    <li> .bLogTime </li>
+ *                    <li> .szPathImg </li>
+ *                    </ul>
+ */
+function jslogGetOpt()
+{
+	return {
+		iLogLev : jslogVar.iLogLev,
+		bLogTime: jslogVar.bLogTime, 
+		szPathImg: jslogVar.szPathImg
+	};
+}
+
+
+
+/**
+ * LOG OBJECT: <BR/>
+ * If jslog CONSOLE is Present, Log OBJECT in the jslog CONSOLE if Level is enable <BR/>
+ * If jslog was initialized with Level=0 or if iLogLev is not enabled, this function does not log 
+ @param iLogLev {Number}    iLogLev &nbsp;see  <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/jslog.js/global.html#jslog" target="_self">iLogLev Parameter</a>
+ * @param szMsg  {String} Message To log before JSON
+ * @param obj  {Object} OBJECT To log
+ * @param [bLogCompact] {Boolean}	  in    Default=false  if true log Obj in a compact way
+ * @returns 0
+ 
+ * @example
+	// Prepare object to log
+  var author ={
+	  szFirstName: "Federico",  
+	  szLastName : "Levis",
+	  szCity : "Padova",
+	  szNation : "Italy",
+	  height: 176
+  }; 
+   // Log Object author at Level JSLOG_TEST=8
+  jslogObj(JSLOG_TEST,"Log at Level 2 of a JS Object -  author:", author);
+ */
+function jslogObj(Level,szMsg, obj, bLogCompact)
+{
+	if (bLogCompact == undefined || bLogCompact == null){
+		bLogCompact = false;
+	}
+	var iNumSep = (bLogCompact) ? 0 : 2; 
+	var szSep = (bLogCompact) ? ": " : "\n";
+	// WE make the Check here to avoid executing JSON.stringify when Level is not Enable
+  if(isLogLevEnable(Level) && jslogVar.console){
+    jslogVar.console.send(Level, szMsg + szSep + JSON.stringify(obj,null,iNumSep));
+  }
+  return 0;
+
+}
+
+
+/**
+ * LOG HTML: log a Text contanint HTML. We log it into a TextBox <BR/>
+ * If jslog CONSOLE is Present, Log main szHtml into a TextArea of the jslog CONSOLE if Level is enable <BR/>
+ * If jslog was initialized with Level=0 or if iLogLev is not enabled, this function does not log 
+ @param iLogLev {Number}    iLogLev &nbsp;see  <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/jslog.js/global.html#jslog" target="_self">iLogLev Parameter</a>
+ * @param szMsg  {String} Initial Message
+ * @param szHtml  {String} Message To log that can contain HTML TAGs
+ * @param [objOpt]  {Object}	  Options: <ul> 
+ *    												<li> .iColNum  TextArea ColNum to use instead of JSLOG_DEF_DOM_EL_COL_NUM </li>
+ *    												<li> .iRowNum  TextArea RowNum to use instead of the rows automatically calculated (MAX is JSLOG_MAX_TEXT_BOX_ROW_NUM) </li>
+ *   											</ul> 
+ * @returns 0
+ 
+ * @example
+   jslogHTML (JSLOG_TEST,'selectTest',getElementById('selectTest').innerHTML);  
+
+  LOGGED:
+
+selectTest:  
+<select class="detFilter" id="googleAnalType" title="Initial Analytics TYPE displayed. Then it can be changed form Google Analitycs page"  style="width:100%;"  onchange="tt_onchangeGoogleAnalType();" >
+<option class="detFilter" value="all" selected >All Time</option> 
+<option class="detFilter" value="month"  >Last Month</option> 
+<option class="detFilter" value="week"  >Last Week</option> 
+<option class="detFilter" value="day"  >Last Day</option> 
+<option class="detFilter" value="two_hours"  >Last 2 Hours</option> 
+  
+ */
+function jslogHtml(iLogLev,szMsg,szHtml, objOpt)
+{
+
+	// WE make the Check here to avoid executing JSON.stringify when Level is not Enable
+  if(!isLogLevEnable(iLogLev) || jslogVar.console == undefined){
+  	return;
+  }
+	if (objOpt == undefined){
+		objOpt = new Object();
+	}
+	if (objOpt.iColNum == undefined){	objOpt.iColNum = JSLOG_DEF_DOM_EL_COL_NUM; }
+	if (objOpt.iRowNum == undefined){	
+		// if not passed objOpt.iRowNum, we use the number of /n inserted. 
+		objOpt.iRowNum = jj_getHtmlRowNum(szHtml);
+	}
+
+	// prepare szTxtArea 
+	var szTxtArea= szMsg + ":<BR\>" + '<textarea rows="' + objOpt.iRowNum + '" cols="' + objOpt.iColNum  + '">' + szHtml + '</textarea><BR\>';
+	jslog (iLogLev,szTxtArea);
+	return 0;
+
+}
+
+
+
+/**
+ * LOG DOM ELEMENT: log main fields (nodeName, attributes,...) of DOM Element <BR/>
+ * Optionally you can Log also Style using objOpt.style parameter <BR/>
+ * If jslog CONSOLE is Present, Log main fields of DOM Elements into a TextArea of the jslog CONSOLE if Level is enable <BR/>
+ * If jslog was initialized with Level=0 or if iLogLev is not enabled, this function does not log 
+ @param iLogLev {Number}    iLogLev &nbsp;see  <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/jslog.js/global.html#jslog" target="_self">iLogLev Parameter</a>
+ * @param szMsg  {String} Message To log before DOM Element
+ * @param el  {Object} DOM OBJECT To log
+ * @param [objOpt]  {Object}	  Options: <ul> 
+ *    												<li> .iColNum  TextArea ColNum to use instead of JSLOG_DEF_DOM_EL_COL_NUM </li>
+ *    												<li> .iRowNum  TextArea RowNum to use instead of the rows automatically calculated (MAX is JSLOG_MAX_TEXT_BOX_ROW_NUM) </li>
+ *    												<li> .style  [JSLOG_STYLE.NONE] To Log also Style set JSLOG_STYLE.ONLY_MEANINGFUL or JSLOG_STYLE.ALL 
+	              &nbsp;see  <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/jslog.js/global.html#JSLOG_STYLE" target="_self">JSLOG_STYLE</a>  
+	                </li>
+ *   											</ul> 
+ * @returns 0
+ 
+ * @example
+   jslogDomEl (JSLOG_TEST,"DOM ELEMENT tipJS1Lev1",getElementById2("tipJS1Lev1"),{style:JSLOG_STYLE.ONLY_MEANINGFUL});  
+  LOG:
+  DOM ELEMENT tipJS1Lev1:
+	nodeName=INPUT
+	class=tipJSFixed
+	id=tipJS1Lev1
+	onclick=TipJSFixedClicked (JS1_LEV1,event,{iJSColNum:140});
+	type=button
+	......
+	---------------------------- meaningful style
+	  alignContent = 'stretch'
+	  alignItems = 'stretch'
+	  alignSelf = 'auto'
+	  alignmentBaseline = 'auto'
+	  backfaceVisibility = 'visible'
+	  backgroundAttachment = 'scroll'
+	  backgroundClip = 'border-box'
+	  backgroundColor = 'rgb(224, 224, 224)'
+	
+  
+ */
+function jslogDomEl(iLogLev,szMsg, el, objOpt)
+{
+	if (el == null || el == 0){
+		return;
+	}
+	// WE make the Check here to avoid executing JSON.stringify when Level is not Enable
+  if(!isLogLevEnable(iLogLev) || jslogVar.console == undefined){
+  	return;
+  }
+	if (objOpt == undefined){
+		objOpt = new Object();
+	}
+	if (objOpt.iColNum == undefined){	objOpt.iColNum = JSLOG_DEF_DOM_EL_COL_NUM; }
+	if (objOpt.style == undefined){	objOpt.style = JSLOG_STYLE.NONE ; }
+	var szEl="nodeName=" + el.nodeName + "\n";	
+  for (var i=0; i<el.attributes.length; i++){
+  	var attr = el.attributes[i];
+  	szEl += attr.name + "=" + attr.value + "\n";
+  }
+  szEl += "outerHTML=" +  jj_replaceAll(el.outerHTML,"><",">\n<");
+  
+  if (objOpt.style != JSLOG_STYLE.NONE ){
+    var st = el.style;
+    var cs = window.getComputedStyle(el, null);
+    szEl += "\n\n--------------------------------------- ";
+  	if (objOpt.style == JSLOG_STYLE.ONLY_MEANINGFUL){
+  		szEl += "meaningful style \n";
+  	}else{
+  		szEl += "style \n";
+  	}	
+    for (x in st) {
+    	var bLog = true;
+    	if (objOpt.style == JSLOG_STYLE.ONLY_MEANINGFUL){
+      	if ((st[x] == 0 &&  cs[x] == undefined) || 
+      	    (st[x] == false &&  cs[x] == undefined) ||
+      	    (st[x] == '' &&  cs[x] == '') ||
+      	    (x.indexOf('animation')>=0 || x.indexOf('accelerator')>=0 ) ||
+      	    (st[x] != undefined &&  (typeof(st[x]) == 'function'))
+      	    ) 
+      	{
+      		bLog = false;
+      	}
+    	}
+    	if (bLog){
+    		var szStyle = st[x]; 
+    		if (szStyle == 0 || szStyle =='')
+    		{
+    			szStyle = cs[x];
+    		}	
+    		szEl += "  " + x + " = '" + szStyle + "'\n";
+    	}
+    }
+  }
+  
+  
+	if (objOpt.iRowNum == undefined){	
+		// if not passed objOpt.iRowNum, we use the number of /n inserted. 
+		objOpt.iRowNum = jj_getHtmlRowNum(szEl);
+	}
+	
+	// prepare szTxtArea 
+	var szTxtArea= szMsg + ":<BR\>" + '<textarea rows="' + objOpt.iRowNum + '" cols="' + objOpt.iColNum  + '" readonly>' + szEl + '</textarea><BR\>';
+	jslog (iLogLev,szTxtArea);
+  return 0;
+
+}
+
+
+/**
+ * LOG DOM ELEMENT: log main fields (nodeName, attributes,...) of DOM Element <BR/>
+ * Optionally you can Log also Style using objOpt.style parameter <BR/>
+ * If jslog CONSOLE is Present, Log main fields of DOM Elements into a TextArea of the jslog CONSOLE if Level is enable <BR/>
+ * If jslog was initialized with Level=0 or if iLogLev is not enabled, this function does not log 
+@param iLogLev {Number}    iLogLev &nbsp;see  <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/jslog.js/global.html#jslog" target="_self">iLogLev Parameter</a>
+ * @param szMsg  {String} Message To log before DOM Element
+ * @param el  {Object} DOM OBJECT To log
+ * @param [objOpt]  {Object}	  Options: <ul> 
+ *    												<li> .iColNum  TextArea ColNum to use instead of JSLOG_DEF_DOM_EL_COL_NUM </li>
+ *    												<li> .iRowNum  TextArea RowNum to use instead of the rows automatically calculated (MAX is JSLOG_MAX_TEXT_BOX_ROW_NUM) </li>
+ *    												<li> .style  [JSLOG_STYLE.NONE] To Log also Style set JSLOG_STYLE.ONLY_MEANINGFUL or JSLOG_STYLE.ALL 
+	              &nbsp;see  <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/jslog.js/global.html#JSLOG_STYLE" target="_self">JSLOG_STYLE</a>  
+	                </li>
+ *   											</ul> 
+ * @returns 0
+ 
+ * @example
+   jslogDomEl (JSLOG_TEST,"DOM ELEMENT tipJS1Lev1","tipJS1Lev1",{style:JSLOG_STYLE.ONLY_MEANINGFUL});  
+  LOG:
+  DOM ELEMENT tipJS1Lev1:
+	nodeName=INPUT
+	class=tipJSFixed
+	id=tipJS1Lev1
+	onclick=TipJSFixedClicked (JS1_LEV1,event,{iJSColNum:140});
+	type=button
+	......
+	---------------------------- meaningful style
+	  alignContent = 'stretch'
+	  alignItems = 'stretch'
+	  alignSelf = 'auto'
+	  alignmentBaseline = 'auto'
+	  backfaceVisibility = 'visible'
+	  backgroundAttachment = 'scroll'
+	  backgroundClip = 'border-box'
+	  backgroundColor = 'rgb(224, 224, 224)'
+  
+ */
+function jslogDomElById(Level,szMsg, szId,objOpt)
+{
+	return jslogDomEl(Level,szMsg,document.getElementById(szId), objOpt);
+
+}
+
+
+/** 
+	PAR
+json      i    Json obj
+@returns
+String for jslog      
+ */
+function json2jslogStr(json)
+{
+  // N.B: devo cambiare qualcosa nei replace o si inluppa
+	var szJson = jj_replaceAll(JSON.stringify(json),"},","} ,\n  ");
+	szJson = jj_replaceAll (szJson,":[",":\n[\n  ");
+	szJson = jj_replaceAll (szJson,"[{","[\n  {");
+	return  jj_replaceAll (szJson,"}]","}\n]\n  ");
+
+}
+
+
+
+
+/**
+ * LOG JSON: <BR/>
+ * If jslog CONSOLE is Present, Log json in the jslog CONSOLE if Level is enable <BR/>
+ * If jslog was initialized with Level=0 or if iLogLev is not enabled, this function does not log 
+ @param iLogLev {Number}    iLogLev &nbsp;see  <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/jslog.js/global.html#jslog" target="_self">iLogLev Parameter</a>
+ * @param szMsg  {String} Message To log before JSON
+ * @param json  {String} JSON To log
+ *  * @returns 0
+ 
+ * @example
+ // Prepare json	
+var jsonEx = {"total":5,"rows":[
+	{"day":"21/04/2015","daration_sec":15,"err_num":7},
+	{"day":"22/04/2015","daration_sec":0,"err_num":1},
+	{"day":"23/04/2015","daration_sec":3,"err_num":3},
+	{"day":"24/04/2015","daration_sec":3,"err_num":2},
+	{"day":"25/04/2015","daration_sec":3,"err_num":14}
+]};
+// log json at Level JSLOG_DEBUG=2
+jslogJson(JSLOG_DEBUG,"Log at Level 2 of a JS Object.  jsonEx:", jsonEx);
+ */
+function jslogJson(iLogLev,szMsg, json)
+{
+	// WE make the Check here to avoid executing JSON.stringify when iLogLev is not Enable
+    if(isLogLevEnable(iLogLev)){
+        jslogVar.console.send(iLogLev,szMsg + "\n" + json2jslogStr(json));
+    }
+    return 0;
+
+}
+
+/**
+ * Log the Elapsed Time From dStart to Now
+@param iLogLev {Number}    iLogLev &nbsp;see  <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/jslog.js/global.html#jslog" target="_self">iLogLev Parameter</a>
+ * @param szMsg  {String} Message To log
+ * @param dStart  Start date
+ * @return 0
+ */
+function jslogElapsedTime (iLogLev,szMsg,dStart){
+  if(isLogLevEnable(iLogLev) && jslogVar.console)
+  {
+		var dEnd = new Date();  	
+		var iDeltaMs = dEnd.getTime() - dStart.getTime();
+		var szDurata = (iDeltaMs > 1000) ? ((iDeltaMs/1000) + " sec") : (iDeltaMs + " msec"); 
+		jslogVar.console.send(iLogLev,szMsg + szDurata);
+  }
+  return 0;
+}
+
+
+/**
+ * LOG a STRING: <BR/>
+ * If jslog CONSOLE is Present, Log Msg in the jslog CONSOLE if Level is enable <BR/>
+ * If jslog was initialized with Level=0 or if iLogLev is not enabled, this function does not log 
+ * @param iLogLev {Number}   iLogLev is a BITMASK to Enable the various Level. Level=0 (JSLOG_ERR) is always enabled when jslog is visible. 
+															Example of Levels Enable with various settings: <ul>
+																<li> jsLogLev=3 to Enable JSLOG_INFO(1) and JSLOG_DEBUG(2)
+																<li> jsLogLev=4 to Enable only JSLOG_TEST(4)
+                              </ul>
+      <table class="jsDoc" border="2" cellpadding="2" cellspacing="2">
+        <tr><td class="jsDocTitle">jsLogLev BITMASK Values</td></tr>
+        <tr><td class="jsDocParam">
+        <ul>
+			     <li>  JSLOG_ERR   =  0  ERRORS: always enable when jslog is visible    </li>
+			     <li>  JSLOG_INFO  =  1  INFO: Important Information    </li>
+			     <li>  JSLOG_DEBUG =  2  DEBUG Information    </li>
+			     <li>  JSLOG_TRACE =  4  TRACE (e.g. Large Data like JSON)    </li>
+			     <li>  JSLOG_TEST  =  8  You can use this value for Specific isolated Feature under TEST/Development </li>
+			     <li>  JSLOG_JSU   = 16  JSU Functionality (usually stable)    </li>
+        </ul> 
+        </td></tr>
+     </table>  
+
+  
+  
+ * @param szMsg  {String} Message To log
+ * @returns 0
+ 
+  <div class="jsDocNote">
+  <b>Implementation NOTES:</b>
+  <ul>
+    <li>GLOBAL VAR:   jslogVar</li>
+  </ul>
+  </div> 
+ 
+ * @example
+ // Prepare szMsg: 
+  var szName = "Federico Levis";
+  var iHeight = 177; 
+  var now = new Date(); 
+  //LOG at Level JSLOG_INFO=1 
+  jslog(JSLOG_INFO,"This a Log at Level 1. My name is " + szName + ",  Height=" + iHeight + " cm  - Current Time is: " + now);
+ * 
+ * 
+ */
+function jslog(iLogLev,szMsg)
+{
+  if(isLogLevEnable(iLogLev) && jslogVar.console)
+  {
+    jslogVar.console.send(iLogLev,szMsg);
+  }
+  return 0;
+}
+
+
+/**
+ * jslog END: destroy the JSLOG window if present
+ */
+function jslog_end()
+{
+	if (jslogVar.console){
+		jslogVar.console.killWindow();
+	}
+}
+
+/**
+ * Check if iLogLev is Enabled
+@param iLogLev {Number}    iLogLev &nbsp;see  <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/jslog.js/global.html#jslog" target="_self">iLogLev Parameter</a>
+ * @returns {Boolean}  true if iLogVel is Enabled
+ */
+function isLogLevEnable(iLogLev)
+{
+   return ((jslogVar.iLogLev & iLogLev || iLogLev == 0)  && jslogVar.console != null );
+}
+
+
+/**********************************************************************************************************
+ * 																				PRIVATE
+ ******************************************************************************************************/
+
+
+
+function jj_getHtmlRowNum(szHtml){
+	if (typeof(szHtml) != "string"){
+		return 0;
+	}
+	var iRowNum =  1 + (szHtml.match(/\n/g) || []).length;
+	if (iRowNum > JSLOG_MAX_TEXT_BOX_ROW_NUM){
+		iRowNum	= JSLOG_MAX_TEXT_BOX_ROW_NUM;
+  } 
+	return iRowNum;
+	
+}
+
+
+/*
+ * 
+ * Replace in str di tutte le occorrenze di strFrom, che vengono sostituite con strTo 
+ * @param str			es: "questa frase contiene Pippo 2 volte perche` alla fine ripeto Pippo"
+ * @param strFrom		es: "Pippo"
+ * @param strTo			es: "Paperino"
+ * @returns str 		es: "questa frase contiene Paperino 2 volte perche` alla fine ripeto Paperino"
+ */
+function jj_replaceAll(str,strFrom,strTo)
+{  
+  if (typeof(str) == "undefined"){
+    return "";
+  }	
+  while (str.indexOf(strFrom)>-1) {
+	 str = str.replace(strFrom,strTo);
+  }	
+  return str;  
+}
+
+
+
+/*
+ * 
+@param iLogLev {Number}    iLogLev &nbsp;see  <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/jslog.js/global.html#jslog" target="_self">iLogLev Parameter</a>
+ * @param [objOpt] {Object} see jslog_init
+ */
+function jj_consoleStart(iLogLev,objOpt){		
+	var szLogSize = JSLOG_SIZE_DEF;
+	jslog_end(); // End previous jslogVar.console if present
+	jslogVar.iLogLev = iLogLev;
+	if (jslogVar.iLogLev ==0){
+		return;
+	}
+	
+	if (objOpt != undefined){
+		if (objOpt.szPathImg != undefined){
+			// save in Global
+		  jslogVar.szPathImg = objOpt.szPathImg;
+		}
+		if (objOpt.bLogTime != undefined){
+			// save in Global
+			jslogVar.bLogTime = objOpt.bLogTime;
+		}
+		if (objOpt.szLogSize != undefined){
+			// save in Global
+			szLogSize = objOpt.szLogSize;
+		}
+	}
+	 
+  jslogVar.console = {
+	  /*----------------------------------------------------------------------------
+	                                Core Functionality
+	  ----------------------------------------------------------------------------*/
+	  // vars
+	  debugging_on: false,
+	  window:       null,
+	  viewport:     null,
+	  buffer:       '',
+	  debugVisible: false, // Status related to showDebug Button  (debugVisible= true after click)
+	  arBtnDebug: new Array(),  //Btn for Debug (2 Buttons)
+	  // initialization
+	  init: function(){
+	    if( !document.getElementsByTagName ||
+	        !document.getElementById ||
+	        !document.createElement ||
+	        !document.createTextNode ) return;
+	
+		var domBody = document.getElementsByTagName( 'body' )[0];
+		if (typeof (domBody) == 'undefined'){
+		  return;
+		}
+	    jslogVar.console.createWindow();
+	    jslogVar.console.getCookie();
+	    jslogVar.console.debugging_on = true;
+	    jslogVar.console.setSize (szLogSize); 
+	  },
+	
+	  // jslogVar.console window creation
+	  createWindow: function(){
+	    jslogVar.console.window = document.createElement( 'div' );     // the window
+	    jslogVar.console.window.style.background = '#000';
+	    jslogVar.console.window.style.font       = '9pt "Lucida Grande", "Lucida Sans Unicode", sans-serif';
+	    jslogVar.console.window.style.padding    = '2px';
+	    jslogVar.console.window.style.position   = 'absolute';
+	    jslogVar.console.window.style.top        = WIN_JSLOG_TOP;
+	    jslogVar.console.window.style.left       = '0px';
+	    jslogVar.console.window.style.height     = WIN_JSLOG_H;
+	    jslogVar.console.window.style.zIndex     = '100';
+	    jslogVar.console.window.style.minHeight  = '40px';
+	    jslogVar.console.window.style.width      = WIN_JSLOG_W;
+	    jslogVar.console.window.style.minWidth   = '150px';
+	     
+	    var x = document.createElement('span');             // the closer
+	        x.style.border     = '1px solid #000';
+	        x.style.cursor     = 'pointer';
+	        x.style.color      = '#000';
+	        x.style.display    = 'block';
+	        x.style.lineHeight = '.5em';
+	        x.style.padding    = '0 0 3px';
+	        x.style.position   = 'absolute';
+	        x.style.top        = '4px';
+	        x.style.right      = '4px';
+	        x.setAttribute( 'title', 'Close jslogVar.console Debugger' );
+	        x.appendChild( document.createTextNode( 'x' ) );
+	        jslogVar.console.addEvent( x, 'click', function(){ jslogVar.console.killWindow(); } );
+	        jslogVar.console.window.appendChild( x );
+	    var sh = document.createElement('div');             // the stretcher holder
+	        sh.style.position = 'absolute';
+	        sh.style.bottom   = '3px';
+	        sh.style.right    = '3px';
+	    var sg = document.createElement('span');            // the stretcher grip
+	        sg.style.border   = '5px solid #ccc';
+	        sg.style.borderLeftColor = sg.style.borderTopColor = '#000';
+	        sg.style.cursor   = 'pointer';
+	        sg.style.color    = '#ccc';
+	        sg.style.display  = 'block';
+	        sg.style.height   = '0';
+	        sg.style.width    = '0';
+	        sg.style.overflow = 'hidden';
+	        sg.setAttribute( 'title', 'Resize the jslogVar.console Debugger' );
+	
+	        if( typeof( Drag ) != 'undefined' ){ // make it draggable
+	          sg.xFrom = 0;
+	          sg.yFrom = 0;
+	          Drag.init( sg, null, null, null, null, null, true, true );
+	          sg.onDrag = function( x, y ){
+	                        jslogVar.console.resizeX( x, this );
+	                        jslogVar.console.resizeY( y, this );
+	                        jslogVar.console.adjustViewport();
+	                      };
+	          sg.onDragEnd = function(){
+	                       jslogVar.console.setCookie();
+	                     };
+	          sh.appendChild( sg );
+	          jslogVar.console.window.appendChild( sh );
+	        }
+	        
+	        var header = document.createElement( 'h3' );
+	        header.className = "jslog";
+	        jslogVar.console.appendAllBtn(header,false); 
+	        //--------------------------------------
+	        header.appendChild( jslogVar.console.getGroupSep("    "));
+	        jslogVar.console.labelTitle = document.createElement( 'label' );
+	        jslogVar.console.labelTitle.className = "jslog";
+	        jslogVar.console.labelTitle.innerHTML  =	'Level=' + jslogVar.iLogLev;
+	        header.appendChild(jslogVar.console.labelTitle);
+	        jslogVar.console.window.appendChild( header );
+	        //------------------------     
+	        var footer = document.createElement( 'div' );        // additional footer holder
+	        footer.className = "jslogFooter";
+	        jslogVar.console.appendAllBtn(footer,true); 
+	        jslogVar.console.window.appendChild( footer);
+	
+		//	STYLE
+	    jslogVar.console.viewport = document.createElement( 'pre' );
+	    jslogVar.console.viewport.style.border   = '1px solid #ccc';
+	    jslogVar.console.viewport.style.color    = '#ebebeb';
+		  jslogVar.console.viewport.style.color    = 'white';
+		  jslogVar.console.viewport.style.backgroundColor = 'black';
+	    jslogVar.console.viewport.style.textAlign    = 'left';
+	    jslogVar.console.viewport.style.fontSize = '1.2em';
+	    jslogVar.console.viewport.style.margin   = '0';
+	    jslogVar.console.viewport.style.padding  = '0 3px';
+	    jslogVar.console.viewport.style.position = 'absolute';
+	    jslogVar.console.viewport.style.top      = '25px';
+	    jslogVar.console.viewport.style.left     = '2px';
+	    jslogVar.console.viewport.style.overflow = 'auto';
+	    jslogVar.console.adjustViewport();
+	    jslogVar.console.window.appendChild( jslogVar.console.viewport );
+	    document.getElementsByTagName( 'body' )[0].appendChild( jslogVar.console.window );
+	
+	    if( typeof( Drag ) != 'undefined' ){ // make it draggable
+	      Drag.init( header, jslogVar.console.window );
+	      jslogVar.console.window.onDragEnd = function(){
+	                                   jslogVar.console.setCookie();
+	                                 };
+	    }
+	  },
+	
+	  // resizing stuff
+	
+	  resizeX: function( x, grip ){
+	
+	    var width    = parseInt( jslogVar.console.window.style.width );
+	
+	    var newWidth = Math.abs( width - ( x - grip.xFrom ) ) + 'px';
+	
+	    if( parseInt( newWidth ) < parseInt( jslogVar.console.window.style.minWidth ) )
+	
+	      newWidth = jslogVar.console.window.style.minWidth;
+	
+	    jslogVar.console.window.style.width = newWidth;
+	
+	    grip.xFrom = x;
+	
+	  },
+	
+	  resizeY: function( y, grip ){
+	
+	    var height    = parseInt( jslogVar.console.window.style.height );
+	
+	    var newHeight = Math.abs( height - ( y - grip.yFrom ) ) + 'px';
+	
+	    if( parseInt( newHeight ) < parseInt( jslogVar.console.window.style.minHeight ) )
+	
+	      newHeight = jslogVar.console.window.style.minHeight;
+	
+	    jslogVar.console.window.style.height = newHeight;
+	
+	    grip.yFrom = y;
+	
+	  },
+	
+	  // adjust viewport
+	
+	  adjustViewport: function(){
+	    jslogVar.console.viewport.style.width = ( parseInt( jslogVar.console.window.style.width ) - 8 ) + 'px';
+	    jslogVar.console.viewport.style.height = ( parseInt( jslogVar.console.window.style.height ) - 50 ) + 'px';
+	  },
+	
+	  // send data too the window
+	
+	  send: function(iLevel, text ){
+	    // Replace "/n" with <br>
+		  // look for "\n" and replace with <BR>	
+	    text = text + "<br/>";
+	    // if textarea we do not replace \n
+	    if (text.indexOf("<textarea rows") < 0){
+			  while (text.indexOf("\n")>-1) {
+			    text = text.replace("\n","<br/>");
+		    }
+	    }
+	  	var szTime ="";
+	  	if (jslogVar.bLogTime){
+	    	var d = new Date();
+	    	szTime = jslogVar.console.num2StrPad(d.getHours(),'0',2) + ":" + 
+	    				jslogVar.console.num2StrPad(d.getMinutes(),'0',2) + ":" + 
+	    				jslogVar.console.num2StrPad(d.getSeconds(),'0',2) + "." + 
+	    				jslogVar.console.num2StrPad(d.getMilliseconds(),'0',3) + " ";
+	  	}
+	  	// for delimiter we pass null
+	  	if (iLevel != null){
+			  text = szTime + "[" + iLevel + "] " + text;
+	  	}
+	    if( jslogVar.console.viewport == null ){  /* store in the buffer if the 
+	                                        viewport has not yet been built */
+	      jslogVar.console.buffer += text;
+	    } else {
+	      jslogVar.console.viewport.innerHTML += text;
+	      jslogVar.console.scrollWithIt();
+	    }
+	  },
+	
+	  // send the buffer to the window
+	
+	  sendBuffer: function(){
+	
+	    if( jslogVar.console.viewport == null ){
+	
+	      jslogVar.console.timer = window.setTimeout( 'jslogVar.console.sendBuffer()', 500 );
+	
+	    } else {
+	
+	      jslogVar.console.viewport.innerHTML += jslogVar.console.buffer;
+	
+	      jslogVar.console.scrollWithIt();
+	
+	      jslogVar.console.killTimer();
+	
+	    }
+	
+	  },
+	
+	  // adjust the viewport to keep pace with the latest entries
+	
+	  scrollWithIt: function(){
+	
+	    jslogVar.console.viewport.scrollTop = jslogVar.console.viewport.scrollHeight;
+	
+	  },
+	
+	  // kill the window
+	
+	  killWindow: function() {
+	    jslogVar.console.window.parentNode.removeChild( jslogVar.console.window );
+	    jslogVar.console.debugging_on = false;
+	    jslogVar.console = null;
+	    window.name = JSLOG_LEV_URL_PAR + "=0";
+	    
+	  },
+	
+	  // cookie handlers
+	
+	  setCookie: function(){
+	
+	    var posn = jslogVar.console.window.style.top + ' ' + jslogVar.console.window.style.left;
+	
+	    var size = jslogVar.console.window.style.height + ' ' + jslogVar.console.window.style.width;
+	
+	    document.cookie = 'jslogVar.console=' + escape( posn + ' ' + size );
+	
+	  },
+	
+	  getCookie: function(){
+	    if( !document.cookie ) return;
+	    var all_cookies = document.cookie;
+	    var found_at = all_cookies.indexOf('jslogVar.console=');
+	    if( found_at != -1 ){
+	      var start = found_at + 'jslogVar.console='.length;
+	      var end   = all_cookies.indexOf( ';', start );
+	      var value = ( end != -1 ) ? all_cookies.substring( start, end )
+	                                : all_cookies.substring( start );
+	      value = unescape( value );
+	      var vals = value.split( ' ' );
+	      // start with position
+	      jslogVar.console.window.style.top  = vals[0];
+	      jslogVar.console.window.style.left = vals[1];
+	      // then size
+	      jslogVar.console.window.style.height = vals[2];
+	      jslogVar.console.window.style.width  = vals[3];
+	      jslogVar.console.adjustViewport();
+	    }
+	  },
+	  // generic timer setup (if needed)
+	  timer: null,
+	  killTimer: function(){
+	    clearTimeout( jslogVar.console.timer );
+	  },
+	  // event handlers
+	  addEvent: function( obj, type, fn ){
+	    if (obj.addEventListener) obj.addEventListener( type, fn, false );
+	    else if (obj.attachEvent) {
+	      obj["e"+type+fn] = fn;
+	      obj[type+fn] = function() {
+	        obj["e"+type+fn]( window.event );
+	      };
+	      obj.attachEvent( "on"+type, obj[type+fn] );
+	    }
+	  },
+	
+	  removeEvent: function ( obj, type, fn ) {
+	    if (obj.removeEventListener) obj.removeEventListener( type, fn, false );
+	    else if (obj.detachEvent) {
+	      obj.detachEvent( "on"+type, obj[type+fn] );
+	      obj[type+fn] = null;
+	      obj["e"+type+fn] = null;
+	    }
+	  },
+	
+	  
+	  
+	  
+	  /*================================================================================================
+	   * @param parent  {Object} the parent that will be added the Btn
+	   * @param bFooter {Boolean} true for Footer
+	  ===============================================================================================*/
+	  appendAllBtn: function (parent,bFooter) {
+		  var listBtn = new Array();
+		  parent.appendChild( jslogVar.console.getImgPos("arrowTopLeft.jpg","Move JSConsole to TOP LEFT CORNER",JSLOG_POS_TOPLEFT));
+		  parent.appendChild( jslogVar.console.getImgPos("arrowBottomRight.jpg","Move JSConsole to BOTTOM RIGHT LEFT CORNER",JSLOG_POS_BOTTOMRIGHT));
+		  parent.appendChild( jslogVar.console.getImgPos("arrowLeft.jpg","Move JSConsole to LEFT SIDE",JSLOG_POS_LEFT));
+		  parent.appendChild( jslogVar.console.getImgPos("arrowRight.jpg","Move JSConsole to the RIGHT SIDE",JSLOG_POS_RIGTH));
+		  // parent.appendChild( jslogVar.console.getBtnSep());
+		  parent.appendChild( jslogVar.console.getImgPos("arrowTop.jpg","Move JSConsole to the TOP",JSLOG_POS_TOP));
+		  parent.appendChild( jslogVar.console.getImgPos("arrowBottom.jpg","Move JSConsole to the BOTTOM",JSLOG_POS_BOTTOM));
+			//-------------------------------------- SIZE
+			parent.appendChild( jslogVar.console.getGroupSep(""));
+			var listBtnSize = new Array();
+			var w=30;
+			listBtnSize.push( [ 'XS', w,'Size SX',  function(){ jslogVar.console.setSize(JSLOG_SIZE.XS); } ] );
+			listBtnSize.push( [ 'S', w,'Size S',  function(){ jslogVar.console.setSize(JSLOG_SIZE.S); } ] );
+			listBtnSize.push( [ 'M', w,'Size M',  function(){ jslogVar.console.setSize(JSLOG_SIZE.M); } ] );
+			listBtnSize.push( [ 'L', w,'Size L',  function(){ jslogVar.console.setSize(JSLOG_SIZE.L); } ] );
+			listBtnSize.push( [ 'XL', w,'Size XL',  function(){ jslogVar.console.setSize(JSLOG_SIZE.XL); } ] );
+			// ========================== Add buttons
+			for(var i=0; i < listBtnSize.length; i++ ){
+				var btn = jslogVar.console.getBtn(listBtnSize[i]);
+				parent.appendChild( btn);
+				parent.appendChild( jslogVar.console.getBtnSep());
+			}		
+		  // ----------------------------------------- define any Other Add-on Buttons
+		  parent.appendChild( jslogVar.console.getGroupSep(""));
+		  listBtn.push( [ 'Clear', 60, 'Clear the Window',  function(){ jslogVar.console.clearWindow(); } ] );
+		  listBtn.push( [ 'Delimiter', 70, 'Add a Separator Delimet',  function(){ jslogVar.console.sendDelimiter(); }] );
+		  if (jslogVar.console.isIE()){
+		    listBtn.push( [ 'CopyToClipboard',120, 'Copy To Clipboard All the  contain of the  Window',  function(){ jslogVar.console.copy2Clipboard(); }  ] );
+		  }else{
+		    listBtn.push( [ 'SelectAll',70, 'Select ALL', function(){ jslogVar.console.selectAll(); } ] );
+		  }
+			// ========================== Add buttons
+			for(var i=0; i < listBtn.length; i++ ){
+				var btn = jslogVar.console.getBtn(listBtn[i]);
+				parent.appendChild( btn);
+				parent.appendChild( jslogVar.console.getBtnSep());
+			}
+		  parent.appendChild( jslogVar.console.getGroupSep(""));
+		  var btnDebug = jslogVar.console.getBtn( [ 'Show debug Fields', 130, 'Show hidden fields having class="debug" or id="debug"',  function(){
+		  	  var szBtnValue, szBtnTitle;
+				  if (jslogVar.console.debugVisible){
+				  	// Debug are visible. We hide them
+					  jslogVar.console.debugVisible = false;
+					  szBtnValue = 'Show ' + JSLOG_ID_DEBUG + ' Fields';
+					  szBtnTitle = 'Show hidden fields having class="' + JSLOG_ID_DEBUG +  '" or id="' + JSLOG_ID_DEBUG + '"';
+				  }else{
+				  	// Debug are visible. We Show them them
+					  jslogVar.console.debugVisible = true;
+					  szBtnValue = 'Hide ' + JSLOG_ID_DEBUG  + 'Fields';
+					  szBtnTitle = 'Hide again Debug fields having class="' + JSLOG_ID_DEBUG + '" or id="' +JSLOG_ID_DEBUG + '"';
+				  }
+				  // Change value and title of the array (2) of btnDebug
+				  for (var i=0; i<jslogVar.console.arBtnDebug.length; i++){
+				  	var btnDebug = jslogVar.console.arBtnDebug[i]; 
+					  btnDebug.value = szBtnValue;
+					  btnDebug.title = szBtnTitle;
+				  }
+				  
+			  	// Get List of all elements with tag SPAN and id= "debug"
+				  var TAG_DEBUG = ["SPAN","DIV","TABLE"];
+				  
+				  for (var iTag=0; iTag < TAG_DEBUG.length; iTag++){
+				  	var ElList = document.getElementsByTagName(TAG_DEBUG[iTag]);
+				  	for (var i=0; i < ElList.length; i++){
+				  		var El = ElList [i];
+				  		if (El.id == "debug" || El.className == "debug"){
+				  		  if (jslogVar.console.debugVisible){
+				  		  	// El.style.visibility="visible";
+				  		    El.style.display="block";
+				  		  }else {
+				  		    // El.style.visibility="hidden";
+				  		    El.style.display="none";
+				  		  }
+				  		}
+				  	}
+				  }	
+		  }] );
+			parent.appendChild(btnDebug);
+			// add to the list of btnDebuf
+			jslogVar.console.arBtnDebug.push (btnDebug);
+			parent.appendChild( jslogVar.console.getGroupSep(""));
+			//-------------------------------- Select with logLev
+			// We add Only in Footer because they do not work in H3
+			if (bFooter ){
+        var label = document.createElement( 'label' );
+        label.className = "jslogFooter";
+        label.innerHTML  =	"SETTINGS: ";
+        parent.appendChild(label);
+	      var selectLogLev = document.createElement( 'select');
+	      selectLogLev.className ='jslog';
+	      for (var i=0; i <= 31; i++){
+	      	var szText = "LogLevel=" + i;
+	      	if (i==0){
+	      		szText = "CLOSE JSLOG";
+	      	}
+	        var elOpt = new Option(szText,i);
+	        elOpt.dv = szText;
+	        elOpt.selected = (jslogVar.iLogLev == i);
+	        selectLogLev[selectLogLev.length] = elOpt;
+	      }
+	      jslogVar.console.addEvent(selectLogLev, 'change', function(){ 
+	      	  jslogLevSet (this.selectedIndex);
+	      	}  );
+	      parent.appendChild(selectLogLev);
+	      jslogVar.console.selectLogLev = selectLogLev;
+	      //-------------------------------------------------------
+	      var selectLogTime = document.createElement( 'select');
+	      selectLogTime.className ='jslog';
+	      var arOpt =[["0","NO Time"],["1","Log Time"]];
+	      for (var i=0; i < arOpt.length; i++){
+	      	var szText = arOpt[i][1];
+	        var elOpt = new Option(szText,arOpt[i][0]);
+	        elOpt.dv = szText;
+	        elOpt.selected = ((!jslogVar.bLogTime && i==0) || (jslogVar.bLogTime && i==1));
+	        selectLogTime[selectLogTime.length] = elOpt;
+	      }
+	      jslogVar.console.addEvent(selectLogTime, 'change', function(){ 
+	      	jslogVar.bLogTime = (this.selectedIndex ==1);
+	      	}  );
+	      parent.appendChild(selectLogTime);
+			}
+			
+	  },
+	  
+	  /*----------------------------------------------------------------------------
+	                              Footer Functions
+	  ----------------------------------------------------------------------------*/
+	  // send a delimiter to the window
+	  sendDelimiter: function(){
+	    jslogVar.console.send(null, JSLOG_DELIMITER);
+	  },
+	  selectAll: function() {
+	    if (document.selection) {
+	        var range = document.body.createTextRange();
+	        range.moveToElementText(jslogVar.console.window);
+	        range.select();
+	    } else if (window.getSelection) {
+	        var range = document.createRange();
+	        range.selectNode(jslogVar.console.window);
+	        window.getSelection().addRange(range);
+	    }
+	  },  
+	  
+	  // copy 2 Clipboard (only IE)
+	  copy2Clipboard: function(){
+	    var i=0;
+	
+		  // look for <BR> and <br> and replace with "\n"
+	    // Get Current String with trace
+		  var NewString = "" + jslogVar.console.viewport.innerHTML;
+		  while (NewString.indexOf("<BR>")>-1) {
+		    NewString = NewString.replace("<BR>","\n");
+	      i++;
+	    }
+		  while (NewString.indexOf("<br>")>-1) {
+		    NewString = NewString.replace("<br>","\n");
+	      i++;
+	    }	  
+		  // Now NetString has NewLines
+	    // for clipboard
+		  var textArea = document.createElement( 'TextArea');
+		  // textArea.innerText = Text;
+		  textArea.innerText = NewString;
+	    if (typeof(textArea.createTextRange) == "undefined"){
+	      alert("copy2Clipboard NOT supported for This Browser - Supported Browser for COPY to Clipboard: IE." +
+	      		 "To Copy to Clipboard Please use SelectAll or CTRL-C  CTRL-V");
+	      return;
+	    }
+		  Copied = textArea.createTextRange();
+		  Copied.execCommand("RemoveFormat");
+		  Copied.execCommand("Copy");
+	    // alert("ALL Rows Copied to Clipdoard ");
+	
+	  },
+	
+	  
+	  isIE: function() {
+	    try{
+	      return ((navigator.appName == 'Microsoft Internet Explorer') || 
+	          ((navigator.appName == 'Netscape') && (new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})").exec(navigator.userAgent) != null))); 		
+	    }
+	    catch(err){
+	      return false;
+	    }
+	  },  
+	
+	
+	  getBtn: function(arDesc){
+	      var btn = document.createElement( 'input');
+	      btn.className = 'jslogButton';
+	      btn.setAttribute( 'type', 'button' );
+	      btn.setAttribute( 'value', arDesc[0] );
+		    btn.style.width =  arDesc[1] + 'px';
+	      btn.setAttribute( 'title', arDesc[2] );
+	      jslogVar.console.addEvent( btn, 'click', arDesc[3] );
+	      return btn;
+	  },
+	
+	  getTxtSep: function(txt){
+		  var sep = document.createElement( 'span' );
+		  sep.style.color       = '#ffffff';
+	    sep.style.fontWeight=  'bold';
+		  sep.style.padding     = '0 2px 0px 10px';
+		  sep.style.textAlign = "right";
+		  sep.appendChild(document.createTextNode( txt ));
+		  return sep;
+	  },
+	  getBtnSep: function(){
+		  var sep = document.createElement( 'span' );
+		  sep.style.color       = '#ffffff';
+		  sep.style.padding     = '0 3px 0px 0px';
+		  return sep;
+	  },
+	  getGroupSep: function(){
+		  var sep = document.createElement( 'span' );
+		  sep.style.color       = '#ffffff';
+		  sep.style.padding     = '0 10px 0px 0px';
+		  return sep;
+	  },
+	  
+	  
+	  getImgPos: function(src,tip,Pos){
+	    var img = document.createElement( 'img' );
+	    img.style.padding     = '0px 2px';
+	    img.style.cursor      = 'pointer';
+	    img.src = jslogVar.szPathImg + src;
+	    img.height = 15;
+	    img.width = 15;
+	    img.align = "top";
+	    img.title= tip;
+	    img.style.border  = '1px solid black';
+	    // Set Border Yellow when mouse is Over Img
+	    jslogVar.console.addEvent( img, 'mouseenter',	function(){this.style.border  = '1px solid yellow'; });
+	    jslogVar.console.addEvent( img, 'mouseleave', function(){this.style.border  = '1px solid black';});
+	    jslogVar.console.addEvent( img, 'click', function(){jslogVar.console.setPos(Pos);});
+	    //
+	    return img;
+	  },
+	
+	  
+	  /*
+	   * Set Console Position
+	   * @param size  JSLOG_POS_XS...
+	   */
+	  setSize: function(size){
+		  var hMax=0;
+		  var wMax=0;
+		  var w=0;
+		  var h=0;
+		  if (typeof(window.innerHeight) != 'undefined'){
+			  //Some Space for scrollbar (if present)
+			  hMax= window.innerHeight-30;
+			  wMax= window.innerWidth-30;
+		  }else{
+			  // Particular cases
+			  hMax= window.screen.height-150;
+			  wMax= window.screen.width-30;
+		  }
+	
+		  if (size == JSLOG_SIZE.XS){
+		      w =1100;
+		      h=150;
+		  }
+		  else if (size == JSLOG_SIZE.S){
+			  h = parseInt (hMax *0.3);
+			  w = parseInt (wMax *0.8);
+		  }
+		  else if (size == JSLOG_SIZE.M){
+			  h = parseInt (hMax *0.5);
+			  w = parseInt (wMax *1);
+		  }
+		  else if (size == JSLOG_SIZE.L){
+			  h = parseInt (hMax *0.6);
+			  w = parseInt (wMax *1);
+		  }
+		  else if (size == JSLOG_SIZE.XL){
+			  jslogVar.console.window.style.top    = '0px';
+			  jslogVar.console.window.style.left   = '0px';
+			  h = parseInt (hMax *1);
+			  w = parseInt (wMax *1);
+		  }
+		  if (w < 1100){
+		  	w = 1100;
+		  }
+		  jslogVar.console.window.style.width    = w + 'px';
+		  jslogVar.console.window.style.height   = h + 'px';
+		  jslogVar.console.adjustViewport();
+	  }, 	
+	    
+	  /*
+	   * Set Console Position
+	   * @param pos  JSLOG_POS_TOPLEFT...
+	   */
+	  setPos: function(pos){
+		  var top = 0;
+		  var left = 0;
+		  if (typeof(window.innerHeight) != 'undefined'){
+			  //Some Space for scrollbar (if present)
+			  top= window.innerHeight - 50;
+			  left= window.innerWidth - 150;
+		  }else{
+			  // Particular cases
+		  	  top= window.screen.height-100;
+		  	  left= window.screen.width-200;
+		  }
+		  if (pos == JSLOG_POS_TOPLEFT){
+			  jslogVar.console.window.style.top    = '0px';
+			  jslogVar.console.window.style.left   = '0px';
+		  }
+		  else if (pos == JSLOG_POS_BOTTOMRIGHT){
+			  jslogVar.console.window.style.top   =  top + 'px';
+			  jslogVar.console.window.style.left   = left + 'px';
+		  }	
+		  else if (pos == JSLOG_POS_TOP){
+			  jslogVar.console.window.style.top        = '0px';
+		  }
+		  else if (pos == JSLOG_POS_BOTTOM){
+			  // var h = jslogVar.console.window.style.height.replace('px','');
+			  jslogVar.console.window.style.top   =  top + 'px';
+		  }	
+		  else if (pos == JSLOG_POS_LEFT){
+			  jslogVar.console.window.style.left   = '0px';
+		  }	
+		  else if (pos == JSLOG_POS_RIGTH){
+			  // var w = jslogVar.console.window.style.width.replace('px','');
+			  jslogVar.console.window.style.left   = left + 'px';
+		  }	
+	  },
+	  clearWindow: function(){
+	    jslogVar.console.viewport.innerHTML = '';
+	  },
+	  /**
+	   * @param iNum 			e.g    123
+	   * @param szPad			"0"
+	   * @param iLenWithPad	5 
+	   * @returns  "00123
+	   */
+	  num2StrPad: function (iNum,szPad, iLenWithPad) {
+	    var iZeroPad = iLenWithPad - iNum.toString().length + 1;
+	    return Array(+(iZeroPad > 0 && iZeroPad)).join("0") + iNum;
+	  }	  
+	  
+	  
+  };
+
+  // jslogVar.console.addEvent( window, 'load', jslogVar.console.init );
+  // jslogVar.console.addEvent( window, 'load', jslogVar.console.sendBuffer );
+   jslogVar.console.init();
+   if (objOpt && objOpt.iTop){
+     jslogSetTop (objOpt.iTop);
+   }
+}
+
+
+
+
+

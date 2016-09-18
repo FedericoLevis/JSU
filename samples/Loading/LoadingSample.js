@@ -1,8 +1,413 @@
-/***************************************************************************/
-/*                                                                         */
-/*  This obfuscated code was created by Javascript Obfuscator Free Version.*/
-/*  Javascript Obfuscator Free Version can be downloaded here              */
-/*  http://javascriptobfuscator.com                                        */
-/*                                                                         */
-/***************************************************************************/
-var _$_65f3=["https://rawgit.com/FedericoLevis/images/master/loading/","https://rawgit.com/FedericoLevis/images/master/samples/","value","szTitleHtml","Loading Title <i>Example</i>","szMsgHtml","<b>Loading could require <i>some seconds</i></b><BR/><BR/>Please Wait...","selectDur1","3","selectDur2","5","3 sec","5 sec","10","10 sec","length","1ColorRing.gif","1ColorRing","2ColorRing.gif","2ColorRing","Cat.gif","Cat","3Wheels.gif","3Wheels","Disk.gif","Disk","FillingRing.gif","FillingRing","Ventilator.gif","Ventilator","JSU.gif","JSU","szUrlGif","loadedSample1","bShowElapsedSec","TRUE","bShowCancel","iDivWidth","loadedSample2","className","tipGoodBold","innerHTML","Loaded","inline","CANCELLED","tipErrBold","index.html","global.html","replace","#loadingDivShow","<iframe width=\"1250\" height=\"650\" src=\"","\" ></iframe>","loadingDivShow() API","loadingType3","CustomLayout","<table class=\"tip\"  cellspacing=\"0\" cellpadding=\"2\" width=\"500px\">","  <tr > ","   <td  align=\"center\" class=\"jsuAboutTitle\" > <img class=\"jsuAboutTitle\" src=\"","jsuAboutTitle.png\"/></td> ","   <td  align=\"left\" class=\"jsuAboutTitle\"> <img class=\"jsuAboutTitle\" src=\"","ComputerVelox.gif\"/></td> ","  </tr>","  <tr><td colspan=\"2\">","    <table style=\"background-color:white;\" ><tr>","      <td id=\"loadingDivTdGif\" align=\"left\" width=\"150px\">","          <img  src=\"","JSU.gif\" />","      </td>","      <td width=\"250px\" class=\"loadingDivMsg\" style=\"font-size: 17px\">","         <b>Loading JSU components</BR>Please wait...","      </td> ","    </tr></table>","  </td></tr>","</table>","gray","loadedSample3","<b>[Action 1/3]</b><BR/>Searching Files...","Search.gif","<b>[Action 2/3]</b><BR/>Printing Files...","Print.gif","<b>[Action 3/3]</b><BR/>Sending Emails...","SendEmail.gif","//Only 2 JSU calls are required:\x0A","//   - loadingDivShow(objOpt) : Show the LoadingDiv with optional objOpt\x0A","//   - loadingDivHide()       : Hide the LoadingDiv\x0A\x0A","// 1) We Show LoadingDiv (with default Options)\x0A","loadingDivShow();\x0A","// Execute the \"Long Loading Operation\". During this Code execution the User will see only the LoadingDiv \x0A","... \x0A","//Now  we have finished Executing the \"Long Loading Operation\"  \x0A","// 2) Finally we Hide LoadingDiv\x0A","loadingDivHide();","// 1) Show LoadingDiv with the selected Options\x0A","loadingDivShow ( { \x0A","   szTitleHtml: getElementById2(\"szTitleHtml\").value,\x0A","   szMsgHtml: getElementById2(\"szMsgHtml\").value, \x0A","   bShowElapsedSec: selectGetSelVal (getElementById2(\"bShowElapsedSec\")) == \"TRUE\",\x0A","   bShowCancel: selectGetSelVal (getElementById2(\"bShowCancel\")) == \"TRUE\",\x0A","   iDivWidth: selectGetSelVal (getElementById2(\"iDivWidth\")),\x0A","   szUrlGif: selectGetSelVal (getElementById2(\"szUrlGif\")),\x0A","   fnCancelCallback: loading2CancelCallback\x0A"," });\x0A","loadingDivHide();\x0A\x0A"," * Callback Function, called when user click Cancel\x0A"," */\x0A","function loading2CancelCallback(){\x0A","\x09// The user has click Cancel in the LOadindDiv: we stop our Timer and Show the \"CANCELLED\" Label\x0A","\x09clearTimeout (tmoLoading2);\x0A","\x09var elLoadedSample2 = getElementById2(\"loadedSample2\");\x0A","\x09elLoadedSample2.innerHTML = \"CANCELLED\";\x0A","\x09elLoadedSample2.className = \"tipErrBold\";\x0A","\x09jsu_elementShow (elLoadedSample2,true,\"inline\");\x0A","}\x0A","//================================================================================================================\x0A","//OPTIONAL objOpt  of loadingDiv(objOpt):\x0A","//        szTitleHtml:       {String}: [\"\"] if != \"\" Show Title \x0A","//        bShowGif:          {Boolean}: [true] show the Loading Gif \x0A","//        szUrlGif:      {String Url}: [null] if different from null use this URL instead of CSS default \x0A","//        bShowElapsedSec:   {Boolean} [false] if true show a Footer with Elapsed Time (sec) \x0A","//        bResetElapsedSec:  {Boolean} [false] if true reset timer \x0A","//        szMsgHtml:     {String} if different from null, show this Msg (HTML) instead of Default \x0A","//        iDivWidth:         {Number} if different from null, set this Div Width instead of using DEfault Width (CSS) \x0A","//        iGifWidth:         {Number} if different from null, set this Gif Width instead of using DEfault Width (CSS) \x0A","//        bShowCancel:       {Boolean}: [false] show the Cancel Btn \x0A","//        szBackgroundColor: {String} Div BackgroundColor, if different from null or \"\", \x0A","//        fnCancelCallback:  {function} [null]  called when Cancel button is clicked \x0A","//================================================================================================================","// Prepare the Custom Layout: an HTML Table with Image, Gif, Message\x0A","var szJsuMsg=\"...\" \x0A","// 1) Show LoadingDiv with Options to show a Custom Layout\x0A","loadingDivShow ({\x0A","\x09szTitleHtml: \"JSU\",\x0A","  szMsgHtml: szJsuMsg,  // Custom Msg with the Table with Image, Gif, Message\x0A","  bShowElapsedSec: true,\x0A","  bShowGif: false, // hide default Gif because we have everything in szMsgHtml\x0A","  bShowCancel: true,\x0A","  iDivWidth: 430,\x0A","  szBackgroundColor : \"gray\", // backgound color of the part of the Div different from szMsgHtml\x0A","  fnCancelCallback: loading3CancelCallback \x0A","});  \x0A","// 1) Show LoadingDiv with Options to show First State: Search\x0A","  szMsgHtml: \"<b>[Action 1/3]</b><BR/>Searching Files...\",  \x0A","  szUrlGif: \".../Search.gif\",\x0A","  ...\x0A","// Execute the \"State1 Operation\" \x0A","// 2) State1 is completed - Now we Show LoadingDiv with Options to show State2: Search\x0A","  szMsgHtml: \"<b>[Action 2/3]</b><BR/>Printing Files...\",  \x0A","  szUrlGif: \".../Print.gif\",\x0A","  bResetElapsedSec: false; // DO NOT Reset Elapsed sec (because we continue from previous state)\x0A","// Execute the \"State2 Operation\" \x0A","// 3) State2 is completed - Now we Show LoadingDiv with Options to show State3: SendEmail\x0A","  szMsgHtml: \"<b>[Action 2/3]</b><BR/>Sending Emails...\",  \x0A","  szUrlGif: \".../SendEmail.gif\",\x0A","// Execute the \"State3 Operation\" \x0A","//4) Now  we have finished All the 3 operations. So We Finally Hide LoadingDiv\x0A","","JS Source Code - CUSTOM LoadingDiv Sample: "];var JSLOG_LEV=15;var PATH_LOADING_GIF=_$_65f3[0];var PATH_SAMPLES_GIF=_$_65f3[1];var TMO_LOADING3_JSU_SEC=10000;var TMO_LOADING3_3STATE_SEC=3000;var tmoLoading1=null,tmoLoading2=null,tmoLoading3=null;var state=0;function jsu_loaded(){initSampleCmn();populateDuration();populateUrlGif();try{getElementById2(_$_65f3[3])[_$_65f3[2]]= _$_65f3[4];getElementById2(_$_65f3[5])[_$_65f3[2]]= _$_65f3[6]}catch(e){;};loadingShow(false)}function populateDuration(){var cd=[[_$_65f3[7],_$_65f3[8]],[_$_65f3[9],_$_65f3[10]]];var cc=[[_$_65f3[8],_$_65f3[11]],[_$_65f3[10],_$_65f3[12]],[_$_65f3[13],_$_65f3[14]]];for(var o=0;o< cd[_$_65f3[15]];o++){var ce=cd[o];selectPopulate(getElementById2(ce[0]),cc,ce[1])}}function populateUrlGif(){var cn=[[PATH_LOADING_GIF+ _$_65f3[16],_$_65f3[17]],[PATH_LOADING_GIF+ _$_65f3[18],_$_65f3[19]],[PATH_LOADING_GIF+ _$_65f3[20],_$_65f3[21]],[PATH_LOADING_GIF+ _$_65f3[22],_$_65f3[23]],[PATH_LOADING_GIF+ _$_65f3[24],_$_65f3[25]],[PATH_LOADING_GIF+ _$_65f3[26],_$_65f3[27]],[PATH_LOADING_GIF+ _$_65f3[28],_$_65f3[29]],[PATH_LOADING_GIF+ _$_65f3[30],_$_65f3[31]]];selectPopulate(getElementById2(_$_65f3[32]),cn,PATH_LOADING_GIF+ _$_65f3[20])}function onclickLoading1(){tmoLoading1= setTimeout(tmoElapsedLoading1,1000* selectGetSelVal(getElementById2(_$_65f3[7])));loadingDivShow()}function tmoElapsedLoading1(){clearTimeout(tmoLoading1);loadingDivHide();jsu_elementShow(getElementById2(_$_65f3[33]),true)}function onclickLoading2(){tmoLoading2= setTimeout(tmoElapsedLoading2,1000* selectGetSelVal(getElementById2(_$_65f3[9],true)));loadingDivShow({szTitleHtml:getElementById2(_$_65f3[3])[_$_65f3[2]],szMsgHtml:getElementById2(_$_65f3[5])[_$_65f3[2]],bShowElapsedSec:selectGetSelVal(getElementById2(_$_65f3[34]))== _$_65f3[35],bShowCancel:selectGetSelVal(getElementById2(_$_65f3[36]))== _$_65f3[35],iDivWidth:selectGetSelVal(getElementById2(_$_65f3[37])),szUrlGif:selectGetSelVal(getElementById2(_$_65f3[32])),fnCancelCallback:loading2CancelCallback})}function tmoElapsedLoading2(){clearTimeout(tmoLoading2);loadingDivHide();var bB=getElementById2(_$_65f3[38]);bB[_$_65f3[39]]= _$_65f3[40];bB[_$_65f3[41]]= _$_65f3[42];elementShow(bB,true,_$_65f3[43])}function loading2CancelCallback(){clearTimeout(tmoLoading2);var bB=getElementById2(_$_65f3[38]);bB[_$_65f3[41]]= _$_65f3[44];bB[_$_65f3[39]]= _$_65f3[45];jsu_elementShow(bB,true,_$_65f3[43])}function showLoadingDivOpt(eH){var eG=JSU_LONG_URL_API_LOADING[_$_65f3[48]](_$_65f3[46],_$_65f3[47])+ _$_65f3[49];var w=_$_65f3[50]+ eG+ _$_65f3[51];TipFix(w,null,{iTipWidth:1100,iTipMaxHeight:400,szTitle:_$_65f3[52],szRefElId:eH})}function onclickLoading3(){var bI=selectGetSelVal(getElementById2(_$_65f3[53]));if(bI== _$_65f3[54]){showCustomLayout()}else {show3States()}}function showCustomLayout(){tmoLoading3= setTimeout(tmoElapsedLoading3,TMO_LOADING3_JSU_SEC);var eF=_$_65f3[55]+ _$_65f3[56]+ _$_65f3[57]+ JSU_PATH_ABOUT_IMG+ _$_65f3[58]+ _$_65f3[59]+ JSU_PATH_ABOUT_IMG+ _$_65f3[60]+ _$_65f3[61]+ _$_65f3[62]+ _$_65f3[63]+ _$_65f3[64]+ _$_65f3[65]+ PATH_LOADING_GIF+ _$_65f3[66]+ _$_65f3[67]+ _$_65f3[68]+ _$_65f3[69]+ _$_65f3[70]+ _$_65f3[71]+ _$_65f3[72]+ _$_65f3[73];loadingDivShow({szTitleHtml:_$_65f3[31],szMsgHtml:eF,bShowElapsedSec:true,bShowGif:false,bShowCancel:true,iDivWidth:500,szBackgroundColor:_$_65f3[74],fnCancelCallback:loading3CancelCallback})}function tmoElapsedLoading3(){clearTimeout(tmoLoading3);loadingDivHide();var bC=getElementById2(_$_65f3[75]);bC[_$_65f3[39]]= _$_65f3[40];bC[_$_65f3[41]]= _$_65f3[42];jsu_elementShow(bC,true,_$_65f3[43])}function loading3CancelCallback(){clearTimeout(tmoLoading3);var bC=getElementById2(_$_65f3[75]);bC[_$_65f3[41]]= _$_65f3[44];bC[_$_65f3[39]]= _$_65f3[45];jsu_elementShow(bC,true,_$_65f3[43])}function show3States(){tmoLoading3= setInterval(tmoElapsedLoading3States,TMO_LOADING3_3STATE_SEC);showLoadingDivState(1)}function showLoadingDivState(eJ){var f;var eK;var eI=(eJ== 1);state= eJ;if(eJ== 1){f= _$_65f3[76];eK= PATH_SAMPLES_GIF+ _$_65f3[77]}else {if(eJ== 2){f= _$_65f3[78];eK= PATH_SAMPLES_GIF+ _$_65f3[79]}else {if(eJ== 3){f= _$_65f3[80];eK= PATH_SAMPLES_GIF+ _$_65f3[81]}}};loadingDivShow({szTitleHtml:_$_65f3[31],szMsgHtml:f,bShowElapsedSec:true,bResetElapsedSec:eI,bShowCancel:true,iGifWidth:160,iDivWidth:350,szUrlGif:eK,fnCancelCallback:loading3CancelCallback})}function tmoElapsedLoading3States(){if(state== 1){showLoadingDivState(2)}else {if(state== 2){showLoadingDivState(3)}else {if(state== 3){tmoElapsedLoading3()}}}}var JS_LOADING1=_$_65f3[82]+ _$_65f3[83]+ _$_65f3[84]+ _$_65f3[85]+ _$_65f3[86]+ _$_65f3[87]+ _$_65f3[88]+ _$_65f3[88]+ _$_65f3[89]+ _$_65f3[90]+ _$_65f3[91];var JS_LOADING2=_$_65f3[92]+ _$_65f3[93]+ _$_65f3[94]+ _$_65f3[95]+ _$_65f3[96]+ _$_65f3[97]+ _$_65f3[98]+ _$_65f3[99]+ _$_65f3[100]+ _$_65f3[101]+ _$_65f3[87]+ _$_65f3[88]+ _$_65f3[88]+ _$_65f3[89]+ _$_65f3[90]+ _$_65f3[102]+ _$_65f3[103]+ _$_65f3[104]+ _$_65f3[105]+ _$_65f3[106]+ _$_65f3[107]+ _$_65f3[108]+ _$_65f3[109]+ _$_65f3[110]+ _$_65f3[111]+ _$_65f3[112];var JS_LOADING_OPT=_$_65f3[113]+ _$_65f3[114]+ _$_65f3[115]+ _$_65f3[116]+ _$_65f3[117]+ _$_65f3[118]+ _$_65f3[119]+ _$_65f3[120]+ _$_65f3[121]+ _$_65f3[122]+ _$_65f3[123]+ _$_65f3[124]+ _$_65f3[125]+ _$_65f3[126];var JS_LOADING3_LAYOUT=_$_65f3[127]+ _$_65f3[128]+ _$_65f3[129]+ _$_65f3[130]+ _$_65f3[131]+ _$_65f3[132]+ _$_65f3[133]+ _$_65f3[134]+ _$_65f3[135]+ _$_65f3[136]+ _$_65f3[137]+ _$_65f3[138]+ _$_65f3[139]+ _$_65f3[87]+ _$_65f3[88]+ _$_65f3[88]+ _$_65f3[89]+ _$_65f3[90]+ _$_65f3[91];var JS_LOADING3_3STATES=_$_65f3[140]+ _$_65f3[130]+ _$_65f3[141]+ _$_65f3[142]+ _$_65f3[143]+ _$_65f3[139]+ _$_65f3[144]+ _$_65f3[88]+ _$_65f3[145]+ _$_65f3[130]+ _$_65f3[146]+ _$_65f3[147]+ _$_65f3[148]+ _$_65f3[143]+ _$_65f3[139]+ _$_65f3[149]+ _$_65f3[88]+ _$_65f3[150]+ _$_65f3[130]+ _$_65f3[151]+ _$_65f3[152]+ _$_65f3[148]+ _$_65f3[143]+ _$_65f3[139]+ _$_65f3[153]+ _$_65f3[88]+ _$_65f3[154]+ _$_65f3[91];function sample3JS(a){var b=_$_65f3[155];var bI=selectGetSelVal(getElementById2(_$_65f3[53]));var ef=selectGetSelText(getElementById2(_$_65f3[53]));if(bI== _$_65f3[54]){b= JS_LOADING3_LAYOUT}else {b= JS_LOADING3_3STATES};TipFixCode(b,a,{iJSMaxHeight:300,szTitle:_$_65f3[156]+ ef})}
+// ==================================================================== CONSTANT
+// var JSLOG_LEV = 0;
+//var JSLOG_LEV = 31;
+var JSLOG_LEV = 15;
+
+var PATH_LOADING_GIF = "https://rawgit.com/FedericoLevis/images/master/loading/";
+var PATH_SAMPLES_GIF = "https://rawgit.com/FedericoLevis/images/master/samples/";
+// Dev:
+//var PATH_LOADING_GIF = "../../images/loading/";
+// var PATH_SAMPLES_GIF = "../../images/samples/";
+
+ var TMO_LOADING3_JSU_SEC = 10000;
+ var TMO_LOADING3_3STATE_SEC = 3000;
+
+//==================================================================== VARIABLE
+ var tmoLoading1 = null, tmoLoading2 = null, tmoLoading3 = null;
+ var state=0;
+ 
+//==================================================================== FUNCTION
+ 
+ 
+/**
+* Called when jsu is loaded
+*/
+function jsu_loaded(){
+  // [Optional] Init jslog with JSLOG_LEV 
+  // jslog_init(JSLOG_LEV);
+	initSampleCmn(); // manage optional PAR show_opt, only for developer
+	populateDuration();
+	populateUrlGif();
+	// Set DEfault
+	try{  // use try catch beacuse we use this file also from HTML doc
+		getElementById2("szTitleHtml").value = "Loading Title <i>Example</i>";
+		getElementById2("szMsgHtml").value = "<b>Loading could require <i>some seconds</i></b><BR/><BR/>Please Wait...";
+	}catch (e){
+		;
+	}
+	loadingShow(false);
+}
+
+
+function populateDuration(){
+	// Select and selVal
+  var arSelect =[["selectDur1","3"], ["selectDur2","5"]];
+  var arDur=	[	["3","3 sec"],["5","5 sec"],["10","10 sec"]];
+  
+  for (var i=0; i< arSelect.length; i++){
+  	var elSelect = arSelect[i];
+  	selectPopulate (getElementById2 (elSelect[0]),arDur,elSelect[1]);
+  }
+  
+  
+}
+
+function populateUrlGif(){
+	// Select and selVal
+  var arUrlGif=	[	
+              	 	[PATH_LOADING_GIF + "1ColorRing.gif","1ColorRing"],
+               	 	[PATH_LOADING_GIF + "2ColorRing.gif","2ColorRing"],
+               	 	[PATH_LOADING_GIF + "Cat.gif","Cat"],
+               	 	[PATH_LOADING_GIF + "3Wheels.gif","3Wheels"],
+               	 	[PATH_LOADING_GIF + "Disk.gif","Disk"],
+               	 	[PATH_LOADING_GIF + "FillingRing.gif","FillingRing"],
+               	 	[PATH_LOADING_GIF + "Ventilator.gif","Ventilator"],
+               	 	[PATH_LOADING_GIF + "JSU.gif","JSU"]
+  ];
+  
+	selectPopulate (getElementById2 ("szUrlGif"),arUrlGif,PATH_LOADING_GIF + "Cat.gif");
+}
+
+
+/*====================================================================
+ *  					SAMPLE_1
+ =================================================================== */
+
+/**
+ * Show loadingDiv
+ */
+function onclickLoading1() {
+  tmoLoading1 = setTimeout(tmoElapsedLoading1, 1000 * selectGetSelVal(getElementById2("selectDur1")));
+	loadingDivShow ();	
+}
+
+/**
+ * Timeout Elapsed: Hide loadingDiv
+ * 
+ */
+function tmoElapsedLoading1 () {
+	clearTimeout (tmoLoading1);
+	loadingDivHide ();	
+	jsu_elementShow (getElementById2("loadedSample1"),true);
+}
+
+
+/*====================================================================
+ *  					SAMPLE_2
+ =================================================================== */
+
+
+/**
+ * Show LoadingDiv with the selected Options
+ */
+function onclickLoading2() {
+	// Timer to simulate the Duration of Loading Operation
+  tmoLoading2 = setTimeout(tmoElapsedLoading2, 1000 * selectGetSelVal(getElementById2("selectDur2",true)));
+  // 1) Show LoadingDiv with the selected Options
+	loadingDivShow ( {
+		szTitleHtml: getElementById2("szTitleHtml").value,  
+    szMsgHtml: getElementById2("szMsgHtml").value,  
+    bShowElapsedSec: selectGetSelVal (getElementById2("bShowElapsedSec")) == "TRUE", 
+    bShowCancel: selectGetSelVal (getElementById2("bShowCancel")) == "TRUE",
+    iDivWidth: selectGetSelVal (getElementById2("iDivWidth")),
+    szUrlGif: selectGetSelVal (getElementById2("szUrlGif")),
+    fnCancelCallback: loading2CancelCallback	
+      });
+}
+
+function tmoElapsedLoading2 () {
+	clearTimeout (tmoLoading2);
+	loadingDivHide ();	
+	var elLoadedSample2 = getElementById2("loadedSample2");
+	elLoadedSample2.className = "tipGoodBold";
+	elLoadedSample2.innerHTML = "Loaded";
+	elementShow (elLoadedSample2,true,"inline");
+}
+
+/*
+ * Callback Function, called when user click Cancel
+ */
+function loading2CancelCallback(){
+	// The user has click Cancel in the LOadindDiv: we stop our Timer and Show the "CANCELLED" Labee
+	clearTimeout (tmoLoading2);
+	var elLoadedSample2 = getElementById2("loadedSample2");
+	elLoadedSample2.innerHTML = "CANCELLED";
+	elLoadedSample2.className = "tipErrBold";
+	jsu_elementShow (elLoadedSample2,true,"inline");
+}
+
+
+function showLoadingDivOpt(szRefElId){
+	var szApiUrl = JSU_LONG_URL_API_LOADING.replace('index.html','global.html') + '#loadingDivShow';
+	var szTipFrame =	'<iframe width="1250" height="650" src="' + szApiUrl + '" ></iframe>'; 
+	TipFix(szTipFrame,null,{
+		 iTipWidth: 1100,
+		 iTipMaxHeight: 400,
+		 szTitle:'loadingDivShow() API',
+		 szRefElId: szRefElId
+	 }
+	);
+	
+}
+
+/*====================================================================
+ *  					SAMPLE_3
+ =================================================================== */
+
+
+function onclickLoading3(){
+	var szType = selectGetSelVal (getElementById2("loadingType3"));
+	if (szType == "CustomLayout"){
+		showCustomLayout();
+	}else {
+		show3States();
+	}
+}
+
+
+/**
+ * Show loadingDiv with Custom Layout
+ */
+function showCustomLayout() {
+	// Timer to simulate the Duration of Loading Operation
+  tmoLoading3= setTimeout(tmoElapsedLoading3, TMO_LOADING3_JSU_SEC);
+  var szJsuMsg = '<table class="tip"  cellspacing="0" cellpadding="2" width="500px">' +
+  '  <tr > ' +
+  '   <td  align="center" class="jsuAboutTitle" > <img class="jsuAboutTitle" src="'  + JSU_PATH_ABOUT_IMG + 'jsuAboutTitle.png"/></td> ' +
+  '   <td  align="left" class="jsuAboutTitle"> <img class="jsuAboutTitle" src="'  + JSU_PATH_ABOUT_IMG + 'ComputerVelox.gif"/></td> ' +
+  '  </tr>' +
+  '  <tr><td colspan="2">' +
+  '    <table style="background-color:white;" ><tr>' +
+  '      <td id="loadingDivTdGif" align="left" width="150px">' +
+  '          <img  src="'  + PATH_LOADING_GIF + 'JSU.gif" />' +
+  '      </td>' +
+  '      <td width="250px" class="loadingDivMsg" style="font-size: 17px">' +    
+  '         <b>Loading JSU components</BR>Please wait...' +
+  '      </td> ' +
+  '    </tr></table>' +
+  '  </td></tr>' +
+  '</table>';
+  
+  // Show loadingDiv
+  loadingDivShow ({
+  		szTitleHtml: "JSU",
+      szMsgHtml: szJsuMsg,  // Custom Msg with the Table with Image, Gif, Message
+      bShowElapsedSec: true,
+      bShowGif: false, // hide default Gif because we have everything in szMsgHtml 
+      bShowCancel: true,
+      iDivWidth: 500,
+      szBackgroundColor : "gray", // backgound color of the part of the Div different from szMsgHtml 
+      fnCancelCallback: loading3CancelCallback 
+    });  
+}
+
+function tmoElapsedLoading3() {
+	clearTimeout (tmoLoading3);
+	loadingDivHide ();	
+	var elLoadedSample3 = getElementById2("loadedSample3");
+	elLoadedSample3.className = "tipGoodBold";
+	elLoadedSample3.innerHTML = "Loaded";
+	jsu_elementShow (elLoadedSample3,true,"inline");
+}
+
+
+/**
+ * LoadingDiv Cancel Callback
+ */
+function loading3CancelCallback(){
+	clearTimeout (tmoLoading3);
+	var elLoadedSample3 = getElementById2("loadedSample3");
+	elLoadedSample3.innerHTML = "CANCELLED";
+	elLoadedSample3.className = "tipErrBold";
+	jsu_elementShow (elLoadedSample3,true,"inline");
+}
+
+
+
+/**
+ * Start LoadingDiv with 3 different Loading States
+ */
+function show3States() {
+	// Timer to simulate the Duration of Loading Operation
+  tmoLoading3 = setInterval(tmoElapsedLoading3States, TMO_LOADING3_3STATE_SEC);
+  showLoadingDivState(1); 
+}
+
+
+/**
+ * Show LoadingDiv with 3 different Loading States: 1) Show First State
+ * 
+ * @param curState  {Number} 1,2,3
+ */
+function showLoadingDivState (curState){
+	var szMsg;
+	var szUrlGif;
+	var bResetElapsedSec = (curState == 1);
+	
+	state = curState;
+	if (curState == 1){
+		szMsg = "<b>[Action 1/3]</b><BR/>Searching Files...";
+		szUrlGif = PATH_SAMPLES_GIF + "Search.gif";
+	}else if (curState == 2){
+		szMsg = "<b>[Action 2/3]</b><BR/>Printing Files...";
+		szUrlGif = PATH_SAMPLES_GIF + "Print.gif";
+	}else if (curState == 3){
+		szMsg = "<b>[Action 3/3]</b><BR/>Sending Emails...";
+		szUrlGif = PATH_SAMPLES_GIF + "SendEmail.gif";
+	}
+  loadingDivShow ({
+		szTitleHtml: "JSU",
+    szMsgHtml: szMsg,
+    bShowElapsedSec: true,
+    bResetElapsedSec: bResetElapsedSec,
+    bShowCancel: true,
+    iGifWidth: 160,
+    iDivWidth: 350,
+    szUrlGif: szUrlGif,
+    fnCancelCallback: loading3CancelCallback 
+  });  
+}
+
+/**
+ * Elapsed the Tmo of Loading Sample 3: 3 States
+ */
+function tmoElapsedLoading3States () {
+	if (state == 1){
+	  showLoadingDivState(2); 
+	}else if (state == 2){
+	  showLoadingDivState(3); 
+	}else if (state == 3){
+		tmoElapsedLoading3();
+	}	
+}
+
+
+//===================================================================================================
+//  BELOW CODE is not strictly related to this JSU feature, but it is ONLY Related to JS Code 
+//===========================================================================================
+
+var JS_LOADING1= '//Only 2 JSU calls are required:\n' +  
+'//   - loadingDivShow(objOpt) : Show the LoadingDiv with optional objOpt\n' +  
+'//   - loadingDivHide()       : Hide the LoadingDiv\n\n' +  
+'// 1) We Show LoadingDiv (with default Options)\n' +
+'loadingDivShow();\n' + 
+'// Execute the "Long Loading Operation". During this Code execution the User will see only the LoadingDiv \n' + 
+'... \n' + 
+'... \n' + 
+'//Now  we have finished Executing the "Long Loading Operation"  \n' + 
+'// 2) Finally we Hide LoadingDiv\n' + 
+'loadingDivHide();'; 
+
+var JS_LOADING2= '// 1) Show LoadingDiv with the selected Options\n' +
+'loadingDivShow ( { \n' +
+'   szTitleHtml: getElementById2("szTitleHtml").value,\n' +  
+'   szMsgHtml: getElementById2("szMsgHtml").value, \n' + 
+'   bShowElapsedSec: selectGetSelVal (getElementById2("bShowElapsedSec")) == "TRUE",\n' + 
+'   bShowCancel: selectGetSelVal (getElementById2("bShowCancel")) == "TRUE",\n' +
+'   iDivWidth: selectGetSelVal (getElementById2("iDivWidth")),\n' +
+'   szUrlGif: selectGetSelVal (getElementById2("szUrlGif")),\n' +
+'   fnCancelCallback: loading2CancelCallback\n' +	
+' });\n' +
+'// Execute the "Long Loading Operation". During this Code execution the User will see only the LoadingDiv \n' + 
+'... \n' + 
+'... \n' + 
+'//Now  we have finished Executing the "Long Loading Operation"  \n' + 
+'// 2) Finally we Hide LoadingDiv\n' + 
+'loadingDivHide();\n\n' +
+' * Callback Function, called when user click Cancel\n' +
+' */\n' +
+'function loading2CancelCallback(){\n' +
+'	// The user has click Cancel in the LOadindDiv: we stop our Timer and Show the "CANCELLED" Label\n' +
+'	clearTimeout (tmoLoading2);\n' +
+'	var elLoadedSample2 = getElementById2("loadedSample2");\n' +
+'	elLoadedSample2.innerHTML = "CANCELLED";\n' +
+'	elLoadedSample2.className = "tipErrBold";\n' +
+'	jsu_elementShow (elLoadedSample2,true,"inline");\n' +
+'}\n';
+
+
+var JS_LOADING_OPT= '//================================================================================================================\n' + 
+'//OPTIONAL objOpt  of loadingDiv(objOpt):\n' +
+'//        szTitleHtml:       {String}: [""] if != "" Show Title \n' + 
+'//        bShowGif:          {Boolean}: [true] show the Loading Gif \n' + 
+'//        szUrlGif:      {String Url}: [null] if different from null use this URL instead of CSS default \n' +  
+'//        bShowElapsedSec:   {Boolean} [false] if true show a Footer with Elapsed Time (sec) \n' +
+'//        bResetElapsedSec:  {Boolean} [false] if true reset timer \n' +
+'//        szMsgHtml:     {String} if different from null, show this Msg (HTML) instead of Default \n' +
+'//        iDivWidth:         {Number} if different from null, set this Div Width instead of using DEfault Width (CSS) \n' +
+'//        iGifWidth:         {Number} if different from null, set this Gif Width instead of using DEfault Width (CSS) \n' +
+'//        bShowCancel:       {Boolean}: [false] show the Cancel Btn \n' +
+'//        szBackgroundColor: {String} Div BackgroundColor, if different from null or "", \n' + 
+'//        fnCancelCallback:  {function} [null]  called when Cancel button is clicked \n' +
+'//================================================================================================================'; 
+
+var JS_LOADING3_LAYOUT= 
+'// Prepare the Custom Layout: an HTML Table with Image, Gif, Message\n' +
+'var szJsuMsg="..." \n' + 	
+'// 1) Show LoadingDiv with Options to show a Custom Layout\n' +
+'loadingDivShow ({\n' +
+'	szTitleHtml: "JSU",\n' +
+'  szMsgHtml: szJsuMsg,  // Custom Msg with the Table with Image, Gif, Message\n' +
+'  bShowElapsedSec: true,\n' +
+'  bShowGif: false, // hide default Gif because we have everything in szMsgHtml\n' + 
+'  bShowCancel: true,\n' +
+'  iDivWidth: 430,\n' +
+'  szBackgroundColor : "gray", // backgound color of the part of the Div different from szMsgHtml\n' + 
+'  fnCancelCallback: loading3CancelCallback \n' +
+'});  \n' +
+'// Execute the "Long Loading Operation". During this Code execution the User will see only the LoadingDiv \n' + 
+'... \n' + 
+'... \n' + 
+'//Now  we have finished Executing the "Long Loading Operation"  \n' + 
+'// 2) Finally we Hide LoadingDiv\n' + 
+'loadingDivHide();'; 
+
+var JS_LOADING3_3STATES= 
+	'// 1) Show LoadingDiv with Options to show First State: Search\n' +
+	'loadingDivShow ({\n' +
+	'  szMsgHtml: "<b>[Action 1/3]</b><BR/>Searching Files...",  \n' +
+	'  szUrlGif: ".../Search.gif",\n' +
+	'  ...\n' +
+	'});  \n' +
+	'// Execute the "State1 Operation" \n' + 
+	'... \n' + 
+	'// 2) State1 is completed - Now we Show LoadingDiv with Options to show State2: Search\n' +
+	'loadingDivShow ({\n' +
+	'  szMsgHtml: "<b>[Action 2/3]</b><BR/>Printing Files...",  \n' +
+	'  szUrlGif: ".../Print.gif",\n' +
+	'  bResetElapsedSec: false; // DO NOT Reset Elapsed sec (because we continue from previous state)\n' +
+	'  ...\n' +
+	'});  \n' +
+	'// Execute the "State2 Operation" \n' + 
+	'... \n' + 
+	'// 3) State2 is completed - Now we Show LoadingDiv with Options to show State3: SendEmail\n' +
+	'loadingDivShow ({\n' +
+	'  szMsgHtml: "<b>[Action 2/3]</b><BR/>Sending Emails...",  \n' +
+	'  szUrlGif: ".../SendEmail.gif",\n' +
+	'  bResetElapsedSec: false; // DO NOT Reset Elapsed sec (because we continue from previous state)\n' +
+	'  ...\n' +
+	'});  \n' +
+	'// Execute the "State3 Operation" \n' + 
+	'... \n' + 
+	'//4) Now  we have finished All the 3 operations. So We Finally Hide LoadingDiv\n' + 
+	'loadingDivHide();'; 
+
+
+/**
+ * Show JS Code Hightlighted for Sample3
+ * @param event
+ */
+function sample3JS(event){
+  var szTip="";
+  var szType = selectGetSelVal (getElementById2("loadingType3"));
+  var szTypeText = selectGetSelText (getElementById2("loadingType3"));
+	if (szType == "CustomLayout"){
+    szTip = JS_LOADING3_LAYOUT;
+	}else {
+    szTip = JS_LOADING3_3STATES;
+	}
+  TipFixCode(szTip,event,{iJSMaxHeight: 300, szTitle:"JS Source Code - CUSTOM LoadingDiv Sample: " + szTypeText});
+  
+}
+
+

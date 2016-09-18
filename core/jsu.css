@@ -1113,7 +1113,9 @@ select.PopupChoiceSingle, select.PopupChoiceMulti
   font-size: 13px;
 } 
 
-.PopupDialog{  /* you can set desired values here if required */
+.PopupDialog{  /* The PopupDialog Container */
+  border: 6px solid gray;
+  border-style: ridge;
 }	
 
 
@@ -1133,6 +1135,9 @@ a.Popup:hover {
 
 input.PopupBtn{ /* Button OK */
   font-family: Arial;
+    cursor: pointer;
+    border: 2px solid gray;
+    border-style: ridge;
 	font-weight: bold !important;
   font-size: 14px !important;
 	min-width: 100px;
@@ -1142,6 +1147,15 @@ input.PopupBtn{ /* Button OK */
   margin-right:20px !important;
   background-color: #CACACA !important; 
 }
+
+
+input.jsuButton:hover 
+{
+    border: 2px solid #e0e0e0;
+    border-style: ridge;
+} 
+
+
 
 input.PopupBtn:hover{
   background-color: #DBDBDB !important; 

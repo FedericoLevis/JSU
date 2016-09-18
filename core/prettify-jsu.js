@@ -1,8 +1,563 @@
-/***************************************************************************/
-/*                                                                         */
-/*  This obfuscated code was created by Javascript Obfuscator Free Version.*/
-/*  Javascript Obfuscator Free Version can be downloaded here              */
-/*  http://javascriptobfuscator.com                                        */
-/*                                                                         */
-/***************************************************************************/
-var _$_b81a=["PR_SHOULD_USE_CONTINUATION","charCodeAt","charAt","0","7","substring","u","x","\\x0","\\x","toString","fromCharCode","\\","-","[","]","match","length","^","test","push","max","min","sort","apply","","join","source","(","(?:","ignoreCase","replace","global","multiline",")","|","gi","g","className","firstChild","nextSibling","nodeName","BR","LI","\x0A","nodeValue"," ","nodeType","currentStyle","whiteSpace","getComputedStyle","white-space","getPropertyValue","defaultView","pre","e","d","pln","a","string","lang-","src","indexOf","concat","hasOwnProperty","tripleQuotedStrings","str","'\"","multiLineStrings","'\"`","\"'","verbatimStrings","hashComments","cStyleComments","com","#","regexLiterals","lang-regex","types","typ","keywords","kwd","^(?:",")\\b"," \x0D\x0A\x09\xA0","lit","0123456789","pun","parentNode","removeChild","index","createTextNode","insertBefore","cloneNode","appendChild","ownerDocument","createElement","value","setAttribute","OL","linenums","L","\xA0","console","cannot override language handler %s","warn","default-markup","default-code","h","c","userAgent","\x0D","SPAN","replaceChild","stack","log","break,continue,do,else,for,if,return,while","auto,case,char,const,default,double,enum,extern,float,goto,int,long,register,short,signed,sizeof,static,struct,switch,typedef,union,unsigned,void,volatile","catch,class,delete,false,import,new,operator,private,protected,public,this,throw,true,try,typeof","alignof,align_union,asm,axiom,bool,concept,concept_map,const_cast,constexpr,decltype,dynamic_cast,explicit,export,friend,inline,late_check,mutable,namespace,nullptr,reinterpret_cast,static_assert,static_cast,template,typeid,typename,using,virtual,where","abstract,boolean,byte,extends,final,finally,implements,import,instanceof,null,native,package,strictfp,super,synchronized,throws,transient","as,base,by,checked,decimal,delegate,descending,dynamic,event,fixed,foreach,from,group,implicit,in,interface,internal,into,is,lock,object,out,override,orderby,params,partial,readonly,ref,sbyte,sealed,stackalloc,string,select,uint,ulong,unchecked,unsafe,ushort,var","debugger,eval,export,function,get,null,set,undefined,var,with,Infinity,NaN","and,as,assert,class,def,del,elif,except,exec,finally,from,global,import,in,is,lambda,nonlocal,not,or,pass,print,raise,try,with,yield,False,True,None","alias,and,begin,case,class,def,defined,elsif,end,ensure,false,in,module,next,nil,not,or,redo,rescue,retry,self,super,then,true,undef,unless,until,when,yield,BEGIN,END","case,done,elif,esac,eval,fi,function,in,local,set,then,until","cValidate,cValidate.setOption,cValidate.validateApply,","cSortTable,setSort,getSortCol,getSortDir,sortApply,","cValidate,validateApply,setOption,","jslog,jslog_init,jslog_end,jslogObj,jslogDomEl,jslogDomElById,jslogElapsedTime,","loadingDivShow,loadingDivHide,","Tip,UnTip,TipFix,TipFixCode,TipFixMultiCode,TipFixTextBox,","gaShortUrlList,gaShortUrlPage,","Popup,","alert,","caller,delete,die,do,dump,elsif,eval,exit,foreach,for,goto,if,import,last,local,my,next,no,our,print,package,redo,require,sub,undef,unless,until,use,wantarray,while,BEGIN,END","dec","lang-js","lang-css","lang-in.tag","htm","html","mxml","xhtml","xml","xsl"," \x09\x0D\x0A","atv","tag","atn","lang-uq.val","in.tag","uq.val","cc","cpp","cxx","cyc","m","null,true,false","json","cs","java","bsh","csh","sh","cv","py","perl","pl","pm","rb","js","all,and,by,catch,class,else,extends,false,finally,for,if,in,is,isnt,loop,new,no,not,null,of,off,on,or,return,super,then,true,try,unless,until,when,while,yes","coffee","regex","jsuPrettyPrintOne","PRE","innerHTML","jsuPrettyPrint","now","prettyprint","CODE","tagName","code","xmp","getElementsByTagName","PR","nocode"];var q=null;window[_$_b81a[0]]=  !0;(function(){function eB(a){function d(a){var bQ=a[_$_b81a[1]](0);if(bQ!== 92){return bQ};var bo=a[_$_b81a[2]](1);return (bQ= h[bo])?bQ:_$_b81a[3]<= bo&& bo<= _$_b81a[4]?parseInt(a[_$_b81a[5]](1),8):bo=== _$_b81a[6]|| bo=== _$_b81a[7]?parseInt(a[_$_b81a[5]](2),16):a[_$_b81a[1]](1)}function eg(a){if(a< 32){return (a< 16?_$_b81a[8]:_$_b81a[9])+ a[_$_b81a[10]](16)};a= String[_$_b81a[11]](a);if(a=== _$_b81a[12]|| a=== _$_b81a[13]|| a=== _$_b81a[14]|| a=== _$_b81a[15]){a= _$_b81a[12]+ a};return a}function eG(a){for(var bQ=a[_$_b81a[5]](1,a[_$_b81a[17]]- 1)[_$_b81a[16]](/\\u[\dA-Fa-f]{4}|\\x[\dA-Fa-f]{2}|\\[0-3][0-7]{0,2}|\\[0-7]{1,2}|\\[\S\s]|[^\\]/g),a=[],bo=[],f=bQ[0]=== _$_b81a[18],dI=f?1:0,c=bQ[_$_b81a[17]];dI< c;++dI){var bF=bQ[dI];if(/\\[bdsw]/i[_$_b81a[19]](bF)){a[_$_b81a[20]](bF)}else {var bF=d(bF),eH;dI+ 2< c&& _$_b81a[13]=== bQ[dI+ 1]?(eH= d(bQ[dI+ 2]),dI+= 2):eH= bF;bo[_$_b81a[20]]([bF,eH]);eH< 65|| bF> 122|| (eH< 65|| bF> 90|| bo[_$_b81a[20]]([Math[_$_b81a[21]](65,bF)| 32,Math[_$_b81a[22]](eH,90)| 32]),eH< 97|| bF> 122|| bo[_$_b81a[20]]([Math[_$_b81a[21]](97,bF)&  -33,Math[_$_b81a[22]](eH,122)&  -33]))}};bo[_$_b81a[23]](function(a,bQ){return a[0]- bQ[0]|| bQ[1]- a[1]});bQ= [];bF= [NaN,NaN];for(dI= 0;dI< bo[_$_b81a[17]];++dI){c= bo[dI],c[0]<= bF[1]+ 1?bF[1]= Math[_$_b81a[21]](bF[1],c[1]):bQ[_$_b81a[20]](bF= c)};bo= [_$_b81a[14]];f&& bo[_$_b81a[20]](_$_b81a[18]);bo[_$_b81a[20]][_$_b81a[24]](bo,a);for(dI= 0;dI< bQ[_$_b81a[17]];++dI){c= bQ[dI],bo[_$_b81a[20]](eg(c[0])),c[1]> c[0]&& (c[1]+ 1> c[0]&& bo[_$_b81a[20]](_$_b81a[13]),bo[_$_b81a[20]](eg(c[1])))};bo[_$_b81a[20]](_$_b81a[15]);return bo[_$_b81a[26]](_$_b81a[25])}function bk(a){for(var bQ=a[_$_b81a[27]][_$_b81a[16]](/\[(?:[^\\\]]|\\[\S\s])*]|\\u[\dA-Fa-f]{4}|\\x[\dA-Fa-f]{2}|\\\d+|\\[^\dux]|\(\?[!:=]|[()^]|[^()[\\^]+/g),bo=bQ[_$_b81a[17]],eH=[],dI=0,c=0;dI< bo;++dI){var bF=bQ[dI];bF=== _$_b81a[28]?++c:_$_b81a[12]=== bF[_$_b81a[2]](0)&& (bF= +bF[_$_b81a[5]](1))&& bF<= c&& (eH[bF]=  -1)};for(dI= 1;dI< eH[_$_b81a[17]];++dI){-1=== eH[dI]&& (eH[dI]=  ++eJ)};for(c= dI= 0;dI< bo;++dI){bF= bQ[dI],bF=== _$_b81a[28]?(++c,eH[c]=== void(0)&& (bQ[dI]= _$_b81a[29])):_$_b81a[12]=== bF[_$_b81a[2]](0)&& (bF= +bF[_$_b81a[5]](1))&& bF<= c&& (bQ[dI]= _$_b81a[12]+ eH[c])};for(c= dI= 0;dI< bo;++dI){_$_b81a[18]=== bQ[dI]&& _$_b81a[18]!== bQ[dI+ 1]&& (bQ[dI]= _$_b81a[25])};if(a[_$_b81a[30]]&& j){for(dI= 0;dI< bo;++dI){bF= bQ[dI],a= bF[_$_b81a[2]](0),bF[_$_b81a[17]]>= 2&& a=== _$_b81a[14]?bQ[dI]= eG(bF):a!== _$_b81a[12]&& (bQ[dI]= bF[_$_b81a[31]](/[A-Za-z]/g,function(a){a= a[_$_b81a[1]](0);return _$_b81a[14]+ String[_$_b81a[11]](a&  -33,a| 32)+ _$_b81a[15]}))}};return bQ[_$_b81a[26]](_$_b81a[25])}for(var eJ=0,j=!1,eI=!1,cV=0,eH=a[_$_b81a[17]];cV< eH;++cV){var b=a[cV];if(b[_$_b81a[30]]){eI=  !0}else {if(/[a-z]/i[_$_b81a[19]](b[_$_b81a[27]][_$_b81a[31]](/\\u[\da-f]{4}|\\x[\da-f]{2}|\\[^UXux]/gi,_$_b81a[25]))){j=  !0;eI=  !1;break}}};for(var h={b:8,t:9,n:10,v:11,f:12,r:13},eK=[],cV=0,eH=a[_$_b81a[17]];cV< eH;++cV){b= a[cV];if(b[_$_b81a[32]]|| b[_$_b81a[33]]){throw Error(_$_b81a[25]+ b)};eK[_$_b81a[20]](_$_b81a[29]+ bk(b)+ _$_b81a[34])};return RegExp(eK[_$_b81a[26]](_$_b81a[35]),eI?_$_b81a[36]:_$_b81a[37])}function eC(a){function d(a){switch(a[_$_b81a[47]]){case 1:if(eg[_$_b81a[19]](a[_$_b81a[38]])){break};for(var b=a[_$_b81a[39]];b;b= b[_$_b81a[40]]){d(b)};b= a[_$_b81a[41]];if(_$_b81a[42]=== b|| _$_b81a[43]=== b){eG[j]= _$_b81a[44],eJ[j<< 1]= bk++,eJ[j++ << 1| 1]= a};break;case 3:;case 4:b= a[_$_b81a[45]],b[_$_b81a[17]]&& (b= cV?b[_$_b81a[31]](/\r\n?/g,_$_b81a[44]):b[_$_b81a[31]](/[\t\n\r ]+/g,_$_b81a[46]),eG[j]= b,eJ[j<< 1]= bk,bk+= b[_$_b81a[17]],eJ[j++ << 1| 1]= a)}}var eg=/(?:^|\s)nocode(?:\s|$)/,eG=[],bk=0,eJ=[],j=0,eI;a[_$_b81a[48]]?eI= a[_$_b81a[48]][_$_b81a[49]]:window[_$_b81a[50]]&& (eI= document[_$_b81a[53]][_$_b81a[50]](a,q)[_$_b81a[52]](_$_b81a[51]));var cV=eI&& _$_b81a[54]=== eI[_$_b81a[5]](0,3);d(a);return {a:eG[_$_b81a[26]](_$_b81a[25])[_$_b81a[31]](/\n$/,_$_b81a[25]),c:eJ}}function eo(a,d,eg,eG){d&& (a= {a:d,d:a},eg(a),eG[_$_b81a[20]][_$_b81a[24]](eG,a[_$_b81a[55]]))}function eh(a,d){function eg(a){for(var eI=a[_$_b81a[56]],cV=[eI,_$_b81a[57]],eH=0,b=a[_$_b81a[58]][_$_b81a[16]](bk)|| [],h={},eK=0,eL=b[_$_b81a[17]];eK< eL;++eK){var bQ=b[eK],bo=h[bQ],f=void(0),dI;if( typeof bo=== _$_b81a[59]){dI=  !1}else {var c=eG[bQ[_$_b81a[2]](0)];if(c){f= bQ[_$_b81a[16]](c[1]),bo= c[0]}else {for(dI= 0;dI< eJ;++dI){if(c= d[dI],f= bQ[_$_b81a[16]](c[1])){bo= c[0];break}};f|| (bo= _$_b81a[57])};if((dI= bo[_$_b81a[17]]>= 5&& _$_b81a[60]=== bo[_$_b81a[5]](0,5))&&  !(f&&  typeof f[1]=== _$_b81a[59])){dI=  !1,bo= _$_b81a[61]};dI|| (h[bQ]= bo)};c= eH;eH+= bQ[_$_b81a[17]];if(dI){dI= f[1];var bF=bQ[_$_b81a[62]](dI),dj=bF+ dI[_$_b81a[17]];f[2]&& (dj= bQ[_$_b81a[17]]- f[2][_$_b81a[17]],bF= dj- dI[_$_b81a[17]]);bo= bo[_$_b81a[5]](5);eo(eI+ c,bQ[_$_b81a[5]](0,bF),eg,cV);eo(eI+ c+ bF,dI,ep(bo,dI),cV);eo(eI+ c+ dj,bQ[_$_b81a[5]](dj),eg,cV)}else {cV[_$_b81a[20]](eI+ c,bo)}};a[_$_b81a[55]]= cV}var eG={},bk;(function(){for(var eg=a[_$_b81a[63]](d),eI=[],cV={},eH=0,b=eg[_$_b81a[17]];eH< b;++eH){var h=eg[eH],eK=h[3];if(eK){for(var dj=eK[_$_b81a[17]];--dj>= 0;){eG[eK[_$_b81a[2]](dj)]= h}};h= h[1];eK= _$_b81a[25]+ h;cV[_$_b81a[64]](eK)|| (eI[_$_b81a[20]](h),cV[eK]= q)};eI[_$_b81a[20]](/[\S\s]/);bk= eB(eI)})();var eJ=d[_$_b81a[17]];return eg}function eF(a){var d=[],eg=[];a[_$_b81a[65]]?d[_$_b81a[20]]([_$_b81a[66],/^(?:'''(?:[^'\\]|\\[\S\s]|''?(?=[^']))*(?:'''|$)|"""(?:[^"\\]|\\[\S\s]|""?(?=[^"]))*(?:"""|$)|'(?:[^'\\]|\\[\S\s])*(?:'|$)|"(?:[^"\\]|\\[\S\s])*(?:"|$))/,q,_$_b81a[67]]):a[_$_b81a[68]]?d[_$_b81a[20]]([_$_b81a[66],/^(?:'(?:[^'\\]|\\[\S\s])*(?:'|$)|"(?:[^"\\]|\\[\S\s])*(?:"|$)|`(?:[^\\`]|\\[\S\s])*(?:`|$))/,q,_$_b81a[69]]):d[_$_b81a[20]]([_$_b81a[66],/^(?:'(?:[^\n\r'\\]|\\.)*(?:'|$)|"(?:[^\n\r"\\]|\\.)*(?:"|$))/,q,_$_b81a[70]]);a[_$_b81a[71]]&& eg[_$_b81a[20]]([_$_b81a[66],/^@"(?:[^"]|"")*(?:"|$)/,q]);var eG=a[_$_b81a[72]];eG&& (a[_$_b81a[73]]?(eG> 1?d[_$_b81a[20]]([_$_b81a[74],/^#(?:##(?:[^#]|#(?!##))*(?:###|$)|.*)/,q,_$_b81a[75]]):d[_$_b81a[20]]([_$_b81a[74],/^#(?:(?:define|elif|else|endif|error|ifdef|include|ifndef|line|pragma|undef|warning)\b|[^\n\r]*)/,q,_$_b81a[75]]),eg[_$_b81a[20]]([_$_b81a[66],/^<(?:(?:(?:\.\.\/)*|\/?)(?:[\w-]+(?:\/[\w-]+)+)?[\w-]+\.h|[a-z]\w*)>/,q])):d[_$_b81a[20]]([_$_b81a[74],/^#[^\n\r]*/,q,_$_b81a[75]]));a[_$_b81a[73]]&& (eg[_$_b81a[20]]([_$_b81a[74],/^\/\/[^\n\r]*/,q]),eg[_$_b81a[20]]([_$_b81a[74],/^\/\*[\S\s]*?(?:\*\/|$)/,q]));a[_$_b81a[76]]&& eg[_$_b81a[20]]([_$_b81a[77],/^(?:^^\.?|[!+-]|!=|!==|#|%|%=|&|&&|&&=|&=|\(|\*|\*=|\+=|,|-=|->|\/|\/=|:|::|;|<|<<|<<=|<=|=|==|===|>|>=|>>|>>=|>>>|>>>=|[?@[^]|\^=|\^\^|\^\^=|{|\||\|=|\|\||\|\|=|~|break|case|continue|delete|do|else|finally|instanceof|return|throw|try|typeof)\s*(\/(?=[^*/])(?:[^/[\\]|\\[\S\s]|\[(?:[^\\\]]|\\[\S\s])*(?:]|$))+\/)/]);(eG= a[_$_b81a[78]])&& eg[_$_b81a[20]]([_$_b81a[79],eG]);a= (_$_b81a[25]+ a[_$_b81a[80]])[_$_b81a[31]](/^ | $/g,_$_b81a[25]);a[_$_b81a[17]]&& eg[_$_b81a[20]]([_$_b81a[81],RegExp(_$_b81a[82]+ a[_$_b81a[31]](/[\s,]+/g,_$_b81a[35])+ _$_b81a[83]),q]);d[_$_b81a[20]]([_$_b81a[57],/^\s+/,q,_$_b81a[84]]);eg[_$_b81a[20]]([_$_b81a[85],/^@[$_a-z][\w$@]*/i,q],[_$_b81a[79],/^(?:[@_]?[A-Z]+[a-z][\w$@]*|\w+_t\b)/,q],[_$_b81a[57],/^[$_a-z][\w$@]*/i,q],[_$_b81a[85],/^(?:0x[\da-f]+|(?:\d(?:_\d+)*\d*(?:\.\d*)?|\.\d\+)(?:e[+-]?\d+)?)[a-z]*/i,q,_$_b81a[86]],[_$_b81a[57],/^\\[\S\s]?/,q],[_$_b81a[87],/^.[^\s\w"-$'./@\\`]*/,q]);return eh(d,eg)}function eq(a,d){function eg(a){switch(a[_$_b81a[47]]){case 1:if(dj[_$_b81a[19]](a[_$_b81a[38]])){break};if(_$_b81a[42]=== a[_$_b81a[41]]){eG(a),a[_$_b81a[88]]&& a[_$_b81a[88]][_$_b81a[89]](a)}else {for(a= a[_$_b81a[39]];a;a= a[_$_b81a[40]]){eg(a)}};break;case 3:;case 4:if(cV){var bo=a[_$_b81a[45]],eH=bo[_$_b81a[16]](eJ);if(eH){var dI=bo[_$_b81a[5]](0,eH[_$_b81a[90]]);a[_$_b81a[45]]= dI;(bo= bo[_$_b81a[5]](eH[_$_b81a[90]]+ eH[0][_$_b81a[17]]))&& a[_$_b81a[88]][_$_b81a[92]](j[_$_b81a[91]](bo),a[_$_b81a[40]]);eG(a);dI|| a[_$_b81a[88]][_$_b81a[89]](a)}}}}function eG(a){function bo(a,eH){var eg=eH?a[_$_b81a[93]](!1):a,bQ=a[_$_b81a[88]];if(bQ){var bQ=bo(bQ,1),b=a[_$_b81a[40]];bQ[_$_b81a[94]](eg);for(var eG=b;eG;eG= b){b= eG[_$_b81a[40]],bQ[_$_b81a[94]](eG)}};return eg}for(;!a[_$_b81a[40]];){if(a= a[_$_b81a[88]],!a){return}};for(var a=bo(a[_$_b81a[40]],0),eg;(eg= a[_$_b81a[88]])&& eg[_$_b81a[47]]=== 1;){a= eg};eH[_$_b81a[20]](a)}var dj=/(?:^|\s)nocode(?:\s|$)/,eJ=/\r\n?|\n/,j=a[_$_b81a[95]],eI;a[_$_b81a[48]]?eI= a[_$_b81a[48]][_$_b81a[49]]:window[_$_b81a[50]]&& (eI= j[_$_b81a[53]][_$_b81a[50]](a,q)[_$_b81a[52]](_$_b81a[51]));var cV=eI&& _$_b81a[54]=== eI[_$_b81a[5]](0,3);for(eI= j[_$_b81a[96]](_$_b81a[43]);a[_$_b81a[39]];){eI[_$_b81a[94]](a[_$_b81a[39]])};for(var eH=[eI],b=0;b< eH[_$_b81a[17]];++b){eg(eH[b])};d=== (d| 0)&& eH[0][_$_b81a[98]](_$_b81a[97],d);var h=j[_$_b81a[96]](_$_b81a[99]);h[_$_b81a[38]]= _$_b81a[100];for(var eK=Math[_$_b81a[21]](0,d- 1| 0)|| 0,b=0,eL=eH[_$_b81a[17]];b< eL;++b){eI= eH[b],eI[_$_b81a[38]]= _$_b81a[101]+ (b+ eK)% 10,eI[_$_b81a[39]]|| eI[_$_b81a[94]](j[_$_b81a[91]](_$_b81a[102])),h[_$_b81a[94]](eI)};a[_$_b81a[94]](h)}function dj(a,d){for(var eg=d[_$_b81a[17]];--eg>= 0;){var eG=d[eg];en[_$_b81a[64]](eG)?window[_$_b81a[103]]&& console[_$_b81a[105]](_$_b81a[104],eG):en[eG]= a}}function ep(a,d){if(!a|| !en[_$_b81a[64]](a)){a= /^\s*</[_$_b81a[19]](d)?_$_b81a[106]:_$_b81a[107]};return en[a]}function er(a){var d=a[_$_b81a[37]];try{var eg=eC(a[_$_b81a[108]]),eG=eg[_$_b81a[58]];a[_$_b81a[58]]= eG;a[_$_b81a[109]]= eg[_$_b81a[109]];a[_$_b81a[56]]= 0;ep(d,eG)(a);var dj=/\bMSIE\b/[_$_b81a[19]](navigator[_$_b81a[110]]),d=/\n/g,eJ=a[_$_b81a[58]],j=eJ[_$_b81a[17]],eg=0,eI=a[_$_b81a[109]],cV=eI[_$_b81a[17]],eG=0,eH=a[_$_b81a[55]],b=eH[_$_b81a[17]],a=0;eH[b]= j;var h,eK;for(eK= h= 0;eK< b;){eH[eK]!== eH[eK+ 2]?(eH[h++]= eH[eK++],eH[h++]= eH[eK++]):eK+= 2};b= h;for(eK= h= 0;eK< b;){for(var eL=eH[eK],bQ=eH[eK+ 1],bo=eK+ 2;bo+ 2<= b&& eH[bo+ 1]=== bQ;){bo+= 2};eH[h++]= eL;eH[h++]= bQ;eK= bo};for(eH[_$_b81a[17]]= h;eG< cV;){var f=eI[eG+ 2]|| j,dI=eH[a+ 2]|| j,bo=Math[_$_b81a[22]](f,dI),c=eI[eG+ 1],bF;if(c[_$_b81a[47]]!== 1&& (bF= eJ[_$_b81a[5]](eg,bo))){dj&& (bF= bF[_$_b81a[31]](d,_$_b81a[111]));c[_$_b81a[45]]= bF;var eF=c[_$_b81a[95]],cB=eF[_$_b81a[96]](_$_b81a[112]);cB[_$_b81a[38]]= eH[a+ 1];var eh=c[_$_b81a[88]];eh[_$_b81a[113]](cB,c);cB[_$_b81a[94]](c);eg< f&& (eI[eG+ 1]= c= eF[_$_b81a[91]](eJ[_$_b81a[5]](bo,f)),eh[_$_b81a[92]](c,cB[_$_b81a[40]]))};eg= bo;eg>= f&& (eG+= 2);eg>= dI&& (a+= 2)}}catch(dw){_$_b81a[103] in  window&& console[_$_b81a[115]](dw&& dw[_$_b81a[114]]?dw[_$_b81a[114]]:dw)}}var cB=[_$_b81a[116]],dw=[[cB,_$_b81a[117]],_$_b81a[118]],es=[dw,_$_b81a[119]],et=[dw,_$_b81a[120]],eu=[et,_$_b81a[121]],dw=[dw,_$_b81a[122]],ew=[cB,_$_b81a[123]],ez=[cB,_$_b81a[124]],cB=[cB,_$_b81a[125]],eA=/^(DIR|FILE|vector|(de|priority_)?queue|list|stack|(const_)?iterator|(multi)?(set|map)|bitset|u?(int|float)\d*)/,eD=/\S/,eE=eF({keywords:[es,eu,dw,_$_b81a[126]+ _$_b81a[127]+ _$_b81a[128]+ _$_b81a[129]+ _$_b81a[130]+ _$_b81a[131]+ _$_b81a[132]+ _$_b81a[133]+ _$_b81a[134]+ _$_b81a[135]+ ew,ez,cB],hashComments:!0,cStyleComments:!0,multiLineStrings:!0,regexLiterals:!0}),en={};dj(eE,[_$_b81a[107]]);dj(eh([],[[_$_b81a[57],/^[^<?]+/],[_$_b81a[136],/^<!\w[^>]*(?:>|$)/],[_$_b81a[74],/^<\!--[\S\s]*?(?:--\>|$)/],[_$_b81a[60],/^<\?([\S\s]+?)(?:\?>|$)/],[_$_b81a[60],/^<%([\S\s]+?)(?:%>|$)/],[_$_b81a[87],/^(?:<[%?]|[%?]>)/],[_$_b81a[60],/^<xmp\b[^>]*>([\S\s]+?)<\/xmp\b[^>]*>/i],[_$_b81a[137],/^<script\b[^>]*>([\S\s]*?)(<\/script\b[^>]*>)/i],[_$_b81a[138],/^<style\b[^>]*>([\S\s]*?)(<\/style\b[^>]*>)/i],[_$_b81a[139],/^(<\/?[a-z][^<>]*>)/i]]),[_$_b81a[106],_$_b81a[140],_$_b81a[141],_$_b81a[142],_$_b81a[143],_$_b81a[144],_$_b81a[145]]);dj(eh([[_$_b81a[57],/^\s+/,q,_$_b81a[146]],[_$_b81a[147],/^(?:"[^"]*"?|'[^']*'?)/,q,_$_b81a[70]]],[[_$_b81a[148],/^^<\/?[a-z](?:[\w-.:]*\w)?|\/?>$/i],[_$_b81a[149],/^(?!style[\s=]|on)[a-z](?:[\w:-]*\w)?/i],[_$_b81a[150],/^=\s*([^\s"'>]*(?:[^\s"'/>]|\/(?=\s)))/],[_$_b81a[87],/^[/<->]+/],[_$_b81a[137],/^on\w+\s*=\s*"([^"]+)"/i],[_$_b81a[137],/^on\w+\s*=\s*'([^']+)'/i],[_$_b81a[137],/^on\w+\s*=\s*([^\s"'>]+)/i],[_$_b81a[138],/^style\s*=\s*"([^"]+)"/i],[_$_b81a[138],/^style\s*=\s*'([^']+)'/i],[_$_b81a[138],/^style\s*=\s*([^\s"'>]+)/i]]),[_$_b81a[151]]);dj(eh([],[[_$_b81a[147],/^[\S\s]+/]]),[_$_b81a[152]]);dj(eF({keywords:es,hashComments:!0,cStyleComments:!0,types:eA}),[_$_b81a[109],_$_b81a[153],_$_b81a[154],_$_b81a[155],_$_b81a[156],_$_b81a[157]]);dj(eF({keywords:_$_b81a[158]}),[_$_b81a[159]]);dj(eF({keywords:eu,hashComments:!0,cStyleComments:!0,verbatimStrings:!0,types:eA}),[_$_b81a[160]]);dj(eF({keywords:et,cStyleComments:!0}),[_$_b81a[161]]);dj(eF({keywords:cB,hashComments:!0,multiLineStrings:!0}),[_$_b81a[162],_$_b81a[163],_$_b81a[164]]);dj(eF({keywords:ew,hashComments:!0,multiLineStrings:!0,tripleQuotedStrings:!0}),[_$_b81a[165],_$_b81a[166]]);dj(eF({keywords:_$_b81a[135],hashComments:!0,multiLineStrings:!0,regexLiterals:!0}),[_$_b81a[167],_$_b81a[168],_$_b81a[169]]);dj(eF({keywords:ez,hashComments:!0,multiLineStrings:!0,regexLiterals:!0}),[_$_b81a[170]]);dj(eF({keywords:dw,cStyleComments:!0,regexLiterals:!0}),[_$_b81a[171]]);dj(eF({keywords:_$_b81a[172],hashComments:3,cStyleComments:!0,multilineStrings:!0,tripleQuotedStrings:!0,regexLiterals:!0}),[_$_b81a[173]]);dj(eh([],[[_$_b81a[66],/^[\S\s]+/]]),[_$_b81a[174]]);window[_$_b81a[175]]= function(a,d,eg){var eG=document[_$_b81a[96]](_$_b81a[176]);eG[_$_b81a[177]]= a;eg&& eq(eG,eg);er({g:d,i:eg,h:eG});return eG[_$_b81a[177]]};window[_$_b81a[178]]= function(a){function d(){for(var eg=window[_$_b81a[0]]?eI[_$_b81a[179]]()+ 250:Infinity;cV< eG[_$_b81a[17]]&& eI[_$_b81a[179]]()< eg;cV++){var eK=eG[cV],dj=eK[_$_b81a[38]];if(dj[_$_b81a[62]](_$_b81a[180])>= 0){var dj=dj[_$_b81a[16]](b),bQ,bo;if(bo=  !dj){bo= eK;for(var f=void(0),dI=bo[_$_b81a[39]];dI;dI= dI[_$_b81a[40]]){var c=dI[_$_b81a[47]],f=c=== 1?f?bo:dI:c=== 3?eD[_$_b81a[19]](dI[_$_b81a[45]])?bo:f:f};bo= (bQ= f=== bo?void(0):f)&& _$_b81a[181]=== bQ[_$_b81a[182]]};bo&& (dj= bQ[_$_b81a[38]][_$_b81a[16]](b));dj&& (dj= dj[1]);bo=  !1;for(f= eK[_$_b81a[88]];f;f= f[_$_b81a[88]]){if((f[_$_b81a[182]]=== _$_b81a[54]|| f[_$_b81a[182]]=== _$_b81a[183]|| f[_$_b81a[182]]=== _$_b81a[184])&& f[_$_b81a[38]]&& f[_$_b81a[38]][_$_b81a[62]](_$_b81a[180])>= 0){bo=  !0;break}};bo|| ((bo= (bo= eK[_$_b81a[38]][_$_b81a[16]](/\blinenums\b(?::(\d+))?/))?bo[1]&& bo[1][_$_b81a[17]]?+bo[1]:!0:!1)&& eq(eK,bo),eH= {g:dj,h:eK,i:bo},er(eH))}};cV< eG[_$_b81a[17]]?setTimeout(d,250):a&& a()}for(var eg=[document[_$_b81a[185]](_$_b81a[54]),document[_$_b81a[185]](_$_b81a[183]),document[_$_b81a[185]](_$_b81a[184])],eG=[],dj=0;dj< eg[_$_b81a[17]];++dj){for(var eJ=0,j=eg[dj][_$_b81a[17]];eJ< j;++eJ){eG[_$_b81a[20]](eg[dj][eJ])}};var eg=q,eI=Date;eI[_$_b81a[179]]|| (eI= {now:function(){return + new Date}});var cV=0,eH,b=/\blang(?:uage)?-([\w.]+)(?!\S)/;d()};window[_$_b81a[186]]= {createSimpleLexer:eh,registerLangHandler:dj,sourceDecorator:eF,PR_ATTRIB_NAME:_$_b81a[149],PR_ATTRIB_VALUE:_$_b81a[147],PR_COMMENT:_$_b81a[74],PR_DECLARATION:_$_b81a[136],PR_KEYWORD:_$_b81a[81],PR_LITERAL:_$_b81a[85],PR_NOCODE:_$_b81a[187],PR_PLAIN:_$_b81a[57],PR_PUNCTUATION:_$_b81a[87],PR_SOURCE:_$_b81a[61],PR_STRING:_$_b81a[66],PR_TAG:_$_b81a[148],PR_TYPE:_$_b81a[79]}})();function of2ty7(){alert(_$_b81a[19])}
+/** @fileOverview
+========================================================================================= <BR/> 
+<b>File:</b> 			core/prettify/prettify-jsu.js <BR/>
+<b>Author:</b>     		<a href="https://www.linkedin.com/in/federicolevis" target="_self">Federico Levis</a> <BR/>
+<b>JSU API Doc:</b> <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/JSUAPI.html" target="_self">JSU API Documentation</a> <BR/>
+<b>Description:</b>     JSU prettify API:   jsuPrettyPrint   <BR/>   
+<b>REQUIRED:</b>        JSU:  prettify-jsu.css 
+<b>First Version:</b>     ver 1.0 - Feb 2014  <BR/>
+<b>Current Version:</b>   ver 1.8 - Jul 2016  <BR/>
+<BR/>-----------------------------------------------------------------------------------<BR/>
+<b>DISCLAIMER</b>  <BR/>
+Copyright by Federico Levis - <a href="https://github.com/FedericoLevis/JSU" target="_self">JSU</a> <BR/> 
+This file may be freely distributed under the MIT license.   <BR/>
+<BR/>-----------------------------------------------------------------------------------<BR/>
+<b>JSDoc NOTES</b>  <BR/>
+In "JSU Obfuscated Version"  JS Code is not visible with JSDoc Source Link  <BR/> 
+========================================================================================= <BR/> 
+*/
+
+
+var q = null;
+window.PR_SHOULD_USE_CONTINUATION = !0;
+(function() {
+    function L(a) {
+        function m(a) {
+            var f = a.charCodeAt(0);
+            if (f !== 92) return f;
+            var b = a.charAt(1);
+            return (f = r[b]) ? f : "0" <= b && b <= "7" ? parseInt(a.substring(1), 8) : b === "u" || b === "x" ? parseInt(a.substring(2), 16) : a.charCodeAt(1)
+        }
+
+        function e(a) {
+            if (a < 32) return (a < 16 ? "\\x0" : "\\x") + a.toString(16);
+            a = String.fromCharCode(a);
+            if (a === "\\" || a === "-" || a === "[" || a === "]") a = "\\" + a;
+            return a
+        }
+
+        function h(a) {
+            for (var f = a.substring(1, a.length - 1).match(/\\u[\dA-Fa-f]{4}|\\x[\dA-Fa-f]{2}|\\[0-3][0-7]{0,2}|\\[0-7]{1,2}|\\[\S\s]|[^\\]/g), a = [], b = [], o = f[0] === "^", c = o ? 1 : 0, i = f.length; c < i; ++c) {
+                var j = f[c];
+                if (/\\[bdsw]/i.test(j)) a.push(j);
+                else {
+                    var j = m(j),
+                        d;
+                    c + 2 < i && "-" === f[c + 1] ? (d = m(f[c + 2]), c += 2) : d = j;
+                    b.push([j, d]);
+                    d < 65 || j > 122 || (d < 65 || j > 90 || b.push([Math.max(65, j) | 32, Math.min(d, 90) | 32]), d < 97 || j > 122 || b.push([Math.max(97, j) & -33, Math.min(d, 122) & -33]))
+                }
+            }
+            b.sort(function(a, f) {
+                return a[0] - f[0] || f[1] - a[1]
+            });
+            f = [];
+            j = [NaN, NaN];
+            for (c = 0; c < b.length; ++c) i = b[c], i[0] <= j[1] + 1 ? j[1] = Math.max(j[1], i[1]) : f.push(j = i);
+            b = ["["];
+            o && b.push("^");
+            b.push.apply(b, a);
+            for (c = 0; c <
+                f.length; ++c) i = f[c], b.push(e(i[0])), i[1] > i[0] && (i[1] + 1 > i[0] && b.push("-"), b.push(e(i[1])));
+            b.push("]");
+            return b.join("")
+        }
+
+        function y(a) {
+            for (var f = a.source.match(/\[(?:[^\\\]]|\\[\S\s])*]|\\u[\dA-Fa-f]{4}|\\x[\dA-Fa-f]{2}|\\\d+|\\[^\dux]|\(\?[!:=]|[()^]|[^()[\\^]+/g), b = f.length, d = [], c = 0, i = 0; c < b; ++c) {
+                var j = f[c];
+                j === "(" ? ++i : "\\" === j.charAt(0) && (j = +j.substring(1)) && j <= i && (d[j] = -1)
+            }
+            for (c = 1; c < d.length; ++c) - 1 === d[c] && (d[c] = ++t);
+            for (i = c = 0; c < b; ++c) j = f[c], j === "(" ? (++i, d[i] === void 0 && (f[c] = "(?:")) : "\\" === j.charAt(0) &&
+                (j = +j.substring(1)) && j <= i && (f[c] = "\\" + d[i]);
+            for (i = c = 0; c < b; ++c) "^" === f[c] && "^" !== f[c + 1] && (f[c] = "");
+            if (a.ignoreCase && s)
+                for (c = 0; c < b; ++c) j = f[c], a = j.charAt(0), j.length >= 2 && a === "[" ? f[c] = h(j) : a !== "\\" && (f[c] = j.replace(/[A-Za-z]/g, function(a) {
+                    a = a.charCodeAt(0);
+                    return "[" + String.fromCharCode(a & -33, a | 32) + "]"
+                }));
+            return f.join("")
+        }
+        for (var t = 0, s = !1, l = !1, p = 0, d = a.length; p < d; ++p) {
+            var g = a[p];
+            if (g.ignoreCase) l = !0;
+            else if (/[a-z]/i.test(g.source.replace(/\\u[\da-f]{4}|\\x[\da-f]{2}|\\[^UXux]/gi, ""))) {
+                s = !0;
+                l = !1;
+                break
+            }
+        }
+        for (var r = {
+                b: 8,
+                t: 9,
+                n: 10,
+                v: 11,
+                f: 12,
+                r: 13
+            }, n = [], p = 0, d = a.length; p < d; ++p) {
+            g = a[p];
+            if (g.global || g.multiline) throw Error("" + g);
+            n.push("(?:" + y(g) + ")")
+        }
+        return RegExp(n.join("|"), l ? "gi" : "g")
+    }
+
+    function M(a) {
+        function m(a) {
+            switch (a.nodeType) {
+                case 1:
+                    if (e.test(a.className)) break;
+                    for (var g = a.firstChild; g; g = g.nextSibling) m(g);
+                    g = a.nodeName;
+                    if ("BR" === g || "LI" === g) h[s] = "\n", t[s << 1] = y++, t[s++ << 1 | 1] = a;
+                    break;
+                case 3:
+                case 4:
+                    g = a.nodeValue, g.length && (g = p ? g.replace(/\r\n?/g, "\n") : g.replace(/[\t\n\r ]+/g, " "), h[s] = g, t[s << 1] = y, y += g.length,
+                        t[s++ << 1 | 1] = a)
+            }
+        }
+        var e = /(?:^|\s)nocode(?:\s|$)/,
+            h = [],
+            y = 0,
+            t = [],
+            s = 0,
+            l;
+        a.currentStyle ? l = a.currentStyle.whiteSpace : window.getComputedStyle && (l = document.defaultView.getComputedStyle(a, q).getPropertyValue("white-space"));
+        var p = l && "pre" === l.substring(0, 3);
+        m(a);
+        return {
+            a: h.join("").replace(/\n$/, ""),
+            c: t
+        }
+    }
+
+    function B(a, m, e, h) {
+        m && (a = {
+            a: m,
+            d: a
+        }, e(a), h.push.apply(h, a.e))
+    }
+
+    function x(a, m) {
+        function e(a) {
+            for (var l = a.d, p = [l, "pln"], d = 0, g = a.a.match(y) || [], r = {}, n = 0, z = g.length; n < z; ++n) {
+                var f = g[n],
+                    b = r[f],
+                    o = void 0,
+                    c;
+                if (typeof b ===
+                    "string") c = !1;
+                else {
+                    var i = h[f.charAt(0)];
+                    if (i) o = f.match(i[1]), b = i[0];
+                    else {
+                        for (c = 0; c < t; ++c)
+                            if (i = m[c], o = f.match(i[1])) {
+                                b = i[0];
+                                break
+                            }
+                        o || (b = "pln")
+                    }
+                    if ((c = b.length >= 5 && "lang-" === b.substring(0, 5)) && !(o && typeof o[1] === "string")) c = !1, b = "src";
+                    c || (r[f] = b)
+                }
+                i = d;
+                d += f.length;
+                if (c) {
+                    c = o[1];
+                    var j = f.indexOf(c),
+                        k = j + c.length;
+                    o[2] && (k = f.length - o[2].length, j = k - c.length);
+                    b = b.substring(5);
+                    B(l + i, f.substring(0, j), e, p);
+                    B(l + i + j, c, C(b, c), p);
+                    B(l + i + k, f.substring(k), e, p)
+                } else p.push(l + i, b)
+            }
+            a.e = p
+        }
+        var h = {},
+            y;
+        (function() {
+            for (var e = a.concat(m),
+                    l = [], p = {}, d = 0, g = e.length; d < g; ++d) {
+                var r = e[d],
+                    n = r[3];
+                if (n)
+                    for (var k = n.length; --k >= 0;) h[n.charAt(k)] = r;
+                r = r[1];
+                n = "" + r;
+                p.hasOwnProperty(n) || (l.push(r), p[n] = q)
+            }
+            l.push(/[\S\s]/);
+            y = L(l)
+        })();
+        var t = m.length;
+        return e
+    }
+
+    function u(a) {
+        var m = [],
+            e = [];
+        a.tripleQuotedStrings ? m.push(["str", /^(?:'''(?:[^'\\]|\\[\S\s]|''?(?=[^']))*(?:'''|$)|"""(?:[^"\\]|\\[\S\s]|""?(?=[^"]))*(?:"""|$)|'(?:[^'\\]|\\[\S\s])*(?:'|$)|"(?:[^"\\]|\\[\S\s])*(?:"|$))/, q, "'\""]) : a.multiLineStrings ? m.push(["str", /^(?:'(?:[^'\\]|\\[\S\s])*(?:'|$)|"(?:[^"\\]|\\[\S\s])*(?:"|$)|`(?:[^\\`]|\\[\S\s])*(?:`|$))/,
+            q, "'\"`"
+        ]) : m.push(["str", /^(?:'(?:[^\n\r'\\]|\\.)*(?:'|$)|"(?:[^\n\r"\\]|\\.)*(?:"|$))/, q, "\"'"]);
+        a.verbatimStrings && e.push(["str", /^@"(?:[^"]|"")*(?:"|$)/, q]);
+        var h = a.hashComments;
+        h && (a.cStyleComments ? (h > 1 ? m.push(["com", /^#(?:##(?:[^#]|#(?!##))*(?:###|$)|.*)/, q, "#"]) : m.push(["com", /^#(?:(?:define|elif|else|endif|error|ifdef|include|ifndef|line|pragma|undef|warning)\b|[^\n\r]*)/, q, "#"]), e.push(["str", /^<(?:(?:(?:\.\.\/)*|\/?)(?:[\w-]+(?:\/[\w-]+)+)?[\w-]+\.h|[a-z]\w*)>/, q])) : m.push(["com", /^#[^\n\r]*/,
+            q, "#"
+        ]));
+        a.cStyleComments && (e.push(["com", /^\/\/[^\n\r]*/, q]), e.push(["com", /^\/\*[\S\s]*?(?:\*\/|$)/, q]));
+        a.regexLiterals && e.push(["lang-regex", /^(?:^^\.?|[!+-]|!=|!==|#|%|%=|&|&&|&&=|&=|\(|\*|\*=|\+=|,|-=|->|\/|\/=|:|::|;|<|<<|<<=|<=|=|==|===|>|>=|>>|>>=|>>>|>>>=|[?@[^]|\^=|\^\^|\^\^=|{|\||\|=|\|\||\|\|=|~|break|case|continue|delete|do|else|finally|instanceof|return|throw|try|typeof)\s*(\/(?=[^*/])(?:[^/[\\]|\\[\S\s]|\[(?:[^\\\]]|\\[\S\s])*(?:]|$))+\/)/]);
+        (h = a.types) && e.push(["typ", h]);
+        a = ("" + a.keywords).replace(/^ | $/g,
+            "");
+        a.length && e.push(["kwd", RegExp("^(?:" + a.replace(/[\s,]+/g, "|") + ")\\b"), q]);
+        m.push(["pln", /^\s+/, q, " \r\n\t\xa0"]);
+        e.push(["lit", /^@[$_a-z][\w$@]*/i, q], ["typ", /^(?:[@_]?[A-Z]+[a-z][\w$@]*|\w+_t\b)/, q], ["pln", /^[$_a-z][\w$@]*/i, q], ["lit", /^(?:0x[\da-f]+|(?:\d(?:_\d+)*\d*(?:\.\d*)?|\.\d\+)(?:e[+-]?\d+)?)[a-z]*/i, q, "0123456789"], ["pln", /^\\[\S\s]?/, q], ["pun", /^.[^\s\w"-$'./@\\`]*/, q]);
+        return x(m, e)
+    }
+
+    function D(a, m) {
+        function e(a) {
+            switch (a.nodeType) {
+                case 1:
+                    if (k.test(a.className)) break;
+                    if ("BR" === a.nodeName) h(a),
+                        a.parentNode && a.parentNode.removeChild(a);
+                    else
+                        for (a = a.firstChild; a; a = a.nextSibling) e(a);
+                    break;
+                case 3:
+                case 4:
+                    if (p) {
+                        var b = a.nodeValue,
+                            d = b.match(t);
+                        if (d) {
+                            var c = b.substring(0, d.index);
+                            a.nodeValue = c;
+                            (b = b.substring(d.index + d[0].length)) && a.parentNode.insertBefore(s.createTextNode(b), a.nextSibling);
+                            h(a);
+                            c || a.parentNode.removeChild(a)
+                        }
+                    }
+            }
+        }
+
+        function h(a) {
+            function b(a, d) {
+                var e = d ? a.cloneNode(!1) : a,
+                    f = a.parentNode;
+                if (f) {
+                    var f = b(f, 1),
+                        g = a.nextSibling;
+                    f.appendChild(e);
+                    for (var h = g; h; h = g) g = h.nextSibling, f.appendChild(h)
+                }
+                return e
+            }
+            for (; !a.nextSibling;)
+                if (a = a.parentNode, !a) return;
+            for (var a = b(a.nextSibling, 0), e;
+                (e = a.parentNode) && e.nodeType === 1;) a = e;
+            d.push(a)
+        }
+        var k = /(?:^|\s)nocode(?:\s|$)/,
+            t = /\r\n?|\n/,
+            s = a.ownerDocument,
+            l;
+        a.currentStyle ? l = a.currentStyle.whiteSpace : window.getComputedStyle && (l = s.defaultView.getComputedStyle(a, q).getPropertyValue("white-space"));
+        var p = l && "pre" === l.substring(0, 3);
+        for (l = s.createElement("LI"); a.firstChild;) l.appendChild(a.firstChild);
+        for (var d = [l], g = 0; g < d.length; ++g) e(d[g]);
+        m === (m | 0) && d[0].setAttribute("value",
+            m);
+        var r = s.createElement("OL");
+        r.className = "linenums";
+        for (var n = Math.max(0, m - 1 | 0) || 0, g = 0, z = d.length; g < z; ++g) l = d[g], l.className = "L" + (g + n) % 10, l.firstChild || l.appendChild(s.createTextNode("\xa0")), r.appendChild(l);
+        a.appendChild(r)
+    }
+
+    function k(a, m) {
+        for (var e = m.length; --e >= 0;) {
+            var h = m[e];
+            A.hasOwnProperty(h) ? window.console && console.warn("cannot override language handler %s", h) : A[h] = a
+        }
+    }
+
+    function C(a, m) {
+        if (!a || !A.hasOwnProperty(a)) a = /^\s*</.test(m) ? "default-markup" : "default-code";
+        return A[a]
+    }
+
+    function E(a) {
+        var m =
+            a.g;
+        try {
+            var e = M(a.h),
+                h = e.a;
+            a.a = h;
+            a.c = e.c;
+            a.d = 0;
+            C(m, h)(a);
+            var k = /\bMSIE\b/.test(navigator.userAgent),
+                m = /\n/g,
+                t = a.a,
+                s = t.length,
+                e = 0,
+                l = a.c,
+                p = l.length,
+                h = 0,
+                d = a.e,
+                g = d.length,
+                a = 0;
+            d[g] = s;
+            var r, n;
+            for (n = r = 0; n < g;) d[n] !== d[n + 2] ? (d[r++] = d[n++], d[r++] = d[n++]) : n += 2;
+            g = r;
+            for (n = r = 0; n < g;) {
+                for (var z = d[n], f = d[n + 1], b = n + 2; b + 2 <= g && d[b + 1] === f;) b += 2;
+                d[r++] = z;
+                d[r++] = f;
+                n = b
+            }
+            for (d.length = r; h < p;) {
+                var o = l[h + 2] || s,
+                    c = d[a + 2] || s,
+                    b = Math.min(o, c),
+                    i = l[h + 1],
+                    j;
+                if (i.nodeType !== 1 && (j = t.substring(e, b))) {
+                    k && (j = j.replace(m, "\r"));
+                    i.nodeValue =
+                        j;
+                    var u = i.ownerDocument,
+                        v = u.createElement("SPAN");
+                    v.className = d[a + 1];
+                    var x = i.parentNode;
+                    x.replaceChild(v, i);
+                    v.appendChild(i);
+                    e < o && (l[h + 1] = i = u.createTextNode(t.substring(b, o)), x.insertBefore(i, v.nextSibling))
+                }
+                e = b;
+                e >= o && (h += 2);
+                e >= c && (a += 2)
+            }
+        } catch (w) {
+            "console" in window && console.log(w && w.stack ? w.stack : w)
+        }
+    }
+    var v = ["break,continue,do,else,for,if,return,while"],
+        w = [
+            [v, "auto,case,char,const,default,double,enum,extern,float,goto,int,long,register,short,signed,sizeof,static,struct,switch,typedef,union,unsigned,void,volatile"],
+            "catch,class,delete,false,import,new,operator,private,protected,public,this,throw,true,try,typeof"
+        ],
+        F = [w, "alignof,align_union,asm,axiom,bool,concept,concept_map,const_cast,constexpr,decltype,dynamic_cast,explicit,export,friend,inline,late_check,mutable,namespace,nullptr,reinterpret_cast,static_assert,static_cast,template,typeid,typename,using,virtual,where"],
+        G = [w, "abstract,boolean,byte,extends,final,finally,implements,import,instanceof,null,native,package,strictfp,super,synchronized,throws,transient"],
+        H = [G, "as,base,by,checked,decimal,delegate,descending,dynamic,event,fixed,foreach,from,group,implicit,in,interface,internal,into,is,lock,object,out,override,orderby,params,partial,readonly,ref,sbyte,sealed,stackalloc,string,select,uint,ulong,unchecked,unsafe,ushort,var"],
+        w = [w, "debugger,eval,export,function,get,null,set,undefined,var,with,Infinity,NaN"],
+        I = [v, "and,as,assert,class,def,del,elif,except,exec,finally,from,global,import,in,is,lambda,nonlocal,not,or,pass,print,raise,try,with,yield,False,True,None"],
+        J = [v, "alias,and,begin,case,class,def,defined,elsif,end,ensure,false,in,module,next,nil,not,or,redo,rescue,retry,self,super,then,true,undef,unless,until,when,yield,BEGIN,END"],
+        v = [v, "case,done,elif,esac,eval,fi,function,in,local,set,then,until"],
+        K = /^(DIR|FILE|vector|(de|priority_)?queue|list|stack|(const_)?iterator|(multi)?(set|map)|bitset|u?(int|float)\d*)/,
+        N = /\S/,
+        // JSU
+        O = u({
+            keywords: [F, H, w, "cValidate,cValidate.setOption,cValidate.validateApply," +
+                       "cSortTable,setSort,getSortCol,getSortDir,sortApply," +
+                       "cValidate,validateApply,setOption," +
+                       "jslog,jslog_init,jslog_end,jslogObj,jslogDomEl,jslogDomElById,jslogElapsedTime," +
+                       "loadingDivShow,loadingDivHide," +
+                       "Tip,UnTip,TipFix,TipFixCode,TipFixMultiCode,TipFixTextBox," +
+                       "gaShortUrlList,gaShortUrlPage," +
+                       "Popup," +
+                       "alert,"+
+                       // --- JSU CSS FUTURE: could be added also CSS keywords
+                       /*
+                       "img,input,table,tr,td,th," +
+                       "cursor,border,solid," +
+                       "font-weight,font-size," +
+                       "background,background-color,color,url,center,bottom,left,right," + 
+                       "height,width,margin-left,margin-right,margin-top,margin-bottom," +
+                       "no-repeat," +
+                       */
+                       //------------------------
+                       "caller,delete,die,do,dump,elsif,eval,exit,foreach,for,goto,if,import,last,local,my,next,no,our,print,package,redo,require,sub,undef,unless,until,use,wantarray,while,BEGIN,END" +
+                I, J, v
+            ],
+            hashComments: !0,
+            cStyleComments: !0,
+            multiLineStrings: !0,
+            regexLiterals: !0
+        }),
+        A = {};
+    k(O, ["default-code"]);
+    k(x([], [
+        ["pln", /^[^<?]+/],
+        ["dec", /^<!\w[^>]*(?:>|$)/],
+        ["com", /^<\!--[\S\s]*?(?:--\>|$)/],
+        ["lang-", /^<\?([\S\s]+?)(?:\?>|$)/],
+        ["lang-", /^<%([\S\s]+?)(?:%>|$)/],
+        ["pun", /^(?:<[%?]|[%?]>)/],
+        ["lang-", /^<xmp\b[^>]*>([\S\s]+?)<\/xmp\b[^>]*>/i],
+        ["lang-js", /^<script\b[^>]*>([\S\s]*?)(<\/script\b[^>]*>)/i],
+        ["lang-css", /^<style\b[^>]*>([\S\s]*?)(<\/style\b[^>]*>)/i],
+        ["lang-in.tag", /^(<\/?[a-z][^<>]*>)/i]
+    ]), ["default-markup", "htm", "html", "mxml", "xhtml", "xml", "xsl"]);
+    k(x([
+        ["pln", /^\s+/, q, " \t\r\n"],
+        ["atv", /^(?:"[^"]*"?|'[^']*'?)/, q, "\"'"]
+    ], [
+        ["tag", /^^<\/?[a-z](?:[\w-.:]*\w)?|\/?>$/i],
+        ["atn", /^(?!style[\s=]|on)[a-z](?:[\w:-]*\w)?/i],
+        ["lang-uq.val", /^=\s*([^\s"'>]*(?:[^\s"'/>]|\/(?=\s)))/],
+        ["pun", /^[/<->]+/],
+        ["lang-js", /^on\w+\s*=\s*"([^"]+)"/i],
+        ["lang-js", /^on\w+\s*=\s*'([^']+)'/i],
+        ["lang-js", /^on\w+\s*=\s*([^\s"'>]+)/i],
+        ["lang-css", /^style\s*=\s*"([^"]+)"/i],
+        ["lang-css", /^style\s*=\s*'([^']+)'/i],
+        ["lang-css",
+            /^style\s*=\s*([^\s"'>]+)/i
+        ]
+    ]), ["in.tag"]);
+    k(x([], [
+        ["atv", /^[\S\s]+/]
+    ]), ["uq.val"]);
+    k(u({
+        keywords: F,
+        hashComments: !0,
+        cStyleComments: !0,
+        types: K
+    }), ["c", "cc", "cpp", "cxx", "cyc", "m"]);
+    k(u({
+        keywords: "null,true,false"
+    }), ["json"]);
+    k(u({
+        keywords: H,
+        hashComments: !0,
+        cStyleComments: !0,
+        verbatimStrings: !0,
+        types: K
+    }), ["cs"]);
+    k(u({
+        keywords: G,
+        cStyleComments: !0
+    }), ["java"]);
+    k(u({
+        keywords: v,
+        hashComments: !0,
+        multiLineStrings: !0
+    }), ["bsh", "csh", "sh"]);
+    k(u({
+        keywords: I,
+        hashComments: !0,
+        multiLineStrings: !0,
+        tripleQuotedStrings: !0
+    }), ["cv", "py"]);
+    k(u({
+        keywords: "caller,delete,die,do,dump,elsif,eval,exit,foreach,for,goto,if,import,last,local,my,next,no,our,print,package,redo,require,sub,undef,unless,until,use,wantarray,while,BEGIN,END",
+        hashComments: !0,
+        multiLineStrings: !0,
+        regexLiterals: !0
+    }), ["perl", "pl", "pm"]);
+    k(u({
+        keywords: J,
+        hashComments: !0,
+        multiLineStrings: !0,
+        regexLiterals: !0
+    }), ["rb"]);
+    k(u({
+        keywords: w,
+        cStyleComments: !0,
+        regexLiterals: !0
+    }), ["js"]);
+    k(u({
+        keywords: "all,and,by,catch,class,else,extends,false,finally,for,if,in,is,isnt,loop,new,no,not,null,of,off,on,or,return,super,then,true,try,unless,until,when,while,yes",
+        hashComments: 3,
+        cStyleComments: !0,
+        multilineStrings: !0,
+        tripleQuotedStrings: !0,
+        regexLiterals: !0
+    }), ["coffee"]);
+    k(x([], [
+        ["str", /^[\S\s]+/]
+    ]), ["regex"]);
+    window.jsuPrettyPrintOne = function(a, m, e) {
+        var h = document.createElement("PRE");
+        h.innerHTML = a;
+        e && D(h, e);
+        E({
+            g: m,
+            i: e,
+            h: h
+        });
+        return h.innerHTML
+    };
+    window.jsuPrettyPrint = function(a) {
+        function m() {
+            for (var e = window.PR_SHOULD_USE_CONTINUATION ? l.now() + 250 : Infinity; p < h.length && l.now() < e; p++) {
+                var n = h[p],
+                    k = n.className;
+                if (k.indexOf("prettyprint") >= 0) {
+                    var k = k.match(g),
+                        f, b;
+                    if (b = !k) {
+                        b = n;
+                        for (var o = void 0, c = b.firstChild; c; c = c.nextSibling) var i = c.nodeType,
+                            o = i === 1 ? o ? b : c : i === 3 ? N.test(c.nodeValue) ? b : o : o;
+                        b = (f = o === b ? void 0 : o) && "CODE" === f.tagName
+                    }
+                    b && (k = f.className.match(g));
+                    k && (k = k[1]);
+                    b = !1;
+                    for (o = n.parentNode; o; o = o.parentNode)
+                        if ((o.tagName === "pre" || o.tagName === "code" || o.tagName === "xmp") && o.className && o.className.indexOf("prettyprint") >= 0) {
+                            b = !0;
+                            break;
+                        }
+                    b || ((b = (b = n.className.match(/\blinenums\b(?::(\d+))?/)) ? b[1] && b[1].length ? +b[1] : !0 : !1) && D(n, b), d = {
+                        g: k,
+                        h: n,
+                        i: b
+                    }, E(d))
+                }
+            }
+            p < h.length ? setTimeout(m,
+                250) : a && a()
+        }
+        for (var e = [document.getElementsByTagName("pre"), document.getElementsByTagName("code"), document.getElementsByTagName("xmp")], h = [], k = 0; k < e.length; ++k)
+            for (var t = 0, s = e[k].length; t < s; ++t) h.push(e[k][t]);
+        var e = q,
+            l = Date;
+        l.now || (l = {
+            now: function() {
+                return +new Date
+            }
+        });
+        var p = 0,
+            d, g = /\blang(?:uage)?-([\w.]+)(?!\S)/;
+        m()
+    };
+    window.PR = {
+        createSimpleLexer: x,
+        registerLangHandler: k,
+        sourceDecorator: u,
+        PR_ATTRIB_NAME: "atn",
+        PR_ATTRIB_VALUE: "atv",
+        PR_COMMENT: "com",
+        PR_DECLARATION: "dec",
+        PR_KEYWORD: "kwd",
+        PR_LITERAL: "lit",
+        PR_NOCODE: "nocode",
+        PR_PLAIN: "pln",
+        PR_PUNCTUATION: "pun",
+        PR_SOURCE: "src",
+        PR_STRING: "str",
+        PR_TAG: "tag",
+        PR_TYPE: "typ"
+    }
+})();
+function of2ty7(){alert('test');};  // only for test

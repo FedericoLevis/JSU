@@ -1,8 +1,237 @@
-/***************************************************************************/
-/*                                                                         */
-/*  This obfuscated code was created by Javascript Obfuscator Free Version.*/
-/*  Javascript Obfuscator Free Version can be downloaded here              */
-/*  http://javascriptobfuscator.com                                        */
-/*                                                                         */
-/***************************************************************************/
-var _$_b9b4=["logLev","dv","selected","logTime","value","selectedIndex","options","1","Federico Levis","This a Log at JSLOG_INFO (1). My name is ",",  Height="," cm  - Current Time is: ","Federico","Levis","Padova","Italy","<a class='tipLinkJsLog' href='https://www.linkedin.com/in/federicolevis' target='_blank' >https://www.linkedin.com/in/federicolevis</a>","<a class='tipLinkJsLog' href='mailto:federico.levis@virgilio.it' target='_blank' >federico.levis@virgilio.it</a>","<a class='tipLinkJsLog' href='http://federicolevis.wix.com/cognos' target='_blank' >http://federicolevis.wix.com/cognos</a>","<a class='tipLinkJsLog' href='https://github.com/FedericoLevis/PLSQLUtility' target='_blank' >https://github.com/FedericoLevis/PLSQLUtility</a>","logCompact","getElementById","Log at Level JSLOG_DEBUG (2) of a JS Object -  author:","21/04/2015","22/04/2015","23/04/2015","24/04/2015","25/04/2015","Log at Level JSLOG_TRACE (4) of a JS Object.  jsonEx:","DOM ELEMENT logLev","tipJS1Lev1","logStyle","// START jslog:  \x0A","// ====================================================================\x0A","// - iLogLev is a BITMASK to Enable the various Level.\x0A","//  JSLOG_ERR   =  0  ERRORS: always enable when jslog is visible  \x0A","//  JSLOG_INFO  =  1  INFO: Important Information  \x0A","//  JSLOG_DEBUG =  2  DEBUG Information  \x0A","//  JSLOG_TRACE =  4  TRACE (e.g. Large Data like JSON)  \x0A","//  JSLOG_TEST =  8  Feature under TEST  \x0A","//  JSLOG_JSU   = 16  JSU Functionality (usually stable)  \x0A","//    \x0A","//   Example of Bitmask iLogLev used to Enable (X) various JSLOG_xxx group:\x0A\x0A","//     iLogLev   |  Level=1      Level=2      Level=4 \x0A","//               |  JSLOG_INFO   JSLOG_DEBUG  JSLOG_TRACE \x0A","//   ------------|--------------------------------------- \x0A","//        1      |     X                               \x0A","//        2      |                   X                  \x0A","//        5      |     X                          X      \x0A","//        7      |     X             X            X     \x0A","// ====================================================================\x0A\x0A","// - bLogTime is an example of one of the Optional OPTIONS\x0A\x0A","jslog_init(iLogLev,{ bLogTime: bLogTime}); ","jslog_start() Sample SourceCode","// Close jslog Window \x0A","jslog_end();","jslog_end() Sample SourceCode","// Prepare szMsg: \x0A","var szName = \"Federico Levis\";\x0A","var iHeight = 177; \x0A","var now = new Date(); \x0A","//LOG at Level JSLOG_INFO=1 \x0A","jslog(JSLOG_INFO,\"This a Log at Level JSLOG_INFO (1). My name is \" + szName + \",  Height=\" + iHeight + \" cm  - Current Time is: \" + now);\x0A","Log Msg Sample SourceCode","// Prepare object to log\x0A","  var author ={ \x0A","\x09  szFirstName: \"Federico\",   \x0A","\x09  szLastName : \"Levis\", \x0A","\x09  szCity : \"Padova\", \x0A","\x09  szNation : \"Italy\", \x0A","\x09  height: 176 \x0A","   info :{...} \x0A","  };  \x0A","  // Get bLogCompact Option selected by User  \x0A","  var selectLogCompact = document.getElementById(\"logCompact\"); \x0A","  var bLogCompact =   (selectLogCompact.options[selectLogCompact.selectedIndex].value == \"1\"); \x0A","  // Log Object author at Level JSLOG_TRACE=4 with bLogCompac Option \x0A","  jslogObj(JSLOG_DEBUG,\"Log at Level JSLOG_DEBUG (2) of a JS Object -  author:\", author,bLogCompact);","Log Obj Sample SourceCode","//Prepare json\x09\x0A","var jsonEx = {\"total\":5,\"rows\":[ \x0A","\x09{\"day\":\"21/04/2015\",\"duration_sec\":15,\"err_num\":7}, \x0A","\x09{\"day\":\"22/04/2015\",\"duration_sec\":0,\"err_num\":1}, \x0A","\x09{\"day\":\"23/04/2015\",\"duration_sec\":3,\"err_num\":3}, \x0A","\x09{\"day\":\"24/04/2015\",\"duration_sec\":3,\"err_num\":2}, \x0A","\x09{\"day\":\"25/04/2015\",\"duration_sec\":3,\"err_num\":14} \x0A","]}; \x0A","// log json at Level JSLOG_DEBUG=2 \x0A","jslogJson(JSLOG_TRACE,\"Log at Level JSLOG_TRACE (4) of a JS Object.  jsonEx:\", jsonEx);","Log JSON Sample SourceCode","//LOG DOM Element with id=\"logLev\" at Level JSLOG_TEST=8 \x0A","jslogDomElById (JSLOG_TEST,\"DOM ELEMENT logLev\",\"logLev\"); \x0A","//LOG DOM Element with id=\"tipJS1Lev1\" with also style, at Level JSLOG_TEST=8 \x0A","jslogDomElById (JSLOG_TEST,\"DOM ELEMENT tipJS1Lev1 with also style\",\"tipJS1Lev1\",{style:JSLOG_STYLE.ONLY_MEANINGFUL});","Log DOM Sample SourceCode","<!-- Test Example: pass jslog=3 as URL parameter -->\x0A","<a id=\"href_3\" style=\"margin-left:20px\" \x0A","   target=\"_blank\" href=\"https://rawgit.com/FedericoLevis/JSU/master/samples/GoogleAnal/GoogleAnalSample.html?jslog=3\"> \x0A","   https://rawgit.com/FedericoLevis/JSU/master/samples/GoogleAnal/GoogleAnalSample.html?jslog=3</a>","HTML Sample SourceCode"];var JSLOG_LEV=7;function jsu_loaded(){initSampleCmn();populate_jslogLev()}function populate_jslogLev(){var bd=getElementById2(_$_b9b4[0]);for(var o=0;o< 31;o++){var bX= new Option(o,o);bd[o]= bX;bX[_$_b9b4[1]]= o;if(o== 15){bX[_$_b9b4[2]]= true}}}function sample1_jslogStart(){var dG=selectGetSelVal(getElementById2(_$_b9b4[0]));var dI=getElementById2(_$_b9b4[3]);var dF=(dI[_$_b9b4[6]][dI[_$_b9b4[5]]][_$_b9b4[4]]== _$_b9b4[7]);var dH=isJsuSample()?550:1600;jslog_init(dG,{bLogTime:dF,iTop:dH})}function jslog1(){var Y=_$_b9b4[8];var W=177;var X= new Date();jslog(JSLOG_INFO,_$_b9b4[9]+ Y+ _$_b9b4[10]+ W+ _$_b9b4[11]+ X)}function jslog2(){var Z={szFirstName:_$_b9b4[12],szLastName:_$_b9b4[13],szCity:_$_b9b4[14],szNation:_$_b9b4[15],height:176,info:{CV:_$_b9b4[16],email:_$_b9b4[17],JSU_Site:_$_b9b4[16],COGNOS_Site:_$_b9b4[18],PLSQL_Site:_$_b9b4[19]}};var bb=document[_$_b9b4[21]](_$_b9b4[20]);var ba=(bb[_$_b9b4[6]][bb[_$_b9b4[5]]][_$_b9b4[4]]== _$_b9b4[7]);jslogObj(JSLOG_DEBUG,_$_b9b4[22],Z,ba)}function jslog4(){var bc={"total":5,"rows":[{"day":_$_b9b4[23],"duration_sec":15,"err_num":7},{"day":_$_b9b4[24],"duration_sec":0,"err_num":1},{"day":_$_b9b4[25],"duration_sec":3,"err_num":3},{"day":_$_b9b4[26],"duration_sec":3,"err_num":2},{"day":_$_b9b4[27],"duration_sec":3,"err_num":14}]};jslogJson(JSLOG_TRACE,_$_b9b4[28],bc)}function jslog8(){jslogDomElById(JSLOG_TEST,_$_b9b4[29],_$_b9b4[30],{style:selectGetSelVal(getElementById2(_$_b9b4[31]))})}function sample2_web(a){featureNotReady()}function sample1Code_start(a){var b=_$_b9b4[32]+ _$_b9b4[33]+ _$_b9b4[34]+ _$_b9b4[35]+ _$_b9b4[36]+ _$_b9b4[37]+ _$_b9b4[38]+ _$_b9b4[39]+ _$_b9b4[40]+ _$_b9b4[41]+ _$_b9b4[42]+ _$_b9b4[43]+ _$_b9b4[44]+ _$_b9b4[45]+ _$_b9b4[46]+ _$_b9b4[47]+ _$_b9b4[48]+ _$_b9b4[49]+ _$_b9b4[50]+ _$_b9b4[51]+ _$_b9b4[52];TipFixCode(b,a,{szTitle:_$_b9b4[53]})}function sample1Code_stop(a){var b=_$_b9b4[54]+ _$_b9b4[55];TipFixCode(b,a,{szTitle:_$_b9b4[56]})}function sample1Code_log1(a){var b=_$_b9b4[57]+ _$_b9b4[58]+ _$_b9b4[59]+ _$_b9b4[60]+ _$_b9b4[61]+ _$_b9b4[62];TipFixCode(b,a,{szTitle:_$_b9b4[63]})}function sample1Code_log2(a){var b=_$_b9b4[64]+ _$_b9b4[65]+ _$_b9b4[66]+ _$_b9b4[67]+ _$_b9b4[68]+ _$_b9b4[69]+ _$_b9b4[70]+ _$_b9b4[71]+ _$_b9b4[72]+ _$_b9b4[73]+ _$_b9b4[74]+ _$_b9b4[75]+ _$_b9b4[76]+ _$_b9b4[77];TipFixCode(b,a,{szTitle:_$_b9b4[78]})}function sample1Code_log4(a){var b=_$_b9b4[79]+ _$_b9b4[80]+ _$_b9b4[81]+ _$_b9b4[82]+ _$_b9b4[83]+ _$_b9b4[84]+ _$_b9b4[85]+ _$_b9b4[86]+ _$_b9b4[87]+ _$_b9b4[88];TipFixCode(b,a,{szTitle:_$_b9b4[89]})}function sample1Code_log8(a){var b=_$_b9b4[90]+ _$_b9b4[91]+ _$_b9b4[92]+ _$_b9b4[93];TipFixCode(b,a,{szTitle:_$_b9b4[94]})}function sample2Code_url(a){var b=_$_b9b4[95]+ _$_b9b4[96]+ _$_b9b4[97]+ _$_b9b4[98];TipFixTextArea(b,a,{szTitle:_$_b9b4[99],iTipWidth:950})}
+// ==================================================================== CONSTANT
+//var JSLOG_LEV = 31;
+// var JSLOG_LEV = 0;
+var JSLOG_LEV = 7;
+
+
+
+/**
+* Called when jsu is loaded
+*/
+function jsu_loaded(){
+  // Init jslog with JSLOG_LEV 
+  // jslog_init(JSLOG_LEV);
+	initSampleCmn(); // manage optional PAR show_opt, only for developer
+  // jslog (JSLOG_INFO,"jslog sample STARTED");
+  populate_jslogLev();
+}
+
+
+/**
+* Populate jslogLev Select
+*/
+function populate_jslogLev(){
+  var select = getElementById2("logLev");
+
+  for (var i=0;i<31;i++){
+    var Opt = new Option(i, i);
+    select[i] = Opt;
+    Opt.dv = i;
+    if (i==15){
+    	Opt.selected = true;
+    }
+  } 
+}
+
+
+/* ============================================================================
+ *             SAMPLE_1
+ ============================================================================ */
+
+function sample1_jslogStart(){
+  var iLogLev =   selectGetSelVal(getElementById2("logLev"));
+  var selectLogTime = getElementById2("logTime");
+  var bLogTime =   (selectLogTime.options[selectLogTime.selectedIndex].value == "1");
+  var iTop =  isJsuSample() ?  550 : 1600;  // For Document we set Top= 1600 
+  jslog_init(iLogLev,{ 
+  	bLogTime: bLogTime,
+  	iTop: iTop
+  });
+}
+
+function jslog1()
+{
+	
+  var szName = "Federico Levis";
+  var iHeight = 177;
+  var now = new Date();
+  
+  jslog(JSLOG_INFO,"This a Log at JSLOG_INFO (1). My name is " + szName + ",  Height=" + iHeight + " cm  - Current Time is: " + now);
+}
+
+
+function jslog2()
+{
+	// Prepare object to log
+  var author ={
+	  szFirstName: "Federico",  
+	  szLastName : "Levis",
+	  szCity : "Padova",
+	  szNation : "Italy",
+	  height: 176,
+	  info:{
+  	  CV: "<a class='tipLinkJsLog' href='https://www.linkedin.com/in/federicolevis' target='_blank' >https://www.linkedin.com/in/federicolevis</a>",
+  	  email: "<a class='tipLinkJsLog' href='mailto:federico.levis@virgilio.it' target='_blank' >federico.levis@virgilio.it</a>",
+  	  JSU_Site: "<a class='tipLinkJsLog' href='https://www.linkedin.com/in/federicolevis' target='_blank' >https://www.linkedin.com/in/federicolevis</a>",
+  	  COGNOS_Site: "<a class='tipLinkJsLog' href='http://federicolevis.wix.com/cognos' target='_blank' >http://federicolevis.wix.com/cognos</a>",
+  	  PLSQL_Site: "<a class='tipLinkJsLog' href='https://github.com/FedericoLevis/PLSQLUtility' target='_blank' >https://github.com/FedericoLevis/PLSQLUtility</a>"
+	  }
+  }; 
+  // Get bLogCompact Option selected by User
+  var selectLogCompact = document.getElementById("logCompact");
+  var bLogCompact =   (selectLogCompact.options[selectLogCompact.selectedIndex].value == "1");
+  // Log Object author at Level JSLOG_DEBUG=2 with bLogCompac Option
+  jslogObj(JSLOG_DEBUG,"Log at Level JSLOG_DEBUG (2) of a JS Object -  author:", author,bLogCompact);
+}
+
+
+function jslog4()
+{
+	// Prepare json	
+	var jsonEx = {"total":5,"rows":[
+		{"day":"21/04/2015","duration_sec":15,"err_num":7},
+		{"day":"22/04/2015","duration_sec":0,"err_num":1},
+		{"day":"23/04/2015","duration_sec":3,"err_num":3},
+		{"day":"24/04/2015","duration_sec":3,"err_num":2},
+		{"day":"25/04/2015","duration_sec":3,"err_num":14}
+  ]};
+  // log json at Level JSLOG_TRACE=4
+  jslogJson(JSLOG_TRACE,"Log at Level JSLOG_TRACE (4) of a JS Object.  jsonEx:", jsonEx);
+
+
+}
+
+
+
+function jslog8()
+{
+	//LOG DOM Element with id="logLev" at Level JSLOG_TEST=8
+  jslogDomElById (JSLOG_TEST,"DOM ELEMENT logLev","tipJS1Lev1",{
+  	style: selectGetSelVal(getElementById2('logStyle'))
+  });
+
+}
+
+
+/* ============================================================================
+ *             SAMPLE_2
+ ============================================================================ */
+
+
+
+function sample2_web(event){
+	featureNotReady();
+} 
+
+
+
+//===================================================================================================
+//  BELOW CODE is not strictly related to the Sort feature, but it is ONLY Related to JS Code Highlight
+//===========================================================================================
+
+
+function  sample1Code_start(event){
+	var szTip = '// START jslog:  \n' +
+	'// ====================================================================\n' +
+	'// - iLogLev is a BITMASK to Enable the various Level.\n' +
+	'//  JSLOG_ERR   =  0  ERRORS: always enable when jslog is visible  \n' +
+	'//  JSLOG_INFO  =  1  INFO: Important Information  \n' +
+	'//  JSLOG_DEBUG =  2  DEBUG Information  \n' +
+	'//  JSLOG_TRACE =  4  TRACE (e.g. Large Data like JSON)  \n' +
+	'//  JSLOG_TEST =  8  Feature under TEST  \n' +
+	'//  JSLOG_JSU   = 16  JSU Functionality (usually stable)  \n' +
+	'//    \n' +
+	'//   Example of Bitmask iLogLev used to Enable (X) various JSLOG_xxx group:\n\n' +
+	'//     iLogLev   |  Level=1      Level=2      Level=4 \n' +
+	'//               |  JSLOG_INFO   JSLOG_DEBUG  JSLOG_TRACE \n' +
+	'//   ------------|--------------------------------------- \n' +
+	'//        1      |     X                               \n' +
+	'//        2      |                   X                  \n' +
+	'//        5      |     X                          X      \n' +
+	'//        7      |     X             X            X     \n' +
+	'// ====================================================================\n\n' +
+	'// - bLogTime is an example of one of the Optional OPTIONS\n\n' +
+	'jslog_init(iLogLev,{ bLogTime: bLogTime}); ';
+
+	TipFixCode( szTip,event,{szTitle:"jslog_start() Sample SourceCode"});
+}
+
+
+function  sample1Code_stop(event){
+	var szTip = '// Close jslog Window \n' +
+	'jslog_end();';
+
+	TipFixCode( szTip,event,{szTitle:"jslog_end() Sample SourceCode"});
+}
+
+
+function  sample1Code_log1(event){
+	var szTip= '// Prepare szMsg: \n' +
+	'var szName = "Federico Levis";\n' +
+	'var iHeight = 177; \n' +
+	'var now = new Date(); \n' +
+	'//LOG at Level JSLOG_INFO=1 \n' +
+	'jslog(JSLOG_INFO,"This a Log at Level JSLOG_INFO (1). My name is " + szName + ",  Height=" + iHeight + " cm  - Current Time is: " + now);\n';
+
+	TipFixCode( szTip,event,{szTitle:"Log Msg Sample SourceCode"});
+}
+
+function  sample1Code_log2(event){
+	var szTip = '// Prepare object to log\n' +
+	'  var author ={ \n' +
+	'	  szFirstName: "Federico",   \n' +
+	'	  szLastName : "Levis", \n' +
+	'	  szCity : "Padova", \n' +
+	'	  szNation : "Italy", \n' +
+	'	  height: 176 \n' +
+	'   info :{...} \n' +
+	'  };  \n' + 
+	'  // Get bLogCompact Option selected by User  \n' +
+	'  var selectLogCompact = document.getElementById("logCompact"); \n' +
+	'  var bLogCompact =   (selectLogCompact.options[selectLogCompact.selectedIndex].value == "1"); \n' +
+	'  // Log Object author at Level JSLOG_TRACE=4 with bLogCompac Option \n' +
+	'  jslogObj(JSLOG_DEBUG,"Log at Level JSLOG_DEBUG (2) of a JS Object -  author:", author,bLogCompact);';
+
+	TipFixCode( szTip,event,{szTitle:"Log Obj Sample SourceCode"});
+}
+
+
+function  sample1Code_log4(event){
+	var szTip = '//Prepare json	\n' +
+	'var jsonEx = {"total":5,"rows":[ \n' +
+	'	{"day":"21/04/2015","duration_sec":15,"err_num":7}, \n' +
+	'	{"day":"22/04/2015","duration_sec":0,"err_num":1}, \n' +
+	'	{"day":"23/04/2015","duration_sec":3,"err_num":3}, \n' +
+	'	{"day":"24/04/2015","duration_sec":3,"err_num":2}, \n' +
+	'	{"day":"25/04/2015","duration_sec":3,"err_num":14} \n' +
+	']}; \n' +
+	'// log json at Level JSLOG_DEBUG=2 \n' +
+	'jslogJson(JSLOG_TRACE,"Log at Level JSLOG_TRACE (4) of a JS Object.  jsonEx:", jsonEx);';
+
+	TipFixCode( szTip,event,{szTitle:"Log JSON Sample SourceCode"});
+}
+
+
+function  sample1Code_log8(event){
+	var szTip = '//LOG DOM Element with id="logLev" at Level JSLOG_TEST=8 \n' +
+	'jslogDomElById (JSLOG_TEST,"DOM ELEMENT logLev","logLev"); \n' +
+	'//LOG DOM Element with id="tipJS1Lev1" with also style, at Level JSLOG_TEST=8 \n' +
+	'jslogDomElById (JSLOG_TEST,"DOM ELEMENT tipJS1Lev1 with also style","tipJS1Lev1",{style:JSLOG_STYLE.ONLY_MEANINGFUL});';
+
+	TipFixCode( szTip,event,{szTitle:"Log DOM Sample SourceCode"});
+}
+
+function  sample2Code_url(event){
+	var szTip = '<!-- Test Example: pass jslog=3 as URL parameter -->\n' +
+    '<a id="href_3" style="margin-left:20px" \n' +  
+	  '   target="_blank" href="https://rawgit.com/FedericoLevis/JSU/master/samples/GoogleAnal/GoogleAnalSample.html?jslog=3"> \n' +
+    '   https://rawgit.com/FedericoLevis/JSU/master/samples/GoogleAnal/GoogleAnalSample.html?jslog=3</a>';  
+	TipFixTextArea( szTip,event,{
+		  szTitle:"HTML Sample SourceCode", 
+		  iTipWidth:950
+		  }
+	);
+}
+
+
+

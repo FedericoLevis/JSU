@@ -9,42 +9,19 @@ var JSLOG_LEV = 0;
 * Called when jsu is loaded
 */
 function jsu_loaded(){
+	/* For sample that are NOT FREE like this one, we have to setup the State
+	 */
+	setupState(); 
   // [Optional] Init jslog with JSLOG_LEV 
   // jslog_init(JSLOG_LEV);
-  sampleInit();  
 	initSampleCmn(); // manage optional PAR show_opt, only for developer
-	// ---- Show loadingDiv Alert with BRowser is different form IE
-	var szMsg = '<table class="sampleNote" width="450px" align="left" style="border: 1px solid black;"><tr> \n' +
-	'                <td class="sampleNote" style="vertical-align:middle;"><input class="sampleNote" ></td> \n' +
-	'                <td class="tipl"> \n' +
-	'                 <ul class="sampleNote"> \n' +
-	'                  <li><label class="featSampleLimit" style="display:inline">IE Popup Feature is compatible ONLY with IE <input type="button" class="browserTipIESmall" onmouseover="jsuTipBrowserIEPopup(event);" onmouseout="UnTip(event)"/></label></li> \n' +
-	'                  <li>Current Browser IS <b>NOT IE</b>, therefore IE Popup will show <b>alert</b> instead of HTML Popup </li> \n' +
-	'                  <li>For JSU Popup with FULL Browser Compatibility see <a class="tipLink" href="javascript:showSampleJQPopup();">JQ Popup</a></li> \n' +
-	'                </ul> \n' +
-	'                </td> \n' +
-	'             </tr> \n' +
-	'             </table>';
-	
-
-	elementShow(getElementById2('noteBrowserNotIE'),!isIE());
-	if (!isIE()){
-		loadingDivShow ( {
-			szTitleHtml: "IE POPUP Browser Compatibility: ONLY IE",  
-	    szMsgHtml: szMsg,  
-	    bShowElapsedSec: true, 
-	    bShowCancel: true,
-	    iDivWidth: 700,
-	    szCancelLabel: "OK",
-	    bRecalcBestPos: false, // set false during Startup 
-	    szUrlGif: JSU_PATH_IMG + "PopupAlarm.gif"
-	  });
-		
-	}
+  sampleInit();  
+	loadingShow(false);
   
 }
 
 function sampleInit(){
+	var fn = "[PopupSample.js sampleInit()] ";
   // Populate popupType select
   var arSelectId = ["popupType1","popupType1Desc"];
   var arPopupType = [POPUP_TYPE.INFO , POPUP_TYPE.WARN , POPUP_TYPE.ERR , POPUP_TYPE.ALARM ,POPUP_TYPE.CONFIRM, 
@@ -63,35 +40,40 @@ function sampleInit(){
 
 
 /* ============================================================================
- *             Show answer question (used by SAMPLE_1)
+ *             CALLBACK (used by SAMPLE_1, SAMPLE_2)
  ============================================================================ */
 
 /**
- * Show the answer to Popup Question
+ * Callback for Question with 2 or 3 Buttons
+ * Show the answer to Question
  * @param objRet
  */
-function showAnswerQuestion(objRet){
-  var retBtn   = objRet.retBtn; 
+function callbackQuestion(objRet){
+  var Fn = "[PopupSample.js callbackQuestion] ";
+  jslogObj (JSLOG_TEST,Fn + "objRet",objRet);
+  
+  var retBtn   = objRet.retBtn  ; 
   if (retBtn   == POPUP_BTN.CONFIRM){
-    Popup(POPUP_TYPE.CONFIRM,'<label class="PopupGood">Your answer was YES</label>',  {szTitle: "GOOD ANSWER!"});
+    Popup(POPUP_TYPE.CONFIRM,'<label class="PopupGood">Your answer was YES</label>',  {szTitle: "GOOD ANSWER!", iWidth: 300});
   }else if (retBtn   == POPUP_BTN.NO){
-    Popup(POPUP_TYPE.ERR,'<label class="PopupErr">Your answer was NO</label>',  {szTitle: "WHY DON'T WOUT LIKE IT?"});
+    Popup(POPUP_TYPE.ERR,'<label class="PopupError">Your answer was NO</label>',  {szTitle: "WHY DON'T WOUT LIKE IT?", iWidth: 300});
   }else if (retBtn   == POPUP_BTN.CANCEL){
-    Popup(POPUP_TYPE.INFO,'<label class="PopupWarn">You have clicked CANCEL Button</label>');
+    Popup(POPUP_TYPE.INFO,'<label class="PopupWarning">You have clicked CANCEL Button</label>',{iWidth: 400});
   }else if (retBtn   == POPUP_BTN.CLOSE){
-    Popup(POPUP_TYPE.INFO,'You have close the Popup without any Choice');
+    Popup(POPUP_TYPE.INFO,'You have close the Window without any Choice',{iWidth: 400});
   }
 }
 
 
 /**
- * Show the answer to Popup Prompt
+ * Callback for Choice
+ * Show the answer to Choice
  * @param objRet
  */
-function showAnswerPrompt (objRet){
-  var Fn = "[PopupSample.js showAnswerPrompt] ";
+function callbackPrompt(objRet){
+  var Fn = "[PopupSample.js callbackPrompt] ";
   jslogObj (JSLOG_DEBUG,Fn + "objRet",objRet);
-  var retBtn   = objRet.retBtn; 
+  var retBtn   = objRet.retBtn  ; 
   if (retBtn   == POPUP_BTN.CONFIRM){
     Popup(POPUP_TYPE.CONFIRM,'You have inserted: <b>' + objRet.promptValue + ' </b>'); 
   }else if (retBtn   == POPUP_BTN.CANCEL){
@@ -101,7 +83,9 @@ function showAnswerPrompt (objRet){
       '  <li>Clicking the <b>X</b> on the Top Left Corner of the Window</li>' +
       '  <li>Clicking <b>ESC</b></li>' +
       '</ul><BR/>');
-  }
+}
+  
+  
 }  
 
 /**
@@ -109,25 +93,25 @@ function showAnswerPrompt (objRet){
  * Show the answer to Choice
  * @param objRet
  */
-function showAnswerChoice(objRet){
-  var Fn = "[PopupSample.js showAnswerChoice] ";
+function callbackChoice(objRet){
+  var Fn = "[PopupSample.js callbackChoice] ";
   jslogObj (JSLOG_TEST,Fn + "objRet",objRet);
   jslogObj (JSLOG_DEBUG,"objRet", objRet,true);
   // Example of objRet, if user select 2=Good and click OK
   // objRet: {
-  //   "retBtn":1,
+  //   "retBtn":"CONFIRM",
   //   "choiceValue":"2",
   //   "choiceText":"2 - Good",
   //   "arChoice":[{"value":"1","szText":"1 - Not Good","bSel":false},
   //               {"value":"2","szText":"2 - Good","bSel":true},
   //               {"value":"3","szText":"3 - Very Good","bSel":false},
   //               {"value":"4","szText":"4 - Excellent","bSel":false}]}  
-  var retBtn   = objRet.retBtn; 
+  var retBtn   = objRet.retBtn  ; 
   if (retBtn   == POPUP_BTN.CONFIRM){
     var szMsgHtml = 'You have clicked the <b>OK</b> Button and you have selected the following items:<ul type="square">' + 
       '  <li><b>ChoiceValue:</b> ' +  objRet.choiceValue+ '</li>' +
       '  <li><b>ChoiceText:</b> ' +  objRet.choiceText + '</li>' +
-      '</ul>';
+      '</ul><BR/>';
     // add the table with the detail
     szMsgHtml += '<table class="Popup" width="100%">' +
     '  <th class="PopupTitle" colspan="3">DETAILS OF YOUR SELECTION</th>' +   
@@ -159,16 +143,18 @@ function showAnswerChoice(objRet){
         '  <li>Clicking <b>ESC</b></li>' +
         '</ul><BR/>');
   }
+  
 }
 
 
 
 /* ============================================================================
- *             SAMPLE_1
+ *             SAMPLE_2
  ============================================================================ */
 
+
 /**
- * Align popupType2Desc to popupType2 selected
+ * Align popupType1Desc to popupType1 selected
  */
 function onchangeSampleType1(){
 	var Fn = "[onchangeSampleType1()] ";
@@ -188,9 +174,8 @@ function onchangeSampleType1(){
 
 
 
-
 /**
- * SAMPLE_1: IE Popup
+ * SAMPLE_2: HTML Popup
  */
 function sample1(){
   var szAlertType =  selectGetSelVal(getElementById2('popupType1'));
@@ -214,7 +199,6 @@ function sample1(){
 }
 
 function sample1Info(){
-	// Prepare the Msg to display, with whatever HTML TAG
   var szMsg = 'This is an Information with <b>some part bold</b>, <i>some part Italic</i>,...<BR/><u>This is the Line 2 that is underlined</u><BR/>' +
     '<label class="PopupGood">This is the  line 3 in bold green (to enphasize <i>Good Msg</i>)</label><BR/>' +
   '<label class="PopupWarning">This is the  line 4 with Yellow Background (to enphasize <i>Warning Msg</i>)</label><BR/>' +
@@ -231,9 +215,10 @@ function sample1Info(){
     '<li><b>POPUP_TYPE.CHOICE</b> to Choose one or more values from a List of values</li>' +
     '<li><b>POPUP_TYPE.PROMPT</b> to Prompt for a value</li>' +
     '</ul>';
-  // Show the Popup 
   Popup(POPUP_TYPE.INFO,szMsg);
 }
+
+
 
 /*
  *    @param szTitle {String} if it is different from "" or null it is set as Title into Popup, else Default is used (WARNING in this case)
@@ -249,14 +234,21 @@ function sample1Warn(szTitle){
 }
 
 function sample1Err(){
-  Popup(POPUP_TYPE.ERR,'<label class="PopupError">This is an ERROR!</label><BR/>But dont worrie it is only an example<BR/><label class="PopupGood">Everything is still working properly :o)</label>');
+  Popup(POPUP_TYPE.ERR,
+  		  '<label class="PopupError">This is an ERROR!</label><BR/>But dont worrie it is only an example<BR/><label class="PopupGood">Everything is still working properly :o)</label>',
+  		  {iWidth: 450}
+  		 );
 }
 
 
 function sample1Alarm(){
   var szMsg =  '<label class="PopupError">The CPU temperature is critically hight!!!</label>' +  
-        '<img src="' +  JSU_PATH_ABOUT_IMG +  'ComputerFire.gif" width="70" height="70"  />';
-  Popup(POPUP_TYPE.ALARM,szMsg );
+        '<img src="' +  JSU_PATH_ABOUT_IMG +  'ComputerFire.gif" width="70" height="70"  />' + 
+       '<BR/>But dont worrie, it is only an example.' ;
+  Popup(POPUP_TYPE.ALARM,
+  		szMsg,
+		  {iWidth: 450}
+  		);
 }
 
 
@@ -265,11 +257,13 @@ function sample1Alarm(){
  * Question with 2 or 3 Buttons
  */
 function sample1Question(szPopupType){
-  //1) Show Popup
-  var objRet = Popup(szPopupType,'Do you like <b>Popup API</b>?');
-  // 2) show answer to question
-  showAnswerQuestion (objRet);
-  
+  Popup(szPopupType,
+  		'Do you like <b>Popup API</b>?',
+  		{ 
+  	   iWidth: 400,
+  	   fnCallback: callbackQuestion
+  	   }
+  );
 }
 
 
@@ -320,7 +314,6 @@ function sample1Choice(){
   var Fn="[sample1Choice] ";
   var CHOICE_NUM = 20;
   
-  // Prepare szMsgHtml
   var szSel =  selectGetSelVal(getElementById2('selectChoiceMultiSel'));
   jslog (JSLOG_DEBUG, Fn + "szSel=" + szSel);
   var bChoiceMultiSel = selectGetSelVal(getElementById2('selectChoiceMultiSel')) == "TRUE";
@@ -345,22 +338,20 @@ function sample1Choice(){
   var szMsgHtml = "";
   if (bChoiceMultiSel){
     // Get the optional Size
-    var selectChoiceSize = getElementById2('selectChoiceSize');
-    var iChoiceMultiSize = parseInt(selectChoiceSize[selectChoiceSize.selectedIndex].value);
+    var iChoiceMultiSize = getElementById2('iChoiceMultiSize');
+    var iChoiceMultiSize = parseInt(iChoiceMultiSize[iChoiceMultiSize.selectedIndex].value);
     szMsgHtml = 'Example of <b>Multi Selection Choice</b> with:<ul>' + 
         '<li>' + CHOICE_NUM + ' items </li>' + 
         '<li>First 5 Items pre-selected</li>' +
-        '<li>Visible Items=' + iChoiceMultiSize +'</li></ul><BR/>';
+        '<li>Visible Items=' + iChoiceMultiSize +'</li></ul>';
   }else{
     szMsgHtml = "Example of <b>Single Selection Choice</b> with Item 10 pre-selected.<BR/><BR/>"; 
   }
-  // 1) Show Popup
   var objRet = PopupChoice (szMsgHtml,szChoiceLabel,arChoice,
-      { bChoiceMultiSel: bChoiceMultiSel,
+      {fnCallback:callbackChoice,
+       bChoiceMultiSel: bChoiceMultiSel,
        iChoiceMultiSize: iChoiceMultiSize
       });
-  // 2) Show The answer to choice: item chosen and Button clicked
-  showAnswerChoice(objRet);
 }
 
 
@@ -371,6 +362,7 @@ function onchangeChoiceMultiSel(){
   // Get the bMultiSize option selected
   var bChoiceMultiSel = selectGetSelVal(getElementById2('selectChoiceMultiSel')) == "TRUE";
   elementShow (getElementById2('divChoiceSize'),bChoiceMultiSel,'inline');
+  
     
 }
 
@@ -424,8 +416,8 @@ function showSampleChoice(){
   var iChoiceMultiSize = null;
   if (bChoiceMultiSel){
     // Get the optional Size
-    var selectChoiceSize = getElementById2('selectChoiceSize');
-    var iChoiceMultiSize = parseInt(selectChoiceSize[selectChoiceSize.selectedIndex].value);
+    var iChoiceMultiSize = getElementById2('iChoiceMultiSize');
+    var iChoiceMultiSize = parseInt(iChoiceMultiSize[iChoiceMultiSize.selectedIndex].value);
   }
   var szMsgHtml = bChoiceMultiSel ? "Example of <b>Multi Selection Choice</b> with First 5 Items pre-selected." 
                   : "Example of <b>Single Selection Choice</b> with Item 10 pre-selected."; 
@@ -454,11 +446,11 @@ function sample1Prompt(){
     szPromptValue: getElementById2 ("szPromptValue").value,
     iPromptMin:  parseInt (getElementById2("iPromptMin").value),
     iPromptMax: parseInt (getElementById2 ("iPromptMax").value),
-    iPromptWidth: parseInt(getElementById2  ("iPromptWidth").value)
+    iPromptWidth: parseInt(getElementById2  ("iPromptWidth").value),
+    fnCallback:callbackPrompt
   };  
   jslogObj (JSLOG_DEBUG,Fn + "objOpt", objOpt );
-  var objRet = Popup (POPUP_TYPE.PROMPT,szMsg,objOpt);
-  showAnswerPrompt (objRet);
+  Popup (POPUP_TYPE.PROMPT,szMsg,objOpt);
 
 }
 
@@ -477,6 +469,7 @@ function onchangeSample2(){
   
     
 }
+
 /**
  * Show Popup Info with the option set by User
  */
@@ -485,6 +478,7 @@ function sample2Layout(){
   var objOpt ={
       bShowImg: selectGetSelVal (getElementById2("bShowImg")) == "TRUE",
       bResize: selectGetSelVal (getElementById2("bResize")) == "TRUE",
+      bModal: selectGetSelVal (getElementById2("bModal")) == "TRUE",
       szTitle: getElementById2("szTitle").value,
       iWidth: selectGetSelVal (getElementById2("iWidth")) 
     };  
@@ -493,16 +487,17 @@ function sample2Layout(){
     '  <ul type="square">' +
     '   <li><b>bShowImg: </b>' +  objOpt.bShowImg +  '</li>' +
     '   <li><b>bResize: </b>' +  objOpt.bResize +  '</li>' +
+    '   <li><b>bModal: </b>' +  objOpt.bModal+  '</li>' +
     '   <li><b>iWidth: </b>' +  objOpt.iWidth+  '</li>' +
     '  </ul>';
-  Popup(POPUP_TYPE.INFO,szMsg, objOpt);
+  Popup(POPUP_TYPE.INFO,szMsg, objOpt,{iWidth:300});
 
 }
 
 
 
 /**
- * SAMPLE_3: HTML Popup
+ * SAMPLE_2: Custom JQ Popup
  */
 function sample2(){
   var szType =  selectGetSelVal(getElementById2('type2'));
@@ -522,8 +517,8 @@ function sample2(){
  * Custom Btn Confirm = "CONTINUE"  
  */
 function sample2CustomBtn1(){
-  var szMsg = '<b>1 Custom Button</b><BR/><BR/>Popup Option:<ul><li><b>szConfirmLabel</b>: "CONTINUE"</li></ul>';
-  Popup(POPUP_TYPE.ERR,szMsg,{szConfirmLabel: "CONTINUE"});
+  var szMsg = 'Example<BR><b>1 Custom Button with a different Label</b><BR/><BR/>Popup Option:<ul><li><b>szConfirmLabel</b>: "CONTINUE"</li></ul>';
+  Popup(POPUP_TYPE.INFO,szMsg,{szConfirmLabel: "CONTINUE", iWidth:400});
 }
 
 
@@ -531,40 +526,43 @@ function sample2CustomBtn1(){
  * 2 Custom Btn, change also Btn Width  
  */
 function sample2CustomBtn2(){
-  var szMsg = '<b>2 Custom Button</b><BR/><BR/>Popup Option:<ul>' +
+  var szMsg = '<b>Example<BR>2 Custom Button with different Label and Width</b><BR/><BR/>Popup Option:<ul>' +
    '<li><b>szConfirmLabel</b>: "YES I Like it!"</li>' +
    '<li><b>iConfirmWidth</b>: 200</li>' +
    '<li><b>szNoLabel</b>: "NO I don\'t LIKE IT"</li>' +
    '<li><b>iNoWidth</b>: 200</li>' +
    '</ul></BR>' +
    'Do you like <b>Popup API</b>?';
-  var objRet = Popup(POPUP_TYPE.QUESTION,szMsg,
-      {szConfirmLabel: "YES I Like it!",iConfirmWidth:200,
-       szNoLabel: "NO I don't LIKE IT",iNoWidth:200 }
-        );
-  showAnswerQuestion (objRet);
+  Popup(POPUP_TYPE.QUESTION,szMsg,
+      {fnCallback: callbackQuestion,
+       szConfirmLabel: "YES I Like it!",iConfirmWidth:160,
+       szNoLabel: "NO I don't LIKE IT",iNoWidth:160, 
+       iWidth: 450
+       }
+    );
 }
 
 /*
  * 3 Custom Btn, change also Width  
  */
 function sample2CustomBtn3(){
-  var szMsg = '<b>3 Custom Button</b><BR/><BR/>Popup Option:<ul>' +
+  var szMsg = 'Example<BR><b>3 Custom Button, each one with different Label and Width</b><BR/><BR/>Popup Option:<ul>' +
   '<li><b>szConfirmLabel</b>: "YES It is Very Interesting"</li>' +
-  '<li><b>iConfirmWidth</b>: 200</li>' +
+  '<li><b>iConfirmWidth</b>: 280</li>' +
   '<li><b>szNoLabel</b>: "NOT Very Much"</li>' +
-  '<li><b>iNoWidth</b>: 130</li>' +
+  '<li><b>iNoWidth</b>: 180</li>' +
   '<li><b>szCancelLabel</b>: "INDIFFERENT"</li>' +
-  '<li><b>iCancelWidth</b>: 130</li>' +
+  '<li><b>iCancelWidth</b>: 180</li>' +
   '</ul></BR>' +
   'Do you like <b>Popup API</b>?';
-  var objRet = Popup(POPUP_TYPE.QUESTION_3, szMsg,
-      {szConfirmLabel: "YES It is Very Interesting",iConfirmWidth:200,
-        szNoLabel: "NOT Very Much",iNoWidth:130, 
-        szCancelLabel: "INDIFFERENT",iCancelWidth:130}
+  Popup(POPUP_TYPE.QUESTION_3, szMsg,
+      {fnCallback: callbackQuestion,
+  	   iWidth: 560,
+       szConfirmLabel: "YES It is Super",iConfirmWidth:150,
+        szNoLabel: "NOT Very Much",iNoWidth:150, 
+        szCancelLabel: "INDIFFERENT",iCancelWidth:150
+        }
   );
-  showAnswerQuestion (objRet);
-  
 }
 
 
@@ -572,6 +570,20 @@ function sample2CustomBtn3(){
 /* ============================================================================
  *             SAMPLE_4
  ============================================================================ */
+
+/*
+ * Popup with a Video  
+ */
+function sample3VideoOk(){
+  // Show Popup with Video
+	var szMsg = '<iframe width="600" height="500" src="https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1" frameborder="0" allowfullscreen></iframe>'; 
+  
+	
+	Popup(POPUP_TYPE.INFO, szMsg,
+      // objOpt
+      {bShowImg:false,iWidth:650,position:{at: "top"}, szTitle: "Video Example"});
+}
+
 
 /*
  * Popup with a Video  
@@ -589,19 +601,18 @@ function sample3Video(){
  * Popup with a Embedded Page  
  */
 function sample3Page(){
-	var szMsg =	'<iframe width="1060" height="600" align="center" src="' + JSU_LONG_URL_DOWNLOAD_PAGE_FREE +'" ></iframe>';
+	var szMsg =	'<iframe width="1050" height="580" align="center" src="' + JSU_LONG_URL_DOWNLOAD_PAGE_FREE +'" ></iframe>';
   // Show Popup with Page   
   Popup(POPUP_TYPE.INFO, szMsg,
       // objOpt
       {bShowImg:false,
-  	   iWidth:1100,
-  	   iHeight: 650,
+  	   iWidth:1120,
+  	   iHeight: 690,
   	   bShowBtnSect : false,  // Do Not show Button section on the Bottom of the Popup
   	   position:{at: "top"}, 
   	   szTitle: "Popup with Embedded HTML Page"
   	  });  
 }
-
 
 
 
@@ -619,10 +630,27 @@ function sample3(){
 
 
 
+
+
+/**
+ * Align type3Desc to type3 selected
+ */
+function onchangeSampleType3(){
+	var Fn = "[onchangeSampleType3()] ";
+	
+  var szType =  selectGetSelVal(getElementById2('type3'));
+	jslog (JSLOG_DEBUG,Fn + "szAlertType=" + szType + "  select same AlertType into type3");
+	selectSelValue(getElementById2('type3Desc'), szType);
+	
+}
+
+
+
+
+
 //===================================================================================================
 //  BELOW CODE is not strictly related to the Sort feature, but it is ONLY Related to JS Code 
 //===========================================================================================
-
 
 
 
@@ -688,24 +716,26 @@ var JS1_CHOICE= '// 1) Show Popup, using whatever HTML Tag in szMsg. In this exa
 
 
 
-
-
 var JS2_OPT =  
 'function Popup(szPopupType, szMsgHtml,objOpt){ \n' +
 ' ........\n' +
 '} \n' +
 '// objOpt can be used to set OptionalParameter: \n' +
 ' /* @param objOpt    [Object]}    Optional Object to change default Option:\n' +
+' *    fnCallback:  {function}  callback function, called when Popup is closed \n' +
 ' *    szTitle:    {String}      change default Title\n' +
+' *    position: {Object}    jQuery ui position. Default {my: "center"}\n' + 
 ' *    iWidth:  {Number}      Optional PopupWidth: if it passed it is used - Else DEfault is used\n' +
+' *    iHeight:  {Number}     Optional PopupHeight: if it passed it is Set- Else is automarically calculated\n' +
 ' *    szConfirmLabel:  {String} Label of Confirm Button \n' +
 ' *    iConfirmWidth:   {Number}  Width of Confirm Button \n' +
 ' *    szNoLabel:  {String}      Label of No Button \n' +
 ' *    iNoWidth:   {Number}      Width of No Button \n' +
 ' *    szNoLabel:  {String}      Label of No Button \n' +
 ' *    iNoWidth:   {Number}      Width of No Button \n' +
-' *    bShowImg:    {Boolean}     true to show Image  (Default=false)\n' +
+' *    bShowImg:    {Boolean}     true to show Image  (Default=true)\n' +
 ' *    bResize:    {Boolean}     true to allow Resize Dialog  (Default=true)\n' +
+' *    bModal:    {Boolean}     true=modal (default)\n' +
 ' *    bCloseOnEscape: {Boolean}  Default true   \n' +
 ' *    ------------------------------------------ ONLY For POPUP_TYPE.CHOICE:\n' + 
 ' *    bChoiceMultiSel: {Boolean}  true if MultiSelect,else single select. Default false\n' +
@@ -718,32 +748,30 @@ var JS2_OPT =
 ' *    iPromptMin: {Number}   Min (MinValue for PROMPT_TYPE.NUMBER, MinLen for PROMPT_TYPE.STRING)\n' +          
 ' *    iPromptMax: {Number}   Max (MaxValue for PROMPT_TYPE.NUMBER, MaxLen for PROMPT_TYPE.STRING)';          
 
+
 var JS3_VIDEO= '// 1) Show Popup with Video \n' +
 'Popup(POPUP_TYPE.INFO, \n' +
 '   // szMsg = iframe with Video URL \n' + 
 '   //    Example: <iframe width="600" height="500" src="https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1" frameborder="0" allowfullscreen></iframe> \n' + 
 '   szMsg,\n' +
 '   // objOpt \n' +
-'   {bShowImg:false,iWidth:620, szTitle: "Video Example"}); \n';
+'   {bShowImg:false,iWidth:650,position:{at: "top"}, szTitle: "Video Example"}); \n';
+
 
 
 var JS3_PAGE= '// Prepare the HTML Msg with the Embedded Page \n' +
-	'  var szMsg =	\'<iframe width="1060" height="600" align="center"  \n' +
-	'      src="https://rawgit.com/FedericoLevis/JSU/master/samples/JSUFreeDownload.html" ></iframe>\'; \n' +
-	'  // Show Popup with Page    \n' +
-	'  Popup(POPUP_TYPE.INFO, szMsg, \n' +
-	'      // objOpt \n' +
-	'      {bShowImg:false, \n' +
-	'  	   iWidth:1100, \n' +
-	'  	   iHeight: 650, \n' +
-	'  	   bShowBtnSect : false,  // Do Not show Button section on the Bottom of the Popup \n' +
-	'  	   position:{at: "top"},  \n' +
-	'  	   szTitle: "Popup with Embedded HTML Page" \n' +
-	'  	  });\n\n';
-
-
-
-
+'  var szMsg =	\'<iframe width="1060" height="600" align="center"  \n' +
+'      src="https://rawgit.com/FedericoLevis/JSU/master/samples/JSUFreeDownload.html" ></iframe>\'; \n' +
+'  // Show Popup with Page    \n' +
+'  Popup(POPUP_TYPE.INFO, szMsg, \n' +
+'      // objOpt \n' +
+'      {bShowImg:false, \n' +
+'  	   iWidth:1100, \n' +
+'  	   iHeight: 650, \n' +
+'  	   bShowBtnSect : false,  // Do Not show Button section on the Bottom of the Popup \n' +
+'  	   position:{at: "top"},  \n' +
+'  	   szTitle: "Popup with Embedded HTML Page" \n' +
+'  	  });\n\n';
 
 
 
@@ -783,6 +811,7 @@ function sample2Code(event){
 }
 
 
+
 /**
  * Show JS Code Hightlighted for Sample4
  * @param event
@@ -803,3 +832,6 @@ function sample3Code(event){
   }
   
 }
+
+
+

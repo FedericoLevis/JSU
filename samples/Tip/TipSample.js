@@ -1,8 +1,549 @@
-/***************************************************************************/
-/*                                                                         */
-/*  This obfuscated code was created by Javascript Obfuscator Free Version.*/
-/*  Javascript Obfuscator Free Version can be downloaded here              */
-/*  http://javascriptobfuscator.com                                        */
-/*                                                                         */
-/***************************************************************************/
-var _$_f93e=["-------------------------------------------------------------------------------------------","<b>Simple Tooltip</b> with <i>HTML tags</i><br/>Tip (You can use <u>whatever HTML TAG</u>)","<table class=\"tip\" BORDER=\"2\" cellspacing=\"0\" cellpadding=\"2\" width=\"550px\">","<tr class=\"tipTitleBig\"><td>README EXAMPLE</td></tr>","<tr><td class=\"tipl\">With <b>JSU tooltip</b> you can easily implement whatever <b>Floating HTML Tip</b><BR/>","<BR/>Moreover you can also use many other advanced <b>JSU tooltip Features</b>:<ul>","<li><b>Fixed</b> Tips, with URL, GIF, ...</li>","<li>Tips with <b>Video</b></li>","<li>Tips with <b>Embedded HTML Page</b></li>","<li>Tips with <b>Code Prettified</b></li>","<li>...</li>","</ul></td></tr></table>","<div>","<table class=\"tip\" BORDER=\"2\" cellspacing=\"0\" cellpadding=\"2\" width=\"550px\" align=\"center\">"," <tr><td><img height=\"100px\" src=\"","JSUDancing.gif\" /></td></tr></table>","</div>","<table class=\"tip\" BORDER=\"2\" cellspacing=\"0\" cellpadding=\"2\" width=\"450\">","<tr><td class=\"tipl\">Open/Close <b>Fixed Tip</b>:<ul>"," <li><b>Open</b> Tip by clicking the <b>Down Arrow</b></li>"," <li><b>Close</b> Tip with <b>ESC</b>, or by clicking the <b>Up Arrow</b>, or the <b>X</b> in the TopRight of the Tip, or the Optional <b>Close</b> Button if present</li>","</ul>","You can <b>Interact with Fixed Tip using the mouse</b>. For example:<ul>","<li>Click on a URL: <a class=\"tipLink\" href=\"https://www.google.it\" target=\"_blank\">Google</a></li>","<li>Select Tip Text (Copy/paste)</li>","<li>Click on Buttons <input type=\"button\" value=\"Click Me\" onclick=\"showInfo('Hello');\">  </li>","In the Tip you can display whatever HTML object, also <b>GIF</b> <BR/>","<div align=\"center\"><img height=\"200px\" src=\"","JSUDancing.gif\" /></div>","</td></tr></table>","Fixed Tip Sample","<iframe width=\"600\" height=\"500\" src=\"https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>","Fixed Tip with a Video","<iframe width=\"1030\" height=\"600\" src=\"","\" ></iframe>","Fixed Tip containing the FREE JSU.zip Download Page","//JS Code to Sort an HTML Table with JSU cSortTable: you need only one JSU API call. \x0A","// 1) create cSortTable related to Table with id='tbl1' \x0A","var cSortTbl1 = new cSortTable('tbl1', \x0A"," //Describe how to Sort the Table Columns \x0A","  [{col: 'Country'},  // Default type: SORT_TYPE.STRING \x0A","   {col: 'Name'},  // Default type: SORT_TYPE.STRING \x0A","   // For Date we set the FMT_DATETIME_TBL1 = 'NNN dd, yyyy HH:mm:ss' \x0A","   {col:'Date', type: SORT_TYPE.DATETIME, fmt: FMT_DATETIME_TBL1},\x0A","   // For NUMBER  we use default separator (used creating the table)\x0A","   {col: 'Amount', type: SORT_TYPE.NUMBER} ],\x0A","   // OPTION \x0A","     {szSortCol:'Name',   // Current SortCol (we have already Popolated the Table order by this col)\x0A","     szSortDir:SORT_DIR.ASC, // Current SortDir (we have Popolated the Table in this way)\x09\x0A","     bSortApply:false   //  Table is already sorted\x0A","});\x0A","//Now you can Sort the Table by clicking on Colum Header ","Tip Sample with JS Code Hightlighted","/** \x0A","* Class Factorial \x0A","* print 100 Factorial numbers \x0A","*/ \x0A","public class Factorial   \x0A","{   \x0A","\x09public static void main(String[] args)   \x0A","\x09{\x09final int NUM_FACTS = 100;   \x0A","\x09\x09for(int i = 0; i < NUM_FACTS; i++)   \x0A","\x09\x09\x09System.out.println( i + \"! is \" + factorial(i));   \x0A","\x09}   \x0A","\x09   \x0A","\x09public static int factorial(int n)   \x0A","\x09{\x09int result = 1;   \x0A","\x09\x09for(int i = 2; i <= n; i++)   \x0A","\x09\x09\x09result *= i;   \x0A","\x09\x09return result;   \x0A","\x09} ","Tip Sample with Java Code Hightlighted","//JS and HTML Code to implement SAMPLE_3 - case a) ONLY JS \x0A","// In This case we can use TipFixCode to Hightlight the JS Code:  \x0A\x0A","// ---------------------------------------------------------------------------------  \x0A","// 1 JS) Define in JS the jsMsgCode to show in the Tip:  \x0A","var JSU_TIP_3A=...; \x0A\x0A","// 2 HTML) Add an <input> with following attributes:\" \x0A","//<input> object with: \x0A","//  - class=\"tipFixCode\"  type=\"button\" \x0A","//  - whatever unique id \x0A","//  - onclick=\"TipFixCode()\" \x0A","//  - objOpt = {..} Set Option \x0A","<input type=\"button\" class=\"tipFixCode\"  id=\"sample3a\" \x0A","   onclick=\"TipFixCode(TIP_TIP_3A,event,{ \x0A","      iTipWidth:1000,  \\ preferred MaxWidth  \x0A","      iTipMaxHeight:600, \\ preferred MaxHeight \x0A","      szTitle:'Tip Sample with ONLY JS Code'});\" /> ","//JS and HTML Code to implement SAMPLE_3 - case b) JS and HTML \x0A","// In This case we cannot use TipFixCode to Hightlight the JS Code, because there is already HTML Code in Msg \x0A","// Instead we use TipFixMultiCode to Show the message as Plain Text, and see the HTML TAGs  \x0A\x0A","// 1 JS) Define in JS the szTxt to show in the Tip (with also HTML TAGs):  \x0A","var JSU_TIP_3B=...; \x0A\x0A","<input type=\"button\" class=\"tipFixArrow\" style=\"color:blue;\" value=\"Source Code\" id=\"sample3b\" \x0A","   onclick=\"TipFixMultiCode(TIP_TIP_3B,event,{ \x0A","      iMaxRow:20,  \\ preferred Row Num  \x0A","      iMaxCol:120, \\ preferred Col Num \x0A","      szTitle:'Text Box with ONLY also HTML TAGs'});\" /> ","// To add the Text FloatingTip to whatever HTML Item: \x0A","// - onmouseover=\"Tip(TextMsg)\" \x0A","// - onmouseout=\"UnTip() \" \x0A","// In This example: \x0A","<input type=\"button\" value=\"Text Tip\" \x0A","   onmouseover=\"Tip('Simple Tooltip without HTML tags.\\nNewline is working');\" \x0A","   onmouseout=\"UnTip(event);\"/>","HTML: TipSample.html","SAMPLE_1 Text tip - Source Code","//Define in JS a constant (e.g. JSU_TIP_HTML) with the MsgHtml to show in the Tip:  \x0A","var JSU_TIP_HTML=\"<b>Simple Tooltip</b> with <i>HTML tags</i><br/>Tip (You can use <u>whatever HTML TAG</u>\";","// To add whatever HTML FloatingTip to whatever HTML Item: \x0A","// - onmouseover=\"Tip(HtmlMsg);\" \x0A","// - onmouseout=\"UnTip();\" \x0A","<input type=\"text\" value=\"HTML Tip\" style=\"width:60px;\" \x0A","  onmouseover=\"Tip(JSU_TIP_HTML);\"  \x0A","  onmouseout=\"UnTip(event);\"/>","JS: TipSample.js","SAMPLE_1 HTML Tip - Source Code","//Define in JS a constant (e.g. JSU_TIP_README) with the MsgHtml to show in the Tip:  \x0A","//In this example we built an HTML Table that will be shown in the Floating Tip: '  \x0A","var JSU_TIP_README='<table class=\"tip\" BORDER=\"2\" cellspacing=\"0\" cellpadding=\"2\" width=\"550\">'  \x0A","  '  <tr class=\"tipTitleBig\"><td>README EXAMPLE</td></tr>'  \x0A","  '  <tr><td class=\"tipl\">With <b>JSU tooltip</b> you can easily implement whatever <b>Floating HTML Tip</b><BR/>'  \x0A","  '     <BR/>Moreover you can also use many other advanced <b>JSU tooltip Features</b>:'  \x0A","  '     <ul>'  \x0A","  '       <li><b>Fixed</b> Tips, with URL, GIF, ...</li>'  \x0A","  '       <li>Tips with <b>Video</b></li>'  \x0A","  '       <li>Tips with <b>JS code</b></li>'  \x0A","  '       <li>...</li>'  \x0A","  '     </ul>'  \x0A","  '  </td></tr>'  \x0A","  '</table>","<img type=\"image\" src=\"https://rawgit.com/FedericoLevis/JSU/master/images/Readme.jpg\" align=\"bottom\" \x0A","  onmouseover=\"Tip(JSU_TIP_README);\"  \x0A","SAMPLE_1 README Tip - Source Code","var JSU_TIP_HTML=\"...\";","// In This example we use the JSU class=\"jsuInfo\": \x0A","<input type=\"button\" class=\"jsuInfo\" \x0A","/*------------------------------------------------------------- \x0A","Tip button for FloatingTip: <input class=\"jsuInfo\" type=\"button\" /> \x0A","Used with JSU Tooltip API Tip() UnTip() - See <a href=\"https://rawgit.com/FedericoLevis/JSUDoc/master/tooltip.js/index.html\">JSU Tooltip API Doc</a> \x0A","-------------------------------------------------------------*/ \x0A","input.jsuInfo{ /* Info img  */ \x0A","  background:url('https://raw.github.com/FedericoLevis/JSU/master/images/info.png') no-repeat center center; \x0A","  background-color: #19E4DD; \x0A","  height: 14px; \x0A","  width: 5px; \x0A","  margin-left: 2px;  \x0A","  cursor: pointer; \x0A","  border: 1px solid #000; \x0A","} \x0A ","CSS: jsu/core/jsu.css","SAMPLE_4 HTML Tip - Tip image jsuInfo","//Define in JS a constant (e.g. TIP_FIXED_SAMPLE) with the MsgHtml (with GIF, button, link,...) to show in the Tip.  \x0A","var TIP_FIXED_SAMPLE=...; ","// In This example we add the FixedTip to an <input> \"button\" with the JSU class \"tipFix\":  \x0A","//  - class=\"tipFix\"  type=\"button\" \x0A","//  - onclick=\"TipFix(szHtml,event,objOpt)\" \x0A","//  - objOpt = {..} Optional Option \x0A","<input type=\"button\" class=\"tipFix\"  id=\"tipFixSample\" \x0A","   onclick=\"TipFix(TIP_FIXED_SAMPLE,event,{ \x0A","      iTipMaxHeight:1000, \x0A","      szTitle:'Fixed Tip Sample'});\" /> ","/*","\x0A","Tip button for FixedTip - ","see JSU Tooltip API TipFix()  <a href=\"https://rawgit.com/FedericoLevis/JSUDoc/master/tooltip.js/index.html\">JSU Tooltip API Doc</a> \x0A","input.tipFix <input class=\"tipFix\" type=\"button\" style=\"margin-left:5px;margin-right:50px\" /> ","input.tipFixUp <input style=\"margin-left:5px\" class=\"tipFixUp\" type=\"button\" />   \x0A","input.tipFix, input.tipFixUp{  /* Fields Common for input.tipFix and input.tipFixUp */  \x0A","    height: 20px; \x0A","    width: 13px; \x0A","    border: 1px solid #000; \x0A","    font-weight: bold; \x0A","    cursor: pointer; \x0A","    margin-left: 4px;  \x0A","} \x0A"," \x0A","input.tipFix{ /* Specific field of input.tipFix. Image= ? with arrow Down */ \x0A","    background: #E0E0E0 url(https://raw.github.com/FedericoLevis/JSU/master/images/tipFix.png) no-repeat center center; \x0A","input.tipFixUp{ /* Specific field of input.tipFixUp. Image= ? with arrow Up   */ \x0A","    background: #E0E0E0 url(https://raw.github.com/FedericoLevis/JSU/master/images/tipFixUp.png) no-repeat center center; \x0A","SAMPLE_2 FixedTip with GIF, button, link - Source Code","//Define in JS a constant (e.g. JSU_TIP_VIDEO) with the MsgHtml containing the <iframe> format  to show the Video in the Tip.  \x0A","// For example to show a youtube video use the relative \"embed src\" available in its YouTube page: \x0A","var JSU_TIP_VIDEO=\x09'<iframe width=\"600\" height=\"500\" \x0A","     src=\"https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1\" \x0A","     frameborder=\"0\" allowfullscreen></iframe>';","// In This example we add the Video FixedTip to an <input> \"button\" with the JSU class \"tipFixArrow\":  \x0A","//  - objOpt = {..} Set the desired Option \x0A"," <input type=\"button\" class=\"tipFixArrow\" value=\"Show Video\" id=\"tipSample2b1\" \x0A","  onclick=\"TipFix(JSU_TIP_VIDEO,event,{ \x0A","     iTipWidth: 650,  \x0A","     szTitle:'Fixed Tip with a Video' \x0A","   });\" /> ","Tip button for FixedTip with an Up/Down Arrow:\x0A","input.tipFixArrow: <input class=\"tipFixArrow\" value=\"Example\" type=\"button\" style=\"margin-left:5px;margin-right:50px\" /> \x0A","input.tipFixArrowUp: <input style=\"margin-left:5px\" value=\"Example\" class=\"tipFixArrowUp\" type=\"button\" />   \x0A","Used with JSU Tooltip API TipFix() - See <a href=\"https://rawgit.com/FedericoLevis/JSUDoc/master/tooltip.js/index.html\">JSU Tooltip API Doc</a> \x0A","input.tipFixArrow, input.tipFixArrowUp {  /* Common fields  */ \x0A","    padding-right: 30px; \x0A","input.tipFixArrow { /* specific image for tipFixArrow */  \x0A","    background: #E0E0E0 url(https://raw.github.com/FedericoLevis/JSU/master/images/tipFixArrow.png) no-repeat right center; \x0A","input.tipFixArrowUp { /* specific image for tipFixArrowUp */ \x0A","    background: #E0E0E0 url(https://raw.github.com/FedericoLevis/JSU/master/images/tipFixArrowUp.png) no-repeat right center; \x0A","}","SAMPLE_2 FixedTip with VIDEO - Source Code","//Define in JS the function the call TipFix, passing the MsgHtml with the <iframe> with the Page URL  \x0A","// For example to show the JSU download page https://goo.gl/HnNqnM : \x0A","function sample2b2(event){ \x0A"," var szTipFrame =\x09'<iframe width=\"1030\" height=\"600\" src=\"https://goo.gl/HnNqnM\" ></iframe>';  \x0A","\x09TipFix(szTipFrame,event,{ \x0A","\x09\x09 iTipWidth: 1070, \x0A","\x09\x09 szTitle:'Fixed Tip containing the FREE JSU.zip Download Page', \x0A","\x09  bCloseBtn : false \x0A","\x09 } \x0A","// In This example we add the HTMLPage FixedTip to an <input> \"button\" with the JSU class \"tipFixArrow\":  \x0A","//  - onclick=\"sample2b2(event)\" \x0A"," <input type=\"button\" class=\"tipFixArrow\" value=\"Show HTML Page\" id=\"tipSample2b2\" \x0A","  onclick=\"sample2b2(event)\" /> ","SAMPLE_2 FixedTip with HTMLPage - Source Code","// Prepare szCode Msg with the code to be displayed  Hightlighted \x0A","var szCode = '...'; \x0A","  // show the code Hightlighted \x0A","  TipFixCode(szCode,event, \x0A","\x09\x09 {iTipWidth:1000, \x0A","\x09    iTipMaxHeight:600, \x0A","\x09    szTitle:'Tip Sample with JS Code Hightlighted' \x0A","\x09   });","JS Code of SAMPLE 3a or 3b","// Prepare 3 szCode Msg with the 3 code sections to be disaplayed together\x0A","var JS_CODE_2a_JS = '...'; \x0A","var JS_CODE_2a_HTML = '...'; \x0A","var JS_CODE_2a_CSS = '...'; \x0A","// Show 3 Code Sections: \x0A","//  - Msg1 and Msg3 prettified  \x0A","//  - Msg2 not prettified to see the HTML TAGS as Plain Text  \x0A","\x09TipFixMultiCode([ \x0A"," \x09      {szTitle:\"JS: TipSample.js\", szCode: JS_CODE_2a_JS,  bPrettify:true}, \x0A","\x09      {szTitle:\"HTML: TipSample.html\", szCode: JS_CODE_2a_HTML,  bPrettify:false, iRowNum:6}, \x0A","\x09      {szTitle:\"CSS: jsu/core/jsu.css\", szCode: JS_CODE_2a_CSS,  bPrettify:true, iMaxHeight: 250 } \x0A","\x09    ], \x0A","      event, \x0A","      {szTitle:\"FixedTip with GIF, button, link - Source Code\" , iTipWidth: 1100} );\x09","JS Code of SAMPLE 3c"];var JSLOG_LEV=0;var CSS_SEP=_$_f93e[0];var JSU_TIP_HTML=_$_f93e[1];var JSU_TIP_README=_$_f93e[2]+ _$_f93e[3]+ _$_f93e[4]+ _$_f93e[5]+ _$_f93e[6]+ _$_f93e[7]+ _$_f93e[8]+ _$_f93e[9]+ _$_f93e[10]+ _$_f93e[11];function jsu_loaded(){initSampleCmn()}function sample1d(a){var b=_$_f93e[12]+ _$_f93e[13]+ _$_f93e[14]+ JSU_PATH_ABOUT_IMG+ _$_f93e[15]+ JSU_TIP_README+ _$_f93e[16];Tip(b)}function sample2a(a){var b=_$_f93e[17]+ _$_f93e[18]+ _$_f93e[19]+ _$_f93e[20]+ _$_f93e[21]+ _$_f93e[22]+ _$_f93e[23]+ _$_f93e[24]+ _$_f93e[25]+ _$_f93e[21]+ _$_f93e[26]+ _$_f93e[27]+ JSU_PATH_ABOUT_IMG+ _$_f93e[28]+ _$_f93e[29];TipFix(b,a,{szTitle:_$_f93e[30],iTipMaxHeight:1000})}function sample2b1(a){var eb=_$_f93e[31];TipFix(eb,a,{iTipWidth:620,szTitle:_$_f93e[32]})}function sample2b2(a){var w=_$_f93e[33]+ JSU_SHORT_URL_DOWNLOAD_FREE+ _$_f93e[34];TipFix(w,a,{iTipWidth:1070,szTitle:_$_f93e[35],bCloseBtn:false})}function sample3a(a){var ee=_$_f93e[36]+ _$_f93e[37]+ _$_f93e[38]+ _$_f93e[39]+ _$_f93e[40]+ _$_f93e[41]+ _$_f93e[42]+ _$_f93e[43]+ _$_f93e[44]+ _$_f93e[45]+ _$_f93e[46]+ _$_f93e[47]+ _$_f93e[48]+ _$_f93e[49]+ _$_f93e[50]+ _$_f93e[51];TipFixCode(ee,a,{iTipWidth:1000,iTipMaxHeight:600,szTitle:_$_f93e[52]})}function sample3b(a){var ee=_$_f93e[53]+ _$_f93e[54]+ _$_f93e[55]+ _$_f93e[56]+ _$_f93e[57]+ _$_f93e[58]+ _$_f93e[59]+ _$_f93e[60]+ _$_f93e[61]+ _$_f93e[62]+ _$_f93e[63]+ _$_f93e[64]+ _$_f93e[65]+ _$_f93e[66]+ _$_f93e[67]+ _$_f93e[68]+ _$_f93e[69]+ _$_f93e[70];TipFixCode(ee,a,{iTipWidth:1000,iTipMaxHeight:600,szTitle:_$_f93e[71]})}function sample3c(a){sampleCode2a(a)}var JS_CODE_3A=_$_f93e[72]+ _$_f93e[73]+ _$_f93e[74]+ _$_f93e[75]+ _$_f93e[76]+ _$_f93e[74]+ _$_f93e[77]+ _$_f93e[78]+ _$_f93e[79]+ _$_f93e[80]+ _$_f93e[81]+ _$_f93e[82]+ _$_f93e[83]+ _$_f93e[84]+ _$_f93e[85]+ _$_f93e[86]+ _$_f93e[87];var JS_CODE_3B=_$_f93e[88]+ _$_f93e[89]+ _$_f93e[90]+ _$_f93e[74]+ _$_f93e[91]+ _$_f93e[92]+ _$_f93e[74]+ _$_f93e[77]+ _$_f93e[78]+ _$_f93e[79]+ _$_f93e[80]+ _$_f93e[81]+ _$_f93e[82]+ _$_f93e[93]+ _$_f93e[94]+ _$_f93e[95]+ _$_f93e[96]+ _$_f93e[97];function sampleCode1a(a){var eg=_$_f93e[98]+ _$_f93e[99]+ _$_f93e[100]+ _$_f93e[101]+ _$_f93e[102]+ _$_f93e[103]+ _$_f93e[104];TipFixMultiCode([{szTitle:_$_f93e[105],szCode:eg,bPrettify:false}],a,{szTitle:_$_f93e[106],iTipWidth:700})}function sampleCode1b(a){var ei=_$_f93e[107]+ _$_f93e[108];var eh=_$_f93e[109]+ _$_f93e[110]+ _$_f93e[111]+ _$_f93e[101]+ _$_f93e[112]+ _$_f93e[113]+ _$_f93e[114];TipFixMultiCode([{szTitle:_$_f93e[115],szCode:ei,bPrettify:false},{szTitle:_$_f93e[105],szCode:eh,bPrettify:false}],a,{szTitle:_$_f93e[116],iTipWidth:1000})}function sampleCode1c(a){var ek=_$_f93e[117]+ _$_f93e[118]+ _$_f93e[119]+ _$_f93e[120]+ _$_f93e[121]+ _$_f93e[122]+ _$_f93e[123]+ _$_f93e[124]+ _$_f93e[125]+ _$_f93e[126]+ _$_f93e[127]+ _$_f93e[128]+ _$_f93e[129]+ _$_f93e[130];var ej=_$_f93e[109]+ _$_f93e[110]+ _$_f93e[111]+ _$_f93e[101]+ _$_f93e[131]+ _$_f93e[132]+ _$_f93e[114];TipFixMultiCode([{szTitle:_$_f93e[115],szCode:ek,bPrettify:false},{szTitle:_$_f93e[105],szCode:ej,bPrettify:false}],a,{szTitle:_$_f93e[133],iTipWidth:1000})}function sampleCode1d(a){var eo=_$_f93e[107]+ _$_f93e[134];var en=_$_f93e[109]+ _$_f93e[110]+ _$_f93e[111]+ _$_f93e[135]+ _$_f93e[136]+ _$_f93e[113]+ _$_f93e[114];var em=_$_f93e[137]+ _$_f93e[138]+ _$_f93e[139]+ _$_f93e[140]+ _$_f93e[141]+ _$_f93e[142]+ _$_f93e[143]+ _$_f93e[144]+ _$_f93e[145]+ _$_f93e[146]+ _$_f93e[147]+ _$_f93e[148]+ _$_f93e[149];TipFixMultiCode([{szTitle:_$_f93e[115],szCode:eo,bPrettify:true},{szTitle:_$_f93e[105],szCode:en,bPrettify:false},{szTitle:_$_f93e[150],szCode:em,bPrettify:true}],a,{szTitle:_$_f93e[151],iTipWidth:1000})}function sampleCode2a(a){var er=_$_f93e[152]+ _$_f93e[153];var eq=_$_f93e[154]+ _$_f93e[78]+ _$_f93e[155]+ _$_f93e[80]+ _$_f93e[156]+ _$_f93e[157]+ _$_f93e[158]+ _$_f93e[159]+ _$_f93e[160]+ _$_f93e[161];var ep=_$_f93e[162]+ CSS_SEP+ _$_f93e[163]+ _$_f93e[164]+ _$_f93e[165]+ _$_f93e[166]+ _$_f93e[167]+ CSS_SEP+ _$_f93e[56]+ _$_f93e[168]+ _$_f93e[169]+ _$_f93e[170]+ _$_f93e[171]+ _$_f93e[172]+ _$_f93e[173]+ _$_f93e[174]+ _$_f93e[175]+ _$_f93e[176]+ _$_f93e[177]+ _$_f93e[178]+ _$_f93e[175]+ _$_f93e[176]+ _$_f93e[179]+ _$_f93e[180]+ _$_f93e[149];TipFixMultiCode([{szTitle:_$_f93e[115],szCode:er,bPrettify:true},{szTitle:_$_f93e[105],szCode:eq,bPrettify:false,iRowNum:6},{szTitle:_$_f93e[150],szCode:ep,bPrettify:true,iMaxHeight:250}],a,{szTitle:_$_f93e[181],iTipWidth:1100})}function sampleCode2b1(a){var eu=_$_f93e[182]+ _$_f93e[183]+ _$_f93e[184]+ _$_f93e[185]+ _$_f93e[186];var et=_$_f93e[187]+ _$_f93e[155]+ _$_f93e[80]+ _$_f93e[156]+ _$_f93e[188]+ _$_f93e[189]+ _$_f93e[190]+ _$_f93e[191]+ _$_f93e[192]+ _$_f93e[193];var es=_$_f93e[162]+ CSS_SEP+ _$_f93e[163]+ _$_f93e[194]+ _$_f93e[195]+ _$_f93e[196]+ _$_f93e[197]+ CSS_SEP+ _$_f93e[56]+ _$_f93e[198]+ _$_f93e[169]+ _$_f93e[199]+ _$_f93e[171]+ _$_f93e[172]+ _$_f93e[173]+ _$_f93e[175]+ _$_f93e[176]+ _$_f93e[200]+ _$_f93e[201]+ _$_f93e[175]+ _$_f93e[202]+ _$_f93e[203]+ _$_f93e[204];TipFixMultiCode([{szTitle:_$_f93e[115],szCode:eu,bPrettify:false},{szTitle:_$_f93e[105],szCode:et,bPrettify:false},{szTitle:_$_f93e[150],szCode:es,bPrettify:true}],a,{szTitle:_$_f93e[205],iTipWidth:1100})}function sampleCode2b2(a){var ex=_$_f93e[206]+ _$_f93e[207]+ _$_f93e[208]+ _$_f93e[209]+ _$_f93e[210]+ _$_f93e[211]+ _$_f93e[212]+ _$_f93e[213]+ _$_f93e[214]+ _$_f93e[204];var ew=_$_f93e[215]+ _$_f93e[155]+ _$_f93e[80]+ _$_f93e[216]+ _$_f93e[217]+ _$_f93e[218];var ev=_$_f93e[162]+ CSS_SEP+ _$_f93e[163]+ _$_f93e[194]+ _$_f93e[195]+ _$_f93e[196]+ _$_f93e[197]+ CSS_SEP+ _$_f93e[56]+ _$_f93e[198]+ _$_f93e[169]+ _$_f93e[199]+ _$_f93e[171]+ _$_f93e[172]+ _$_f93e[173]+ _$_f93e[175]+ _$_f93e[176]+ _$_f93e[200]+ _$_f93e[201]+ _$_f93e[175]+ _$_f93e[202]+ _$_f93e[203]+ _$_f93e[204];TipFixMultiCode([{szTitle:_$_f93e[115],szCode:ex,bPrettify:false},{szTitle:_$_f93e[105],szCode:ew,bPrettify:false},{szTitle:_$_f93e[150],szCode:ev,bPrettify:true}],a,{szTitle:_$_f93e[219],iTipWidth:1100})}function sampleCode3a(a){var b=_$_f93e[220]+ _$_f93e[221]+ _$_f93e[222]+ _$_f93e[223]+ _$_f93e[224]+ _$_f93e[225]+ _$_f93e[226]+ _$_f93e[227];TipFixCode(b,a,{szTitle:_$_f93e[228]})}function sampleCode3c(a){var b=_$_f93e[229]+ _$_f93e[230]+ _$_f93e[231]+ _$_f93e[232]+ _$_f93e[233]+ _$_f93e[234]+ _$_f93e[235]+ _$_f93e[236]+ _$_f93e[237]+ _$_f93e[238]+ _$_f93e[239]+ _$_f93e[240]+ _$_f93e[241]+ _$_f93e[242];TipFixCode(b,a,{szTitle:_$_f93e[243]})}
+// ==================================================================== CONSTANT
+
+
+
+//var JSLOG_LEV = 31;
+var JSLOG_LEV = 0;
+
+
+var CSS_SEP = "-------------------------------------------------------------------------------------------";
+
+var JSU_TIP_HTML="<b>Simple Tooltip</b> with <i>HTML tags</i><br/>Tip (You can use <u>whatever HTML TAG</u>)" ;
+
+var JSU_TIP_README='<table class="tip" BORDER="2" cellspacing="0" cellpadding="2" width="550px">' +
+   '<tr class="tipTitleBig"><td>README EXAMPLE</td></tr>' +
+   '<tr><td class="tipl">With <b>JSU tooltip</b> you can easily implement whatever <b>Floating HTML Tip</b><BR/>' +
+   '<BR/>Moreover you can also use many other advanced <b>JSU tooltip Features</b>:<ul>' +
+   '<li><b>Fixed</b> Tips, with URL, GIF, ...</li>' +
+   '<li>Tips with <b>Video</b></li>' +
+   '<li>Tips with <b>Embedded HTML Page</b></li>' +
+   '<li>Tips with <b>Code Prettified</b></li>' +
+   '<li>...</li>' +
+   '</ul></td></tr></table>';
+
+
+
+
+
+/**
+* Called when jsu is loaded
+*/
+function jsu_loaded(){
+  // [Optional] Init jslog with JSLOG_LEV 
+  // jslog_init(JSLOG_LEV);
+	initSampleCmn(); // manage optional PAR show_opt, only for developer
+		
+}
+
+
+
+
+
+function sample1d(event){
+	var szTip='<div>' +
+  '<table class="tip" BORDER="2" cellspacing="0" cellpadding="2" width="550px" align="center">' +
+  ' <tr><td><img height="100px" src="' + JSU_PATH_ABOUT_IMG + 'JSUDancing.gif" /></td></tr></table>' +
+  JSU_TIP_README +
+   '</div>';
+	Tip(szTip);
+	
+}
+
+
+
+function sample2a(event){
+	var szTip='<table class="tip" BORDER="2" cellspacing="0" cellpadding="2" width="450">' +
+	'<tr><td class="tipl">Open/Close <b>Fixed Tip</b>:<ul>' +
+	' <li><b>Open</b> Tip by clicking the <b>Down Arrow</b></li>' +
+	' <li><b>Close</b> Tip with <b>ESC</b>, or by clicking the <b>Up Arrow</b>, or the <b>X</b> in the TopRight of the Tip, or the Optional <b>Close</b> Button if present</li>' +
+	'</ul>' +
+	'You can <b>Interact with Fixed Tip using the mouse</b>. For example:<ul>' +
+	'<li>Click on a URL: <a class="tipLink" href="https://www.google.it" target="_blank">Google</a></li>' +
+	'<li>Select Tip Text (Copy/paste)</li>' +
+	'<li>Click on Buttons <input type="button" value="Click Me" onclick="showInfo(\'Hello\');">  </li>' +
+	'</ul>' + 
+	'In the Tip you can display whatever HTML object, also <b>GIF</b> <BR/>' +
+	'<div align="center"><img height="200px" src="' + JSU_PATH_ABOUT_IMG + 'JSUDancing.gif" /></div>' +
+	'</td></tr></table>';	
+	TipFix(szTip,event,{
+		szTitle:'Fixed Tip Sample',
+		iTipMaxHeight:1000
+  });
+}	
+	
+
+/**
+ * TipFix with VIDEO
+ * @param event
+ */
+function sample2b1(event){
+	var JSU_TIP_VIDEO=	'<iframe width="600" height="500" src="https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1" frameborder="0" allowfullscreen></iframe>'; 
+	
+	TipFix(JSU_TIP_VIDEO,event,{
+		iTipWidth: 620,  
+		szTitle:'Fixed Tip with a Video'
+	 }
+	);
+}
+
+
+/**
+ * TipFix with HTML Page
+ * @param event
+ */
+function sample2b2(event){
+	var szTipFrame =	'<iframe width="1030" height="600" src="' + JSU_SHORT_URL_DOWNLOAD_FREE +  '" ></iframe>';
+	
+	TipFix(szTipFrame,event,{
+		 iTipWidth: 1070,
+		 szTitle:'Fixed Tip containing the FREE JSU.zip Download Page',
+		 bCloseBtn : false
+	 }
+	
+	);
+}
+
+
+
+
+/**
+ * 
+ * @param event
+ */
+function sample3a(event){
+	var szCode="//JS Code to Sort an HTML Table with JSU cSortTable: you need only one JSU API call. \n" +
+	"// 1) create cSortTable related to Table with id='tbl1' \n" +
+	"var cSortTbl1 = new cSortTable('tbl1', \n" +
+	" //Describe how to Sort the Table Columns \n" +
+	"  [{col: 'Country'},  // Default type: SORT_TYPE.STRING \n"+  	
+	"   {col: 'Name'},  // Default type: SORT_TYPE.STRING \n"+
+	"   // For Date we set the FMT_DATETIME_TBL1 = 'NNN dd, yyyy HH:mm:ss' \n"+
+	"   {col:'Date', type: SORT_TYPE.DATETIME, fmt: FMT_DATETIME_TBL1},\n"+
+	"   // For NUMBER  we use default separator (used creating the table)\n"+
+	"   {col: 'Amount', type: SORT_TYPE.NUMBER} ],\n"+  		
+	"   // OPTION \n" +
+	"     {szSortCol:'Name',   // Current SortCol (we have already Popolated the Table order by this col)\n"+
+	"     szSortDir:SORT_DIR.ASC, // Current SortDir (we have Popolated the Table in this way)	\n"+
+	"     bSortApply:false   //  Table is already sorted\n"+
+	"});\n" +
+	"//Now you can Sort the Table by clicking on Colum Header ";
+	
+	TipFixCode(szCode,event,
+			 {iTipWidth:1000,
+		    iTipMaxHeight:600,
+		    szTitle:'Tip Sample with JS Code Hightlighted'
+		   });	
+}
+
+
+
+
+/**
+ * 
+ * @param event
+ */
+function sample3b(event){
+	var szCode ='/** \n' +
+	'* Class Factorial \n' +
+	'* print 100 Factorial numbers \n' +
+	'*/ \n' +
+	'public class Factorial   \n'+
+	'{   \n'+
+	'	public static void main(String[] args)   \n'+
+	'	{	final int NUM_FACTS = 100;   \n'+
+	'		for(int i = 0; i < NUM_FACTS; i++)   \n'+
+	'			System.out.println( i + "! is " + factorial(i));   \n'+
+	'	}   \n'+
+	'	   \n'+
+	'	public static int factorial(int n)   \n'+
+	'	{	int result = 1;   \n'+
+	'		for(int i = 2; i <= n; i++)   \n'+
+	'			result *= i;   \n'+
+	'		return result;   \n'+
+	'	} ';
+
+	TipFixCode(szCode,event,
+			 {iTipWidth:1000,
+		    iTipMaxHeight:600,
+		    szTitle:'Tip Sample with Java Code Hightlighted'
+		   });	
+}
+
+
+/**
+ * 
+ * @param event
+ */
+function sample3c(event){
+	sampleCode2a(event);
+}
+
+
+
+//===================================================================================================
+//  BELOW CODE is not strictly related to the Sort feature, but it is ONLY Related to JS Code Highlight
+//===========================================================================================
+
+
+var JS_CODE_3A= '//JS and HTML Code to implement SAMPLE_3 - case a) ONLY JS \n' +
+'// In This case we can use TipFixCode to Hightlight the JS Code:  \n\n'+
+'// ---------------------------------------------------------------------------------  \n'+
+'// 1 JS) Define in JS the jsMsgCode to show in the Tip:  \n'+
+'var JSU_TIP_3A=...; \n\n' +
+'// ---------------------------------------------------------------------------------  \n'+
+'// 2 HTML) Add an <input> with following attributes:" \n'+	
+'//<input> object with: \n' +
+'//  - class="tipFixCode"  type="button" \n' + 
+'//  - whatever unique id \n' + 
+'//  - onclick="TipFixCode()" \n'+	
+'//  - objOpt = {..} Set Option \n' +
+'<input type="button" class="tipFixCode"  id="sample3a" \n' +
+'   onclick="TipFixCode(TIP_TIP_3A,event,{ \n' +
+'      iTipWidth:1000,  \\ preferred MaxWidth  \n' +
+'      iTipMaxHeight:600, \\ preferred MaxHeight \n' +
+'      szTitle:\'Tip Sample with ONLY JS Code\'});" /> '; 
+
+
+var JS_CODE_3B= '//JS and HTML Code to implement SAMPLE_3 - case b) JS and HTML \n' +
+'// In This case we cannot use TipFixCode to Hightlight the JS Code, because there is already HTML Code in Msg \n'+
+'// Instead we use TipFixMultiCode to Show the message as Plain Text, and see the HTML TAGs  \n\n'+
+'// ---------------------------------------------------------------------------------  \n'+
+'// 1 JS) Define in JS the szTxt to show in the Tip (with also HTML TAGs):  \n'+
+'var JSU_TIP_3B=...; \n\n' +
+'// ---------------------------------------------------------------------------------  \n'+
+'// 2 HTML) Add an <input> with following attributes:" \n'+	
+'//<input> object with: \n' +
+'//  - class="tipFixCode"  type="button" \n' + 
+'//  - whatever unique id \n' + 
+'//  - onclick="TipFixCode()" \n'+	
+'//  - objOpt = {..} Set Option \n' +
+'<input type="button" class="tipFixArrow" style="color:blue;" value="Source Code" id="sample3b" \n' +
+'   onclick="TipFixMultiCode(TIP_TIP_3B,event,{ \n' +
+'      iMaxRow:20,  \\ preferred Row Num  \n' +
+'      iMaxCol:120, \\ preferred Col Num \n' +
+'      szTitle:\'Text Box with ONLY also HTML TAGs\'});" /> '; 
+
+
+
+
+
+
+function sampleCode1a(event){
+	var JS_CODE_1a_HTML = '// To add the Text FloatingTip to whatever HTML Item: \n'+	 
+	'// - onmouseover="Tip(TextMsg)" \n'+	
+	'// - onmouseout="UnTip() " \n'+	
+	'// In This example: \n'+
+	'<input type="button" value="Text Tip" \n' + 
+	'   onmouseover="Tip(\'Simple Tooltip without HTML tags.\\nNewline is working\');" \n' +
+	'   onmouseout="UnTip(event);"/>';
+	
+	TipFixMultiCode([{szTitle:"HTML: TipSample.html", szCode: JS_CODE_1a_HTML,  bPrettify:false}],
+			                event,
+			                {
+		                    szTitle:"SAMPLE_1 Text tip - Source Code",
+		                    iTipWidth: 700
+		                    });	
+}
+
+function sampleCode1b(event){
+	var JS_CODE_1b_JS = '//Define in JS a constant (e.g. JSU_TIP_HTML) with the MsgHtml to show in the Tip:  \n'+
+	'var JSU_TIP_HTML="<b>Simple Tooltip</b> with <i>HTML tags</i><br/>Tip (You can use <u>whatever HTML TAG</u>";';
+	
+	var JS_CODE_1b_HTML = '// To add whatever HTML FloatingTip to whatever HTML Item: \n'+	 
+	'// - onmouseover="Tip(HtmlMsg);" \n'+	
+	'// - onmouseout="UnTip();" \n'+	
+	'// In This example: \n'+
+	'<input type="text" value="HTML Tip" style="width:60px;" \n' +
+  '  onmouseover="Tip(JSU_TIP_HTML);"  \n'+	
+  '  onmouseout="UnTip(event);"/>'; 
+	
+  // 2 Codes, both contain HTML TAGS
+	TipFixMultiCode([
+ 	      {szTitle:"JS: TipSample.js", szCode: JS_CODE_1b_JS,  bPrettify:false},
+	      {szTitle:"HTML: TipSample.html", szCode: JS_CODE_1b_HTML,  bPrettify:false}
+	    ],
+      event,
+      { szTitle:"SAMPLE_1 HTML Tip - Source Code" , 
+		    iTipWidth: 1000
+		  } );	
+}
+
+function sampleCode1c(event){
+	var JS_CODE_1c_JS = '//Define in JS a constant (e.g. JSU_TIP_README) with the MsgHtml to show in the Tip:  \n'+
+	'//In this example we built an HTML Table that will be shown in the Floating Tip: \'  \n' +
+	'var JSU_TIP_README=\'<table class="tip" BORDER="2" cellspacing="0" cellpadding="2" width="550">\'  \n' +
+  '  \'  <tr class="tipTitleBig"><td>README EXAMPLE</td></tr>\'  \n' +
+  '  \'  <tr><td class="tipl">With <b>JSU tooltip</b> you can easily implement whatever <b>Floating HTML Tip</b><BR/>\'  \n' +
+  '  \'     <BR/>Moreover you can also use many other advanced <b>JSU tooltip Features</b>:\'  \n' +
+  '  \'     <ul>\'  \n' +
+  '  \'       <li><b>Fixed</b> Tips, with URL, GIF, ...</li>\'  \n' +
+  '  \'       <li>Tips with <b>Video</b></li>\'  \n' +
+  '  \'       <li>Tips with <b>JS code</b></li>\'  \n' +
+  '  \'       <li>...</li>\'  \n' +
+  '  \'     </ul>\'  \n' +	
+  '  \'  </td></tr>\'  \n' +	
+  '  \'</table>';
+	
+  var JS_CODE_1c_HTML = '// To add whatever HTML FloatingTip to whatever HTML Item: \n'+	 
+	'// - onmouseover="Tip(HtmlMsg);" \n'+	
+	'// - onmouseout="UnTip();" \n'+	
+	'// In This example: \n'+
+	'<img type="image" src="https://rawgit.com/FedericoLevis/JSU/master/images/Readme.jpg" align="bottom" \n'+	
+  '  onmouseover="Tip(JSU_TIP_README);"  \n'+	
+  '  onmouseout="UnTip(event);"/>'; 
+
+	// 2 Codes, both contain HTML TAGS
+	TipFixMultiCode([
+ 	      {szTitle:"JS: TipSample.js", szCode: JS_CODE_1c_JS,  bPrettify:false},
+	      {szTitle:"HTML: TipSample.html", szCode: JS_CODE_1c_HTML,  bPrettify:false}
+	    ],
+      event,
+      { 
+		    szTitle:"SAMPLE_1 README Tip - Source Code",
+		    iTipWidth: 1000 
+		   } 
+	 );	
+	
+}
+
+function sampleCode1d(event){
+	var JS_CODE_1d_JS = '//Define in JS a constant (e.g. JSU_TIP_HTML) with the MsgHtml to show in the Tip:  \n'+
+	'var JSU_TIP_HTML="...";'; 
+	
+	var JS_CODE_1d_HTML = '// To add whatever HTML FloatingTip to whatever HTML Item: \n'+	 
+	'// - onmouseover="Tip(HtmlMsg);" \n'+	
+	'// - onmouseout="UnTip();" \n'+	
+	'// In This example we use the JSU class="jsuInfo": \n'+
+	'<input type="button" class="jsuInfo" \n' +
+  '  onmouseover="Tip(JSU_TIP_HTML);"  \n'+	
+  '  onmouseout="UnTip(event);"/>'; 
+	
+	var JS_CODE_1d_CSS = '/*------------------------------------------------------------- \n' + 
+	'Tip button for FloatingTip: <input class="jsuInfo" type="button" /> \n' + 
+	'Used with JSU Tooltip API Tip() UnTip() - See <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/tooltip.js/index.html">JSU Tooltip API Doc</a> \n' + 
+	'-------------------------------------------------------------*/ \n' +
+	'input.jsuInfo{ /* Info img  */ \n' + 
+	'  background:url(\'https://raw.github.com/FedericoLevis/JSU/master/images/info.png\') no-repeat center center; \n' + 
+	'  background-color: #19E4DD; \n' + 
+	'  height: 14px; \n' + 
+	'  width: 5px; \n' + 
+	'  margin-left: 2px;  \n' + 
+	'  cursor: pointer; \n' + 
+	'  border: 1px solid #000; \n' + 
+	'} \n '; 
+		
+  //3 Codes: First 2 with HTML TAGS, CSS without HTML tags
+ 	TipFixMultiCode([
+ 	      {szTitle:"JS: TipSample.js", szCode: JS_CODE_1d_JS,  bPrettify:true},
+	      {szTitle:"HTML: TipSample.html", szCode: JS_CODE_1d_HTML,  bPrettify:false},
+ 	      {szTitle:"CSS: jsu/core/jsu.css", szCode: JS_CODE_1d_CSS,  bPrettify:true}
+	    ],
+      event,
+      {
+ 		   szTitle:"SAMPLE_4 HTML Tip - Tip image jsuInfo",
+ 		   iTipWidth: 1000 
+ 		   } 
+ 	 );	
+
+}
+
+
+
+function sampleCode2a(event){
+	var JS_CODE_2a_JS = '//Define in JS a constant (e.g. TIP_FIXED_SAMPLE) with the MsgHtml (with GIF, button, link,...) to show in the Tip.  \n'+
+	'var TIP_FIXED_SAMPLE=...; ';
+	
+	var JS_CODE_2a_HTML = '// In This example we add the FixedTip to an <input> "button" with the JSU class "tipFix":  \n'+	 
+	'//<input> object with: \n' +
+	'//  - class="tipFix"  type="button" \n' + 
+	'//  - whatever unique id \n' + 
+	'//  - onclick="TipFix(szHtml,event,objOpt)" \n'+	
+	'//  - objOpt = {..} Optional Option \n' +
+	'<input type="button" class="tipFix"  id="tipFixSample" \n' +
+	'   onclick="TipFix(TIP_FIXED_SAMPLE,event,{ \n' +
+	'      iTipMaxHeight:1000, \n' +
+	'      szTitle:\'Fixed Tip Sample\'});" /> '; 
+
+	
+	var JS_CODE_2a_CSS = '/*' + CSS_SEP +  '\n' + 
+	'Tip button for FixedTip - ' +
+	'see JSU Tooltip API TipFix()  <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/tooltip.js/index.html">JSU Tooltip API Doc</a> \n' + 
+	'input.tipFix <input class="tipFix" type="button" style="margin-left:5px;margin-right:50px" /> ' +
+	'input.tipFixUp <input style="margin-left:5px" class="tipFixUp" type="button" />   \n' + 
+	CSS_SEP + '*/ \n' +
+	'input.tipFix, input.tipFixUp{  /* Fields Common for input.tipFix and input.tipFixUp */  \n' + 
+	'    height: 20px; \n' + 
+	'    width: 13px; \n' + 
+	'    border: 1px solid #000; \n' + 
+	'    font-weight: bold; \n' + 
+	'    cursor: pointer; \n' + 
+	'    margin-left: 4px;  \n' + 
+	'} \n' + 
+	' \n' + 
+	'input.tipFix{ /* Specific field of input.tipFix. Image= ? with arrow Down */ \n' + 
+	'    background: #E0E0E0 url(https://raw.github.com/FedericoLevis/JSU/master/images/tipFix.png) no-repeat center center; \n' + 
+	'} \n' + 
+	' \n' + 
+	'input.tipFixUp{ /* Specific field of input.tipFixUp. Image= ? with arrow Up   */ \n' + 
+	'    background: #E0E0E0 url(https://raw.github.com/FedericoLevis/JSU/master/images/tipFixUp.png) no-repeat center center; \n' + 
+	'} \n '; 
+	
+  // Show 3 Code Sections : we want to prettify Msg1 and Msg3 (for Msg2 we want to see the HTML TAGS as Plain Text)
+	TipFixMultiCode([
+ 	      {szTitle:"JS: TipSample.js", szCode: JS_CODE_2a_JS,  bPrettify:true},
+	      {szTitle:"HTML: TipSample.html", szCode: JS_CODE_2a_HTML,  bPrettify:false, iRowNum:6},
+	      {szTitle:"CSS: jsu/core/jsu.css", szCode: JS_CODE_2a_CSS,  bPrettify:true, iMaxHeight: 250 }
+	    ],
+      event,
+      { 
+		    szTitle:"SAMPLE_2 FixedTip with GIF, button, link - Source Code" ,
+		    iTipWidth: 1100} );	
+}
+
+
+function sampleCode2b1(event){
+	var JS_CODE_2b1_JS = '//Define in JS a constant (e.g. JSU_TIP_VIDEO) with the MsgHtml containing the <iframe> format  to show the Video in the Tip.  \n'+
+	'// For example to show a youtube video use the relative "embed src" available in its YouTube page: \n'+
+	'var JSU_TIP_VIDEO=	\'<iframe width="600" height="500" \n'+
+	'     src="https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1" \n'+
+	'     frameborder="0" allowfullscreen></iframe>\';'; 
+	
+	var JS_CODE_2b1_HTML = '// In This example we add the Video FixedTip to an <input> "button" with the JSU class "tipFixArrow":  \n'+	 
+	'//  - class="tipFix"  type="button" \n' + 
+	'//  - whatever unique id \n' + 
+	'//  - onclick="TipFix(szHtml,event,objOpt)" \n'+	
+	'//  - objOpt = {..} Set the desired Option \n' +
+	' <input type="button" class="tipFixArrow" value="Show Video" id="tipSample2b1" \n'+	
+	'  onclick="TipFix(JSU_TIP_VIDEO,event,{ \n' +
+	'     iTipWidth: 650,  \n' +  
+	'     szTitle:\'Fixed Tip with a Video\' \n' +
+	'   });" /> ';
+
+	var JS_CODE_2b1_CSS = '/*' + CSS_SEP +  '\n' + 
+		'Tip button for FixedTip with an Up/Down Arrow:\n' +
+		'input.tipFixArrow: <input class="tipFixArrow" value="Example" type="button" style="margin-left:5px;margin-right:50px" /> \n' +
+		'input.tipFixArrowUp: <input style="margin-left:5px" value="Example" class="tipFixArrowUp" type="button" />   \n' + 
+		'Used with JSU Tooltip API TipFix() - See <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/tooltip.js/index.html">JSU Tooltip API Doc</a> \n' + 
+		CSS_SEP + '*/ \n' +
+		  'input.tipFixArrow, input.tipFixArrowUp {  /* Common fields  */ \n' + 
+			'    height: 20px; \n' + 
+			'    padding-right: 30px; \n' + 
+			'    border: 1px solid #000; \n' + 
+			'    font-weight: bold; \n' + 
+			'    cursor: pointer; \n' + 
+			'} \n' + 
+			' \n' + 
+			'input.tipFixArrow { /* specific image for tipFixArrow */  \n' + 
+			'    background: #E0E0E0 url(https://raw.github.com/FedericoLevis/JSU/master/images/tipFixArrow.png) no-repeat right center; \n' + 
+			'} \n' + 
+			'input.tipFixArrowUp { /* specific image for tipFixArrowUp */ \n' + 
+			'    background: #E0E0E0 url(https://raw.github.com/FedericoLevis/JSU/master/images/tipFixArrowUp.png) no-repeat right center; \n' + 
+			'}'; 
+				
+  // 3 Codes: First 2 with HTML TAGS, CSS without HTML tags
+	TipFixMultiCode([
+ 	      {szTitle:"JS: TipSample.js", szCode: JS_CODE_2b1_JS,  bPrettify: false},
+	      {szTitle:"HTML: TipSample.html", szCode: JS_CODE_2b1_HTML,  bPrettify: false},
+	      {szTitle:"CSS: jsu/core/jsu.css", szCode: JS_CODE_2b1_CSS,  bPrettify: true}
+	    ],
+      event,
+      {
+		   szTitle:"SAMPLE_2 FixedTip with VIDEO - Source Code" ,
+		   iTipWidth: 1100
+		  } );	
+}
+
+
+function sampleCode2b2(event){
+	var JS_CODE_2b2_JS = '//Define in JS the function the call TipFix, passing the MsgHtml with the <iframe> with the Page URL  \n'+
+	'// For example to show the JSU download page https://goo.gl/HnNqnM : \n'+
+	'function sample2b2(event){ \n' +
+	' var szTipFrame =	\'<iframe width="1030" height="600" src="https://goo.gl/HnNqnM" ></iframe>\';  \n' +
+	'	TipFix(szTipFrame,event,{ \n' +
+	'		 iTipWidth: 1070, \n' +
+	'		 szTitle:\'Fixed Tip containing the FREE JSU.zip Download Page\', \n' +
+	'	  bCloseBtn : false \n' +
+	'	 } \n' +
+	'}';
+
+	var JS_CODE_2b2_HTML = '// In This example we add the HTMLPage FixedTip to an <input> "button" with the JSU class "tipFixArrow":  \n'+	 
+	'//  - class="tipFix"  type="button" \n' + 
+	'//  - whatever unique id \n' + 
+	'//  - onclick="sample2b2(event)" \n'+	
+	' <input type="button" class="tipFixArrow" value="Show HTML Page" id="tipSample2b2" \n'+	
+	'  onclick="sample2b2(event)" /> ';
+
+	var JS_CODE_2b2_CSS = '/*' + CSS_SEP +  '\n' + 
+		'Tip button for FixedTip with an Up/Down Arrow:\n' +
+		'input.tipFixArrow: <input class="tipFixArrow" value="Example" type="button" style="margin-left:5px;margin-right:50px" /> \n' +
+		'input.tipFixArrowUp: <input style="margin-left:5px" value="Example" class="tipFixArrowUp" type="button" />   \n' + 
+		'Used with JSU Tooltip API TipFix() - See <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/tooltip.js/index.html">JSU Tooltip API Doc</a> \n' + 
+		CSS_SEP + '*/ \n' +
+		  'input.tipFixArrow, input.tipFixArrowUp {  /* Common fields  */ \n' + 
+			'    height: 20px; \n' + 
+			'    padding-right: 30px; \n' + 
+			'    border: 1px solid #000; \n' + 
+			'    font-weight: bold; \n' + 
+			'    cursor: pointer; \n' + 
+			'} \n' + 
+			' \n' + 
+			'input.tipFixArrow { /* specific image for tipFixArrow */  \n' + 
+			'    background: #E0E0E0 url(https://raw.github.com/FedericoLevis/JSU/master/images/tipFixArrow.png) no-repeat right center; \n' + 
+			'} \n' + 
+			'input.tipFixArrowUp { /* specific image for tipFixArrowUp */ \n' + 
+			'    background: #E0E0E0 url(https://raw.github.com/FedericoLevis/JSU/master/images/tipFixArrowUp.png) no-repeat right center; \n' + 
+			'}'; 
+				
+  // 3 Codes: First 2 with HTML TAGS, CSS without HTML tags
+	TipFixMultiCode([
+ 	      {szTitle:"JS: TipSample.js", szCode: JS_CODE_2b2_JS,  bPrettify: false},
+	      {szTitle:"HTML: TipSample.html", szCode: JS_CODE_2b2_HTML,  bPrettify: false},
+	      {szTitle:"CSS: jsu/core/jsu.css", szCode: JS_CODE_2b2_CSS,  bPrettify: true}
+	    ],
+      event,
+      { 
+		    szTitle:"SAMPLE_2 FixedTip with HTMLPage - Source Code" , 
+		    iTipWidth: 1100
+		  } );	
+}
+
+
+
+function sampleCode3a(event){
+  var szTip = '// Prepare szCode Msg with the code to be displayed  Hightlighted \n' +
+  'var szCode = \'...\'; \n' +
+  '  // show the code Hightlighted \n' +
+  '  TipFixCode(szCode,event, \n' +
+  '		 {iTipWidth:1000, \n' +
+  '	    iTipMaxHeight:600, \n' +
+  '	    szTitle:\'Tip Sample with JS Code Hightlighted\' \n' +
+  '	   });';
+  TipFixCode(szTip,event,{
+  	 szTitle:"JS Code of SAMPLE 3a or 3b"
+  	 });
+}
+
+
+function sampleCode3c(event){
+    var szTip = '// Prepare 3 szCode Msg with the 3 code sections to be disaplayed together\n' +
+    'var JS_CODE_2a_JS = \'...\'; \n' +
+    'var JS_CODE_2a_HTML = \'...\'; \n' +
+    'var JS_CODE_2a_CSS = \'...\'; \n' +
+    '// Show 3 Code Sections: \n' +
+    '//  - Msg1 and Msg3 prettified  \n' + 
+    '//  - Msg2 not prettified to see the HTML TAGS as Plain Text  \n' +
+    '	TipFixMultiCode([ \n' +
+    ' 	      {szTitle:"JS: TipSample.js", szCode: JS_CODE_2a_JS,  bPrettify:true}, \n' +
+    '	      {szTitle:"HTML: TipSample.html", szCode: JS_CODE_2a_HTML,  bPrettify:false, iRowNum:6}, \n' +
+    '	      {szTitle:"CSS: jsu/core/jsu.css", szCode: JS_CODE_2a_CSS,  bPrettify:true, iMaxHeight: 250 } \n' +
+    '	    ], \n' +
+    '      event, \n' +
+    '      {szTitle:"FixedTip with GIF, button, link - Source Code" , iTipWidth: 1100} );	';
+    TipFixCode(szTip,event,{
+    	 szTitle:"JS Code of SAMPLE 3c"
+    });
+  
+  
+}
+
+

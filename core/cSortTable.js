@@ -1,8 +1,1263 @@
-/***************************************************************************/
-/*                                                                         */
-/*  This obfuscated code was created by Javascript Obfuscator Free Version.*/
-/*  Javascript Obfuscator Free Version can be downloaded here              */
-/*  http://javascriptobfuscator.com                                        */
-/*                                                                         */
-/***************************************************************************/
-var _$_172b=["NONE","STRING","NUMBER","DATETIME","-1","1","MM/dd/yyyy HH:mm:ss","ASC","footer","summary","","fast_sort_none.jpg","fast_sort_asc.jpg","fast_sort_desc.jpg","slow_sort_none.jpg","slow_sort_asc.jpg","slow_sort_desc.jpg","disabled_sort_none.jpg","disabled_sort_asc.jpg","disabled_sort_desc.jpg","wait.jpg","SortDirCur","sortimg","[cSortTable] ","iTblRowPerPage","iRowSortHeader","iRowHeader","bCognos","bCognosGlobalSort","bSortEn","szFmtDatetime","szPathImg","szClassFooter","szSortHiddenId","szSortPathNone","szSortPathAsc","szSortPathDesc","szSortPathWait","bMultiPage","imgTemp","img","createElement","arSortImg","tempTextSep"," ","createTextNode","szSortDecSep","szSortDecSepLocale","szSortGroupSepLocale","this.szSortDecSepLocale= ","  this.szSortGroupSepLocale = ","iSortColInd","szSortDir","szSortCol","bNoStartupSortIco","length","col","selectSortCol","selectSortDir","inputSortCol","inputSortDir","inputSortHiddenCol","imgSortCur","szSortHintAsc","szSortHintDesc","iTblFooterRec","IN szElId=","IN arSortCol:","objOpt","OPTION: iRowHeader=","OPTION: iRowSortHeader=","OPTION: iTblRowPerPage=","OPTION: bCognos=","OPTION: bCognosGlobalSort=","OPTION: szFmtDatetime=","OPTION: szPathImg=","OPTION: szClassFooter=","OPTION: bNoStartupSortIco=","tmoSortApply","For COGNOS ALWAYS szClassFooter=","tblSort","TABLE","rows","type","firstChild","outerHTML","type=\"","\"","indexOf","className","columnTitle","Rec [","]  IS FOOTER","TABLE iTblRecNum="," - iRowHeader="," iRowSortHeader=","  iTblFooterRec=","  (rows=",")","this.bMultiPage=","iTblRecNum","XXX","replace","\x0A\x0A","this.szSortPathNone="," this.szSortPathAsc="," this.szSortPathDesc=","Get select of SORT BOX Otions (e.g for Cognos)","_oLstChoices_SelectSortCol","_cSortTableEl","onchange","onchangeSortCol","_oLstChoices_SelectSortDir","onchangeSortDir","_textEditBox_SortCol","_textEditBox_SortDir","_textEditBox_SortHiddenCol","populate this.arcSortItem","arcSortItem","arSortCol","value","szSortHidden = ",",","split","sorttableSetHiddenCol","Align Current Sort Selection to Visible Fields","Init Global Val form Cognos Hidden Fields","selectedIndex","sortInit","bSortApply","Obtional Initial Sort is SET: SortCol="," szSortDir="," bSortApply=","setSort","sorttableDisableSort","prototype","[cSortTable.setSort] ","IN szSortCol="," (","=ASC  ","DESC","=DESC )  bResortTable=","getSortIndFromSortCol","iSortColInd=","simulate having for iSortColInd="," The szSortDirTmp=","to Obtain with resortTable the desired new szSortDir=","setAttribute","resortTable","parentNode","cellIndex","Changed Sort column from "," to ","   --> Reset Previous Img","title","src","SET iSortColInd = ","  szSortCol=","[cSortTable.sorttableSetHiddenCol] ","ArColId","this.selectSortCol iSelInd=","return (iSelInd <0)","Prepare this.szSortHiddenId with the ColId to Hide","szSortIdCur=","this.szSortHiddenId =","Previous SortCol Has been Hidden --> Set DefaultSort (First Col Asc)","getSortCol","getSortDir","getSortDirLabel","[cSortTable.sortInit] ","Nothing to DO: there is NOT Table to Sort in this Page","CURRENT SORT: iSortColInd=","  szSortColCur=","  szSortDirCur=","Table without Rows to Sort. iRowSortHeader=","  NumRow=","childNodes","numColHidden=","iColVis=","  iSortColNum=","  ---> iColSort="," Prepare icons (arSortImg), events and set Current Sort","cells","cloneNode","onclick","onclickSortImg","ADD to Col  [","] the SORT IMG - Attribute (",") = ","appendChild","[cSortTable.sorttableDisableSort] ","tblSort NOT VISIBLE","IMG","getElementsByTagName","ImgList is Empty. Nothing to do","className=","Disable ImgEl[","]","ts_sort_numeric","[cSortTable.ts_sort_numeric] ","szSortDirCur","szSortGroupSep","ts_sort_datetime","[cSortTable.ts_sort_datetime] ","ts_sort_currency","ts_sort_caseinsensitive","[cSortTable.ts_sort_caseinsensitive] "," FOOTER ROW","toLowerCase","getSortId","[cSortTable.sorttable.getSortId] ","SW ERROR: this.iSortColInd="," NOT Visible  iColInd=","getSortObj","[cSortTable.getSortObj] "," NOT Found SortId=","[cSortTable.sorttable.getSortIndFromSortCol] ","SW ERROR: szSortCol="," NOT FOUND","[cSortTable.resortTable] ","Clicked on column=","  Previous SortCol=","getAttribute","szAttrSortDir=","Previous Sort was ASC - TOGGLE to Dir=DESC","Previous Sort was NOT ASC- SET Dir=ASC","Please Wait...","sortApply","headSetSortLbl","[cSortTable.headSetSortLbl] ","spanHeaSortCol","spanHeaSortDir","Nothing to DO: SORTHeader is not present ","[cSortTable.sortApply] ","Doing SORT:   Current iSortColInd="," bMultiPage=","save current szSortColCur=","  and  szSortDirCur=","============= GLOBAL SORT ====","============= LOCAL SORT ====","NEW Sort for cSortTableEl.iSortColInd="," SortId=","objSortCol:","groupSep","decimalSep","sortfn = ts_sort_numeric - Using szSortGroupSep=","  szSortDecSep=","fmt","sortfn = ts_sort_datetime - Using cSortTableEl.szFmtDatetime=","SW ERROR: Invalid SortType=","Set the attribute in the Image to indicate the direction","IMG setAttribute (","Prepare newRow with the Row to Sort - We skip First HEADER Rows=","Start Sort Ascending...","sort","Sort Ascending done","reverse","Reverse done - Sort Descending Done","tBodies","DONE in ","getParent","nodeType","tagName","[cSortTable.onchangeSortCol] ","getSortTableElFromEv","Save into this.inputSortCol the selected szSortId=","[cSortTable.onchangeSortDir] ","Save into this.inputSortDir the selected iSortDir=","[cSortTable.onclickSortImg] ","this=","  tagName=","undefined","toUpperCase","Workaround for IE Header Seleted: Use imgSortCur","imgSortCur=null   CANNOT Apply workaround for IE","[cSortTable.getSortTableElFromEv] ","getElement","SW ERROR: cSortTableEl is undefined in ","cSortTableEl.szSortPathAsc=","is_ie","srcElement","event","currentTarget","test","userAgent"];var SORT_TYPE={NONE:_$_172b[0],STRING:_$_172b[1],NUMBER:_$_172b[2],DATETIME:_$_172b[3]};var SORT_DIR={ASC:_$_172b[4],DESC:_$_172b[5],NONE:_$_172b[0]};var SORT_DEF_COGNOS=false;var SORT_DEF_COGNOS_GLOBAL_SORT_EN=false;var SORT_DEF_FMT_DATETIME=_$_172b[6];var SORT_DEF_PATH_IMG=JSU_PATH_IMG;var SORT_DEF_IND=0;var SORT_DEF_DIR=SORT_DIR[_$_172b[7]];var SORT_DEF_APPLY=false;var SORT_TR_CLASS_FOOTER=_$_172b[8];var SORT_CLASS_FOOTER_COGNOS=_$_172b[9];var SORT_INFO_ABSENT=_$_172b[10];var SORT_IMG_NONE_FAST=_$_172b[11];var SORT_IMG_ASC_FAST=_$_172b[12];var SORT_IMG_DESC_FAST=_$_172b[13];var SORT_IMG_NONE_SLOW=_$_172b[14];var SORT_IMG_ASC_SLOW=_$_172b[15];var SORT_IMG_DESC_SLOW=_$_172b[16];var SORT_IMG_NONE_DIS=_$_172b[17];var SORT_IMG_ASC_DIS=_$_172b[18];var SORT_IMG_DESC_DIS=_$_172b[19];var SORT_IMG_WAIT=_$_172b[20];var SORT_ATTR_SORT_DIR=_$_172b[21];var SORT_TMO_WAIT_MS=50;var cSortTableElCur=null;var SORT_CLASSNAME=_$_172b[22];cSortTable= function(D,l,B){var u=_$_172b[23];jslog(JSLOG_JSU,u+ JSLOG_FILE_START);this[_$_172b[24]]= 0;this[_$_172b[25]]= 1;this[_$_172b[26]]= 1;this[_$_172b[27]]= SORT_DEF_COGNOS;this[_$_172b[28]]= SORT_DEF_COGNOS_GLOBAL_SORT_EN;this[_$_172b[29]]= true;this[_$_172b[30]]= SORT_DEF_FMT_DATETIME;this[_$_172b[31]]= SORT_DEF_PATH_IMG;this[_$_172b[32]]= SORT_TR_CLASS_FOOTER;this[_$_172b[33]]= _$_172b[10];this[_$_172b[34]]= _$_172b[10];this[_$_172b[35]]= _$_172b[10];this[_$_172b[36]]= _$_172b[10],this[_$_172b[37]]= _$_172b[10];this[_$_172b[38]]= false;this[_$_172b[39]]= document[_$_172b[41]](_$_172b[40]);this[_$_172b[42]]=  new Array();this[_$_172b[43]]= document[_$_172b[45]](_$_172b[44]);this[_$_172b[46]]= _$_172b[10];this[_$_172b[47]]= _$_172b[10];this[_$_172b[48]]= localeGetGroupSep();this[_$_172b[47]]= localeGetDecimalSep();jslog(JSLOG_JSU,u+ _$_172b[49]+ this[_$_172b[47]]+ _$_172b[50]+ this[_$_172b[48]]);this[_$_172b[51]]= SORT_DEF_IND;this[_$_172b[52]]= SORT_DEF_DIR;this[_$_172b[53]]= _$_172b[10];this[_$_172b[54]]= false;if(l[_$_172b[55]]> 0){this[_$_172b[53]]= (l[0][_$_172b[56]]!= undefined)?l[0][_$_172b[56]]:_$_172b[10]};this[_$_172b[57]]= 0;this[_$_172b[58]]= 0;this[_$_172b[59]]= 0;this[_$_172b[60]]= 0;this[_$_172b[61]]= 0;this[_$_172b[62]]= null;this[_$_172b[63]]= _$_172b[10];this[_$_172b[64]]= _$_172b[10];this[_$_172b[65]]= 0;jslog(JSLOG_JSU,u+ _$_172b[66]+ D);jslogObj(JSLOG_JSU,u+ _$_172b[67],l,true);if(B!= undefined){jslogObj(JSLOG_JSU,u+ _$_172b[68],B);if(B[_$_172b[26]]!= undefined){this[_$_172b[26]]= B[_$_172b[26]];jslog(JSLOG_JSU,u+ _$_172b[69]+ this[_$_172b[26]]);if(B[_$_172b[25]]== undefined){B[_$_172b[25]]= B[_$_172b[26]]}};if(B[_$_172b[25]]!= undefined){this[_$_172b[25]]= B[_$_172b[25]];jslog(JSLOG_JSU,u+ _$_172b[70]+ this[_$_172b[25]]);if(B[_$_172b[26]]== undefined){B[_$_172b[26]]= B[_$_172b[25]];this[_$_172b[26]]= B[_$_172b[26]]}};if(B[_$_172b[24]]!= undefined){this[_$_172b[24]]= B[_$_172b[24]];jslog(JSLOG_JSU,u+ _$_172b[71]+ this[_$_172b[24]])};if(B[_$_172b[27]]!= undefined){this[_$_172b[27]]= B[_$_172b[27]];jslog(JSLOG_JSU,u+ _$_172b[72]+ this[_$_172b[27]])};if(B[_$_172b[28]]!= undefined){this[_$_172b[28]]= B[_$_172b[28]];jslog(JSLOG_JSU,u+ _$_172b[73]+ this[_$_172b[28]])};if(B[_$_172b[30]]!= undefined){this[_$_172b[30]]= B[_$_172b[30]];jslog(JSLOG_JSU,u+ _$_172b[74]+ this[_$_172b[30]])};if(B[_$_172b[31]]!= undefined){this[_$_172b[31]]= B[_$_172b[31]];jslog(JSLOG_JSU,u+ _$_172b[75]+ this[_$_172b[31]])};if(B[_$_172b[32]]!= undefined){this[_$_172b[32]]= B[_$_172b[32]];jslog(JSLOG_JSU,u+ _$_172b[76]+ this[_$_172b[32]])};if(B[_$_172b[54]]!= undefined){this[_$_172b[54]]= B[_$_172b[54]];jslog(JSLOG_JSU,u+ _$_172b[77]+ this[_$_172b[54]])}};this[_$_172b[78]]= null;if(this[_$_172b[27]]){this[_$_172b[32]]= SORT_CLASS_FOOTER_COGNOS;jslog(JSLOG_JSU,u+ _$_172b[79]+ this[_$_172b[32]])};if(this[_$_172b[27]]){this[_$_172b[80]]= getElementByTag2(_$_172b[81],_$_172b[80],false)}else {this[_$_172b[80]]= getElementById2(D,true)};if(this[_$_172b[80]]== 0){return};var A=0;this[_$_172b[65]]= 0;if(this[_$_172b[80]]!= undefined&& this[_$_172b[80]][_$_172b[82]]!= undefined){for(var c=this[_$_172b[25]];c< this[_$_172b[80]][_$_172b[82]][_$_172b[55]];c++){var H=this[_$_172b[80]][_$_172b[82]][c][_$_172b[84]][_$_172b[83]];var p=false;var E=this[_$_172b[80]][_$_172b[82]][c][_$_172b[84]][_$_172b[85]];var y=-1;if(E!= undefined){y= E[_$_172b[88]](_$_172b[86]+ this[_$_172b[32]]+ _$_172b[87]);if(y>= 0){p= true}};var C=this[_$_172b[80]][_$_172b[82]][c][_$_172b[89]];if(this[_$_172b[27]]){C= H};var n=(p|| (C!= undefined&& C[_$_172b[88]](this[_$_172b[32]])>= 0));if(H!= _$_172b[90]&&  !n){A++};if(n){jslog(JSLOG_JSU,_$_172b[91]+ c+ _$_172b[92]);if(this[_$_172b[27]]){this[_$_172b[80]][_$_172b[82]][c][_$_172b[89]]= this[_$_172b[32]]};this[_$_172b[65]]++}};jslog(JSLOG_JSU,u+ _$_172b[93]+ A+ _$_172b[94]+ this[_$_172b[26]]+ _$_172b[95]+ this[_$_172b[25]]+ _$_172b[96]+ this[_$_172b[65]]+ _$_172b[97]+ this[_$_172b[80]][_$_172b[82]][_$_172b[55]]+ _$_172b[98]);if(this[_$_172b[27]]){this[_$_172b[38]]= ((this[_$_172b[24]]!= 0)&& (A>= this[_$_172b[24]]))|| isMultiPage()};jslog(JSLOG_JSU,u+ _$_172b[99]+ this[_$_172b[38]])};this[_$_172b[100]]= A;var G=_$_172b[10];if(this[_$_172b[38]]){this[_$_172b[34]]= this[_$_172b[31]]+ ((this[_$_172b[28]])?SORT_IMG_NONE_SLOW:SORT_IMG_NONE_DIS);this[_$_172b[35]]= this[_$_172b[31]]+ ((this[_$_172b[28]])?SORT_IMG_ASC_SLOW:SORT_IMG_ASC_DIS);this[_$_172b[36]]= this[_$_172b[31]]+ ((this[_$_172b[28]])?SORT_IMG_DESC_SLOW:SORT_IMG_DESC_DIS);G= SORT_HINT_REC_NUM_PART[_$_172b[102]](_$_172b[101],A);if(this[_$_172b[28]]){this[_$_172b[63]]= SORT_HINT_GLOBAL_ASC+ _$_172b[103]+ G;this[_$_172b[64]]= SORT_HINT_GLOBAL_DESC+ _$_172b[103]+ G}else {this[_$_172b[63]]= SORT_HINT_DISABLED+ _$_172b[103]+ G;this[_$_172b[64]]= this[_$_172b[63]]}}else {this[_$_172b[34]]= this[_$_172b[31]]+ SORT_IMG_NONE_FAST;this[_$_172b[35]]= this[_$_172b[31]]+ SORT_IMG_ASC_FAST;this[_$_172b[36]]= this[_$_172b[31]]+ SORT_IMG_DESC_FAST;G= SORT_HINT_REC_NUM_ALL[_$_172b[102]](_$_172b[101],A);this[_$_172b[63]]= SORT_HINT_ASC+ _$_172b[103]+ G;this[_$_172b[64]]= SORT_HINT_DESC+ _$_172b[103]+ G};this[_$_172b[37]]= this[_$_172b[31]]+ SORT_IMG_WAIT;jslog(JSLOG_JSU,u+ _$_172b[104]+ this[_$_172b[34]]+ _$_172b[105]+ this[_$_172b[35]]+ _$_172b[106]+ this[_$_172b[36]]);if(this[_$_172b[27]]){jslog(JSLOG_JSU,u+ _$_172b[107]);var v=getFW();this[_$_172b[57]]= v[_$_172b[108]];this[_$_172b[57]][_$_172b[109]]= this;this[_$_172b[57]][_$_172b[110]]= this[_$_172b[111]];this[_$_172b[58]]= v[_$_172b[112]];this[_$_172b[58]][_$_172b[109]]= this;this[_$_172b[58]][_$_172b[110]]= this[_$_172b[113]];selectRemoveExtraItems(this[_$_172b[58]]);this[_$_172b[59]]= v[_$_172b[114]];this[_$_172b[60]]= v[_$_172b[115]];this[_$_172b[61]]= v[_$_172b[116]]};jslog(JSLOG_JSU,u+ _$_172b[117]);this[_$_172b[118]]=  new Array();var z=0;if(this[_$_172b[57]]){selectRemoveAll(this[_$_172b[57]])};for(var w=0;w< l[_$_172b[55]];w++){if(l[w][_$_172b[56]]== undefined){l[w][_$_172b[56]]= (w+ 1)};if(l[w][_$_172b[83]]== undefined){l[w][_$_172b[83]]= SORT_TYPE[_$_172b[1]]};if(this[_$_172b[57]]){appendOptionLast(this[_$_172b[57]],l[w][_$_172b[56]],l[w][_$_172b[56]])};z++};this[_$_172b[119]]= l;if(this[_$_172b[61]]){var F=this[_$_172b[61]][_$_172b[120]];jslog(JSLOG_JSU,_$_172b[121]+ F);if(F[_$_172b[55]]){var k=F[_$_172b[123]](_$_172b[122]);this[_$_172b[124]](k)}};if(this[_$_172b[57]]){jslog(JSLOG_JSU,_$_172b[125]);selectSelValue(this[_$_172b[57]],this[_$_172b[59]][_$_172b[120]]);selectSelValue(this[_$_172b[58]],this[_$_172b[60]][_$_172b[120]]);jslog(JSLOG_JSU,_$_172b[126]);this[_$_172b[51]]= this[_$_172b[57]][_$_172b[127]];this[_$_172b[52]]= this[_$_172b[60]][_$_172b[120]];this[_$_172b[53]]= this[_$_172b[59]][_$_172b[120]]};if(this[_$_172b[80]]){this[_$_172b[128]]()};if(B!= undefined){if(B[_$_172b[53]]|| B[_$_172b[52]]){var t=(B[_$_172b[129]]!= undefined&& B[_$_172b[129]]);jslog(JSLOG_JSU,u+ _$_172b[130]+ B[_$_172b[53]]+ _$_172b[131]+ B[_$_172b[52]]+ _$_172b[132]+ t);this[_$_172b[133]](B[_$_172b[53]],B[_$_172b[52]],t)}};if(this[_$_172b[38]]&& !this[_$_172b[28]]){this[_$_172b[134]]()};jslog(JSLOG_JSU,u+ JSLOG_FILE_END)};cSortTable[_$_172b[135]][_$_172b[133]]= function(M,N,I){var u=_$_172b[136];jslog(JSLOG_JSU,u+ JSLOG_FUN_START);if(I== undefined|| I== null){I= true};jslog(JSLOG_JSU,u+ _$_172b[137]+ M+ _$_172b[131]+ N+ _$_172b[138]+ SORT_DIR[_$_172b[7]]+ _$_172b[139]+ SORT_DIR[_$_172b[140]]+ _$_172b[141]+ I);var K=this[_$_172b[51]];if(M!= undefined){var K=this[_$_172b[142]](M);if(K< 0){return}};jslog(JSLOG_JSU,u+ _$_172b[143]+ K);var L=this[_$_172b[42]][K];if(I){var O=(N== SORT_DIR[_$_172b[7]])?SORT_DIR[_$_172b[140]]:SORT_DIR[_$_172b[7]];jslog(JSLOG_JSU,_$_172b[144]+ K+ _$_172b[145]+ O+ _$_172b[146]+ N);L[_$_172b[147]](SORT_ATTR_SORT_DIR,O);this[_$_172b[148]](L)}else {var P=L[_$_172b[149]];var J=P[_$_172b[150]];if(J!= this[_$_172b[51]]&& this[_$_172b[62]]!= 0){jslog(JSLOG_JSU,_$_172b[151]+ this[_$_172b[51]]+ _$_172b[152]+ J+ _$_172b[153]);this[_$_172b[62]][_$_172b[147]](SORT_ATTR_SORT_DIR,SORT_DIR[_$_172b[0]]);this[_$_172b[62]][_$_172b[147]](_$_172b[154],this[_$_172b[64]]);this[_$_172b[62]][_$_172b[147]](_$_172b[155],this[_$_172b[34]])};this[_$_172b[51]]= J;this[_$_172b[53]]= this[_$_172b[119]][this[_$_172b[51]]][_$_172b[56]];jslog(JSLOG_JSU,_$_172b[156]+ this[_$_172b[51]]+ _$_172b[157]+ this[_$_172b[53]]);this[_$_172b[62]]= L;L[_$_172b[147]](SORT_ATTR_SORT_DIR,N);this[_$_172b[52]]= N;if(N== SORT_DIR[_$_172b[7]]){L[_$_172b[147]](_$_172b[154],this[_$_172b[63]]);L[_$_172b[147]](_$_172b[155],this[_$_172b[35]])}else {L[_$_172b[147]](_$_172b[154],this[_$_172b[64]]);L[_$_172b[147]](_$_172b[155],this[_$_172b[36]])}};jslog(JSLOG_JSU,u+ JSLOG_FUN_END)};cSortTable[_$_172b[135]][_$_172b[124]]= function(Q){var u=_$_172b[158];jslog(JSLOG_JSU,u+ JSLOG_FUN_START);arTrace(JSLOG_JSU,Q,u+ _$_172b[159]);var T=this[_$_172b[57]][_$_172b[127]];jslog(JSLOG_JSU,u+ _$_172b[160]+ T);if(T< 0){jslog(JSLOG_JSU,u+ _$_172b[161]);return};jslog(JSLOG_JSU,u+ _$_172b[162]);var Y=this[_$_172b[57]][T][_$_172b[120]];jslog(JSLOG_JSU,u+ _$_172b[163]+ Y);var R=false;var U=Q[_$_172b[55]];this[_$_172b[33]]= _$_172b[10];for(var c=0;c< U;c++){this[_$_172b[33]]+= Q[c];this[_$_172b[33]]+= _$_172b[122];if(Q[c]== Y){R= true}};jslog(JSLOG_JSU,u+ _$_172b[164]+ this[_$_172b[33]]);selectRemoveAllOption(this[_$_172b[57]]);for(var c=0;c< this[_$_172b[119]][_$_172b[55]];c++){var V=this[_$_172b[119]][c];var X=V[_$_172b[56]];var W=X;var S=(this[_$_172b[33]][_$_172b[88]](X+ _$_172b[122])==  -1);if(S){appendOptionSelLast(this[_$_172b[57]],W,X,(X== Y))}};this[_$_172b[61]][_$_172b[120]]= this[_$_172b[33]];if(R){jslog(JSLOG_JSU,u+ _$_172b[165]);this[_$_172b[57]][_$_172b[127]]= 0;this[_$_172b[58]][_$_172b[127]]= 0};jslog(JSLOG_JSU,u+ JSLOG_FUN_END)};cSortTable[_$_172b[135]][_$_172b[166]]= function(){return this[_$_172b[53]]};cSortTable[_$_172b[135]][_$_172b[167]]= function(){return this[_$_172b[52]]};cSortTable[_$_172b[135]][_$_172b[168]]= function(){if(this[_$_172b[58]]){return selectGetSelText(this[_$_172b[58]])}else {return this[_$_172b[52]]}};cSortTable[_$_172b[135]][_$_172b[128]]= function(){var u=_$_172b[169];jslog(JSLOG_JSU,u+ JSLOG_FUN_START);jslog(JSLOG_JSU,u+ JSLOG_FUN_START);var X=_$_172b[10],W=_$_172b[10],H=_$_172b[10];if(this[_$_172b[80]]== 0){return jslog(JSLOG_JSU,u+ _$_172b[170],JSLOG_FUN_START)};jslog(JSLOG_JSU,_$_172b[171]+ this[_$_172b[51]]+ _$_172b[172]+ this[_$_172b[53]]+ _$_172b[173]+ this[_$_172b[52]]);if(this[_$_172b[80]][_$_172b[82]]&& this[_$_172b[80]][_$_172b[82]][_$_172b[55]]>= this[_$_172b[25]]){var bi=this[_$_172b[80]][_$_172b[82]][this[_$_172b[25]]- 1]};if(!bi){jslog(JSLOG_JSU,u+ _$_172b[174]+ this[_$_172b[25]]+ _$_172b[175]+ this[_$_172b[80]][_$_172b[82]][_$_172b[55]]);return};var bf=bi[_$_172b[176]][_$_172b[55]];var bh=0;if(this[_$_172b[61]]){var F=this[_$_172b[61]][_$_172b[120]];var k=F[_$_172b[123]](_$_172b[122]);for(var bk=0;bk< k[_$_172b[55]];bk++){if(k[bk]!= _$_172b[10]&& k[bk]!= null){bh++}};jslog(JSLOG_JSU,u+ _$_172b[177]+ bh)};var bg=this[_$_172b[119]][_$_172b[55]];var be=(bf< bg)?bf:(bg- bh);jslog(JSLOG_JSU,u+ _$_172b[178]+ bf+ _$_172b[179]+ bg+ _$_172b[180]+ be);jslog(JSLOG_JSU,u+ _$_172b[181]);for(var c=0;c< be;c++){var Z=bi[_$_172b[182]][c];var bj=this[_$_172b[43]][_$_172b[183]](false);var L=this[_$_172b[39]][_$_172b[183]](false);L[_$_172b[89]]= SORT_CLASSNAME;L[_$_172b[109]]= this;L[_$_172b[184]]= this[_$_172b[185]];var ba=this[_$_172b[52]];var bc=this[_$_172b[64]];var bd=this[_$_172b[34]];if(c== this[_$_172b[51]]&& !this[_$_172b[54]]){this[_$_172b[62]]= L;if(this[_$_172b[52]]== SORT_DIR[_$_172b[7]]){bd= this[_$_172b[35]];bc= this[_$_172b[63]]}else {bd= this[_$_172b[36]];bc= this[_$_172b[64]]}}else {ba= SORT_DIR[_$_172b[0]]};this[_$_172b[54]]= false;L[_$_172b[147]](SORT_ATTR_SORT_DIR,ba);L[_$_172b[147]](_$_172b[155],bd);L[_$_172b[147]](_$_172b[154],bc);if(this[_$_172b[119]][c][_$_172b[83]]!= SORT_TYPE[_$_172b[0]]){jslog(JSLOG_JSU,u+ _$_172b[186]+ c+ _$_172b[187]+ SORT_ATTR_SORT_DIR+ _$_172b[188]+ ba);Z[_$_172b[189]](bj);Z[_$_172b[189]](L)};this[_$_172b[42]][c]= L};jslog(JSLOG_JSU,u+ JSLOG_FUN_END)};cSortTable[_$_172b[135]][_$_172b[134]]= function(){var u=_$_172b[190];jslog(JSLOG_JSU,u+ JSLOG_FUN_START);if(this[_$_172b[80]]== 0){jslog(JSLOG_JSU,u+ _$_172b[191]+ JSLOG_FUN_END);return};var bm=this[_$_172b[80]][_$_172b[193]](_$_172b[192]);if(bm== null|| !bm[_$_172b[55]]){jslog(JSLOG_JSU,u+ _$_172b[194]+ JSLOG_FUN_END);return};this[_$_172b[29]]= false;for(var c=0;c< bm[_$_172b[55]];c++){var bl=bm[c];jslog(JSLOG_JSU,u+ _$_172b[195]+ bl[_$_172b[89]]);if(bl[_$_172b[89]]== SORT_CLASSNAME){jslog(JSLOG_JSU,u+ _$_172b[196]+ c+ _$_172b[197]);bl[_$_172b[147]](_$_172b[154],this[_$_172b[63]])}};jslog(JSLOG_JSU,u+ JSLOG_FUN_END)};cSortTable[_$_172b[135]][_$_172b[198]]= function(a,bo){var u=_$_172b[199];var K=cSortTableElCur[_$_172b[51]];var bn=a[_$_172b[182]][K];var bp=bo[_$_172b[182]][K];if(bp== undefined|| bn== undefined){if(cSortTableElCur[_$_172b[200]]== SORT_DIR[_$_172b[7]]){return 1}else {return -1}};aNumStr= ts_getInnerText(bn);bNumStr= ts_getInnerText(bp);if(aNumStr[_$_172b[55]]== 0){return -1};if(bNumStr[_$_172b[55]]== 0){return 1};aNum= str2Num(aNumStr,cSortTableElCur[_$_172b[201]],cSortTableElCur[_$_172b[46]]);bNum= str2Num(bNumStr,cSortTableElCur[_$_172b[201]],cSortTableElCur[_$_172b[46]]);var bq=0;bq= aNum- bNum;return bq};cSortTable[_$_172b[135]][_$_172b[202]]= function(a,bo){var u=_$_172b[203];var K=cSortTableElCur[_$_172b[51]];var bn=a[_$_172b[182]][K];var bp=bo[_$_172b[182]][K];if(bp== undefined|| bn== undefined){if(this[_$_172b[52]]== SORT_DIR[_$_172b[7]]){return 1}else {return -1}};var br=ts_getInnerText(bn);var bs=ts_getInnerText(bp);var bt=getTimeFromFormat(br,cSortTableElCur[_$_172b[30]]);var bu=getTimeFromFormat(bs,cSortTableElCur[_$_172b[30]]);if(bt== bu){return 0};if(bt< bu){return -1};return 1};cSortTable[_$_172b[135]][_$_172b[204]]= function(a,bo){var K=cSortTableElCur[_$_172b[51]];var bn=a[_$_172b[182]][K];var bp=bo[_$_172b[182]][K];if(bp== undefined|| bn== undefined){if(this[_$_172b[52]]== SORT_DIR[_$_172b[7]]){return 1}else {return -1}};aa= ts_getInnerText(bn)[_$_172b[102]](/[^0-9.]/g,_$_172b[10]);bb= ts_getInnerText(bp)[_$_172b[102]](/[^0-9.]/g,_$_172b[10]);return parseFloat(aa)- parseFloat(bb)};cSortTable[_$_172b[135]][_$_172b[205]]= function(a,bo){var u=_$_172b[206];var K=cSortTableElCur[_$_172b[51]];var bn=a[_$_172b[182]][K];var bp=bo[_$_172b[182]][K];if(bp== undefined|| bn== undefined){jslog(JSLOG_JSU,u+ _$_172b[207]);if(this[_$_172b[52]]== SORT_DIR[_$_172b[7]]){return 1}else {return -1}};aa= ts_getInnerText(bn)[_$_172b[208]]();bb= ts_getInnerText(bp)[_$_172b[208]]();var bq=0;if(aa== bb){bq= 0}else {if(aa< bb){bq=  -1}else {bq= 1}};return bq};cSortTable[_$_172b[135]][_$_172b[209]]= function(bw){var u=_$_172b[210];var bv=-1;for(var c=0;c< this[_$_172b[119]][_$_172b[55]];c++){var bx=this[_$_172b[119]][c][_$_172b[56]];if(this[_$_172b[33]][_$_172b[88]](bx+ _$_172b[122])==  -1){bv++};if(bv== bw){return bx}};return showErr(u+ _$_172b[211]+ this[_$_172b[51]]+ _$_172b[212]+ bw,1)};cSortTable[_$_172b[135]][_$_172b[213]]= function(bw){var u=_$_172b[214];var bx=this[_$_172b[209]](bw);for(var c=0;c< this[_$_172b[119]][_$_172b[55]];c++){var V=this[_$_172b[119]][c];if(V[_$_172b[56]]== bx){return V}};return showErr(u+ _$_172b[211]+ this[_$_172b[51]]+ _$_172b[215]+ bx,1)};cSortTable[_$_172b[135]][_$_172b[142]]= function(M){var u=_$_172b[216];for(var c=0;c< this[_$_172b[119]][_$_172b[55]];c++){var V=this[_$_172b[119]][c];if(V[_$_172b[56]]== M){return c}};return showErr(u+ _$_172b[217]+ M+ _$_172b[218],1)};cSortTable[_$_172b[135]][_$_172b[148]]= function(L){var u=_$_172b[219];jslog(JSLOG_JSU,u+ JSLOG_FUN_START);var P=L[_$_172b[149]];var J=P[_$_172b[150]];jslog(JSLOG_JSU,_$_172b[220]+ J+ _$_172b[221]+ this[_$_172b[51]]);if(J!= this[_$_172b[51]]&& this[_$_172b[62]]!= 0&& this[_$_172b[62]]!= undefined){jslog(JSLOG_JSU,_$_172b[151]+ this[_$_172b[51]]+ _$_172b[152]+ J+ _$_172b[153]);this[_$_172b[62]][_$_172b[147]](SORT_ATTR_SORT_DIR,SORT_DIR[_$_172b[0]]);this[_$_172b[62]][_$_172b[147]](_$_172b[154],this[_$_172b[64]]);this[_$_172b[62]][_$_172b[147]](_$_172b[155],this[_$_172b[34]])};this[_$_172b[51]]= J;this[_$_172b[53]]= this[_$_172b[119]][this[_$_172b[51]]][_$_172b[56]];jslog(JSLOG_JSU,_$_172b[156]+ this[_$_172b[51]]+ _$_172b[157]+ this[_$_172b[53]]);this[_$_172b[62]]= L;var by=L[_$_172b[222]](SORT_ATTR_SORT_DIR);jslog(JSLOG_JSU,u+ _$_172b[223]+ by);if(by== SORT_DIR[_$_172b[7]]){jslog(JSLOG_JSU,u+ _$_172b[224]);this[_$_172b[52]]= SORT_DIR[_$_172b[140]]}else {jslog(JSLOG_JSU,u+ _$_172b[225]);this[_$_172b[52]]= SORT_DIR[_$_172b[7]]};L[_$_172b[147]](_$_172b[155],this[_$_172b[37]]);L[_$_172b[147]](_$_172b[154],_$_172b[226]);cSortTableElCur= this;this[_$_172b[78]]= setTimeout(this[_$_172b[227]],SORT_TMO_WAIT_MS);jslog(JSLOG_JSU,u+ JSLOG_FUN_END)};cSortTable[_$_172b[135]][_$_172b[228]]= function(){var u=_$_172b[229];jslog(JSLOG_JSU,u+ JSLOG_FUN_START);var bz=getElementById2(_$_172b[230],false);var bA=getElementById2(_$_172b[231],false);if(bz== 0|| bA== 0){return jslog(JSLOG_JSU,u+ _$_172b[232]+ JSLOG_FUN_END)};var M=this[_$_172b[166]]();var bB=this[_$_172b[168]]();spanSetText(bz,M);spanSetText(bA,bB);jslog(JSLOG_JSU,u+ JSLOG_FUN_END)};cSortTable[_$_172b[135]][_$_172b[227]]= function(){var u=_$_172b[233];var bH;var bD= new Date();var bC=cSortTableElCur;clearTimeout(bC[_$_172b[78]]);jslog(JSLOG_JSU,u+ JSLOG_FUN_START);jslog(JSLOG_JSU,u+ _$_172b[234]+ cSortTable[_$_172b[51]]+ _$_172b[131]+ cSortTable[_$_172b[52]]+ _$_172b[235]+ cSortTable[_$_172b[38]]);bC[_$_172b[53]]= bC[_$_172b[209]](bC[_$_172b[51]]);if(bC[_$_172b[57]]){selectSelValue(bC[_$_172b[57]],bC[_$_172b[53]]);selectSelValue(bC[_$_172b[58]],bC[_$_172b[52]]);jslog(JSLOG_JSU,u+ _$_172b[236]+ bC[_$_172b[53]]+ _$_172b[237]+ bC[_$_172b[52]]);bC[_$_172b[59]][_$_172b[120]]= bC[_$_172b[53]];bC[_$_172b[60]][_$_172b[120]]= bC[_$_172b[52]]};if(bC[_$_172b[28]]&& bC[_$_172b[38]]){jslog(JSLOG_JSU,u+ _$_172b[238]);return cognosActionFINISH()};jslog(JSLOG_JSU,u+ _$_172b[239]);var P=bC[_$_172b[62]][_$_172b[149]];var J=P[_$_172b[150]];jslog(JSLOG_JSU,u+ _$_172b[220]+ J+ _$_172b[221]+ bC[_$_172b[51]]);var bI=bC[_$_172b[80]];var V=bC[_$_172b[213]](bC[_$_172b[51]]);jslog(JSLOG_JSU,_$_172b[240]+ bC[_$_172b[51]]+ _$_172b[241]+ bC[_$_172b[209]](bC[_$_172b[51]]));jslogObj(JSLOG_JSU,_$_172b[242],V);if(V[_$_172b[83]]== SORT_TYPE[_$_172b[2]]){bH= bC[_$_172b[198]];bC[_$_172b[201]]= (V[_$_172b[243]]== undefined)?bC[_$_172b[48]]:V[_$_172b[243]];bC[_$_172b[46]]= (V[_$_172b[244]]== undefined)?bC[_$_172b[47]]:V[_$_172b[244]];jslog(JSLOG_JSU,_$_172b[245]+ bC[_$_172b[201]]+ _$_172b[246]+ bC[_$_172b[46]])}else {if(V[_$_172b[83]]== SORT_TYPE[_$_172b[1]]){bH= bC[_$_172b[205]]}else {if(V[_$_172b[83]]== SORT_TYPE[_$_172b[3]]){bH= bC[_$_172b[202]];bC[_$_172b[30]]= (V[_$_172b[247]]== undefined)?SORT_DEF_FMT_DATETIME:V[_$_172b[247]];jslog(JSLOG_JSU,_$_172b[248]+ bC[_$_172b[30]])}else {return showErr(u+ _$_172b[249]+ szSortType,1)}}};jslog(JSLOG_JSU,_$_172b[250]);var bd,bc;if(bC[_$_172b[52]]== SORT_DIR[_$_172b[7]]){bd= bC[_$_172b[35]];bc= bC[_$_172b[63]]}else {bd= bC[_$_172b[36]];bc= bC[_$_172b[64]]};jslog(JSLOG_JSU,u+ _$_172b[251]+ SORT_ATTR_SORT_DIR+ _$_172b[188]+ bC[_$_172b[52]]);bC[_$_172b[62]][_$_172b[147]](SORT_ATTR_SORT_DIR,bC[_$_172b[52]]);bC[_$_172b[62]][_$_172b[147]](_$_172b[155],bd);bC[_$_172b[62]][_$_172b[147]](_$_172b[154],bc);var bG= new Array();var bE= new Array();jslog(JSLOG_JSU,u+ _$_172b[252]+ bC[_$_172b[26]]);for(var bF=bC[_$_172b[26]],c=0;bF< bI[_$_172b[82]][_$_172b[55]];bF++,c++){bG[c]= bI[_$_172b[82]][bF]};jslog(JSLOG_JSU,_$_172b[253]);cSortTableElCur= bC;bG[_$_172b[254]](bH);jslog(JSLOG_JSU,_$_172b[255]);if(bC[_$_172b[52]]== SORT_DIR[_$_172b[140]]){bG[_$_172b[256]]();jslog(JSLOG_JSU,_$_172b[257])};for(c= 0;c< bG[_$_172b[55]];c++){var C=bG[c][_$_172b[89]];var n=(C!= undefined&& C[_$_172b[88]](bC[_$_172b[32]])>= 0);if(!n){bI[_$_172b[258]][0][_$_172b[189]](bG[c])}};for(c= 0;c< bG[_$_172b[55]];c++){var C=bG[c][_$_172b[89]];var n=(C!= undefined&& C[_$_172b[88]](bC[_$_172b[32]])>= 0);if(n){bI[_$_172b[258]][0][_$_172b[189]](bG[c])}};if(bC[_$_172b[27]]){bC[_$_172b[228]]()};jslogElapsedTime(JSLOG_JSU,u+ _$_172b[259],bD);jslog(JSLOG_JSU,u+ JSLOG_FUN_END)};cSortTable[_$_172b[135]][_$_172b[260]]= function(bJ,bK){if(bJ== null){return null}else {if(bJ[_$_172b[261]]== 1&& bJ[_$_172b[262]][_$_172b[208]]()== bK[_$_172b[208]]()){return bJ}else {return this[_$_172b[260]](bJ[_$_172b[149]],bK)}}};cSortTable[_$_172b[135]][_$_172b[111]]= function(bL){var u=_$_172b[263];jslog(JSLOG_JSU,u+ JSLOG_FUN_START);var bC=cSortTable[_$_172b[264]](u,bL);var bx=selectGetSelVal(bC[_$_172b[57]]);jslog(JSLOG_JSU,u+ _$_172b[265]+ bx);bC[_$_172b[59]][_$_172b[120]]= bx;jslog(JSLOG_JSU,u+ JSLOG_FUN_END)};cSortTable[_$_172b[135]][_$_172b[113]]= function(bL){var u=_$_172b[266];jslog(JSLOG_JSU,u+ JSLOG_FUN_START);var bC=cSortTable[_$_172b[264]](u,bL);var bM=selectGetSelVal(bC[_$_172b[58]]);jslog(JSLOG_JSU,u+ _$_172b[267]+ bM);bC[_$_172b[60]][_$_172b[120]]= bM;jslog(JSLOG_JSU,u+ JSLOG_FUN_END)};cSortTable[_$_172b[135]][_$_172b[185]]= function(bL){var u=_$_172b[268];jslog(JSLOG_JSU,u+ JSLOG_FUN_START);var bC=cSortTable[_$_172b[264]](u,bL);var bO=this[_$_172b[262]];var bN;jslog(JSLOG_JSU,u+ _$_172b[269]+ this+ _$_172b[270]+ bO);if( typeof (bO)!= _$_172b[271]&& bO[_$_172b[272]]()== _$_172b[192]){bN= this}else {if(bC[_$_172b[62]]){jslog(JSLOG_JSU,u+ _$_172b[273]);bN= bC[_$_172b[62]]}else {jslog(JSLOG_ERR,u+ _$_172b[274]);return}};if(bC[_$_172b[29]]){bC[_$_172b[148]](bN)}else {showInfo(bC[_$_172b[63]])};jslog(JSLOG_JSU,u+ JSLOG_FUN_END)};cSortTable[_$_172b[264]]= function(u,bL){var u=_$_172b[275];jslog(JSLOG_JSU,u+ JSLOG_FUN_START);var bP=cSortTable[_$_172b[276]](bL);var bC=bP[_$_172b[109]];if( typeof (bC)== _$_172b[271]){showErr(u+ _$_172b[277]+ u,1)}else {jslog(JSLOG_JSU,u+ _$_172b[278]+ bC[_$_172b[35]])};jslog(JSLOG_JSU,u+ JSLOG_FUN_END);return bC};cSortTable[_$_172b[276]]= function(bL){var bQ=cSortTable[_$_172b[279]]?window[_$_172b[281]][_$_172b[280]]:bL[_$_172b[282]];while(bQ[_$_172b[261]]!= 1|| /^div$/i[_$_172b[283]](bQ[_$_172b[262]])){bQ= bQ[_$_172b[149]]};return bQ};cSortTable[_$_172b[279]]= (/msie/i[_$_172b[283]](navigator[_$_172b[284]])&& !/opera/i[_$_172b[283]](navigator[_$_172b[284]]))
+
+/** @fileOverview
+========================================================================================= <BR/> 
+<b>File:</b> 			core/cSortTable.js <BR/>
+<b>Author:</b>     		<a href="https://www.linkedin.com/in/federicolevis" target="_self">Federico Levis</a> <BR/>
+<b>SortTable Doc:</b>   <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/SortTable.html" target="_self">JSU SortTable Documentation</a> <BR/>
+<b>JSU API Doc:</b> <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/JSUAPI.html" target="_self">JSU API Documentation</a> <BR/>
+<b>Description:</b>     SortTable Class <BR/>   
+<b>REQUIRE:</b>          JSU: jsu.js   <BR/>
+<b>First Version:</b>     ver 1.0 - Feb 2010  <BR/>
+<b>Current Version:</b>   ver 1.8 - Jul 2016  <BR/>
+<BR/>-----------------------------------------------------------------------------------<BR/>
+<b>DISCLAIMER</b>  <BR/>
+Copyright by Federico Levis - <a href="https://github.com/FedericoLevis/JSU" target="_self">JSU</a> <BR/> 
+This file may be freely distributed under the MIT license.   <BR/>
+<BR/>-----------------------------------------------------------------------------------<BR/>
+<b>JSDoc NOTES</b>  <BR/>
+In "JSU Obfuscated Version"  JS Code is not visible with JSDoc Source Link  <BR/> 
+========================================================================================= <BR/> 
+*/
+
+
+//---------------------------------------------------------------------------------------------
+//       GLOBAL CONSTANT
+//---------------------------------------------------------------------------------------------
+
+/**
+ * SORT_TYPE (Default=STRING)
+ */ 
+var SORT_TYPE = {
+		NONE:'NONE',    // NO Sort for This column
+		STRING:'STRING',    // Default (used when it is not indicate the SORT_TYPE	)
+		NUMBER:'NUMBER',
+		DATETIME:'DATETIME'  // can be used for Date, DateTime, Time. For Format see date.js
+};
+
+/**
+ * SORT_DIR
+ */
+var SORT_DIR = {
+		ASC: "-1",    // Ascending (Do not change because this valiue is used By Cognos)
+		DESC: "1",
+		NONE: "NONE"
+};
+
+
+// ---------------------- Default Opt
+var SORT_DEF_COGNOS =  false;    
+var SORT_DEF_COGNOS_GLOBAL_SORT_EN =  false;    
+//----- NB: see date.js for possible formats
+//Default Format for SortType=DATETIME if SortInfo is not defined
+var SORT_DEF_FMT_DATETIME="MM/dd/yyyy HH:mm:ss";
+var SORT_DEF_PATH_IMG = JSU_PATH_IMG;
+var SORT_DEF_IND = 0;
+var SORT_DEF_DIR = SORT_DIR.ASC; 
+var SORT_DEF_APPLY = false;
+
+/**
+ * DEFAULT class that Identify FOOTER Rows for HTML using this class. It Can be passed a different class
+ */
+var SORT_TR_CLASS_FOOTER="footer";
+
+ 
+/**
+ * ONLY FOR COGNOS: CLASS that identify TR (IE) or TD (Chroome)
+ */
+var SORT_CLASS_FOOTER_COGNOS="summary";
+
+
+var SORT_INFO_ABSENT = "";
+
+
+// --------------------------------------------------FileName for Sort Icons.  The Base Path is configured in ext_conf.js
+// Fast Local Sort
+var   SORT_IMG_NONE_FAST = "fast_sort_none.jpg";
+var   SORT_IMG_ASC_FAST = "fast_sort_asc.jpg";
+var   SORT_IMG_DESC_FAST = "fast_sort_desc.jpg";
+// Slow Global Sort
+var   SORT_IMG_NONE_SLOW = "slow_sort_none.jpg";
+var   SORT_IMG_ASC_SLOW = "slow_sort_asc.jpg";
+var   SORT_IMG_DESC_SLOW = "slow_sort_desc.jpg";
+//Disable Sort
+var   SORT_IMG_NONE_DIS = "disabled_sort_none.jpg";
+var   SORT_IMG_ASC_DIS = "disabled_sort_asc.jpg";
+var   SORT_IMG_DESC_DIS = "disabled_sort_desc.jpg";
+//wait 
+var   SORT_IMG_WAIT = "wait.jpg";
+
+
+
+
+
+//---------------------------------------------------------------------------------------------
+//  Internal CONSTANT 
+//---------------------------------------------------------------------------------------------
+var SORT_ATTR_SORT_DIR = "SortDirCur";
+var SORT_TMO_WAIT_MS = 50;
+
+
+//---------------------------------------------------------------------------------------------
+//				SORT GLOBAL VAR
+//---------------------------------------------------------------------------------------------
+
+// the current SortTableEl because the sort function does not work properly
+var cSortTableElCur = null;
+
+
+//-------------------------
+
+//
+var SORT_CLASSNAME = "sortimg";
+
+
+
+//**************************************************************************
+//GLOBAL CONSTRUCTOR (N.B. at the Top of the file)
+//**************************************************************************
+
+/**
+ @class cSortTable 
+  
+  @param	{string} szElId      Id of the HTML TABLE to sort - If bCognos=true szElId=spanId that enclose the Cognos List to Sort 
+	@param	{array} arSortCol  Array with the SortCol (See Example below)
+	@param objOpt {Object}   Options: <ul>
+					<li>iRowHeader {Number}  Default =1   Number [1,2,..] of Row Header </li>
+					<li>iRowSortHeader {Number}  Default =1   Number [1,2,..] of the Row where we have to put the Sort Icon. e.g 2 if we have 2 row header and we want to put icon in the second row</li>
+					   NOTE: you can also define only one of previous. if you set only iRowHeader=2 also iRowSortHeader will be 2 </li>
+					   you can define both for particular cases (e.g iRowHeader=2 iRowSortHeader=1 for Filter presence) </li> 
+					<li>szSortCol	{String}		Current Sort Col to be set.	<BR/> 
+																Default. Par is absent and First Col is Set, without applying the Sort (we suppose Table already Sorted) <BR/>
+																To init without any SortCol, pass szSortCol = ""
+																<ul>
+																	<li> a) bCognos=false: First Col is Set  </li>
+																	<li> b) bCognos=true: Current Col is taken by selectSortCol </li>
+																</ul>
+															</li>		
+					<li>szSortDir	{String}		Current SortDir: SORT_DIR.ASC, SORT_DIR.DESC, SORT_DIR.NONE . <BR/>
+																Default: par is absent and we use: <ul>
+																	<li>a) bCognos=false: SORT_DIR.ASC </li>
+																	<li> b) bCognos=true: Current Dir is taken by selectSortDir </li>
+															</ul>
+														</li>			
+					<li>bSortApply {Boolean}	Default=false If true apply the current SortCol/ SortDir 											 </li>
+	  			<li>szFmtDatetime (String}  Fmt to be used for Datetime if the Info is passed for the DATETIME Columns into szSortCol .fmt parameter	 </li>
+	  			<li>szPathImg {String}   	BaseSortPath (e.g	"../../../images") to be used instead  of the default image Path </li>
+	  			<li>iTblRowPerPage {Number}   If present is the limit of Rows displayed in the Table. For Cognos is the Setting of the List properties RowPerPage <BR/>
+	  																When not present (default), we consider all the Table always displayed </li>
+	  			<li>szClassFooter {String}    class that identity the TR and/OR TD Footer rows					 </li>
+	  			<li>bNoStartupSortIco {Boolean} [false] true to avoid setting a default ico sort at startup (in the First col)
+					<li>bCognos				{Boolean}     default=false . true for Cognos  Sort: in this case szElId identifies the span in front of the Table </li>
+					<li>bCognosGlobalSort {Boolean} Default=false. Only for bCognos=true <BR/>
+																			When The Table is displayed and More than one Page is present we cannot make Local Sort: <ul>
+																			  <li> a) bCognosGlobalSort=false  LocalSort is Disable (Gray icons) </li>
+																			  <li> b) bCognosGlobalSort=false  If Click in Icon we re-execute the Report and mnake Global Sort (it can be Slow) </li>
+																		<ul>
+																	</li>		  
+
+
+	@example
+ 
+  // First 3 colums have default type: SORT_TYPE.STRING that is set when .type is not present 
+	var arSortCol = [  {col: 'Country'},   
+					{col: 'Last Name'},        
+					{col: 'Email'}, 
+	        {col:'Payment', type: SORT_TYPE.DATETIME, fmt: 'yyyy/MM/dd HH:mm'}, 
+	        {col: 'Amount', type: SORT_TYPE.NUMBER, groupSep:',', decimalSep:'.'}] 
+	  ]; 
+	var LIST_ROWS_PER_PAGE=1000; // RowPerPage properties: till 1000 Rec we can make FastSort 
+ 
+	// Cognos Table with 1000 RowsPerPage. Enable GlobalSort if the Table has More than 1000 Rec 
+	var cSortTbl1 = new cSortTable("tblSort",arSortCol,{bCognos=true,bCognosGlobalSort=true,iTblRowPerPage=LIST_ROWS_PER_PAGE); 
+	
+*/
+cSortTable = function (szElId, arSortCol,objOpt) {
+	var Fn = "[cSortTable] ";
+	  
+	jslog(JSLOG_JSU,Fn + JSLOG_FILE_START);
+	// Init Global Var
+	this.iTblRowPerPage = 0;
+	this.iRowSortHeader = 1; // Default. position [1..] of Sort in Header
+	this.iRowHeader = 1; // Default. 1 row for Header
+	this.bCognos = SORT_DEF_COGNOS;
+	this.bCognosGlobalSort=SORT_DEF_COGNOS_GLOBAL_SORT_EN;
+	this.bSortEn = true;
+	this.szFmtDatetime = SORT_DEF_FMT_DATETIME;
+	this.szPathImg = SORT_DEF_PATH_IMG;
+	this.szClassFooter =  SORT_TR_CLASS_FOOTER;
+	this.szSortHiddenId = "";
+	// Path of Sort Img
+	this.szSortPathNone= ""; 	this.szSortPathAsc=""; this.szSortPathDesc="", this.szSortPathWait= "";
+	this.bMultiPage = false; // default
+	this.imgTemp = document.createElement("img");
+	this.arSortImg = new Array(); // Array of SortImg
+	this.tempTextSep = document.createTextNode(" ");
+	this.szSortDecSep = ""; this.szSortDecSepLocale = "";
+	this.szSortGroupSepLocale = localeGetGroupSep();	
+	this.szSortDecSepLocale = localeGetDecimalSep();
+	jslog(JSLOG_JSU,Fn + "this.szSortDecSepLocale= " + this.szSortDecSepLocale + "  this.szSortGroupSepLocale = " + this.szSortGroupSepLocale); 
+	this.iSortColInd=SORT_DEF_IND;   // index corrent sort
+	this.szSortDir=SORT_DEF_DIR;  // Default
+	this.szSortCol=""; // Default
+	this.bNoStartupSortIco = false;
+	
+	if (arSortCol.length > 0){
+		this.szSortCol=   (arSortCol[0].col != undefined) ? arSortCol[0].col : "" ;    
+	} 
+	// [OPTIONAL, not used by HTML; DOM Object of Cognos BOX with select with Current SelCol and ColDir
+	this.selectSortCol=0; this.selectSortDir=0; this.inputSortCol=0; this.inputSortDir=0; this.inputSortHiddenCol=0;
+	this.imgSortCur=null; // Current Sort Image
+	this.szSortHintAsc=""; this.szSortHintDesc="";
+	this.iTblFooterRec=0;  // Number of Footer Rows
+	jslog(JSLOG_JSU,Fn + "IN szElId=" + szElId );
+	jslogObj(JSLOG_JSU,Fn + "IN arSortCol:",arSortCol,true);
+	// Options
+	
+	if (objOpt != undefined){
+		jslogObj(JSLOG_JSU,Fn + "objOpt", objOpt);
+		// Only if objOpt.szSortCol="" we set false
+		
+		if (objOpt.iRowHeader != undefined){
+			this.iRowHeader = objOpt.iRowHeader; 
+			jslog(JSLOG_JSU,Fn + "OPTION: iRowHeader=" + this.iRowHeader);
+			if (objOpt.iRowSortHeader == undefined){
+				objOpt.iRowSortHeader = objOpt.iRowHeader; 
+			} 
+		} 
+		if (objOpt.iRowSortHeader != undefined){
+			this.iRowSortHeader = objOpt.iRowSortHeader; 
+			jslog(JSLOG_JSU,Fn + "OPTION: iRowSortHeader=" + this.iRowSortHeader);
+			if (objOpt.iRowHeader == undefined){
+				objOpt.iRowHeader = objOpt.iRowSortHeader;
+				this.iRowHeader = objOpt.iRowHeader; 
+			} 
+		} 
+		if (objOpt.iTblRowPerPage != undefined){
+			this.iTblRowPerPage = objOpt.iTblRowPerPage; 
+			jslog(JSLOG_JSU,Fn + "OPTION: iTblRowPerPage=" + this.iTblRowPerPage );
+		} 
+		if (objOpt.bCognos != undefined){
+			this.bCognos=objOpt.bCognos;
+			jslog(JSLOG_JSU,Fn + "OPTION: bCognos=" + this.bCognos);
+		}	
+		if (objOpt.bCognosGlobalSort != undefined){
+			this.bCognosGlobalSort=objOpt.bCognosGlobalSort;
+			jslog(JSLOG_JSU,Fn + "OPTION: bCognosGlobalSort=" + this.bCognosGlobalSort);
+		}	
+		if (objOpt.szFmtDatetime != undefined){
+			this.szFmtDatetime=objOpt.szFmtDatetime;
+			jslog(JSLOG_JSU,Fn + "OPTION: szFmtDatetime=" + this.szFmtDatetime);
+		}	
+		if (objOpt.szPathImg != undefined){
+			this.szPathImg=objOpt.szPathImg;
+			jslog(JSLOG_JSU,Fn + "OPTION: szPathImg=" + this.szPathImg);
+		}	
+		if (objOpt.szClassFooter != undefined){
+			this.szClassFooter=objOpt.szClassFooter;
+			jslog(JSLOG_JSU,Fn + "OPTION: szClassFooter=" + this.szClassFooter);
+		}	
+		if (objOpt.bNoStartupSortIco != undefined){
+			this.bNoStartupSortIco=objOpt.bNoStartupSortIco;
+			jslog(JSLOG_JSU,Fn + "OPTION: bNoStartupSortIco=" + this.bNoStartupSortIco);
+		}	
+		
+	}
+	this.tmoSortApply=null;
+	if (this.bCognos){
+		this.szClassFooter = SORT_CLASS_FOOTER_COGNOS;
+		jslog(JSLOG_JSU,Fn + "For COGNOS ALWAYS szClassFooter=" + this.szClassFooter);
+	}	
+	
+	// ------- HTML or COGNOS?
+	if (this.bCognos){
+		// For COGMOS it is a SPAN containing the TABLE
+		this.tblSort = getElementByTag2("TABLE","tblSort",false);
+	}else {
+		// For HTML the Id is the Id of the Table
+		this.tblSort = getElementById2(szElId,true);
+	}
+	if (this.tblSort == 0){
+		return;
+	}
+	var iTblRecNum = 0;  // Count the number of Records (Skip First row=header  Footer with class="summary")
+	this.iTblFooterRec = 0;
+	if (this.tblSort!= undefined && this.tblSort.rows != undefined){
+		// skip Header Rows
+		for (var i=this.iRowSortHeader; i < this.tblSort.rows.length ; i++){
+			var szType = 	this.tblSort.rows[i].firstChild.type; // for Cognos it set into TD
+			// Particular case for Chrome: I have to find type="summary" into outerHTML 
+			var bOuterHTMLSummary = false;
+			var szOuterHTML = this.tblSort.rows[i].firstChild.outerHTML;
+			var iPosTypeSummary = -1;
+			if (szOuterHTML != undefined){
+				iPosTypeSummary =  szOuterHTML.indexOf('type="'  + this.szClassFooter  +  '"');
+				if (iPosTypeSummary >= 0){
+					bOuterHTMLSummary = true;
+				}
+			}
+			var szClassName = 	this.tblSort.rows[i].className; // For HTML
+			// jslog (JSLOG_JSU,"ROW [" + i + "] szType=" + szType + " szClassName=" + szClassName + "   iPosTypeSummary=" + iPosTypeSummary + " bOuterHTMLSummary=" + bOuterHTMLSummary);
+			if (this.bCognos){
+				szClassName = szType;
+			}	
+			var bFooter =   (bOuterHTMLSummary ||  (szClassName != undefined &&  szClassName.indexOf(this.szClassFooter) >=0));
+			// jslog (JSLOG_JSU,"szClassName=" + szClassName +   " bOuterHTMLSummary=" + bOuterHTMLSummary + "  szClassFooter=" +  this.szClassFooter + " --> bFooter=" + bFooter);
+			if (szType != "columnTitle" && !bFooter){
+				iTblRecNum++;
+			}
+			if (bFooter){
+				jslog(JSLOG_JSU,"Rec [" + i + "]  IS FOOTER" );
+				if (this.bCognos){
+					// Set also className to have the same sort algorith and identify footer by classname
+					this.tblSort.rows[i].className = this.szClassFooter;  
+				}
+				this.iTblFooterRec++;
+			}
+		}
+		jslog(JSLOG_JSU,Fn + "TABLE iTblRecNum=" + iTblRecNum + " - iRowHeader=" + this.iRowHeader + " iRowSortHeader=" + this.iRowSortHeader + "  iTblFooterRec=" + this.iTblFooterRec + "  (rows=" + this.tblSort.rows.length +  ")");
+		// For Cognos: check if MultiPage
+		if (this.bCognos){
+			// bMultiPage true: if we find the Link for Top Down (isMultiPage), or if there are more row that the one of the List
+			this.bMultiPage =  ((this.iTblRowPerPage != 0) &&  (iTblRecNum >= this.iTblRowPerPage)) || isMultiPage(); 
+		}
+		
+		jslog(JSLOG_JSU,Fn + "this.bMultiPage=" + this.bMultiPage);
+	}
+	this.iTblRecNum = iTblRecNum;
+	var szSortHintRecNum="";
+	if (this.bMultiPage){
+		this.szSortPathNone= this.szPathImg +   ((this.bCognosGlobalSort) ?  SORT_IMG_NONE_SLOW :  SORT_IMG_NONE_DIS);
+		this.szSortPathAsc= this.szPathImg + ((this.bCognosGlobalSort) ?  SORT_IMG_ASC_SLOW :  SORT_IMG_ASC_DIS);
+		this.szSortPathDesc= this.szPathImg + ((this.bCognosGlobalSort) ?  SORT_IMG_DESC_SLOW :  SORT_IMG_DESC_DIS);
+		szSortHintRecNum = SORT_HINT_REC_NUM_PART.replace("XXX",iTblRecNum);
+		if (this.bCognosGlobalSort){
+			this.szSortHintAsc = SORT_HINT_GLOBAL_ASC + "\n\n" + szSortHintRecNum;
+			this.szSortHintDesc = SORT_HINT_GLOBAL_DESC + "\n\n" + szSortHintRecNum;
+		}else{
+			this.szSortHintAsc = SORT_HINT_DISABLED + "\n\n" + szSortHintRecNum;
+			this.szSortHintDesc = this.szSortHintAsc;
+
+		}
+	}else{
+		this.szSortPathNone= this.szPathImg +   SORT_IMG_NONE_FAST;
+		this.szSortPathAsc= this.szPathImg + SORT_IMG_ASC_FAST;
+		this.szSortPathDesc= this.szPathImg + SORT_IMG_DESC_FAST;
+		szSortHintRecNum = SORT_HINT_REC_NUM_ALL.replace("XXX",iTblRecNum);
+		this.szSortHintAsc = SORT_HINT_ASC + "\n\n" + szSortHintRecNum;
+		this.szSortHintDesc = SORT_HINT_DESC + "\n\n" + szSortHintRecNum;
+	}
+	this.szSortPathWait=  this.szPathImg +   SORT_IMG_WAIT;
+	jslog(JSLOG_JSU,Fn + "this.szSortPathNone=" + this.szSortPathNone + " this.szSortPathAsc=" + this.szSortPathAsc + " this.szSortPathDesc=" + this.szSortPathDesc); 
+	if (this.bCognos){
+		jslog(JSLOG_JSU,Fn + "Get select of SORT BOX Otions (e.g for Cognos)"); 
+		var fW = getFW(); // get Form Warp
+		this.selectSortCol = fW._oLstChoices_SelectSortCol;
+		this.selectSortCol._cSortTableEl  = this; // To be used in Event
+		this.selectSortCol.onchange = this.onchangeSortCol;
+		this.selectSortDir = fW._oLstChoices_SelectSortDir;  
+		this.selectSortDir._cSortTableEl  = this; // To be used in Event
+		this.selectSortDir.onchange = this.onchangeSortDir;
+		selectRemoveExtraItems(this.selectSortDir);   // Remove first 2 Extra Cogns Items
+		this.inputSortCol = fW._textEditBox_SortCol;
+		this.inputSortDir = fW._textEditBox_SortDir;
+		this.inputSortHiddenCol = fW._textEditBox_SortHiddenCol;
+	}
+	//------------------------------------------
+	jslog(JSLOG_JSU,Fn + "populate this.arcSortItem"); 
+  //all the sortItem info
+	this.arcSortItem = new Array();
+  var iSortNum=0;
+  if (this.selectSortCol){
+    selectRemoveAll (this.selectSortCol);
+  }
+  // Set default value when not present
+  for (var iAr=0; iAr < arSortCol.length; iAr++) {
+  	if (arSortCol[iAr].col == undefined){
+  		arSortCol[iAr].col = (iAr+1);  // if objSortCol.col is undefined we set [1,2,....] 
+  	}
+  	if (arSortCol[iAr].type == undefined){
+  		arSortCol[iAr].type = SORT_TYPE.STRING; 
+  	}	
+    if (this.selectSortCol){
+    	appendOptionLast (this.selectSortCol,arSortCol[iAr].col,arSortCol[iAr].col);
+    }	
+  	iSortNum ++;
+  }
+  this.arSortCol = arSortCol;
+  //jslogObj(JSLOG_JSU,"this.arSortCol", this.arSortCol);
+	//-------------------------------------------
+	if (this.inputSortHiddenCol){
+		var szSortHidden = this.inputSortHiddenCol.value; // E.G  "Country,PLMN"
+		jslog(JSLOG_JSU,"szSortHidden = " + szSortHidden);
+		if (szSortHidden.length){
+			var ArColHidden = szSortHidden.split(",");
+			this.sorttableSetHiddenCol(ArColHidden); 
+		}
+	}  
+	//------------------------------------
+	if (this.selectSortCol){
+		jslog(JSLOG_JSU, "Align Current Sort Selection to Visible Fields");
+		selectSelValue(this.selectSortCol,this.inputSortCol.value);
+		selectSelValue(this.selectSortDir,this.inputSortDir.value);
+		jslog(JSLOG_JSU, "Init Global Val form Cognos Hidden Fields");
+		this.iSortColInd =  this.selectSortCol.selectedIndex ;
+	  this.szSortDir = this.inputSortDir.value;
+	  this.szSortCol = this.inputSortCol.value;
+	}  
+	if (this.tblSort){
+		this.sortInit();
+	}
+	// If required by objOpt, set Initial Sort
+	if (objOpt != undefined){
+		if (objOpt.szSortCol || objOpt.szSortDir){
+			var bSortApply = (objOpt.bSortApply != undefined && objOpt.bSortApply); 
+			jslog (JSLOG_JSU,Fn + "Obtional Initial Sort is SET: SortCol=" + objOpt.szSortCol + 
+					   " szSortDir=" + objOpt.szSortDir + " bSortApply=" + bSortApply);
+		  this.setSort (objOpt.szSortCol,objOpt.szSortDir,bSortApply);
+		}
+	}	
+	
+	if (this.bMultiPage && !this.bCognosGlobalSort){
+		this.sorttableDisableSort();
+	}
+	jslog(JSLOG_JSU,Fn + JSLOG_FILE_END);
+};
+
+
+/*****************************************************************************************************
+******************************************************************************************************
+					GLOBAL FUNCTIONS
+******************************************************************************************************
+*****************************************************************************************************/
+
+
+/* 
+Set SortCol and SortDir and Apply It
+@param szSortCol {string} 
+@param szSortDir {string} in SORT_DIR.ASC or SORT_DIR.DESC
+@param [bResortTable] {Boolean} in Default=true    if true the Sort is Resort basing on szSortCol/SzSortDir
+ 																									 if false the Sort is only aplied to the SortIcon. 
+ 																									 Pass bResortTable=false if the Table is already sorted by szSortCol/SzSortDir  	
+ */
+cSortTable.prototype.setSort = function (szSortCol, szSortDir,bResortTable) {
+  var Fn = "[cSortTable.setSort] ";
+	jslog(JSLOG_JSU,Fn + JSLOG_FUN_START);
+	if (bResortTable == undefined || bResortTable == null){
+		bResortTable = true; // Deafault
+	}
+	jslog(JSLOG_JSU,Fn + "IN szSortCol=" + szSortCol + " szSortDir=" + szSortDir + " (" + SORT_DIR.ASC + "=ASC  " + SORT_DIR.DESC + "=DESC )  bResortTable=" + bResortTable);
+	var iSortColInd = this.iSortColInd; // Default
+	if (szSortCol != undefined){
+	  var iSortColInd = this.getSortIndFromSortCol(szSortCol);
+	  if (iSortColInd <0){
+	  	return; // ERROR
+	  }
+	}
+	jslog(JSLOG_JSU,Fn + "iSortColInd=" + iSortColInd);
+  // Get SortImg and 
+  var SortImg = this.arSortImg[iSortColInd];
+  if (bResortTable){
+	  // simulate The state to Obtain with resortTable the desired new state
+	  var szSortDirTmp= (szSortDir == SORT_DIR.ASC) ? SORT_DIR.DESC : SORT_DIR.ASC;
+	  jslog (JSLOG_JSU,"simulate having for iSortColInd=" + iSortColInd + " The szSortDirTmp=" + szSortDirTmp + 
+	  		"to Obtain with resortTable the desired new szSortDir=" + szSortDir);
+	  SortImg.setAttribute(SORT_ATTR_SORT_DIR,szSortDirTmp);
+	  this.resortTable (SortImg);
+  }else {
+  	// only Update the Sort Icon
+	  var td = SortImg.parentNode;
+	  var iNewSortCol = td.cellIndex;  // current Column  [0,1...]
+	  if (iNewSortCol != this.iSortColInd  && this.imgSortCur != 0){
+	    jslog(JSLOG_JSU,"Changed Sort column from " + this.iSortColInd + " to "  + iNewSortCol + "   --> Reset Previous Img");
+	    this.imgSortCur.setAttribute(SORT_ATTR_SORT_DIR,SORT_DIR.NONE);
+	    this.imgSortCur.setAttribute("title",this.szSortHintDesc);  // like it is Desc because clicking it will be ASC 
+	    this.imgSortCur.setAttribute("src",this.szSortPathNone);
+	  }
+	  this.iSortColInd = iNewSortCol;   // Set Global Var with current Sort Col Ind
+	  this.szSortCol = this.arSortCol[this.iSortColInd].col; 
+	  jslog(JSLOG_JSU,"SET iSortColInd = " + this.iSortColInd + "  szSortCol=" + this.szSortCol);
+	  this.imgSortCur = SortImg;
+	  // Set also New this.szSortDir
+	  SortImg.setAttribute(SORT_ATTR_SORT_DIR,szSortDir);
+    this.szSortDir = szSortDir;
+    if (szSortDir == SORT_DIR.ASC){
+	    SortImg.setAttribute("title",this.szSortHintAsc); 
+	    SortImg.setAttribute("src",this.szSortPathAsc);
+    }else{
+	    SortImg.setAttribute("title",this.szSortHintDesc); 
+	    SortImg.setAttribute("src",this.szSortPathDesc);
+    }
+	  
+  }  
+	jslog(JSLOG_JSU,Fn + JSLOG_FUN_END);
+};
+
+
+/**
+ FOR COGNOS: Exclude some cols form sorttable management (e.g. becuase they are  hidden)
+@param ArColId  [Array] with some ColId e.g ['Country','PLMN']
+      GLOBAL
+this.inputSortHiddenCol in/out (set value)
+this.szSortHiddenId    out  e.g "Carrier,PLMN"
+this.arSortCol
+ */
+cSortTable.prototype.sorttableSetHiddenCol= function (ArColId) {
+  var Fn = "[cSortTable.sorttableSetHiddenCol] ";
+  jslog(JSLOG_JSU,Fn + JSLOG_FUN_START);
+  arTrace(JSLOG_JSU,ArColId,Fn + "ArColId");  
+  var iSelInd = this.selectSortCol.selectedIndex;
+  jslog(JSLOG_JSU,Fn + "this.selectSortCol iSelInd=" + iSelInd);
+  if (iSelInd < 0){
+	  jslog(JSLOG_JSU,Fn + "return (iSelInd <0)");
+    return;
+  }
+  // Prepare
+  jslog(JSLOG_JSU,Fn + "Prepare this.szSortHiddenId with the ColId to Hide");
+  var szSortIdCur = this.selectSortCol[iSelInd].value;  // Current SortId
+  jslog(JSLOG_JSU,Fn + "szSortIdCur=" + szSortIdCur);
+  var bSortCurHidden = false ; // true if szSortIdCur has been Hidde
+  var iSize= ArColId.length;
+  this.szSortHiddenId =  "";
+  for(var i=0;i < iSize;i++) {
+    this.szSortHiddenId += ArColId[i];
+    this.szSortHiddenId += ",";
+	  if (ArColId[i] == szSortIdCur){
+	    bSortCurHidden = true; // True if the curent Sort is Hidden
+	  }
+  }
+  // e.g. this.szSortHiddenId =IC,COUNTRY,IC_NODE_TYPE,GATEWAY_NODE,GATEWAY_NODE_TYPE,DEST_REGION,TRUNK,
+  
+  jslog(JSLOG_JSU,Fn + "this.szSortHiddenId =" + this.szSortHiddenId);
+  // Populate this.selectSortCol with only the Visible Items
+  selectRemoveAllOption(this.selectSortCol);
+  
+  for (var i=0; i< this.arSortCol.length; i++){
+  	var objSortCol = this.arSortCol[i];
+    var szId = objSortCol.col;
+    var szCol = szId;
+    // is it in the Hidden Cols? (N.B append "," at the end to avoid problem ID containing other id (e.g IC IC_NODE) 
+    var bVisible = (this.szSortHiddenId.indexOf(szId + ",") == -1);
+    // jslog(JSLOG_JSU,Fn + "szId =" + szId + "  szCol=" + szCol + "   bVisible=" + bVisible);
+	  if (bVisible){
+	    // szId is not in the Hidden Ones --> I add it
+      appendOptionSelLast(this.selectSortCol,szCol,szId,(szId == szSortIdCur));
+	  }  
+  }
+  this.inputSortHiddenCol.value  = this.szSortHiddenId;
+  // if current SortCol is in the szColsExcluded reset to default Sort (FirstCol Ascending)
+  if (bSortCurHidden){
+    jslog(JSLOG_JSU,Fn + "Previous SortCol Has been Hidden --> Set DefaultSort (First Col Asc)");
+    this.selectSortCol.selectedIndex = 0;
+	  this.selectSortDir.selectedIndex = 0;
+  }
+  
+  jslog(JSLOG_JSU,Fn + JSLOG_FUN_END);
+};
+
+
+
+
+/**
+ * @returns   Current SortCol label
+ */
+cSortTable.prototype.getSortCol= function () {
+	return   this.szSortCol;
+};
+
+
+/**
+ * @returns   Current SortDir SORT_DIR.ASC,...
+ */
+cSortTable.prototype.getSortDir= function () {
+	return  this.szSortDir;
+};
+
+
+/**
+ * @returns   Current SortDirLabel (Only For Cognos) 
+ */
+cSortTable.prototype.getSortDirLabel= function () {
+	if (this.selectSortDir){
+		return selectGetSelText(this.selectSortDir);
+	}else{
+		return  this.szSortDir;
+	}
+};
+
+
+
+
+
+
+
+//**************************************************************************
+//**************************************************************************
+//LOCAL FUNCTIONS  (N.B prototype and using this)
+//**************************************************************************
+//**************************************************************************
+
+/*-----------------------------------------------------------
+ Init Sort 
+ -- Create sort icons and set them ASC/DESC/NONE  basing on this. variables
+------------------------------------------------------------*/
+cSortTable.prototype.sortInit = function () {
+	var Fn = "[cSortTable.sortInit] ";
+	jslog(JSLOG_JSU,Fn + JSLOG_FUN_START);
+	jslog(JSLOG_JSU,Fn + JSLOG_FUN_START);
+	var szId="", szCol="", szType="";
+	
+	if (this.tblSort == 0){
+	  return jslog(JSLOG_JSU,Fn + "Nothing to DO: there is NOT Table to Sort in this Page",JSLOG_FUN_START);
+	}
+	jslog(JSLOG_JSU,"CURRENT SORT: iSortColInd=" + this.iSortColInd +  "  szSortColCur=" + this.szSortCol + "  szSortDirCur=" + this.szSortDir);
+	// this.tblSort.rows = object with all the rows of the this.tblSort. The first row is Header
+	if (this.tblSort.rows && this.tblSort.rows.length >= this.iRowSortHeader) {
+	   var sortRow = this.tblSort.rows[this.iRowSortHeader-1];
+	}
+	if (!sortRow) {
+	  jslog(JSLOG_JSU,Fn + "Table without Rows to Sort. iRowSortHeader=" + this.iRowSortHeader + "  NumRow=" + this.tblSort.rows.length);
+	  return;
+	}
+	//---------  manage click on Header when the cell is selected
+	var iColVis = sortRow.childNodes.length;
+	var numColHidden = 0;
+	if (this.inputSortHiddenCol){
+	  //when number of visible column > number of sort column 
+	  var szSortHidden = this.inputSortHiddenCol.value; 
+	  var ArColHidden = szSortHidden.split(",");
+	  for(var y = 0; y < ArColHidden.length; y++){
+		  if(ArColHidden[y]!= "" && ArColHidden[y]!= null)numColHidden++;
+	  }
+	  jslog(JSLOG_JSU,Fn +  "numColHidden="+numColHidden);
+	}
+	
+	// Only Visible Columns will be sorted. sort ar could contains more elements (in some reports I could remove elements after)
+	var iSortColNum = this.arSortCol.length;
+	var iColSort = (iColVis < iSortColNum) ? iColVis : (iSortColNum - numColHidden);
+	jslog(JSLOG_JSU,Fn +  "iColVis="+iColVis + "  iSortColNum=" + iSortColNum +   "  ---> iColSort="+iColSort);
+	
+	jslog(JSLOG_JSU,Fn + " Prepare icons (arSortImg), events and set Current Sort");
+	for (var i=0;i<iColSort;i++) {
+		var CurCell = sortRow.cells[i];
+		// var txt = ts_getInnerText(CurCell);
+		var TextSep = this.tempTextSep.cloneNode(false);
+		//
+		var SortImg = this.imgTemp.cloneNode(false);
+		//
+		SortImg.className = SORT_CLASSNAME;  
+		SortImg._cSortTableEl  = this; // To be used in Event
+		SortImg.onclick = this.onclickSortImg;
+		var CurDir=this.szSortDir;
+		var CurHint=this.szSortHintDesc;  // LIke it is Desc, because clicking it will become Asc   
+		var CurImgPath=this.szSortPathNone;
+		if (i == this.iSortColInd && !this.bNoStartupSortIco)
+		{
+			this.imgSortCur = SortImg;  // Global Var
+			// Current Sort Column
+			if (this.szSortDir == SORT_DIR.ASC){
+				CurImgPath=this.szSortPathAsc;
+				CurHint=this.szSortHintAsc;
+			} 
+			else{
+				CurImgPath=this.szSortPathDesc;
+				CurHint=this.szSortHintDesc;
+			} 
+		}  
+		else {
+			CurDir=SORT_DIR.NONE;
+		}
+		this.bNoStartupSortIco = false; // only at startup we want this flag
+		SortImg.setAttribute(SORT_ATTR_SORT_DIR, CurDir);
+		SortImg.setAttribute("src", CurImgPath);
+		SortImg.setAttribute("title", CurHint);
+		if (this.arSortCol[i].type != SORT_TYPE.NONE){
+			jslog(JSLOG_JSU,Fn + "ADD to Col  [" + i + "] the SORT IMG - Attribute (" + SORT_ATTR_SORT_DIR + ") = " + CurDir );
+			CurCell.appendChild(TextSep);
+			CurCell.appendChild(SortImg);
+		}	
+		// Save SortImg in Global Array
+		this.arSortImg[i] = SortImg;
+	}
+	jslog(JSLOG_JSU,Fn + JSLOG_FUN_END);
+};
+
+
+/*-----------------------------------------------------------
+Disable SortImages (for example when the layout of Sort has changed due to filter selection)
+------------------------------------------------------------*/
+cSortTable.prototype.sorttableDisableSort = function () {
+  var Fn = "[cSortTable.sorttableDisableSort] ";
+  jslog(JSLOG_JSU,Fn + JSLOG_FUN_START);
+  if (this.tblSort == 0){
+    jslog(JSLOG_JSU,Fn + "tblSort NOT VISIBLE" + JSLOG_FUN_END);
+    return;
+  }
+  
+  var ImgList = this.tblSort.getElementsByTagName("IMG");
+
+  if (ImgList == null  || !ImgList.length) {
+      jslog(JSLOG_JSU,Fn + "ImgList is Empty. Nothing to do"+ JSLOG_FUN_END);
+      return;
+  }
+  this.bSortEn =false;  
+  for(var i=0; i<ImgList.length; i++) {
+  	var ImgEl = ImgList[i];
+    jslog(JSLOG_JSU,Fn + "className=" + ImgEl.className);
+  	if (ImgEl.className == SORT_CLASSNAME){
+      jslog(JSLOG_JSU,Fn + "Disable ImgEl[" + i +"]");
+      // NOTE we prefer to mantain it enabled and show the message SORT_HINT_DISABLED when someone click 
+    	// ImgEl.disabled = true; 
+      // (this.szSortHintAsc and this.szSortHintDesc are the same in this case)
+    	ImgEl.setAttribute("title", this.szSortHintAsc);
+  	}
+  }
+
+  jslog(JSLOG_JSU,Fn + JSLOG_FUN_END);
+};
+
+
+
+
+/* -----------------------------------------------------
+NB: we have to use global var cSortTableElCur, this does not work here 
+@param a  row
+@param b  row
+ 			GLOBAL
+cSortTableElCur 			
+----------------------------------------------------- */
+cSortTable.prototype.ts_sort_numeric = function (a,b) {
+    var Fn = "[cSortTable.ts_sort_numeric] ";
+    var iSortColInd = cSortTableElCur.iSortColInd;
+
+ 	 var aCellEl = a.cells[iSortColInd];
+	 var bCellEl = b.cells[iSortColInd];
+	 // For FOOTER case
+	  if (bCellEl == undefined || aCellEl== undefined){
+	  	if (cSortTableElCur.szSortDirCur == SORT_DIR.ASC){
+	    	return 1;
+	  	}else {
+	  		return -1;
+	  	}
+	  } 
+	  
+    aNumStr = ts_getInnerText(aCellEl);
+    bNumStr = ts_getInnerText(bCellEl);
+    
+  //jslog (JSLOG_JSU, Fn + " aNumStr=" + aNumStr + " bNumStr="+ bNumStr);
+	// Particular Cases to manage aNumStr and bNumStr=0
+	if (aNumStr.length == 0){
+    // jslog(JSLOG_JSU,Fn + " aNumStr=" + aNumStr + "  bNumStr=" + bNumStr + " ---> return -1");
+	  return -1;
+	}
+	if (bNumStr.length == 0){
+    // jslog(JSLOG_JSU,Fn + " aNumStr=" + aNumStr + "  bNumStr=" + bNumStr + " ---> return 1");
+	  return 1;
+	}
+
+  aNum = str2Num(aNumStr,cSortTableElCur.szSortGroupSep,cSortTableElCur.szSortDecSep);
+  bNum = str2Num(bNumStr,cSortTableElCur.szSortGroupSep,cSortTableElCur.szSortDecSep);
+
+	var iRet = 0;
+	iRet = aNum-bNum;
+  // jslog(JSLOG_JSU,Fn + " aNumStr=" + aNumStr + " aNum=" + aNum +  "  bNumStr=" + bNumStr + " bNum=" + bNum + " ---> return " + iRet);
+  return iRet;
+};
+
+
+/* -----------------------------------------------------
+sort for DATETIME
+NB: we have to use global var cSortTableElCur, this does not work here 
+@param a  row
+@param b  row
+ 			GLOBAL
+cSortTableElCur 			
+----------------------------------------------------- */
+cSortTable.prototype.ts_sort_datetime = function (a,b) {
+  var Fn = "[cSortTable.ts_sort_datetime] ";
+  // jslog(JSLOG_JSU,Fn + JSLOG_FUN_START);
+  
+  var iSortColInd = cSortTableElCur.iSortColInd;
+	var aCellEl = a.cells[iSortColInd];
+	var bCellEl = b.cells[iSortColInd];
+	// For FOOTER case
+	if (bCellEl == undefined || aCellEl== undefined){
+	  	if (this.szSortDir == SORT_DIR.ASC){
+	    	return 1;
+	  	}else {
+	  		return -1;
+	  	}
+	} 
+  
+  var DateTxt1 = ts_getInnerText(aCellEl);
+  var DateTxt2 = ts_getInnerText(bCellEl);
+  // jslog(JSLOG_JSU,Fn + " DateTxt1=" + DateTxt1 + "   DateTxt2=" + DateTxt2);
+  // Convert To date
+  var iTime1 = getTimeFromFormat(DateTxt1,cSortTableElCur.szFmtDatetime);
+  var iTime2 = getTimeFromFormat(DateTxt2,cSortTableElCur.szFmtDatetime);
+  // jslog(JSLOG_JSU,Fn + " DateTxt1=" + DateTxt1 + " (" + iTime1 +  ")    DateTxt2=" + DateTxt2 + " (" + iTime2 + ")");
+  
+  if (iTime1==iTime2) return 0;
+  if (iTime1<iTime2) return -1;
+  return 1;
+};
+
+
+/* -----------------------------------------------------
+sort for CURRENCY
+NB: we have to use global var cSortTableElCur, this does not work here 
+@param a  row
+@param b  row
+ 			GLOBAL
+cSortTableElCur 			
+----------------------------------------------------- */
+
+cSortTable.prototype.ts_sort_currency = function (a,b) {
+  var iSortColInd = cSortTableElCur.iSortColInd;
+	 var aCellEl = a.cells[iSortColInd];
+	 var bCellEl = b.cells[iSortColInd];
+	 // For FOOTER case
+	  if (bCellEl == undefined || aCellEl== undefined){
+	  	if (this.szSortDir == SORT_DIR.ASC){
+	    	return 1;
+	  	}else {
+	  		return -1;
+	  	}
+	  } 
+    aa = ts_getInnerText(aCellEl).replace(/[^0-9.]/g,'');
+    bb = ts_getInnerText(bCellEl).replace(/[^0-9.]/g,'');
+    return parseFloat(aa) - parseFloat(bb);
+};
+
+
+/* -----------------------------------------------------
+sort for STRING
+NB: we have to use global var cSortTableElCur, this does not work here 
+@param a  row
+@param b  row
+ 			GLOBAL
+cSortTableElCur 			
+----------------------------------------------------- */
+cSortTable.prototype.ts_sort_caseinsensitive = function (a,b) {
+	var Fn = "[cSortTable.ts_sort_caseinsensitive] ";
+  var iSortColInd = cSortTableElCur.iSortColInd;
+	 var aCellEl = a.cells[iSortColInd];
+	 var bCellEl = b.cells[iSortColInd];
+	 // For FOOTER case
+	  if (bCellEl == undefined || aCellEl== undefined){
+	    jslog(JSLOG_JSU,Fn + " FOOTER ROW");
+	  	if (this.szSortDir == SORT_DIR.ASC){
+	    	return 1;
+	  	}else {
+	  		return -1;
+	  	}
+	  } 
+	 
+	 
+    aa = ts_getInnerText(aCellEl).toLowerCase();
+    bb = ts_getInnerText(bCellEl).toLowerCase();
+    var iRet =0;
+    if (aa==bb) {
+    	iRet = 0;
+    }else  if (aa<bb){
+    	iRet = -1;
+    }else {
+    	iRet = 1;
+    }
+    // jslog(JSLOG_JSU,Fn + " aa=" + aa + "  bb=" + bb + "     return " +  iRet);
+    return iRet;
+    
+    
+};
+
+/*-------------------------------------------------------------
+Get SortId from iColInd.
+NOTE ar_sort_id_col is ordered but some Col can be Hidden
+@param iColInd	in		0,1...N
+@return szSortId		e.g    "Total Roamers"
+      
+      GLOBAL
+this.arSortCol
+this.szSortHiddenId   //Possible Hidden SortId   e.g "Carrier,PLMN,"
+-------------------------------------------------------------*/
+cSortTable.prototype.getSortId  = function (iColInd) {
+  var Fn = "[cSortTable.sorttable.getSortId] ";
+  var iColCur=-1;
+  for (var i=0;i < this.arSortCol.length; i++){
+    var szSortId = this.arSortCol[i].col;
+    if (this.szSortHiddenId.indexOf(szSortId+",") == -1){
+    	// szId is not Hidden
+    	iColCur++;
+    }
+    if (iColCur == iColInd){
+      // jslog(JSLOG_JSU,Fn + " IN: this.szSortHiddenId=" + this.szSortHiddenId + "  iColInd=" + iColInd + " OUT: szSortId=" + szSortId);
+      return szSortId;
+    }
+  }
+  return showErr (Fn + "SW ERROR: this.iSortColInd=" + this.iSortColInd + " NOT Visible  iColInd=" + iColInd,1);
+};  
+
+/*-------------------------------------------------------------
+Get SortInfo from iColInd.
+@param 	iColInd	in		0,1...N
+@return obhSortCol		
+      GLOBAL
+this.arSortCol
+-------------------------------------------------------------*/
+cSortTable.prototype.getSortObj  = function (iColInd) {
+  var Fn = "[cSortTable.getSortObj] ";
+  var szSortId = this.getSortId(iColInd);
+  for (var i=0;i < this.arSortCol.length; i++){
+  	var objSortCol = this.arSortCol[i];
+    if (objSortCol.col == szSortId){
+    	return objSortCol;
+    }	
+	}
+  return showErr (Fn + "SW ERROR: this.iSortColInd=" + this.iSortColInd + " NOT Found SortId=" + szSortId,1);
+};  
+
+
+
+
+
+/*-------------------------------------------------------------
+Get SortId from iColInd.
+NOTE ar_sort_id_col is ordered but some Col can be Hidden
+@param szSortCol in		e.g 'Last Name'
+@return iSortInd		e.g    0..
+      
+-------------------------------------------------------------*/
+cSortTable.prototype.getSortIndFromSortCol  = function (szSortCol) {
+  var Fn = "[cSortTable.sorttable.getSortIndFromSortCol] ";
+  for (var i=0;i < this.arSortCol.length; i++){
+  	var objSortCol = this.arSortCol[i];
+  	// jslog (JSLOG_JSU,"szSortColCur=" + szSortColCur + " szSortCol=" + szSortCol);
+    if (objSortCol.col == szSortCol){
+      return i;
+    }
+  }
+  return showErr (Fn + "SW ERROR: szSortCol=" + szSortCol + " NOT FOUND",1);
+};  
+
+
+
+
+/*-------------------------------------------------------------
+It does the sort. 
+@param SortImg    in   SortImg clicked
+-------------------------------------------------------------*/
+cSortTable.prototype.resortTable = function (SortImg) {
+  var Fn = "[cSortTable.resortTable] ";
+  jslog(JSLOG_JSU,Fn + JSLOG_FUN_START);
+
+  var td = SortImg.parentNode;
+  var iNewSortCol = td.cellIndex;  // current Column  [0,1...]
+  jslog(JSLOG_JSU,"Clicked on column=" + iNewSortCol  + "  Previous SortCol=" + this.iSortColInd);
+  if (iNewSortCol != this.iSortColInd  && this.imgSortCur != 0 && this.imgSortCur != undefined){
+    jslog(JSLOG_JSU,"Changed Sort column from " + this.iSortColInd + " to "  + iNewSortCol + "   --> Reset Previous Img");
+    this.imgSortCur.setAttribute(SORT_ATTR_SORT_DIR,SORT_DIR.NONE);
+    this.imgSortCur.setAttribute("title",this.szSortHintDesc);  // like it is Desc because clicking it will be ASC 
+    this.imgSortCur.setAttribute("src",this.szSortPathNone);
+  }
+
+  this.iSortColInd = iNewSortCol;   // Set Global Var with current Sort Col Ind
+  this.szSortCol = this.arSortCol[this.iSortColInd].col; 
+  jslog(JSLOG_JSU,"SET iSortColInd = " + this.iSortColInd + "  szSortCol=" + this.szSortCol);
+  this.imgSortCur = SortImg;
+
+  // Set also New this.szSortDir
+  var szAttrSortDir = SortImg.getAttribute(SORT_ATTR_SORT_DIR);
+  jslog(JSLOG_JSU,Fn + "szAttrSortDir=" + szAttrSortDir );
+  if (szAttrSortDir  == SORT_DIR.ASC) {  // ASC become DESC
+    jslog(JSLOG_JSU,Fn + "Previous Sort was ASC - TOGGLE to Dir=DESC" );
+    this.szSortDir = SORT_DIR.DESC;
+  }else{ // NONE or DESC: become ASC
+    jslog(JSLOG_JSU,Fn + "Previous Sort was NOT ASC- SET Dir=ASC" );
+    this.szSortDir = SORT_DIR.ASC;
+  }
+  SortImg.setAttribute("src", this.szSortPathWait);
+  SortImg.setAttribute("title", "Please Wait...");
+  cSortTableElCur = this; // GLOBAL
+  this.tmoSortApply = setTimeout(this.sortApply, SORT_TMO_WAIT_MS);
+  jslog(JSLOG_JSU,Fn + JSLOG_FUN_END);
+};
+
+
+
+/*-----------------------------------------------------------
+Only for Cognos: Set Sort Label in Header, only if the Header is Present 
+------------------------------------------------------------*/
+cSortTable.prototype.headSetSortLbl = function () {
+  var Fn="[cSortTable.headSetSortLbl] ";
+
+  jslog(JSLOG_JSU,Fn + JSLOG_FUN_START);
+  // NB: bShowErr False because This is an Optional Feature (spanHeaSortCol can be absent)
+  var SpanHeaSortCol = getElementById2("spanHeaSortCol",false);  
+  var SpanHeaSortDir = getElementById2("spanHeaSortDir",false);  
+  if (SpanHeaSortCol == 0 || SpanHeaSortDir == 0){
+    return jslog(JSLOG_JSU,Fn + "Nothing to DO: SORTHeader is not present " + JSLOG_FUN_END);
+  }
+  // Set 
+  var szSortCol =  this.getSortCol();
+  var szSortDirLabel =  this.getSortDirLabel();
+
+  spanSetText(SpanHeaSortCol,szSortCol);
+  spanSetText(SpanHeaSortDir,szSortDirLabel);
+
+  jslog(JSLOG_JSU,Fn + JSLOG_FUN_END);
+};
+
+
+/*-------------------------------------------------------------
+It does the sort. Called after a Timeout, to show Wait Image
+@param cSortTableEl    in   Current cSortTableEl (DO NOT use 'this' here)
+		GLOBAL
+cSortTableElCur		
+-------------------------------------------------------------*/
+cSortTable.prototype.sortApply = function () {
+  var Fn = "[cSortTable.sortApply] ";
+  var sortfn;
+  
+  var dStart = new Date();
+  var cSortTableEl=cSortTableElCur;
+  clearTimeout (cSortTableEl.tmoSortApply);
+  jslog(JSLOG_JSU,Fn + JSLOG_FUN_START);
+  jslog(JSLOG_JSU,Fn + "Doing SORT:   Current iSortColInd=" + cSortTable.iSortColInd + " szSortDir=" + cSortTable.szSortDir  +  " bMultiPage=" + cSortTable.bMultiPage );
+  cSortTableEl.szSortCol = cSortTableEl.getSortId(cSortTableEl.iSortColInd);
+  
+  // If Present, put into Select new sort settings
+  if (cSortTableEl.selectSortCol){
+	  selectSelValue(cSortTableEl.selectSortCol,cSortTableEl.szSortCol);
+	  selectSelValue(cSortTableEl.selectSortDir,cSortTableEl.szSortDir);
+	  // save also into Hidden field
+	  jslog (JSLOG_JSU,Fn + "save current szSortColCur=" + cSortTableEl.szSortCol + "  and  szSortDirCur=" + cSortTableEl.szSortDir);
+	  cSortTableEl.inputSortCol.value = cSortTableEl.szSortCol;
+	  cSortTableEl.inputSortDir.value = cSortTableEl.szSortDir;
+  }  
+  if  (cSortTableEl.bCognosGlobalSort &&  cSortTableEl.bMultiPage)  {
+    // GLOBAL SORT
+    jslog(JSLOG_JSU,Fn + "============= GLOBAL SORT ====");
+    // it is Like a click on OK Button
+    return cognosActionFINISH();   
+  }
+  jslog(JSLOG_JSU,Fn + "============= LOCAL SORT ====");
+  var td = cSortTableEl.imgSortCur.parentNode;
+  var iNewSortCol = td.cellIndex;  // current Column  [0,1...]
+  jslog(JSLOG_JSU,Fn + "Clicked on column=" + iNewSortCol  + "  Previous SortCol=" + cSortTableEl.iSortColInd);
+  var tblSort = cSortTableEl.tblSort;
+	
+  var objSortCol= cSortTableEl.getSortObj(cSortTableEl.iSortColInd);
+  jslog(JSLOG_JSU,"NEW Sort for cSortTableEl.iSortColInd=" + cSortTableEl.iSortColInd + " SortId=" + cSortTableEl.getSortId(cSortTableEl.iSortColInd));
+  jslogObj(JSLOG_JSU,"objSortCol:", objSortCol);
+  if (objSortCol.type == SORT_TYPE.NUMBER){
+    sortfn = cSortTableEl.ts_sort_numeric;  
+    cSortTableEl.szSortGroupSep =  (objSortCol.groupSep == undefined) ?  cSortTableEl.szSortGroupSepLocale : objSortCol.groupSep;
+    cSortTableEl.szSortDecSep = (objSortCol.decimalSep == undefined) ? cSortTableEl.szSortDecSepLocale : objSortCol.decimalSep;
+    jslog(JSLOG_JSU,"sortfn = ts_sort_numeric - Using szSortGroupSep=" + cSortTableEl.szSortGroupSep + "  szSortDecSep=" + cSortTableEl.szSortDecSep);
+  } else if (objSortCol.type == SORT_TYPE.STRING){
+    sortfn = cSortTableEl.ts_sort_caseinsensitive; 
+  } else if (objSortCol.type == SORT_TYPE.DATETIME){
+	  sortfn = cSortTableEl.ts_sort_datetime;
+	  cSortTableEl.szFmtDatetime = (objSortCol.fmt == undefined) ? SORT_DEF_FMT_DATETIME : objSortCol.fmt ;   
+    jslog(JSLOG_JSU,"sortfn = ts_sort_datetime - Using cSortTableEl.szFmtDatetime=" + cSortTableEl.szFmtDatetime);
+  } else {
+    return showErr (Fn + "SW ERROR: Invalid SortType=" +  szSortType,1);
+  }
+  
+  jslog(JSLOG_JSU,"Set the attribute in the Image to indicate the direction");
+  var CurImgPath,CurHint;
+  if (cSortTableEl.szSortDir == SORT_DIR.ASC){
+    CurImgPath=cSortTableEl.szSortPathAsc;
+    CurHint=cSortTableEl.szSortHintAsc;
+  } 
+  else{
+    CurImgPath=cSortTableEl.szSortPathDesc;
+    CurHint=cSortTableEl.szSortHintDesc;
+  } 
+	jslog(JSLOG_JSU,Fn + "IMG setAttribute (" + SORT_ATTR_SORT_DIR + ") = " + cSortTableEl.szSortDir);
+  cSortTableEl.imgSortCur.setAttribute(SORT_ATTR_SORT_DIR,cSortTableEl.szSortDir);
+  cSortTableEl.imgSortCur.setAttribute("src", CurImgPath);
+  cSortTableEl.imgSortCur.setAttribute("title", CurHint);
+ 
+  var newRows = new Array();
+  var headerRows = new Array();
+  // ---------------------------------- Header
+  jslog (JSLOG_JSU,Fn + "Prepare newRow with the Row to Sort - We skip First HEADER Rows=" + cSortTableEl.iRowHeader);
+  for (var j=cSortTableEl.iRowHeader, i=0;j<tblSort.rows.length ;j++, i++) {
+  	newRows[i] = tblSort.rows[j]; 
+  }
+  
+  // SORT
+  jslog(JSLOG_JSU,"Start Sort Ascending...");
+  // salvo la var globale
+  cSortTableElCur = cSortTableEl;
+  newRows.sort(sortfn);
+  
+  jslog(JSLOG_JSU,"Sort Ascending done");
+  if (cSortTableEl.szSortDir == SORT_DIR.DESC){ 
+    newRows.reverse();
+    jslog(JSLOG_JSU,"Reverse done - Sort Descending Done");
+  } 
+
+  // We appendChild rows that already exist to the tbody, so it moves them rather than creating new ones
+  // we don't do it for SORT_TBL_CLASS_FOOTER rows
+  for (i=0;i<newRows.length;i++) {
+  	var szClassName = newRows[i].className;
+		var bFooter = (szClassName != undefined &&  szClassName.indexOf(cSortTableEl.szClassFooter) >=0);
+  	if (!bFooter){
+  		tblSort.tBodies[0].appendChild(newRows[i]);
+  	} 
+  }
+  // do SORT_TBL_CLASS_FOOTER rows only
+  for (i=0;i<newRows.length;i++) { 
+  	var szClassName = newRows[i].className;
+		var bFooter = (szClassName != undefined &&  szClassName.indexOf(cSortTableEl.szClassFooter) >=0);
+  	if (bFooter) {
+  		tblSort.tBodies[0].appendChild(newRows[i]);
+  	}
+  }  
+
+  // ---------------------
+  if (cSortTableEl.bCognos){
+  	cSortTableEl.headSetSortLbl(); // Align Sort Label in Header if Present Sort Section
+  }
+ 	jslogElapsedTime (JSLOG_JSU,Fn + "DONE in ",dStart);
+  jslog(JSLOG_JSU,Fn + JSLOG_FUN_END);
+	
+};
+
+
+cSortTable.prototype.getParent = function (el, pTagName) {
+	if (el == null) return null;
+	else if (el.nodeType == 1 && el.tagName.toLowerCase() == pTagName.toLowerCase())	// Gecko bug, supposed to be uppercase
+		return el;
+	else
+		return this.getParent(el.parentNode, pTagName);
+};
+
+
+/*-----------------------------------------------------------
+onchange selectSortCol
+------------------------------------------------------------*/
+cSortTable.prototype.onchangeSortCol = function (ev) {
+  var Fn = "[cSortTable.onchangeSortCol] ";
+
+  jslog(JSLOG_JSU,Fn + JSLOG_FUN_START);
+  var cSortTableEl = cSortTable.getSortTableElFromEv(Fn,ev);
+
+	var szSortId = selectGetSelVal(cSortTableEl.selectSortCol);
+  jslog(JSLOG_JSU,Fn + "Save into this.inputSortCol the selected szSortId=" + szSortId);
+  cSortTableEl.inputSortCol.value = szSortId;
+  jslog(JSLOG_JSU,Fn + JSLOG_FUN_END);
+};  
+
+/*-----------------------------------------------------------
+onchange selectSortDir
+------------------------------------------------------------*/
+cSortTable.prototype.onchangeSortDir = function (ev) {
+  var Fn = "[cSortTable.onchangeSortDir] ";
+
+  jslog(JSLOG_JSU,Fn + JSLOG_FUN_START);
+  var cSortTableEl = cSortTable.getSortTableElFromEv(Fn,ev);
+	var iSortDir = selectGetSelVal(cSortTableEl.selectSortDir);
+  jslog(JSLOG_JSU,Fn + "Save into this.inputSortDir the selected iSortDir=" + iSortDir);
+  cSortTableEl.inputSortDir.value = iSortDir;
+  jslog(JSLOG_JSU,Fn + JSLOG_FUN_END);
+};  
+
+
+
+/*-------------------------------------------------------------
+this.bSortEn  = false. the click on images will display the Hint
+this.bSortEn  = true   Toggle sort and Sort the table basing on
+  			GLOBAL
+this.bSortEn in  			
+--------------------------------------------------------------*/
+cSortTable.prototype.onclickSortImg= function (ev) {
+  var Fn = "[cSortTable.onclickSortImg] ";
+  jslog(JSLOG_JSU,Fn + JSLOG_FUN_START);
+  var cSortTableEl = cSortTable.getSortTableElFromEv(Fn,ev);
+
+  // this is the current element clicked
+  var TagName = this.tagName;
+  var CurImg;
+  jslog(JSLOG_JSU,Fn + "this=" + this  +"  tagName=" + TagName);
+  if (typeof (TagName) != 'undefined' && TagName.toUpperCase() == "IMG"){
+    // Normal "Working" Click
+    CurImg = this;
+  }
+  else {
+    // WorkAround for IE: when it is selected the cell Header, "this" variable is not the td. In this case I use imgSortCur 
+    if (cSortTableEl.imgSortCur){
+      jslog(JSLOG_JSU,Fn + "Workaround for IE Header Seleted: Use imgSortCur");
+      CurImg = cSortTableEl.imgSortCur;
+    }
+    else {
+      jslog(JSLOG_ERR,Fn + "imgSortCur=null   CANNOT Apply workaround for IE");
+      return;
+    }
+  }
+  if (cSortTableEl.bSortEn){
+  	cSortTableEl.resortTable (CurImg);
+  }else {
+  	showInfo (cSortTableEl.szSortHintAsc);
+  }
+  jslog(JSLOG_JSU,Fn + JSLOG_FUN_END);
+
+};
+
+
+
+
+
+//*********************************************************************************************
+// LOCAL FUNCTION
+//*********************************************************************************************
+
+/*-----------------------------------------------------------
+Get Current SortTable instance from Event
+	PAR
+Fn  in  Function name calling this function
+ev  in  Event		
+------------------------------------------------------------*/
+cSortTable.getSortTableElFromEv = function(Fn,ev) {
+	var Fn = "[cSortTable.getSortTableElFromEv] ";
+	jslog(JSLOG_JSU,Fn + JSLOG_FUN_START);
+	
+	// get current element
+	var El = cSortTable.getElement(ev);
+	// N.B Get Current cSortTable instance (cSortTableEl)  
+	var cSortTableEl = El._cSortTableEl;
+	if (typeof (cSortTableEl) == "undefined"){
+		showErr (Fn + "SW ERROR: cSortTableEl is undefined in " + Fn,1);
+	}else {
+		// Log one member
+		jslog(JSLOG_JSU, Fn + "cSortTableEl.szSortPathAsc=" + cSortTableEl.szSortPathAsc);
+	}
+	jslog(JSLOG_JSU,Fn + JSLOG_FUN_END);
+	return cSortTableEl;
+};
+
+
+
+//**************************************************************************
+//**************************************************************************
+//Utility Function (NO Prototype)
+//**************************************************************************
+//**************************************************************************
+
+cSortTable.getElement = function(ev) {
+var f = cSortTable.is_ie ? window.event.srcElement : ev.currentTarget;
+while (f.nodeType != 1 || /^div$/i.test(f.tagName))
+	f = f.parentNode;
+return f;
+};
+
+
+/// detect a special case of "web browser"
+cSortTable.is_ie = ( /msie/i.test(navigator.userAgent) &&	!/opera/i.test(navigator.userAgent) );
+
+
+
+
+
+

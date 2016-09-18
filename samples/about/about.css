@@ -370,51 +370,50 @@ label.aboutSourceJSUAPI{
 }
 
 
-input.downloadFree, input.downloadFreeUp, input.downloadPay {  /* common for download buttons*/
+input.downloadJsu, input.downloadJsuUp{  /* common for download buttons*/
   font-weight: bold;
-  width: 146px;
-  height: 27px;
+  width: 190px;
+  height: 30px;
   cursor: pointer;
-}
-
-input.downloadFree, input.downloadFreeUp   {  /* common for download buttons*/
   margin-left:100px;
   margin-right: 0px;  
 }  
 
-input.downloadFree  {  
-  background: gray url(https://rawgit.com/FedericoLevis/images/master/jsuAbout/downloadFree.png) no-repeat right center;  
+input.downloadJsu  {  
+  background: gray url(https://rawgit.com/FedericoLevis/images/master/jsuAbout/downloadJsu.png) no-repeat right center;   
+  /* background: gray url(../../images/about/downloadJsu.png) no-repeat right center; */  
 }
 
-input.downloadFreeUp  {  
- background: gray url(https://rawgit.com/FedericoLevis/images/master/jsuAbout/downloadFreeUp.png) no-repeat right center; 
- /* background: gray url(../../images/about/downloadFreeUp.png) no-repeat center center; */
+input.downloadJsuUp  {  
+ background: gray url(https://rawgit.com/FedericoLevis/images/master/jsuAbout/downloadJsuUp.png) no-repeat right center;  
 }
 
+input.jsuDownloadGA{ /* we use margin to align the Button */
+	margin-top:6px;
+}	
 
-input.downloadPay {
-  width: 150px;
-  margin-left:  50px;
-  margin-right: 0px;  
-  background: gray url(https://rawgit.com/FedericoLevis/images/master/jsuAbout/downloadPay.png) no-repeat right center;
-}
-
-
-input.downloadFreeExecute {  /* button that execute the download */
+input.downloadJsuExecute {  /* button that execute the download of Jsu Dev*/
     height: 69px;
     width: 342px;
     cursor: pointer;
-    background: gray url(https://rawgit.com/FedericoLevis/images/master/jsuAbout/downloadFreeExecute.png) no-repeat right center;
+    background: gray url(https://rawgit.com/FedericoLevis/images/master/jsuAbout/downloadJsuExecute.png) no-repeat right center;
+}
+
+input.downloadJsuMinExecute {  /* button that execute the download of Jsu Minified */
+    height: 69px;
+    width: 342px;
+    cursor: pointer;
+    background: gray url(https://rawgit.com/FedericoLevis/images/master/jsuAbout/downloadJsuMinExecute.png) no-repeat right center;
 }
 
 
-input.downloadFree, input.downloadFreeUp, input.downloadPay,input.downloadFreeExecute
+input.downloadJsu, input.downloadJsuUp, input.downloadJsuExecute ,input.downloadJsuMinExecute
 {
     border: 2px solid gray;
     border-style: ridge;
 } 
 
-input.downloadFree:hover, input.downloadPay:hover,input.downloadFreeExecute:hover, input.downloadFreeUp:hover 
+input.downloadJsu:hover, input.downloadJsuExecute:hover,input.downloadJsuMinExecute:hover, input.downloadJsuUp:hover 
 {
     border: 2px solid #e0e0e0;
     border-style: ridge;
@@ -561,24 +560,8 @@ fieldset{
 	font-size: 12px;
 }
 
-table.sample, table.sampleNoBorder{
-	text-align: left;
-	font-family: Verdana;
-	font-weight: normal;
-	font-size: 12px;
-	color: black;    
-	background-color: white;  
-	border: 1px solid black;  
-	border-collapse: collapse;
-	border-spacing: 2px;
-  margin-top:5px;
-  margin-bottom:5px;
-  margin-left:5px;
-  margin-right:5px;
-  border: 1px solid black;  
-}
 
-table.sample, table.sampleNoBorder{
+table.sample, table.sampleNoBorder, table.noBorder{
   text-align: left;
   font-family: Verdana;
   font-weight: normal;
@@ -951,3 +934,8 @@ textarea.jsuCode {  /* Code in jsuDoc */
   border: 2px solid gray;
   border-style: ridge;
 }
+
+
+td.donate {
+	padding-left: 100px;
+}	

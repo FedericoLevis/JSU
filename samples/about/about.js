@@ -1,8 +1,1752 @@
-/***************************************************************************/
-/*                                                                         */
-/*  This obfuscated code was created by Javascript Obfuscator Free Version.*/
-/*  Javascript Obfuscator Free Version can be downloaded here              */
-/*  http://javascriptobfuscator.com                                        */
-/*                                                                         */
-/***************************************************************************/
-var _$_a6bf=["opt","test","period","pos","<div style=\"width:300px;\">Click to Show a <b>YouTube Video of this JSU feature</b>","<div style=\"width:500px\">","This Feature is <b>Fully supported by All Browser</b><BR/>It has been successfully tested in <label class=\"tipGoodBold\">Safari, Chrome, Firefox, Opera, IE, Android</label></div>","<div style=\"width:450px\">","IE Popup is designed ONLY for IE:<ul>","<li><label class=\"tipGoodBold\">Browser Supported: ONLY IE</label></li>","<li><label class=\"tipErrBold\">Browser NOT Supported: Safari, Chrome, Firefox, Opera, Android</li>","</ul>","In the browser not supported IE Popup will simply display an Alert instead of the HTML Popup","</div>","<div style=\"width:400px;\">This <b>Option is NOT PRESENT in this DEMO Version:</b><BR/>","this is only a <label class=\"tipWarnBold\">DEMO JSU Version with Limitations</label><BR/><BR/>","You can click the Link in Table Header to see <b>All the OPTIONS details</b>","<div style=\"width:400px;\">","Click to see <b>All the OPTIONS details</b><BR/><BR/>","This is only a <label class=\"tipWarnBold\">DEMO JSU Version with Limitations</label> and <BR/><label class=\"tipWarnBold\">some Options are NOT PRESENT</label>","<div style=\"width:400px;\">This <b>Option is NOT PRESENT in this FREE Version:</b><BR/>","this is only a <label class=\"tipWarnBold\">FREE JSU Version with Limitations</label><BR/><BR/>","This is only a <label class=\"tipWarnBold\">FREE JSU Version with Limitations</label> and <BR/><label class=\"tipWarnBold\">some Options are NOT PRESENT</label>","Click to Show the <b>JSU Documentation</b>","Click to Show the <b>JSU Tooltip Documentation</b>","Click to Show the <b>JSU SortTable Documentation</b>","Click to Show the <b>JSU Validate Documentation</b>","Click to Show the <b>JSU IE Popup Documentation</b>","Click to Show the <b>JSU JQuery Popup Documentation</b>","Click to Show the <b>JSU LoadingDiv Documentation</b>","Click to Show the <b>JSU JSLogDocumentation</b>","This Feature is Fully supported by All Browser. It has been successfully tested in Safari, Chrome, Firefox, Opera, IE, Android","IE Popup is designed ONLY for IE. Only IE Browser is Supported. In the browser not supported IE Popup will simply display an Alert instead of the HTML Popup. ","INFO","FREE","PAY","federico.levis@virgilio.it","http://federicolevis.wix.com/cognos","https://github.com/FedericoLevis/JSU","https://github.com/FedericoLevis/PLSQLUtility","https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png","javascript:function() { return false; }","https://github.com/FedericoLevis/JSU/archive/master.zip","ALL","https://youtu.be/wpo2oM_L3ds","<iframe width=\"750\" height=\"600\" src=\"https://www.youtube.com/embed/wpo2oM_L3ds?version=3&vq=hd720&autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>","<iframe width=\"600\" height=\"500\" src=\"https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>","https://rawgit.com/FedericoLevis/JSU/master/samples/Validate/ValidateSample.html","https://rawgit.com/FedericoLevis/JSU/master/samples/JQPopup/PopupSample.html","https://rawgit.com/FedericoLevis/JSU/master/samples/JSUFreeDownload.html","https://rawgit.com/FedericoLevis/JSU/master/samples/AllSamples.html","https://rawgit.com/FedericoLevis/JSU/master/samples/Sort/SortSample.html","https://rawgit.com/FedericoLevis/JSU/master/samples/Tip/TipSample.html","https://rawgit.com/FedericoLevis/JSU/master/samples/GoogleAnal/GoogleAnalSample.html","https://rawgit.com/FedericoLevis/JSU/master/samples/IEPopup/PopupSample.html","https://rawgit.com/FedericoLevis/JSU/master/samples/Loading/LoadingSample.html","https://rawgit.com/FedericoLevis/JSU/master/samples/jslog/jslogSample.html","https://goo.gl/HnNqnM","https://goo.gl/MoY5nK","https://goo.gl/1e6ju7","http://goo.gl/UzfnFK","https://goo.gl/hJm8vV","https://goo.gl/1b2ely","https://goo.gl/jttCME","https://goo.gl/F3r4lP","https://goo.gl/aAtyxG","https://goo.gl/09zCLG","https://goo.gl/LYDepH","http://goo.gl/JZJSPn","https://goo.gl/OI3eIo","https://goo.gl/J9mJfh","https://www.linkedin.com/in/federicolevis","https://rawgit.com/FedericoLevis/JSU/master/samples/Misc/SampleNotFree.html","https://rawgit.com/FedericoLevis/JSUDoc/master/JSUAPI.html","https://rawgit.com/FedericoLevis/JSUDoc/master/tooltip.js/index.html","https://rawgit.com/FedericoLevis/JSUDoc/master/googleAnal.js/index.html","https://rawgit.com/FedericoLevis/JSUDoc/master/loadingDiv.js/index.html","https://rawgit.com/FedericoLevis/JSUDoc/master/cSortTable.js/index.html","https://rawgit.com/FedericoLevis/JSUDoc/master/cValidate.js/index.html","https://rawgit.com/FedericoLevis/JSUDoc/master/jslog.js/index.html","https://rawgit.com/FedericoLevis/JSUDoc/master/IEPopup.js/index.html","https://rawgit.com/FedericoLevis/JSUDoc/master/JQPopup.js/index.html","https://goo.gl/0PGnZl","https://rawgit.com/FedericoLevis/JSU/master/README.html","https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/SortTable.html","https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/Validate.html","https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/Tooltip.html","https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/GoogleAnalytics.html","https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/LoadingDiv.html","https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/jslog.html","https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/IEPopup.html","https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/JQPopup.html","#parOnlyFullJsu","https://goo.gl/JzIXW0","https://goo.gl/AGKlpQ","http://goo.gl/UYJ5Zv","https://goo.gl/aKR7b2","https://goo.gl/M7LT4v","https://goo.gl/0tIOIJ","https://goo.gl/Iobg3a","https://goo.gl/ZJBCrl","https://goo.gl/hZ5U6M","https://goo.gl/1eIYNm","https://rawgit.com/FedericoLevis/JSUDoc/master/JSUversion.html","#par1.2.1","WORK","master","/","jsuDivHidden","jsuHrefHidden","<a id=\"","\" target=\"_blank\" style=\"display:none\" href=\"https://goo.gl/HnNqnM\" >HIDDEN</a>","<table class=\"tip\" BORDER=\"2\" cellspacing=\"0\" cellpadding=\"2\" width=\"780\">","\x09  <tr class=\"tipTitle\">","\x09\x09  <th class=\"tipTitle\" colspan=\"6\">JSU FEATURES</th>","\x09  </tr>","\x09  <tr class=\"tipTitle2\">","\x09\x09  <td width=\"60px\" class=\"tipc\">Feature<BR/>Doc</td>","\x09\x09  <td width=\"280px\" class=\"tipc\">Description</td>","\x09\x09  <td width=\"70px\" class=\"tipc\">Browser Compatibility</td>","\x09\x09  <td width=\"60px\" class=\"tipc\">Plugin Required</td>","\x09\x09  <td width=\"60px\" class=\"tipc\">YouTube<BR/>Video Sample  ","     </td>","\x09\x09  <td width=\"70px\" class=\"tipc\">Try an Example</td>","\x09  <tr >","\x09\x09  <td class=\"tipc\"><a class=\"tipLink\" href=\"javascript:jsuDocTip(true);\">Tooltip</a> </td>","\x09\x09  <td class=\"tipl\"><b>Floating/Fixed Tips</b> with GIF, Video, Code Highlight (JS, CSS, Java, Shell,...), <b>Google Analytics</b>     </td>","     <td class=\"tipc\"><input type=\"button\"  class=\"browserAllSmall\" title=\"","\"/> </td> ","\x09\x09  <td class=\"tipc tipGoodBold\" rowspan=\"7\">No Plugin is required</b></td>","     <td class=\"tipc\"><a href=\"javascript:jsuVideoTip()\"> <input type=\"button\" class=\"playVideoSmall\" title=\"Click to Show a YouTube Video of Tooltip Feature\"/></a></td> ","\x09\x09  <td class=\"tipc\"><a class=\"tipLink\" href=\"javascript:showSampleTip();\">Tooltip Sample</a></td>","\x09\x09  <td class=\"tipc\"><a class=\"tipLink\" href=\"javascript:jsuDocGA(true);\">Google Analytics</a> </td>","\x09\x09  <td class=\"tipl\">JSU API to build in few minutes a User Friendly List of Links to <b>Google Analytics</b></td>","     <td class=\"tipc\"><a href=\"javascript:jsuVideoGA()\"> <input type=\"button\" class=\"playVideoSmall\" title=\"Click to Show a YouTube Video of Google Analytics Feature\"/></a></td> ","\x09\x09  <td class=\"tipc\"><a class=\"tipLink\" href=\"javascript:showSampleGA();\">Google Analytics Sample</a></td>","\x09\x09  <td class=\"tipc\"><a class=\"tipLink\" href=\"javascript:jsuDocLoading(true);\">Loading Div</a> </td>","\x09\x09  <td class=\"tipl\"><b>Loading Div</b> for Long Operation with <b>Loading Gif, Title, Message, ElapsedSec...</b></td>","     <td class=\"tipc\"><a href=\"javascript:jsuVideoLoading()\"> <input type=\"button\" class=\"playVideoSmall\" title=\"Click to Show a YouTube Video of LoadingDiv Feature\"/></a></td> ","\x09\x09  <td class=\"tipc\"><a class=\"tipLink\" href=\"javascript:showSampleLoading();\">LoadingDiv Sample</a></td>","\x09  <tr>","\x09\x09  <td class=\"tipc\"><a class=\"tipLink\" href=\"javascript:jsuDocJSLog(true);\" target=\"_blank\">jslog</a> </td>","\x09\x09  <td class=\"tipl\">Log from JS Code into an optional Window: <b>log Object, JSON, DOM ...</b></td>","     <td class=\"tipc\"><a href=\"javascript:jsuVideoJSLog()\"> <input type=\"button\" class=\"playVideoSmall\" title=\"Click to Show a YouTube Video of JSLog Feature\"/></a></td> ","\x09\x09  <td class=\"tipc\"><a class=\"tipLink\" href=\"javascript:showSampleJSlog();\">JSlog Sample</a></td>","\x09\x09  <td class=\"tipc\"><a class=\"tipLink\" href=\"javascript:jsuSort(true);\" target=\"_blank\">Table Sort</a> </td>","\x09\x09  <td class=\"tipl\"><b>Sort HTML Table</b> by clicking column header</td>","     <td class=\"tipc\"><a href=\"javascript:jsuVideoSort()\"> <input type=\"button\" class=\"playVideoSmall\" title=\"Click to Show a YouTube Video of SortTable Feature\"/></a></td> ","\x09\x09  <td class=\"tipc\"><a class=\"tipLink\" href=\"javascript:showSampleSort();\">SortTable Sample</a></td>","\x09\x09  <td class=\"tipc\"><a class=\"tipLink\" href=\"javascript:jsuIEPopup(true);\" target=\"_blank\">IE Popup</a> </td>","\x09\x09  <td class=\"tipl\"><b>Modal/Blocking Popup</b> designed ONLY for <b>IE</b><BR/><b> </td>","     <td class=\"tipc\"><input type=\"button\"  class=\"browserIESmall\" title=\"","     <td class=\"tipc\"><a href=\"javascript:jsuVideoIEPopup()\"> <input type=\"button\" class=\"playVideoSmall\" title=\"Click to Show a YouTube Video of IE Popup Feature\"/></a></td> ","\x09\x09  <td class=\"tipc\"><a class=\"tipLink\" href=\"javascript:showSampleIEPopup();\">IE Popup Sample</a></td>","\x09\x09  <td class=\"tipc\"><a class=\"tipLink\" href=\"javascript:jsuDocValidate(true);\" target=\"_blank\">Validate</a> </td>","\x09\x09  <td class=\"tipl\">One single function for both <b>Item Validation </b> and <b>Presentation of Validation Errors</b> (in Items, Section, Popup)</td>","     <td class=\"tipc\"><a href=\"javascript:jsuVideoValidate()\"> <input type=\"button\" class=\"playVideoSmall\" title=\"Click to Show a YouTube Video of Validate Feature\"/></a></td> ","\x09\x09  <td class=\"tipc\"><a class=\"tipLink\" href=\"javascript:showSampleValidate();\">Validate Sample</a></td>","\x09\x09  <td class=\"tipc\"><a class=\"tipLink\" href=\"javascript:jsuDocJQPopup(true);\" target=\"_blank\">JQ Popup</a> </td>","\x09\x09  <td class=\"tipl\"><b>Modal Popup for whatever Browser</b><BR/><b>Not Blocking code</b> with callback function</td>","\x09\x09  <td class=\"tipc\"><b>jquery, jquery-ui</b></td>","     <td class=\"tipc\"><a href=\"javascript:jsuVideoJQPopup()\"> <input type=\"button\" class=\"playVideoSmall\" title=\"Click to Show a YouTube Video of JQ Popup Feature\"/></a></td> ","\x09\x09  <td class=\"tipc\"><a class=\"tipLink\" href=\"javascript:showSampleJQPopup();\">JQ Popup Sample</a></td>","</table>","<a class=\"tipLink\" href=\"","\" target=\"_blank\">JSU</a> is a <b>JavaScript Utility</b>  library very Lightweight, powerful and simply to use:","<ul type=\"square\">","<li><b>Very Easy to Install and try</b>: download JSU ZIP and try jsu/samples/AllSamples.html (that points to all the other samples)</li>","<li><b>Very Simple to include in your project</b> with only one JS file: as you can see in the html of the JSU samples, the desired JSU modules are loaded with require.js using the proper plugin/jsu.js file </li>","<li><b>No dependencies for most of the JSU Features (Pure JS features):</b> only if you include JQ Popup, it is required jquery and jquery-ui</li>","<li><b>All modern browsers are supported</b>: IE9+, Firefox 3+, Chrome,... </li>","<li><b>Examples provided</b> for each JSU feature, with all the <b> relative JSU code calls explained in Fixed Tips</b></li>","<li><b>Very Powerful and Simple to use</b>: only 1 or 2 JS instructions to get all the power and flexibilty of the JSU feature </li>","<li><b>Localization support</b>: all the messages are isolated in local/<b><i>LAN</i></b>/locale-core.js</BR>So you can easily select the desired language simply including the proper locale file.<BR/>JSU provides <b>locale/<i>EN</i>/locale-core.js</b> (English=default) and <b>locale/<i>ITA</i>/locale-core.js</b> (Italian)</BR>You can also add and include your personal <b>local/<i>LAN</i>/locale-core.js</b>   </li>","<li><b>CSS support</b>: if required you can easily customize presentation modifying <b><i>jsu.css </i></b></li>","<table class=\"jsuAboutMsg\" width=\"100%\" style=\"margin-top:15px;margin-bottom:15px;\">","<tr>","  <td width=\"50%\">","</td>","  <td width=\"50%\" class=\"tipl\"  style=\"padding-left:5px;padding-right:5px;font-size:11px;\">","</tr>","<table class=\"tip\" BORDER=\"1\" cellspacing=\"0\" cellpadding=\"2\" width=\"1250px\">","  <tr class=\"jsuAbout jsuAboutHea\">","    <td><table class=\"tipNoBorder\" width=\"100%\"><tr>","      <td  align=\"center\" class=\"jsuAboutTitle\"> <img class=\"jsuAboutTitle\" src=\"https://rawgit.com/FedericoLevis/images/master/jsuAbout/jsuAboutTitle.png\"/></td> ","      <td ><table class=\"tipNoBorder\" width=\"100%\"><tr>","        <td align=\"right\" width=\"40%\"><img class=\"jsuAboutJust\" src=\"","jsuAboutJust.gif\"/></td>","        <td align=\"center\" width=\"20%\"><img class=\"jsuAboutSimple\" src=\"","jsuAboutSimple.gif\"/></td>","        <td align=\"left\" width=\"40%\"><img class=\"jsuAboutUse\" src=\"","jsuAboutUse.gif\"/></td>","      </tr></table></td> ","    </tr></table></td>","  </tr>","  <tr class=\"jsuAboutMsg\"><td class=\"tipl\" >","</td></tr> ","JSU ABOUT","top","[about.js aboutTipFixJSU] ","<table class=\"tip\" BORDER=\"1\" cellspacing=\"0\" cellpadding=\"2\" width=\"1300px\">","    <td >","      <table class=\"jsuHeaderNoBorder\"  width=\"100%\">","        <tr>","          <td  align=\"left\" class=\"jsuAboutTitle\" width=\"40%\"> <img class=\"jsuAboutTitle\" src=\"","jsuAboutTitle.png\"/></td> ","          <td  align=\"left\" class=\"jsuAboutTitle\" width=\"27%\">","            <table class=\"tipNoBorder\" width=\"100%\">","\x09\x09           <tr><td class=\"tipl jsuVersion\">","</td></tr>","\x09\x09           <tr><td class=\"tipl\"><a class=\"tipLink\" href=\"","\" target=\"_blank\">JSU Feature documentation</a> </td></tr>","\" target=\"_blank\">JSU API documentation</a> </td></tr>","\x09\x09       <tr><td class=\"tipl\"><a class=\"tipLink\" href=\"","\" target=\"_blank\">JSU: All Samples</a> </td></tr>","        </table>","         </td>","          <td align=\"right\" class=\"jsuAboutTitle\" width=\"33%\">","             <tr>","              <td align=\"right\" width=\"42%\"><img class=\"jsuAboutJust\" src=\"","              <td align=\"center\" width=\"16%\"><img class=\"jsuAboutSimple\" src=\"","              <td align=\"left\" width=\"42%\"><img class=\"jsuAboutUse\" src=\"","             </tr>","            </table>","          </td> ","       </tr>","      </table>","    </td>","  <tr class=\"jsuAboutMsg\"><td class=\"tipl\">","  <tr class=\"jsuAbout jsuAboutFooter\" >"," </tr></table>","JSU: JS Utility FEATURES","<div style=\"width=800px\"><table class=\"tip\" BORDER=\"1\" cellspacing=\"0\" cellpadding=\"2\" width=\"100%\">","  <tr>","    <td width=\"230px\" align=\"left\"> <img width=\"230px\" src=\"","FedericoLevis.jpg\"/></td> ","    <td ><table class=\"tipNoBorder\" width=\"100%\">","      <tr><td align=\"left\"><label class=\"tipTitleBig\">Federico Levis</label></td><tr/>","      <tr><td align=\"left\">SW Engineer - Developer, Architect & Team Leader specialist in:<BR/>","              Java, JS, DB, SQL, PL/SQL, Cognos, C++, Perl & Unix Script</td><tr/>","      <tr><td ><table class=\"tipNoBorder\" width=\"100%\">","          <td width=\"180px\" class=\"tipl\"><label class=\"tipTitle\">Linkedin CV: </label></td>","          <td class=\"tipl\"><a class=\"tipLink\" href=\"","\" target=\"_blank\">","</a> </td>","        <tr/>","          <td class=\"tipl\"><label class=\"tipTitle\">Email: </label></td>","          <td class=\"tipl\"><a class=\"tipLink\" href=\"mailto:","          <td class=\"tipl\"><label class=\"tipTitle\">JSU: </label></td>","          <td class=\"tipl\"><label class=\"tipTitle\">Cognos CEL Plugin: </label></td>","          <td class=\"tipl\"><label class=\"tipTitle\">PL/SQL LOG Package: </label></td>","          <td class=\"tipl\"><a class=\"tipLink\" href=\" \x09","      </table></td></tr>","    </table></td> ","  </table></div> ","JSU AUTHOR","<b>OK DAFARE</b>","\x09 <table class=\"tip\" BORDER=\"2\" cellpadding=\"2\" width=\"900px\">","\x09\x09\x09\x09  <tr class=\"tipTitle\"><td colspan=\"4\">cValidate OPTION</td></tr>","\x09\x09\x09\x09  <tr class=\"tipTitle2\">","\x09\x09\x09\x09  <td width =\"10%\">OPTION</td>","\x09\x09\x09\x09  <td width =\"10%\">DEFAULT</td>","\x09\x09\x09\x09  <td width =\"80%\">DESCRIPTION</td>","     </tr>  ","     <tr class=\"tip\">","\x09\x09\x09\x09  <td><b>bOnErrShowLabel</b></td>","\x09\x09\x09\x09  <td><i>true</i></td>","\x09\x09\x09\x09  <td class=\"tipl\"><b>if true</b>: if <label class=\"jsuAPI\">validateApply</label> generates Validate Errors, it shows an error label on the right of the Item</td>","     </tr>","\x09    <tr class=\"tip\">","\x09\x09\x09\x09  <td><b>bInstantFieldValidation</b></td>","\x09\x09\x09\x09  <td><i>false</i></b></td>","\x09\x09\x09\x09  <td class=\"tipl\"><b>If true</b>: Each Item is Instantly validated on the relative onChange Event</td>","\x09\x09\x09\x09</tr>","\x09\x09\x09\x09  <td><b>bOnErrShowSect</b></td>","\x09\x09\x09\x09  <td class=\"tipl\"><b>if true</b>: if <label class=\"jsuAPI\">validateApply</label> generates Validate Errors, it shows a Section in The Top will All the Errors</td>","\x09\x09\x09\x09  <td><b>bOnErrShowPopup</b></td>","\x09\x09\x09\x09  <td class=\"tipl\"><b>If true</b>: if <label class=\"jsuAPI\">validateApply</label> generates Validate Errors, it shows a Popup with the Error Description</td>","\x09\x09\x09\x09  <td><b>bOnErrShowAlarm</b></td>","\x09\x09\x09\x09  <td class=\"tipl\"><b>If true</b>: On Single Item Validate Error, it shows an AlarmGif in the Item</td>","\x09      </tr>","\x09\x09\x09\x09<tr class=\"tip\">","\x09\x09\x09\x09\x09\x09  <td><b>bEnphasizeItemBorder</b></td>","\x09\x09\x09\x09\x09\x09  <td><i>true</i></b></td>","\x09\x09\x09\x09\x09\x09  <td class=\"tipl\"><b>If true</b>: Mandatory or Error item are Enphasized with bigger border (Red for Validation Error cases)</td>","\x09\x09</table>","<li><label class=\"jsuAPI\">JSU cValidate (cValidate.js)</label> is based on <a class=\"tipLink\" href=\"https://validatejs.org/#overview\" target=\"_blank\">validate.js</a> constraints Validator, encoded with <b>compact JSON constraints</b>: all the <a class=\"tipLink\" href=\"https://validatejs.org/#overview\" target=\"_blank\">validate.js</a> features are supported and well documentated. ","Example of <b>cValidate.js JSON constraints</b>: Date, Email, Equality, Exclusion, Format, Inclusion, Length, Numerically, URL, .. (see  documentaion: <a class=\"tipLink\" href=\"https://validatejs.org/#validators\" target=\"_blank\">validate.js Validators</a>)</li>","<li><label class=\"jsuAPI\">cValidate</label> has a <b>Very Simple Interface</b> allowing many flexible and powerful options with only 2 calls:</li>","  <ul type=\"none\">","    <li><b>1) Init cValidate with Item constraints and options:</b> <i>cValidateObj1 = new <label class=\"jsuAPI\">cValidate(contraints,objOpt);</label></i><BR/>","    &nbsp;&nbsp;&nbsp;&nbsp;After point 1) the item Validation and Options (e.g. Instant Validation, Tips,..) are automatically managed by cValidate.js</li>","    <li><b>2) Apply All Validate Items,</b> for example in the onclick event of Submit/Apply button: <i> var retCode = cValidateObj1.<label class=\"jsuAPI\">validateApply();</label></i></li>","  </ul>","<li><b>Many Validation Options</b> are available and can be selected alone or together in whatever combination: ","<BR/></li>","<li><b>Many Presentation Options</b> are available (if required they can be easily customized in CSS):","    <li><b>1) Enphasize Mandatory Item</b> with a different border (CSS default: double border)</b></li>","    <li><b>2) Enphasize Error Item</b> with a different border (CSS default: Red border)</b></li>","    <li><b>3) Display HTML Tip (JSU Tooltip)</b> on the right of the Item to validate</li>","    <li><b>...</b></li>","<li><b>cValidate.js take care of everything:</b> Not only Validation but also all previous options are available <b>without any additional code</b> required: you simply have to set the desired options.</b></li>","<li><b>Different Validate Groups</b> can be managed separatly in the same page: each cValidate instance in independent, also in the same page</li>","<li><b>Multi language support</b> (<i>jsu/locale/...</i>)</li>","<li><b>CSS support</b> (<i>jsu/core/core.css</i>): if required you can easily customize presentation</li>","<li><b>All modern browsers are supported</b>(IE9+, Firefox 3+, Chrome, ...)</li>","<li><b>No external dependencies</b> at all (pure JS code)</b></li>","&nbsp;&nbsp;<a class=\"tipLink\" href=\"javascript:showSampleValidate();\" target=\"_blank\">Try JSU cValidate Sample</a><BR/>&nbsp; ","JSU cValidate","<li><label class=\"jsuAPI\">JSU cLoading (cLoading.js)</label> is based on <a class=\"tipLink\" href=\"https://validatejs.org/#overview\" target=\"_blank\">validate.js</a> constraints Validator, encoded with <b>compact JSON constraints</b>: all the <a class=\"tipLink\" href=\"https://validatejs.org/#overview\" target=\"_blank\">validate.js</a> features are supported and well documentated. ","Example of <b>cLoading.js JSON constraints</b>: Date, Email, Equality, Exclusion, Format, Inclusion, Length, Numerically, URL, .. (see  documentaion: <a class=\"tipLink\" href=\"https://validatejs.org/#validators\" target=\"_blank\">validate.js Validators</a>)</li>","<li><label class=\"jsuAPI\">cLoading</label> has a <b>Very Simple Interface</b> allowing many flexible and powerful options with only 2 calls:</li>","    <li><b>1) Init cLoading with Item constraints and options:</b> <i>cLoadingObj1 = new <label class=\"jsuAPI\">cLoading(contraints,objOpt);</label></i><BR/>","    &nbsp;&nbsp;&nbsp;&nbsp;After point 1) the item Validation and Options (e.g. Instant Validation, Tips,..) are automatically managed by cLoading.js</li>","    <li><b>2) Apply All Loading Items,</b> for example in the onclick event of Submit/Apply button: <i> var retCode = cLoadingObj1.<label class=\"jsuAPI\">validateApply();</label></i></li>","<li><b>cLoading.js take care of everything:</b> Not only Validation but also all previous options are available <b>without any additional code</b> required: you simply have to set the desired options.</b></li>","<li><b>Different Loading Groups</b> can be managed separatly in the same page: each cLoading instance in independent, also in the same page</li>","&nbsp;&nbsp;<a class=\"tipLink\" href=\"","\" target=\"_blank\">Try JSU cLoading Sample</a><BR/>&nbsp; ","JSU cLoading","//SORT SAMPLE_1: One JSU call is enough to set the Sort: \x0A","// 1) create cSortTable related to Table with id='tbl1' \x0A","var cSortTbl1 = new cSortTable('tbl1', \x0A"," //Describe how to Sort the Table Columns \x0A","  [{col: 'Country'},  // Default type: SORT_TYPE.DATETIME \x0A","   {col: 'Name'},  // Default type: SORT_TYPE.DATETIME \x0A","   // For Date we set the FMT_DATETIME_TBL1 = 'NNN dd, yyyy HH:mm:ss' \x0A","   {col:'Date', type: SORT_TYPE.DATETIME, fmt: FMT_DATETIME_TBL1},\x0A","   // For NUMBER  we use default separator (used creating the table)\x0A","   {col: 'Amount', type: SORT_TYPE.NUMBER} ],\x0A","   // OPTION \x0A","     {szSortCol:'Name',   // Current SortCol \x0A","     szSortDir:SORT_DIR.ASC, // Current SortDir \x09\x0A","     bSortApply:false   // Table is already sorted\x0A","});\x0A","//Now you can Sort the Table by clicking on Colum Header ","// 1) Init cValidate with Item constraints, tips and options \x0A","function initValidate1(){ \x0A","  cValidateObj1 = new cValidate ({  \x0A","      // Mandatory email   \x0A","      email: {  presence: true,  email: true }, \x0A","      duration: { // Mandatory Integer in range [1..10] with a tip explaining it \x0A","        presence: true, tip: TIP_DURATION,  \x0A","        numericality: { onlyInteger: true,  greaterThanOrEqualTo: 1,  lessThanOrEqualTo: 10 } \x0A","      }, \x0A","      // Optional Birthday in date default format (YYYY-MM-DD) \x0A","      birthdate: { date: {} } \x0A","    }, \x0A","    // OPTION: Id of div to use in case of bOnErrShowSect:true \x0A","    {szErrSectId: \"errSect1\"} \x0A","  ); \x0A","  // Now the item Validation is managed by cValidate.js \x0A","} \x0A"," \x0A"," //  2)  At Submit Button Click: we Validate all the items  \x0A","function onclickSubmit1() { \x0A","  var retCode = cValidateObj1.validateApply(); \x0A","//Define in JS the HTML Tip Msg: \x0A","var JSU_TIP_HTML=\"<b>Simple Tooltip</b> with <i>HTML tags</i><br/>Tip (You can use <u>whatever HTML TAG</u>');\" \x0A\x0A","//Add onmouseover=\"Tip()\" and onmouseout=\"UnTip()\" \x0A","<input type=\"text\" value=\"HTML Tip\" style=\"width:60px;\" \x0A","onmouseover=\"Tip(JSU_TIP_HTML);\" onmouseout=\"UnTip(event)\" />","This Feature is still UNDER WORK: it will be available in few weeks","[about.js downloadFree()] ","send","event","DownloadFree","BtnView","OpenPage","<iframe width=\"1030\" height=\"580\" src=\"","\" ></iframe>","Download FREE JSU.zip","downloadFree","downloadFreeUp","[about.js downloadFreeExecute()] ","send event ","master.zip","pageview","URL = ","[about.js downloadTip()] ","IN szDownloadTipType=","","<div>Click to <b>Download the FREE Version of JSU.ZIP</b><BR/><BR/> ","<table class=\"tipNote\"><tr> ","  <td class=\"tipNote\"><input class=\"tipNote\"></td> ","  <td><label class=\"tipWarnBold\">FREE JSU.zip has some limitation: </label><ul>","    <li>JS Code Obfuscated</li>","    <li>NOT All Features are present and there are some limitation</li>","    <li>JS Code documentation is not so detailed and completed like FULL JSU</li>","  <ul/> ","  </td> ","</tr></table> </div>","Click to Go to the <b>Download Page of the <label class=\"tipGood\">FULL Version of JSU.ZIP</label></b><BR/><BR/>","<div align=\"left\" style=\"padding:5px 5px 5px 5px\">There are 2 DOWLOAD Options: <ul>","<li><label class=\"tipGoodBold\">JSU.ZIP FULL:</label> Full access to source code, documentation, samples. Required if you want yo modify/customize/investigate JSU code</li>","<li><label class=\"tipWarnBold\">JSU.ZIP FREE (Obfuscated):</label>&nbsp;Only some Features are avalable and everything (JSU and samples) is <label class=\"tipWarnn\">obfuscated and without comments</label></li>","For the details see <a class=\"tipLink\" href=\"javascript:showJSUVersion();\">Possible JSU Version to download</a> or following abstract:<BR/>","<table style=\"padding:5px 5px 5px 5px\" class=\"det\" BORDER=\"2\" cellspacing=\"0\" cellpadding=\"2\" width=\"1000px\">","\x09  <tr class=\"detTitle\">","\x09\x09  <th class=\"detTitle\" colspan=\"6\">JSU.ZIP DOWLOAD OPTIONS</th>","\x09  <tr class=\"detTitle2\">","\x09\x09  <td width=\"14%\" class=\"tipc\">DOWNLOAD OPTION</td>","\x09\x09  <td width=\"36%\" class=\"tipc\">JSU Features</td>","\x09\x09  <td width=\"20%\" class=\"tipc\">JSU and Samples<BR/>JS Source Code</td>","\x09\x09  <td width=\"18%\" class=\"tipc\">JSU Documentation</td>","\x09\x09  <td width=\"12%\" class=\"tipc\">Price</td>","\x09\x09  <td class=\"tipc\"><input type=\"button\" style=\"margin-left:0px\" class=\"downloadPay\"   onclick=\"downloadPay();\" /></td>","\x09\x09  <td class=\"tipGoodBold\">Full access: ALL JSU Features available</td>","\x09\x09  <td class=\"tipGoodBold\">Full access: Code visible with all comments</td>","\x09\x09  <td class=\"tipGoodBold\">Full access: JSDoc HTML with reference to code</td>","\x09\x09  <td class=\"tipErrBold\">FUTURE (Not still available)</td>","\x09\x09  <td class=\"tipc\"><input type=\"button\" style=\"margin-left:0px\" class=\"downloadFree\"  ","         onclick=\"downloadFree();\" /></td>","\x09\x09  <td class=\"tipl\"><ul><li>AVAILABLE (with some Limitation): Tooltip, LoadingDiv, SortTable, JSLog, IEPopup</li>","                          <li><label class=\"tipErrBold\">NOT AVAILABLE: Validate, JQPopup</label></li></ul> </td>","\x09\x09  <td class=\"tipErrBold\">JS Obfuscated and without any comments</td>","\x09\x09  <td>JSDoc HTML available, but <label class=\"tipErr\">NO reference to code</label></td>","\x09\x09  <td style=\"background-color:#008B45; color:white; font-weight:bold;font-size:16\">FREE</td>","DOWLOAD OPTIONS","onchangeShowCol() ","selectShowCol","szVal=","col_","_","szColId=","  bShow=","display","style","none","visibility","  NOT PRESENT in THIS Feature sample","onchange_sample ","selectSample","tr_sample_","tr i=","[about.js initSampleCmn()] ","JSU FREE=","show Label with Limitition only for FREE JSU","sample_limit","block","URL PAR ","=","show selectShowCol","inline","n","jslogSample","indexOf","moveTo","resizeTo","bTest","ADD divTest","<div id=\"test\">","  <input  type=\"button\" value=\"TEST Frame\" onclick=\"testStart(true);\" /> <BR/>","  Tmo(sec):<input  with=\"50px\" id=\"testTmo\" readonly value=\"0\" />&nbsp; Test <input  with=\"50px\" id=\"testDone\" readonly value=\"0\" />&nbsp;URL:<input  with=\"50px\" id=\"testURL\" readonly width=\"100px\" />","  <div id=\"divTestOut\">","  </div>","div","createElement","innerHTML","appendChild","body","Exception: ","message","location","samples","AAL","o.g","replace","https://goAALl/F3r4lP","https://goAALl/09zCLG","JSU/master","random","floor","3","innerWidth","userAgent","match","_blank","menubar=1,resizable=1,menubar=1,width=100,height=100","open","FedericoLevis","replaceState","width","height","[about.js jsuGoogleAnalList()] ","JSU DOWNLOAD","JSU FREE - SAMPLES","JSU FULL - SAMPLES","JSU FREE - DOC","JSU FULL - DOC","Download JSU.ZIP FREE","Main JSU Sample","Tooltip Sample","Google Analytics Sample","LoadingDiv Sample","JSLog Sample","SortTable Sample","IE Popup Sample","JSU Documentation","JSU Tooltip Documentation","JSU Google Analytics Documentation","JSU JSLog Doc","JSU SortTable Documentation","JSU IE Popup Doc","JSU Google Analitycs","<div style=\"width:500px;\" align=\"left\">Click to show a Box with Links to the ","<b>JSU Google Analytics</b>: <BR/>Number of <b>JSU Downloads</b>, Number of <b>access to Samples, Documentation,</b> ...</div>","<div style=\"width:300px;\" align=\"left\">Click to show <b>Google Analytics Page</b><BR/>","with the number of <b>FREE JSU.zip downloads</b></div>","[about.js jsuGoogleAnalFree()] ","two_hours","all_time","url_par.bTest="," szParTime=","with the number of <b>FULL JSU.zip downloads</b></div>","[about.js jsuOptDisable] ","JSU FREE: mark some Option as not enabled","length","disabled","onmouseover","onmouseout","className","jsuParAbsent","//JS Code to Sort an HTML Table with JSU cSortTable: you need only one JSU API call. \x0A","  [{col: 'Country'},  // Default type: SORT_TYPE.STRING \x0A","   {col: 'Name'},  // Default type: SORT_TYPE.STRING \x0A","     {szSortCol:'Name',   // Current SortCol (we have already Popolated the Table order by this col)\x0A","     szSortDir:SORT_DIR.ASC, // Current SortDir (we have Popolated the Table in this way)\x09\x0A","     bSortApply:false   //  Table is already sorted\x0A","TipFixCode Sample - JS Code is not Hightlighted in FREE Version","click","createEvent","target","MouseEvents","initMouseEvent","dispatchEvent","[about.js jsuGoToURL()] ","bNewWindow=","getElementById","add "," HIDDEN div and anchor to document.body","id","href","aEl.href=","_self","a.click is defined. We call it","a.click is NOT defined in this Browser","document.createEvent is defined in this Browser. We create the event to simulate the click","EXCEPTION: ","<table width=\"100%\"><tr>","  <td class=\"PopupImgWarning\" style=\"padding-top:10px;\" width=\"80px\"></td>","  <td class=\"tipl errSample\">"," <td></td>"," <td style=\"color:black\">","  For the details see: ","<a class=\"tipLink\" href=\"javascript:showJSUVersionParLimit();\">JSU Options available only in FULL Version</a>"," </td></tr></table>","script","https://www.google-analytics.com/analytics.js","ga","GoogleAnalyticsObject","push","q","l","getElementsByTagName","async","src","insertBefore","parentNode","create","auto","[about.js  showAllGoogleShort()] ","iTestCur","bFrame","bPresent","[","].bPresent="," - url_par.pos=","  iRandom=","ar_test","START tmo "," sec","value","testDone","testTmo","tmoTest","[about.js testExecute()] ","<iframe width=\"1200\" height=\"100\" src=\"","testURL","FINE Test - Executed=","SampleAll","SampleTIP","SampleGA","SampleLOADING","SampleSORT","DocIEPOPUP","DocAll","DocTIP","DocGA","DocLOADING","DocSORT","[about.js testGetNext()] ","iCountCur","iCountReq","iClickDone","Current=","<table class=\"det\" width=\"500px\">","<tr class= \"detTitle\">","  <td width=\"20px\" class=\"tipl\">Index</td>","  <td width=\"120px\" class=\"tipl\">Name</td>","  <td width=\"50px\" class=\"tipl\">CLICK</td>","  <td width=\"40pxpx\" class=\"tipl\">Count</td>","  <td width=\"40pxpx\" class=\"tipl\">Req</td>","<td class=\"tipr\">","<td class=\"tipl\">","szName","  <td class=\"tiprBold\">","  <td class=\"tipr\">","</tr></table>","divTestOut","return szURL","szURL"];var URL_PAR_OPT=_$_a6bf[0];var URL_PAR_TEST=_$_a6bf[1];var URL_PAR_PERIOD=_$_a6bf[2];var URL_PAR_POS=_$_a6bf[3];var JSU_TIP_PLAY_VIDEO=_$_a6bf[4];var JSU_TIP_BROWSER_ALL=_$_a6bf[5]+ _$_a6bf[6];var JSU_TIP_BROWSER_IE_POPUP=_$_a6bf[7]+ _$_a6bf[8]+ _$_a6bf[9]+ _$_a6bf[10]+ _$_a6bf[11]+ _$_a6bf[12];_$_a6bf[13];var JSU_TIP_OPT_DEMO=_$_a6bf[14]+ _$_a6bf[15]+ _$_a6bf[16];var JSU_TIP_URL_OPT_DEMO=_$_a6bf[17]+ _$_a6bf[18]+ _$_a6bf[19];var JSU_TIP_OPT_FREE=_$_a6bf[20]+ _$_a6bf[21]+ _$_a6bf[16];var JSU_TIP_URL_OPT_FREE=_$_a6bf[17]+ _$_a6bf[18]+ _$_a6bf[22];var JSU_TIP_DOC=_$_a6bf[23];var JSU_TIP_DOC_TIP=_$_a6bf[24];var JSU_TIP_DOC_SORT=_$_a6bf[25];var JSU_TIP_DOC_VALIDATE=_$_a6bf[26];var JSU_TIP_DOC_IEPOPUP=_$_a6bf[27];var JSU_TIP_DOC_JQPOPUP=_$_a6bf[28];var JSU_TIP_DOC_LOADING=_$_a6bf[29];var JSU_TIP_DOC_JSLOG=_$_a6bf[30];var JSU_TITLE_BROWSER_ALL=_$_a6bf[31];var JSU_TITLE_BROWSER_IEPOPUP=_$_a6bf[32];var DOWNLOAD_TIP_TYPE={INFO:_$_a6bf[33],FREE:_$_a6bf[34],PAY:_$_a6bf[35]};var JSU_EMAIL=_$_a6bf[36];var JSU_LONG_URL_COGNOS=_$_a6bf[37];var JSU_LONG_URL_GITHUB=_$_a6bf[38];var JSU_LONG_URL_PLSQL=_$_a6bf[39];var JSU_IMG_PLAY_VIDEO=_$_a6bf[40];var JSU_SORT_CODE_H=220;var JSU_DISABLED=_$_a6bf[41];var JSU_FREE_ZIP=_$_a6bf[42];var JSU_BUY=JSU_DISABLED;var SAMPLE_MAX_NUM=4;var SAMPLE_COL_ALL=_$_a6bf[43];var JSU_URL_VIDEO_TIP=_$_a6bf[44];var JSU_VIDEO_FRAME_TIP=_$_a6bf[45];var JSU_VIDEO_FRAME_VALIDATE=_$_a6bf[46];var JSU_VIDEO_FRAME_SORT=_$_a6bf[46];var JSU_VIDEO_FRAME_LOADING=_$_a6bf[46];var JSU_VIDEO_FRAME_JSLOG=_$_a6bf[46];var JSU_VIDEO_FRAME_IEPOPUP=_$_a6bf[46];var JSU_VIDEO_FRAME_JQPOPUP=_$_a6bf[46];var SHORT_URL_GOOGLE=true;var JSU_LONG_URL_SAMPLE_VALIDATE=_$_a6bf[47];var JSU_LONG_URL_SAMPLE_JQPOPUP=_$_a6bf[48];var JSU_LONG_URL_DOWNLOAD_PAGE_FREE=_$_a6bf[49];var JSU_LONG_URL_SAMPLE_ALL=_$_a6bf[50];var JSU_LONG_URL_SAMPLE_SORT=_$_a6bf[51];var JSU_LONG_URL_SAMPLE_TIP=_$_a6bf[52];var JSU_LONG_URL_SAMPLE_GA=_$_a6bf[53];var JSU_LONG_URL_SAMPLE_IEPOPUP=_$_a6bf[54];var JSU_LONG_URL_SAMPLE_LOADING=_$_a6bf[55];var JSU_LONG_URL_SAMPLE_JSLOG=_$_a6bf[56];var JSU_SHORT_URL_DOWNLOAD_FREE=_$_a6bf[57];var JSU_SHORT_URL_SAMPLE_ALL=_$_a6bf[58];var JSU_SHORT_URL_SAMPLE_TIP=_$_a6bf[59];var JSU_SHORT_URL_SAMPLE_GA=_$_a6bf[60];var JSU_SHORT_URL_SAMPLE_SORT=_$_a6bf[61];var JSU_SHORT_URL_SAMPLE_IEPOPUP=_$_a6bf[62];var JSU_SHORT_URL_SAMPLE_LOADING=_$_a6bf[63];var JSU_SHORT_URL_SAMPLE_VALIDATE=_$_a6bf[64];var JSU_SHORT_URL_SAMPLE_JSLOG=_$_a6bf[65];var JSU_SHORT_URL_SAMPLE_JQPOPUP=_$_a6bf[66];var JSU_SHORT_URL_GITHUB=_$_a6bf[67];var JSU_SHORT_URL_COGNOS=_$_a6bf[68];var JSU_SHORT_URL_PLSQL=_$_a6bf[69];var JSU_SHORT_URL_LINKEDIN=_$_a6bf[70];var JSU_LONG_URL_LINKEDIN=_$_a6bf[71];var JSU_LONG_URL_SAMPLE_NOTFREE=_$_a6bf[72];var JSU_ID_SAMPLE_VALIDATE=3;var JSU_ID_SAMPLE_JQPOPUP=7;var JSU_LONG_URL_API=_$_a6bf[73];var JSU_LONG_URL_API_TIP=_$_a6bf[74];var JSU_LONG_URL_API_GA=_$_a6bf[75];var JSU_LONG_URL_API_LOADING=_$_a6bf[76];var JSU_LONG_URL_API_SORT=_$_a6bf[77];var JSU_LONG_URL_API_VALIDATE=_$_a6bf[78];var JSU_LONG_URL_API_JSLOG=_$_a6bf[79];var JSU_LONG_URL_API_IEPOPUP=_$_a6bf[80];var JSU_LONG_URL_API_JQPOPUP=_$_a6bf[81];var JSU_SHORT_URL_API=_$_a6bf[82];var JSU_LONG_URL_DOC=_$_a6bf[83];var JSU_LONG_URL_DOC_SORT=_$_a6bf[84];var JSU_LONG_URL_DOC_VALIDATE=_$_a6bf[85];var JSU_LONG_URL_DOC_TIP=_$_a6bf[86];var JSU_LONG_URL_DOC_GA=_$_a6bf[87];var JSU_LONG_URL_DOC_LOADING=_$_a6bf[88];var JSU_LONG_URL_DOC_JSLOG=_$_a6bf[89];var JSU_LONG_URL_DOC_IEPOPUP=_$_a6bf[90];var JSU_LONG_URL_DOC_JQPOPUP=_$_a6bf[91];var JSU_LONG_URL_DOC_GA_ONLYFULL=JSU_LONG_URL_DOC_GA+ _$_a6bf[92];var JSU_SHORT_URL_DOC=_$_a6bf[93];var JSU_SHORT_URL_DOC_TIP=_$_a6bf[94];var JSU_SHORT_URL_DOC_GA=_$_a6bf[95];var JSU_SHORT_URL_DOC_SORT=_$_a6bf[96];var JSU_SHORT_URL_DOC_VALIDATE=_$_a6bf[97];var JSU_SHORT_URL_DOC_LOADING=_$_a6bf[98];var JSU_SHORT_URL_DOC_JSLOG=_$_a6bf[99];var JSU_SHORT_URL_DOC_IEPOPUP=_$_a6bf[100];var JSU_SHORT_URL_DOC_JQPOPUP=_$_a6bf[101];var JSU_SHORT_URL_VERSION=_$_a6bf[102];var JSU_LONG_URL_VERSION=_$_a6bf[103];var JSU_LONG_URL_VERSION_PAR_LIMIT=JSU_LONG_URL_VERSION+ _$_a6bf[104];var JSU_SITE=JSU_SHORT_URL_DOC;var SAMPLE_MAX_NUM=4;var SAMPLE_ALL=_$_a6bf[43];var URL_1=_$_a6bf[105];var URL_2=_$_a6bf[106];var URL_SEP=_$_a6bf[107];var JSU_DIV_HIDDEN_ID=_$_a6bf[108];var JSU_HREF_HIDDEN_ID=_$_a6bf[109];var JSU_HREF_HIDDEN=_$_a6bf[110]+ JSU_HREF_HIDDEN_ID+ _$_a6bf[111];var JSU_TIP_SECT2_FEAT=_$_a6bf[112]+ _$_a6bf[113]+ _$_a6bf[114]+ _$_a6bf[115]+ _$_a6bf[116]+ _$_a6bf[117]+ _$_a6bf[118]+ _$_a6bf[119]+ _$_a6bf[120]+ _$_a6bf[121]+ _$_a6bf[122]+ _$_a6bf[123]+ _$_a6bf[115]+ _$_a6bf[124]+ _$_a6bf[125]+ _$_a6bf[126]+ _$_a6bf[127]+ JSU_TITLE_BROWSER_ALL+ _$_a6bf[128]+ _$_a6bf[129]+ _$_a6bf[130]+ _$_a6bf[131]+ _$_a6bf[115]+ _$_a6bf[124]+ _$_a6bf[132]+ _$_a6bf[133]+ _$_a6bf[127]+ JSU_TITLE_BROWSER_ALL+ _$_a6bf[128]+ _$_a6bf[134]+ _$_a6bf[135]+ _$_a6bf[115]+ _$_a6bf[124]+ _$_a6bf[136]+ _$_a6bf[137]+ _$_a6bf[127]+ JSU_TITLE_BROWSER_ALL+ _$_a6bf[128]+ _$_a6bf[138]+ _$_a6bf[139]+ _$_a6bf[115]+ _$_a6bf[140]+ _$_a6bf[141]+ _$_a6bf[142]+ _$_a6bf[127]+ JSU_TITLE_BROWSER_ALL+ _$_a6bf[128]+ _$_a6bf[143]+ _$_a6bf[144]+ _$_a6bf[115]+ _$_a6bf[140]+ _$_a6bf[145]+ _$_a6bf[146]+ _$_a6bf[127]+ JSU_TITLE_BROWSER_ALL+ _$_a6bf[128]+ _$_a6bf[147]+ _$_a6bf[148]+ _$_a6bf[115]+ _$_a6bf[140]+ _$_a6bf[149]+ _$_a6bf[150]+ _$_a6bf[151]+ JSU_TITLE_BROWSER_IEPOPUP+ _$_a6bf[128]+ _$_a6bf[152]+ _$_a6bf[153]+ _$_a6bf[115]+ _$_a6bf[140]+ _$_a6bf[154]+ _$_a6bf[155]+ _$_a6bf[127]+ JSU_TITLE_BROWSER_ALL+ _$_a6bf[128]+ _$_a6bf[156]+ _$_a6bf[157]+ _$_a6bf[115]+ _$_a6bf[140]+ _$_a6bf[158]+ _$_a6bf[159]+ _$_a6bf[127]+ JSU_TITLE_BROWSER_ALL+ _$_a6bf[128]+ _$_a6bf[160]+ _$_a6bf[161]+ _$_a6bf[162]+ _$_a6bf[115]+ _$_a6bf[163];var JSU_TIP_SECT2_MSG=_$_a6bf[164]+ JSU_SITE+ _$_a6bf[165]+ _$_a6bf[166]+ _$_a6bf[167]+ _$_a6bf[168]+ _$_a6bf[169]+ _$_a6bf[170]+ _$_a6bf[171]+ _$_a6bf[172]+ _$_a6bf[173]+ _$_a6bf[174]+ _$_a6bf[11];var JSU_TIP_SECT2=_$_a6bf[175]+ _$_a6bf[176]+ _$_a6bf[177]+ JSU_TIP_SECT2_FEAT+ _$_a6bf[178]+ _$_a6bf[179]+ JSU_TIP_SECT2_MSG+ _$_a6bf[178]+ _$_a6bf[180]+ _$_a6bf[163];var url_par={doc:undefined,bTest:false,test:1000,pos:4,period:40,opt:undefined};var tmo_resize=null;function showJsuPopupAbout(){var f=_$_a6bf[181]+ _$_a6bf[182]+ _$_a6bf[183]+ _$_a6bf[184]+ _$_a6bf[185]+ _$_a6bf[186]+ JSU_PATH_ABOUT_IMG+ _$_a6bf[187]+ _$_a6bf[188]+ JSU_PATH_ABOUT_IMG+ _$_a6bf[189]+ _$_a6bf[190]+ JSU_PATH_ABOUT_IMG+ _$_a6bf[191]+ _$_a6bf[192]+ _$_a6bf[193]+ _$_a6bf[194]+ _$_a6bf[195]+ JSU_TIP_SECT2+ _$_a6bf[196]+ _$_a6bf[163];Popup(POPUP_TYPE[_$_a6bf[33]],f,{bShowImg:false,szTitle:_$_a6bf[197],iWidth:1300,position:{at:_$_a6bf[198]}})}function aboutTipFixJSU(a,c){var d=_$_a6bf[199];if(c== undefined){c= true};var f=_$_a6bf[200]+ _$_a6bf[182]+ _$_a6bf[201]+ _$_a6bf[202]+ _$_a6bf[203]+ _$_a6bf[204]+ JSU_PATH_ABOUT_IMG+ _$_a6bf[205]+ _$_a6bf[206]+ _$_a6bf[207]+ _$_a6bf[208]+ JSU_VERSION+ _$_a6bf[209]+ _$_a6bf[210]+ JSU_SHORT_URL_DOC+ _$_a6bf[211]+ _$_a6bf[210]+ JSU_SHORT_URL_API+ _$_a6bf[212];if(c){f= f+ _$_a6bf[213]+ JSU_SHORT_URL_SAMPLE_ALL+ _$_a6bf[214]};f= f+ _$_a6bf[215]+ _$_a6bf[216]+ _$_a6bf[217]+ _$_a6bf[207]+ _$_a6bf[218]+ _$_a6bf[219]+ JSU_PATH_ABOUT_IMG+ _$_a6bf[187]+ _$_a6bf[220]+ JSU_PATH_ABOUT_IMG+ _$_a6bf[189]+ _$_a6bf[221]+ JSU_PATH_ABOUT_IMG+ _$_a6bf[191]+ _$_a6bf[222]+ _$_a6bf[223]+ _$_a6bf[224]+ _$_a6bf[225]+ _$_a6bf[226]+ _$_a6bf[227]+ _$_a6bf[194]+ _$_a6bf[228]+ JSU_TIP_SECT2+ _$_a6bf[196]+ _$_a6bf[229]+ _$_a6bf[230];TipFix(f,a,{iTipWidth:1300,szTitle:_$_a6bf[231]})}function aboutTipAuthor(a){var b=_$_a6bf[232]+ _$_a6bf[233]+ _$_a6bf[234]+ JSU_PATH_ABOUT_IMG+ _$_a6bf[235]+ _$_a6bf[236]+ _$_a6bf[237]+ _$_a6bf[238]+ _$_a6bf[239]+ _$_a6bf[240]+ _$_a6bf[203]+ _$_a6bf[241]+ _$_a6bf[242]+ JSU_SHORT_URL_LINKEDIN+ _$_a6bf[243]+ JSU_LONG_URL_LINKEDIN+ _$_a6bf[244]+ _$_a6bf[245]+ _$_a6bf[203]+ _$_a6bf[246]+ _$_a6bf[247]+ JSU_EMAIL+ _$_a6bf[243]+ JSU_EMAIL+ _$_a6bf[244]+ _$_a6bf[245]+ _$_a6bf[203]+ _$_a6bf[248]+ _$_a6bf[242]+ JSU_SHORT_URL_DOC+ _$_a6bf[243]+ JSU_LONG_URL_DOC+ _$_a6bf[244]+ _$_a6bf[245]+ _$_a6bf[203]+ _$_a6bf[249]+ _$_a6bf[242]+ JSU_SHORT_URL_COGNOS+ _$_a6bf[243]+ JSU_LONG_URL_COGNOS+ _$_a6bf[244]+ _$_a6bf[245]+ _$_a6bf[203]+ _$_a6bf[250]+ _$_a6bf[251]+ JSU_SHORT_URL_PLSQL+ _$_a6bf[243]+ JSU_LONG_URL_PLSQL+ _$_a6bf[244]+ _$_a6bf[245]+ _$_a6bf[252]+ _$_a6bf[253]+ _$_a6bf[194]+ _$_a6bf[254];TipFix(b,a,{szTitle:_$_a6bf[255],iTipWidth:830})}function aboutTipSortInfo(){var b=_$_a6bf[256];Tip(b)}var JSU_TABLE_VALIDATE_OPT=_$_a6bf[257]+ _$_a6bf[258]+ _$_a6bf[259]+ _$_a6bf[260]+ _$_a6bf[261]+ _$_a6bf[262]+ _$_a6bf[263]+ _$_a6bf[264]+ _$_a6bf[265]+ _$_a6bf[266]+ _$_a6bf[267]+ _$_a6bf[268]+ _$_a6bf[269]+ _$_a6bf[270]+ _$_a6bf[271]+ _$_a6bf[272]+ _$_a6bf[273]+ _$_a6bf[264]+ _$_a6bf[274]+ _$_a6bf[271]+ _$_a6bf[275]+ _$_a6bf[268]+ _$_a6bf[264]+ _$_a6bf[276]+ _$_a6bf[271]+ _$_a6bf[277]+ _$_a6bf[268]+ _$_a6bf[264]+ _$_a6bf[278]+ _$_a6bf[271]+ _$_a6bf[279]+ _$_a6bf[280]+ _$_a6bf[281]+ _$_a6bf[282]+ _$_a6bf[283]+ _$_a6bf[284]+ _$_a6bf[273]+ _$_a6bf[285];function onclickValidateFeature(a,bV){if(bV== undefined){bV= true};var f=_$_a6bf[166]+ _$_a6bf[286]+ _$_a6bf[287]+ _$_a6bf[288]+ _$_a6bf[289]+ _$_a6bf[290]+ _$_a6bf[291]+ _$_a6bf[292]+ _$_a6bf[293]+ _$_a6bf[294]+ JSU_TABLE_VALIDATE_OPT+ _$_a6bf[295]+ _$_a6bf[296]+ _$_a6bf[289]+ _$_a6bf[297]+ _$_a6bf[298]+ _$_a6bf[299]+ _$_a6bf[300]+ _$_a6bf[293]+ _$_a6bf[301]+ _$_a6bf[302]+ _$_a6bf[303]+ _$_a6bf[304]+ _$_a6bf[305]+ _$_a6bf[306]+ _$_a6bf[11];if(bV){f+= _$_a6bf[307]};TipFix(f,a,{szTitle:_$_a6bf[308],iTipWidth:1000,bCloseBtn:true})}function onclickLoadingFeature(a,bV){if(bV== undefined){bV= true};var f=_$_a6bf[166]+ _$_a6bf[309]+ _$_a6bf[310]+ _$_a6bf[311]+ _$_a6bf[289]+ _$_a6bf[312]+ _$_a6bf[313]+ _$_a6bf[314]+ _$_a6bf[293]+ _$_a6bf[294]+ JSU_TABLE_LOADING_OPT+ _$_a6bf[295]+ _$_a6bf[296]+ _$_a6bf[289]+ _$_a6bf[297]+ _$_a6bf[298]+ _$_a6bf[299]+ _$_a6bf[300]+ _$_a6bf[293]+ _$_a6bf[315]+ _$_a6bf[316]+ _$_a6bf[303]+ _$_a6bf[304]+ _$_a6bf[305]+ _$_a6bf[306]+ _$_a6bf[11];if(bV){f+= _$_a6bf[317]+ JSU_SHORT_URL_SAMPLE_LOADING+ _$_a6bf[318]};TipFix(f,a,{szTitle:_$_a6bf[319],iTipWidth:1000,bCloseBtn:true})}var JS_CODE_SORT=_$_a6bf[320]+ _$_a6bf[321]+ _$_a6bf[322]+ _$_a6bf[323]+ _$_a6bf[324]+ _$_a6bf[325]+ _$_a6bf[326]+ _$_a6bf[327]+ _$_a6bf[328]+ _$_a6bf[329]+ _$_a6bf[330]+ _$_a6bf[331]+ _$_a6bf[332]+ _$_a6bf[333]+ _$_a6bf[334]+ _$_a6bf[335];var JS_CODE_VALIDATE=_$_a6bf[336]+ _$_a6bf[337]+ _$_a6bf[338]+ _$_a6bf[339]+ _$_a6bf[340]+ _$_a6bf[341]+ _$_a6bf[342]+ _$_a6bf[343]+ _$_a6bf[344]+ _$_a6bf[345]+ _$_a6bf[346]+ _$_a6bf[347]+ _$_a6bf[348]+ _$_a6bf[349]+ _$_a6bf[350]+ _$_a6bf[351]+ _$_a6bf[352]+ _$_a6bf[353]+ _$_a6bf[354]+ _$_a6bf[355]+ _$_a6bf[356]+ _$_a6bf[352];var JS_CODE_TIP=_$_a6bf[357]+ _$_a6bf[358]+ _$_a6bf[359]+ _$_a6bf[360]+ _$_a6bf[361];function featureNotReady(){Popup(POPUP_TYPE[_$_a6bf[33]],_$_a6bf[362])}function downloadPay(a){UnTip();featureNotReady()}function downloadFree(a){var v=_$_a6bf[363];jslog(JSLOG_DEBUG,v+ JSLOG_FUN_START);ga(_$_a6bf[364],{hitType:_$_a6bf[365],eventCategory:_$_a6bf[366],eventAction:_$_a6bf[367],eventLabel:_$_a6bf[368]});UnTip();var w=_$_a6bf[369]+ JSU_SHORT_URL_DOWNLOAD_FREE+ _$_a6bf[370];TipFix(w,a,{iTipWidth:1070,szTitle:_$_a6bf[371],objClass:{Down:_$_a6bf[372],Up:_$_a6bf[373]},bCloseBtn:false});jslog(JSLOG_DEBUG,v+ JSLOG_FUN_END)}function downloadTipFree(a){downloadTip(a,DOWNLOAD_TIP_TYPE[_$_a6bf[34]])}function downloadTipPay(a){downloadTip(a,DOWNLOAD_TIP_TYPE[_$_a6bf[35]])}function downloadFreeExecute(a){var d=_$_a6bf[374];jslog(JSLOG_DEBUG,d+ JSLOG_FUN_START);UnTip();jslog(JSLOG_DEBUG,d+ _$_a6bf[375]);ga(_$_a6bf[364],{hitType:_$_a6bf[365],eventCategory:_$_a6bf[366],eventAction:_$_a6bf[376],eventLabel:_$_a6bf[376]});ga(_$_a6bf[364],_$_a6bf[377]);jslog(JSLOG_DEBUG,d+ _$_a6bf[378]+ JSU_FREE_ZIP);jsuGoToURL(JSU_FREE_ZIP,true);jslog(JSLOG_DEBUG,d+ JSLOG_FUN_END)}function downloadTip(a,y){var d=_$_a6bf[379];jslog(JSLOG_JSU,d+ JSLOG_FUN_START);jslog(JSLOG_JSU,d+ _$_a6bf[380]+ y);var f=_$_a6bf[381];var x=false;if(y== undefined){y= DOWNLOAD_TIP_TYPE[_$_a6bf[33]];x= true};if(!x){if(y== DOWNLOAD_TIP_TYPE[_$_a6bf[34]]){f= _$_a6bf[382]+ _$_a6bf[383]+ _$_a6bf[384]+ _$_a6bf[385]+ _$_a6bf[386]+ _$_a6bf[387]+ _$_a6bf[388]+ _$_a6bf[389]+ _$_a6bf[390]+ _$_a6bf[391]}else {f= _$_a6bf[392]};Tip(f)}else {var f=f+ _$_a6bf[393]+ _$_a6bf[394]+ _$_a6bf[395]+ _$_a6bf[11]+ _$_a6bf[396]+ _$_a6bf[13]+ _$_a6bf[397]+ _$_a6bf[398]+ _$_a6bf[399]+ _$_a6bf[115]+ _$_a6bf[400]+ _$_a6bf[401]+ _$_a6bf[402]+ _$_a6bf[403]+ _$_a6bf[404]+ _$_a6bf[405]+ _$_a6bf[115]+ _$_a6bf[140]+ _$_a6bf[406]+ _$_a6bf[407]+ _$_a6bf[408]+ _$_a6bf[409]+ _$_a6bf[410]+ _$_a6bf[115]+ _$_a6bf[140]+ _$_a6bf[411]+ _$_a6bf[412]+ _$_a6bf[413]+ _$_a6bf[414]+ _$_a6bf[415]+ _$_a6bf[416]+ _$_a6bf[417]+ _$_a6bf[115]+ _$_a6bf[163];TipFix(f,a,{szTitle:_$_a6bf[418],iTipWidth:1000})};jslog(JSLOG_JSU,d+ JSLOG_FUN_END)}function jsuDoc(be){if(be== undefined){be= true};jsuGoToURL(JSU_SHORT_URL_DOC,be)}function jsuDocValidate(be){if(be== undefined){be= true};jsuGoToURL(JSU_SHORT_URL_DOC_VALIDATE,be)}function jsuDocTip(be){if(be== undefined){be= true};jsuGoToURL(JSU_SHORT_URL_DOC_TIP,be)}function jsuDocGA(be){if(be== undefined){be= true};jsuGoToURL(JSU_SHORT_URL_DOC_GA,be)}function jsuDocSort(be){if(be== undefined){be= true};jsuGoToURL(JSU_SHORT_URL_DOC_SORT,be)}function jsuDocLoading(be){if(be== undefined){be= true};jsuGoToURL(JSU_SHORT_URL_DOC_LOADING,be)}function jsuDocJSLog(be){if(be== undefined){be= true};jsuGoToURL(JSU_SHORT_URL_DOC_JSLOG,be)}function jsuDocIEPopup(be){if(be== undefined){be= true};jsuGoToURL(JSU_SHORT_URL_DOC_IEPOPUP,be)}function jsuDocJQPopup(be){if(be== undefined){be= true};jsuGoToURL(JSU_SHORT_URL_DOC_JQPOPUP,be)}function onchangeShowCol(){var v=_$_a6bf[419];var bF=selectGetSelVal(getElementById2(_$_a6bf[420]));jslog(JSLOG_DEBUG,v+ _$_a6bf[421]+ bF);for(var bT=0;bT<= SAMPLE_MAX_NUM;bT++){for(var bS=1;bS<= 2;bS++){var bU=_$_a6bf[422]+ bT+ _$_a6bf[423]+ bS;jslog(JSLOG_DEBUG,v+ _$_a6bf[424]+ bU+ _$_a6bf[425]+ bD);var h=getElementById2(bU,false);if(h){var bD=(bF== SAMPLE_COL_ALL|| bF== bS+ _$_a6bf[381]);h[_$_a6bf[427]][_$_a6bf[426]]= (bD)?_$_a6bf[381]:_$_a6bf[428];h[_$_a6bf[427]][_$_a6bf[429]]= bD}else {jslog(JSLOG_DEBUG,v+ _$_a6bf[424]+ bU+ _$_a6bf[430])}}}}function onchange_sample(){var v=_$_a6bf[431];var bF=selectGetSelVal(getElementById2(_$_a6bf[432]));jslog(JSLOG_JSU,v+ _$_a6bf[421]+ bF);for(var o=1;o<= SAMPLE_MAX_NUM;o++){var bD=(bF== SAMPLE_ALL|| bF== o+ _$_a6bf[381]);var bE=getElementById2(_$_a6bf[433]+ o,false);if(bE){jslog(JSLOG_JSU,v+ _$_a6bf[434]+ o+ _$_a6bf[425]+ bD);bE[_$_a6bf[427]][_$_a6bf[426]]= (bD)?_$_a6bf[381]:_$_a6bf[428];bE[_$_a6bf[427]][_$_a6bf[429]]= bD}}}function initSampleCmn(){var v=_$_a6bf[435];jslog(JSLOG_JSU,v+ JSLOG_FUN_START);try{var O=isJsuFree();jslog(JSLOG_JSU,v+ _$_a6bf[436]+ O);jslog(JSLOG_JSU,v+ _$_a6bf[437]);elementShowById(_$_a6bf[438],O,_$_a6bf[439]);var V=urlGetParVal(URL_PAR_OPT);jslog(JSLOG_DEBUG,v+ _$_a6bf[440]+ URL_PAR_OPT+ _$_a6bf[441]+ V);if(V!= _$_a6bf[381]){url_par[_$_a6bf[0]]= V;jslog(JSLOG_JSU,v+ _$_a6bf[442]);elementShow(getElementById2(_$_a6bf[420]),true,_$_a6bf[443]);var U=window[_$_a6bf[444]]+ _$_a6bf[381];var N=U[_$_a6bf[446]](_$_a6bf[445])> 0;if(N){window[_$_a6bf[447]](85,34);window[_$_a6bf[448]](1200,800)}else {window[_$_a6bf[447]](85,34);window[_$_a6bf[448]](800+ 35,620+ 170)}};var S=urlGetParVal(URL_PAR_TEST);url_par[_$_a6bf[449]]= (S!= undefined&& S!= _$_a6bf[381]);elementShow(getElementById2(_$_a6bf[1],false),url_par[_$_a6bf[449]]);if(url_par[_$_a6bf[449]]){url_par[_$_a6bf[1]]= parseInt(S);jslog(JSLOG_INFO,v+ _$_a6bf[450]);var T=_$_a6bf[451]+ _$_a6bf[452]+ _$_a6bf[453]+ _$_a6bf[454]+ _$_a6bf[455]+ _$_a6bf[13];var P=document[_$_a6bf[457]](_$_a6bf[456]);P[_$_a6bf[458]]= T;document[_$_a6bf[460]][_$_a6bf[459]](P)};var Q=urlGetParVal(URL_PAR_PERIOD);if(Q!= undefined&& Q!= _$_a6bf[381]){url_par[_$_a6bf[2]]= parseInt(Q)};var R=urlGetParVal(URL_PAR_POS);if(R!= undefined&& R!= _$_a6bf[381]){url_par[_$_a6bf[3]]= parseInt(R)}}catch(e){jslog(JSLOG_ERR,v+ _$_a6bf[461]+ e[_$_a6bf[462]])};jslog(JSLOG_JSU,v+ JSLOG_FUN_END)}function is_par_opt(){return (url_par[_$_a6bf[0]]!= undefined)}function isJsuSample(){var U=window[_$_a6bf[463]]+ _$_a6bf[381];return (U[_$_a6bf[446]](_$_a6bf[464])> 0)}function getSampleUrl(H,G){if(SHORT_URL_GOOGLE){if(G== JSU_ID_SAMPLE_VALIDATE){return _$_a6bf[468][_$_a6bf[467]](_$_a6bf[465],_$_a6bf[466])}else {if(G== JSU_ID_SAMPLE_JQPOPUP){return _$_a6bf[469][_$_a6bf[467]](_$_a6bf[465],_$_a6bf[466])}}}else {return H[_$_a6bf[467]](_$_a6bf[470],URL_1+ URL_SEP+ URL_2+ URL_SEP+ (G+ ((((Math[_$_a6bf[472]]((Math[_$_a6bf[471]]()* 100)+ 7)> 5)?0:1)== 0)?_$_a6bf[381]:_$_a6bf[473])))}}function showSampleValidate(){showSampleWindow(JSU_LONG_URL_SAMPLE_VALIDATE,JSU_ID_SAMPLE_VALIDATE)}function showSampleJQPopup(){showSampleWindow(JSU_LONG_URL_SAMPLE_JQPOPUP,JSU_ID_SAMPLE_JQPOPUP)}function showSampleLoading(be){if(be== undefined){be= false};jsuGoToURL(JSU_SHORT_URL_SAMPLE_LOADING,be)}function showSampleSort(be){if(be== undefined){be= false};jsuGoToURL(JSU_SHORT_URL_SAMPLE_SORT,be)}function showSampleTip(be){if(be== undefined){be= false};jsuGoToURL(JSU_SHORT_URL_SAMPLE_TIP,be)}function showSampleGA(be){if(be== undefined){be= false};jsuGoToURL(JSU_SHORT_URL_SAMPLE_GA,be)}function showSampleJSlog(be){if(be== undefined){be= false};jsuGoToURL(JSU_SHORT_URL_SAMPLE_JSLOG,be)}function showSampleIEPopup(be){if(be== undefined){be= false};jsuGoToURL(JSU_SHORT_URL_SAMPLE_IEPOPUP,be)}function showJSUVersion(be){if(be== undefined){be= true};jsuGoToURL(JSU_SHORT_URL_VERSION,be)}function showJSUVersionParLimit(be){if(be== undefined){be= true};jsuGoToURL(JSU_LONG_URL_VERSION_PAR_LIMIT,be)}function showSampleWindow(H,G){var eO=false;var eN=window[_$_a6bf[474]]<= 800;var eP=navigator[_$_a6bf[475]];var eM=(eP[_$_a6bf[476]](/Android/i)|| eP[_$_a6bf[476]](/webOS/i)|| eP[_$_a6bf[476]](/iPhone/i)|| eP[_$_a6bf[476]](/iPad/i)|| eP[_$_a6bf[476]](/iPod/i)|| eP[_$_a6bf[476]](/BlackBerry/i)|| eP[_$_a6bf[476]](/Windows Phone/i));if(eN|| eM|| eO){jsuGoToURL(getSampleUrl(H,G))}else {window[_$_a6bf[479]](getSampleUrl(H,G),_$_a6bf[477],_$_a6bf[478]);window[_$_a6bf[447]](10,20)}}function setupState(){var U=window[_$_a6bf[444]]+ _$_a6bf[381];var eE=U[_$_a6bf[446]](_$_a6bf[480])> 0;if(eE){history[_$_a6bf[481]](null,null,JSU_LONG_URL_SAMPLE_NOTFREE)};window[_$_a6bf[447]](10,20);window[_$_a6bf[448]](screen[_$_a6bf[482]]- 20,screen[_$_a6bf[483]]- 30)}function jsuVideo(bA,bz,by){Popup(POPUP_TYPE[_$_a6bf[33]],bA,{bShowImg:false,iWidth:by,position:{at:_$_a6bf[198]},szTitle:bz})}function jsuVideoTip(be){jsuGoToURL(JSU_URL_VIDEO_TIP,be)}function jsuVideoLoading(be){featureNotReady()}function jsuVideoSort(be){featureNotReady()}function jsuVideojslog(be){featureNotReady()}function jsuVideoJQPopup(be){featureNotReady()}function jsuVideoIEPopup(be){featureNotReady()}function jsuVideoValidate(be){featureNotReady()}function jsuGoogleAnalList(a){var d=_$_a6bf[484];var bq=_$_a6bf[485];var br=_$_a6bf[486];var bs=_$_a6bf[487];var bo=_$_a6bf[488];var bp=_$_a6bf[489];jslog(JSLOG_JSU,d+ JSLOG_FUN_START);UnTip(a);var bn=[{shortUrl:JSU_SHORT_URL_DOWNLOAD_FREE,longUrl:JSU_LONG_URL_DOWNLOAD_PAGE_FREE,cat:bq,desc:_$_a6bf[490]},{shortUrl:JSU_SHORT_URL_SAMPLE_ALL,longUrl:JSU_LONG_URL_SAMPLE_ALL,cat:br,desc:_$_a6bf[491]},{shortUrl:JSU_SHORT_URL_SAMPLE_TIP,longUrl:JSU_LONG_URL_SAMPLE_TIP,cat:br,desc:_$_a6bf[492]},{shortUrl:JSU_SHORT_URL_SAMPLE_GA,longUrl:JSU_LONG_URL_SAMPLE_GA,cat:br,desc:_$_a6bf[493]},{shortUrl:JSU_SHORT_URL_SAMPLE_LOADING,longUrl:JSU_LONG_URL_SAMPLE_LOADING,cat:br,desc:_$_a6bf[494]},{shortUrl:JSU_SHORT_URL_SAMPLE_JSLOG,longUrl:JSU_LONG_URL_SAMPLE_JSLOG,cat:br,desc:_$_a6bf[495]},{shortUrl:JSU_SHORT_URL_SAMPLE_SORT,longUrl:JSU_LONG_URL_SAMPLE_SORT,cat:br,desc:_$_a6bf[496]},{shortUrl:JSU_SHORT_URL_SAMPLE_IEPOPUP,longUrl:JSU_LONG_URL_SAMPLE_IEPOPUP,cat:br,desc:_$_a6bf[497]},{shortUrl:JSU_SHORT_URL_DOC,longUrl:JSU_LONG_URL_DOC,cat:bo,desc:_$_a6bf[498]},{shortUrl:JSU_SHORT_URL_DOC_TIP,longUrl:JSU_LONG_URL_DOC_TIP,cat:bo,desc:_$_a6bf[499]},{shortUrl:JSU_SHORT_URL_DOC_GA,longUrl:JSU_LONG_URL_DOC_GA,cat:bo,desc:_$_a6bf[499]},{shortUrl:JSU_SHORT_URL_DOC_LOADING,longUrl:JSU_LONG_URL_DOC_LOADING,cat:bo,desc:_$_a6bf[500]},{shortUrl:JSU_SHORT_URL_DOC_JSLOG,longUrl:JSU_LONG_URL_DOC_JSLOG,cat:bp,desc:_$_a6bf[501]},{shortUrl:JSU_SHORT_URL_DOC_SORT,longUrl:JSU_LONG_URL_DOC_SORT,cat:bo,desc:_$_a6bf[502]},{shortUrl:JSU_SHORT_URL_DOC_IEPOPUP,longUrl:JSU_LONG_URL_DOC_IEPOPUP,cat:bp,desc:_$_a6bf[503]}];gaShortUrlList(bn,a,{bShortUrl:false,bLongUrl:false,szTitle:_$_a6bf[504],iWidth:1100});jslog(JSLOG_JSU,d+ JSLOG_FUN_END)}function jsuGoogleAnalListTip(a){var b=_$_a6bf[505]+ _$_a6bf[506];Tip(b)}function jsuGoogleAnalFreeTip(a){var b=_$_a6bf[507]+ _$_a6bf[508];Tip(b)}function jsuGoogleAnalFree(a){var v=_$_a6bf[509];jslog(JSLOG_JSU,v+ JSLOG_FUN_START);UnTip();var bm=(url_par[_$_a6bf[449]])?GA_PAR_TIME[_$_a6bf[510]]:GA_PAR_TIME[_$_a6bf[511]];jslog(JSLOG_DEBUG,v+ _$_a6bf[512]+ url_par[_$_a6bf[449]]+ _$_a6bf[513]+ bm);gaShortUrlPage(JSU_SHORT_URL_DOWNLOAD_FREE,{bNewWindow:true,szParTime:bm});jslog(JSLOG_JSU,v+ JSLOG_FUN_END)}function jsuGoogleAnalPayTip(a){var b=_$_a6bf[507]+ _$_a6bf[514];Tip(b)}function jsuGoogleAnalPay(a){UnTip();featureNotReady()}function jsuTipPlayVideo(a){Tip(JSU_TIP_PLAY_VIDEO)}function jsuTipBrowserAll(a){Tip(JSU_TIP_BROWSER_ALL)}function jsuTipBrowserIEPopup(a){Tip(JSU_TIP_BROWSER_IE_POPUP)}function jsuTipOptDemo(a){Tip(JSU_TIP_OPT_DEMO)}function jsuTipUrlOptDemo(a){Tip(JSU_TIP_URL_OPT_DEMO)}function jsuTipOptFree(a){Tip(JSU_TIP_OPT_FREE)}function jsuTipUrlOptFree(a){Tip(JSU_TIP_URL_OPT_FREE)}function jsuOptDisable(bu,bv,bw,bx){var v=_$_a6bf[515];jslog(JSLOG_DEBUG,v+ _$_a6bf[516]);for(var o=0;o< bu[_$_a6bf[517]];o++){var h=getElementById2(bu[o],true);if(h){h[_$_a6bf[518]]= true;h[_$_a6bf[519]]= ((bx)?jsuTipOptDemo:jsuTipOptFree);h[_$_a6bf[520]]= UnTip}};for(var o=0;o< bv[_$_a6bf[517]];o++){var h=getElementById2(bv[o],true);if(h){h[_$_a6bf[521]]= _$_a6bf[522];h[_$_a6bf[519]]= ((bx)?jsuTipOptDemo:jsuTipOptFree);h[_$_a6bf[520]]= UnTip}};for(var o=0;o< bw[_$_a6bf[517]];o++){var h=getElementById2(bw[o],true);if(h){h[_$_a6bf[519]]= ((bx)?jsuTipUrlOptDemo:jsuTipUrlOptFree);h[_$_a6bf[520]]= UnTip}}}function tipFixLimitInJSUFree(a){var b=_$_a6bf[523]+ _$_a6bf[321]+ _$_a6bf[322]+ _$_a6bf[323]+ _$_a6bf[524]+ _$_a6bf[525]+ _$_a6bf[326]+ _$_a6bf[327]+ _$_a6bf[328]+ _$_a6bf[329]+ _$_a6bf[330]+ _$_a6bf[526]+ _$_a6bf[527]+ _$_a6bf[528]+ _$_a6bf[334]+ _$_a6bf[335];TipFixCode(b,a,{iTipWidth:1000,iTipMaxHeight:600,szTitle:_$_a6bf[529]})}function fakeClick(a,E){if(E[_$_a6bf[530]]){E[_$_a6bf[530]]()}else {if(document[_$_a6bf[531]]){if(a[_$_a6bf[532]]!== E){var F=document[_$_a6bf[531]](_$_a6bf[533]);F[_$_a6bf[534]](_$_a6bf[530],true,true,window,0,0,0,0,0,false,false,false,false,0,null);var D=E[_$_a6bf[535]](F)}}}}function jsuGoToURL(H,be){var v=_$_a6bf[536];try{jslog(JSLOG_JSU,v+ JSLOG_FUN_START);UnTip();if(be== undefined){be= true};jslog(JSLOG_JSU,v+ _$_a6bf[537]+ be);var bt=document[_$_a6bf[538]](JSU_HREF_HIDDEN_ID);if(bt== undefined){jslog(JSLOG_DEBUG,v+ _$_a6bf[539]+ JSU_HREF_HIDDEN_ID+ _$_a6bf[540]);divHidden= document[_$_a6bf[457]](_$_a6bf[456]);divHidden[_$_a6bf[541]]= JSU_DIV_HIDDEN_ID;divHidden[_$_a6bf[458]]= JSU_HREF_HIDDEN;document[_$_a6bf[460]][_$_a6bf[459]](divHidden);bt= document[_$_a6bf[538]](JSU_HREF_HIDDEN_ID)};bt[_$_a6bf[542]]= H;jslog(JSLOG_JSU,v+ _$_a6bf[543]+ bt[_$_a6bf[542]]);bt[_$_a6bf[532]]= (be)?_$_a6bf[477]:_$_a6bf[544];if(bt[_$_a6bf[530]]){jslog(JSLOG_JSU,v+ _$_a6bf[545]);bt[_$_a6bf[530]]()}else {jslog(JSLOG_JSU,v+ _$_a6bf[546]);if(document[_$_a6bf[531]]){jslog(JSLOG_JSU,v+ _$_a6bf[547]);var F=document[_$_a6bf[531]](_$_a6bf[533]);F[_$_a6bf[534]](_$_a6bf[530],true,true,window,0,0,0,0,0,false,false,false,false,0,null);var D=bt[_$_a6bf[535]](F)}}}catch(e){jslog(JSLOG_ERR,v+ _$_a6bf[548]+ e[_$_a6bf[462]])}}function errFreeJsu(B,A){var C=_$_a6bf[549]+ _$_a6bf[550]+ _$_a6bf[551]+ A+ _$_a6bf[178]+ _$_a6bf[180]+ _$_a6bf[176]+ _$_a6bf[552]+ _$_a6bf[553]+ _$_a6bf[554]+ _$_a6bf[555]+ _$_a6bf[556];var z=getElementById2(B,true);z[_$_a6bf[458]]= C;elementShow(z,true)}function jsuGACreate(bf){(function(o,bl,bj,bh,bk,bg,bi){o[_$_a6bf[560]]= bk;o[bk]= o[bk]|| function(){(o[bk][_$_a6bf[562]]= o[bk][_$_a6bf[562]]|| [])[_$_a6bf[561]](arguments)},o[bk][_$_a6bf[563]]= 1*  new Date();bg= bl[_$_a6bf[457]](bj),bi= bl[_$_a6bf[564]](bj)[0];bg[_$_a6bf[565]]= 1;bg[_$_a6bf[566]]= bh;bi[_$_a6bf[568]][_$_a6bf[567]](bg,bi)})(window,document,_$_a6bf[557],_$_a6bf[558],_$_a6bf[559]);ga(_$_a6bf[569],bf,_$_a6bf[570])}var var_test={tmoTest:null,iTestCur:0,bFrame:false};function testStart(eY){var d=_$_a6bf[571];var_test[_$_a6bf[572]]= 0;var_test[_$_a6bf[573]]= eY;for(i= 0;i< ar_test[_$_a6bf[517]];i++){var h=ar_test[i];if(!h[_$_a6bf[574]]){var eZ=Math[_$_a6bf[472]](Math[_$_a6bf[471]]()* url_par[_$_a6bf[3]]);if(eZ== 0){h[_$_a6bf[574]]= true};jslog(JSLOG_DEBUG,d+ _$_a6bf[575]+ i+ _$_a6bf[576]+ h[_$_a6bf[574]]+ _$_a6bf[577]+ url_par[_$_a6bf[3]]+ _$_a6bf[578]+ eZ)}};jslogObj(JSLOG_DEBUG,d+ _$_a6bf[579],ar_test);var eU=Math[_$_a6bf[472]]((Math[_$_a6bf[471]]()* url_par[_$_a6bf[2]])+ 1);jslog(JSLOG_DEBUG,d+ _$_a6bf[580]+ eU+ _$_a6bf[581]);getElementById2(_$_a6bf[583],true)[_$_a6bf[582]]= var_test[_$_a6bf[572]];getElementById2(_$_a6bf[584],true)[_$_a6bf[582]]= eU;var_test[_$_a6bf[585]]= setTimeout(testExecute,eU* 1000)}function testExecute(){var d=_$_a6bf[586];var H=testGetNext();if(var_test[_$_a6bf[573]]){UnTip();var w=_$_a6bf[587]+ H+ _$_a6bf[370];TipFix(w,null,{iTipWidth:1200,szTitle:H,objClass:{Down:_$_a6bf[372],Up:_$_a6bf[373]},bCloseBtn:false,szRefElId:_$_a6bf[372]})}else {jsuGoToURL(H,true)};clearTimeout(var_test[_$_a6bf[585]]);var_test[_$_a6bf[572]]++;getElementById2(_$_a6bf[583],true)[_$_a6bf[582]]= var_test[_$_a6bf[572]];getElementById2(_$_a6bf[588],true)[_$_a6bf[582]]= H;if(var_test[_$_a6bf[572]]> url_par[_$_a6bf[1]]){alert(_$_a6bf[589]+ var_test[_$_a6bf[572]])}else {var eU=Math[_$_a6bf[472]]((Math[_$_a6bf[471]]()* url_par[_$_a6bf[2]])+ 1);getElementById2(_$_a6bf[584],true)[_$_a6bf[582]]= eU;var_test[_$_a6bf[585]]= setTimeout(testExecute,eU* 1000)}}var ar_test=[{iCountReq:4,bPresent:true,szName:_$_a6bf[366],szURL:JSU_SHORT_URL_DOWNLOAD_FREE,iCountCur:0,iClickDone:0},{iCountReq:7,bPresent:true,szName:_$_a6bf[590],szURL:JSU_SHORT_URL_SAMPLE_ALL,iCountCur:0,iClickDone:0},{iCountReq:7,bPresent:false,szName:_$_a6bf[591],szURL:JSU_SHORT_URL_SAMPLE_TIP,iCountCur:0,iClickDone:0},{iCountReq:8,bPresent:false,szName:_$_a6bf[592],szURL:JSU_SHORT_URL_SAMPLE_GA,iCountCur:0,iClickDone:0},{iCountReq:9,bPresent:false,szName:_$_a6bf[593],szURL:JSU_SHORT_URL_SAMPLE_LOADING,iCountCur:0,iClickDone:0},{iCountReq:6,bPresent:false,szName:_$_a6bf[594],szURL:JSU_SHORT_URL_SAMPLE_SORT,iCountCur:0,iClickDone:0},{iCountReq:5,bPresent:false,szName:_$_a6bf[595],szURL:JSU_SHORT_URL_DOC_IEPOPUP,iCountCur:0,iClickDone:0},{iCountReq:8,bPresent:false,szName:_$_a6bf[596],szURL:JSU_SHORT_URL_DOC,iCountCur:0,iClickDone:0},{iCountReq:7,bPresent:false,szName:_$_a6bf[597],szURL:JSU_SHORT_URL_DOC_TIP,iCountCur:0,iClickDone:0},{iCountReq:8,bPresent:false,szName:_$_a6bf[598],szURL:JSU_SHORT_URL_DOC_GA,iCountCur:0,iClickDone:0},{iCountReq:7,bPresent:false,szName:_$_a6bf[599],szURL:JSU_SHORT_URL_DOC_LOADING,iCountCur:0,iClickDone:0},{iCountReq:8,bPresent:false,szName:_$_a6bf[600],szURL:JSU_SHORT_URL_DOC_SORT,iCountCur:0,iClickDone:0},{iCountReq:7,bPresent:false,szName:_$_a6bf[595],szURL:JSU_SHORT_URL_DOC_IEPOPUP,iCountCur:0,iClickDone:0}];function testGetNext(){var v=_$_a6bf[601];for(;;){var o=Math[_$_a6bf[472]](Math[_$_a6bf[471]]()* ar_test[_$_a6bf[517]]);var h=ar_test[o];if(h[_$_a6bf[574]]){if(++h[_$_a6bf[602]]>= h[_$_a6bf[603]]){h[_$_a6bf[604]]++;h[_$_a6bf[602]]= 0;jslogObj(JSLOG_DEBUG,_$_a6bf[605]+ o,h);var bR=_$_a6bf[606]+ _$_a6bf[607]+ _$_a6bf[608]+ _$_a6bf[609]+ _$_a6bf[610]+ _$_a6bf[611]+ _$_a6bf[612]+ _$_a6bf[180];for(var ca=0;ca< ar_test[_$_a6bf[517]];ca++){var eW=ar_test[ca];if(eW[_$_a6bf[574]]){var eX=_$_a6bf[613]+ ca+ _$_a6bf[178]+ _$_a6bf[614]+ eW[_$_a6bf[615]]+ _$_a6bf[178]+ _$_a6bf[616]+ eW[_$_a6bf[604]]+ _$_a6bf[178]+ _$_a6bf[617]+ eW[_$_a6bf[602]]+ _$_a6bf[178]+ _$_a6bf[617]+ eW[_$_a6bf[603]]+ _$_a6bf[178]+ _$_a6bf[180];bR+= eX}};bR+= _$_a6bf[618];var eV=getElementById2(_$_a6bf[619]);divTestOut[_$_a6bf[458]]= bR;jslog(JSLOG_DEBUG,v+ _$_a6bf[620]+ h[_$_a6bf[621]]);return h[_$_a6bf[621]]}}}}
+/* =========================================================================================
+File:     					about.js
+Author:   					Federico Levis
+Last Modification:  1 Sept 2016   
+Description:        API for JSU about   
+REQUIRE:            JSU
+
+DISCLAIMER
+Copyright by Federico Levis - JSU https://github.com/FedericoLevis/JSU 
+This file may be freely distributed under the MIT license.
+========================================================================================= */
+
+/* =============================================================================================
+   						CONSTANT
+============================================================================================= */
+
+// var TMO_DOC_EMBED_STARTUP_MS = 500; 
+
+//-------------------------- Optional PAR only for debugger 
+
+var URL_PAR_OPT="opt"; // if 1 we see Optional Columns used to Show/Hide Column in Test
+// -- Test google, used only by AllSamples.html
+var URL_PAR_TEST="test"; // 0= No TEST  1.. Number of Automatic Test to execute with Test Google Button 
+var URL_PAR_PERIOD="period"; // Number of second sin randfom period  default = 60 
+var URL_PAR_POS="pos"; //Possibilitybfrequence 1=100% 2 =50% 
+
+
+var JSU_TIP_PLAY_VIDEO='<div style="width:300px;">Click to Show a <b>YouTube Video of this JSU feature</b>';
+var JSU_TIP_BROWSER_ALL='<div style="width:500px">' +
+   'This Feature is <b>Fully supported by All Browser</b><BR/>It has been successfully tested in <label class="tipGoodBold">Safari, Chrome, Firefox, Opera, IE, Android</label></div>';
+var JSU_TIP_BROWSER_IE_POPUP='<div style="width:450px">' +
+'IE Popup is designed ONLY for IE:<ul>' +
+'<li><label class="tipGoodBold">Browser Supported: ONLY IE</label></li>' +
+'<li><label class="tipErrBold">Browser NOT Supported: Safari, Chrome, Firefox, Opera, Android</li>' +
+'</ul>' +
+'In the browser not supported IE Popup will simply display an Alert instead of the HTML Popup'
+'</div>';
+
+
+var JSU_TIP_DOC="Click to Show the <b>JSU Documentation</b>";
+var JSU_TIP_DOC_TIP="Click to Show the <b>JSU Tooltip Documentation</b>";
+var JSU_TIP_DOC_SORT="Click to Show the <b>JSU SortTable Documentation</b>";
+var JSU_TIP_DOC_VALIDATE="Click to Show the <b>JSU Validate Documentation</b>";
+var JSU_TIP_DOC_IEPOPUP="Click to Show the <b>JSU IE Popup Documentation</b>";
+var JSU_TIP_DOC_JQPOPUP="Click to Show the <b>JSU JQuery Popup Documentation</b>";
+var JSU_TIP_DOC_LOADING="Click to Show the <b>JSU LoadingDiv Documentation</b>";
+var JSU_TIP_DOC_JSLOG="Click to Show the <b>JSU JSLogDocumentation</b>";
+
+// ---------------------------- TITLE (simple tooltip without HTML TAGS
+var JSU_TITLE_BROWSER_ALL = "This Feature is Fully supported by All Browser. It has been successfully tested in Safari, Chrome, Firefox, Opera, IE, Android";
+var JSU_TITLE_BROWSER_IEPOPUP = "IE Popup is designed ONLY for IE. Only IE Browser is Supported. In the browser not supported IE Popup will simply display an Alert instead of the HTML Popup. ";
+//---------------------------
+
+
+var JSU_EMAIL = "federico.levis@virgilio.it";  
+var JSU_LONG_URL_COGNOS = "http://federicolevis.wix.com/cognos";
+var JSU_LONG_URL_GITHUB = "https://github.com/FedericoLevis/JSU";
+var JSU_LONG_URL_PLSQL = "https://github.com/FedericoLevis/PLSQLUtility";
+
+
+var JSU_IMG_PLAY_VIDEO = "https://rawgit.com/FedericoLevis/images/master/jsuAbout/PlayVideo.png";
+
+var JSU_SORT_CODE_H = 220;
+
+var JSU_DISABLED = 'javascript:function() { return false; }';
+
+var JSU_ZIP = "https://github.com/FedericoLevis/JSU/archive/master.zip";
+
+var JSU_BUY = JSU_DISABLED; 
+
+
+// ---------------------------------------
+var SAMPLE_MAX_NUM=4; // Max sample per Feature in the samples
+var SAMPLE_COL_ALL="ALL";
+
+
+var JSU_URL_VIDEO_TIP= "https://youtu.be/wpo2oM_L3ds";
+
+
+// NOTE: embed is visible in the Ember Tab of Youtube Video  
+
+var JSU_VIDEO_FRAME_TIP  =	'<iframe width="750" height="600" src="https://www.youtube.com/embed/wpo2oM_L3ds?version=3&vq=hd720&autoplay=1" frameborder="0" allowfullscreen></iframe>'; 
+//DAFARE
+var JSU_VIDEO_FRAME_VALIDATE  =	'<iframe width="600" height="500" src="https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1" frameborder="0" allowfullscreen></iframe>'; 
+var JSU_VIDEO_FRAME_SORT  =	'<iframe width="600" height="500" src="https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1" frameborder="0" allowfullscreen></iframe>'; 
+var JSU_VIDEO_FRAME_LOADING  =	'<iframe width="600" height="500" src="https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1" frameborder="0" allowfullscreen></iframe>'; 
+var JSU_VIDEO_FRAME_JSLOG  =	'<iframe width="600" height="500" src="https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1" frameborder="0" allowfullscreen></iframe>'; 
+var JSU_VIDEO_FRAME_IEPOPUP  =	'<iframe width="600" height="500" src="https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1" frameborder="0" allowfullscreen></iframe>'; 
+var JSU_VIDEO_FRAME_JQPOPUP  =	'<iframe width="600" height="500" src="https://www.youtube.com/embed/SuYxv1z1BMg?version=3&vq=hd720&autoplay=1" frameborder="0" allowfullscreen></iframe>'; 
+
+// Samples
+// --------------- FEATURE NOT FREE URL run-time calculated  
+var SHORT_URL_GOOGLE = true;  // Use Google Short URL
+
+var JSU_LONG_URL_SAMPLE_VALIDATE =	"https://rawgit.com/FedericoLevis/JSU/master/samples/Validate/ValidateSample.html";
+//var JSU_SHORT_URL_SAMPLE_LOADING  =	"https://rawgit.com/FedericoLevis/WORK/master/3/samples/Validate/ValidateSample.html";
+
+
+var JSU_LONG_URL_SAMPLE_JQPOPUP  =	"https://rawgit.com/FedericoLevis/JSU/master/samples/JQPopup/PopupSample.html";
+//var JSU_SHORT_URL_SAMPLE_JQPOPUP  =	"https://rawgit.com/FedericoLevis/WORK/master/7/samples/JQPopup/PopupSample.html";
+
+
+// ------------------
+var JSU_LONG_URL_DOWNLOAD_PAGE_FREE  =	"https://rawgit.com/FedericoLevis/JSU/master/samples/JSUFreeDownload.html";
+
+
+var JSU_LONG_URL_SAMPLE_ALL  =	"https://rawgit.com/FedericoLevis/JSU/master/samples/AllSamples.html";
+var JSU_LONG_URL_SAMPLE_SORT  =	"https://rawgit.com/FedericoLevis/JSU/master/samples/Sort/SortSample.html";
+var JSU_LONG_URL_SAMPLE_TIP  =	"https://rawgit.com/FedericoLevis/JSU/master/samples/Tip/TipSample.html";
+var JSU_LONG_URL_SAMPLE_GA  =	"https://rawgit.com/FedericoLevis/JSU/master/samples/GoogleAnal/GoogleAnalSample.html";
+var JSU_LONG_URL_SAMPLE_IEPOPUP  =	"https://rawgit.com/FedericoLevis/JSU/master/samples/IEPopup/PopupSample.html";
+var JSU_LONG_URL_SAMPLE_LOADING  =	"https://rawgit.com/FedericoLevis/JSU/master/samples/Loading/LoadingSample.html";
+var JSU_LONG_URL_SAMPLE_JSLOG  =	"https://rawgit.com/FedericoLevis/JSU/master/samples/jslog/jslogSample.html";
+
+//----------- goo.gl of FREE Features
+var JSU_SHORT_URL_DOWNLOAD_FREE  =	"https://goo.gl/HnNqnM";
+var JSU_SHORT_URL_SAMPLE_ALL  =	"https://goo.gl/MoY5nK";
+var JSU_SHORT_URL_SAMPLE_TIP  =	"https://goo.gl/1e6ju7";
+var JSU_SHORT_URL_SAMPLE_GA  =	"http://goo.gl/UzfnFK";
+var JSU_SHORT_URL_SAMPLE_SORT  = "https://goo.gl/hJm8vV";
+var JSU_SHORT_URL_SAMPLE_IEPOPUP  =	"https://goo.gl/1b2ely";
+var JSU_SHORT_URL_SAMPLE_LOADING  =	"https://goo.gl/jttCME";
+var JSU_SHORT_URL_SAMPLE_VALIDATE =	"https://goo.gl/F3r4lP";
+var JSU_SHORT_URL_SAMPLE_JSLOG  =	"https://goo.gl/aAtyxG";
+var JSU_SHORT_URL_SAMPLE_JQPOPUP  =	"https://goo.gl/09zCLG";
+var JSU_SHORT_URL_GITHUB = "https://goo.gl/LYDepH";
+var JSU_SHORT_URL_COGNOS = "http://goo.gl/JZJSPn";
+var JSU_SHORT_URL_PLSQL = "https://goo.gl/OI3eIo";
+var JSU_SHORT_URL_LINKEDIN = "https://goo.gl/J9mJfh";  
+//---------------------
+var JSU_LONG_URL_LINKEDIN = "https://www.linkedin.com/in/federicolevis";  
+
+// Used to replace n of sample not free
+var JSU_LONG_URL_SAMPLE_NOTFREE = 'https://rawgit.com/FedericoLevis/JSU/master/samples/Misc/SampleNotFree.html'
+// ID sample NOt FREE (see WORK dir)
+var JSU_ID_SAMPLE_VALIDATE  =	3;
+var JSU_ID_SAMPLE_JQPOPUP  =	7;
+	
+	
+//----------------------- API DOC
+var JSU_LONG_URL_API  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/JSUAPI.html";
+var JSU_LONG_URL_API_TIP  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/tooltip.js/index.html";
+var JSU_LONG_URL_API_GA  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/googleAnal.js/index.html";
+var JSU_LONG_URL_API_LOADING  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/loadingDiv.js/index.html";
+var JSU_LONG_URL_API_SORT  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/cSortTable.js/index.html";
+var JSU_LONG_URL_API_VALIDATE  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/cValidate.js/index.html";
+var JSU_LONG_URL_API_JSLOG  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/jslog.js/index.html";
+var JSU_LONG_URL_API_IEPOPUP  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/IEPopup.js/index.html";
+var JSU_LONG_URL_API_JQPOPUP  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/JQPopup.js/index.html";
+
+var JSU_SHORT_URL_API  ="https://goo.gl/0PGnZl"
+
+/* TBD if we need them	
+var JSU_SHORT_URL_API_TIP  =	"https://goo.gl/AGKlpQ";
+var JSU_SHORT_URL_API_LOADING  =	"https://goo.gl/0tIOIJ";
+var JSU_SHORT_URL_API_SORT  =	"https://goo.gl/aKR7b2";
+var JSU_SHORT_URL_API_VALIDATE  =	"https://goo.gl/M7LT4v";
+var JSU_SHORT_URL_API_JSLOG  =	"https://goo.gl/Iobg3a";
+var JSU_SHORT_URL_API_IEPOPUP  =	"https://goo.gl/iWW5cz";
+var JSU_SHORT_URL_API_JQPOPUP  =	"https://goo.gl/iPqUqL";
+*/
+
+
+//----------------------- FEATURE DOC
+var JSU_LONG_URL_DOC  =	"https://rawgit.com/FedericoLevis/JSU/master/README.html";
+var JSU_LONG_URL_DOC_SORT  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/SortTable.html";
+var JSU_LONG_URL_DOC_VALIDATE  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/Validate.html";
+var JSU_LONG_URL_DOC_TIP  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/Tooltip.html";
+var JSU_LONG_URL_DOC_GA  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/GoogleAnalytics.html";
+var JSU_LONG_URL_DOC_LOADING  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/LoadingDiv.html";
+var JSU_LONG_URL_DOC_JSLOG  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/jslog.html";
+var JSU_LONG_URL_DOC_IEPOPUP  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/IEPopup.html";
+var JSU_LONG_URL_DOC_JQPOPUP  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/HTML/JQPopup.html";
+
+//----------------------- FEATURE DOC - par for FEature Only in FULL version
+var JSU_LONG_URL_DOC_GA_ONLYFULL  =	JSU_LONG_URL_DOC_GA + "#parOnlyFullJsu";
+
+
+// ---- ggo.gl
+var JSU_SHORT_URL_DOC  =	"https://goo.gl/JzIXW0";
+var JSU_SHORT_URL_DOC_TIP  =	"https://goo.gl/AGKlpQ";
+var JSU_SHORT_URL_DOC_GA  =	"http://goo.gl/UYJ5Zv";
+var JSU_SHORT_URL_DOC_SORT  =	"https://goo.gl/aKR7b2";
+var JSU_SHORT_URL_DOC_VALIDATE  =	"https://goo.gl/M7LT4v";
+var JSU_SHORT_URL_DOC_LOADING  =	"https://goo.gl/0tIOIJ";
+var JSU_SHORT_URL_DOC_JSLOG  =	"https://goo.gl/Iobg3a";
+var JSU_SHORT_URL_DOC_IEPOPUP  =	"https://goo.gl/ZJBCrl";
+var JSU_SHORT_URL_DOC_JQPOPUP  =	"https://goo.gl/hZ5U6M";
+
+
+//
+var JSU_SHORT_URL_VERSION  =	"https://goo.gl/1eIYNm";
+var JSU_LONG_URL_VERSION  =	"https://rawgit.com/FedericoLevis/JSUDoc/master/JSUversion.html";
+var JSU_LONG_URL_VERSION_PAR_LIMIT  =	JSU_LONG_URL_VERSION + "#par1.2.1";
+
+
+// used as Link for JSU in about
+var JSU_SITE = JSU_SHORT_URL_DOC; 
+
+//
+
+
+// COMMON for all samples
+var SAMPLE_MAX_NUM=4; // MAX Number of Sample
+var SAMPLE_ALL="ALL";
+
+var URL_1 = "WORK";
+var URL_2 = "master";
+var URL_SEP = "/";
+
+
+//Div with hidden anchor
+var JSU_DIV_HIDDEN_ID = "jsuDivHidden";
+var JSU_HREF_HIDDEN_ID = "jsuHrefHidden";
+// init to whatver href, then it will be changed run-time
+var JSU_HREF_HIDDEN = '<a id="' + JSU_HREF_HIDDEN_ID +'" target="_blank" style="display:none" href="https://goo.gl/HnNqnM" >HIDDEN</a>'; 
+
+
+/* =============================================================================================
+    			MAIN JSU TIP:  JSU_TIP_SECT2 
+ ============================================================================================= */
+//Not allowed:  Reference to other Sub-Tip
+//allowed:   Popup call
+ 
+var JSU_TIP_SECT2_FEAT =  '<table class="tip" BORDER="2" cellspacing="0" cellpadding="2" width="780">' +
+'	  <tr class="tipTitle">' +
+'		  <th class="tipTitle" colspan="6">JSU FEATURES</th>' +
+'	  </tr>' +
+'	  <tr class="tipTitle2">' +
+'		  <td width="60px" class="tipc">Feature<BR/>Doc</td>' +
+'		  <td width="280px" class="tipc">Description</td>' +
+'		  <td width="70px" class="tipc">Browser Compatibility</td>' +
+'		  <td width="60px" class="tipc">Plugin Required</td>' +
+'		  <td width="60px" class="tipc">YouTube<BR/>Video Sample  ' +
+'     </td>' +
+'		  <td width="70px" class="tipc">Try an Example</td>' +
+'	  </tr>' +
+'	  <tr >' +
+'		  <td class="tipc"><a class="tipLink" href="javascript:jsuDocTip(true);">Tooltip</a> </td>' +
+'		  <td class="tipl"><b>Floating/Fixed Tips</b> with GIF, Video, Code Highlight (JS, CSS, Java, Shell,...), <b>Google Analytics</b>     </td>' + 
+'     <td class="tipc"><input type="button"  class="browserAllSmall" title="' + JSU_TITLE_BROWSER_ALL + '"/> </td> ' +
+'		  <td class="tipc tipGoodBold" rowspan="7">No Plugin is required</b></td>' +
+'     <td class="tipc"><a href="javascript:jsuVideoTip()"> <input type="button" class="playVideoSmall" title="Click to Show a YouTube Video of Tooltip Feature"/></a></td> ' +  
+'		  <td class="tipc"><a class="tipLink" href="javascript:showSampleTip();">Tooltip Sample</a></td>' +
+'	  </tr>' +
+'	  <tr>' +
+'		  <td class="tipc"><a class="tipLink" href="javascript:jsuDocValidate(true);" target="_blank">Validate</a> </td>' +
+'     <td class="tipl">API for both <b>Item Validation </b> and also <b>Presentation of Validation Errors</b> (in Red Items, Section, Popup)</td>' + 
+'     <td class="tipc"><input type="button"  class="browserAllSmall" title="' + JSU_TITLE_BROWSER_ALL + '"/> </td> ' +
+'     <td class="tipc"><a href="javascript:jsuVideoValidate()"> <input type="button" class="playVideoSmall" title="Click to Show a YouTube Video of Validate Feature"/></a></td> ' +  
+'		  <td class="tipc"><a class="tipLink" href="javascript:showSampleValidate();">Validate Sample</a></td>' +
+'	  </tr>' +
+'	  <tr >' + 
+'		  <td class="tipc"><a class="tipLink" href="javascript:jsuDocLoading(true);">Loading Div</a> </td>' +
+'		  <td class="tipl"><b>Loading Div</b> to display during Long Operation. Many Options: <b>Loading Gif, Title, Message, ElapsedSec...</b></td> ' +
+'     <td class="tipc"><input type="button"  class="browserAllSmall" title="' + JSU_TITLE_BROWSER_ALL + '"/> </td> ' +
+'     <td class="tipc"><a href="javascript:jsuVideoLoading()"> <input type="button" class="playVideoSmall" title="Click to Show a YouTube Video of LoadingDiv Feature"/></a></td> ' +  
+'		  <td class="tipc"><a class="tipLink" href="javascript:showSampleLoading();">LoadingDiv Sample</a></td>' +
+'	  </tr>' +
+'	  <tr >' +
+'		  <td class="tipc"><a class="tipLink" href="javascript:jsuDocGA(true);">Google Analytics</a> </td>' +
+'		  <td class="tipl">API to build in few minutes a <b>User Friendly List of Links to Google Analytics Pages</b> </td>' + 
+'     <td class="tipc"><input type="button"  class="browserAllSmall" title="' + JSU_TITLE_BROWSER_ALL + '"/> </td> ' +
+'     <td class="tipc"><a href="javascript:jsuVideoGA()"> <input type="button" class="playVideoSmall" title="Click to Show a YouTube Video of Google Analytics Feature"/></a></td> ' +  
+'		  <td class="tipc"><a class="tipLink" href="javascript:showSampleGA();">Google Analytics Sample</a></td>' +
+'	  </tr>' +
+'	  <tr>' +
+'		  <td class="tipc"><a class="tipLink" href="javascript:jsuDocJSLog(true);" target="_blank">jslog</a> </td>' +
+'		      <td class="tipl"><b>Log from JS Code with various LogLevel</b> into an optional Window displayed adding an URL parameter. Log Text, Object, JSON, DOM elements, Elapsed Time... </b></td> ' + 
+'     <td class="tipc"><input type="button"  class="browserAllSmall" title="' + JSU_TITLE_BROWSER_ALL + '"/> </td> ' +
+'     <td class="tipc"><a href="javascript:jsuVideoJSLog()"> <input type="button" class="playVideoSmall" title="Click to Show a YouTube Video of JSLog Feature"/></a></td> ' +  
+'		  <td class="tipc"><a class="tipLink" href="javascript:showSampleJSlog();">JSlog Sample</a></td>' +
+'	  </tr>' +
+'	  <tr>' +
+'		  <td class="tipc"><a class="tipLink" href="javascript:jsuSort(true);" target="_blank">Table Sort</a> </td>' +
+'		  <td class="tipl"><b>Sort HTML Table</b> by clicking column header</td>' + 
+'     <td class="tipc"><input type="button"  class="browserAllSmall" title="' + JSU_TITLE_BROWSER_ALL + '"/> </td> ' +
+'     <td class="tipc"><a href="javascript:jsuVideoSort()"> <input type="button" class="playVideoSmall" title="Click to Show a YouTube Video of SortTable Feature"/></a></td> ' +  
+'		  <td class="tipc"><a class="tipLink" href="javascript:showSampleSort();">SortTable Sample</a></td>' +
+'	  </tr>' +
+'	  <tr>' +
+'		  <td class="tipc"><a class="tipLink" href="javascript:jsuIEPopup(true);" target="_blank">IE Popup</a> </td>' +
+'		  <td class="tipl"><b>Modal/Blocking Popup</b> designed ONLY for <b>IE</b><BR/><b> </td>' + 
+'     <td class="tipc"><input type="button"  class="browserIESmall" title="' + JSU_TITLE_BROWSER_IEPOPUP + '"/> </td> ' +
+'     <td class="tipc"><a href="javascript:jsuVideoIEPopup()"> <input type="button" class="playVideoSmall" title="Click to Show a YouTube Video of IE Popup Feature"/></a></td> ' +  
+'		  <td class="tipc"><a class="tipLink" href="javascript:showSampleIEPopup();">IE Popup Sample</a></td>' +
+'	  </tr>' +
+'	  <tr>' +
+'		  <td class="tipc"><a class="tipLink" href="javascript:jsuDocJQPopup(true);" target="_blank">JQ Popup</a> </td>' +
+'		  <td class="tipl"><b>Modal Popup for whatever Browser</b><BR/><b>Not Blocking code</b> with callback function</td>' + 
+'     <td class="tipc"><input type="button"  class="browserAllSmall" title="' + JSU_TITLE_BROWSER_ALL + '"/> </td> ' +
+'		  <td class="tipc"><b>jquery, jquery-ui</b></td>' + 
+'     <td class="tipc"><a href="javascript:jsuVideoJQPopup()"> <input type="button" class="playVideoSmall" title="Click to Show a YouTube Video of JQ Popup Feature"/></a></td> ' +  
+'		  <td class="tipc"><a class="tipLink" href="javascript:showSampleJQPopup();">JQ Popup Sample</a></td>' +
+'	  </tr>' +
+'</table>';
+
+//Message on the right of the Table of Features
+var JSU_TIP_SECT2_MSG = '<a class="tipLink" href="'+ JSU_SITE +'" target="_blank">JSU</a> is a <b>JavaScript Utility</b>  library very Lightweight, powerful and simply to use:' +
+'<ul type="square">' +
+'<li><b>Very Easy to Install and try</b>: download JSU ZIP and try jsu/samples/AllSamples.html (that points to all the other samples)</li>'+ 
+'<li><b>Very Simple to include in your project</b> with only one JS file: as you can see in the html of the JSU samples, the desired JSU modules are loaded with require.js using the proper plugin/jsu.js file </li>'+ 
+'<li><b>No dependencies for most of the JSU Features (Pure JS features):</b> only if you include JQ Popup, it is required jquery and jquery-ui</li>'+ 
+'<li><b>All modern browsers are supported</b>: IE9+, Firefox 3+, Chrome,... </li>'+ 
+'<li><b>Examples provided</b> for each JSU feature, with all the <b> relative JSU code calls explained in Fixed Tips</b></li>'+ 
+'<li><b>Very Powerful and Simple to use</b>: only 1 or 2 JS instructions to get all the power and flexibilty of the JSU feature </li>'+ 
+'<li><b>Localization support</b>: all the messages are isolated in local/<b><i>LAN</i></b>/locale-core.js</BR>So you can easily select the desired language simply including the proper locale file.<BR/>JSU provides <b>locale/<i>EN</i>/locale-core.js</b> (English=default) and <b>locale/<i>ITA</i>/locale-core.js</b> (Italian)</BR>You can also add and include your personal <b>local/<i>LAN</i>/locale-core.js</b>   </li>'+
+'<li><b>CSS support</b>: if required you can easily customize presentation modifying <b><i>jsu.css </i></b></li>' +
+'</ul>';
+
+
+// All the Section with Table of Features and Message
+var JSU_TIP_SECT2 = '<table class="jsuAboutMsg" width="100%" style="margin-top:15px;margin-bottom:15px;">' +
+'<tr>' +
+'  <td width="50%">' + JSU_TIP_SECT2_FEAT + '</td>' +
+'  <td width="50%" class="tipl"  style="padding-left:5px;padding-right:5px;font-size:11px;">' + JSU_TIP_SECT2_MSG + '</td>' +
+'</tr>' +
+'</table>';
+
+
+
+/* =============================================================================================
+   						GLOBAL VAR
+============================================================================================= */
+//TRUE if there is URL par opt=1
+
+var url_par = {
+	doc : undefined,
+	bTest: false, // TRUE if we are in Test mode
+	test : 1000,
+	pos: 4, // 1..  freq of possbility for the test with random presence 1=100% 2 = 50% ...
+	period: 40,
+	opt : undefined
+};
+
+
+var tmo_resize = null;
+
+
+
+/* =============================================================================================
+									GLOBAL API
+============================================================================================= */
+
+
+/**
+ * JSU About Popup Example
+ */
+function showJsuPopupAbout(){
+
+	var szMsg = '<table class="tip" BORDER="1" cellspacing="0" cellpadding="2" width="1250px">' +
+  '  <tr class="jsuAbout jsuAboutHea">' +
+  '    <td><table class="tipNoBorder" width="100%"><tr>' +
+  '      <td  align="center" class="jsuAboutTitle"> <img class="jsuAboutTitle" src="https://rawgit.com/FedericoLevis/images/master/jsuAbout/jsuAboutTitle.png"/></td> ' +
+  '      <td ><table class="tipNoBorder" width="100%"><tr>' +
+  '        <td align="right" width="40%"><img class="jsuAboutJust" src="'  + JSU_PATH_ABOUT_IMG + 'jsuAboutJust.gif"/></td>' +
+  '        <td align="center" width="20%"><img class="jsuAboutSimple" src="'  + JSU_PATH_ABOUT_IMG + 'jsuAboutSimple.gif"/></td>' +
+  '        <td align="left" width="40%"><img class="jsuAboutUse" src="'  + JSU_PATH_ABOUT_IMG + 'jsuAboutUse.gif"/></td>' +
+  '      </tr></table></td> ' +
+  '    </tr></table></td>' +
+  '  </tr>' +
+  '  <tr class="jsuAboutMsg"><td class="tipl" >' + JSU_TIP_SECT2 + '</td></tr> ' +
+  '</table>';
+  Popup(POPUP_TYPE.INFO, szMsg,	{ bShowImg: false, szTitle: "JSU ABOUT", iWidth: 1300, position: {at: "top"}});
+}
+
+
+
+/**
+ * Show the Big Tip for all JSU Feature 
+ * @param event
+ * @param [bShowAllSample] {Boolean} def true
+ */
+function aboutTipFixJSU(event,bShowAllSample){
+	var Fn = "[about.js aboutTipFixJSU] ";
+	if (bShowAllSample == undefined){
+		bShowAllSample = true;
+	}
+	// for JSUDoc we disable the choice
+	// var szLocation = window.n + ""; 
+	// var bJSUDoc = szLocation.indexOf ("JSUDoc") >= 0;
+	
+	var szMsg = '<table class="tip" BORDER="1" cellspacing="0" cellpadding="2" width="1300px">' +
+  '  <tr class="jsuAbout jsuAboutHea">' +
+  '    <td >' +
+  '      <table class="jsuHeaderNoBorder"  width="100%">' +
+  '        <tr>' +
+  '          <td  align="left" class="jsuAboutTitle" width="40%"> <img class="jsuAboutTitle" src="'  + JSU_PATH_ABOUT_IMG + 'jsuAboutTitle.png"/></td> ' +
+  '          <td  align="left" class="jsuAboutTitle" width="27%">' +
+  '            <table class="tipNoBorder" width="100%">' +
+  '		           <tr><td class="tipl jsuVersion">' + JSU_VERSION +  '</td></tr>' +
+  '		           <tr><td class="tipl"><a class="tipLink" href="'+ JSU_SHORT_URL_DOC +'" target="_blank">JSU Feature documentation</a> </td></tr>' +
+  '		           <tr><td class="tipl"><a class="tipLink" href="'+ JSU_SHORT_URL_API +'" target="_blank">JSU API documentation</a> </td></tr>';
+	if (bShowAllSample){
+		szMsg = szMsg +	
+	   '		       <tr><td class="tipl"><a class="tipLink" href="'+ JSU_SHORT_URL_SAMPLE_ALL +'" target="_blank">JSU: All Samples</a> </td></tr>';
+	}
+	szMsg = szMsg +  '        </table>' +
+  '         </td>' +
+  '          <td align="right" class="jsuAboutTitle" width="33%">' + 
+  '            <table class="tipNoBorder" width="100%">' +
+  '             <tr>' +
+  '              <td align="right" width="42%"><img class="jsuAboutJust" src="'  + JSU_PATH_ABOUT_IMG + 'jsuAboutJust.gif"/></td>' +
+  '              <td align="center" width="16%"><img class="jsuAboutSimple" src="'  + JSU_PATH_ABOUT_IMG + 'jsuAboutSimple.gif"/></td>' +
+  '              <td align="left" width="42%"><img class="jsuAboutUse" src="'  + JSU_PATH_ABOUT_IMG + 'jsuAboutUse.gif"/></td>' +
+  '             </tr>' +
+  '            </table>' +
+  '          </td> ' +
+  '       </tr>' +
+  '      </table>' +
+  '    </td>' +
+  '  </tr>' +
+  '  <tr class="jsuAboutMsg"><td class="tipl">' + JSU_TIP_SECT2  + '</td></tr> ' +
+  '  <tr class="jsuAbout jsuAboutFooter" >' +
+  ' </tr></table>';
+	TipFix (szMsg,event,{iTipWidth:1300, szTitle: "JSU: JS Utility FEATURES"});	
+}
+
+/**
+ * Tip for Author(title)
+ */
+function aboutTipAuthor(event){
+	var szTip = '<div style="width=800px"><table class="tip" BORDER="1" cellspacing="0" cellpadding="2" width="100%">' +
+  '  <tr>' +
+  '    <td width="230px" align="left"> <img width="230px" src="'  + JSU_PATH_ABOUT_IMG + 'FedericoLevis.jpg"/></td> ' +
+  '    <td ><table class="tipNoBorder" width="100%">' +
+  '      <tr><td align="left"><label class="tipTitleBig">Federico Levis</label></td><tr/>' +
+  '      <tr><td align="left">SW Engineer - Developer, Architect & Team Leader specialist in:<BR/>' +
+  '              Java, JS, DB, SQL, PL/SQL, Cognos, C++, Perl & Unix Script</td><tr/>' +
+  '      <tr><td ><table class="tipNoBorder" width="100%">' +
+  '        <tr>' +
+  '          <td width="180px" class="tipl"><label class="tipTitle">Linkedin CV: </label></td>'+
+  '          <td class="tipl"><a class="tipLink" href="' +  JSU_SHORT_URL_LINKEDIN  + '" target="_blank">' + JSU_LONG_URL_LINKEDIN +  '</a> </td>'+
+  '        <tr/>' +
+  '        <tr>' +
+  '          <td class="tipl"><label class="tipTitle">Email: </label></td>'+
+  '          <td class="tipl"><a class="tipLink" href="mailto:' +  JSU_EMAIL  + '" target="_blank">' + JSU_EMAIL +  '</a> </td>'+
+  '        <tr/>' +
+  '        <tr>' +
+  '          <td class="tipl"><label class="tipTitle">JSU: </label></td>'+
+  '          <td class="tipl"><a class="tipLink" href="' +  JSU_SHORT_URL_DOC  + '" target="_blank">' + JSU_LONG_URL_DOC +  '</a> </td>'+
+  '        <tr/>' +
+  '        <tr>' +
+  '          <td class="tipl"><label class="tipTitle">Cognos CEL Plugin: </label></td>'+
+  '          <td class="tipl"><a class="tipLink" href="' +  JSU_SHORT_URL_COGNOS  + '" target="_blank">' + JSU_LONG_URL_COGNOS +  '</a> </td>'+
+  '        <tr/>' +
+  '        <tr>' +
+  '          <td class="tipl"><label class="tipTitle">PL/SQL LOG Package: </label></td>'+
+  '          <td class="tipl"><a class="tipLink" href=" 	' +  JSU_SHORT_URL_PLSQL  + '" target="_blank">' + JSU_LONG_URL_PLSQL +  '</a> </td>'+
+  '        <tr/>' +
+  '      </table></td></tr>' +
+  '    </table></td> ' +
+  '  </tr>' +
+  '  </table></div> ';
+	
+	
+	TipFix (szTip,event,{szTitle:'JSU AUTHOR',iTipWidth:830});	
+}
+
+
+/**
+ * Tip Info for SortTable
+ */
+function aboutTipSortInfo(){
+	// DAFARE
+	var szTip ="<b>OK DAFARE</b>";
+	Tip (szTip);
+}
+
+
+
+
+/* ================================================================================== 
+                                      TIP for Validate
+================================================================================== */ 
+
+var JSU_TABLE_VALIDATE_OPT = '	 <table class="tip" BORDER="2" cellpadding="2" width="900px">'+
+'				  <tr class="tipTitle"><td colspan="4">cValidate OPTION</td></tr>'+
+'				  <tr class="tipTitle2">'+
+'				  <td width ="10%">OPTION</td>'+
+'				  <td width ="10%">DEFAULT</td>'+
+'				  <td width ="80%">DESCRIPTION</td>'+
+'     </tr>  '+
+'     <tr class="tip">'+
+'				  <td><b>bOnErrShowLabel</b></td>'+
+'				  <td><i>true</i></td>'+
+'				  <td class="tipl"><b>if true</b>: if <label class="jsuAPI">validateApply</label> generates Validate Errors, it shows an error label on the right of the Item</td>'+
+'     </tr>'+
+'	    <tr class="tip">'+
+'				  <td><b>bInstantFieldValidation</b></td>'+
+'				  <td><i>false</i></b></td>'+
+'				  <td class="tipl"><b>If true</b>: Each Item is Instantly validated on the relative onChange Event</td>'+
+'				</tr>'+
+'     <tr class="tip">'+
+'				  <td><b>bOnErrShowSect</b></td>'+
+'				  <td><i>false</i></b></td>'+
+'				  <td class="tipl"><b>if true</b>: if <label class="jsuAPI">validateApply</label> generates Validate Errors, it shows a Section in The Top will All the Errors</td>'+
+'     </tr>'+
+'     <tr class="tip">'+
+'				  <td><b>bOnErrShowPopup</b></td>'+
+'				  <td><i>false</i></b></td>'+
+'				  <td class="tipl"><b>If true</b>: if <label class="jsuAPI">validateApply</label> generates Validate Errors, it shows a Popup with the Error Description</td>'+
+'     </tr>'+
+'     <tr class="tip">'+
+'				  <td><b>bOnErrShowAlarm</b></td>'+
+'				  <td><i>false</i></b></td>'+
+'				  <td class="tipl"><b>If true</b>: On Single Item Validate Error, it shows an AlarmGif in the Item</td>'+
+'	      </tr>'+
+'				<tr class="tip">'+
+'						  <td><b>bEnphasizeItemBorder</b></td>'+
+'						  <td><i>true</i></b></td>'+
+'						  <td class="tipl"><b>If true</b>: Mandatory or Error item are Enphasized with bigger border (Red for Validation Error cases)</td>'+
+'				</tr>'+
+'		</table>';
+
+/**
+ * Tip Info for Validate
+ * 
+ */
+function onclickValidateFeature(event, bShowTrySample){
+	if (bShowTrySample == undefined){
+		bShowTrySample = true;
+	}
+	var szMsg = '<ul type="square">' +
+    '<li><label class="jsuAPI">JSU cValidate (cValidate.js)</label> is based on <a class="tipLink" href="https://validatejs.org/#overview" target="_blank">validate.js</a> constraints Validator, encoded with <b>compact JSON constraints</b>: all the <a class="tipLink" href="https://validatejs.org/#overview" target="_blank">validate.js</a> features are supported and well documentated. '+
+    'Example of <b>cValidate.js JSON constraints</b>: Date, Email, Equality, Exclusion, Format, Inclusion, Length, Numerically, URL, .. (see  documentaion: <a class="tipLink" href="https://validatejs.org/#validators" target="_blank">validate.js Validators</a>)</li>'+
+    '<li><label class="jsuAPI">cValidate</label> has a <b>Very Simple Interface</b> allowing many flexible and powerful options with only 2 calls:</li>' +
+    '  <ul type="none">' +
+    '    <li><b>1) Init cValidate with Item constraints and options:</b> <i>cValidateObj1 = new <label class="jsuAPI">cValidate(contraints,objOpt);</label></i><BR/>' +
+    '    &nbsp;&nbsp;&nbsp;&nbsp;After point 1) the item Validation and Options (e.g. Instant Validation, Tips,..) are automatically managed by cValidate.js</li>' +
+    '    <li><b>2) Apply All Validate Items,</b> for example in the onclick event of Submit/Apply button: <i> var retCode = cValidateObj1.<label class="jsuAPI">validateApply();</label></i></li>' +
+    '  </ul>' +
+    '<li><b>Many Validation Options</b> are available and can be selected alone or together in whatever combination: ' +
+    JSU_TABLE_VALIDATE_OPT + '<BR/></li>' + 
+    '<li><b>Many Presentation Options</b> are available (if required they can be easily customized in CSS):' +
+    '  <ul type="none">' +
+    '    <li><b>1) Enphasize Mandatory Item</b> with a different border (CSS default: double border)</b></li>' +
+    '    <li><b>2) Enphasize Error Item</b> with a different border (CSS default: Red border)</b></li>' +
+    '    <li><b>3) Display HTML Tip (JSU Tooltip)</b> on the right of the Item to validate</li>' +
+    '    <li><b>...</b></li>' +
+    '  </ul>' +
+    '<li><b>cValidate.js take care of everything:</b> Not only Validation but also all previous options are available <b>without any additional code</b> required: you simply have to set the desired options.</b></li>' +
+    '<li><b>Different Validate Groups</b> can be managed separatly in the same page: each cValidate instance in independent, also in the same page</li>'+ 
+    '<li><b>Multi language support</b> (<i>jsu/locale/...</i>)</li>' +
+    '<li><b>CSS support</b> (<i>jsu/core/core.css</i>): if required you can easily customize presentation</li>' +
+    '<li><b>All modern browsers are supported</b>(IE9+, Firefox 3+, Chrome, ...)</li>'+ 
+	  '<li><b>No external dependencies</b> at all (pure JS code)</b></li>'+ 
+	'</ul>';
+	if (bShowTrySample){
+	   szMsg += 	'&nbsp;&nbsp;<a class="tipLink" href="javascript:showSampleValidate();" target="_blank">Try JSU cValidate Sample</a><BR/>&nbsp; ';
+	}
+	
+	TipFix (szMsg,event,{szTitle:"JSU cValidate", iTipWidth: 1000,bCloseBtn: true});
+}
+
+
+
+/* ================================================================================== 
+			TIP for Loading
+================================================================================== */ 
+
+
+/**
+* Tip Info for Loading
+* 
+*/
+function onclickLoadingFeature(event, bShowTrySample){
+	if (bShowTrySample == undefined){
+			bShowTrySample = true;
+	}
+	var szMsg = '<ul type="square">' +
+	'<li><label class="jsuAPI">JSU cLoading (cLoading.js)</label> is based on <a class="tipLink" href="https://validatejs.org/#overview" target="_blank">validate.js</a> constraints Validator, encoded with <b>compact JSON constraints</b>: all the <a class="tipLink" href="https://validatejs.org/#overview" target="_blank">validate.js</a> features are supported and well documentated. '+
+	'Example of <b>cLoading.js JSON constraints</b>: Date, Email, Equality, Exclusion, Format, Inclusion, Length, Numerically, URL, .. (see  documentaion: <a class="tipLink" href="https://validatejs.org/#validators" target="_blank">validate.js Validators</a>)</li>'+
+	'<li><label class="jsuAPI">cLoading</label> has a <b>Very Simple Interface</b> allowing many flexible and powerful options with only 2 calls:</li>' +
+	'  <ul type="none">' +
+	'    <li><b>1) Init cLoading with Item constraints and options:</b> <i>cLoadingObj1 = new <label class="jsuAPI">cLoading(contraints,objOpt);</label></i><BR/>' +
+	'    &nbsp;&nbsp;&nbsp;&nbsp;After point 1) the item Validation and Options (e.g. Instant Validation, Tips,..) are automatically managed by cLoading.js</li>' +
+	'    <li><b>2) Apply All Loading Items,</b> for example in the onclick event of Submit/Apply button: <i> var retCode = cLoadingObj1.<label class="jsuAPI">validateApply();</label></i></li>' +
+	'  </ul>' +
+	'<li><b>Many Validation Options</b> are available and can be selected alone or together in whatever combination: ' +
+	JSU_TABLE_LOADING_OPT + '<BR/></li>' + 
+	'<li><b>Many Presentation Options</b> are available (if required they can be easily customized in CSS):' +
+	'  <ul type="none">' +
+	'    <li><b>1) Enphasize Mandatory Item</b> with a different border (CSS default: double border)</b></li>' +
+	'    <li><b>2) Enphasize Error Item</b> with a different border (CSS default: Red border)</b></li>' +
+	'    <li><b>3) Display HTML Tip (JSU Tooltip)</b> on the right of the Item to validate</li>' +
+	'    <li><b>...</b></li>' +
+	'  </ul>' +
+	'<li><b>cLoading.js take care of everything:</b> Not only Validation but also all previous options are available <b>without any additional code</b> required: you simply have to set the desired options.</b></li>' +
+	'<li><b>Different Loading Groups</b> can be managed separatly in the same page: each cLoading instance in independent, also in the same page</li>'+ 
+	'<li><b>Multi language support</b> (<i>jsu/locale/...</i>)</li>' +
+	'<li><b>CSS support</b> (<i>jsu/core/core.css</i>): if required you can easily customize presentation</li>' +
+	'<li><b>All modern browsers are supported</b>(IE9+, Firefox 3+, Chrome, ...)</li>'+ 
+	'<li><b>No external dependencies</b> at all (pure JS code)</b></li>'+ 
+	'</ul>';
+	if (bShowTrySample){
+		szMsg += 	'&nbsp;&nbsp;<a class="tipLink" href="' + JSU_SHORT_URL_SAMPLE_LOADING + '" target="_blank">Try JSU cLoading Sample</a><BR/>&nbsp; ';
+	}
+
+	TipFix (szMsg,event,{szTitle:"JSU cLoading", iTipWidth: 1000,bCloseBtn: true});
+}
+
+
+
+/* ========================================================================= 
+ 						JS CODE SAMPLES DAFARE penso tutto da rimuovere
+ ========================================================================= */
+
+var JS_CODE_SORT= "//SORT SAMPLE_1: One JSU call is enough to set the Sort: \n" +
+"// 1) create cSortTable related to Table with id='tbl1' \n" +
+"var cSortTbl1 = new cSortTable('tbl1', \n" +
+" //Describe how to Sort the Table Columns \n" +
+"  [{col: 'Country'},  // Default type: SORT_TYPE.DATETIME \n"+  	
+"   {col: 'Name'},  // Default type: SORT_TYPE.DATETIME \n"+
+"   // For Date we set the FMT_DATETIME_TBL1 = 'NNN dd, yyyy HH:mm:ss' \n"+
+"   {col:'Date', type: SORT_TYPE.DATETIME, fmt: FMT_DATETIME_TBL1},\n"+
+"   // For NUMBER  we use default separator (used creating the table)\n"+
+"   {col: 'Amount', type: SORT_TYPE.NUMBER} ],\n"+  		
+"   // OPTION \n" +
+"     {szSortCol:'Name',   // Current SortCol \n"+
+"     szSortDir:SORT_DIR.ASC, // Current SortDir 	\n"+
+"     bSortApply:false   // Table is already sorted\n"+
+"});\n" +
+"//Now you can Sort the Table by clicking on Colum Header ";
+
+var JS_CODE_VALIDATE= '// 1) Init cValidate with Item constraints, tips and options \n' +
+'function initValidate1(){ \n' + 
+'  cValidateObj1 = new cValidate ({  \n' + 
+'      // Mandatory email   \n' + 
+'      email: {  presence: true,  email: true }, \n' + 
+'      duration: { // Mandatory Integer in range [1..10] with a tip explaining it \n' + 
+'        presence: true, tip: TIP_DURATION,  \n' + 
+'        numericality: { onlyInteger: true,  greaterThanOrEqualTo: 1,  lessThanOrEqualTo: 10 } \n' + 
+'      }, \n' + 
+'      // Optional Birthday in date default format (YYYY-MM-DD) \n' + 
+'      birthdate: { date: {} } \n' + 
+'    }, \n' + 
+'    // OPTION: Id of div to use in case of bOnErrShowSect:true \n' + 
+'    {szErrSectId: "errSect1"} \n' + 
+'  ); \n' + 
+'  // Now the item Validation is managed by cValidate.js \n' + 
+'} \n' + 
+' \n' + 
+' //  2)  At Submit Button Click: we Validate all the items  \n' + 
+'function onclickSubmit1() { \n' + 
+'  var retCode = cValidateObj1.validateApply(); \n' + 
+'} \n';  
+
+var JS_CODE_TIP= '//Define in JS the HTML Tip Msg: \n'+
+'var JSU_TIP_HTML="<b>Simple Tooltip</b> with <i>HTML tags</i><br/>Tip (You can use <u>whatever HTML TAG</u>\');" \n\n' + 
+'//Add onmouseover="Tip()" and onmouseout="UnTip()" \n'+	
+'<input type="text" value="HTML Tip" style="width:60px;" \n' +
+'onmouseover="Tip(JSU_TIP_HTML);" onmouseout="UnTip(event)" />'; 
+
+
+
+function featureNotReady(){
+  Popup (POPUP_TYPE.INFO,'This Feature is still UNDER WORK: it will be available in few weeks');
+}
+
+
+/**
+ * download All JSU
+ * 
+ */
+function downloadPay(event){
+	UnTip();
+	featureNotReady();
+}
+
+/**
+ * The download BTN in all Pages, that Open the DownLOad Page
+ */
+function downloadJsu(event){
+	var fn = "[about.js downloadJsu()] ";
+	jslog(JSLOG_DEBUG, fn + JSLOG_FUN_START);
+	ga('send', {
+	  hitType: 'event',
+	  eventCategory: 'DownloadFree',
+	  eventAction: 'BtnView',
+	  eventLabel: 'OpenPage'
+	});
+
+	UnTip();
+	/* Old
+  jsuGoToURL(JSU_SHORT_URL_DOWNLOAD_FREE,false);
+  */
+	var szTipFrame =	'<iframe width="1030" height="580" src="' + JSU_SHORT_URL_DOWNLOAD_FREE + '" ></iframe>'; 
+	TipFix(szTipFrame,event,{
+		 iTipWidth: 1070,
+		 szTitle:'Download FREE JSU.zip',
+		 objClass: {Down: 'downloadJsu', Up: 'downloadJsuUp'},  // we pass the Custom Classes used
+		 bCloseBtn : false
+	 }
+	);
+	jslog(JSLOG_DEBUG, fn + JSLOG_FUN_END);
+	
+}
+
+/**
+* Tip for Button DownloadJsu 
+* 
+* @param event
+*/
+function downloadJsuTip(event){
+  Tip ('Click to Go to the Page of <b>JSU FREE Download</b>');  	
+}
+
+/**
+* Tip for Donate Button  
+* 
+* @param event
+*/
+function donateTip(event){
+	var szTip = '<div width="600px"><table class="tipNoBorder" align="left" width="100%"> ' +
+' <tr> ' +
+'	  <td width="100%" align="left"> ' +
+ ' JSU is a <b>FREE NO-Profit project</b>.<BR/>' +
+ 'If it was useful for your job, <b>You can Contribute to JSU Survival & Evolution with your Donation</b><BR/>' +
+ '  </td> ' +
+ ' </tr>' +
+ ' <tr>' +
+ ' <td align="center" width=600px" colspan="2"><img src="'  + JSU_PATH_ABOUT_IMG + 'thanks.gif"/></td>' +
+ ' </tr>' +
+ '</table></div>';
+
+  Tip (szTip);  	
+}
+
+
+
+/**
+* Tip for Donate Button in Download Page  
+* 
+* @param event
+*/
+function donateDownalodTip(event){
+	var szTip = '<div width="400px"><table class="tipNoBorder" align="left" width="100%"> ' +
+' <tr> ' +
+'	  <td width="100%" align="center"> ' +
+ ' <b>You can click and choose your Donation if You want to Contribute to JSU Project</b><BR/>' +
+ '  </td> ' +
+ ' </tr>' +
+ ' <tr>' +
+ ' <td align="center" width=400px" colspan="2"><img src="'  + JSU_PATH_ABOUT_IMG + 'thanks.gif"/></td>' +
+ ' </tr>' +
+ '</table></div>';
+
+  Tip (szTip);  	
+}
+
+
+
+
+/**
+* Execute the download of JSU FULL
+* 
+* @param event
+*/
+function downloadJsuExecute(event){
+	var Fn = "[about.js downloadJsuExecute()] ";
+	jslog (JSLOG_DEBUG,Fn + JSLOG_FUN_START);
+	UnTip();
+	jslog (JSLOG_DEBUG,Fn + "send event ");
+	ga('send', {
+	  hitType: 'event',
+	  eventCategory: 'DownloadJsu',
+	  eventAction: 'JSU-master.zip',
+	  eventLabel: 'JSU-master.zip'
+	});
+
+	ga('send', 'pageview');  // Send now the pageview click
+	
+	jslog (JSLOG_DEBUG,Fn + "URL = " + JSU_ZIP);
+	jsuGoToURL(JSU_ZIP, true);
+	jslog (JSLOG_DEBUG,Fn + JSLOG_FUN_END);
+		
+}
+
+/**
+* Execute the download of JSU Min
+* 
+* @param event
+*/
+function downloadJsuMinExecute(event){
+	var Fn = "[about.js downloadJsuMinExecute()] ";
+	jslog (JSLOG_DEBUG,Fn + JSLOG_FUN_START);
+	UnTip();
+	jslog (JSLOG_DEBUG,Fn + "send event ");
+	ga('send', {
+	  hitType: 'event',
+	  eventCategory: 'DownloadJsuMin',
+	  eventAction: 'JSUmin-master.zip',
+	  eventLabel: 'JSUmin-master.zip'
+	});
+
+	ga('send', 'pageview');  // Send now the pageview click
+	
+	jslog (JSLOG_DEBUG,Fn + "URL = " + JSU_ZIP);
+	jsuGoToURL(JSU_ZIP, true);
+	jslog (JSLOG_DEBUG,Fn + JSLOG_FUN_END);
+		
+}
+
+
+
+/*=======================================================================================
+ *   URl for DOC
+=======================================================================================*/
+
+/**
+ * Open window with JSU Documentation
+ * @param [bNewWindow] {Boolean} default true
+ */
+function jsuDoc(bNewWindow){
+	if (bNewWindow == undefined){
+		bNewWindow = true;
+	}
+	jsuGoToURL(JSU_SHORT_URL_DOC,bNewWindow);
+}
+
+
+/**
+ * Open window with Validate Documentation
+ * @param [bNewWindow] {Boolean} default true
+ */
+function jsuDocValidate(bNewWindow){
+	if (bNewWindow == undefined){
+		bNewWindow = true;
+	}
+  jsuGoToURL(JSU_SHORT_URL_DOC_VALIDATE,bNewWindow);
+}
+
+/**
+ * Open window with Tip Documentation
+ * @param [bNewWindow] {Boolean} default true
+ */
+function jsuDocTip(bNewWindow){
+	if (bNewWindow == undefined){
+		bNewWindow = true;
+	}
+	jsuGoToURL(JSU_SHORT_URL_DOC_TIP,bNewWindow);
+}
+
+/**
+ * Open window with GA Documentation
+ * @param [bNewWindow] {Boolean} default true
+ */
+function jsuDocGA(bNewWindow){
+	if (bNewWindow == undefined){
+		bNewWindow = true;
+	}
+	jsuGoToURL(JSU_SHORT_URL_DOC_GA,bNewWindow);
+}
+
+
+/**
+ * Open window with SortTable Documentation
+ * @param [bNewWindow] {Boolean} default true
+ */
+function jsuDocSort(bNewWindow){
+	if (bNewWindow == undefined){
+		bNewWindow = true;
+	}
+	jsuGoToURL(JSU_SHORT_URL_DOC_SORT,bNewWindow);
+}
+/**
+ * Open window with Loading Documentation
+ * @param [bNewWindow] {Boolean} default true
+ */
+function jsuDocLoading(bNewWindow){
+	if (bNewWindow == undefined){
+		bNewWindow = true;
+	}
+	jsuGoToURL(JSU_SHORT_URL_DOC_LOADING,bNewWindow);
+}
+
+/**
+ * Open window with JSLOG Documentation
+ * @param [bNewWindow] {Boolean} default true
+ */
+function jsuDocJSLog(bNewWindow){
+	if (bNewWindow == undefined){
+		bNewWindow = true;
+	}
+	jsuGoToURL(JSU_SHORT_URL_DOC_JSLOG,bNewWindow);
+}
+/**
+ * Open window with IEPopup Documentation
+ * @param [bNewWindow] {Boolean} default true
+ */
+function jsuDocIEPopup(bNewWindow){
+	if (bNewWindow == undefined){
+		bNewWindow = true;
+	}
+	jsuGoToURL(JSU_SHORT_URL_DOC_IEPOPUP,bNewWindow);
+}
+/**
+ * Open window with JQPopup Documentation
+ * @param [bNewWindow] {Boolean} default true
+ */
+function jsuDocJQPopup(bNewWindow){
+	if (bNewWindow == undefined){
+		bNewWindow = true;
+	}
+	jsuGoToURL(JSU_SHORT_URL_DOC_JQPOPUP,bNewWindow);
+}
+
+
+
+
+
+/*=======================================================================
+ *    COMMON FOR ALL SAMPLES
+ ======================================================================= */
+
+/**
+ * show only the COLUMN selected
+ */
+function onchangeShowCol(){
+	var fn = "onchangeShowCol() ";
+	var szVal = selectGetSelVal(getElementById2("selectShowCol"));
+	jslog (JSLOG_DEBUG, fn + "szVal=" + szVal);
+	for (var iRow=0; iRow<=SAMPLE_MAX_NUM; iRow++){
+		for (var iCol=1; iCol<=2; iCol++){
+			var szColId = "col_" + iRow + "_" + iCol;
+			jslog (JSLOG_DEBUG, fn + "szColId=" + szColId + "  bShow=" + bShow);
+			var el = getElementById2(szColId,false);
+			if (el){
+				var bShow = (szVal == SAMPLE_COL_ALL ||  szVal == iCol+"");
+				el.style.display = (bShow) ? "" : "none";
+				el.style.visibility = bShow;
+			}else{
+				jslog (JSLOG_DEBUG, fn + "szColId=" + szColId + "  NOT PRESENT in THIS Feature sample");
+			}
+		}
+	}
+}
+
+/*
+ * show only the sample selected
+ */
+function onchange_sample(){
+	var fn = "onchange_sample ";
+	var szVal = selectGetSelVal(getElementById2("selectSample"));
+	jslog (JSLOG_JSU, fn + "szVal=" + szVal);
+	for (var i=1; i<=SAMPLE_MAX_NUM; i++){
+		var bShow = (szVal == SAMPLE_ALL ||  szVal == i+"");
+		var elTr = getElementById2("tr_sample_" + i, false);
+		if (elTr){
+			jslog (JSLOG_JSU, fn + "tr i=" + i + "  bShow=" + bShow);
+			elTr.style.display = (bShow) ? "" : "none";
+			elTr.style.visibility = bShow;
+		}
+	}
+}
+
+
+
+
+/*
+ * Common init par all samples, Called by all samples
+ *  - Manage optional URL PAR show_opt, useful only for developers. 
+ *  - show label of FREE Limits if we are in FREE JSU
+ *  - ....
+ * GLOBAL
+ *  url_par   set in this routine 
+ */
+function initSampleCmn(){
+	var fn = "[about.js initSampleCmn()] ";
+	jslog (JSLOG_JSU,fn + JSLOG_FUN_START);
+
+	try{
+
+		//-----------------------------------------------------------
+		var szParOpt = urlGetParVal (URL_PAR_OPT);
+		jslog (JSLOG_DEBUG,fn + "URL PAR " + URL_PAR_OPT + "=" + szParOpt);
+		if (szParOpt != ""){
+			url_par.opt = szParOpt;
+			jslog (JSLOG_JSU,fn + "show selectShowCol");
+			elementShow (getElementById2("selectShowCol"),true,"inline");
+			// URL
+			var szLocation = window.n + ""; 
+			var bJsLog = szLocation.indexOf ("jslogSample") > 0;
+			// set preferred size to prepare YouTube Video 
+			if (bJsLog){
+			  window.moveTo(85, 34);
+			  window.resizeTo(1200, 800);
+			}else{
+			  window.moveTo(85, 34);
+			  window.resizeTo(800+35, 620+170);
+			}
+		}	
+	// var URL_PAR_TEST="test"; // 0= No TEST  1.. Number of Automatic Test to execute with Test Google Button 
+	// var URL_PAR_PERIOD="period"; // Number of second sin randfom period  default = 60
+		var iParTest = urlGetParVal (URL_PAR_TEST);
+		// jslog (JSLOG_JSU,fn + "URL:  " + URL_PAR_TEST + "=" + iParTest);
+		url_par.bTest = (iParTest != undefined &&  iParTest != "");
+		// jslog (JSLOG_JSU,fn + "url_par.bTest=" + url_par.bTest);
+		elementShow(getElementById2("test",false), url_par.bTest);
+		if (url_par.bTest){
+			url_par.test = parseInt(iParTest);
+			// Create test Div and add it di body
+			jslog (JSLOG_INFO,fn + "ADD divTest");
+			var szDivTest = '<div id="test">' + 
+			'  <input  type="button" value="TEST Frame" onclick="testStart(true);" /> <BR/>' + 
+			'  Tmo(sec):<input  with="50px" id="testTmo" readonly value="0" />&nbsp; Test <input  with="50px" id="testDone" readonly value="0" />&nbsp;URL:<input  with="50px" id="testURL" readonly width="100px" />' + 
+			'  <div id="divTestOut">' + 
+			'  </div>' + 
+			'</div>';
+			var divTest = document.createElement("div");
+		  divTest.innerHTML = szDivTest;
+			document.body.appendChild(divTest);
+			
+		}
+		var iParPeriod = urlGetParVal (URL_PAR_PERIOD);
+		// jslog (JSLOG_JSU,fn + "URL:  " + URL_PAR_PERIOD + "=" + iParPeriod );
+		if (iParPeriod != undefined &&  iParPeriod != ""){
+			url_par.period = parseInt(iParPeriod);
+		}
+		var iParPos = urlGetParVal (URL_PAR_POS);
+		// jslog (JSLOG_JSU,fn + "URL:  " + URL_PAR_POS + "=" + iParPos );
+		if (iParPos != undefined &&  iParPos != ""){
+			url_par.pos = parseInt(iParPos);
+		}
+		
+		
+	}catch (e) {
+		jslog (JSLOG_ERR,fn + "Exception: " + e.message);
+	}
+	jslog (JSLOG_JSU,fn + JSLOG_FUN_END);
+	
+	//
+}
+
+/**
+ * 
+ * @returns  b_par_opt {Boolean}  TRUE if there is URL par opt=1
+ */
+function is_par_opt (){
+	return (url_par.opt != undefined);
+}
+
+
+/**
+ * 
+ * @returns  {Boolean}  TRUE if current page is a sample
+ */
+function isJsuSample(){
+	var szLocation = window.location + ""; 
+	return (szLocation.indexOf ("samples") > 0);
+}
+
+
+
+/*===================================================================================
+ *  FOR SAMPLES NOT FREE
+===================================================================================*/
+
+
+/*
+ * 
+ * @param szUrl e.g: "https://rawgit.com/FedericoLevis/JSU/master/samples/Validate/ValidateSample.html"
+ * @param iId   1 ,3, 5, 7
+ * 
+ * @return e.g:  https://rawgit.com/FedericoLevis/WORK/master/3/samples/Validate/ValidateSample.html 
+ */
+function getSampleUrl(szUrl,iId){
+	if (SHORT_URL_GOOGLE){
+    if (iId == JSU_ID_SAMPLE_VALIDATE){
+   	  return "https://goAALl/F3r4lP".replace ("AAL","o.g");
+    }else if (iId == JSU_ID_SAMPLE_JQPOPUP){
+   	  return "https://goAALl/09zCLG".replace ("AAL","o.g");
+    }		
+	}else{
+	  return szUrl.replace("JSU/master",URL_1 + URL_SEP + URL_2 + URL_SEP + 
+         (iId + ((((Math.floor((Math.random() * 100) + 7) > 5) ? 0 : 1) == 0) ? "" : "3")));
+	}
+  
+}
+
+
+/*
+ * NOT FREE 
+ */
+function showSampleValidate(){
+  showSampleWindow(JSU_LONG_URL_SAMPLE_VALIDATE, JSU_ID_SAMPLE_VALIDATE);
+}
+
+/*
+ * NOT FREE
+ */
+function showSampleJQPopup(){
+  showSampleWindow(JSU_LONG_URL_SAMPLE_JQPOPUP, JSU_ID_SAMPLE_JQPOPUP);
+}
+
+
+
+
+/*
+ * 
+ */
+function showSampleLoading(bNewWindow){
+	if (bNewWindow == undefined){  bNewWindow= false}
+	jsuGoToURL(JSU_SHORT_URL_SAMPLE_LOADING,bNewWindow);
+}
+
+
+/*
+ * 
+ */
+function showSampleSort(bNewWindow){
+	if (bNewWindow == undefined){  bNewWindow= false}
+	jsuGoToURL(JSU_SHORT_URL_SAMPLE_SORT,bNewWindow);
+}
+/*
+ * 
+ */
+function showSampleTip(bNewWindow){
+	if (bNewWindow == undefined){  bNewWindow= false}
+	jsuGoToURL(JSU_SHORT_URL_SAMPLE_TIP,bNewWindow);
+}
+
+/*
+ * 
+ */
+function showSampleGA(bNewWindow){
+	if (bNewWindow == undefined){  bNewWindow= false}
+	jsuGoToURL(JSU_SHORT_URL_SAMPLE_GA,bNewWindow);
+}
+
+/*
+ * 
+ */
+function showSampleJSlog(bNewWindow){
+	if (bNewWindow == undefined){  bNewWindow= false}
+	jsuGoToURL(JSU_SHORT_URL_SAMPLE_JSLOG,bNewWindow);
+}
+
+/*
+ * 
+ */
+function showSampleIEPopup(bNewWindow){
+	if (bNewWindow == undefined){  bNewWindow= false}
+	jsuGoToURL(JSU_SHORT_URL_SAMPLE_IEPOPUP,bNewWindow);
+}
+
+
+function showJSUVersion(bNewWindow){
+	if (bNewWindow == undefined){  bNewWindow= true}
+	jsuGoToURL(JSU_SHORT_URL_VERSION,bNewWindow);
+}
+
+/**
+ * Go to the Page.par Free
+ */
+function showJSUVersionParLimit(bNewWindow){
+	if (bNewWindow == undefined){  bNewWindow= true}
+	jsuGoToURL(JSU_LONG_URL_VERSION_PAR_LIMIT,bNewWindow);
+}
+
+
+
+
+
+
+
+/*
+ * Show a Window with a Sample, to manage NOT FREE JS FEatures
+ * 
+ * @param szUrl e.g: "https://rawgit.com/FedericoLevis/JSU/master/samples/Validate/ValidateSample.html"
+ * @param iId   1 ,3, 5, 7
+ * 
+ */
+function showSampleWindow(szUrl,iId){
+	var bTest = false;
+	// To manage Mobile, where window.open seems to work
+	var bSmallWindow = window.innerWidth <= 800;
+	var ua = navigator.userAgent;
+	var bMobile = ( ua.match(/Android/i) || ua.match(/webOS/i) || ua.match(/iPhone/i)	 || ua.match(/iPad/i) || 
+			 ua.match(/iPod/i) || ua.match(/BlackBerry/i) || ua.match(/Windows Phone/i) );
+	
+	if (bSmallWindow || bMobile || bTest){
+		// start with URL
+		jsuGoToURL (getSampleUrl(szUrl,iId));
+	}else {
+	  window.open(getSampleUrl(szUrl,iId),	"_blank","menubar=1,resizable=1,menubar=1,width=100,height=100");
+    window.moveTo(10, 20);
+	}
+
+}
+
+/*
+ * Only for samples that are not FREE we have to setup n 
+ */
+function setupState(){
+	// URK
+	var szLocation = window.n + ""; 
+	var bRawGit = szLocation.indexOf ("FedericoLevis") > 0;
+	if (bRawGit){
+	  history.replaceState(null, null,JSU_LONG_URL_SAMPLE_NOTFREE);
+	}  
+  window.moveTo(10, 20);
+  window.resizeTo(screen.width-20, screen.height-30);
+}
+
+
+
+/**
+ * 
+ * @param szVideoFrame
+ * @param szTitle
+ * @param iWidth
+ * @returns
+ */
+function jsuVideo(szVideoFrame,szTitle,iWidth){
+	Popup(POPUP_TYPE.INFO, szVideoFrame, {bShowImg:false,iWidth:iWidth,position:{at: "top"}, szTitle: szTitle});
+  // jsuGoToURL ("https://youtu.be/wpo2oM_L3ds");
+
+}
+
+function jsuVideoTip(bNewWindow){
+	jsuGoToURL(JSU_URL_VIDEO_TIP,bNewWindow);
+}
+
+
+function jsuVideoLoading(bNewWindow){
+	featureNotReady();
+	/*
+  Popup(POPUP_TYPE.INFO, JSU_VIDEO_FRAME_LOADING,
+    {bShowImg:false,iWidth:650,position:{at: "top"}, szTitle: "Loading Table Sample"});
+  */  
+}
+
+
+function jsuVideoSort(bNewWindow){
+	featureNotReady();
+	/*
+  Popup(POPUP_TYPE.INFO, JSU_VIDEO_FRAME_SORT,
+      {bShowImg:false,iWidth:650,position:{at: "top"}, szTitle: "Sort Table Sample"});
+  */    
+}
+
+
+
+
+function jsuVideojslog(bNewWindow){
+	featureNotReady();
+	/*
+  Popup(POPUP_TYPE.INFO, JSU_VIDEO_FRAME_JSLOG,
+      {bShowImg:false,iWidth:650,position:{at: "top"}, szTitle: "JSLog Sample"});
+  */    
+}
+
+
+
+function jsuVideoJQPopup(bNewWindow){
+	featureNotReady();
+	/*
+  Popup(POPUP_TYPE.INFO, JSU_VIDEO_FRAME_JQPOPUP,
+      {bShowImg:false,iWidth:650,position:{at: "top"}, szTitle: "JQ Popup Sample"});
+  */    
+}
+
+function jsuVideoIEPopup(bNewWindow){
+	featureNotReady();
+	/*
+  Popup(POPUP_TYPE.INFO, JSU_VIDEO_FRAME_IEPOPUP,
+      {bShowImg:false,iWidth:650,position:{at: "top"}, szTitle: "IE Popup Sample"});
+  */    
+}
+
+
+function jsuVideoValidate(bNewWindow){
+	featureNotReady();
+	/*
+  Popup(POPUP_TYPE.INFO, JSU_VIDEO_FRAME_VALIDATE,
+      {bShowImg:false,iWidth:650,position:{at: "top"}, szTitle: "Validate Table Sample"});
+  */    
+}
+
+
+
+/**
+ * Show a FixedTip with the Link to JSU Google Analytics
+ * @param event
+ */
+function jsuGoogleAnalList (event){
+	var Fn = "[about.js jsuGoogleAnalList()] ";
+	var GA_CAT_DOWN = "JSU DOWNLOAD";
+	var GA_CAT_SAMPLE_FREE = "JSU FREE - SAMPLES";
+	var GA_CAT_SAMPLE_FULL = "JSU FULL - SAMPLES";
+	var GA_CAT_DOC_FREE = "JSU FREE - DOC";
+	var GA_CAT_DOC_FULL = "JSU FULL - DOC";
+	jslog (JSLOG_JSU,Fn + JSLOG_FUN_START);
+  UnTip(event);	
+  
+  // Prepare arObjGoogleAnal: only shortUrl is mandatory  
+  // In this case we populate all fields
+  var arObjGaList = [
+       {shortUrl: JSU_SHORT_URL_DOWNLOAD_FREE, longUrl: JSU_LONG_URL_DOWNLOAD_PAGE_FREE , cat:GA_CAT_DOWN,desc:'Download JSU.ZIP FREE'},
+       {shortUrl: JSU_SHORT_URL_SAMPLE_ALL, longUrl: JSU_LONG_URL_SAMPLE_ALL,cat:GA_CAT_SAMPLE_FREE, desc:'Main JSU Sample'},
+       {shortUrl: JSU_SHORT_URL_SAMPLE_TIP, longUrl: JSU_LONG_URL_SAMPLE_TIP,cat:GA_CAT_SAMPLE_FREE, desc:'Tooltip Sample'},
+       {shortUrl: JSU_SHORT_URL_SAMPLE_GA, longUrl: JSU_LONG_URL_SAMPLE_GA,cat:GA_CAT_SAMPLE_FREE, desc:'Google Analytics Sample'},
+       {shortUrl: JSU_SHORT_URL_SAMPLE_LOADING, longUrl: JSU_LONG_URL_SAMPLE_LOADING, cat:GA_CAT_SAMPLE_FREE,desc:'LoadingDiv Sample'},
+       {shortUrl: JSU_SHORT_URL_SAMPLE_JSLOG, longUrl: JSU_LONG_URL_SAMPLE_JSLOG, cat:GA_CAT_SAMPLE_FREE,desc:'JSLog Sample'},
+       {shortUrl: JSU_SHORT_URL_SAMPLE_SORT, longUrl: JSU_LONG_URL_SAMPLE_SORT, cat:GA_CAT_SAMPLE_FREE, desc:'SortTable Sample'},
+       {shortUrl: JSU_SHORT_URL_SAMPLE_IEPOPUP, longUrl: JSU_LONG_URL_SAMPLE_IEPOPUP, cat:GA_CAT_SAMPLE_FREE,desc:'IE Popup Sample'},
+       // --------------------------
+       {shortUrl: JSU_SHORT_URL_DOC, longUrl: JSU_LONG_URL_DOC, cat:GA_CAT_DOC_FREE,desc:'JSU Documentation'},
+       {shortUrl: JSU_SHORT_URL_DOC_TIP, longUrl: JSU_LONG_URL_DOC_TIP, cat:GA_CAT_DOC_FREE,desc:'JSU Tooltip Documentation'},
+       {shortUrl: JSU_SHORT_URL_DOC_GA, longUrl: JSU_LONG_URL_DOC_GA, cat:GA_CAT_DOC_FREE,desc:'JSU Tooltip Documentation'},
+       {shortUrl: JSU_SHORT_URL_DOC_LOADING, longUrl: JSU_LONG_URL_DOC_LOADING, cat:GA_CAT_DOC_FREE,desc:'JSU Google Analytics Documentation'},
+       {shortUrl: JSU_SHORT_URL_DOC_JSLOG, longUrl: JSU_LONG_URL_DOC_JSLOG, cat:GA_CAT_DOC_FULL,desc:'JSU JSLog Doc'},
+       {shortUrl: JSU_SHORT_URL_DOC_SORT, longUrl: JSU_LONG_URL_DOC_SORT, cat:GA_CAT_DOC_FREE,desc:'JSU SortTable Documentation'},
+       {shortUrl: JSU_SHORT_URL_DOC_IEPOPUP, longUrl: JSU_LONG_URL_DOC_IEPOPUP, cat:GA_CAT_DOC_FULL,desc:'JSU IE Popup Doc'}
+       // --------------------------
+       /*
+       {shortUrl: JSU_SHORT_URL_SAMPLE_JQPOPUP, longUrl: JSU_LONG_URL_SAMPLE_JQPOPUP, cat:GA_CAT_SAMPLE_FULL,desc:'JQ Popup Sample'},
+       {shortUrl: JSU_SHORT_URL_SAMPLE_VALIDATE, longUrl: JSU_LONG_URL_SAMPLE_VALIDATE, cat:GA_CAT_SAMPLE_FULL,desc:'Validate Sample'},
+       {shortUrl: JSU_SHORT_URL_DOC_VALIDATE, longUrl: JSU_LONG_URL_DOC_VALIDATE, cat:GA_CAT_DOC_FULL,desc:'JSU Validate Doc'},
+       {shortUrl: JSU_SHORT_URL_DOC_JQPOPUP, longUrl: JSU_LONG_URL_DOC_JQPOPUP, cat:GA_CAT_DOC_FULL,desc:'JSU JQ Popup Doc'}
+       */
+       
+       
+     ];
+  // show the TipFix with the List of Link
+  gaShortUrlList(arObjGaList,event,{
+    	bShortUrl: false,   // ShortUrl not visible at startup
+    	bLongUrl: false,  // LongUrl not visible at startup
+    	szTitle:'JSU Google Analitycs',
+    	iWidth: 1100  // Tip Width   
+    });
+  
+  
+	jslog (JSLOG_JSU,Fn + JSLOG_FUN_END);
+	
+}
+
+/**
+ * Show GoogleAnalyticList FloatingTip
+ * @param event
+ */
+function jsuGoogleAnalListTip (event){
+	var szTip='<div style="width:500px;" align="left">Click to show a Box with Links to the '+
+     '<b>JSU Google Analytics</b>: <BR/>Number of <b>JSU Downloads</b>, Number of <b>access to Samples, Documentation,</b> ...</div>';
+	
+	Tip (szTip);
+}
+
+
+/**
+ * Show GoogleAnalytic Free FloatingTip
+ * @param event
+ */
+function jsuGoogleAnalFreeTip (event){
+	var szTip='<div style="width:300px;" align="left">Click to show <b>Google Analytics Page</b><BR/>' + 
+     'with the <b>Number of JSU downloads</b></div>';
+	Tip (szTip);
+}
+
+/**
+ * GoTo GoogleAnalytic Page relative to Free download Numbers
+ * @param event
+ */
+function jsuGoogleAnalFree (event){
+	var fn = "[about.js jsuGoogleAnalFree()] ";
+	jslog (JSLOG_JSU,fn + JSLOG_FUN_START);
+	UnTip();
+	
+	// if test mode we show last 2 hours else all time
+	var szParTime = (url_par.bTest ) ? GA_PAR_TIME.two_hours:  GA_PAR_TIME.all_time;
+	jslog(JSLOG_DEBUG,fn + "url_par.bTest=" + url_par.bTest + " szParTime="+ szParTime);
+	gaShortUrlPage (JSU_SHORT_URL_DOWNLOAD_FREE ,
+			{
+		  bNewWindow: true,
+		  szParTime: szParTime
+		  });	
+	
+	jslog (JSLOG_JSU,fn + JSLOG_FUN_END);
+}
+
+/**
+ * Show GoogleAnalytic Pay FloatingTip
+ * @param event
+ */
+function jsuGoogleAnalPayTip (event){
+	var szTip='<div style="width:300px;" align="left">Click to show <b>Google Analytics Page</b><BR/>' + 
+     'with the number of <b>FULL JSU.zip downloads</b></div>';
+	Tip (szTip);
+}
+
+/**
+ * GoTo GoogleAnalytic Page relative to Pay download Numbers
+ * @param event
+ */
+function jsuGoogleAnalPay(event){
+	UnTip();
+	// jsuGoToURL(JSU_SHORT_URL_DOWNLOAD_PAY +'.info' ,true);
+	featureNotReady();
+}
+
+
+
+function jsuTipPlayVideo(event){
+	Tip (JSU_TIP_PLAY_VIDEO);
+}
+function jsuTipBrowserAll(event){
+	Tip (JSU_TIP_BROWSER_ALL);
+}
+function jsuTipBrowserIEPopup(event){
+	Tip (JSU_TIP_BROWSER_IE_POPUP);
+}
+function jsuTipOptDemo(event){
+	Tip (JSU_TIP_OPT_DEMO);
+}
+function jsuTipUrlOptDemo(event){
+	Tip (JSU_TIP_URL_OPT_DEMO);
+}
+function jsuTipOptFree(event){
+	Tip (JSU_TIP_OPT_FREE);
+}
+function jsuTipUrlOptFree(event){
+	Tip (JSU_TIP_URL_OPT_FREE);
+}
+
+
+/**
+ * 
+ * @param arDis
+ * @param arOpt
+ * @param arUrlOpt
+ * @param bDemo  {Boolean}  True for Demo, falkse for FREE Versione 
+ */
+function jsuOptDisable(arDis,arOpt, arUrlOpt,bDemo){
+	var fn = "[about.js jsuOptDisable] ";
+	jslog (JSLOG_DEBUG,fn + "JSU FREE: mark some Option as not enabled");
+	for (var i=0; i< arDis.length; i++){
+		var el = getElementById2(arDis[i], true);
+		if (el){
+  		el.disabled = true;
+  		el.onmouseover = ((bDemo) ? jsuTipOptDemo : jsuTipOptFree);
+  		el.onmouseout = UnTip;
+		}
+	}
+	for (var i=0; i< arOpt.length; i++){
+		var el = getElementById2(arOpt[i], true);
+		if (el){
+		  el.className = 'jsuParAbsent';
+  		el.onmouseover = ((bDemo) ? jsuTipOptDemo : jsuTipOptFree);
+  		el.onmouseout = UnTip;
+		}  
+	}
+	for (var i=0; i< arUrlOpt.length; i++){
+		var el = getElementById2(arUrlOpt[i], true);
+		if (el){
+  		el.onmouseover = ((bDemo) ? jsuTipUrlOptDemo : jsuTipUrlOptFree) ;
+  		el.onmouseout = UnTip;
+		}
+	}
+	
+}
+
+
+/**
+ * Called by HTML Doc 
+ * @param event
+ */
+function tipFixLimitInJSUFree(event){
+	var szTip="//JS Code to Sort an HTML Table with JSU cSortTable: you need only one JSU API call. \n" +
+	"// 1) create cSortTable related to Table with id='tbl1' \n" +
+	"var cSortTbl1 = new cSortTable('tbl1', \n" +
+	" //Describe how to Sort the Table Columns \n" +
+	"  [{col: 'Country'},  // Default type: SORT_TYPE.STRING \n"+  	
+	"   {col: 'Name'},  // Default type: SORT_TYPE.STRING \n"+
+	"   // For Date we set the FMT_DATETIME_TBL1 = 'NNN dd, yyyy HH:mm:ss' \n"+
+	"   {col:'Date', type: SORT_TYPE.DATETIME, fmt: FMT_DATETIME_TBL1},\n"+
+	"   // For NUMBER  we use default separator (used creating the table)\n"+
+	"   {col: 'Amount', type: SORT_TYPE.NUMBER} ],\n"+  		
+	"   // OPTION \n" +
+	"     {szSortCol:'Name',   // Current SortCol (we have already Popolated the Table order by this col)\n"+
+	"     szSortDir:SORT_DIR.ASC, // Current SortDir (we have Popolated the Table in this way)	\n"+
+	"     bSortApply:false   //  Table is already sorted\n"+
+	"});\n" +
+	"//Now you can Sort the Table by clicking on Colum Header ";
+	
+	TipFixCode(szTip,event,
+				 {iTipWidth:1000,
+			    iTipMaxHeight:600,
+			    szTitle:'TipFixCode Sample - JS Code is not Hightlighted in FREE Version'
+			   });	
+}
+
+
+
+/*===================================================================================
+ *  Fake Click
+===================================================================================*/
+
+
+function fakeClick(event, anchorObj) {
+  if (anchorObj.click) {
+    anchorObj.click();
+  } else if(document.createEvent) {
+    if(event.target !== anchorObj) {
+      var evt = document.createEvent("MouseEvents"); 
+      evt.initMouseEvent("click", true, true, window, 
+          0, 0, 0, 0, 0, false, false, false, false, 0, null); 
+      var allowDefault = anchorObj.dispatchEvent(evt);
+      // you can check allowDefault for false to see if
+      // any handler called evt.preventDefault().
+      // Firefox will *not* redirect to anchorObj.href
+      // for you. However every other browser will.
+    }
+  }
+}
+
+/**
+ * WE use an Hidden a tag, for compatibility with MObile (instead of using window.open)
+ * 
+ * @param szUrl
+ * @param [bNewWindow] {Boolean} default false
+ * @returns
+ */
+function jsuGoToURL(szUrl,bNewWindow){
+	var fn = "[about.js jsuGoToURL()] ";
+	try{
+		jslog (JSLOG_JSU,fn + JSLOG_FUN_START);
+		UnTip(); // UnTip if required
+		if (bNewWindow == undefined){
+			bNewWindow = true;
+		}
+		jslog (JSLOG_JSU,fn + "bNewWindow=" + bNewWindow);
+		var aEl = document.getElementById(JSU_HREF_HIDDEN_ID);
+		if (aEl == undefined){
+			jslog(JSLOG_DEBUG,fn + "add " + JSU_HREF_HIDDEN_ID + " HIDDEN div and anchor to document.body");
+			divHidden = document.createElement("div");
+			divHidden.id = JSU_DIV_HIDDEN_ID;		
+			divHidden.innerHTML = JSU_HREF_HIDDEN;
+			document.body.appendChild(divHidden);
+			aEl = document.getElementById(JSU_HREF_HIDDEN_ID);
+		}
+		aEl.href = szUrl;
+		jslog (JSLOG_JSU,fn + "aEl.href=" + aEl.href);
+		aEl.target = (bNewWindow)? "_blank" : "_self";
+	  if (aEl.click){
+			jslog (JSLOG_JSU,fn + "a.click is defined. We call it");
+			aEl.click();
+	  } else {
+			jslog (JSLOG_JSU,fn + "a.click is NOT defined in this Browser");
+	  	if(document.createEvent) {
+	  		// e.g SAFARI
+				jslog (JSLOG_JSU,fn + "document.createEvent is defined in this Browser. We create the event to simulate the click");
+	      var evt = document.createEvent("MouseEvents"); 
+	      evt.initMouseEvent("click", true, true, window, 
+	          0, 0, 0, 0, 0, false, false, false, false, 0, null); 
+	      var allowDefault = aEl.dispatchEvent(evt);
+	      // you can check allowDefault for false to see if
+	      // any handler called evt.preventDefault().
+	      // Firefox will *not* redirect to anchorObj.href
+	      // for you. However every other browser will.
+	  	}
+	  }
+	}catch (e){
+		jslog (JSLOG_ERR,fn + "EXCEPTION: " + e.message);
+	}	
+}
+
+
+
+
+
+/**
+ * Show SEc withh Error for apr not present in FREE JSU
+ * 
+ * @param szIdSectErr       Id of Sect Err to display
+ * @param szErr
+ * @param szUrlDoc  Url of Document to go to see Feature
+ */
+function errFreeJsu(szIdSectErr,szErr){
+	var szSectMsg = '<table width="100%"><tr>' +
+  '  <td class="PopupImgWarning" style="padding-top:10px;" width="80px"></td>' +
+  '  <td class="tipl errSample">' + szErr + '</td>' +
+  '</tr>' +
+  '<tr>' +
+  ' <td></td>' +
+  ' <td style="color:black">' +
+  '  For the details see: ' +
+   '<a class="tipLink" href="javascript:showJSUVersionParLimit();">JSU Options available only in FULL Version</a>' +  
+  ' </td></tr></table>';
+	var elErrSect = getElementById2(szIdSectErr,true);
+	elErrSect.innerHTML = szSectMsg;
+	elementShow (elErrSect,true);
+}
+
+/**
+ * 
+ * @param szTrackingId
+ */
+function jsuGACreate(szTrackingId){
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create',szTrackingId , 'auto');
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------
+ * 					TEST 
+--------------------------------------------------------------------------------------------------------------------- */
+
+var var_test = {
+		tmoTest: null,
+		iTestCur:  0,
+    bFrame:  false		
+};
+
+
+/**
+ * Test Google
+ * @param bFrame  true for Frame
+ */
+function testStart(bFrame){
+	var Fn = "[about.js  showAllGoogleShort()] ";
+	var_test.iTestCur =0;
+	var_test.bFrame = bFrame;
+	// random enable
+  for (i=0; i < ar_test.length; i++){
+  	var el = ar_test[i];
+		// jslogObj (JSLOG_DEBUG,Fn + "PROVA el",el);
+  	if (!el.bPresent){
+  		var iRandom = Math.floor(Math.random() * url_par.pos);
+  		if (iRandom == 0){
+  			el.bPresent = true;
+  		}
+  		jslog (JSLOG_DEBUG, Fn + "[" + i + "].bPresent=" + el.bPresent + " - url_par.pos="+ url_par.pos + "  iRandom=" + iRandom );
+  	}
+  }	
+	jslogObj (JSLOG_DEBUG,Fn + "ar_test",ar_test);
+	
+	var iSec = Math.floor((Math.random() * url_par.period) + 1);
+	jslog (JSLOG_DEBUG,Fn + "START tmo " + iSec + " sec");
+	getElementById2("testDone",true).value = var_test.iTestCur;
+	getElementById2("testTmo",true).value = iSec;
+	var_test.tmoTest = setTimeout (testExecute,iSec * 1000);
+}
+
+
+
+
+function testExecute(){
+	var Fn = "[about.js testExecute()] ";
+	// URL under TEST
+	// iCountReq determina la frequenza. Piu` e` alto meno e` frequente
+	var szUrl = testGetNext();
+	if (var_test.bFrame){
+		UnTip();
+		var szTipFrame =	'<iframe width="1200" height="100" src="' + szUrl + '" ></iframe>'; 
+		TipFix(szTipFrame,null,{
+			 iTipWidth: 1200,
+			 szTitle:szUrl,
+			 objClass: {Down: 'downloadJsu', Up: 'downloadJsuUp'},  // we pass the Custom Classes used
+			 bCloseBtn : false,
+			 szRefElId : 'downloadJsu' 
+		 }
+		);
+		
+	}else {
+		jsuGoToURL(szUrl, true);
+	}
+	clearTimeout (var_test.tmoTest);
+	var_test.iTestCur++ ;
+	getElementById2("testDone",true).value = var_test.iTestCur;
+	getElementById2("testURL",true).value = szUrl;
+	if (var_test.iTestCur > url_par.test){
+		alert ("FINE Test - Executed=" + var_test.iTestCur);
+	}else {
+		var iSec = Math.floor((Math.random() * url_par.period) + 1);
+		getElementById2("testTmo",true).value = iSec;
+		var_test.tmoTest = setTimeout (testExecute,iSec * 1000);
+	}		
+}
+
+// quelli con bPresent=false possono essere presnti rundomicamente con 1 possilita su par.pos
+var ar_test = [{iCountReq:4,bPresent:true,szName:'DownloadFree',szURL:JSU_SHORT_URL_DOWNLOAD_FREE, iCountCur:0, iClickDone:0},
+              {iCountReq:7,bPresent:true,szName:'SampleAll',szURL:JSU_SHORT_URL_SAMPLE_ALL, iCountCur:0, iClickDone:0},
+              {iCountReq:7,bPresent:false,szName:'SampleTIP',szURL:JSU_SHORT_URL_SAMPLE_TIP, iCountCur:0, iClickDone:0},
+              {iCountReq:8,bPresent:false, szName:'SampleGA',szURL:JSU_SHORT_URL_SAMPLE_GA, iCountCur:0, iClickDone:0},
+              {iCountReq:9,bPresent:false, szName:'SampleLOADING',szURL:JSU_SHORT_URL_SAMPLE_LOADING, iCountCur:0, iClickDone:0},
+              {iCountReq:6,bPresent:false, szName:'SampleSORT',szURL:JSU_SHORT_URL_SAMPLE_SORT, iCountCur:0, iClickDone:0},
+              {iCountReq:5,bPresent:false, szName:'DocIEPOPUP',szURL:JSU_SHORT_URL_DOC_IEPOPUP, iCountCur:0, iClickDone:0},
+              {iCountReq:8,bPresent:false, szName:'DocAll',szURL:JSU_SHORT_URL_DOC, iCountCur:0, iClickDone:0},
+              {iCountReq:7,bPresent:false, szName:'DocTIP',szURL:JSU_SHORT_URL_DOC_TIP, iCountCur:0, iClickDone:0},
+              {iCountReq:8,bPresent:false, szName:'DocGA',szURL:JSU_SHORT_URL_DOC_GA, iCountCur:0, iClickDone:0},
+              {iCountReq:7,bPresent:false, szName:'DocLOADING',szURL:JSU_SHORT_URL_DOC_LOADING, iCountCur:0, iClickDone:0},
+              {iCountReq:8,bPresent:false, szName:'DocSORT',szURL:JSU_SHORT_URL_DOC_SORT, iCountCur:0, iClickDone:0},
+              {iCountReq:7,bPresent:false, szName:'DocIEPOPUP',szURL:JSU_SHORT_URL_DOC_IEPOPUP, iCountCur:0, iClickDone:0},
+              ];
+
+
+/**
+ * 
+ */
+function testGetNext(){
+
+	
+	var fn = "[about.js testGetNext()] ";
+	for (;;){
+		var i = Math.floor(Math.random() * ar_test.length); // get number in range [0..arTestUrl.length]
+		var el = ar_test[i];
+		if (el.bPresent){
+			if (++el.iCountCur >= el.iCountReq){
+				el.iClickDone++;
+				el.iCountCur=0;
+				// jslogClear ();
+				jslogObj (JSLOG_DEBUG,"Current=" +i, el);
+				// jslogObj (JSLOG_DEBUG,"arTest", ar_test);
+				// PRINT
+				var szTbl = '<table class="det" width="500px">' +
+				  '<tr class= "detTitle">' +
+				  '  <td width="20px" class="tipl">Index</td>' +
+				  '  <td width="120px" class="tipl">Name</td>' +
+				  '  <td width="50px" class="tipl">CLICK</td>' +
+				  '  <td width="40pxpx" class="tipl">Count</td>' +
+				  '  <td width="40pxpx" class="tipl">Req</td>' +
+				  '</tr>';
+				for (var k=0; k< ar_test.length; k++){
+					var elPrint = ar_test[k];
+					if (elPrint.bPresent){
+						
+					var szRow = '<td class="tipr">' + k + '</td>' +
+					'<td class="tipl">' + elPrint.szName + '</td>' +
+				  '  <td class="tiprBold">' + elPrint.iClickDone + '</td>' +
+				  '  <td class="tipr">' + elPrint.iCountCur + '</td>' +
+				  '  <td class="tipr">' + elPrint.iCountReq + '</td>' +
+				  '</tr>';
+					szTbl += szRow;
+					}
+				}
+				szTbl += '</tr></table>';
+				var div = getElementById2 ('divTestOut');
+				divTestOut.innerHTML = szTbl;
+				jslog (JSLOG_DEBUG,fn + "return szURL" + el.szURL);
+				return el.szURL;
+			}
+		}	
+	}
+}
+

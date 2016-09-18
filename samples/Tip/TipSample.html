@@ -12,11 +12,13 @@
 	<!-- This sample -->
 		<script type="text/javascript" src="./TipSample.js" ></script>
 
-  <!--  ***************************   JSU ****************************** -->
-  <!--  Define JSU_GA_TRACKING_ID to Enable GoogleAnalitycs and send a pageView statistic  -->
+  <!--  ***************************   JSU   ****************************** -->
+  <!-- OPTIONAL Settings ONLY for Development phase ----->
   <script>
-     var JSU_GA_TRACKING_ID = 'UA-83225633-1';
+     var JSU_GA_TRACKING_ID = 'UA-83225633-1'; // Define JSU_GA_TRACKING_ID to Enable GoogleAnalitycs and send a pageView statistic
+     var JSU_PATH_BASE = '../..'; // Path of JSU, relative to this HTML. To use Local File instead of Default defined in jsu.js: JSU_PATH_BASE="https://rawgit.com/FedericoLevis/JSU/master"
   </script>
+  <!--   STANDARD JSU LOAD -->
   <link rel="stylesheet" href="../../core/jsu.css" type="text/css">
   <script  data-main="../../plugin/jsu.js" src="../../core/require.js"></script>
   
@@ -34,45 +36,34 @@
 <div id="sampleHeader">
 
 <!--  TOOLBAR Table: GoogleAnalytics and download -  common for all the JSU HTML -->
-<table class="sampleToolbar" width="100%" >
+<table class="sampleToolbar" valign="top" width="100%" >
   <tr >
-    <td class="tipl" width="30%">
+    <td class="tipl" valign="middle" width="50%">
         <input type="button"  class="googleAnalList" id="googleAnalList"  onclick="jsuGoogleAnalList(event)"  onmouseover="jsuGoogleAnalListTip(event);" onmouseout="UnTip(event)"/> 
     </td>
-    <td class="tipr" width="70%">
-     <table valign="bottom" align="right">
+    <td class="tipr" width="50%">
+     <table valign="middle" align="right">
         <tr>
-            <td class="tipr" ><b>Download Options:</b> </td>
-            <td><input type="button"  class="tipFix" id="downloadOption"  onclick="downloadTip(event)" /> </td>
-            <td valign="bottom"> <input type="button" class="downloadPay"  id="downloadPay"    onclick="downloadPay(event);" onmouseover="downloadTipPay(event);" onmouseout="UnTip(event)"/> </td>
-            <td valign="bottom"> <input type="button"  class="googleAnal" id="googleAnalPay"  onclick="jsuGoogleAnalPay();"  onmouseover="jsuGoogleAnalPayTip(event);" onmouseout="UnTip(event)"/> </td>
-            <td valign="bottom"> <input type="button" class="downloadFree" id="downloadFree" onclick="downloadFree(event);" onmouseover="downloadTipFree(event);" onmouseout="UnTip(event)"  /> </td>
-            <td valign="bottom"> <input type="button"  class="googleAnal" id="googleAnalFree"  onclick="jsuGoogleAnalFree();"  onmouseover="jsuGoogleAnalFreeTip(event);" onmouseout="UnTip(event)"/> </td>
+            <td valign="middle"> <input type="button" class="downloadJsu" id="downloadJsu" onclick="downloadJsu(event);" onmouseover="downloadJsuTip(event);" onmouseout="UnTip(event)"  /> </td>
+            <td valign="middle"> <input type="button"  class="googleAnal jsuDownloadGA" id="googleAnalFree"  onclick="jsuGoogleAnalFree();"  onmouseover="jsuGoogleAnalFreeTip(event);" onmouseout="UnTip(event)"/> </td>
+            <td class="donate" valign="top">
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="2HF4Z8X989Q4Y">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"
+                    onmouseover="donateTip(event);" onmouseout="UnTip(event)">
+                <img alt="" border="0" src="https://www.paypalobjects.com/it_IT/i/scr/pixel.gif" width="1" height="1">
+                </form>
+           </td>
         </tr>
-      </table>  
-    </td>
+     </table>   
+    </td> 
   </tr>
 </table>   
 
 <hr>
 <h1 class="jsuSample">JSU - JS Utility Plugin  - Tooltip Sample</h1>      
-<!--   TIP Warning for Limitations -->
-<div style="width:100%;" id="sample_limit" align="center">
-  <table class="tipNoBorder" width="450px" >
-    <tr><td>
-             <table class="sampleLimit" align="left"><tr>
-                <td class="sampleLimit" style="vertical-align:middle;"><input class="sampleLimit"></td>
-                <td class="tipl">
-                  <label class="tipWarnBold">This is FREE JSU Version with <a class="tipLink" href="javascript:showJSUVersionParLimit();">Limitations</a></label>
-                </td>
-             </tr>
-             </table>
-    </td></tr>
-  </table>
- </div> 
 
-
-</div>
 
 <table class="tip" BORDER="2" cellspacing="0" cellpadding="2" width="100%">
     <tr id="tr_title_1" class="tipTitleBig">

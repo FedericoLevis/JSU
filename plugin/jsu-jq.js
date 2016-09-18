@@ -26,23 +26,22 @@ This file may be freely distributed under the MIT license.   <BR/>
 */
 
 
-/* the BASE Path: Path of ..../jsu folder. 
- a) Fixed 
- b) relative Path (relative to HTML including this file)
+/* the BASE Path: Path of ..../jsu folder than contains subfolders core/ local/ ,.... 
+ You can choose between 2 OPTIONS:
+ a) Fixed e.g var JSU_PATH_BASE="https://rawgit.com/FedericoLevis/JSU/master";
+ b) relative Path (relative to the HTML that load this file). For example you can set it during developing phase
 */  
 
 if (typeof (JSU_PATH_BASE) == "undefined"){
-    // ONLY for LOCAL DEVELOPMENT
-	var JSU_PATH_BASE = '../..';  // Default: it is the setting for the JSU sample
-    // GIT
-    // var JSU_PATH_BASE="https://rawgit.com/FedericoLevis/JSU/master";
+  var JSU_PATH_BASE="https://rawgit.com/FedericoLevis/JSU/master";
 }
 
-//===================================== OPTION: JSU with Comment or Minified   
-//decomment only the jsuVersion version that you want to use
+//===================================== OPTIONAL CONFIGURATION: JS with Comment or Minified   
+//decomment only the jsuVersion and externalPluginVersionthat you want to use
 //  "/Minify"       Version Minified
-//  "/Obfuscated"     Version Obscured
 var jsuVersion = "";
+// var jsuVersion = "/Minify";
+//var externalPluginVersion = "";
 var externalPluginVersion = "/Minify";
 
 // ----------------------------------- FIXED (they depend on JSU_PATH_BASE)
@@ -61,7 +60,7 @@ requirejs.config({
         'lan': 'locale/EN',
 //      'lan': 'locale/ITA',     // For Italian Language
         'popup': 'JQPopup' + jsuVersion,
-        'jquery': 'externalPlugin/jquery' + externalPluginVersion
+        'jquery': 'https://rawgit.com/FedericoLevis/externalPlugin/master/jquery' + externalPluginVersion
     },
     shim: {
       'core/jslog': ['core/dom-drag'],
