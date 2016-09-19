@@ -51,7 +51,7 @@ var LOADING_DIV_DEF_OPT ={
 		szCancelLabel:  "" ,	//	{String}: [""] Label to set to Cancel Button - default is LOADING_DIV_MSG.cancelBtn 
 		szBackgroundColor: LOADING_DIV_DEF.szBackgroundColor, // {String} Div BackgroundColor, if different from null or "", 
 		fnCancelCallback: null,  // called when click Cancel
-		bRecalcBestPos: false	// bRecalcBestPos: {Boolean} [true] reCalculate BestPosition basing on WindowSize, Scrollbar. You can use false during Window LOad to avoid movement
+		bRecalcBestPos: true	// bRecalcBestPos: {Boolean} [true] reCalculate BestPosition basing on WindowSize, Scrollbar. You can use false during Window LOad to avoid movement
 };
 
 
