@@ -286,7 +286,18 @@ function isFirefox()
   return (getBrowser() == BROWSER_TYPE.FIREFOX);
 }
 
-
+/**
+ * 
+ * @returns {Boolean}  true if the window is inside an Iframe
+ */
+function isInIframe(){
+	try {
+		return (window.self !== window.top);
+	}catch(e){
+		return true;
+	}
+	
+}
 
 
 
