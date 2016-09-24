@@ -49,7 +49,7 @@ var GA_PAR_TIME={
 var GA_DEF = {
 		JSPOPUP: false,
 		ALL_LINK: true, // default: Present the Link to display all the pages of Google analytics together
-		WIDTH: 900, // Box Width
+		WIDTH: 700, // Box Width
 		TBL_MAX_HEIGHT: 300,  // if more lines there will be scroolbar
 		SHOW_CB_SHORT_URL: true,   // Show CB
 		SHOW_CB_LONG_URL: true,    // Show CB
@@ -72,7 +72,7 @@ var ga_var = {
 		arObjGaList: null,   // arObjGaList received as PAR
 		bShortUrl: false,
 		bLongUrl: false,
-		iTipWidth: 800,
+		iTipWidth: 700,
 		iVisibleLink: 0,  //used  by onclickBtnAllGoogle
 		iSelFilterCat: 0 , // Current FilterCat
 		szParTime: GA_PAR_TIME.all_time,  // Current FilterType
