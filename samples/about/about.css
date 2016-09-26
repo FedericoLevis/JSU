@@ -436,7 +436,6 @@ span.displayTypeContainer{  /* container of input.browserDisplay and input.siteD
   background-color: white;  
 }
 
-
 input.browserDisplay, input.browserDisplaySel{  /* common for Display buttons*/
   width: 26px;
   height: 18px;
