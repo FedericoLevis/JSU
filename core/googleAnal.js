@@ -74,6 +74,7 @@ var ga_var = {
 		bLongUrl: false,
 		iTipWidth: 700,
 		iVisibleLink: 0,  //used  by onclickBtnAllGoogle
+		arszIdVis: new Array(),
 		iSelFilterCat: 0 , // Current FilterCat
 		szParTime: GA_PAR_TIME.all_time,  // Current FilterType
 		iLinkClickCur:0,  // for Click Simulation in case of OPERA/SAFARI: current index (we have to arrivi till iVisibleLink-1
@@ -425,7 +426,7 @@ function ga_varTblShow (){
 	szTbl += szTr;	
 	
   // --------------------------------------------- Insert the Link Rows 
-	// Inser only if Filter Match and SET Global .iVisibleLink 	
+	// Insert only if Filter Match and SET Global .iVisibleLink 	
 	ga_var.iVisibleLink = 0; // Global
 	jsu_logObj (fn , "iSelFilterCat =" + ga_var.iSelFilterCat);
 	var arObj = ga_var.arObjGaList;
@@ -439,6 +440,7 @@ function ga_varTblShow (){
 		jsu_log (fn + "FilterSel=" + szCatSel + "  Cur cat=" + szCat + " --> bShow=" + bShow);
 		if (bShow){
 			var szId = "a_ga" + ga_var.iVisibleLink;
+			ga_var.arszIdVis[ga_var.iVisibleLink] = szId; 
 			// e.g From  https://goo.gl/HnNqnM to   https://goo.gl/#analytics/goo.gl/HnNqnM/week 
 	    var szHref = objGoogle.shortUrl.replace('goo.gl','goo.gl/#analytics/goo.gl') + '/' + ga_var.szParTime;
 			var szTr = '<tr>';
@@ -460,6 +462,8 @@ function ga_varTblShow (){
 	var div = document.getElementById('divTblGA');
 	div.innerHTML = szTbl;
 
+	jsu_logObj (fn + "ga_var.iVisibleLink=" + ga_var.iVisibleLink + "  ga_var.arszIdVis", ga_var.arszIdVis);
+	
 	if (ga_var.iVisibleLink > 1){
 		// Add Div  with ALL Google Analytics
 		var szLabel = GA_LABEL.ALL_TITLE.replace ('GOOGLE_ANAL_NUM',ga_var.iVisibleLink);
@@ -566,18 +570,22 @@ function ga_onchangeTime(){
 	jsu_log (fn + "szParTime=" + ga_var.szParTime + " szParTimeText=" + ga_var.szParTimeText);
   //--------------- align href
 	var arObj = ga_var.arObjGaList;
-	jsu_log (fn + "SET href for the " + arObj.length + " URLs");
+	jsu_log (fn + "SET href for the " + arObj.length + " URLs that are currently displayed");
 	for (var i=0; i< arObj.length; i++){
 		var objGoogle = arObj[i];
 		var szId = "a_ga" + i;
 		var aEl = document.getElementById (szId);
-		// e.g From  https://goo.gl/HnNqnM to   https://goo.gl/#analytics/goo.gl/HnNqnM/week 
-    var szHref = objGoogle.shortUrl.replace('goo.gl','goo.gl/#analytics/goo.gl') + '/' + ga_var.szParTime;
-    aEl.href = szHref;
-    aEl.innerHTML = GA_LABEL.ANAL + GA_LINK_SEP + ga_var.szParTimeText;
+		if (aEl != null){
+			// e.g From  https://goo.gl/HnNqnM to   https://goo.gl/#analytics/goo.gl/HnNqnM/week 
+	    var szHref = objGoogle.shortUrl.replace('goo.gl','goo.gl/#analytics/goo.gl') + '/' + ga_var.szParTime;
+	    aEl.href = szHref;
+	    aEl.innerHTML = GA_LABEL.ANAL + GA_LINK_SEP + ga_var.szParTimeText;
+	  	jsu_log (fn + "szId=" + szId + " -  SET aEl.innerHTML " + aEl.innerHTML);
+		}
 	}	
 	var aEl = document.getElementById ('a_gaAll');
   aEl.innerHTML = GA_LABEL.ANAL_ALL + GA_LINK_SEP + ga_var.szParTimeText;
+	jsu_log (fn + "SET a_gaAll aEl.innerHTML=" + aEl.innerHTML);
 	
 	jsu_log (fn + GALOG_FUN_END);
 }
@@ -612,7 +620,9 @@ function ga_clickSimulate(iLink){
 	var fn = "[googleAnal.js ga_clickSimulate()] ";
 
 	jsu_log (fn + GALOG_FUN_START);
-	var szId = "a_ga" + iLink;
+	
+	jsu_logObj (fn + "ga_var.iVisibleLink=" + ga_var.iVisibleLink + "  ga_var.arszIdVis", ga_var.arszIdVis);
+	var szId =  ga_var.arszIdVis[iLink];
   var aEl = document.getElementById (szId);
   jsu_log (fn + "simulate Click on anchor["+ iLink + "] with id=" + szId + " - href=" + aEl.href); 
   if (aEl.click != undefined){
