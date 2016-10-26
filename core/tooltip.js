@@ -9,7 +9,7 @@
 <b>OPTIONAL:</b>        JSU:  prettify: prettify-jsu.js prettify-jsu.css if you want show JS Hightlighted <BR/> 
 <b>OPTIONAL:</b>        JSU:  jslog.js dom-drag.js if you want to use jslog <BR/> 
 <b>First Version:</b>     ver 1.0 - Feb 2014  <BR/>
-<b>Current Version:</b>   JSU v. 1.8 &nbsp;&nbsp;&nbsp;2016-Oct-09  <BR/>
+<b>Current Version:</b>   JSU v. 1.8 &nbsp;&nbsp;&nbsp;2016-Oct-26  <BR/>
 <BR/>-----------------------------------------------------------------------------------<BR/>
 <b>DISCLAIMER</b>  <BR/>
 Copyright by Federico Levis - <a href="https://github.com/FedericoLevis/JSU" target="_self">JSU</a> <BR/> 
@@ -522,10 +522,6 @@ function UnTipFix(){
  * Example of supported language: <b>js, java,  perl, pl, pm, bsh, csh, sh, c, cpp, rb, py, cv, cs ,json, ..</b> <BR/>
  * See prettify-jsu.js for the detail of supported languages <BR/>
  *   
- *   NOTE:  <ul>
- *   <li> a) if core/prettify/prettify-jsu.js is Enabled (Loaded and FULL Version), the code is higlighted  </li> 
- *   <li> b) if core/prettify/prettify-jsu.js is NOT Enabled, the code is displayed as Plain Text in TextArea </li> 
- * </ul>
  * @param szCode  {String}  jsCode to display, with \n for newline. <BR/>
  *                          <label class="tipWarn">szCode with HTML is not supported by this function. To show HTML Code you can use TipFixMultiCode or TipFixTextArea</label>
  * @param event
@@ -579,7 +575,7 @@ function TipFixCode(szCode, event, objOpt){
 	// if (objOpt.iTipWidth == undefined){	objOpt.iTipWidth = TIP_DEF_WIDTH; }
 	tt_init(); // init, if not already done
 	// Check if prettify is enabled 
-	if (tt_isPrettifyEn()){
+	if (tt_isPrettifyPresent()){
 		var szCodeDiv = '<div id="divTipJS" align="left" class="prettify" style="width:"' + objOpt.iTipWidth + '"px;"> <pre class="prettyprint"><code>' + szCode + '</code></pre></div>';
 		TipFix (szCodeDiv,event,objOpt);
 		jsuPrettyPrint();  // Hightlight with prettify-jsu the code between <pre> </pre> 
@@ -595,10 +591,6 @@ function TipFixCode(szCode, event, objOpt){
  * Example of supported language: <b>js, java,  perl, pl, pm, bsh, csh, sh, c, cpp, rb, py, cv, cs ,json, ..</b> <BR/>
  * See prettify-jsu.js for the detail of supported languages <BR/>
  *   
- *   NOTE:  <ul>
- *   <li> a) if core/prettify/prettify-jsu.js is Enabled (Loaded and FULL Version), the code is higlighted  </li> 
- *   <li> b) if core/prettify/prettify-jsu.js is NOT Enabled, the code is displayed as Plain Text in TextArea </li> 
- * </ul>
  * @param arObjCode  {Array}  Array of Obj with the info of the code display. ESech Obj of the Array can have follwoing fields: <ul>
  * 														 <li> szTitle {String} e.g "JS" - Title of the Section</li>
  * 														 <li> szCode {String} The Code to diaply in section</li>
@@ -662,7 +654,7 @@ function TipFixMultiCode(arObjCode, event, objOpt){
 	if (objOpt.iColNum == undefined){ objOpt.iColNum = TIP_DEF_COL_NUM; }
 	var iTxtAreaWidth = objOpt.iTipWidth - 40; // some space for padding and borders 
 	tt_init(); // init, if not already done
-	var bPrettifyEn = tt_isPrettifyEn();
+	var bPrettifyEn = tt_isPrettifyPresent();
 	var szCodeDiv = '<table class="detNoBorder" >\n';
 	for (var i=0; i < arObjCode.length;i++){
 		var objCode = arObjCode[i];
@@ -2320,11 +2312,11 @@ function tt_is_IE(){
 
 
 /*
- * Check if prettify has been loaded and it is enabled (Only in FULL versione there is the code to manage prettify) 
+ * Check if prettify has been loaded  
  * @returns {Boolean}
  */
-function tt_isPrettifyEn(){
-	var fn = "[tooltip.js tt_isPrettifyEn()] ";
+function tt_isPrettifyPresent(){
+	var fn = "[tooltip.js tt_isPrettifyPresent()] ";
 	var bPrettifyLoaded =  (typeof(jsuPrettyPrint) != "undefined");
 	var bPrettifyCode = false; // Code present. Default = false (FREE version)
 	bPrettifyCode = true;  
@@ -2334,15 +2326,6 @@ function tt_isPrettifyEn(){
 }
 
 
-/*
- * For CODE Pretection
- * 
- * @param objId    {id, acr, min, max}
- */
-function tt_getId(objId){
-	objId[0] = 1000 + objId[1] + (objId[2] + Math.floor(Math.random() * objId[3])); // id random 
-  
-}
 
 /*
  * 
