@@ -207,7 +207,7 @@ function pp_Show(szPopupType,szMsgHtml,objOpt){
   
   pp_Init();
   // Replace /n with <BR/> 
-  szMsgHtml =   strReplaceAll(szMsgHtml,"\n","<BR/>");
+  szMsgHtml =   jsu_strReplaceAll(szMsgHtml,"\n","<BR/>");
 
   //  Init
   var iWidth = POPUP_DEF_WIDTH;
