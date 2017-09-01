@@ -10,7 +10,7 @@
                           </ul>  
 <b>REQUIRE:</b>            JSU: jslog.js dom-drag.js   <BR/>
 <b>First Version:</b>     ver 1.0 - Jul 2007  <BR/>
-<b>Current Version:</b>   JSU v. 1.8 &nbsp;&nbsp;&nbsp;2016-Oct-26  <BR/>
+<b>Current Version:</b>   JSU v. 1.9 &nbsp;&nbsp;&nbsp;2017-Sep-01  <BR/>
 <BR/>-----------------------------------------------------------------------------------<BR/>
 <b>DISCLAIMER</b>  <BR/>
 Copyright by Federico Levis - <a href="https://github.com/JSUtility/JSU" target="_self">JSU</a> <BR/> 
@@ -1536,6 +1536,7 @@ function selectGetSelLabels (Select){
 }
 
 
+
 /*----------------------------------------------------------------------------------------------
 Get the values of the Elements Selected in a Multi Select. 
 e.g. They can be used in a Where condition or to find a Value
@@ -1585,27 +1586,37 @@ Get the values of the Elements in a Multi Select.
 e.g. They can be used in a Where condition or to find a Value
 	PAR
 Select	in
+bValueAsString in   [false] true if the values must be considered as String, adding ''  
 	RETURN
-  e.g     Sig1, Sig4, Sig-12
+  e.g  bValueAsString=false   1, 4, 12
+  e.g  bValueAsString=false   MT, BT
+  e.g  bValueAsString=true   'MT', 'BT'
 ----------------------------------------------------------------------------------------------*/
-function selectGetValues (Select){
+function selectGetValues (Select, bValueAsString){
   var Fn = "[util.js selectGetValues] ";
-  var szSelValues = "";
+  var szValues = "";
   var bFirst  = true;
   
+  if (bValueAsString == undefined){
+  	bValueAsString = false;
+  }
   if (!Select){
     return jslog(JSLOG_JSU,Fn +  "Select =0 NOTHING to DO");
   }
   for (var iOpt=0; iOpt < Select.options.length; iOpt ++){
     var Opt = Select.options[iOpt];
+    var szVal = Opt.value;
+  	if (bValueAsString){
+       szVal = "'" + szVal + "'";
+  	}  
 	  if (bFirst){
-         szSelValues = Opt.value;
+         szValues = szVal;
          bFirst = false;
       } else {
-         szSelValues = szSelValues + ", " + Opt.value;
+         szValues = szValues + ", " + szVal;
       }	    
   }
-  return szSelValues;
+  return szValues;
 }
 
 
@@ -1894,6 +1905,7 @@ function loadingShowByEl(el,bShow){
  * @param bShow {Boolean}  true to set Loading Image		
  */
 function loadingShow(bShow){
+	setCursorWait (bShow);
 	var el = getElementById2(ID_DIV_LOADING_IMG,false);
 	if (el){
 		classAdd (el,'jsuLoading',bShow);
@@ -2557,14 +2569,16 @@ function checkArVal(szVal,arVal,szEr)
 
 
 /*-----------------------------------------------------------
+ 
 Get SQL Condition for The select, using the useValues selected in select
 select can be either multiSElect or singleSelect
 IF NO SElection (MUltiSelect) or Selected the First Cognos Item for ALL we return ""
 	PAR
 szDbCol   in      DB Col Name (e.g. COD_CATEG_BLOCCO)	
 select		in 			select DOM object
-bValueAsString in   true if Value get from CB are String (else they are Number) 
-  RETURN
+bValueAsString in   true if Value get from CB are String (else they are Number)
+[bOnlySel] in     [true]  if true get only iteme selected, else Get all Item    
+ RETURN
 
 Example for   		bValueAsString=true
 ---------------------------------------------     
@@ -2579,27 +2593,36 @@ e.g (1 Item Selected)     "TENSIONE  = 1"
 e.g (3 Items Selected)    "TENSIONE  IN (1,4)"
 
 ------------------------------------------------------------*/
-function sqlCondSelect(szDbCol,select,bValueAsString) {
-  var Fn = "[util.js sqlCondSelect] ";
-  var szSql = "";
-  
-  // jslog(JSLOG_DEBUG,Fn + JSLOG_FUN_START);
-  if (selectIsMulti (select)){
-  	szSql = selectGetSelValues (select,bValueAsString);
-  }else {
-  	szSql = selectGetSelVal (select,bValueAsString);
-  }
-  if (szSql.length){
-  	var bInCond = szSql.indexOf(',') > 0;
-  	if (bInCond){
-  		szSql = szDbCol + " IN (" + szSql + ")";
-  	}else{
-  		szSql = szDbCol + " = " + szSql;
-  	}
-  }
-  jslog(JSLOG_JSU,Fn + "OUT szSql: " + szSql);
-  // jslog(JSLOG_DEBUG,Fn + JSLOG_FUN_END);
-  return szSql;
+function sqlCondSelect(szDbCol,select,bValueAsString, bOnlySel) {
+ var Fn = "[util.js sqlCondSelect] ";
+ var szSql = "";
+ 
+ // jslog(JSLOG_DEBUG,Fn + JSLOG_FUN_START);
+ if (bOnlySel == undefined){
+ 	bOnlySel = true;
+ }
+ if (bOnlySel){
+ 	// Get Only Selected Items
+   if (selectIsMulti (select)){
+   	szSql = selectGetSelValues (select,bValueAsString);
+   }else {
+   	szSql = selectGetSelVal (select,bValueAsString);
+   }
+ }else {
+ 	// Get All Items
+ 	szSql = selectGetValues (select,bValueAsString);
+ }  
+ if (szSql.length){
+ 	var bInCond = szSql.indexOf(',') > 0;
+ 	if (bInCond){
+ 		szSql = szDbCol + " IN (" + szSql + ")";
+ 	}else{
+ 		szSql = szDbCol + " = " + szSql;
+ 	}
+ }
+ jslog(JSLOG_JSU,Fn + "OUT szSql: " + szSql);
+ // jslog(JSLOG_DEBUG,Fn + JSLOG_FUN_END);
+ return szSql;
 }
 
 

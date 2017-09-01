@@ -7,7 +7,7 @@
 <b>Description:</b>        jslog API:   jslog*    <BR/>   
 <b>REQUIRE:</b>           JSU: dom-drag.js    <BR/>
 <b>First Version:</b>     ver 1.0 - Nov 2008  <BR/>
-<b>Current Version:</b>   JSU v. 1.8 &nbsp;&nbsp;&nbsp;2016-Oct-26  <BR/>
+<b>Current Version:</b>   JSU v. 1.9 &nbsp;&nbsp;&nbsp;2017-Lug-26  <BR/>
 <BR/>-----------------------------------------------------------------------------------<BR/>
 <b>DISCLAIMER</b>  <BR/>
 Copyright by Federico Levis - <a href="https://github.com/FedericoLevis/JSU" target="_self">JSU</a> <BR/> 
@@ -45,6 +45,12 @@ var JSLOG_TEST = 8;
  * JSLOG_JSU = 16 JSU Functionality (usually stable)
  */
 var JSLOG_JSU = 16;    	   
+
+// --------------------------------------------- For compatibility with previous version	   
+var JSLOG_BASE = JSLOG_JSU ;    
+var JSLOG_DUMP = JSLOG_TEST;      // e.g JSON  
+var JSLOG_CORE = JSLOG_JSU;    // CORE Functionality (CORE Common Function, usually stable)	   
+
 // ---------------- NOTE: you can add also New Levels
 
 /**

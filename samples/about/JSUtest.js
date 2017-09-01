@@ -3,20 +3,24 @@
 --------------------------------------------------------------------------------------------------------------------- */
 
 
+//
 
+
+// ----------------------  Possible URL parameter  type=    (e.g 
+// EXample    ?test=20&period=10&type=you
 var URL_PAR_TYPE_WIX="wix";
-var URL_PAR_TYPE_JSU="jsu";
-var URL_PAR_TYPE_YOUTYBE="you";
-var URL_PAR_TYPE_CEL="cel";
+var URL_PAR_TYPE_JSU="jsu";    
+var URL_PAR_TYPE_YOUTYBE="you";   // VIDEO YOU TUBE: jsu. Start automatically
+var URL_PAR_TYPE_CEL="cel";       // VIDEO YOU TUBE: CEL. Start autmatically
 
 
-var JSU_URL_VIDEO_CEL_1="https://youtu.be/Qg4CmxDdWJQ";
-var JSU_URL_VIDEO_CEL_2="https://youtu.be/SuYxv1z1BMg";
-var JSU_URL_VIDEO_CEL_3="https://youtu.be/3P_ztyBE5KM";
-var JSU_URL_VIDEO_CEL_4="https://youtu.be/PEohu3UkMMs";
-var JSU_URL_VIDEO_CEL_5="https://youtu.be/l4520ENQCi0";
-var JSU_URL_VIDEO_CEL_6="https://youtu.be/3_efCgwzMg8";
-var JSU_URL_VIDEO_CEL_7="https://youtu.be/NLkAAwJB7RY";
+var JSU_URL_VIDEO_CEL_SHOW_HIDE_FILTER="https://youtu.be/Qg4CmxDdWJQ";   // SHOW_HIDE_FILTER
+var JSU_URL_VIDEO_CEL_HYPERLINK="https://youtu.be/SuYxv1z1BMg";   // HYPERLINK
+var JSU_URL_VIDEO_CEL_TOOLTIP="https://youtu.be/3P_ztyBE5KM";   // TOOLTIP
+var JSU_URL_VIDEO_CEL_SHOW_HIDE_COL="https://youtu.be/PEohu3UkMMs";   // SHOW_HIDE_COL
+var JSU_URL_VIDEO_CEL_MASTER_DETAIL="https://youtu.be/l4520ENQCi0";   // MASTER_DETAIL
+var JSU_URL_VIDEO_CEL_CHART="https://youtu.be/3_efCgwzMg8";   // Change CHART_TYPE_SIZE
+var JSU_URL_VIDEO_CEL_SORT="https://youtu.be/NLkAAwJB7RY";   // SORT
 
 
 
@@ -26,6 +30,19 @@ var var_test = {
 		iTestCur:  0,
     bFrame:  false		
 };
+
+
+/**
+ * Test Automatic id required
+ * @param bFrame  true for Frame
+ */
+function testCheckAuto(){
+	var Fn = "[about.js testCheckAuto()] ";
+  var bAuto = (url_par.type == URL_PAR_TYPE_YOUTYBE || url_par.type == URL_PAR_TYPE_CEL); 	
+	jslog (JSLOG_DEBUG, Fn + " bAuto=" + bAuto);
+	return bAuto;
+}	
+
 
 
 /**
@@ -115,20 +132,20 @@ function testExecute(){
 
 // wix
 var ar_test_wix = [// --------------- random se iPos>=1
-              {iCountReq:6,iPos:0, szName:'Cognos',szURL:JSU_LONG_URL_COGNOS, iCountCur:0, iClickDone:0},
-              {iCountReq:8,iPos:0, szName:'CognosRS',szURL:JSU_LONG_URL_COGNOS_RS, iCountCur:0, iClickDone:0},
-              {iCountReq:9,iPos:0, szName:'CognosCEL',szURL:JSU_LONG_URL_COGNOS_CEL, iCountCur:0, iClickDone:0},
-              {iCountReq:7,iPos:0, szName:'CognosBLOG',szURL:JSU_LONG_URL_COGNOS_BLOG, iCountCur:0, iClickDone:0}
+              {iCountReq:4,iPos:0, szName:'Cognos',szURL:JSU_LONG_URL_COGNOS, iCountCur:0, iClickDone:0},
+              {iCountReq:3,iPos:0, szName:'CognosRS',szURL:JSU_LONG_URL_COGNOS_RS, iCountCur:0, iClickDone:0},
+              {iCountReq:4,iPos:0, szName:'CognosCEL',szURL:JSU_LONG_URL_COGNOS_CEL, iCountCur:0, iClickDone:0},
+              {iCountReq:5,iPos:0, szName:'CognosBLOG',szURL:JSU_LONG_URL_COGNOS_BLOG, iCountCur:0, iClickDone:0}
                             
               ];
 
 
 var ar_test_you = [// --------------- random se iPos>=1
                    {iCountReq:4,iPos:1, szName:'Tooltip',szURL:JSU_URL_VIDEO_TIP, iCountCur:0, iClickDone:0},
-                   {iCountReq:6,iPos:1, szName:'Validate',szURL:JSU_URL_VIDEO_VALIDATE, iCountCur:0, iClickDone:0},
-                   {iCountReq:7,iPos:1, szName:'Loading',szURL:JSU_URL_VIDEO_LOADING, iCountCur:0, iClickDone:0},
+                   {iCountReq:3,iPos:1, szName:'Validate',szURL:JSU_URL_VIDEO_VALIDATE, iCountCur:0, iClickDone:0},
+                   {iCountReq:2,iPos:1, szName:'Loading',szURL:JSU_URL_VIDEO_LOADING, iCountCur:0, iClickDone:0},
                    {iCountReq:3,iPos:1, szName:'GA',szURL:JSU_URL_VIDEO_GA, iCountCur:0, iClickDone:0},
-                   {iCountReq:2,iPos:1, szName:'GASteps',szURL:JSU_URL_VIDEO_GASTEPS, iCountCur:0, iClickDone:0},
+                   {iCountReq:4,iPos:1, szName:'GASteps',szURL:JSU_URL_VIDEO_GASTEPS, iCountCur:0, iClickDone:0},
                    {iCountReq:3,iPos:1, szName:'Sort',szURL:JSU_URL_VIDEO_SORT, iCountCur:0, iClickDone:0},
                    {iCountReq:5,iPos:1, szName:'JSLog',szURL:JSU_URL_VIDEO_JSLOG, iCountCur:0, iClickDone:0},
                    {iCountReq:6,iPos:1, szName:'IEPopup',szURL:JSU_URL_VIDEO_IEPOPUP, iCountCur:0, iClickDone:0},
@@ -137,14 +154,14 @@ var ar_test_you = [// --------------- random se iPos>=1
 
 
 
-var ar_test_cel = [// --------------- random se iPos>=1
-                   {iCountReq:6,iPos:1, szName:'JSU_URL_VIDEO_CEL_1',szURL:JSU_URL_VIDEO_CEL_1, iCountCur:0, iClickDone:0},
-                   {iCountReq:7,iPos:1, szName:'JSU_URL_VIDEO_CEL_2',szURL:JSU_URL_VIDEO_CEL_2, iCountCur:0, iClickDone:0},
-                   {iCountReq:5,iPos:1, szName:'JSU_URL_VIDEO_CEL_3',szURL:JSU_URL_VIDEO_CEL_3, iCountCur:0, iClickDone:0},
-                   {iCountReq:6,iPos:1, szName:'JSU_URL_VIDEO_CEL_4',szURL:JSU_URL_VIDEO_CEL_4, iCountCur:0, iClickDone:0},
-                   {iCountReq:7,iPos:1, szName:'JSU_URL_VIDEO_CEL_5',szURL:JSU_URL_VIDEO_CEL_5, iCountCur:0, iClickDone:0},
-                   {iCountReq:4,iPos:1, szName:'JSU_URL_VIDEO_CEL_6',szURL:JSU_URL_VIDEO_CEL_6, iCountCur:0, iClickDone:0},
-                   {iCountReq:4,iPos:1, szName:'JSU_URL_VIDEO_CEL_7',szURL:JSU_URL_VIDEO_CEL_7, iCountCur:0, iClickDone:0}
+var ar_test_cel = [// --------------- random se iPos>=1  (piu` e` bassa piu` frequentemente viene mostrato)
+                   {iCountReq:2,iPos:1, szName:'JSU_URL_VIDEO_CEL_SORT',szURL:JSU_URL_VIDEO_CEL_SORT, iCountCur:0, iClickDone:0},
+                   {iCountReq:2,iPos:1, szName:'JSU_URL_VIDEO_CEL_HYPERLINK',szURL:JSU_URL_VIDEO_CEL_HYPERLINK, iCountCur:0, iClickDone:0},
+                   {iCountReq:3,iPos:1, szName:'JSU_URL_VIDEO_CEL_TOOLTIP',szURL:JSU_URL_VIDEO_CEL_TOOLTIP, iCountCur:0, iClickDone:0},
+                   {iCountReq:6,iPos:1, szName:'JSU_URL_VIDEO_CEL_SHOW_HIDE_COL',szURL:JSU_URL_VIDEO_CEL_SHOW_HIDE_COL, iCountCur:0, iClickDone:0},
+                   {iCountReq:4,iPos:1, szName:'JSU_URL_VIDEO_CEL_MASTER_DETAIL',szURL:JSU_URL_VIDEO_CEL_MASTER_DETAIL, iCountCur:0, iClickDone:0},
+                   {iCountReq:6,iPos:1, szName:'JSU_URL_VIDEO_CEL_SHOW_HIDE_FILTER',szURL:JSU_URL_VIDEO_CEL_SHOW_HIDE_FILTER, iCountCur:0, iClickDone:0},
+                   {iCountReq:4,iPos:1, szName:'JSU_URL_VIDEO_CEL_CHART',szURL:JSU_URL_VIDEO_CEL_CHART, iCountCur:0, iClickDone:0}
                    ];
 
 
