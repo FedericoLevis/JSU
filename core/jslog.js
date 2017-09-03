@@ -92,6 +92,9 @@ var JSLOG_DELIMITER= '<span style="color: #f00">--------------------------------
 var JSLOG_DEF_DOM_EL_COL_NUM = 150;
 var JSLOG_MAX_TEXT_BOX_ROW_NUM = 10; // Max, then we will use scrollbar
 
+var JSLOG_DEF_TEXT_BOX_WIDTH = "800px"; 
+var JSLOG_DEF_TEXT_BOX_HEIGHT = "300px"; 
+
 
 //------------------------ POSITION
 var JSLOG_POS_TOPLEFT="TopLeft";
@@ -451,11 +454,14 @@ function jslogHtml(iLogLev,szMsg,szHtml, objOpt)
 	}
 
 	// prepare szTxtArea 
-	var szTxtArea= szMsg + ":<BR\>" + '<textarea rows="' + objOpt.iRowNum + '" cols="' + objOpt.iColNum  + '">' + szHtml + '</textarea><BR\>';
+	var szTxtArea= szMsg + ":<BR\>" + '<textarea style="width: ' + JSLOG_DEF_TEXT_BOX_WIDTH + 
+	       '"; height: ' + JSLOG_DEF_TEXT_BOX_HEIGHT  + 
+	       '";"  rows="' + objOpt.iRowNum + '" cols="' + objOpt.iColNum  + '">' + szHtml + '</textarea><BR\>';
 	jslog (iLogLev,szTxtArea);
 	return 0;
 
 }
+
 
 
 

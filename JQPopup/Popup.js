@@ -12,7 +12,7 @@
                             <li><b>OPTIONAL JS:</b> jslog.js, dom-drag.js (required only to enable jslog)</li>
                           </ul>
 <b>First Version:</b>     1.0 Jan 2015  <BR/>
-<b>Current Version:</b>   1.8 Jul 2016    <BR/>
+<b>Current Version:</b>   JSU v. 1.9 &nbsp;&nbsp;&nbsp;2017-Sep-01  <BR/>
 <BR/>-----------------------------------------------------------------------------------<BR/>
 <b>DISCLAIMER</b>  <BR/>
 Copyright by Federico Levis - <a href="https://github.com/FedericoLevis/JSU" target="_self">JSU</a> <BR/> 
@@ -207,7 +207,8 @@ function pp_Show(szPopupType,szMsgHtml,objOpt){
   
   pp_Init();
   // Replace /n with <BR/> 
-  szMsgHtml =   jsu_strReplaceAll(szMsgHtml,"\n","<BR/>");
+  
+  
 
   //  Init
   var iWidth = POPUP_DEF_WIDTH;
@@ -228,6 +229,9 @@ function pp_Show(szPopupType,szMsgHtml,objOpt){
   var bOpt = (objOpt != undefined && objOpt != null ); 
   var bShowBtnSect = true; //default
   if  (bOpt){
+    if (objOpt.bNewlineConversion!= undefined && objOpt.bNewlineConversion){
+    	szMsgHtml =  jsu_strReplaceAll(szMsgHtml,"\n","<BR/>");
+    }
     if (objOpt.iWidth != undefined && objOpt.iWidth != null && objOpt.iWidth){
       iWidth = objOpt.iWidth;
     }
@@ -946,7 +950,7 @@ function pp_OnResize(event, ui){
  * @param szPopupType {String}  POPUP_TYPE.INFO,  POPUP_TYPE.WARN, ..   
                                &nbsp;see  <a href="https://rawgit.com/FedericoLevis/JSUDoc/master/JQPopup.js/global.html#POPUP_TYPE" target="_self">POPUP_TYPE</a>
  *                                 
- * @param szMsgHtml {String}  HTML TAG are Accepted - Newline if present is converted to HTML Newline
+ * @param szMsgHtml {String}  HTML TAG are Accepted. Newline if present is converted to HTML Newline (default); no conversion if bNewlineConversion=false 
  * @param [objOpt] {Object}   
  <table class="jsDoc" border="2" cellpadding="2" cellspacing="2" width="100%">
   <tr><td class="jsDocTitle">OPTIONS</td></tr>
@@ -972,6 +976,7 @@ function pp_OnResize(event, ui){
     <li> bResize:    {Boolean}     true to allow Resize Dialog  (Default=true) </li> 
     <li> bModal:    {Boolean}     true=modal (default) </li> 
     <li> bCloseOnEscape: {Boolean}  Default true    </li> 
+    <li> bNewlineConversion: {Boolean}  Default true. if true Newline if present is converted to HTML Newline    </li> 
     <li> <b>ONLY For POPUP_TYPE.CHOICE</b>:  
       <ul> 
 		    <li> bChoiceMultiSel: {Boolean}  true if MultiSelect,else single select. Default false </li> 

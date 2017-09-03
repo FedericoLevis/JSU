@@ -7,11 +7,12 @@
 <b>Description:</b>       IE Popup API, designed specifically for IE (it uses <b><i>ShowModalDialog API</i></b>) <BR/>   
 <b>REQUIRED:</b>          From JSU: <ul>
                             <li><b>CSS:</b> core/jsu.css </li>
-                            <li><b>JS</b> core/util.js </li>
-                            <li><b>OPTIONAL JS:</b> core/jslog.js, core/dom-drag.js (required only to enable jslog)</li>
-                          </ul>
-<b>First Version:</b>     1.0 Feb 2014  <BR/>
-<b>Current Version:</b>   1.8 Jul 2016    <BR/>
+                             <li><b>CSS:</b> jsu.css </li>
+                            <li><b>JS</b> jsuCmn.js  util.js </li>
+                            <li><b>OPTIONAL JS:</b> jslog.js, dom-drag.js (required only to enable jslog)</li>
+                         </ul>
+<b>First Version:</b>     1.0 Jan 2015  <BR/>
+<b>Current Version:</b>   JSU v. 1.9 &nbsp;&nbsp;&nbsp;2017-Sep-01  <BR/>
 <BR/>-----------------------------------------------------------------------------------<BR/>
 <b>DISCLAIMER</b>  <BR/>
 Copyright by Federico Levis - <a href="https://github.com/FedericoLevis/JSU" target="_blank">JSU</a> <BR/> 
@@ -215,7 +216,6 @@ function pp_show(szPopupType,szMsgHtml,objOpt){
   if (szBrowserMode == POPUP_BROWSER_MODE_ALERT){
     return pp_showAlert(szPopupType,szMsgHtml);
   }
-  szMsgHtml =   strReplaceAll(szMsgHtml,"\n","<BR/>");
   //  Init
   var iWidth = POPUP_DEF_WIDTH;
   var iHeight = POPUP_DEF_HEIGHT;
@@ -226,6 +226,9 @@ function pp_show(szPopupType,szMsgHtml,objOpt){
     szResize = "resizable=yes;";
   }
   if (objOpt != null){
+    if (objOpt.bNewlineConversion!= undefined && objOpt.bNewlineConversion){
+    	szMsgHtml =  jsu_strReplaceAll(szMsgHtml,"\n","<BR/>");
+    }
     if (objOpt.iWidth != undefined && objOpt.iWidth != null && objOpt.iWidth){
       iWidth = objOpt.iWidth;
     }
@@ -1175,6 +1178,7 @@ function PopupSetPathHtml(szPathHtml){
     <li> bShowBtnSect:    {Boolean} [true] false to hide all the Button Section (used in embedded HTML pages) </li> 
     <li> bResize:    {Boolean}     true to allow Resize Dialog  (Default=true) </li> 
     <li> bCloseOnEscape: {Boolean}  Default true    </li> 
+    <li> bNewlineConversion: {Boolean}  Default true. if true Newline if present is converted to HTML Newline    </li> 
     <li> <b>ONLY For POPUP_TYPE.CHOICE</b>:  
       <ul> 
 		    <li> bChoiceMultiSel: {Boolean}  true if MultiSelect,else single select. Default false </li> 

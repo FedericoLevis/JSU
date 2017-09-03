@@ -1040,9 +1040,7 @@ function initSampleCmn(){
 		}
 		jslogObj (JSLOG_DEBUG,"url_par",url_par);
 		// if Automatic TEST start it
-		if (testCheckAuto()){
-			testStart(false);
-		}
+		testCheckAuto();
 	}catch (e) {
 		jslog (JSLOG_ERR,fn + "Exception: " + e.message);
 	}
