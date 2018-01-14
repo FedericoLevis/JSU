@@ -10,7 +10,7 @@
                           </ul>  
 <b>REQUIRE:</b>            JSU: jslog.js dom-drag.js   <BR/>
 <b>First Version:</b>     ver 1.0 - Jul 2007  <BR/>
-<b>Current Version:</b>   JSU v. 1.9 &nbsp;&nbsp;&nbsp;2017-Sep-01  <BR/>
+<b>Current Version:</b>   JSU v. 1.10 &nbsp;&nbsp;&nbsp;2018-Jan-14  <BR/>
 <BR/>-----------------------------------------------------------------------------------<BR/>
 <b>DISCLAIMER</b>  <BR/>
 Copyright by Federico Levis - <a href="https://github.com/JSUtility/JSU" target="_self">JSU</a> <BR/> 
@@ -68,6 +68,24 @@ var BROWSER_TYPE ={
 //**************************************************************************
 //			    ERROR WARN  FUNCTIONS
 //**************************************************************************
+/*
+ * 
+ * Replace in str di tutte le occorrenze di strFrom, che vengono sostituite con strTo 
+ * @param str			es: "questa frase contiene Pippo 2 volte perche` alla fine ripeto Pippo"
+ * @param strFrom		es: "Pippo"
+ * @param strTo			es: "Paperino"
+ * @returns str 		es: "questa frase contiene Paperino 2 volte perche` alla fine ripeto Paperino"
+ */
+function replaceAll(str,strFrom,strTo)
+{  
+  if (typeof(str) == "undefined"){
+    return "";
+  }	
+  while (str.indexOf(strFrom)>-1) {
+	 str = str.replace(strFrom,strTo);
+  }	
+  return str;  
+}
 
 
 function obj2Html(obj){
@@ -254,7 +272,6 @@ function showErrIfRequired (bShowErr,szMsgErr,iRetVal){
 
 
 /**
- * TBD: TO BE VERIFIED for Chroom
  * @returns {String}    BROWSER_TYPE.IE, BROWSER_TYPE.FIREFOX, BROWSER_TYPE.OTHER
  */
 function getBrowser(){
@@ -396,14 +413,13 @@ function getElementById3(Id,bShowErr,Fn)
 
 
 /*
-8.4 return el or 0 if not found and show Error if it not found
 */
-/*
 function getElementById(Id)
 {
     return getElementById2(Id,true);
 }
-*/
+
+
 
 function getElementByTag2(szTag,szSpanId,bShowErr)
 {
@@ -428,7 +444,7 @@ function getFirstFsByBlock(szBlock,bShowErr)
         return fsList[0];
         } catch (e){}
   if (bShowErr) {
-    jslog(WARNING,Fn + "NOT FOUND FiledSet in Block=" + szBlock);
+    jslog(JSLOG_ERR,Fn + "NOT FOUND FiledSet in Block=" + szBlock);
   }
 }
 
@@ -604,7 +620,7 @@ function getFieldset2(Caption,bShowErr)
         }
     } catch (e){}
     if (bShowErr) {
-        jslog(WARNING,Fn + "NOT FOUND Caption=" + Caption);
+        jslog(JSLOG_ERR,Fn + "NOT FOUND Caption=" + Caption);
     }
     return 0;
 }
@@ -1022,7 +1038,7 @@ function selectGetSelectedNum(Select)
 {
   var Fn = "[util.js selectGetSelectedNum] ";
   if (!Select){
-    jslog(WARNING,Fn + " Select is NULL!");
+    jslog(JSLOG_ERR,Fn + " Select is NULL!");
     return -1;
   }
   var iSelNum=0;
@@ -1106,7 +1122,7 @@ function selectSelValue(Select,Value)
 {
     var Fn = "[util.js selectSelValue] ";
     if (!Select){
-        jslog(WARNING,Fn + " Select is NULL!");
+        jslog(JSLOG_ERR,Fn + " Select is NULL!");
         return -1;
     }
     for (var i=0; i < Select.options.length; i++) {
@@ -1148,7 +1164,7 @@ function selectRemoveValue(Select,Value)
 {
     var Fn = "[util.js selectRemoveValue] ";
     if (!Select){
-        jslog(WARNING,Fn + " Select is NULL!");
+        jslog(JSLOG_ERR,Fn + " Select is NULL!");
         return -1;
     }
     for (var i=0; i < Select.options.length; i++) {
@@ -1173,7 +1189,7 @@ function selectRemoveAll(Select)
    
    var i=0;
    if (!Select){
-        jslog(WARNING,Fn + " Select is NULL!");
+        jslog(JSLOG_ERR,Fn + " Select is NULL!");
         return -1;
   }
   for (i = Select.length - 1; i >= 0; i--) {
@@ -1246,7 +1262,7 @@ function selectSelText(Select,Text)
 {
     var Fn = "[util.js selectSelText] ";
     if (!Select){
-        jslog(WARNING,Fn + " Select is NULL!");
+        jslog(JSLOG_ERR,Fn + " Select is NULL!");
         return -1;
     }
     // jslog(JSLOG_JSU,Fn + Select.name + "  len=" + Select.options.length);
@@ -1278,7 +1294,7 @@ function selectGetTextOfValue(Select,Value)
 {
     var Fn = "[util.js selectGetTextOfValue] ";
     if (!Select){
-        jslog(WARNING,Fn + " Select is NULL!");
+        jslog(JSLOG_ERR,Fn + " Select is NULL!");
         return "Select is NULL";
     }
     for (var i=0; i < Select.options.length; i++) {
@@ -1308,7 +1324,7 @@ function selectGetValueOfText(Select,Text)
     var szText1 = html2Str (Text);
     var Fn = "[util.js selectGetValueOfText] ";
     if (!Select){
-        jslog(WARNING,Fn + " Select is NULL!");
+        jslog(JSLOG_ERR,Fn + " Select is NULL!");
         return "Select is NULL";
     }
     for (var i=0; i < Select.options.length; i++) {
@@ -1340,7 +1356,7 @@ function selectGelSelectedStatus(Select,Value)
     var Fn = "[util.js selectSelValue] ";
     var SelectedStatus = false;
     if (!Select){
-        jslog(WARNING,Fn + " Select is NULL!");
+        jslog(JSLOG_ERR,Fn + " Select is NULL!");
         return SelectedStatus;
     }
     for (var i=0; i < Select.options.length; i++) {

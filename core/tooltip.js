@@ -9,7 +9,7 @@
 <b>OPTIONAL:</b>        JSU:  prettify: prettify-jsu.js prettify-jsu.css if you want show JS Hightlighted <BR/> 
 <b>OPTIONAL:</b>        JSU:  jslog.js dom-drag.js if you want to use jslog <BR/> 
 <b>First Version:</b>     ver 1.0 - Feb 2014  <BR/>
-<b>Current Version:</b>   JSU v. 1.9 &nbsp;&nbsp;&nbsp;2017-Sep-01  <BR/>
+<b>Current Version:</b>   JSU v. 1.10 &nbsp;&nbsp;&nbsp;2018-Jan-14  <BR/>
 <BR/>-----------------------------------------------------------------------------------<BR/>
 <b>DISCLAIMER</b>  <BR/>
 Copyright by Federico Levis - <a href="https://github.com/FedericoLevis/JSU" target="_self">JSU</a> <BR/> 
@@ -53,6 +53,9 @@ var TIP_DEF_TEXTBOX_TITLE = "Source Code";
 
 var TIP_MAX_TEXT_BOX_ROW_NUM = 20; // if more there will be scrollbar
 
+var TIP_KEYCODE_ESC = 27;
+
+var TIP_Z_INDEX= 10000; // Very Hight value to be sure to overwrite whatever window
 
 /*=========================================================================================
  * 					CONFIG CONST
@@ -234,6 +237,7 @@ tt_x, tt_y, tt_w, tt_h; // Position, width and height of currently displayed too
  * @param tipMsgHtml {String}  HTML Message to display in the Tip. It can containts whatver HTML TAG (also to display Img, Gig, Video,...) 
  * @param [tipType] {String}   [TIP_TYPE.Floating] when called by User
  * @param [objOpt] Option: <BR/>
+    					   - bNL2BR: {Boolean}  Default true. if true Newline if present is converted to HTML Newline    </li> 
  *                         - bNL2BR [true]  if true convert NewLine to <BR/>
  * 
  * 		GLOBAL
@@ -280,12 +284,13 @@ function Tip(tipMsgHtml,tipType,objOpt)
         <ul>
            <li> szTitle{String}  default: ''   </li> 
            <li> bCloseBtn {Boolean}  default: true(if true show a Close Button on the Bottom)  </li> 
-					 <li> iTipMaxHeight {Number}:  [0] Max Height of the Tip (Scroll will be used if required). If 0 the height is automatically calculated to show all the Tip. . Default =0 NO SCROLL  </li>  
+					 <li> iTipMaxHeight {Number}:  [0] Max Height of the Tip (Scroll will be used if required). If 0 the height is automatically calculated to show all the Tip... Default =0 NO SCROLL  </li>  
 				 	 <li> iTipWidth {Number}: [undefined] TipWidth  - do not pass it to automatically set it basing on content. </li> 
 					 <li> tipFixedPos:  TipPosition using  TIP_FIXED_POS possible values (TIP_FIXED_POS.CENTER,...) n (e.g -100)   default=TIP_FIXED_POS.CENTER  </li> 
 					 <li> bNL2BR= [true]  if true /n are converted to </li>
 					 ------ <b>FOLLOW FIELDS are for ADVANCED use. Usually they are ever used </b>  
-           <li> objClass:  {Object}  {Down: {String}, Up: {String}}  2 Classes that identify The 2 states <BR/>
+          <li> bNL2BR: {Boolean}  Default true. if true Newline if present is converted to HTML Newline    </li> 
+          <li> objClass:  {Object}  {Down: {String}, Up: {String}}  2 Classes that identify The 2 states <BR/>
                To be used when you have 2 classes not that are not already defined into the TIP_TOGGLE_CLASS_xxx constants of this file <BR/>
                e.g.  objClass: {Down: 'downloadFree', Up: 'downloadFreeUp'} </li>
            <li>szRefElId: Id of the Reference ElementImage. It can be used instead of event, to display the Tip below this szRefEl </li>
@@ -1150,10 +1155,10 @@ function tt_init()
 	jsu_log (fn + "Init tooltip.js");
 	// ESC is considered as UnTip of TipFix
 	document.onkeydown = function(e){
-    if(e.keyCode === 27){
-        UnTipFix();
-    }
-  };	
+		if(e != null &&  e.keyCode === TIP_KEYCODE_ESC){
+			UnTipFix();
+		}
+	};	
 	
 	tt_MkCmdEnum();
 	// Send old browsers instantly to hell
@@ -1829,7 +1834,9 @@ function tt_Show()
 	var css = tt_aElt[0].style;
 
 	// Override the z-index of the topmost wz_dragdrop.js D&D item
-	css.zIndex = Math.max((window.dd && dd.z) ? (dd.z + 2) : 0, 1010);
+	// css.zIndex = Math.max((window.dd && dd.z) ? (dd.z + 2) : 0, 1010);
+	css.zIndex = TIP_Z_INDEX;
+	
 	if(tt_aV[STICKY] || !tt_aV[FOLLOWMOUSE])
 		tt_iState &= ~0x4;
 	if(tt_aV[EXCLUSIVE])

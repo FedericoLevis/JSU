@@ -8,7 +8,7 @@
 <b>REQUIRED:</b>        JSU:  jsu.css locale-core.js jsuCmn.js tooltip.js <BR/>
 <b>OPTIONAL:</b>        JSU:  jslog.js dom-drag.js if you want to use jslog <BR/> 
 <b>First Version:</b>     ver 1.0 - Feb 2014  <BR/>
-<b>Current Version:</b>   JSU v. 1.9 &nbsp;&nbsp;&nbsp;2017-Sep-01  <BR/>
+<b>Current Version:</b>   JSU v. 1.10 &nbsp;&nbsp;&nbsp;2018-Jan-14  <BR/>
 <BR/>-----------------------------------------------------------------------------------<BR/>
 <b>DISCLAIMER</b>  <BR/>
 Copyright by Federico Levis - <a href="https://github.com/FedericoLevis/JSU" target="_self">JSU</a> <BR/> 

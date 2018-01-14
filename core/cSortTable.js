@@ -8,7 +8,7 @@
 <b>Description:</b>     SortTable Class <BR/>   
 <b>REQUIRE:</b>          JSU: jsu.js   <BR/>
 <b>First Version:</b>     ver 1.0 - Feb 2010  <BR/>
-<b>Current Version:</b>   JSU v. 1.9 &nbsp;&nbsp;&nbsp;2017-Sep-01  <BR/>
+<b>Current Version:</b>   JSU v. 1.10 &nbsp;&nbsp;&nbsp;2018-Jan-14  <BR/>
 <BR/>-----------------------------------------------------------------------------------<BR/>
 <b>DISCLAIMER</b>  <BR/>
 Copyright by Federico Levis - <a href="https://github.com/FedericoLevis/JSU" target="_self">JSU</a> <BR/> 
